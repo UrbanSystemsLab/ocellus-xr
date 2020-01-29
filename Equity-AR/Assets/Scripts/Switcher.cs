@@ -1,22 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mapbox.Unity.Map;
 
 public class Switcher : MonoBehaviour
 {
-    [SerializeField]private AbstractMap _abstractMap;
+    [SerializeField] private AbstractMap _abstractMap;
+    [SerializeField] private Button heatmapButton;
+    [SerializeField] private Button greenroofButton;
 
+    [SerializeField] private Sprite heatmap0;
+    [SerializeField] private Sprite heatmap1;
+    [SerializeField] private Sprite greenroof0;
+    [SerializeField] private Sprite greenroof1;
 
-    public void heatmapDisable()
+    private bool heatmapisActive;
+    private bool greenroofisActive;
+
+    private void Start()
     {
-        var heatmap = _abstractMap.VectorData.FindFeatureSubLayerWithName("heatmap");
+        heatmapisActive = false;
+        greenroofisActive = false;
+    }
+
+    public void heatmap()
+    {
+        var heatmapLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("heatmap");
         var NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NY-buildings");
-        if (heatmap != null)
+        if (heatmapLayer != null)
         {
+            Debug.Log(heatmapisActive);
+            if (heatmapisActive)
+            {
+                heatmapLayer.SetActive(false);
+                NY_buildings.SetActive(true);
+                heatmapisActive = false;
+                heatmapButton.GetComponent<Image>().sprite = heatmap0;
+            }
+            else
+            {
+                heatmapLayer.SetActive(true);
+                NY_buildings.SetActive(false);
+                heatmapisActive = true;
+                heatmapButton.GetComponent<Image>().sprite = heatmap1;
+            }
             
-            heatmap.SetActive(false);
-            NY_buildings.SetActive(true);
         }
         else
         {
@@ -24,44 +53,25 @@ public class Switcher : MonoBehaviour
         }
     }
 
-    public void heatmapEnable()
+    public void greenroof()
     {
-        var heatmap = _abstractMap.VectorData.FindFeatureSubLayerWithName("heatmap");
-        var NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NY-buildings");
-        if (heatmap != null)
-        {
-            heatmap.SetActive(true);
-            NY_buildings.SetActive(false);
-        }
-        else
-        {
-            Debug.Log("Layer not found");
-        }
-    }
+        var greenroofLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("greenroof");
 
-    public void greenroofDisable()
-    {
-        var greenroof = _abstractMap.VectorData.FindFeatureSubLayerWithName("greenroof");
-        
-        if (greenroof != null)
+        if (greenroofLayer != null)
         {
-
-            greenroof.SetActive(false);
-
-
-        }
-        else
-        {
-            Debug.Log("Layer not found");
-        }
-    }
-
-    public void greenroofEnable()
-    {
-        var greenroof = _abstractMap.VectorData.FindFeatureSubLayerWithName("greenroof");
-        if (greenroof != null)
-        {
-            greenroof.SetActive(true);
+            if (greenroofisActive)
+            {
+                greenroofLayer.SetActive(false);
+                greenroofisActive = false;
+                greenroofButton.GetComponent<Image>().sprite = greenroof0;
+            }
+            else
+            {
+                greenroofLayer.SetActive(true);
+                greenroofisActive = true;
+                greenroofButton.GetComponent<Image>().sprite = greenroof1;
+            }
+            
         }
         else
         {

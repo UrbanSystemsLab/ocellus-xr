@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Switcher.cs">
+    <Files>
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="273" Column="74" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
+      <File FileName="Assets/Mapbox/Shaders/VertexColored.shader" />
+      <File FileName="Assets/Scripts/Switcher.cs" Line="80" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Equity-AR" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="GoogleARCore" expanded="True">
+                <Node name="SDK" expanded="True">
+                  <Node name="Scripts" expanded="True">
+                    <Node name="Api" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Mapbox" expanded="True">
+                <Node name="Shaders" expanded="True" />
+                <Node name="Unity" expanded="True">
+                  <Node name="MeshGeneration" expanded="True">
+                    <Node name="Data" expanded="True" />
+                    <Node name="Modifiers" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="Switcher.cs" selected="True" />
+              </Node>
+              <Node name="ThirdPartyAssets" expanded="True">
+                <Node name="WoLfulus" expanded="True">
+                  <Node name="LineEnding" expanded="True">
+                    <Node name="Editor" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="80c9eccf-ffbc-438c-a74a-0e5d91f32650" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
