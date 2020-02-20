@@ -6,7 +6,7 @@ using Mapbox.Unity.Map;
 
 public class Switcher : MonoBehaviour
 {
-    [SerializeField] private AbstractMap _abstractMap;
+    
     [SerializeField] private Button heatmapButton;
     [SerializeField] private Button greenroofButton;
 
@@ -17,13 +17,26 @@ public class Switcher : MonoBehaviour
 
     private bool heatmapisActive;
     private bool greenroofisActive;
+    private AbstractMap _abstractMap;
+
+    public TapToPlaceObject MapState;
 
     private void Start()
     {
         heatmapisActive = false;
         greenroofisActive = false;
+        
     }
 
+    private void Update()
+    {
+        if (MapState.isPlaced)
+        {
+            _abstractMap = FindObjectOfType<AbstractMap>();
+        }
+    }
+
+    //Create a button click function to switch between heatmap and normal NY_buildings layers.
     public void heatmap()
     {
         var heatmapLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("heatmap");
@@ -36,6 +49,8 @@ public class Switcher : MonoBehaviour
                 heatmapLayer.SetActive(false);
                 NY_buildings.SetActive(true);
                 heatmapisActive = false;
+
+                //Update button UI
                 heatmapButton.GetComponent<Image>().sprite = heatmap0;
             }
             else
@@ -43,6 +58,8 @@ public class Switcher : MonoBehaviour
                 heatmapLayer.SetActive(true);
                 NY_buildings.SetActive(false);
                 heatmapisActive = true;
+
+                //Update button UI
                 heatmapButton.GetComponent<Image>().sprite = heatmap1;
             }
             
@@ -53,6 +70,7 @@ public class Switcher : MonoBehaviour
         }
     }
 
+    //Create a button click function to turn on or off greenroof datalayer.
     public void greenroof()
     {
         var greenroofLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("greenroof");
@@ -63,12 +81,16 @@ public class Switcher : MonoBehaviour
             {
                 greenroofLayer.SetActive(false);
                 greenroofisActive = false;
+
+                //Update button UI
                 greenroofButton.GetComponent<Image>().sprite = greenroof0;
             }
             else
             {
                 greenroofLayer.SetActive(true);
                 greenroofisActive = true;
+
+                //Update button UI
                 greenroofButton.GetComponent<Image>().sprite = greenroof1;
             }
             

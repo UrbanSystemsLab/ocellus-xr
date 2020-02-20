@@ -1,7 +1,4 @@
 Base path: /Applications/Unity/Hub/Editor/2018.4.13f1/Unity.app/Contents
 Cmd: initializeCompiler
-Cmd: disassembleShader
-  api=14 insize=1520 outsize=1472 ok=1
-Cmd: disassembleShader
-  api=14 insize=1520 outsize=1472 ok=1
-Cmd: initializeCompiler
+
+Quitting shader compiler process

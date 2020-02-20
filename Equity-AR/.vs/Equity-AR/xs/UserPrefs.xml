@@ -4,7 +4,8 @@
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="273" Column="74" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
       <File FileName="Assets/Mapbox/Shaders/VertexColored.shader" />
-      <File FileName="Assets/Scripts/Switcher.cs" Line="80" Column="6" />
+      <File FileName="Assets/Scripts/Switcher.cs" Line="9" Column="5" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="49" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -45,7 +46,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="80c9eccf-ffbc-438c-a74a-0e5d91f32650" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fb48eeeb-f51c-48b3-a7d2-6a3af03188b8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
