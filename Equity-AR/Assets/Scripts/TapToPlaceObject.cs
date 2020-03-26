@@ -1,9 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.Experimental.XR;
 using System;
+using UnityEngine.UI;
+using Lean.Touch;
 
 public class TapToPlaceObject : MonoBehaviour
 {
@@ -12,20 +14,26 @@ public class TapToPlaceObject : MonoBehaviour
     public GameObject objectToPlace;
     public GameObject placementIndicator;
     public bool isPlaced;
-    public GameObject canvas;
+    public GameObject mainPage;
     public GameObject TapToPlaceMap;
+    public GameObject calibrationPage;
+    
 
     private ARRaycastManager raycastManager;
     private Pose placementPose;
     private bool placementPoseIsValid = false;
+    private bool isCalibrating;
+    private GameObject map = null;
 
     // Start is called before the first frame update
     void Start()
     {
         isPlaced = false;
         raycastManager = GetComponent<ARRaycastManager>();
-        canvas.SetActive(false);
+        mainPage.SetActive(false);
+        calibrationPage.SetActive(false);
         TapToPlaceMap.SetActive(true);
+        isCalibrating = false;
     }
 
     // Update is called once per frame
@@ -41,20 +49,24 @@ public class TapToPlaceObject : MonoBehaviour
 
         if (!isPlaced)
         {
+            placementIndicator.SetActive(true);
             UpdatePlacementPose();
             UpdatePlacementIndicator();
         } else
         {
-            placementIndicator.Destroy();
+            placementIndicator.SetActive(false);
         }
     }
 
     private void PlaceObject()
     {
-        Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
+        map = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
         isPlaced = true;
-        canvas.SetActive(true);
+        calibrationPage.SetActive(true);
         TapToPlaceMap.SetActive(false);
+        map.GetComponent<LeanPinchScale>().enabled = true;
+        map.GetComponent<LeanTwistRotateAxis>().enabled = true;
+        isCalibrating = true;
     }
 
     private void UpdatePlacementIndicator()
@@ -88,5 +100,30 @@ public class TapToPlaceObject : MonoBehaviour
             var cameraBearing = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
             placementPose.rotation = Quaternion.LookRotation(cameraBearing);
         }
+    }
+
+    public void Calibration()
+    {
+        if (isCalibrating)
+        {
+            mainPage.SetActive(true);
+            calibrationPage.SetActive(false);
+            isCalibrating = false;
+            map.GetComponent<LeanPinchScale>().enabled = false;
+            map.GetComponent<LeanTwistRotateAxis>().enabled = false;
+        }
+        else
+        {
+            if(map != null)
+            {
+                Destroy(map);
+            }
+            calibrationPage.SetActive(false);
+            mainPage.SetActive(false);
+            TapToPlaceMap.SetActive(true);
+            isPlaced = false;
+            isCalibrating = false;
+        }
+        
     }
 }
