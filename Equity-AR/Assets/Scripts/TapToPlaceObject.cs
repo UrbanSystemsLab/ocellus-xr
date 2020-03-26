@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
@@ -64,8 +64,8 @@ public class TapToPlaceObject : MonoBehaviour
         isPlaced = true;
         calibrationPage.SetActive(true);
         TapToPlaceMap.SetActive(false);
-        objectToPlace.GetComponent<LeanPinchScale>().enabled = true;
-        objectToPlace.GetComponent<LeanTwistRotateAxis>().enabled = true;
+        map.GetComponent<LeanPinchScale>().enabled = true;
+        map.GetComponent<LeanTwistRotateAxis>().enabled = true;
         isCalibrating = true;
     }
 
@@ -109,8 +109,8 @@ public class TapToPlaceObject : MonoBehaviour
             mainPage.SetActive(true);
             calibrationPage.SetActive(false);
             isCalibrating = false;
-            objectToPlace.GetComponent<LeanPinchScale>().enabled = false;
-            objectToPlace.GetComponent<LeanTwistRotateAxis>().enabled = false;
+            map.GetComponent<LeanPinchScale>().enabled = false;
+            map.GetComponent<LeanTwistRotateAxis>().enabled = false;
         }
         else
         {
