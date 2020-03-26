@@ -17,7 +17,6 @@ namespace Mapbox.Unity.MeshGeneration.Data
 		public List<Vector4> Tangents;
 		public List<List<int>> Triangles;
 		public List<List<Vector2>> UV;
-        public List<Color> Colors;
 
 		public MeshData()
 		{
@@ -28,7 +27,6 @@ namespace Mapbox.Unity.MeshGeneration.Data
 			Triangles = new List<List<int>>();
 			UV = new List<List<Vector2>>();
 			UV.Add(new List<Vector2>());
-            Colors = new List<Color>();
 		}
 
 		internal void Clear()
@@ -37,7 +35,6 @@ namespace Mapbox.Unity.MeshGeneration.Data
 			Vertices.Clear();
 			Normals.Clear();
 			Tangents.Clear();
-            Colors.Clear();
 
 			foreach (var item in Triangles)
 			{

@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Switcher.cs">
     <Files>
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="273" Column="74" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="273" Column="6" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
       <File FileName="Assets/Mapbox/Shaders/VertexColored.shader" />
-      <File FileName="Assets/Scripts/Switcher.cs" Line="9" Column="5" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="49" Column="10" />
+      <File FileName="Assets/Scripts/Switcher.cs" Line="93" Column="35" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -46,7 +46,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fb48eeeb-f51c-48b3-a7d2-6a3af03188b8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e52d6403-ab3d-4e24-bf57-1e3ffb3caf4e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

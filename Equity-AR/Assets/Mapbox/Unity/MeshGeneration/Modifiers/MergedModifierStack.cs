@@ -6,7 +6,6 @@ using Mapbox.Map;
 using Mapbox.Unity.MeshGeneration.Modifiers;
 using Mapbox.Unity.MeshGeneration.Data;
 using Mapbox.Unity.MeshGeneration.Components;
-using System.Linq;
 
 namespace Mapbox.Unity.MeshGeneration.Modifiers
 {
@@ -120,23 +119,6 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 		{
 			base.Execute(tile, feature, meshData, parent, type);
 
-            
-            float hf = 0;
-
-
-
-            if(float.TryParse(feature.Properties["height"].ToString(),out hf))
-            {
-                if (hf <= 1)
-                    return null;
-                    try
-                    {
-                        float.TryParse(feature.Properties["risk"].ToString(),out hf);
-                    }
-                    catch { }
-               
-            }
-
 			if (!_cacheVertexCount.ContainsKey(tile))
 			{
 				_cacheVertexCount.Add(tile, 0);
@@ -154,35 +136,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				}
 			}
 
-            //add colors to buildings
-            Color baseColor = new Color(0.9f, 0.9f, 0.9f);
-
-            if (hf > 0.008)
-            {
-                baseColor = new Color(0.03f, 0.19f, 0.42f);
-
-            }
-            else if (hf > 0.006)
-            {
-                baseColor = new Color(0.13f, 0.44f, 0.71f);
-            }
-            else if (hf > 0.002)
-            {
-                baseColor = new Color(0.26f, 0.57f, 0.78f);
-            }
-            else if (hf > 0.001)
-            {
-                baseColor = new Color(0.42f, 0.68f, 0.84f);
-            }
-            else if (hf > 0)
-            {
-                baseColor = new Color(0.62f, 0.79f, 0.88f);
-            }
-
-            meshData.Colors = Enumerable.Repeat(baseColor, meshData.Vertices.Count).ToList();
-            
-
-            GameObject go = null;
+			GameObject go = null;
 			//65000 is the vertex limit for meshes, keep stashing it until that
 			_counter = meshData.Vertices.Count;
 			if (_cacheVertexCount[tile] + _counter < 65000)
@@ -217,9 +171,8 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 					var st = _tempMeshData.Vertices.Count;
 					_tempMeshData.Vertices.AddRange(_temp2MeshData.Vertices);
 					_tempMeshData.Normals.AddRange(_temp2MeshData.Normals);
-                    _tempMeshData.Colors.AddRange(_temp2MeshData.Colors);
 
-                    c2 = _temp2MeshData.UV.Count;
+					c2 = _temp2MeshData.UV.Count;
 					for (int j = 0; j < c2; j++)
 					{
 						if (_tempMeshData.UV.Count <= j)
@@ -279,10 +232,6 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 						_tempVectorEntity.Mesh.SetUVs(i, _tempMeshData.UV[i]);
 					}
 
-                    _tempVectorEntity.Mesh.SetColors(_tempMeshData.Colors);
-
-                    _tempVectorEntity.MeshRenderer.material = new Material(Shader.Find("Custom/VertexColoredDiffuse"));
-
 					_tempVectorEntity.GameObject.transform.SetParent(tile.transform, false);
 
 					if (!_activeObjects.ContainsKey(tile))
@@ -306,33 +255,33 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			return null;
 		}
 
-		//public override void Clear()
-		//{
-		//	foreach (var vectorEntity in _pool.GetQueue())
-		//	{
-		//		if (vectorEntity.Mesh != null)
-		//		{
-		//			vectorEntity.Mesh.Destroy(true);
-		//		}
+		public override void Clear()
+		{
+			foreach (var vectorEntity in _pool.GetQueue())
+			{
+				if (vectorEntity.Mesh != null)
+				{
+					vectorEntity.Mesh.Destroy(true);
+				}
 
-		//		vectorEntity.GameObject.Destroy();
-		//	}
+				vectorEntity.GameObject.Destroy();
+			}
 
-		//	foreach (var tileTuple in _activeObjects)
-		//	{
-		//		foreach (var vectorEntity in tileTuple.Value)
-		//		{
-		//			if (vectorEntity.Mesh != null)
-		//			{
-		//				vectorEntity.Mesh.Destroy(true);
+			foreach (var tileTuple in _activeObjects)
+			{
+				foreach (var vectorEntity in tileTuple.Value)
+				{
+					if (vectorEntity.Mesh != null)
+					{
+						vectorEntity.Mesh.Destroy(true);
 
-		//			}
-		//			vectorEntity.GameObject.Destroy();
-		//		}
-		//	}
-		//	_pool.Clear();
-		//	_activeObjects.Clear();
-		//	_pool.Clear();
-		//}
+					}
+					vectorEntity.GameObject.Destroy();
+				}
+			}
+			_pool.Clear();
+			_activeObjects.Clear();
+			_pool.Clear();
+		}
 	}
 }
