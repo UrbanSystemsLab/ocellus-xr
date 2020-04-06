@@ -28,13 +28,13 @@ To install Xcode, please go to app store to get the Xcode.
 
 Once you have downloaded Unity2018.4.13f1, you can either download the Equity-AR folder or create a new project and import one of the packages in the Packages folder.
 
-3.1 Open Project by downloading Equity-AR folder
+  3.1 Open Project by downloading Equity-AR folder
 
 If you downloaded Equity-AR folder, please follow the instruction below to use Unity hub to open it.
 
 In the Unity hub, click "ADD" button in the Projects tab. Then locate to the Equity-AR folder you just downloaded. After you have added the project, you need to choose the unity version as 2018.4.13f1 and you are good to go. 
 
-3.2 Open Project by importing packages
+  3.2 Open Project by importing packages
 
 If you downloaded packages in the Packages folder, please follow the instruction below to import it.
 
