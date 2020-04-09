@@ -10,7 +10,7 @@ You can either download the "Equity-AR" folder to see the lastest demo, or downl
 
 To get start, please follow the instructions below.
 
-1. Install Unity2018.4.13f1
+## 1. Install Unity2018.4.13f1
 
 To install Unity2018.4.13f1, go to Unity website download Unity hub. https://unity3d.com/get-unity/download 
 
@@ -20,21 +20,21 @@ ATTENTION: If you install from long-term support other than Unity hub, you canno
 
 In "long-term support" webpage, find Unity2018.4.13f1 in the list. Download Unity Editor Download Assistant, and follow instructions to install Unity2018.4.13f1. In modules selection, choose IOS build support and Visual Studio for Mac/Windows. 
 
-2. Install lastest version Xcode
+## 2. Install lastest version Xcode
 
 To install Xcode, please go to app store to get the Xcode.
 
-3. Open Equity-AR Project
+## 3. Open Equity-AR Project
 
 Once you have downloaded Unity2018.4.13f1, you can either download the Equity-AR folder or create a new project and import one of the packages in the Packages folder.
 
-  3.1 Open Project by downloading Equity-AR folder
+### 3.1 Open Project by downloading Equity-AR folder
 
 If you downloaded Equity-AR folder, please follow the instruction below to use Unity hub to open it.
 
 In the Unity hub, click "ADD" button in the Projects tab. Then locate to the Equity-AR folder you just downloaded. After you have added the project, you need to choose the unity version as 2018.4.13f1 and you are good to go. 
 
-  3.2 Open Project by importing packages
+### 3.2 Open Project by importing packages
 
 If you downloaded packages in the Packages folder, please follow the instruction below to import it.
 
@@ -54,7 +54,7 @@ To make the ARFoundation work correctly, we need to set up Unity. First, go to W
 
 Second, go to "Edit -> Project Settings...". In the "player settings", click the Iphone icon and unfold the "Other Settings" below. Find the Bundle Identifier and replace your company name and project name. The Bundle Identifier is whatever if it is unique. Find "Requires ARKit support" and click it. You will notice that it automatically fills the "Camera Usage Description" and it appears a warning "ARKit requires iOS 11 or newer. Please set 'Target minimum iOS version' to at least 11.0". Therefore, type 11 to "Target minimum iOS version" above. The "Camera Usage Description" can be changed to anything but cannot be blank. Otherwise the camera on your iphone will not work properly.
 
-4. Biuld and Deploy
+## 4. Biuld and Deploy
 
 You can open the scene you would like to test. In the Project window, go to "Assets -> Scenes" and open the scene you want. Then, go to "Files -> Build Settings" and click the "Add Open Scenes" button. Now you can click the "Build" button.
 
