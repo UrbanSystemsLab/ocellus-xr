@@ -8,7 +8,7 @@ The "Equity-AR" folder is the Unity project. You can download and open it direct
 
 You can either download the "Equity-AR" folder to see the lastest demo, or download any Unity package that you need.
 
-To get start, please follow the instructions below.
+# Get Started
 
 ## 1. Install Unity2018.4.13f1
 
@@ -61,3 +61,21 @@ You can open the scene you would like to test. In the Project window, go to "Ass
 Building takes some time. Once you have built the project, you should have a folder with the name you gave it before. Open the "Unity-iPhone.xcodeproj" file by Xcode. Make sure you have connected your iphone to your Mac. In Xcode, click the play button at the top left corner.
 
 Now you can check the demo on your phone.
+
+# Tutorials and Instructions
+
+1. Building Rendering
+
+https://github.com/UrbanSystemsLab/equity-ar/wiki/Mapbox-SDK-Research-01---Building-Rendering
+
+2. Gradient Effect
+
+https://github.com/UrbanSystemsLab/equity-ar/wiki/Mapbox-SDK-Research-02-Gradient-Effect
+
+3. Switch Data Layers
+
+https://github.com/UrbanSystemsLab/equity-ar/wiki/Mapbox-SDK-Research-03-Switch-Data-Layers
+
+4. Calibration
+
+https://github.com/UrbanSystemsLab/equity-ar/wiki/Mapbox-SDK-Research-04-Calibration
