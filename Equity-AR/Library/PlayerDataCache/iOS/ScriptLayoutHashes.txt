@@ -1,6 +1,6 @@
 iOS
 PlayerPath?
-/Users/yanzhe/Desktop/RA/Equity-AR/Builds/ARFoundationDemo with Calibration
+/Users/yanzhe/Desktop/RA/Equity-AR/Builds/Test2
 SceneListBegin?
 Assets/Scenes/Switch 1 Map.unity
 SceneListEnd?
@@ -39,7 +39,7 @@ ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Mapbox.Examples.AstronautDirections
 c3a3572e43af691ece9d1180e73b89c4 Assembly-CSharp.dll:Mapbox.Unity.Location.DeviceLocationProviderAndroidNative
 79b54a5303bd41764acda985a753319c Assembly-CSharp.dll:Mapbox.Examples.RotateOnYTargetTransform
-3ccf67af1b09a705be87e5a484a28778 Assembly-CSharp.dll:.TapToPlaceObject
+129069eba00b4b3e34ee87b3ff2daf3d Assembly-CSharp.dll:.TapToPlaceObject
 23dfd1cd63a3bc183a0f1afec0f15fc7 Assembly-CSharp.dll:Mapbox.Unity.Location.AngleSmoothingLowPass
 ce9de2d2cf899735f51215dae2cd32d7 Assembly-CSharp.dll:UnityARInterface.MatchingScalePicker
 b6978e66c5e3e2cb9b5b4f047f01fac3 Assembly-CSharp.dll:Mapbox.Examples.POIPlacementScriptExample
@@ -388,7 +388,7 @@ d30406e93dfde99d69d2b1c0ea2559b1 Assembly-CSharp.dll:Mapbox.Unity.Location.Angle
 ca2a58dd7363525cbd2f65b2a150b41b Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARCameraManager
 344c74b3abf2e69061c6763dbfbabcea Assembly-CSharp.dll:.FocusSquare
 f60dcd5f5b8383f6a0a75b8c21b7aa79 Assembly-CSharp.dll:Lean.Touch.LeanPinchScale
-a81b1e719a9ba31c9ddca35baa1fa127 Assembly-CSharp.dll:.Switcher
+5c947bab92e9cdb7da69606923221cbb Assembly-CSharp.dll:.Switcher
 d39905ff8fda75afed4d688761c322e1 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARFaceManager
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.VectorDataFetcher
 3b760e6526e13f7504f59e210145899a Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI

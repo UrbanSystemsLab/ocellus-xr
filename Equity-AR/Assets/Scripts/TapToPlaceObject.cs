@@ -17,7 +17,8 @@ public class TapToPlaceObject : MonoBehaviour
     public GameObject mainPage;
     public GameObject TapToPlaceMap;
     public GameObject calibrationPage;
-    
+    public GameObject recalibrationButton;
+    public Camera camera;
 
     private ARRaycastManager raycastManager;
     private Pose placementPose;
@@ -32,6 +33,7 @@ public class TapToPlaceObject : MonoBehaviour
         raycastManager = GetComponent<ARRaycastManager>();
         mainPage.SetActive(false);
         calibrationPage.SetActive(false);
+        recalibrationButton.SetActive(false);
         TapToPlaceMap.SetActive(true);
         isCalibrating = false;
     }
@@ -85,7 +87,7 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void UpdatePlacementPose()
     {
-        var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
+        var screenCenter = camera.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
         raycastManager.Raycast(screenCenter, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes);
 
@@ -96,7 +98,7 @@ public class TapToPlaceObject : MonoBehaviour
             Debug.Log(1);
             placementPose = hits[0].pose;
 
-            var cameraForward = Camera.current.transform.forward;
+            var cameraForward = camera.transform.forward;
             var cameraBearing = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
             placementPose.rotation = Quaternion.LookRotation(cameraBearing);
         }
@@ -107,6 +109,7 @@ public class TapToPlaceObject : MonoBehaviour
         if (isCalibrating)
         {
             mainPage.SetActive(true);
+            recalibrationButton.SetActive(true);
             calibrationPage.SetActive(false);
             isCalibrating = false;
             map.GetComponent<LeanPinchScale>().enabled = false;
@@ -119,6 +122,7 @@ public class TapToPlaceObject : MonoBehaviour
                 Destroy(map);
             }
             calibrationPage.SetActive(false);
+            recalibrationButton.SetActive(false);
             mainPage.SetActive(false);
             TapToPlaceMap.SetActive(true);
             isPlaced = false;

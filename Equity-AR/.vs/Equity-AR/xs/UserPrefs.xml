@@ -1,52 +1,23 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Switcher.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TapToPlaceObject.cs">
     <Files>
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="273" Column="6" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="288" Column="1" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
       <File FileName="Assets/Mapbox/Shaders/VertexColored.shader" />
-      <File FileName="Assets/Scripts/Switcher.cs" Line="93" Column="35" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
+      <File FileName="Assets/Scripts/Switcher.cs" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="90" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Equity-AR" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="GoogleARCore" expanded="True">
-                <Node name="SDK" expanded="True">
-                  <Node name="Scripts" expanded="True">
-                    <Node name="Api" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Mapbox" expanded="True">
-                <Node name="Shaders" expanded="True" />
-                <Node name="Unity" expanded="True">
-                  <Node name="MeshGeneration" expanded="True">
-                    <Node name="Data" expanded="True" />
-                    <Node name="Modifiers" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="Switcher.cs" selected="True" />
-              </Node>
-              <Node name="ThirdPartyAssets" expanded="True">
-                <Node name="WoLfulus" expanded="True">
-                  <Node name="LineEnding" expanded="True">
-                    <Node name="Editor" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="Equity-AR" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e52d6403-ab3d-4e24-bf57-1e3ffb3caf4e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ef785ad8-f00f-4ba7-ba1e-0b7e39678123" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -6,6 +6,7 @@ using Mapbox.Map;
 using Mapbox.Unity.MeshGeneration.Modifiers;
 using Mapbox.Unity.MeshGeneration.Data;
 using Mapbox.Unity.MeshGeneration.Components;
+using System.Linq;
 
 namespace Mapbox.Unity.MeshGeneration.Modifiers
 {
@@ -119,6 +120,42 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 		{
 			base.Execute(tile, feature, meshData, parent, type);
 
+			float tempValue = 0;
+			float incomeValue = 0;
+
+            if(float.TryParse(feature.Properties["height"].ToString(), out tempValue))
+            {
+				if (tempValue <= 1)
+					return null;
+                try
+                {
+					float.TryParse(feature.Properties["_tempmean"].ToString(), out tempValue);
+
+				}
+                catch(Exception ex)
+                {
+					tempValue = 0;
+					Debug.Log("Temperature layer error:" + ex.Message);
+                }
+				
+			}
+
+            if(float.TryParse(feature.Properties["height"].ToString(), out incomeValue))
+            {
+				if (incomeValue <= 1)
+					return null;
+				try
+				{
+					float.TryParse(feature.Properties["income"].ToString(), out incomeValue);
+
+				}
+				catch (Exception ex)
+				{
+					incomeValue = 0;
+					Debug.Log("Income layer error:" + ex.Message);
+				}
+			}
+
 			if (!_cacheVertexCount.ContainsKey(tile))
 			{
 				_cacheVertexCount.Add(tile, 0);
@@ -135,6 +172,49 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 					MeshModifiers[i].Run(feature, meshData, tile);
 				}
 			}
+
+			//add colors to buildings
+			Color baseColor = new Color(1f, 1f, 1f);
+
+            if (tempValue > 168)
+            {
+				baseColor = new Color(1f, 1f, 1f);
+            }
+            else if (tempValue > 147)
+            {
+				baseColor = new Color(0.8f, 0.8f, 0.8f);
+            }
+            else if (tempValue > 126)
+            {
+				baseColor = new Color(0.5f, 0.5f, 0.5f);
+            }
+            else if (tempValue > 104)
+            {
+				baseColor = new Color(0.3f, 0.3f, 0.3f);
+            }
+
+			if (incomeValue > 2000)
+			{
+				baseColor = new Color(1f, 1f, 1f);
+			}
+			else if (incomeValue > 1500)
+			{
+				baseColor = new Color(0.85f, 0.85f, 0.85f);
+			}
+			else if (incomeValue > 1000)
+			{
+				baseColor = new Color(0.7f, 0.7f, 0.6f);
+			}
+			else if (incomeValue > 500)
+			{
+				baseColor = new Color(0.6f, 0.6f, 0.6f);
+			}
+			else if (incomeValue > 0)
+			{
+				baseColor = new Color(0.5f, 0.5f, 0.5f);
+			}
+
+			meshData.Colors = Enumerable.Repeat(baseColor, meshData.Vertices.Count).ToList();
 
 			GameObject go = null;
 			//65000 is the vertex limit for meshes, keep stashing it until that
@@ -171,6 +251,8 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 					var st = _tempMeshData.Vertices.Count;
 					_tempMeshData.Vertices.AddRange(_temp2MeshData.Vertices);
 					_tempMeshData.Normals.AddRange(_temp2MeshData.Normals);
+                    //Custom code
+					_tempMeshData.Colors.AddRange(_temp2MeshData.Colors);
 
 					c2 = _temp2MeshData.UV.Count;
 					for (int j = 0; j < c2; j++)
@@ -232,6 +314,9 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 						_tempVectorEntity.Mesh.SetUVs(i, _tempMeshData.UV[i]);
 					}
 
+                    //Custom code
+					_tempVectorEntity.Mesh.SetColors(_tempMeshData.Colors);
+                    _tempVectorEntity.MeshRenderer.material = new Material(Shader.Find("Custom/VertexColoredDiffuse"));
 					_tempVectorEntity.GameObject.transform.SetParent(tile.transform, false);
 
 					if (!_activeObjects.ContainsKey(tile))
