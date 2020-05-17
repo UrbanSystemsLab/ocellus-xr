@@ -39,7 +39,7 @@ ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Mapbox.Examples.AstronautDirections
 c3a3572e43af691ece9d1180e73b89c4 Assembly-CSharp.dll:Mapbox.Unity.Location.DeviceLocationProviderAndroidNative
 79b54a5303bd41764acda985a753319c Assembly-CSharp.dll:Mapbox.Examples.RotateOnYTargetTransform
-129069eba00b4b3e34ee87b3ff2daf3d Assembly-CSharp.dll:.TapToPlaceObject
+9f1ee09771540abdb4634117d10c2385 Assembly-CSharp.dll:.TapToPlaceObject
 23dfd1cd63a3bc183a0f1afec0f15fc7 Assembly-CSharp.dll:Mapbox.Unity.Location.AngleSmoothingLowPass
 ce9de2d2cf899735f51215dae2cd32d7 Assembly-CSharp.dll:UnityARInterface.MatchingScalePicker
 b6978e66c5e3e2cb9b5b4f047f01fac3 Assembly-CSharp.dll:Mapbox.Examples.POIPlacementScriptExample
@@ -340,6 +340,7 @@ a70b4188742ecd386b56974e4594090a Assembly-CSharp.dll:Mapbox.Examples.PositionWit
 e70f106593e61be751f017ac8554df2c Assembly-CSharp.dll:Mapbox.Examples.Scripts.Utilities.DragRotate
 f510af494e55e5a51301ab2e13f74370 Assembly-CSharp.dll:Mapbox.Unity.Map.TileProviders.QuadTreeTileProvider
 982acebdb29318e47aa2d3c2cb7e1539 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARTrackedImageManager
+c1607aa719e684faefb2e389eef36b17 Assembly-CSharp.dll:.Marker
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARPointCloudParticleVisualizer
 290afc8da8e459e0b8dc7444bfaf5e35 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARHumanBody
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:GoogleARCore.InstantPreviewTrackedPoseDriver

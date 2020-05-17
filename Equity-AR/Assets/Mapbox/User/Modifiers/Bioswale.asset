@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d86f7dc89b3e33408563e4ada9d1c74, type: 3}
-  m_Name: NewTextureModifier
+  m_Script: {fileID: 11500000, guid: dd8aacc1880ff504d9531b4d61c86458, type: 3}
+  m_Name: Bioswale
   m_EditorClassIdentifier: 
   Active: 1
-  _textureTop: 0
-  _useSatelliteTexture: 0
-  _topMaterials: []
-  _textureSides: 0
-  _sideMaterials: []
+  _options:
+    prefab: {fileID: 4629677458389272685, guid: c47c049d5d3ff42db8e94dfeec933111,
+      type: 3}
+    scaleDownWithWorld: 0

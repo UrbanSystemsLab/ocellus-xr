@@ -25,7 +25,7 @@
 
 		WaitForSeconds _wait;
 
-		void Awake()
+		void Start()
 		{
 			_camera = Camera.main;
 			_cameraStartPos = _camera.transform.position;

@@ -1,23 +1,38 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TapToPlaceObject.cs">
     <Files>
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="288" Column="1" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
-      <File FileName="Assets/Mapbox/Shaders/VertexColored.shader" />
-      <File FileName="Assets/Scripts/Switcher.cs" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="90" Column="1" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/PoiMarkerHelper.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Marker.cs" Line="32" Column="6" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" Line="31" Column="49" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="22" Column="33" />
+      <File FileName="Assets/Scripts/Switcher.cs" Line="30" Column="5" />
+      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" Line="398" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Equity-AR" expanded="True" selected="True" />
+          <Node name="Equity-AR" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Mapbox" expanded="True">
+                <Node name="Examples" expanded="True">
+                  <Node name="Scripts" expanded="True" />
+                </Node>
+                <Node name="Unity" expanded="True">
+                  <Node name="Map" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="TapToPlaceObject.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ef785ad8-f00f-4ba7-ba1e-0b7e39678123" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="182ce645-f1c5-4c10-93fd-50d04ea6786d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
