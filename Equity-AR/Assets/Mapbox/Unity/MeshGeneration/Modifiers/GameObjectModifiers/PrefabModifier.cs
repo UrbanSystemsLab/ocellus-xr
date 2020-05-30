@@ -72,17 +72,50 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 			go.name = ve.Feature.Data.Id.ToString();
 
+
+			float property = 0;
+			bool treeFound = false;
+
+			//Getting tree DBH and convert it to meters from inch.
+			try
+			{
+				float.TryParse(ve.Feature.Properties["DBH"].ToString(), out property);
+
+				property = property * 0.0254f;
+				treeFound = true;
+			}
+			catch (Exception ex)
+			{
+				property = 0;
+				treeFound = false;
+				Debug.Log("Temperature layer error:" + ex.Message);
+			}
+
+
+
 			goRectTransform = go.GetComponent<RectTransform>();
 			if (goRectTransform == null)
 			{
+
 				go.transform.localPosition = centroidVector;
+
+				//Set tree height
+				if (treeFound)
+				{
+					go.transform.localPosition = new Vector3(go.transform.localPosition.x, property / 2, go.transform.localPosition.z);
+					go.transform.localScale = new Vector3(0.5f, property / 2, 0.5f);
+				}
+
+
 				if (_options.scaleDownWithWorld)
 				{
 					go.transform.localScale = _options.prefab.transform.localScale * (tile.TileScale);
 				}
+
 			}
 			else
 			{
+
 				goRectTransform.anchoredPosition3D = centroidVector;
 				if (_options.scaleDownWithWorld)
 				{

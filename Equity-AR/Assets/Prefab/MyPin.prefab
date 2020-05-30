@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 4713263778899999463}
   - component: {fileID: 1985627696946911280}
   m_Layer: 0
-  m_Name: MyPin
+  m_Name: MapboxPin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,8 +210,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4629677458389272685}
   m_LocalRotation: {x: 0, y: -0.29545793, z: 0, w: 0.95535576}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 17.04, z: 0}
+  m_LocalScale: {x: 333, y: 333, z: 333}
   m_Children:
   - {fileID: 4626359497007203249}
   - {fileID: 4623762000146311835}
@@ -249,7 +249,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b6b4c9fcb2f4526becfdfd21b8a774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minHeight: 3
-  maxHeight: 5
-  minScale: 50
-  maxScale: 80
+  height: 2

@@ -1,8 +1,9 @@
 iOS
 PlayerPath?
-/Users/yanzhe/Desktop/RA/Equity-AR/Builds/Test2
+/Users/yanzhe/Desktop/RA/Backup/EquityARBackup/Builds/Test
 SceneListBegin?
 Assets/Scenes/Switch 1 Map.unity
+Assets/Scenes/WorldScaleAR.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TerrainDataFetcher
 b9751259642f2166c56b27bb39f65c26 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Components.VertexDebugger
@@ -39,7 +40,7 @@ ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Mapbox.Examples.AstronautDirections
 c3a3572e43af691ece9d1180e73b89c4 Assembly-CSharp.dll:Mapbox.Unity.Location.DeviceLocationProviderAndroidNative
 79b54a5303bd41764acda985a753319c Assembly-CSharp.dll:Mapbox.Examples.RotateOnYTargetTransform
-9f1ee09771540abdb4634117d10c2385 Assembly-CSharp.dll:.TapToPlaceObject
+5c02f28a4b832a7a93964fc337726128 Assembly-CSharp.dll:.TapToPlaceObject
 23dfd1cd63a3bc183a0f1afec0f15fc7 Assembly-CSharp.dll:Mapbox.Unity.Location.AngleSmoothingLowPass
 ce9de2d2cf899735f51215dae2cd32d7 Assembly-CSharp.dll:UnityARInterface.MatchingScalePicker
 b6978e66c5e3e2cb9b5b4f047f01fac3 Assembly-CSharp.dll:Mapbox.Examples.POIPlacementScriptExample
@@ -304,6 +305,7 @@ ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Interfaces.VectorLayerVisualizer
 b13222200b65a7aab07dab0db3a30002 Assembly-CSharp.dll:UnityEngine.XR.iOS.UnityARVideo
 bf7611f578cc4391f4c42d7d2643311c Assembly-CSharp.dll:UnityEngine.XR.iOS.EditorHitTest
+715100c41c6723a26f0f6cadfdebaa0d Assembly-CSharp.dll:.MapManager
 fea2d676bca3c708f6b399119fa3ca3f Assembly-CSharp.dll:.UnityARUserAnchorExample
 290afc8da8e459e0b8dc7444bfaf5e35 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARPointCloud
 563660a00e6e81cb62dbadd1cbc099dc Assembly-CSharp.dll:Mapbox.Examples.AstronautMouseController
@@ -389,7 +391,8 @@ d30406e93dfde99d69d2b1c0ea2559b1 Assembly-CSharp.dll:Mapbox.Unity.Location.Angle
 ca2a58dd7363525cbd2f65b2a150b41b Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARCameraManager
 344c74b3abf2e69061c6763dbfbabcea Assembly-CSharp.dll:.FocusSquare
 f60dcd5f5b8383f6a0a75b8c21b7aa79 Assembly-CSharp.dll:Lean.Touch.LeanPinchScale
-5c947bab92e9cdb7da69606923221cbb Assembly-CSharp.dll:.Switcher
+a418316682a78c65fed9b911a49431b1 Assembly-CSharp.dll:.Switcher
+67258fd6a11ecb9d97b421c0daa8ef5f Assembly-CSharp.dll:.MainPage
 d39905ff8fda75afed4d688761c322e1 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARFaceManager
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.VectorDataFetcher
 3b760e6526e13f7504f59e210145899a Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
@@ -405,6 +408,7 @@ ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration
 288575b84760e7bba1f06821fe8228c6 Assembly-CSharp.dll:Mapbox.Unity.Utilities.DebugTools.SceneData
 df2ac1e01a196c636fe3dbc9b6ef1fe0 Assembly-CSharp.dll:Mapbox.Examples.Playground.ForwardGeocoderExample
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SceneController
 e1c35cdce946e9da77fe80a39c261608 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARSessionOrigin
 82e649217a87767778e4985365512671 Assembly-CSharp.dll:Mapbox.Examples.CameraBillboard
 bc7a3bc009c85e181593123fb447df57 Assembly-CSharp.dll:Mapbox.Unity.Ar.LerpAlignmentStrategy
@@ -533,5 +537,3 @@ fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UnityARCameraNearFar
 0855a9d1fe3a81abf4812b7ac80389b6 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.ModifierStack
-aca7af8fe7d69be6ab50e3184d28e519 Unity.Formats.Fbx.Runtime.dll:UnityEngine.Formats.Fbx.Exporter.FbxPrefab
-49101319b21043357cb80c5aba043e1d Unity.Recorder.dll:UnityEngine.Recorder.RecorderBindings

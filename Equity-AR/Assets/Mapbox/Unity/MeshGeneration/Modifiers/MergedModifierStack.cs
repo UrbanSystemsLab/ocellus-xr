@@ -122,6 +122,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 			float tempValue = 0;
 			float incomeValue = 0;
+			float sixtyFiveValue = 0;
 
             if(float.TryParse(feature.Properties["height"].ToString(), out tempValue))
             {
@@ -156,6 +157,22 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				}
 			}
 
+            if(float.TryParse(feature.Properties["height"].ToString(), out sixtyFiveValue))
+            {
+				if (sixtyFiveValue <= 1)
+					return null;
+
+                try
+                {
+					float.TryParse(feature.Properties["P_Abv65_e_"].ToString(), out sixtyFiveValue);
+                }
+                catch(Exception ex)
+                {
+					sixtyFiveValue = 0;
+					Debug.Log("65+ layer error:" + ex.Message);
+                }
+            }
+
 			if (!_cacheVertexCount.ContainsKey(tile))
 			{
 				_cacheVertexCount.Add(tile, 0);
@@ -178,40 +195,57 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
             if (tempValue > 168)
             {
-				baseColor = new Color(1f, 1f, 1f);
+				baseColor = new Color(0.74f, 0.2f, 0.15f);
             }
             else if (tempValue > 147)
             {
-				baseColor = new Color(0.8f, 0.8f, 0.8f);
+				baseColor = new Color(0.8f, 0.36f, 0.32f);
             }
             else if (tempValue > 126)
             {
-				baseColor = new Color(0.5f, 0.5f, 0.5f);
+				baseColor = new Color(0.9f, 0.7f, 0.66f);
             }
             else if (tempValue > 104)
             {
-				baseColor = new Color(0.3f, 0.3f, 0.3f);
+				baseColor = new Color(0.95f, 0.84f, 0.83f);
             }
 
 			if (incomeValue > 2000)
 			{
-				baseColor = new Color(1f, 1f, 1f);
+				baseColor = new Color(0.5f, 0.5f, 0f);
 			}
 			else if (incomeValue > 1500)
 			{
-				baseColor = new Color(0.85f, 0.85f, 0.85f);
+				baseColor = new Color(0.5f, 0.6f, 0.25f);
 			}
 			else if (incomeValue > 1000)
 			{
-				baseColor = new Color(0.7f, 0.7f, 0.6f);
+				baseColor = new Color(0.5f, 0.7f, 0.49f);
 			}
 			else if (incomeValue > 500)
 			{
-				baseColor = new Color(0.6f, 0.6f, 0.6f);
+				baseColor = new Color(0.5f, 0.8f, 0.66f);
 			}
 			else if (incomeValue > 0)
 			{
-				baseColor = new Color(0.5f, 0.5f, 0.5f);
+				baseColor = new Color(0.5f, 0.9f, 0.83f);
+			}
+
+			if (sixtyFiveValue > 75)
+			{
+				baseColor = new Color(1f, 1f, 1f);
+			}
+			else if (sixtyFiveValue > 50)
+			{
+				baseColor = new Color(1f, 0.65f, 1f);
+			}
+			else if (sixtyFiveValue > 25)
+			{
+				baseColor = new Color(1f, 0.25f, 1f);
+			}
+			else if (sixtyFiveValue > 0)
+			{
+				baseColor = new Color(1f, 0.1f, 1f);
 			}
 
 			meshData.Colors = Enumerable.Repeat(baseColor, meshData.Vertices.Count).ToList();

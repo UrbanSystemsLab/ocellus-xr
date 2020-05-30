@@ -17,8 +17,7 @@ public class TapToPlaceObject : MonoBehaviour
     public GameObject mainPage;
     public GameObject TapToPlaceMap;
     public GameObject calibrationPage;
-    public GameObject recalibrationButton;
-    public Camera myCamera;
+    public Camera newCamera;
     public GameObject reloadMapCanvas;
 
     private ARRaycastManager raycastManager;
@@ -27,16 +26,20 @@ public class TapToPlaceObject : MonoBehaviour
     private bool isCalibrating;
     private GameObject map = null;
 
+    private void Awake()
+    {
+        reloadMapCanvas.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         isPlaced = false;
         raycastManager = GetComponent<ARRaycastManager>();
         mainPage.SetActive(false);
-        reloadMapCanvas.SetActive(false);
         calibrationPage.SetActive(false);
-        recalibrationButton.SetActive(false);
         TapToPlaceMap.SetActive(true);
+        
         isCalibrating = false;
     }
 
@@ -89,7 +92,7 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void UpdatePlacementPose()
     {
-        var screenCenter = myCamera.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
+        var screenCenter = newCamera.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
         raycastManager.Raycast(screenCenter, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes);
 
@@ -100,7 +103,7 @@ public class TapToPlaceObject : MonoBehaviour
             Debug.Log(1);
             placementPose = hits[0].pose;
 
-            var cameraForward = myCamera.transform.forward;
+            var cameraForward = newCamera.transform.forward;
             var cameraBearing = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
             placementPose.rotation = Quaternion.LookRotation(cameraBearing);
         }
@@ -112,7 +115,6 @@ public class TapToPlaceObject : MonoBehaviour
         {
             mainPage.SetActive(true);
             reloadMapCanvas.SetActive(true);
-            recalibrationButton.SetActive(true);
             calibrationPage.SetActive(false);
             isCalibrating = false;
             map.GetComponent<LeanPinchScale>().enabled = false;
@@ -125,7 +127,6 @@ public class TapToPlaceObject : MonoBehaviour
                 Destroy(map);
             }
             calibrationPage.SetActive(false);
-            recalibrationButton.SetActive(false);
             mainPage.SetActive(false);
             reloadMapCanvas.SetActive(false);
             TapToPlaceMap.SetActive(true);
