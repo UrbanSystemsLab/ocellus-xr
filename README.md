@@ -79,3 +79,11 @@ https://github.com/UrbanSystemsLab/equity-ar/wiki/Mapbox-SDK-Research-03-Switch-
 4. Calibration
 
 https://github.com/UrbanSystemsLab/equity-ar/wiki/Mapbox-SDK-Research-04-Calibration
+
+5. Search & Zoom
+
+https://github.com/UrbanSystemsLab/equity-ar/wiki/Mapbox-SDK-Research-05-Search-&-Zoom
+
+6. Adding Markers
+
+https://github.com/UrbanSystemsLab/equity-ar/wiki/Mapbox-SDK-Research-06-Adding-Markers
