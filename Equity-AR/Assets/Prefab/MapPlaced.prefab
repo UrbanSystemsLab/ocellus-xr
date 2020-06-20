@@ -123,6 +123,7 @@ MonoBehaviour:
         - 2050s-500y
         - admin
         - aeroway
+        - AfAm_ETH2018
         - airport_label
         - building
         - housenum_label
@@ -131,8 +132,8 @@ MonoBehaviour:
         - landuse_overlay
         - motorway_junction
         - natural_label
+        - NYC_65plus
         - NYC_OpenSpace
-        - NYC65Final
         - NYCtemp
         - place_label
         - poi_label
@@ -147,7 +148,7 @@ MonoBehaviour:
         isActive: 1
         layerSource:
           Name: Mapbox Terrain
-          Id: equity.1jt1qdy3,equity.755pqg03,equity.8clwnj6e,equity.dmmqh0kw,equity.16d8ns8l,equity.19fnjujj,mapbox.mapbox-streets-v8
+          Id: equity.cprecyzu,equity.0qf98zo6,equity.755pqg03,equity.8clwnj6e,equity.dmmqh0kw,equity.16d8ns8l,equity.19fnjujj,mapbox.mapbox-streets-v8
           Modified: 
           UserName: 
       useOptimizedStyle: 0
@@ -621,7 +622,7 @@ MonoBehaviour:
           isActive: 0
           sublayerName: 65+
           geometryType: 2
-          layerName: NYC65Final
+          layerName: NYC_65plus
           snapToTerrain: 1
           combineMeshes: 1
         lineGeometryOptions:
@@ -631,11 +632,11 @@ MonoBehaviour:
           JoinType: 1
           CapType: 1
         filterOptions:
-          _selectedLayerName: NYC65Final
+          _selectedLayerName: NYC_65plus
           filters: []
           combinerType: 0
         extrusionOptions:
-          _selectedLayerName: NYC65Final
+          _selectedLayerName: NYC_65plus
           extrusionType: 1
           extrusionGeometryType: 0
           propertyName: height
@@ -666,6 +667,71 @@ MonoBehaviour:
               - {fileID: 2100000, guid: 9904b7ad9554f46aa823ab59f13e8a6d, type: 2}
             - Materials:
               - {fileID: 2100000, guid: 9904b7ad9554f46aa823ab59f13e8a6d, type: 2}
+            atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
+              type: 2}
+            colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
+              type: 2}
+        performanceOptions:
+          isEnabled: 0
+          entityPerCoroutine: 0
+        honorBuildingIdSetting: 1
+        buildingsWithUniqueIds: 0
+        moveFeaturePositionTo: 0
+        MeshModifiers: []
+        GoModifiers: []
+        presetFeatureType: 4
+        _maskValue: 0
+        selectedTypes: 
+      - coreOptions:
+          sourceId: 
+          isActive: 0
+          sublayerName: AfAm
+          geometryType: 2
+          layerName: AfAm_ETH2018
+          snapToTerrain: 1
+          combineMeshes: 0
+        lineGeometryOptions:
+          Width: 1
+          MiterLimit: 0.2
+          RoundLimit: 1.05
+          JoinType: 1
+          CapType: 1
+        filterOptions:
+          _selectedLayerName: AfAm_ETH2018
+          filters: []
+          combinerType: 0
+        extrusionOptions:
+          _selectedLayerName: AfAm_ETH2018
+          extrusionType: 1
+          extrusionGeometryType: 0
+          propertyName: P_AfAm_e_
+          propertyDescription: Number
+          minimumHeight: 0
+          maximumHeight: 1
+          extrusionScaleFactor: 5
+        colliderOptions:
+          colliderType: 0
+        materialOptions:
+          style: 7
+          texturingType: 2
+          materials:
+          - Materials:
+            - {fileID: 0}
+          - Materials:
+            - {fileID: 0}
+          atlasInfo: {fileID: 11400000, guid: c422f39ca8fe566479230c87805b3301, type: 2}
+          lightStyleOpacity: 1
+          darkStyleOpacity: 1
+          colorStyleColor: {r: 1, g: 0.17647058, b: 0.21718068, a: 1}
+          samplePalettes: 0
+          colorPalette: {fileID: 0}
+          customStyleOptions:
+            texturingType: 0
+            materials:
+            - Materials:
+              - {fileID: 0}
+            - Materials:
+              - {fileID: 0}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,

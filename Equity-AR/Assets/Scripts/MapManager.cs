@@ -25,9 +25,13 @@ public class MapManager : MonoBehaviour
         Debug.Log(tileMaterials.Length);
         foreach (MeshRenderer m in tileMaterials)
         {
-            color = m.material.color;
-            color.a = 0;
-            m.material.color = color;
+            if(m.gameObject.name != "0")
+            {
+                color = m.material.color;
+                color.a = 0;
+                m.material.color = color;
+            }
+            
         }
     }
 
@@ -42,8 +46,12 @@ public class MapManager : MonoBehaviour
         Debug.Log(tileMaterials.Length);
         foreach (MeshRenderer m in tileMaterials)
         {
-            color.a = 1;
-            m.material.color = color;
+            if (m.gameObject.name != "0")
+            {
+                color.a = 1;
+                m.material.color = color;
+            }
+            
         }
     }
 

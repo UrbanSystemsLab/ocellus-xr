@@ -101,7 +101,7 @@ public class Switcher : MonoBehaviour
                 heatmapButton.GetComponent<Image>().sprite = heatmap1;
 
                 incomeButton.GetComponent<Image>().sprite = income0;
-                sixtyFivePlusButton.GetComponent<Image>().sprite = openSpace0;
+                sixtyFivePlusButton.GetComponent<Image>().sprite = sixtyFivePlus1;
             }
 
         }
