@@ -1,0 +1,207 @@
+//
+//  ISN_ICloud.m
+//  Unity-iPhone
+//
+//  Created by Roman on 16.08.2020.
+//
+
+#import "ISN_CKCommunication.h"
+#import <CloudKit/CloudKit.h>
+
+@interface ISN_CloudKit : NSObject
+@end
+
+@implementation ISN_CloudKit
+
+- (id) getFieldValueFrom:(ISN_CKRecordField *)field dataArray:(NSMutableArray<NSData *> *)data {
+    if ([field.m_type isEqualToString:stringFieldType]) {
+        return field.m_value;
+    } else if ([field.m_type isEqualToString:numberFieldType]) {
+        return [[NSNumber alloc] initWithInteger:[field.m_value integerValue]];
+    } else if ([field.m_type isEqualToString:assetFieldType]) {
+        NSURL *url = [[NSURL alloc] initWithString:field.m_value];
+        CKAsset *asset = [[CKAsset alloc] initWithFileURL:url];
+        return asset;
+    } else if ([field.m_type isEqualToString:dateFieldType]) {
+        NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
+        [dateFormatter setDateFormat:dateFormat];
+        NSDate *date = [dateFormatter dateFromString:field.m_value];
+        return date;
+    } else if ([field.m_type isEqualToString:dataFieldType]) {
+        return [data objectAtIndex:[field.m_value integerValue]];
+    }
+    return nil;
+}
+
+- (CKDatabase *)parsDataBaseTypeFrom:(NSString *)string {
+    if ([string isEqualToString:@"Shared"]) {
+        return [[CKContainer defaultContainer] sharedCloudDatabase];
+    } else if ([string isEqualToString:@"Public"]) {
+        return [[CKContainer defaultContainer] publicCloudDatabase];
+    } else {
+        return [[CKContainer defaultContainer] privateCloudDatabase];
+    }
+}
+
+- (void)saveRecordWith:(ISN_CloudKitRecord *)recordData databaseType:(NSString *)type dataArray:(NSMutableArray<NSData *> *)data {
+    CKDatabase *database = [self parsDataBaseTypeFrom:type];
+    CKRecordID *recordID = [[CKRecordID alloc] initWithRecordName:recordData.m_RecordName zoneID:CKRecordZone.defaultRecordZone.zoneID];
+    CKRecord *record = [[CKRecord alloc] initWithRecordType:recordData.m_RecordType recordID:recordID];
+    
+    for (id stringField in recordData.m_fields) {
+        NSData * jsonData = [NSJSONSerialization  dataWithJSONObject:stringField options:0 error:nil];
+        NSString *myString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        ISN_CKRecordField *field = [[ISN_CKRecordField alloc] initWithString:myString error:nil];
+        record[field.m_key] = [self getFieldValueFrom:field dataArray:data];
+    }
+    
+    [database saveRecord:record completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+        ISN_CloudKitResponse *response = [[ISN_CloudKitResponse alloc] init];
+        if (error) {
+
+            response.m_state = errorResponseState;
+            response.m_description = error.description;
+        } else {
+            response.m_state = successResponseState;
+            response.m_description = @"";
+        }
+        ISN_SendCallbackToUnity(CloudKitCallback, [response toJSONString]);
+    }];
+}
+
+- (void)removeRecordByName:(NSString *)name databaseType:(NSString *)type {
+    CKDatabase *database = [self parsDataBaseTypeFrom:type];
+    CKRecordID *recordID = [[CKRecordID alloc] initWithRecordName:name];
+    [database deleteRecordWithID:recordID completionHandler:^(CKRecordID * _Nullable recordID, NSError * _Nullable error) {
+        ISN_CloudKitResponse *response = [[ISN_CloudKitResponse alloc] init];
+        if (error) {
+            response.m_state = errorResponseState;
+            response.m_description = error.description;
+        } else {
+            response.m_state = successResponseState;
+            response.m_description = @"";
+        }
+        ISN_SendCallbackToUnity(CloudKitCallback, [response toJSONString]);
+    }];
+}
+
+- (void)fetchRecordByName:(NSString *)name databaseType:(NSString *)type {
+    CKDatabase *database = [self parsDataBaseTypeFrom:type];
+    CKRecordID *recordID = [[CKRecordID alloc] initWithRecordName:name];
+    [database fetchRecordWithID:recordID completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+        ISN_CloudKitResponse *response = [[ISN_CloudKitResponse alloc] init];
+        if (error) {
+            response.m_state = errorResponseState;
+            response.m_description = error.description;
+        } else {
+            ISN_CloudKitRecord *m_record = [[ISN_CloudKitRecord alloc] init];
+            NSURL *tmpDirURL = [NSURL fileURLWithPath:NSTemporaryDirectory() isDirectory:YES];
+            m_record.m_RecordName = name;
+            m_record.m_RecordType = record.recordType;
+            m_record.m_fields = [[NSMutableArray alloc] init];
+            for (CKRecordFieldKey key in [record allKeys]) {
+                ISN_CKRecordField *field = [[ISN_CKRecordField alloc] init];
+                field.m_key = key;
+                if ([record[key] isKindOfClass:NSNumber.class]) {
+                    field.m_type = numberFieldType;
+                    field.m_value = [(NSNumber *)record[key] stringValue];
+                } else if([record[key] isKindOfClass:NSString.class]) {
+                    field.m_type = stringFieldType;
+                    field.m_value = record[key];
+                } else if([record[key] isKindOfClass:NSDate.class]) {
+                    field.m_type = dateFieldType;
+                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                    [formatter setDateFormat:dateFormat];
+                    field.m_value = [formatter stringFromDate:(NSDate *)record[key]];
+                } else if([record[key] isKindOfClass:CKAsset.class]) {
+                    field.m_type = assetFieldType;
+                    field.m_value = [[(CKAsset *)record[key] fileURL] absoluteString];
+                } else if([record[key] isKindOfClass:NSData.class]) {
+                    field.m_type = dataFieldType;
+                    NSURL *fileURL = [[tmpDirURL URLByAppendingPathComponent:key] URLByAppendingPathExtension:@"data"];
+                    NSData *data = (NSData *)record[key];
+                    if ([data writeToFile:[fileURL path] atomically:YES]) {
+                        field.m_value = key;
+                    } else {
+                        field.m_value = errorResponseState;
+                    }
+                    
+                }
+                [m_record.m_fields addObject:[field toDictionary]];
+            }
+            response.m_state = successResponseState;
+            response.m_record = m_record;
+        }
+        ISN_SendCallbackToUnity(CloudKitCallback, [response toJSONString]);
+    }];
+}
+
+@end
+
+extern "C" {
+    void _ISN_CK_SaveRecord(char *data, char *databaseType, CFTypeRef pointers[], int dataSize[], int pointersAmout, UnityAction *callback) {
+        [ISN_Logger LogNativeMethodInvoke:"_ISN_CK_SaveRecord" data:data];
+        NSMutableArray<NSData *> *dataArray;
+        if (pointers && pointersAmout > 0) {
+            dataArray = [[NSMutableArray alloc] init];
+            for (int i = 0; i < pointersAmout; i++) {
+                NSData *data = [NSData dataWithBytes:pointers[i] length:(NSUInteger)dataSize[i]];
+                if (data) {
+                    [dataArray addObject:data];
+                } else {
+                    NSLog(@"Data is nil");
+                }
+            }
+        }
+        
+        NSError *error;
+        ISN_CloudKitRecord *recordData = [[ISN_CloudKitRecord alloc] initWithChar:data error: &error];
+        CloudKitCallback = callback;
+        if (error) {
+            [ISN_Logger LogError:@"_ISN_CloudKit_SaveRecord JSON parsing error: %@", error.description];
+            ISN_CloudKitResponse *response = [[ISN_CloudKitResponse alloc] init];
+            response.m_state = errorResponseState;
+            response.m_description = error.description;
+            ISN_SendCallbackToUnity(CloudKitCallback, [response toJSONString]);
+        } else {
+            NSString *type = ISN_ConvertToString(databaseType);
+            ISN_CloudKit *cloudKit = [[ISN_CloudKit alloc] init];
+            [cloudKit saveRecordWith:recordData databaseType:type dataArray:dataArray];
+        }
+    }
+
+    void _ISN_CK_RemoveRecordByName(char *recordName, char *databaseType, UnityAction *callback) {
+        [ISN_Logger LogNativeMethodInvoke:"_ISN_CK_RemoveRecordByName" data:recordName];
+        CloudKitCallback = callback;
+        NSString *type = ISN_ConvertToString(databaseType);
+        NSString *name = ISN_ConvertToString(recordName);
+        ISN_CloudKit *cloudKit = [[ISN_CloudKit alloc] init];
+        [cloudKit removeRecordByName:name databaseType:type];
+    }
+
+    void _ISN_CK_FetchRecordByName(char *recordName, char *databaseType, UnityAction *callback) {
+        [ISN_Logger LogNativeMethodInvoke:"_ISN_CK_FetchRecordByName" data:recordName];
+        CloudKitCallback = callback;
+        NSString *type = ISN_ConvertToString(databaseType);
+        NSString *name = ISN_ConvertToString(recordName);
+        ISN_CloudKit *cloudKit = [[ISN_CloudKit alloc] init];
+        [cloudKit fetchRecordByName:name databaseType:type];
+    }
+
+    void* _ISN_GetData(char *fileName, int* size) {
+        [ISN_Logger LogNativeMethodInvoke:"_ISN_GetData" data:fileName];
+        NSString *name = ISN_ConvertToString(fileName);
+        NSURL *tmpDirURL = [NSURL fileURLWithPath:NSTemporaryDirectory() isDirectory:YES];
+        NSURL *fileURL = [[tmpDirURL URLByAppendingPathComponent:name] URLByAppendingPathExtension:@"data"];
+        NSError *error;
+        NSMutableData *data = [NSMutableData dataWithContentsOfURL:fileURL options:NSDataReadingMapped error:&error];
+        if (error) {
+            NSLog(@"We got error when tried to read file - %@", error.description);
+        } else {
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            [fileManager removeItemAtURL:fileURL error:nil];
+        }
+        *size = (int)data.length;
+        return [data mutableBytes];
+    }
+}

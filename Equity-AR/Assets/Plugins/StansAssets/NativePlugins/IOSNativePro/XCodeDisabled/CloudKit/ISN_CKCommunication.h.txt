@@ -1,0 +1,36 @@
+//
+//  ISN_CKCommunication.h
+//  Unity-iPhone
+//
+//  Created by Roman on 06.09.2020.
+//
+#import <Foundation/Foundation.h>
+#import "ISN_Foundation.h"
+
+static UnityAction *CloudKitCallback;
+static NSString *successResponseState = @"SUCCESS";
+static NSString *errorResponseState = @"ERROR";
+static NSString *numberFieldType = @"Number";
+static NSString *stringFieldType = @"String";
+static NSString *dateFieldType = @"Date";
+static NSString *dataFieldType = @"Data";
+static NSString *assetFieldType = @"Asset";
+static NSString *dateFormat = @"dd-MM-yyyy-HH:mm:ss";
+
+@interface ISN_CKRecordField : JSONModel
+@property (nonatomic) NSString *m_key;
+@property (nonatomic) NSString *m_value;
+@property (nonatomic) NSString *m_type;
+@end
+
+@interface ISN_CloudKitRecord : JSONModel
+@property (nonatomic) NSString *m_RecordType;
+@property (nonatomic) NSString *m_RecordName;
+@property (nonatomic) NSMutableArray <id> *m_fields;
+@end
+
+@interface ISN_CloudKitResponse : JSONModel
+@property (nonatomic) NSString *m_state;
+@property (nonatomic) NSString *m_description;
+@property (nonatomic) ISN_CloudKitRecord *m_record;
+@end
