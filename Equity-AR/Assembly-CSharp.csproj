@@ -599,6 +599,9 @@
     <Compile Include="Assets\Scripts\Switcher.cs" />
     <Compile Include="Assets\Scripts\TapToPlaceObject.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\Scripts\TreeCount.cs" />
+    <Compile Include="Assets\Scripts\TreeInfoFinder.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\WebHandler.cs" />
     <Compile Include="Assets\UnityARInterface\ARRemote\Scripts\ARRemoteDevice.cs" />
@@ -692,6 +695,7 @@
     <None Include="Assets\Mapbox\Core\Plugins\Android\UniAndroidPermission\AndroidManifest-uniRP.xml" />
     <None Include="Assets\MapboxAR\Examples\ARTabletop\Shaders\ClipBox\LICENSE.txt" />
     <None Include="Assets\Mapbox\Shaders\MapboxStyles.shader" />
+    <None Include="Assets\CustomData\treetype.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />

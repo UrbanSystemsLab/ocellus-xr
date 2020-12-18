@@ -1,30 +1,21 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Unity/DataContainers/SpawnPrefabOptions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TreeInforFinder.cs">
     <Files>
-      <File FileName="Assets/Mapbox/Examples/Scripts/PoiMarkerHelper.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Marker.cs" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="132" Column="63" IsPinned="True" />
+      <File FileName="Assets/CustomData/treetype.txt" />
+      <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/DontDestroyOnLoad.cs" />
+      <File FileName="Assets/Mapbox/Unity/Location/LocationProviderFactory.cs" />
       <File FileName="Assets/Mapbox/Unity/Utilities/VectorEntity.cs" />
-      <File FileName="Assets/Mapbox/Core/mapbox-sdk-cs/Geocoding/Response/Feature.cs" />
-      <File FileName="Assets/Scripts/Switcher.cs" />
-      <File FileName="Assets/Mapbox/Unity/Editor/MergedModifierStackEditor.cs" />
-      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" />
-      <File FileName="Assets/Mapbox/Shaders/VertexColored.shader" />
-      <File FileName="Assets/RestClient/Packages/RSG.Promise/EnumerableExt.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MeshGenerationBase.cs" />
-      <File FileName="Assets/Mapbox/Unity/LayerProperties/PrefabItemOptions.cs" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
-      <File FileName="Assets/Mapbox/Unity/Constants.cs" />
-      <File FileName="Assets/UnityARInterface/Examples/Scripts/DemoGUI.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="16" Column="17" />
-      <File FileName="Assets/Mapbox/Unity/DataContainers/SpawnPrefabOptions.cs" Line="19" Column="4" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/VectorFeatureUnity.cs" />
+      <File FileName="Assets/Mapbox/Unity/Utilities/MapVisualizerPerformance.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UIManager.cs" Line="20" Column="39" />
+      <File FileName="Assets/Scripts/UserCollision.cs" Line="5" Column="39" />
+      <File FileName="Assets/Scripts/TreeInforFinder.cs" Line="8" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e0525405-25de-4c30-971a-db5643785089" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f75195e1-db83-4b17-9172-4f6a8e36f4ff" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
