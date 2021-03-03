@@ -10,7 +10,7 @@ public class TreeCount : MonoBehaviour
     {
         if (other.gameObject.tag == "Trees")
         {
-            Debug.Log("A tree ENTER detection of a the Cam");
+            //Debug.Log("A tree ENTER detection of a the Cam");
             treeCount++;
         }
     }
@@ -19,7 +19,7 @@ public class TreeCount : MonoBehaviour
     {
         if (other.gameObject.tag == "Trees")
         {
-            Debug.Log("A tree LEFT detection of a the Cam");
+            //Debug.Log("A tree LEFT detection of a the Cam");
             treeCount--;
         }
     }

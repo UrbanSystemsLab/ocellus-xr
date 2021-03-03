@@ -1,21 +1,25 @@
-﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TreeInforFinder.cs">
+﻿<Properties StartupConfiguration="{05D9F951-4CE5-D299-1E0E-957BBA8A3E70}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs">
     <Files>
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="132" Column="63" IsPinned="True" />
-      <File FileName="Assets/CustomData/treetype.txt" />
-      <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/DontDestroyOnLoad.cs" />
+      <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/DontDestroyOnLoad.cs" Line="5" Column="15" IsPinned="True" />
+      <File FileName="Assets/Mapbox/Unity/Location/DeviceLocationProvider.cs" />
+      <File FileName="Assets/Mapbox/Unity/Location/EditorLocationProvider.cs" />
+      <File FileName="Assets/Mapbox/Unity/Location/AbstractLocationProvider.cs" />
+      <File FileName="Assets/Mapbox/Unity/Location/ILocationProvider.cs" />
+      <File FileName="Assets/Mapbox/Unity/Editor/AtlasTemplateGenerator.cs" />
+      <File FileName="Assets/Scripts/TreeCount.cs" />
       <File FileName="Assets/Mapbox/Unity/Location/LocationProviderFactory.cs" />
-      <File FileName="Assets/Mapbox/Unity/Utilities/VectorEntity.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/VectorFeatureUnity.cs" />
-      <File FileName="Assets/Mapbox/Unity/Utilities/MapVisualizerPerformance.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UIManager.cs" Line="20" Column="39" />
-      <File FileName="Assets/Scripts/UserCollision.cs" Line="5" Column="39" />
-      <File FileName="Assets/Scripts/TreeInforFinder.cs" Line="8" Column="6" />
+      <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" Line="31" Column="4" />
+      <File FileName="Assets/Scripts/UIManager.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="213" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="e34cfc1c-6d5c-441e-a8e8-d5d00f306307" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Assembly-CSharp.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f75195e1-db83-4b17-9172-4f6a8e36f4ff" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

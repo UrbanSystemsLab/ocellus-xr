@@ -1,26 +1,33 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mapbox.Unity.Location;
+using Mapbox.Unity.Map;
 
 public class UIManager : MonoBehaviour
 {
-    public Text treeNumInfo;
-    public GameObject TreeDetection;
+    public Text currentLocation;
 
-    public GameObject TreeInfoPanel;
-    public Text TreeInfo;
-    public GameObject TreeInfoFinder;
+    ILocationProvider _locationProvider;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-
+        yield return null;
+        _locationProvider = LocationProviderFactory.Instance.DefaultLocationProvider;
+        _locationProvider.OnLocationUpdated += CurrentLocation;
     }
 
     // Update is called once per frame
     void Update()
     {
-        treeNumInfo.text = "Trees in 10 meters radius: " + TreeDetection.GetComponent<TreeCount>().treeCount;
+        
+    }
+
+    void CurrentLocation(Mapbox.Unity.Location.Location location)
+    {
+        currentLocation.text = location.LatitudeLongitude.ToString();
+        _locationProvider.OnLocationUpdated -= CurrentLocation;
     }
 }

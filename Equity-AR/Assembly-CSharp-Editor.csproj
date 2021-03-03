@@ -164,6 +164,14 @@
     <Compile Include="Assets\ThirdPartyAssets\WoLfulus\LineEnding\Editor\LogEntries.cs" />
     <Compile Include="Assets\ThirdPartyAssets\WoLfulus\LineEnding\Editor\LogEntry.cs" />
     <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\Editor\UnityARBuildPostprocessor.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Editor\Common\CanvasPointerInputDetectorInspector.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Editor\Common\CanvasWebViewPrefabInspector.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Editor\Common\DefaultPointerInputDetectorInspector.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Editor\Common\DocumentationLinkDrawer.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Editor\Common\EditorUtils.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Editor\Common\LabelDrawer.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Editor\Common\WebViewPrefabInspector.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Editor\iOS\iOSBuildScript.cs" />
     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.122.0.txt" />
     <Reference Include="Unity.XR.ARKit">
       <HintPath>/Users/mariiiiiia/Desktop/UrbanSystemLab/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.XR.ARKit.dll</HintPath>

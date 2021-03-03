@@ -18,16 +18,15 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 		[SerializeField]
 		private SpawnPrefabOptions _options;
 		private List<GameObject> _prefabList = new List<GameObject>();
-		List<string> treetypeList = new List<string>();
-		Dictionary<string, int> treeDict = new Dictionary<string, int>();
-		FileInfo fileInfo;
-		FileStream file;
-		StreamWriter writer;
-		StreamReader reader;
-		public Text treeNumInfo;
 
-		Transform mainCam;
-		int treeNum = 0;
+
+		//List<string> treetypeList = new List<string>();
+		//Dictionary<string, int> treeDict = new Dictionary<string, int>();
+		//FileInfo fileInfo;
+		//FileStream file;
+		//StreamWriter writer;
+		//StreamReader reader;
+
 		
 
 
@@ -38,12 +37,11 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			{
 				_objects = new Dictionary<GameObject, GameObject>();
 			}
-			treetypeList.Clear();
 
-			file = new FileStream(Application.dataPath + "/CustomData/treetype.txt", FileMode.Open);
 
-			mainCam = GameObject.Find("Main Camera").GetComponent<Transform>();
-			treeNum = 0;
+			//treetypeList.Clear();
+			//file = new FileStream(Application.dataPath + "/CustomData/treetype.txt", FileMode.Open);
+
 
 		}
 
@@ -108,7 +106,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			RectTransform goRectTransform;
 			Transform stemTransform;
 			Transform crownTransform;
-			GameObject crownType;
+			GameObject crown;
 			IFeaturePropertySettable settable = null;
 			var centroidVector = new Vector3();
 
@@ -173,6 +171,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
             goRectTransform = go.GetComponent<RectTransform>();
 			stemTransform = go.gameObject.transform.GetChild(0);
 			crownTransform = go.gameObject.transform.GetChild(1);
+			crown = crownTransform.gameObject;
 
 			if (goRectTransform == null)
 			{
@@ -190,30 +189,31 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 					crownTransform.transform.localScale = new Vector3(crownR, crownR, crownR);
 					crownTransform.transform.localPosition = new Vector3(0.0f, property + crownR / 2, 0.0f);
 
-					
+					Material t_material = crown.GetComponent<Renderer>().material;
+
 					switch(treeType)
                     {
 						case "Gleditsia triacanthos var. inermis - Thornless honeylocust":
-							crownType = crownTransform.GetChild(1).gameObject;
+							t_material.color = new Color(0.0f, 0.4274f, 0.1724f);
 							break;
 						case "Platanus x acerifolia - London planetree":
-							crownType = crownTransform.GetChild(2).gameObject;
+							t_material.color = new Color(0.2352f, 0.4666f, 0.1725f);
+							//t_material.emissionColor = new Color(0.2352f, 0.4666f, 0.1725f);
 							break;
 						case "Quercus palustris - pin oak":
-							crownType = crownTransform.GetChild(3).gameObject;
+							t_material.color = new Color(0.4705f, 0.5058f, 0.1725f);
 							break;
 						case "Pyrus calleryana - Callery pear":
-							crownType = crownTransform.GetChild(4).gameObject;
+							t_material.color = new Color(0.7058f, 0.5450f, 0.1725f);
 							break;
 						case "Zelkova serrata -Japanese zelkova":
-							crownType = crownTransform.GetChild(5).gameObject;
+							t_material.color = new Color(0.8627f, 0.5483f, 0.1725f);
 							break;
 						default:
-							crownType = crownTransform.GetChild(0).gameObject;
+							t_material.color = Color.grey;
 							break;
 					}
 					
-					crownType.SetActive(true);
 					
 				}
 
