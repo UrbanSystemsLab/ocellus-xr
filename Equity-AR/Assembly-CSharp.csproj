@@ -599,7 +599,6 @@
     <Compile Include="Assets\Scripts\Switcher.cs" />
     <Compile Include="Assets\Scripts\TapToPlaceObject.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
-    <Compile Include="Assets\Scripts\TreeCount.cs" />
     <Compile Include="Assets\Scripts\TreeInfoFinder.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\URLUpdate.cs" />

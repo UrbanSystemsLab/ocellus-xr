@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8654802854442276306}
-  - component: {fileID: 2440165021134925463}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Trees
@@ -33,20 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2440165021134925463
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 80016638686776624}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &1471033571212374726
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +43,6 @@ GameObject:
   - component: {fileID: 3448092422288192525}
   - component: {fileID: 5391608200920830729}
   - component: {fileID: 4644114438554252582}
-  - component: {fileID: 3638888260180164746}
   m_Layer: 0
   m_Name: Stem
   m_TagString: Untagged
@@ -125,20 +109,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &3638888260180164746
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471033571212374726}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &7184110413682781362
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +120,6 @@ GameObject:
   - component: {fileID: 1219673939699376202}
   - component: {fileID: 1652788547616147134}
   - component: {fileID: 2656438972855513738}
-  - component: {fileID: 656145092120753303}
   m_Layer: 0
   m_Name: Crown
   m_TagString: Untagged
@@ -217,16 +186,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &656145092120753303
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7184110413682781362}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

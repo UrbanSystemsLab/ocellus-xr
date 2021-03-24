@@ -20,13 +20,6 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 		private List<GameObject> _prefabList = new List<GameObject>();
 
 
-		//List<string> treetypeList = new List<string>();
-		//Dictionary<string, int> treeDict = new Dictionary<string, int>();
-		//FileInfo fileInfo;
-		//FileStream file;
-		//StreamWriter writer;
-		//StreamReader reader;
-
 		
 
 
@@ -53,6 +46,9 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 		public override void Run(VectorEntity ve, UnityTile tile)
 		{
+			UIManager uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
+			uiManager.treeVE = ve;
+
 			if (_options.prefab == null)
 			{
 				return;
@@ -73,7 +69,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			}
 
 			PositionScaleRectTransform(ve, tile, go);
-			//NearbyTrees(ve, mainCam);
+		
 
 			if (_options.AllPrefabsInstatiated != null)
 			{
@@ -81,24 +77,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			}
 		}
 
-   //     public void NearbyTrees(VectorEntity ve, Transform mainCam)
-   //     {
-			//treeNumInfo = GameObject.Find("TreeNum").GetComponent<Text>();
-   //         Vector3 camPos = mainCam.position;
 
-   //         foreach (var point in ve.Feature.Points[0])
-   //         {
-   //             float dist = Vector3.Distance(camPos, point);
-   //             if (dist < 10)
-   //             {
-   //                 treeNum++;
-   //                 Debug.Log($"Number of trees in an circle of 10 m radius {treeNum}");
-   //             }
-   //         }
-
-			//treeNumInfo.text = "Trees in 10 meters:" + treeNum;
-
-   //     }
 
         public void PositionScaleRectTransform(VectorEntity ve, UnityTile tile, GameObject go)
 		{
@@ -111,66 +90,43 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			var centroidVector = new Vector3();
 
 			float property = 0;
-			float crownR = 0;
 			bool treeFound = false;
 			string treeType = "";
 
 			foreach (var point in ve.Feature.Points[0])
 			{
 				centroidVector += point;
+				//Debug.Log(point);
 			}
 			centroidVector = centroidVector / ve.Feature.Points[0].Count;
 
 			go.name = ve.Feature.Data.Id.ToString();
-
-			//Getting tree DBH and convert it to meters from inch.
+		
 			try
 			{
+				//Getting tree DBH and convert it to meters from inch.
 				float.TryParse(ve.Feature.Properties["DBH"].ToString(), out property);
-				treeType = ve.Feature.Properties["GenusSpeci"].ToString();
 				property = property * 0.0254f;
-				crownR = 0.1f + property * 2;
+
+				//Getting tree GenusSpeci
+				treeType = ve.Feature.Properties["GenusSpeci"].ToString();
+			
 				treeFound = true;
 
 			}
 			catch (Exception ex)
 			{
 				property = 0;
-				crownR = 0;
+				treeType = "null";
 				treeFound = false;
 				Debug.Log("Temperature layer error:" + ex.Message);
 			}
 
 
-            //if (!treetypeList.Contains(treeType))
-            //{
-            //    treetypeList.Add(treeType);
-            //    WriteMessage(treeType);
-            //}
-
-			//if (!treeDict.ContainsKey(treeType))
-   //         {
-			//	treeDict.Add(treeType, 1);
-   //         }
-   //         else
-   //         {
-			//	treeDict[treeType]++;
-			//}
-
-
-			//Write the tree type data into local txt file
-			//file.SetLength(0);
-
-			//foreach (KeyValuePair<string, int> kvp in treeDict)
-   //         {
-			//	writer = new StreamWriter(file);
-			//	writer.WriteLine($"{kvp.Key} ; {kvp.Value}");
-			//	writer.Flush();
-   //         }
 
             goRectTransform = go.GetComponent<RectTransform>();
-			stemTransform = go.gameObject.transform.GetChild(0);
-			crownTransform = go.gameObject.transform.GetChild(1);
+			stemTransform = go.transform.GetChild(0);
+			crownTransform = go. transform.GetChild(1);
 			crown = crownTransform.gameObject;
 
 			if (goRectTransform == null)
@@ -181,7 +137,9 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				//Set tree height
 				if (treeFound)
 				{
-					
+
+					//make eurhythmic trees
+					float crownR = 0.1f + property * 2;
 
 					stemTransform.transform.localPosition = new Vector3(0, property / 2, 0);
 					stemTransform.transform.localScale = new Vector3(0.1f + property / 4, property, 0.1f + property / 4);

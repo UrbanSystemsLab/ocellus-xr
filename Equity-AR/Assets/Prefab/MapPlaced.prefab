@@ -149,7 +149,7 @@ MonoBehaviour:
       vectorSubLayers:
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: Temperature
           geometryType: 2
           layerName: NYCtemp
@@ -258,7 +258,7 @@ MonoBehaviour:
           colorPalette: {fileID: 11400000, guid: ef118b5e263da4b1fa4327ca1d3e0c7b,
             type: 2}
           customStyleOptions:
-            texturingType: 0
+            texturingType: 3
             materials:
             - Materials:
               - {fileID: 0}
@@ -541,7 +541,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: Bioswale
           geometryType: 0
           layerName: green_infrastructure
