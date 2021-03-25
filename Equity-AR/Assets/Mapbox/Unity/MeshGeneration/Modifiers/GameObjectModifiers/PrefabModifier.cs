@@ -46,8 +46,8 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 		public override void Run(VectorEntity ve, UnityTile tile)
 		{
-			UIManager uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
-			uiManager.treeVE = ve;
+			Interactions iManager = GameObject.Find("GameManager").GetComponent<Interactions>();
+			iManager.nearbyTrees.Add(ve);
 
 			if (_options.prefab == null)
 			{
@@ -96,9 +96,9 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			foreach (var point in ve.Feature.Points[0])
 			{
 				centroidVector += point;
-				//Debug.Log(point);
 			}
 			centroidVector = centroidVector / ve.Feature.Points[0].Count;
+			//Debug.Log(ve.Feature.Points[0][0]);
 
 			go.name = ve.Feature.Data.Id.ToString();
 		

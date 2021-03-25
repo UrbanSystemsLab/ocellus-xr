@@ -48,7 +48,7 @@ MonoBehaviour:
   _options:
     locationOptions:
       latitudeLongitude: 40.7648, -73.9808
-      zoom: 14.9
+      zoom: 16
     extentOptions:
       extentType: 1
       defaultExtents:

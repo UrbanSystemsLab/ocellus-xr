@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{05D9F951-4CE5-D299-1E0E-957BBA8A3E70}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UIManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Interactions.cs">
     <Files>
       <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/DontDestroyOnLoad.cs" Line="5" Column="15" IsPinned="True" />
       <File FileName="Assets/Mapbox/Unity/Location/DeviceLocationProvider.cs" />
@@ -7,23 +7,25 @@
       <File FileName="Assets/Mapbox/Unity/Location/AbstractLocationProvider.cs" />
       <File FileName="Assets/Mapbox/Unity/Location/ILocationProvider.cs" />
       <File FileName="Assets/Mapbox/Unity/Editor/AtlasTemplateGenerator.cs" />
-      <File FileName="Assets/Mapbox/Unity/Location/LocationProviderFactory.cs" Line="147" Column="1" />
+      <File FileName="Assets/Mapbox/Unity/Location/LocationProviderFactory.cs" />
       <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UIManager.cs" Line="46" Column="10" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="51" Column="1" />
-      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" Line="85" Column="31" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="50" Column="33" />
+      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" />
       <File FileName="../../../Device Identifiers.deviceids" />
-      <File FileName="Assets/Mapbox/Unity/Map/Interfaces/IMap.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mapbox/Unity/Editor/PropertyDrawers/RangeTileProviderOptionsDrawer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapOptionsDrawer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifier.cs" Line="22" Column="25" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/ModifierBase.cs" Line="32" Column="15" />
-      <File FileName="Assets/Mapbox/Core/mapbox-sdk-cs/Geocoding/Response/Feature.cs" Line="19" Column="24" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Components/FeatureBehaviour.cs" Line="43" Column="15" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="172" Column="1" />
+      <File FileName="Assets/Mapbox/Unity/Map/Interfaces/IMap.cs" />
+      <File FileName="Assets/Mapbox/Unity/Editor/PropertyDrawers/RangeTileProviderOptionsDrawer.cs" />
+      <File FileName="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapOptionsDrawer.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifier.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/ModifierBase.cs" />
+      <File FileName="Assets/Mapbox/Core/mapbox-sdk-cs/Geocoding/Response/Feature.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Components/FeatureBehaviour.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
+      <File FileName="Assets/Scripts/Switcher.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LookAtCam.cs" Line="10" Column="17" />
+      <File FileName="Assets/Scripts/Interactions.cs" Line="40" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="43701800-07f3-4ded-bf6e-a6d2aa80f0f2" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="cbd038d9-8624-4bd5-a9e0-0f3b39a2fd97" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>Assembly-CSharp.csproj</String>
