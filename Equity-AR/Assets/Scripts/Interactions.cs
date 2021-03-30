@@ -27,7 +27,10 @@ public class Interactions : MonoBehaviour
     
     void CurrentLocation(Mapbox.Unity.Location.Location location)
     {
-        currentLocation.text = location.LatitudeLongitude.ToString();
+        if (currentLocation != null)
+        {
+            currentLocation.text = location.LatitudeLongitude.ToString();
+        }
         _locationProvider.OnLocationUpdated -= CurrentLocation;
     }
 
@@ -46,12 +49,20 @@ public class Interactions : MonoBehaviour
         int treeCount = 0;
         foreach (var tree in nearbyTrees)
         {
-            float dist = Vector3.Distance(ARRoot.position, tree.Feature.Points[0][0]);
+
+            Vector3 centroidVector = Vector3.zero;
+            foreach (var point in tree.Feature.Points[0])
+            {
+                centroidVector += point;
+            }
+            centroidVector = centroidVector / tree.Feature.Points[0].Count;
+
+            float dist = Vector3.Distance(ARRoot.position, centroidVector);
             if (dist < 10)
             {
                 treeCount += 1;
-                GameObject treeInfo = Instaintiate(treeInfoPrefab, tree.Feature.Points[0][0]);
-                treeInfo.transfrom.GetChile(0).text = tree.Feature.Properties["GunesSpi"]
+                GameObject treeInfo = Instantiate(treeInfoPrefab, centroidVector, Quaternion.identity);
+                //treeInfo.transform.GetChild(0).text = tree.Feature.Properties["GunesSpi"].ToString();
             }
         }
         Debug.Log(nearbyTrees.Count);

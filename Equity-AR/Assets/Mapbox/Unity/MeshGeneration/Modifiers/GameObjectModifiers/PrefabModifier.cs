@@ -2,6 +2,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 {
 	using UnityEngine;
 	using UnityEngine.UI;
+	using TMPro;
 	using Mapbox.Unity.MeshGeneration.Data;
 	using Mapbox.Unity.MeshGeneration.Components;
 	using Mapbox.Unity.MeshGeneration.Interfaces;
@@ -46,8 +47,8 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 		public override void Run(VectorEntity ve, UnityTile tile)
 		{
-			Interactions iManager = GameObject.Find("GameManager").GetComponent<Interactions>();
-			iManager.nearbyTrees.Add(ve);
+			//Interactions iManager = GameObject.Find("GameManager").GetComponent<Interactions>();
+			//iManager.nearbyTrees.Add(ve);
 
 			if (_options.prefab == null)
 			{
@@ -86,6 +87,8 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			Transform stemTransform;
 			Transform crownTransform;
 			GameObject crown;
+			TMP_Text treeInfo;
+
 			IFeaturePropertySettable settable = null;
 			var centroidVector = new Vector3();
 
@@ -126,8 +129,9 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
             goRectTransform = go.GetComponent<RectTransform>();
 			stemTransform = go.transform.GetChild(0);
-			crownTransform = go. transform.GetChild(1);
+			crownTransform = go.transform.GetChild(1);
 			crown = crownTransform.gameObject;
+			treeInfo = go.transform.GetChild(2).GetChild(0).gameObject.GetComponent<TMP_Text>();
 
 			if (goRectTransform == null)
 			{
@@ -153,24 +157,31 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
                     {
 						case "Gleditsia triacanthos var. inermis - Thornless honeylocust":
 							t_material.color = new Color(0.0f, 0.4274f, 0.1724f);
+							treeInfo.text = "Honeylocust";
 							break;
 						case "Platanus x acerifolia - London planetree":
 							t_material.color = new Color(0.2352f, 0.4666f, 0.1725f);
-							//t_material.emissionColor = new Color(0.2352f, 0.4666f, 0.1725f);
+							treeInfo.text = "London Planetree";
 							break;
 						case "Quercus palustris - pin oak":
 							t_material.color = new Color(0.4705f, 0.5058f, 0.1725f);
+							treeInfo.text = "Pin Oak";
 							break;
 						case "Pyrus calleryana - Callery pear":
 							t_material.color = new Color(0.7058f, 0.5450f, 0.1725f);
+							treeInfo.text = "Callery Pear";
 							break;
 						case "Zelkova serrata -Japanese zelkova":
 							t_material.color = new Color(0.8627f, 0.5483f, 0.1725f);
+							treeInfo.text = "Japaneses Zelkova";
 							break;
 						default:
 							t_material.color = Color.grey;
+							treeInfo.text = "Unknow Species";
 							break;
 					}
+
+					treeInfo.gameObject.transform.parent.gameObject.SetActive(false);
 					
 					
 				}
