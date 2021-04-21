@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -31,6 +31,12 @@ namespace Vuplex.WebView {
             }
         }
 
+        public WebPluginType Type {
+            get {
+                return WebPluginType.Mock;
+            }
+        }
+
         public void ClearAllData() {}
 
         public void CreateTexture(float width, float height, Action<Texture2D> callback) {
@@ -42,8 +48,13 @@ namespace Vuplex.WebView {
 
             var material = new Material(Resources.Load<Material>("MockViewportMaterial"));
             // Create a copy of the texture so that an Exception won't be thrown when the prefab destroys it.
-            var texture = new Texture2D(material.mainTexture.width, material.mainTexture.height, (material.mainTexture as Texture2D).format, true);
-            Graphics.CopyTexture(material.mainTexture, texture);
+            // Also, explicitly use RGBA32 here so that the texture will be converted to RGBA32 if the editor
+            // imported it as a different format. For example, when Texture Compression is set to ASTC in Android build settings,
+            // the editor automatically imports new textures as ASTC, even though the Windows editor doesn't support that format.
+            var texture = new Texture2D(material.mainTexture.width, material.mainTexture.height, TextureFormat.RGBA32, true);
+            texture.SetPixels((material.mainTexture as Texture2D).GetPixels());
+            texture.Apply();
+
             material.mainTexture = texture;
             Dispatcher.RunOnMainThread(() => callback(material));
         }
@@ -57,6 +68,8 @@ namespace Vuplex.WebView {
 
             return MockWebView.Instantiate();
         }
+
+        public void EnableRemoteDebugging() {}
 
         public void SetIgnoreCertificateErrors(bool ignore) {}
 

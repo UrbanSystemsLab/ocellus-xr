@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -18,7 +18,7 @@ using System;
 namespace Vuplex.WebView {
 
     /// <summary>
-    /// Options to alter pointer method, like `PointerUp()` and `PointerDown()`.
+    /// Options to alter pointer methods, like `PointerUp()` and `PointerDown()`.
     /// </summary>
     public class PointerOptions {
 
@@ -29,7 +29,7 @@ namespace Vuplex.WebView {
 
         /// <summary>
         /// The number of clicks for the event. For example, for a double click,
-        /// set this value to `2`. The default is `1`.
+        /// set this value to `2`. The default value is `1`.
         /// </summary>
         public int ClickCount = 1;
 

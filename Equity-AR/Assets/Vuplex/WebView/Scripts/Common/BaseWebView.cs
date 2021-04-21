@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -18,6 +18,7 @@
 #if UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_ANDROID || (UNITY_IOS && !VUPLEX_OMIT_IOS) || UNITY_WSA
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -35,26 +36,47 @@ namespace Vuplex.WebView {
 
         public event EventHandler CloseRequested;
 
+        public event EventHandler<ConsoleMessageEventArgs> ConsoleMessageLogged {
+            add {
+                _consoleMessageLogged += value;
+                if (_consoleMessageLogged.GetInvocationList().Length == 1) {
+                    _setConsoleMessageEventsEnabled(true);
+                }
+            }
+            remove {
+                _consoleMessageLogged -= value;
+                if (_consoleMessageLogged.GetInvocationList().Length == 0) {
+                    _setConsoleMessageEventsEnabled(false);
+                }
+            }
+        }
+
+        public event EventHandler<FocusedInputFieldChangedEventArgs> FocusedInputFieldChanged {
+            add {
+                _focusedInputFieldChanged += value;
+                if (_focusedInputFieldChanged.GetInvocationList().Length == 1) {
+                    _setFocusedInputFieldEventsEnabled(true);
+                }
+            }
+            remove {
+                _focusedInputFieldChanged -= value;
+                if (_focusedInputFieldChanged.GetInvocationList().Length == 0) {
+                    _setFocusedInputFieldEventsEnabled(false);
+                }
+            }
+        }
+
         public event EventHandler<ProgressChangedEventArgs> LoadProgressChanged;
 
-        public event EventHandler<EventArgs<string>> MessageEmitted  {
-            add { _messageHandler.MessageEmitted += value; }
-            remove { _messageHandler.MessageEmitted -= value; }
-        }
+        public event EventHandler<EventArgs<string>> MessageEmitted;
 
         public event EventHandler PageLoadFailed;
 
-        public event EventHandler<EventArgs<string>> TitleChanged  {
-            add { _messageHandler.TitleChanged += value; }
-            remove { _messageHandler.TitleChanged -= value; }
-        }
+        public event EventHandler<EventArgs<string>> TitleChanged;
 
         public event EventHandler<UrlChangedEventArgs> UrlChanged;
 
-        public event EventHandler<EventArgs<Rect>> VideoRectChanged  {
-            add { _messageHandler.VideoRectChanged += value; }
-            remove { _messageHandler.VideoRectChanged -= value; }
-        }
+        public event EventHandler<EventArgs<Rect>> VideoRectChanged;
 
         public bool IsDisposed { get; protected set; }
 
@@ -78,7 +100,7 @@ namespace Vuplex.WebView {
             }
         }
 
-        public Vector2 SizeInPixels {
+        public virtual Vector2 SizeInPixels {
             get {
                 return new Vector2(_nativeWidth, _nativeHeight);
             }
@@ -115,8 +137,6 @@ namespace Vuplex.WebView {
             _width = width;
             _height = height;
             Utils.ThrowExceptionIfAbnormallyLarge(_nativeWidth, _nativeHeight);
-            _messageHandler.JavaScriptResultReceived += MessageHandler_JavaScriptResultReceived;
-            _messageHandler.UrlChanged += MessageHandler_UrlChanged;
             IsInitialized = true;
             // Prevent the script from automatically being destroyed when a new scene is loaded.
             DontDestroyOnLoad(gameObject);
@@ -175,7 +195,7 @@ namespace Vuplex.WebView {
                 bytes = ImageConversion.EncodeToPNG(texture);
                 Destroy(texture);
             } catch (Exception e) {
-                Debug.LogError("An exception occurred while capturing the screenshot: " + e);
+                WebViewLogger.LogError("An exception occurred while capturing the screenshot: " + e);
             }
             callback(bytes);
         }
@@ -212,6 +232,22 @@ namespace Vuplex.WebView {
                 false,
                 false
             );
+            #if UNITY_2020_2_OR_NEWER
+                // In Unity 2020.2, Unity's internal TexturesD3D11.cpp class on Windows logs an error if
+                // UpdateExternalTexture() is called on a Texture2D created from the constructor
+                // rather than from Texture2D.CreateExternalTexture(). So, rather than returning
+                // the original Texture2D created via the constructor, we return a copy created
+                // via CreateExternalTexture(). This approach is only used for 2020.2 and newer because
+                // it doesn't work in 2018.4 and instead causes a crash.
+                texture = Texture2D.CreateExternalTexture(
+                    nativeWidth,
+                    nativeHeight,
+                    TextureFormat.RGBA32,
+                    false,
+                    false,
+                    texture.GetNativeTexturePtr()
+                );
+            #endif
             // Invoke the callback asynchronously in order to match the async
             // behavior that's required for Android.
             Dispatcher.RunOnMainThread(() => callback(texture));
@@ -311,7 +347,7 @@ namespace Vuplex.WebView {
                 bytes = texture.GetRawTextureData();
                 Destroy(texture);
             } catch (Exception e) {
-                Debug.LogError("An exception occurred while getting the raw texture data: " + e);
+                WebViewLogger.LogError("An exception occurred while getting the raw texture data: " + e);
             }
             callback(bytes);
         }
@@ -473,6 +509,7 @@ namespace Vuplex.WebView {
             WebView_zoomOut(_nativeWebViewPtr);
         }
 
+        EventHandler<ConsoleMessageEventArgs> _consoleMessageLogged;
         protected IntPtr _currentViewportNativeTexture;
 
     #if (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_EDITOR_WIN
@@ -487,9 +524,10 @@ namespace Vuplex.WebView {
         protected const string _dllName = "__Internal";
     #endif
 
+        EventHandler<FocusedInputFieldChangedEventArgs> _focusedInputFieldChanged;
+        FocusedInputFieldType _focusedInputFieldType = FocusedInputFieldType.None;
         protected float _height; // in Unity units
         Material _materialForBlitting;
-        protected BridgeMessageHandler _messageHandler = new BridgeMessageHandler();
         // Height in pixels.
         protected int _nativeHeight {
             get {
@@ -512,6 +550,7 @@ namespace Vuplex.WebView {
         protected Dictionary<string, Action<string>> _pendingJavaScriptResultCallbacks = new Dictionary<string, Action<string>>();
         static readonly Regex STREAMING_ASSETS_URL_REGEX = new Regex(@"^streaming-assets:(//)?(.*)$", RegexOptions.IgnoreCase);
         const string USER_AGENT_EXCEPTION_MESSAGE = "Unable to set the User-Agent string, because a webview has already been created with the default User-Agent. On Windows and macOS, SetUserAgent() can only be called prior to creating any webviews.";
+        Rect _videoRect = Rect.zero;
         protected Texture2D _videoTexture;
         protected bool _viewUpdatesAreEnabled = true;
         protected Texture2D _viewportTexture;
@@ -595,7 +634,7 @@ namespace Vuplex.WebView {
                 try {
                     callback(result);
                 } catch (Exception e) {
-                    Debug.LogError("An exception occurred while calling the callback for CanGoBack: " + e);
+                    WebViewLogger.LogError("An exception occurred while calling the callback for CanGoBack: " + e);
                 }
             }
         }
@@ -612,7 +651,7 @@ namespace Vuplex.WebView {
                 try {
                     callBack(result);
                 } catch (Exception e) {
-                    Debug.LogError("An exception occurred while calling the callForward for CanGoForward: " + e);
+                    WebViewLogger.LogError("An exception occurred while calling the callForward for CanGoForward: " + e);
                 }
             }
         }
@@ -636,6 +675,11 @@ namespace Vuplex.WebView {
             var components = message.Split(new char[] { ',' }, 2);
             var resultCallbackId = components[0];
             var result = components[1];
+            _handleJavaScriptResult(resultCallbackId, result);
+        }
+
+        void _handleJavaScriptResult(string resultCallbackId, string result) {
+
             var callback = _pendingJavaScriptResultCallbacks[resultCallbackId];
             _pendingJavaScriptResultCallbacks.Remove(resultCallbackId);
             callback(result);
@@ -679,7 +723,7 @@ namespace Vuplex.WebView {
         /// </summary>
         void HandleLoadProgressUpdate(string progressString) {
 
-            var progress = float.Parse(progressString);
+            var progress = float.Parse(progressString, CultureInfo.InvariantCulture);
             var e = new ProgressChangedEventArgs(ProgressChangeType.Updated, progress);
             OnLoadProgressChanged(e);
         }
@@ -689,7 +733,74 @@ namespace Vuplex.WebView {
         /// </summary>
         void HandleMessageEmitted(string serializedMessage) {
 
-            _messageHandler.HandleMessage(serializedMessage);
+            // For performance, only try to deserialize the message if it's one we're listening for.
+            var messageType = serializedMessage.Contains("vuplex.webview") ? BridgeMessage.ParseType(serializedMessage) : null;
+            switch (messageType) {
+                case "vuplex.webview.consoleMessageLogged": {
+                    var handler = _consoleMessageLogged;
+                    if (handler != null) {
+                        var consoleMessage = JsonUtility.FromJson<ConsoleBridgeMessage>(serializedMessage);
+                        handler(this, consoleMessage.ToEventArgs());
+                    }
+                    break;
+                }
+                case "vuplex.webview.focusedInputFieldChanged": {
+                    var typeString = StringBridgeMessage.ParseValue(serializedMessage);
+                    var type = FocusedInputFieldChangedEventArgs.ParseType(typeString);
+                    if (_focusedInputFieldType != type) {
+                        _focusedInputFieldType = type;
+                        var handler = _focusedInputFieldChanged;
+                        if (handler != null) {
+                            handler(this, new FocusedInputFieldChangedEventArgs(type));
+                        }
+                    }
+                    break;
+                }
+                case "vuplex.webview.javaScriptResult": {
+                    var message = JsonUtility.FromJson<StringWithIdBridgeMessage>(serializedMessage);
+                    _handleJavaScriptResult(message.id, message.value);
+                    break;
+                }
+                case "vuplex.webview.titleChanged": {
+                    var handler = TitleChanged;
+                    if (handler != null) {
+                        var title = StringBridgeMessage.ParseValue(serializedMessage);
+                        handler(this, new EventArgs<string>(title));
+                    }
+                    break;
+                }
+                case "vuplex.webview.urlChanged": {
+                    var action = JsonUtility.FromJson<UrlChangedMessage>(serializedMessage).urlAction;
+                    if (Url == action.Url) {
+                        return;
+                    }
+                    Url = action.Url;
+                    var handler = UrlChanged;
+                    if (handler != null) {
+                        handler(this, new UrlChangedEventArgs(action.Url, action.Title, action.Type));
+                    }
+                    break;
+                }
+                case "vuplex.webview.videoRectChanged": {
+                    var value = JsonUtility.FromJson<VideoRectChangedMessage>(serializedMessage).value;
+                    var newRect = value.rect.toRect();
+                    if (_videoRect != newRect) {
+                        _videoRect = newRect;
+                        var handler = VideoRectChanged;
+                        if (handler != null) {
+                            handler(this, new EventArgs<Rect>(newRect));
+                        }
+                    }
+                    break;
+                }
+                default: {
+                    var handler = MessageEmitted;
+                    if (handler != null) {
+                        handler(this, new EventArgs<string>(serializedMessage));
+                    }
+                    break;
+                }
+            }
         }
 
         /// <summary>
@@ -712,35 +823,28 @@ namespace Vuplex.WebView {
             }
         }
 
-        void MessageHandler_JavaScriptResultReceived(object sender, EventArgs<StringWithIdBridgeMessage> e) {
+        protected virtual void OnLoadProgressChanged(ProgressChangedEventArgs eventArgs) {
 
-            var resultCallbackId = e.Value.id;
-            var result = e.Value.value;
-            var callback = _pendingJavaScriptResultCallbacks[resultCallbackId];
-            _pendingJavaScriptResultCallbacks.Remove(resultCallbackId);
-            callback(result);
-        }
-
-        protected void MessageHandler_UrlChanged(object sender, UrlChangedEventArgs e) {
-
-            OnUrlChanged(e);
-        }
-
-        protected virtual void OnLoadProgressChanged(ProgressChangedEventArgs e) {
-
-            if (LoadProgressChanged != null) {
-                LoadProgressChanged(this, e);
+            var handler = LoadProgressChanged;
+            if (handler != null) {
+                handler(this, eventArgs);
             }
         }
 
-        protected virtual void OnUrlChanged(UrlChangedEventArgs e) {
+        protected ConsoleMessageLevel _parseConsoleMessageLevel(string levelString) {
 
-            if (Url == e.Url) {
-                return;
-            }
-            Url = e.Url;
-            if (UrlChanged != null) {
-                UrlChanged(this, e);
+            switch (levelString) {
+                case "DEBUG":
+                    return ConsoleMessageLevel.Debug;
+                case "ERROR":
+                    return ConsoleMessageLevel.Error;
+                case "LOG":
+                    return ConsoleMessageLevel.Log;
+                case "WARNING":
+                    return ConsoleMessageLevel.Warning;
+                default:
+                    WebViewLogger.LogWarning("Unrecognized console message level: " + levelString);
+                    return ConsoleMessageLevel.Log;
             }
         }
 
@@ -752,6 +856,18 @@ namespace Vuplex.WebView {
                 Utils.ThrowExceptionIfAbnormallyLarge(_nativeWidth, _nativeHeight);
                 WebView_resize(_nativeWebViewPtr, _nativeWidth, _nativeHeight);
             }
+        }
+
+        protected virtual void _setConsoleMessageEventsEnabled(bool enabled) {
+
+            _assertValidState();
+            WebView_setConsoleMessageEventsEnabled(_nativeWebViewPtr, enabled);
+        }
+
+        protected virtual void _setFocusedInputFieldEventsEnabled(bool enabled) {
+
+            _assertValidState();
+            WebView_setFocusedInputFieldEventsEnabled(_nativeWebViewPtr, enabled);
         }
 
         protected string _transformStreamingAssetsUrlIfNeeded(string originalUrl) {
@@ -772,7 +888,7 @@ namespace Vuplex.WebView {
             Dispatcher.RunOnMainThread(() => {
                 var gameObj = GameObject.Find(gameObjectName);
                 if (gameObj == null) {
-                    Debug.LogErrorFormat("Unable to send the message, because there is no GameObject named '{0}'", gameObjectName);
+                    WebViewLogger.LogErrorFormat("Unable to send the message, because there is no GameObject named '{0}'", gameObjectName);
                     return;
                 }
                 gameObj.SendMessage(methodName, message);
@@ -849,6 +965,12 @@ namespace Vuplex.WebView {
         static extern void WebView_scrollAtPoint(IntPtr webViewPtr, int deltaX, int deltaY, int pointerX, int pointerY);
 
         [DllImport(_dllName)]
+        static extern void WebView_setConsoleMessageEventsEnabled(IntPtr webViewPtr, bool enabled);
+
+        [DllImport(_dllName)]
+        static extern void WebView_setFocusedInputFieldEventsEnabled(IntPtr webViewPtr, bool enabled);
+
+        [DllImport(_dllName)]
         static extern void WebView_setStorageEnabled(bool enabled);
 
         [DllImport(_dllName)]
@@ -858,4 +980,4 @@ namespace Vuplex.WebView {
         static extern void WebView_zoomOut(IntPtr webViewPtr);
     }
 }
-#endif // UNITY_EDITOR || UNITY_STANDLONE_WIN || UNITY_STANDALONE_OSX || UNITY_ANDROID || UNITY_IOS || UNITY_WSA
+#endif

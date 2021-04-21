@@ -1,35 +1,27 @@
 ﻿<Properties StartupConfiguration="{05D9F951-4CE5-D299-1E0E-957BBA8A3E70}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MapManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/URLLocationUpdate.cs">
     <Files>
-      <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/DontDestroyOnLoad.cs" Line="5" Column="15" IsPinned="True" />
-      <File FileName="Assets/Mapbox/Unity/Location/DeviceLocationProvider.cs" />
-      <File FileName="Assets/Mapbox/Unity/Location/EditorLocationProvider.cs" />
-      <File FileName="Assets/Mapbox/Unity/Location/AbstractLocationProvider.cs" />
-      <File FileName="Assets/Mapbox/Unity/Location/ILocationProvider.cs" />
-      <File FileName="Assets/Mapbox/Unity/Editor/AtlasTemplateGenerator.cs" />
-      <File FileName="Assets/Mapbox/Unity/Location/LocationProviderFactory.cs" />
-      <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="184" Column="6" />
-      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" />
-      <File FileName="../../../Device Identifiers.deviceids" />
-      <File FileName="Assets/Mapbox/Unity/Map/Interfaces/IMap.cs" />
-      <File FileName="Assets/Mapbox/Unity/Editor/PropertyDrawers/RangeTileProviderOptionsDrawer.cs" />
-      <File FileName="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapOptionsDrawer.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifier.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/ModifierBase.cs" />
-      <File FileName="Assets/Mapbox/Core/mapbox-sdk-cs/Geocoding/Response/Feature.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Components/FeatureBehaviour.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
-      <File FileName="Assets/Scripts/Switcher.cs" />
-      <File FileName="Assets/Scripts/Interactions.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/AddMonoBehavioursModifier.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/AddMonoBehavioursModifier.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/SpawnInsideModifier.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/UnityTile.cs" />
-      <File FileName="Assets/Scripts/InfoCard.cs" Line="16" Column="76" />
-      <File FileName="Assets/Scripts/MapManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MapManager.cs" />
+      <File FileName="Assets/UnityARInterface/Scripts/ARController.cs" />
+      <File FileName="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/FileMonitor.cs" />
+      <File FileName="Assets/Scripts/RayCastInteraction.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" />
+      <File FileName="Assets/Scripts/TreeInfoManager.cs" />
+      <File FileName="Assets/Scripts/MainPage.cs" />
+      <File FileName="Assets/Scripts/ToggleCanvasGroup.cs" />
+      <File FileName="Assets/Scripts/URLUpdate.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
+      <File FileName="Assets/Scripts/Test.cs" />
+      <File FileName="Assets/Scripts/WebHandler.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" />
+      <File FileName="Assets/Scripts/URLLocationUpdate.cs" Line="19" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="ae4643a9-e335-4370-90d2-cffc0c9649e6" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="3c0bce50-dc25-46aa-a13f-ad2558bd67b3" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>Assembly-CSharp.csproj</String>

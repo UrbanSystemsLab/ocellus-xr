@@ -48,7 +48,7 @@ namespace Vuplex.WebView {
                     try {
                         action();
                     } catch (Exception e) {
-                        Debug.LogError("An exception occurred while dispatching an action on the main thread: " + e);
+                        WebViewLogger.LogError("An exception occurred while dispatching an action on the main thread: " + e);
                     }
                 }
                 _actions.Clear();

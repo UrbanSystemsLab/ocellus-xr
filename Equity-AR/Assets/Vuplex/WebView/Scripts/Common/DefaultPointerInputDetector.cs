@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -134,7 +134,9 @@ namespace Vuplex.WebView {
             return new PointerEventArgs {
                 Point = _convertToNormalizedPoint(eventData),
                 Button = (MouseButton)eventData.button,
-                ClickCount = eventData.clickCount
+                // StandaloneInputModule incorrectly specifies a click count of 0
+                // for PointerDown events, so set the minimum to 1 click.
+                ClickCount = Math.Max(eventData.clickCount, 1)
             };
         }
 
@@ -247,7 +249,6 @@ namespace Vuplex.WebView {
         }
 
     // Code specific to Microsoft's Mixed Reality Toolkit.
-    // To enable this code, add VUPLEX_MRTK to "Scripting Define Symbols" in Player Settings.
     #if VUPLEX_MRTK
 
         bool _beganDragEmitted;
@@ -286,6 +287,8 @@ namespace Vuplex.WebView {
         }
 
         void Start() {
+
+            WebViewLogger.LogInfo("Just a heads-up: please ignore the warning 'BoxCollider is null...' warning from MRTK. WebViewPrefab doesn't use a BoxCollider, so it sets the bounds of NearInteractionTouchable manually, but MRTK doesn't provide a way to disable the warning.");
             // Add a NearInteractionTouchable script to allow touch interactions
             // to trigger the IMixedRealityPointerHandler methods.
             var touchable = gameObject.AddComponent<NearInteractionTouchable>();

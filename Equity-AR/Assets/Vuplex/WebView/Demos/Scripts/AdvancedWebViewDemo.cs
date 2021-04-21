@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -23,6 +23,11 @@ namespace Vuplex.WebView.Demos {
     /// Sets up the AdvancedWebViewDemo scene, which displays web content in a main
     /// webview and then renders a UI in a second webview to display the current URL
     /// and provide back / forward navigation controls.
+    ///
+    /// The address bar currently only displays the current URL and is not an input.
+    /// I plan to add a dedicated browser prefab in the future that will include
+    /// a functional address bar. In the meantime, you can edit the CONTROLS_HTML field
+    /// below to implement a URL input.
     /// </summary>
     /// <remarks>
     /// This scene demonstrates the following:
@@ -41,6 +46,8 @@ namespace Vuplex.WebView.Demos {
         WebViewPrefab _mainWebViewPrefab;
 
         void Start() {
+
+            WebViewLogger.Log("Just a heads-up: AdvancedWebViewDemo's address bar currently only displays the current URL and is not an input. For more info, please see the comments in AdvancedWebViewDemo.cs.");
 
             // Create a 0.6 x 0.3 webview for the main web content.
             _mainWebViewPrefab = WebViewPrefab.Instantiate(0.6f, 0.3f);
@@ -152,7 +159,7 @@ namespace Vuplex.WebView.Demos {
 
             // Also add an on-screen keyboard under the main webview.
             var keyboard = Keyboard.Instantiate();
-            keyboard.transform.parent = _mainWebViewPrefab.transform;
+            keyboard.transform.SetParent(_mainWebViewPrefab.transform, false);
             keyboard.transform.localPosition = new Vector3(0, -0.31f, 0);
             keyboard.transform.localEulerAngles = Vector3.zero;
             keyboard.InputReceived += (sender, eventArgs) => {

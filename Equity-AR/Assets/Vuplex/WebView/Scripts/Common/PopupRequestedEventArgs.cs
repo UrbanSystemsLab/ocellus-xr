@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -18,7 +18,7 @@ using System;
 namespace Vuplex.WebView {
 
     /// <summary>
-    /// Event args to indicate that the page requested a popup.
+    /// Event args for `PopupRequested`.
     /// </summary>
     public class PopupRequestedEventArgs : EventArgs {
 
@@ -29,6 +29,10 @@ namespace Vuplex.WebView {
 
         /// <summary>
         /// The URL for the popup.
+        /// </summary>
+        /// <summary>
+        /// Note that with 3D WebView for Android, the `Url` field may be empty in some
+        /// cases when using `PopupMode.LoadInNewWebView`.
         /// </summary>
         public readonly string Url;
 

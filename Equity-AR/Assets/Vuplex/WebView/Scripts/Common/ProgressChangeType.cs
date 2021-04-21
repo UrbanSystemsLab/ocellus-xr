@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -16,9 +16,9 @@
 namespace Vuplex.WebView {
 
     public enum ProgressChangeType {
-        Started,
-        Finished,
-        Failed,
-        Updated
+        Started = 0,
+        Finished = 1,
+        Failed = 2,
+        Updated = 3
     }
 }

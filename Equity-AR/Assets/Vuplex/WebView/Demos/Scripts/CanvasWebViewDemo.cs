@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -51,7 +51,7 @@ namespace Vuplex.WebView.Demos {
 
             // Use a mobile User-Agent on Android and iOS
             // for a mobile-friendly experience.
-            #if UNITY_ANDROID || UNITY_IOS && !UNITY_EDITOR
+            #if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
                 Web.SetUserAgent(true);
             #endif
 

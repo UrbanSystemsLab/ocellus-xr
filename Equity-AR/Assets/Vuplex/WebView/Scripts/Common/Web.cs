@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -29,12 +29,22 @@ namespace Vuplex.WebView {
     public static class Web {
 
         /// <summary>
+        /// Indicates the default 3D WebView plugin among those
+        /// installed for the current platform.
+        /// </summary>
+        public static WebPluginType DefaultPluginType {
+            get {
+                return _pluginFactory.GetPlugin().Type;
+            }
+        }
+
+        /// <summary>
         /// Clears all data that persists between webview instances,
         /// including cookies, storage, and cached resources.
         /// </summary>
         /// <remarks>
         /// On Windows and macOS, this method can only be called prior to
-        /// creating any webviews.
+        /// initializing any webviews.
         /// </remarks>
         public static void ClearAllData() {
 
@@ -88,7 +98,7 @@ namespace Vuplex.WebView {
         /// Creates a special texture that a webview can use for rendering, using the given
         /// width and height in Unity units (not pixels). The webview plugin automatically
         /// resizes a texture when it initializes or resizes a webview, so in practice, you
-        /// can simply use the dimensions of 1x1 like `CreateTexture(1, 1, callback)`.
+        /// can simply use the dimensions of 1x1 like `CreateTexture(1, 1)`.
         /// </summary>
         /// <remarks>
         /// Note that the `WebViewPrefab` takes care of texture creation for you, so you only need
@@ -124,17 +134,12 @@ namespace Vuplex.WebView {
         /// (for example, to connect it to your own custom GameObject).
         /// </remarks>
         /// <example>
-        /// <![CDATA[
-        /// ```cs
-        /// Web.CreateMaterial(material => {
-        ///     // Set the material attached to this GameObject so that it can display the web content.
-        ///     GetComponent<Renderer>().material = material;
-        ///     var webView = Web.CreateWebView();
-        ///     webView.Init(material.mainTexture, 1, 1);
-        ///     webView.LoadUrl("https://vuplex.com");
-        /// });
-        /// ```
-        /// ]]>
+        /// var material = await Web.CreateMaterial();
+        /// // Set the material attached to this GameObject so that it can display the web content.
+        /// GetComponent&lt;Renderer>().material = material;
+        /// var webView = Web.CreateWebView();
+        /// webView.Init(material.mainTexture, 1, 1);
+        /// webView.LoadUrl("https://vuplex.com");
         /// </example>
         public static IWebView CreateWebView() {
 
@@ -159,14 +164,22 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
+        /// Enables remote debugging. For more info, please
+        /// see [this article on remote debugging](https://support.vuplex.com/articles/how-to-debug-web-content).
+        /// </summary>
+        public static void EnableRemoteDebugging() {
+
+            _pluginFactory.GetPlugin().EnableRemoteDebugging();
+        }
+
+        /// <summary>
         /// By default, browsers block https URLs with invalid SSL certificates
         /// from being loaded. However, this method can be used to ignore
         /// certificate errors.
         /// </summary>
         /// <remarks>
         /// This method works for every package except for 3D WebView for UWP.
-        /// For UWP, certificates must be whitelisted in Package.appxmanifest/Declarations/Certificates:
-        /// https://www.suchan.cz/2015/10/displaying-https-page-with-invalid-certificate-in-uwp-webview/
+        /// For UWP, certificates must be [whitelisted in the Package.appxmanifest file](https://www.suchan.cz/2015/10/displaying-https-page-with-invalid-certificate-in-uwp-webview/).
         /// </remarks>
         public static void SetIgnoreCertificateErrors(bool ignore) {
 
@@ -175,13 +188,14 @@ namespace Vuplex.WebView {
 
         /// <summary>
         /// Enables support for showing the native Android or iOS touch screen
-        /// keyboard when an input is focused.
+        /// keyboard when an input field is focused.
         /// </summary>
         /// <remarks>
         /// This method should be called prior to initializing the desired webviews.
         /// This functionality is currently only supported by 3D WebView for Android
         /// and 3D WebView for iOS. For other packages, such as
-        /// 3D WebView for Android with Gecko Engine, please see Unity's `TouchScreenKeyboard` class.
+        /// 3D WebView for Android with Gecko Engine, please see
+        /// Unity's [`TouchScreenKeyboard`](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html) class.
         /// </remarks>
         public static void SetTouchScreenKeyboardEnabled(bool enabled) {
 
@@ -198,7 +212,7 @@ namespace Vuplex.WebView {
         /// </summary>
         /// <remarks>
         /// On Windows and macOS, this method can only be called prior to
-        /// creating any webviews.
+        /// initializing any webviews.
         /// </remarks>
         public static void SetStorageEnabled(bool enabled) {
 
@@ -213,7 +227,7 @@ namespace Vuplex.WebView {
         /// </summary>
         /// <remarks>
         /// On Windows and macOS, this method can only be called prior to
-        /// creating any webviews.
+        /// initializing any webviews.
         /// </remarks>
         public static void SetUserAgent(bool mobile) {
 
@@ -225,7 +239,7 @@ namespace Vuplex.WebView {
         /// </summary>
         /// <remarks>
         /// On Windows and macOS, this method can only be called prior to
-        /// creating any webviews.
+        /// initializing any webviews.
         /// </remarks>
         public static void SetUserAgent(string userAgent) {
 

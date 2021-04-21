@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -25,34 +25,7 @@ namespace Vuplex.WebView {
         /// </summary>
         public static void DrawDocumentationLink(string url) {
 
-            var linkStyle = new GUIStyle {
-                richText = true,
-                padding = new RectOffset {
-                    top = 10,
-                    bottom = 10
-                }
-            };
-            var learnMoreLinkClicked = GUILayout.Button(
-                EditorUtils.TextWithColor("View documentation", EditorUtils.GetLinkColor()),
-                linkStyle
-            );
-            var linkRect = GUILayoutUtility.GetLastRect();
-            EditorGUIUtility.AddCursorRect(linkRect, MouseCursor.Link);
-            // Unity's editor GUI doesn't support underlines, so fake it.
-            GUI.Label(
-                linkRect,
-                EditorUtils.TextWithColor("_______________________", EditorUtils.GetLinkColor()),
-                new GUIStyle {
-                    richText = true,
-                    padding = new RectOffset {
-                        top = 12,
-                        bottom = 10
-                }
-            });
-
-            if (learnMoreLinkClicked) {
-                Application.OpenURL(url);
-            }
+            EditorUtils.DrawLink("View documentation", url, 23);
         }
     }
 }

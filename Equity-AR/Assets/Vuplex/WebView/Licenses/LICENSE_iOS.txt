@@ -1,4 +1,4 @@
-Besides the exceptions listed below, all files in 3D WebView for iOS are Copyright (c) 2020 Vuplex Inc and are licensed under the Vuplex Commercial Software Library License:
+Besides the exceptions listed below, all files in 3D WebView for iOS are Copyright (c) 2021 Vuplex Inc and are licensed under the Vuplex Commercial Software Library License:
 
 Vuplex Commercial Software Library License
 

@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -25,14 +25,10 @@
 * Unlike other platforms (like Desktop) where the plugin dynamic library is automatically
 * loaded and registered by Unity, that must be done manually on iOS. VXWebViewAppController.mm uses Unity's
 * IMPL_APP_CONTROLLER_SUBCLASS() macro to tell Unity to use VXWebViewAppController
-* instead of UnityAppController. It's possible (but rare) that multiple iOS plugins
-* in a project do this, which results in one plugin's use of IMPL_APP_CONTROLLER_SUBCLASS()
-* overwriting another's.
-*
-* If you find yourself in this scenario where another iOS plugin in your project needs to extend
-* UnityAppController and call IMPL_APP_CONTROLLER_SUBCLASS(), you can comment-out the call to
-* IMPL_APP_CONTROLLER_SUBCLASS() in VXWebViewAppController.mm and update your other plugin to extend
-* VXWebViewAppController instead of UnityAppController.
+* instead of UnityAppController. Due to a design flaw of Unity's plugin system for iOS, it's possible for
+* multiple iOS plugins in a project to call IMPL_APP_CONTROLLER_SUBCLASS(), which results in one plugin's use
+* of IMPL_APP_CONTROLLER_SUBCLASS() overwriting another's. For instructions on resolving such a conflict,
+* please see this support article: https://support.vuplex.com/articles/ios-graphics-plugin-conflict
 */
 @interface VXWebViewAppController : UnityAppController
 

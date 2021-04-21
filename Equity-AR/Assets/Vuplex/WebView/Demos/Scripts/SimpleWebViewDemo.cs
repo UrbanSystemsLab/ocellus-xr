@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -76,11 +76,8 @@ namespace Vuplex.WebView.Demos {
                 }
             };
 
-            // Also add an on-screen keyboard under the main webview.
-            var keyboard = Keyboard.Instantiate();
-            keyboard.transform.parent = _webViewPrefab.transform;
-            keyboard.transform.localPosition = new Vector3(0, -0.31f, 0);
-            keyboard.transform.localEulerAngles = new Vector3(0, 0, 0);
+            // Also hook up the on-screen keyboard.
+            var keyboard = GameObject.FindObjectOfType<Keyboard>();
             keyboard.InputReceived += (sender, eventArgs) => {
                 _webViewPrefab.WebView.HandleKeyboardInput(eventArgs.Value);
             };

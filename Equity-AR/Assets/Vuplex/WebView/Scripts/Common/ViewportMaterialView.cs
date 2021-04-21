@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -77,11 +77,6 @@ namespace Vuplex.WebView {
                 );
             }
             GetComponent<Renderer>().sharedMaterial.SetVector("_VideoCutoutRect", rectVector);
-        }
-
-        public virtual void SetStereoToMonoOverride(bool overrideStereoToMono) {
-
-            GetComponent<Renderer>().sharedMaterial.SetFloat("_OverrideStereoToMono", overrideStereoToMono ? 1.0f : 0);
         }
 
         Vector4 _rectToVector(Rect rect) {

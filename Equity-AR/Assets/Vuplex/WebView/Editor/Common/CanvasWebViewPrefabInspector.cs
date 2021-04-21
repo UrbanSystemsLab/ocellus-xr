@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -17,16 +17,11 @@ using UnityEditor;
 
 namespace Vuplex.WebView {
 
-    /// <summary>
-    /// Adds a "View documentation" link to the inspector.
-    /// </summary>
     [CustomEditor(typeof(CanvasWebViewPrefab))]
-    public class CanvasWebViewPrefabInspector : Editor {
+    public class CanvasWebViewPrefabInspector : BaseWebViewPrefabInspector {
 
-        public override void OnInspectorGUI() {
-
-            DocumentationLinkDrawer.DrawDocumentationLink("https://developer.vuplex.com/webview/CanvasWebViewPrefab");
-            DrawDefaultInspector();
+        protected override string _getDocumentationLink() {
+            return "https://developer.vuplex.com/webview/CanvasWebViewPrefab";
         }
     }
 }

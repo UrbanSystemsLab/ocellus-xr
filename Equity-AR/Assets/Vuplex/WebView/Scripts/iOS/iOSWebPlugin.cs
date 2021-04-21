@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -27,6 +27,12 @@ namespace Vuplex.WebView {
                     _instance = new iOSWebPlugin();
                 }
                 return _instance;
+            }
+        }
+
+        public WebPluginType Type {
+            get {
+                return WebPluginType.iOS;
             }
         }
 
@@ -62,6 +68,11 @@ namespace Vuplex.WebView {
         public virtual IWebView CreateWebView() {
 
             return iOSWebView.Instantiate();
+        }
+
+        public void EnableRemoteDebugging() {
+
+            WebViewLogger.Log("Remote debugging is enabled for iOS. For instructions, please see https://support.vuplex.com/articles/how-to-debug-web-content#ios.");
         }
 
         public void SetIgnoreCertificateErrors(bool ignore) {

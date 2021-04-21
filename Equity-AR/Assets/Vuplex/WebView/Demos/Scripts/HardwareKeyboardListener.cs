@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -25,7 +25,7 @@ namespace Vuplex.WebView.Demos {
     /// strings that can be passed to `IWebView.HandleKeyboardInput()`
     /// or `IWithKeyDownAndUp.KeyDown()` and `KeyUp()`.
     /// </summary>
-    class HardwareKeyboardListener : MonoBehaviour {
+    public class HardwareKeyboardListener : MonoBehaviour {
 
         [Obsolete("The HardwareKeyboardListener.InputReceived event is now deprecated. Please use the HardwareKeyboardListener.KeyDownReceived event instead.")]
         public event EventHandler<KeyboardInputEventArgs> InputReceived {
@@ -49,12 +49,12 @@ namespace Vuplex.WebView.Demos {
         List<string> _keysDown = new List<string>();
 
         static readonly string[] _keyValues = new string[] {
-            "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "`", "-", "=", "[", "]", "\\", ";", "'", ",", ".", "/", " ", "Enter", "Backspace", "Tab", "ArrowUp", "ArrowDown", "ArrowRight", "ArrowLeft"
+            "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "`", "-", "=", "[", "]", "\\", ";", "'", ",", ".", "/", " ", "Enter", "Backspace", "Tab", "ArrowUp", "ArrowDown", "ArrowRight", "ArrowLeft", "Escape", "Delete"
         };
 
         // Keys that don't show up correctly in Input.inputString.
         static readonly string[] _keyValuesUndetectableThroughInputString = new string[] {
-            "Tab", "ArrowUp", "ArrowDown", "ArrowRight", "ArrowLeft"
+            "Tab", "ArrowUp", "ArrowDown", "ArrowRight", "ArrowLeft", "Escape", "Delete"
         };
 
         bool _areKeysUndetectableThroughInputStringPressed() {
@@ -111,6 +111,8 @@ namespace Vuplex.WebView.Demos {
                     return "right";
                 case "ArrowLeft":
                     return "left";
+                case "Enter":
+                    return "return";
             }
             return keyValue.ToLower();
         }
@@ -126,7 +128,7 @@ namespace Vuplex.WebView.Demos {
                 try {
                     keyUp = Input.GetKeyUp(_getUnityKeyNameForJsKeyValue(key));
                 } catch (ArgumentException ex) {
-                    Debug.LogError("Invalid key value passed to Input.GetKeyUp: " + ex);
+                    WebViewLogger.LogError("Invalid key value passed to Input.GetKeyUp: " + ex);
                     _keysDown.Remove(key);
                     return;
                 }

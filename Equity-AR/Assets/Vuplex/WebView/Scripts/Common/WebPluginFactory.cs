@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -33,16 +33,16 @@ namespace Vuplex.WebView {
                     if (_windowsPlugin != null) {
                         return _windowsPlugin;
                     }
-                    _logMockWarningOnce("The 3D WebView for Windows plugin is not currently installed, so the MockWebView will be used while running in the editor." + MORE_INFO_TEXT);
+                    _logMockWarningOnce("The 3D WebView for Windows plugin is not currently installed");
                     return _mockPlugin;
                 #elif UNITY_EDITOR_OSX
                     if (_macPlugin != null) {
                         return _macPlugin;
                     }
-                    _logMockWarningOnce("The 3D WebView for macOS plugin is not currently installed, so the MockWebView will be used while running in the editor." + MORE_INFO_TEXT);
+                    _logMockWarningOnce("The 3D WebView for macOS plugin is not currently installed");
                     return _mockPlugin;
                 #else
-                    _logMockWarningOnce("There is not currently a 3D WebView plugin for the current editor platform, so the MockWebView will be used while running in the editor." + MORE_INFO_TEXT);
+                    _logMockWarningOnce("There is not currently a 3D WebView plugin for the current editor platform");
                     return _mockPlugin;
                 #endif
             #elif UNITY_STANDALONE_WIN
@@ -120,18 +120,18 @@ namespace Vuplex.WebView {
         protected static IWebPlugin _macPlugin;
         protected static IWebPlugin _mockPlugin = MockWebPlugin.Instance;
         bool _mockWarningLogged;
-        const string MORE_INFO_TEXT = " For more info, please visit https://developer.vuplex.com";
+        const string MORE_INFO_TEXT = " For more info, please visit https://developer.vuplex.com.";
         protected static IWebPlugin _uwpPlugin;
         protected static IWebPlugin _windowsPlugin;
 
         /// <summary>
         /// Logs the warning once so that it doesn't spam the console.
         /// </summary>
-        void _logMockWarningOnce(string warning) {
+        void _logMockWarningOnce(string reason) {
 
             if (!_mockWarningLogged) {
                 _mockWarningLogged = true;
-                Debug.LogWarning(warning);
+                WebViewLogger.LogWarning(reason + ", so the mock webview will be used while running in the editor. For more info, please see <em>https://support.vuplex.com/articles/mock-webview</em>.");
             }
         }
     }

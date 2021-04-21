@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -52,15 +52,6 @@ namespace Vuplex.WebView {
             );
         }
 
-        /// <summary>
-        /// An alias for `SetCustomUriSchemesEnabled`.
-        /// </summary>
-        [Obsolete("iOSWebView.AllowCustomUriSchemes is now deprecated. Please use iOSWebView.SetCustomUriSchemesEnabled instead.")]
-        public static void AllowCustomUriSchemes(bool allowCustomSchemes) {
-
-            SetCustomUriSchemesEnabled(allowCustomSchemes);
-        }
-
         public override void Click(Vector2 point, bool preventStealingFocus) {
 
             _assertValidState();
@@ -107,10 +98,7 @@ namespace Vuplex.WebView {
         /// can be loaded via `IWebView.LoadUrl()`.
         /// </remarks>
         /// <example>
-        /// Example:
-        /// ```
         /// var fileUrl = iOSWebView.GetFileUrlForBundleResource("my-static-files/my-webpage.html");
-        /// ```
         /// </example>
         [Obsolete("iOSWebView.GetFileUrlForBundleResource is now deprecated. You can now use LoadUrl(\"streaming-assets://{path}\") to load a file from StreamingAssets instead.")]
         public static string GetFileUrlForBundleResource(string fileName) {
@@ -146,18 +134,9 @@ namespace Vuplex.WebView {
             callback(managedBytes);
         }
 
-        /// <summary>
-        /// By default, `iOSWebView` blocks requests for custom schemes (ex: myapp://myaction?data=foo)
-        /// in order to prevent sites like Wikipedia and YouTube from using URIs with custom schemes
-        /// to launch their native apps via a webpage. However, if you want to override this behavior
-        /// (for example, to use your own custom URI scheme within your app), you can enable
-        /// custom URI schemes with this method. When a custom URI scheme is loaded (probably
-        /// via JavaScript), the webview emits a UrlChanged event with the custom URL.
-        /// </summary>
-        public static void SetCustomUriSchemesEnabled(bool enabled) {
 
-            WebView_allowCustomUriSchemes(enabled);
-        }
+        [Obsolete("iOSWebView.SetCustomUriSchemesEnabled() has been removed. Now when a page redirects to a URI with a custom scheme, 3D WebView will automatically emit the UrlChanged and LoadProgressChanged events for the navigation, but a deep link (i.e. to an external application) won't occur.", true)]
+        public static void SetCustomUriSchemesEnabled(bool enabled) {}
 
         public static void SetIgnoreCertificateErrors(bool ignore) {
 
@@ -206,6 +185,7 @@ namespace Vuplex.WebView {
         }
 
         IntPtr _currentVideoNativeTexture;
+        readonly WaitForEndOfFrame _waitForEndOfFrame = new WaitForEndOfFrame();
 
         void _applyVideoTexture() {
 
@@ -249,9 +229,9 @@ namespace Vuplex.WebView {
         }
 
         IEnumerator _renderPluginOncePerFrame() {
+
             while (true) {
-                // Wait until all frame rendering is done
-                yield return new WaitForEndOfFrame();
+                yield return _waitForEndOfFrame;
 
                 if (!_viewUpdatesAreEnabled || IsDisposed) {
                     continue;
@@ -260,9 +240,6 @@ namespace Vuplex.WebView {
                 GL.IssuePluginEvent(WebView_getRenderFunction(), pointerId);
             }
         }
-
-        [DllImport(_dllName)]
-        static extern void WebView_allowCustomUriSchemes(bool allowCustomSchemes);
 
         [DllImport(_dllName)]
         private static extern void WebView_captureScreenshot(IntPtr webViewPtr, ref IntPtr bytes, ref int length);

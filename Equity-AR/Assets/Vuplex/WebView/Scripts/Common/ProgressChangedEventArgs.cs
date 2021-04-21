@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -18,7 +18,7 @@ using System;
 namespace Vuplex.WebView {
 
     /// <summary>
-    /// Event args to indicate the load progress of a webpage.
+    /// Event args for `LoadProgressChanged`.
     /// </summary>
     public class ProgressChangedEventArgs : EventArgs {
 
@@ -29,7 +29,7 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// The estimated load progress normalized to a float between 0 and 1.
+        /// The estimated load progress, normalized to a float between 0 and 1.
         /// </summary>
         public readonly float Progress;
 

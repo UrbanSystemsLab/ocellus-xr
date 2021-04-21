@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -20,6 +20,8 @@ namespace Vuplex.WebView {
 
     interface IWebPlugin {
 
+        WebPluginType Type { get; }
+
         void ClearAllData();
 
         void CreateTexture(float width, float height, Action<Texture2D> callback);
@@ -29,6 +31,8 @@ namespace Vuplex.WebView {
         void CreateVideoMaterial(Action<Material> callback);
 
         IWebView CreateWebView();
+
+        void EnableRemoteDebugging();
 
         void SetIgnoreCertificateErrors(bool ignore);
 

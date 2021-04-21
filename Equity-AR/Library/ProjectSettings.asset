@@ -721,7 +721,8 @@ PlayerSettings:
   webGLCompressionFormat: 1
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    4: VUPLEX_CCU
   platformArchitecture:
     iOS: 1
   scriptingBackend: {}

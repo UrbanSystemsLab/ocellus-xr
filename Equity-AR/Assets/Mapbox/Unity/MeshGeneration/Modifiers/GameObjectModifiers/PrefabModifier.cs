@@ -87,14 +87,16 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			Transform stemTransform;
 			Transform crownTransform;
 			GameObject crown;
-			TMP_Text treeInfo;
+			TreeInfoManager treeInfo;
 
 			IFeaturePropertySettable settable = null;
 			var centroidVector = new Vector3();
 
 			float property = 0;
 			bool treeFound = false;
-			string treeType = "";
+			string treeType = "test";
+			string treeStructure = "test";
+			string treeCondition = "test";
 
 			foreach (var point in ve.Feature.Points[0])
 			{
@@ -109,11 +111,12 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			{
 				//Getting tree DBH and convert it to meters from inch.
 				float.TryParse(ve.Feature.Properties["DBH"].ToString(), out property);
-				property = property * 0.0254f;
+				property = property * 0.0254f * 2.0f;
 
 				//Getting tree GenusSpeci
 				treeType = ve.Feature.Properties["GenusSpeci"].ToString();
-			
+				treeStructure = ve.Feature.Properties["TPStructur"].ToString();
+				treeCondition = ve.Feature.Properties["TPConditio"].ToString();
 				treeFound = true;
 
 			}
@@ -131,7 +134,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			stemTransform = go.transform.GetChild(0);
 			crownTransform = go.transform.GetChild(1);
 			crown = crownTransform.gameObject;
-			treeInfo = go.transform.GetChild(2).GetChild(0).gameObject.GetComponent<TMP_Text>();
+			treeInfo = go.GetComponent<TreeInfoManager>();
 
 			if (goRectTransform == null)
 			{
@@ -153,36 +156,32 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 					Material t_material = crown.GetComponent<Renderer>().material;
 
-					switch(treeType)
+					string[] commonName = treeType.Split(new string[] { " - " }, StringSplitOptions.None);
+					treeInfo.commonName = commonName[1];
+					treeInfo.treeStructure = treeStructure;
+					treeInfo.treeCondition = treeCondition;
+
+					switch (treeType)
                     {
 						case "Gleditsia triacanthos var. inermis - Thornless honeylocust":
 							t_material.color = new Color(0.0f, 0.4274f, 0.1724f);
-							treeInfo.text = "Honeylocust";
 							break;
 						case "Platanus x acerifolia - London planetree":
 							t_material.color = new Color(0.2352f, 0.4666f, 0.1725f);
-							treeInfo.text = "London Planetree";
 							break;
 						case "Quercus palustris - pin oak":
 							t_material.color = new Color(0.4705f, 0.5058f, 0.1725f);
-							treeInfo.text = "Pin Oak";
 							break;
 						case "Pyrus calleryana - Callery pear":
 							t_material.color = new Color(0.7058f, 0.5450f, 0.1725f);
-							treeInfo.text = "Callery Pear";
 							break;
 						case "Zelkova serrata -Japanese zelkova":
 							t_material.color = new Color(0.8627f, 0.5483f, 0.1725f);
-							treeInfo.text = "Japaneses Zelkova";
 							break;
 						default:
 							t_material.color = Color.grey;
-							treeInfo.text = "Unknow Species";
 							break;
 					}
-
-					treeInfo.gameObject.transform.parent.gameObject.SetActive(false);
-					
 					
 				}
 

@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -39,6 +39,22 @@ namespace Vuplex.WebView {
         event EventHandler CloseRequested;
 
         /// <summary>
+        /// Indicates that a message was logged to the JavaScript console.
+        /// </summary>
+        /// <remarks>
+        /// The 3D WebView packages for Android with Gecko, iOS, and UWP have the following limitations:
+        /// - Messages from iframes aren't captured
+        /// - Messages logged early when the page starts loading may be missed
+        /// </remarks>
+        event EventHandler<ConsoleMessageEventArgs> ConsoleMessageLogged;
+
+        /// <summary>
+        /// Indicates that an input field was focused or unfocused. This can be used,
+        /// for example, to determine when to show or hide an on-screen keyboard.
+        /// </summary>
+        event EventHandler<FocusedInputFieldChangedEventArgs> FocusedInputFieldChanged;
+
+        /// <summary>
         /// Indicates that the page load percentage changed.
         /// </summary>
         event EventHandler<ProgressChangedEventArgs> LoadProgressChanged;
@@ -48,8 +64,7 @@ namespace Vuplex.WebView {
         /// JavaScript API to emit a message to the Unity application.
         /// </summary>
         /// <example>
-        /// JavaScript Example for sending a message:
-        /// ```
+        /// // JavaScript example
         /// function sendMessageToCSharp() {
         ///   // This object passed to `postMessage()` is automatically serialized as JSON
         ///   // and is emitted via the C# MessageEmitted event. This API mimics the window.postMessage API.
@@ -65,7 +80,6 @@ namespace Vuplex.WebView {
         ///   // loading, so add an event listener to send the message once it's initialized.
         ///   window.addEventListener('vuplexready', sendMessageToCSharp);
         /// }
-        /// ```
         /// </example>
         event EventHandler<EventArgs<string>> MessageEmitted;
 
@@ -164,7 +178,7 @@ namespace Vuplex.WebView {
         /// <remarks>
         /// Important notes:
         /// - If you're using `WebViewPrefab`, you don't need to call this method, because it calls it for you.
-        /// - A separate video texture is only needed on Android and iOS.
+        /// - A separate video texture is only used on Android and iOS.
         /// - A webview's default resolution is 1300px per Unity unit but can be changed with
         /// `IWebView.SetResolution()`.
         /// </remarks>
@@ -316,7 +330,6 @@ namespace Vuplex.WebView {
         /// Note that on iOS, the texture data excludes video content, which appears black.
         /// </remarks>
         /// <example>
-        /// ```cs
         /// var textureData = await webView.GetRawTextureData();
         /// var texture = new Texture2D(
         ///     (int)webView.SizeInPixels.x,
@@ -327,7 +340,6 @@ namespace Vuplex.WebView {
         /// );
         /// texture.LoadRawTextureData(textureData);
         /// texture.Apply();
-        /// ```
         /// </example>
         Task<byte[]> GetRawTextureData();
     #endif

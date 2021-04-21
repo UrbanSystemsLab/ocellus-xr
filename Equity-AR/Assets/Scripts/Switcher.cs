@@ -39,6 +39,7 @@ public class Switcher : MonoBehaviour
     private AbstractMap _abstractMap;
 
     public TapToPlaceObject MapState;
+    private VectorSubLayerProperties vectorDataTest;
 
     private void Start()
     {
@@ -52,11 +53,13 @@ public class Switcher : MonoBehaviour
 
     private void Update()
     {
-        if (MapState.isPlaced)
+        if (MapState.isPlaced && _abstractMap == null)
         {
             _abstractMap = FindObjectOfType<AbstractMap>();
         }
     }
+
+    
 
     //Create a button click function to switch between heatmap and normal NY_buildings layers.
     public void Temperature()
@@ -82,8 +85,6 @@ public class Switcher : MonoBehaviour
 
                 //Update button UI
                 heatmapButton.GetComponent<Image>().sprite = heatmap0;
-                incomeButton.GetComponent<Image>().sprite = income0;
-                sixtyFivePlusButton.GetComponent<Image>().sprite = sixtyFivePlus0;
             }
             else
             {
@@ -100,8 +101,6 @@ public class Switcher : MonoBehaviour
                 //Update button UI
                 heatmapButton.GetComponent<Image>().sprite = heatmap1;
 
-                incomeButton.GetComponent<Image>().sprite = income0;
-                sixtyFivePlusButton.GetComponent<Image>().sprite = sixtyFivePlus1;
             }
 
         }

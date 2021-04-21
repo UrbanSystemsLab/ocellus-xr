@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -42,12 +42,12 @@ namespace Vuplex.WebView.Demos {
                     return;
                 }
 
-                Debug.Log("Loading Pinterest as an example because it uses popups for third party login. Click 'Login', then select Facebook or Google to open a popup for authentication.");
+                WebViewLogger.Log("Loading Pinterest as an example because it uses popups for third party login. Click 'Login', then select Facebook or Google to open a popup for authentication.");
                 mainWebViewPrefab.WebView.LoadUrl("https://pinterest.com");
 
                 webViewWithPopups.SetPopupMode(PopupMode.LoadInNewWebView);
                 webViewWithPopups.PopupRequested += (webView, eventArgs) => {
-                    Debug.Log("Popup opened with URL: " + eventArgs.Url);
+                    WebViewLogger.Log("Popup opened with URL: " + eventArgs.Url);
                     var popupPrefab = WebViewPrefab.Instantiate(eventArgs.WebView);
                     _focusedPrefab = popupPrefab;
                     popupPrefab.transform.parent = transform;
@@ -56,7 +56,7 @@ namespace Vuplex.WebView.Demos {
                     popupPrefab.transform.localEulerAngles = new Vector3(0, 180, 0);
                     popupPrefab.Initialized += (sender, initializedEventArgs) => {
                         popupPrefab.WebView.CloseRequested += (popupWebView, closeEventArgs) => {
-                            Debug.Log("Closing the popup");
+                            WebViewLogger.Log("Closing the popup");
                             _focusedPrefab = mainWebViewPrefab;
                             popupPrefab.Destroy();
                         };
@@ -91,9 +91,9 @@ namespace Vuplex.WebView.Demos {
 
             // Also add an on-screen keyboard under the main webview.
             var keyboard = Keyboard.Instantiate();
-            keyboard.transform.parent = _focusedPrefab.transform;
+            keyboard.transform.SetParent(_focusedPrefab.transform, false);
             keyboard.transform.localPosition = new Vector3(0, -0.31f, 0);
-            keyboard.transform.localEulerAngles = new Vector3(0, 0, 0);
+            keyboard.transform.localEulerAngles = Vector3.zero;
             keyboard.InputReceived += (sender, eventArgs) => {
                 _focusedPrefab.WebView.HandleKeyboardInput(eventArgs.Value);
             };
@@ -123,6 +123,9 @@ namespace Vuplex.WebView.Demos {
                     <ul>
                         <li>
                             <a href='https://developer.vuplex.com/webview/StandaloneWebView'>3D WebView for Windows and macOS</a>
+                        </li>
+                        <li>
+                            <a href='https://developer.vuplex.com/webview/AndroidWebView'>3D WebView for Android</a>
                         </li>
                         <li>
                             <a href='https://developer.vuplex.com/webview/AndroidGeckoWebView'>3D WebView for Android with Gecko Engine</a>

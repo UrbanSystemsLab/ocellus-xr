@@ -21,7 +21,13 @@ public class MapManager : MonoBehaviour
         mainCanvas.SetActive(true);
         buildings.SetActive(false);
 
-        tileMaterials = arAlignedMap.gameObject.GetComponentsInChildren<MeshRenderer>();
+        tileMaterials = new MeshRenderer[arAlignedMap.gameObject.transform.childCount-1];
+
+        for (int i=1; i <= tileMaterials.Length; i++)
+        {
+            tileMaterials[i-1] = arAlignedMap.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>(); 
+        }
+
         Debug.Log(tileMaterials.Length);
         foreach (MeshRenderer m in tileMaterials)
         {
@@ -33,6 +39,13 @@ public class MapManager : MonoBehaviour
             }
             
         }
+    }
+
+    public void CalibrationDoneII()
+    {
+        mapCamera.SetActive(false);
+        debugCanvas.SetActive(false);
+        mainCanvas.SetActive(true);
     }
 
     public void Calibration()

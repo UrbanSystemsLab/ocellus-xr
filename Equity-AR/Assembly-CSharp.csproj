@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2018_4_13;UNITY_2018_4;UNITY_2018;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_IOS_NATIVE_CRASH_REPORTING;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;HAS_NEON_SKINNING;UNITY_GFX_USE_PLATFORM_VSYNC;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_ASTC_ONLY_DECOMPRESS;SUPPORTS_GRANULAR_MODULE_REGISTRATION;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;PLATFORM_IOS;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_VR;ENABLE_AR;UNITY_HAS_GOOGLEVR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2018_4_13;UNITY_2018_4;UNITY_2018;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;ENABLE_RUNTIME_GI;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_IOS_NATIVE_CRASH_REPORTING;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;PLATFORM_HAS_NO_SUPPORT_FOR_BUCKET_ALLOCATOR;STRICTCPP_NEW_DELETE_SIGNATURES;HAS_NEON_SKINNING;UNITY_GFX_USE_PLATFORM_VSYNC;UNITY_INPUT_SIMULATE_EVENTS;PLATFORM_ALWAYS_USES_STDOUT_FOR_LOG;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_ASTC_ONLY_DECOMPRESS;SUPPORTS_GRANULAR_MODULE_REGISTRATION;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;PLATFORM_IOS;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;ENABLE_VR;ENABLE_AR;UNITY_HAS_GOOGLEVR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;VUPLEX_CCU;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -593,15 +593,18 @@
     <Compile Include="Assets\RestClient\Packages\RSG.Promise\PromiseTimer.cs" />
     <Compile Include="Assets\RestClient\Packages\RSG.Promise\Tuple.cs" />
     <Compile Include="Assets\Scripts\InfoCard.cs" />
-    <Compile Include="Assets\Scripts\Interactions.cs" />
     <Compile Include="Assets\Scripts\MainPage.cs" />
     <Compile Include="Assets\Scripts\MapManager.cs" />
     <Compile Include="Assets\Scripts\Marker.cs" />
+    <Compile Include="Assets\Scripts\RayCastInteraction.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\Switcher.cs" />
     <Compile Include="Assets\Scripts\TapToPlaceObject.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\Scripts\ToggleCanvasGroup.cs" />
     <Compile Include="Assets\Scripts\TreeInfoFinder.cs" />
+    <Compile Include="Assets\Scripts\TreeInfoManager.cs" />
+    <Compile Include="Assets\Scripts\URLLocationUpdate.cs" />
     <Compile Include="Assets\Scripts\URLUpdate.cs" />
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\WebHandler.cs" />
@@ -678,37 +681,50 @@
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CameraRotator.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CanvasPopupDemo.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CanvasWebViewDemo.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CanvasWorldSpaceDemo.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\HardwareKeyboardListener.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\KeyboardInputEventArgs.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\PopupDemo.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\SimpleWebViewDemo.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\AuthRequestedEventArgs.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\BaseKeyboard.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\BaseWebView.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\BaseWebViewPrefab.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\BridgeMessage.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\BridgeMessageHandler.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\CanvasKeyboard.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\CanvasPointerInputDetector.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\CanvasViewportMaterialView.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\CanvasWebViewPrefab.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\ClickedEventArgs.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\Config.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\ConsoleBridgeMessage.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\ConsoleMessageEventArgs.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\ConsoleMessageLevel.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\Cookie.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\DefaultPointerInputDetector.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\Dispatcher.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\DownloadChangedEventArgs.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\DownloadMessage.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\DownloadRequestedEventArgs.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\DownloadRequestedMessage.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\DragMode.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\EventArgs.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\FileSelectionEventArgs.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\FileSelectionMessage.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\FocusedInputFieldChangedEventArgs.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\FocusedInputFieldType.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IPluginWithTouchScreenKeyboard.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IPointerInputDetector.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IWebPlugin.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IWebView.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IWithDownloads.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IWithKeyDownAndUp.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IWithKeyModifiers.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IWithMovablePointer.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IWithPointerDownAndUp.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\IWithPopups.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\JsonArrayWrapper.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\Keyboard.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\KeyboardUi.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\KeyModifier.cs" />
@@ -741,9 +757,12 @@
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\Web.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\WebPluginFactory.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\WebPluginType.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\WebViewLogger.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\WebViewOptions.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\WebViewPrefab.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\Common\WebViewUnavailableException.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\XRSettingsWrapper.cs" />
+    <Compile Include="Assets\Vuplex\WebView\Scripts\Common\XrUtils.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\iOS\iOSWebPlugin.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\iOS\iOSWebPluginRegistrant.cs" />
     <Compile Include="Assets\Vuplex\WebView\Scripts\iOS\iOSWebView.cs" />

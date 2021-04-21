@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -20,7 +20,7 @@ namespace Vuplex.WebView {
     /// </summary>
     /// <summary>
     /// This enum's values are compatible with those from
-    /// the UnityEngine.EventSystem [`InputButton` enum](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.PointerEventData.InputButton.html),
+    /// the UnityEngine.EventSystem [`InputButton`](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.EventSystems.PointerEventData.InputButton.html) enum,
     /// so you can safely cast an `InputButton` to a `MouseButton`.
     /// </summary>
     public enum MouseButton {
@@ -31,7 +31,7 @@ namespace Vuplex.WebView {
         Left = 0,
 
         /// <summary>
-        /// The left right button (i.e. right click).
+        /// The right mouse button (i.e. right click).
         /// </summary>
         Right = 1,
 

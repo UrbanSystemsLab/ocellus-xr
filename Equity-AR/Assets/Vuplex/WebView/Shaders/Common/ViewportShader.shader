@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2020 Vuplex Inc. All rights reserved.
+﻿// Copyright (c) 2021 Vuplex Inc. All rights reserved.
 //
 // Licensed under the Vuplex Commercial Software Library License, you may
 // not use this file except in compliance with the License. You may obtain
@@ -14,7 +14,6 @@
 Shader "Vuplex/Viewport Shader" {
     Properties {
         _MainTex ("Base (RGB)", 2D) = "white" {}
-        [KeywordEnum(None, TopBottom, LeftRight)] _StereoMode ("Stereo mode", Float) = 0
         [Toggle(FLIP_X)] _FlipX ("Flip X", Float) = 0
         [Toggle(FLIP_Y)] _FlipY ("Flip Y", Float) = 0
 
@@ -52,24 +51,29 @@ Shader "Vuplex/Viewport Shader" {
             ColorMask [_ColorMask]
 
             CGPROGRAM
-                #pragma multi_compile ___ _STEREOMODE_TOPBOTTOM _STEREOMODE_LEFTRIGHT
                 #pragma multi_compile ___ FLIP_X
                 #pragma multi_compile ___ FLIP_Y
                 #pragma vertex vert
                 #pragma fragment frag
                 #include "UnityCG.cginc"
 
-                struct v2f {
-                    float2 uv : TEXCOORD0;
-                    float4 vertex : SV_POSITION;
-                    UNITY_VERTEX_OUTPUT_STEREO
-                };
-
                 struct appdata {
                     float4 vertex : POSITION;
                     float2 uv : TEXCOORD0;
+                    // Pass the vertex color to the fragment shader
+                    // so that it can be used for calculating alpha.
+                    // This is needed, for example, to allow CanvasGroup.alpha
+                    // to control the alpha.
+                    float4 vertexColor : COLOR;
                     // For Single Pass Instanced stereo rendering
                     UNITY_VERTEX_INPUT_INSTANCE_ID
+                };
+
+                struct v2f {
+                    float2 uv : TEXCOORD0;
+                    float4 vertex : SV_POSITION;
+                    float4 vertexColor : COLOR0;
+                    UNITY_VERTEX_OUTPUT_STEREO
                 };
 
                 Texture2D _MainTex;
@@ -80,7 +84,8 @@ Shader "Vuplex/Viewport Shader" {
 
                 float4 _MainTex_ST;
 
-                v2f vert (appdata v) {
+                v2f vert(appdata v) {
+
                     v2f o;
                     // For Single Pass Instanced stereo rendering
                     UNITY_SETUP_INSTANCE_ID(v);
@@ -88,6 +93,7 @@ Shader "Vuplex/Viewport Shader" {
                     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
                     o.vertex = UnityObjectToClipPos(v.vertex);
+                    o.vertexColor =  v.vertexColor;
                     float2 untransformedUV = v.uv;
 
                     #ifdef FLIP_X
@@ -97,13 +103,6 @@ Shader "Vuplex/Viewport Shader" {
                         untransformedUV.y = 1.0 - untransformedUV.y;
                     #endif
 
-                    #ifdef _STEREOMODE_TOPBOTTOM
-                        untransformedUV.y *= 0.5;
-                    #endif
-                    #ifdef _STEREOMODE_LEFTRIGHT
-                        untransformedUV.x *= 0.5;
-                    #endif
-
                     o.uv = TRANSFORM_TEX(untransformedUV, _MainTex);
                     return o;
                 }
@@ -111,7 +110,7 @@ Shader "Vuplex/Viewport Shader" {
                 float4 _VideoCutoutRect;
                 float4 _CropRect;
 
-                fixed4 frag (v2f i) : SV_Target {
+                fixed4 frag(v2f i) : SV_Target {
 
                     fixed4 col = _MainTex.Sample(linear_clamp_sampler, i.uv);
                     float cutoutWidth = _VideoCutoutRect.z;
@@ -159,6 +158,8 @@ Shader "Vuplex/Viewport Shader" {
                         col = float4(GammaToLinearSpace(col.xyz), col.w);
                     #endif
 
+                    // Multiply the alpha by the vertex color's alpha to support CanvasGroup.alpha.
+                    col = float4(col.xyz, col.w * i.vertexColor.w);
                     return col;
                 }
             ENDCG

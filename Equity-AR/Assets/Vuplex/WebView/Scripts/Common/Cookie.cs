@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -68,23 +68,36 @@ namespace Vuplex.WebView {
             get {
                 var isValid = true;
                 if (Name == null) {
-                    Debug.LogWarning("Invalid value for Cookie.Name: " + Name);
+                    WebViewLogger.LogWarning("Invalid value for Cookie.Name: " + Name);
                     isValid = false;
                 }
                 if (Value == null) {
-                    Debug.LogWarning("Invalid value for Cookie.Value: " + Value);
+                    WebViewLogger.LogWarning("Invalid value for Cookie.Value: " + Value);
                     isValid = false;
                 }
                 if (Domain == null || !Domain.Contains(".") || Domain.Contains("/")) {
-                    Debug.LogWarning("Invalid value for Cookie.Domain: " + Domain);
+                    WebViewLogger.LogWarning("Invalid value for Cookie.Domain: " + Domain);
                     isValid = false;
                 }
                 if (Path == null) {
-                    Debug.LogWarning("Invalid value for Cookie.Path: " + Path);
+                    WebViewLogger.LogWarning("Invalid value for Cookie.Path: " + Path);
                     isValid = false;
                 }
                 return isValid;
             }
+        }
+
+        /// <summary>
+        /// Deserializes a Cookie array from JSON.
+        /// </summary>
+        public static Cookie[] ArrayFromJson(string serializedCookies) {
+
+            if (serializedCookies == "null") {
+                return new Cookie[0];
+            }
+            var cookiesWrapper = JsonUtility.FromJson<JsonArrayWrapper<Cookie>>(serializedCookies);
+            var cookies = cookiesWrapper.Items == null ? new Cookie[0] : cookiesWrapper.Items;
+            return cookies;
         }
 
         /// <summary>

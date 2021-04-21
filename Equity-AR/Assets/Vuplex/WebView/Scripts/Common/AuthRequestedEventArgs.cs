@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -18,7 +18,7 @@ using System;
 namespace Vuplex.WebView {
 
     /// <summary>
-    /// Event args for `AuthRequested`. Either `Continue` or `Cancel` must be called in order
+    /// Event args for `AuthRequested`. Either `Continue()` or `Cancel()` must be called in order
     /// to resume the page.
     /// <summary>
     public class AuthRequestedEventArgs : EventArgs {

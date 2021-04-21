@@ -1,5 +1,5 @@
 /**
-* Copyright (c) 2020 Vuplex Inc. All rights reserved.
+* Copyright (c) 2021 Vuplex Inc. All rights reserved.
 *
 * Licensed under the Vuplex Commercial Software Library License, you may
 * not use this file except in compliance with the License. You may obtain
@@ -33,6 +33,10 @@ namespace Vuplex.WebView {
     class MockWebView : MonoBehaviour, IWebView {
 
         public event EventHandler CloseRequested;
+
+        public event EventHandler<ConsoleMessageEventArgs> ConsoleMessageLogged;
+
+        public event EventHandler<FocusedInputFieldChangedEventArgs> FocusedInputFieldChanged;
 
         public event EventHandler<ProgressChangedEventArgs> LoadProgressChanged;
 
@@ -330,7 +334,7 @@ namespace Vuplex.WebView {
 
         void _log(string message, params object[] args) {
 
-            Debug.LogFormat("[MockWebView] " + message, args);
+            WebViewLogger.LogFormat("[MockWebView] " + message, args);
         }
     }
 }
