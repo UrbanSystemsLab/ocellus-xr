@@ -1,27 +1,31 @@
 ﻿<Properties StartupConfiguration="{05D9F951-4CE5-D299-1E0E-957BBA8A3E70}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/URLLocationUpdate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Vuplex/WebView/Scripts/Common/WebViewLogger.cs">
     <Files>
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/AddMonoBehavioursModifier.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/SpawnInsideModifier.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/UnityTile.cs" />
       <File FileName="Assets/Scripts/MapManager.cs" />
       <File FileName="Assets/UnityARInterface/Scripts/ARController.cs" />
-      <File FileName="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/FileMonitor.cs" />
+      <File FileName="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/FileMonitor.cs" Line="185" Column="1" />
       <File FileName="Assets/Scripts/RayCastInteraction.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" />
       <File FileName="Assets/Scripts/TreeInfoManager.cs" />
       <File FileName="Assets/Scripts/MainPage.cs" />
       <File FileName="Assets/Scripts/ToggleCanvasGroup.cs" />
-      <File FileName="Assets/Scripts/URLUpdate.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/URLUpdate.cs" />
       <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
       <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
       <File FileName="Assets/Scripts/Test.cs" />
       <File FileName="Assets/Scripts/WebHandler.cs" />
       <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" />
-      <File FileName="Assets/Scripts/URLLocationUpdate.cs" Line="19" Column="11" />
+      <File FileName="Assets/Scripts/URLLocationUpdate.cs" Line="19" Column="1" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="188" Column="16" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="28" Column="36" />
+      <File FileName="Assets/Vuplex/WebView/Scripts/Common/CanvasWebViewPrefab.cs" Line="23" Column="11" />
+      <File FileName="Assets/Vuplex/WebView/Scripts/Common/WebViewLogger.cs" Line="55" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="3c0bce50-dc25-46aa-a13f-ad2558bd67b3" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="025bade2-527f-4773-ad52-57af804081f1" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>Assembly-CSharp.csproj</String>

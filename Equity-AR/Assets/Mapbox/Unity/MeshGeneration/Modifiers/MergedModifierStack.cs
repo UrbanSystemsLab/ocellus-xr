@@ -123,55 +123,73 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			float tempValue = 0;
 			float incomeValue = 0;
 			float sixtyFiveValue = 0;
+			string redlining = "";
 
-            if(float.TryParse(feature.Properties["height"].ToString(), out tempValue))
-            {
-				if (tempValue <= 1)
-					return null;
-                try
-                {
-					float.TryParse(feature.Properties["_tempmean"].ToString(), out tempValue);
+			//Debug.Log(feature.Properties["area_description_data"].ToString());
 
-				}
-                catch(Exception ex)
-                {
-					tempValue = 0;
-					Debug.Log("Temperature layer error:" + ex.Message);
-                }
-				
+			try
+			{
+				redlining = feature.Properties["holc_grade"].ToString();
+				Debug.Log("Data Get: " + redlining);
+			}
+			catch (Exception ex)
+			{
+				redlining = "";
+				Debug.Log("Redlining layer error:" + ex.Message);
 			}
 
-            if(float.TryParse(feature.Properties["height"].ToString(), out incomeValue))
-            {
-				if (incomeValue <= 1)
-					return null;
-				try
-				{
-					float.TryParse(feature.Properties["income"].ToString(), out incomeValue);
+            //if (float.TryParse(feature.Properties["height"].ToString(), out tempValue))
+            //{
+            //    if (tempValue <= 1)
+            //        return null;
+            //    try
+            //    {
+            //        float.TryParse(feature.Properties["_tempmean"].ToString(), out tempValue);
 
-				}
-				catch (Exception ex)
-				{
-					incomeValue = 0;
-					Debug.Log("Income layer error:" + ex.Message);
-				}
-			}
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        tempValue = 0;
+            //        Debug.Log("Temperature layer error:" + ex.Message);
+            //    }
 
-            if(float.TryParse(feature.Properties["height"].ToString(), out sixtyFiveValue))
-            {
-				if (sixtyFiveValue <= 1)
-					return null;
+            //}
 
-                try
-                {
-					float.TryParse(feature.Properties["P_Abv65_e_"].ToString(), out sixtyFiveValue);
-                }
-                catch(Exception ex)
-                {
-					sixtyFiveValue = 0;
-					Debug.Log("65+ layer error:" + ex.Message);
-                }
-            }
+            //if (float.TryParse(feature.Properties["height"].ToString(), out incomeValue))
+            //{
+            //    if (incomeValue <= 1)
+            //        return null;
+            //    try
+            //    {
+            //        float.TryParse(feature.Properties["income"].ToString(), out incomeValue);
+
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        incomeValue = 0;
+            //        Debug.Log("Income layer error:" + ex.Message);
+            //    }
+            //}
+
+            //if (float.TryParse(feature.Properties["height"].ToString(), out sixtyFiveValue))
+            //{
+            //    if (sixtyFiveValue <= 1)
+            //        return null;
+
+            //    try
+            //    {
+            //        float.TryParse(feature.Properties["P_Abv65_e_"].ToString(), out sixtyFiveValue);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        sixtyFiveValue = 0;
+            //        Debug.Log("65+ layer error:" + ex.Message);
+            //    }
+            //}
+
+
+
+            
 
 			if (!_cacheVertexCount.ContainsKey(tile))
 			{
@@ -190,10 +208,34 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				}
 			}
 
+			Debug.Log("Not Stopped");
+
 			//add colors to buildings
 			Color baseColor = new Color(1f, 1f, 1f);
 
-            if (tempValue > 168)
+
+			if (redlining.Equals("A"))
+			{
+				baseColor = new Color(0.50f, 0.70f, 0.50f);
+				Debug.Log("Colorget");
+			}
+			else if (redlining == "B")
+			{
+				baseColor = new Color(0.20f, 0.20f, 0.90f);
+				Debug.Log("Colorget");
+			}
+			else if (redlining.Equals("C"))
+			{
+				baseColor = new Color(0.50f, 0.70f, 0.70f);
+				Debug.Log("Colorget");
+			}
+			else if (redlining.Equals("D"))
+			{
+				baseColor = new Color(0.70f, 0.50f, 0.50f);
+				Debug.Log("Colorget");
+			}
+
+			if (tempValue > 168)
             {
 				baseColor = new Color(0.74f, 0.2f, 0.15f);
             }
@@ -247,6 +289,8 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			{
 				baseColor = new Color(1f, 0.1f, 1f);
 			}
+
+			
 
 			meshData.Colors = Enumerable.Repeat(baseColor, meshData.Vertices.Count).ToList();
 

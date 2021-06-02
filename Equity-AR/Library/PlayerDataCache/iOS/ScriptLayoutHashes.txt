@@ -1,9 +1,8 @@
 iOS
 PlayerPath?
-/Users/mariiiiiia/Desktop/UrbanSystemLab/DemoPackage/Demo
+/Users/mariiiiiia/Desktop/UrbanSystemLab/DemoPackage/WebDebug
 SceneListBegin?
-Assets/Scenes/Switch 1 Map.unity
-Assets/Scenes/WorldScaleAR.unity
+Assets/Vuplex/WebView/Demos/Scenes/CanvasWebViewDemo.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TerrainDataFetcher
 b9751259642f2166c56b27bb39f65c26 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Components.VertexDebugger
@@ -28,7 +27,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.G
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 e8e1d68b0ad2753021d9bac3fefc8005 Assembly-CSharp.dll:Mapbox.Unity.Map.MapVisualizer
-9de16787f2253daaf3b3b45a1b2373fd Assembly-CSharp.dll:.Interactions
+fff4187a7e78f93d86cd439ec3aa696e Assembly-CSharp.dll:.URLLocationUpdate
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:GoogleARCore.Anchor
 a00c8865923e144627eb1f7b7b439229 Assembly-CSharp-firstpass.dll:.ISN_MediaPlayerExample
 f41f6a3fe85a461098a1c450827b9a66 Assembly-CSharp.dll:Mapbox.Unity.Map.UpdateMapWithLocationProvider
@@ -473,3 +472,4 @@ d30406e93dfde99d69d2b1c0ea2559b1 Assembly-CSharp.dll:Mapbox.Unity.Location.Angle
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UnityARCameraNearFar
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.Demos.SimpleWebViewDemo
 0855a9d1fe3a81abf4812b7ac80389b6 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.ModifierStack
+b4ce128819c2c928cdbaf584b7816814 Assembly-CSharp.dll:.JSCom
