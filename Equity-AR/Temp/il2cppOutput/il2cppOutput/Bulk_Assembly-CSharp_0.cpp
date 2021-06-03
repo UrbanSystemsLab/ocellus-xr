@@ -1474,6 +1474,7 @@ extern const uint32_t InstantPreviewManager_UpdateLoop_m74FB3D4D56FFFD086085B3E7
 extern const uint32_t InstantPreviewManager__cctor_mBE2A5EA75FE73953FE8FA80ABB398531DDC2D13B_MetadataUsageId;
 extern const uint32_t InstantPreviewTrackedPoseDriver_Update_m65A85AB978F36018E6C90322241B383C32BDB5E3_MetadataUsageId;
 extern const uint32_t JSCom_ExcuteJavaScript_m8113BA7CC77C170262205B94E4F315E7BECB8DDE_MetadataUsageId;
+extern const uint32_t JSCom_Start_mBB1331EEF1DFA0C8E838059DD0A5CAAB56AA0CBB_MetadataUsageId;
 extern const uint32_t LeanCircuit_AddLine_mCD383374CCA0F52FCE1B6FFF42D29F504AD9C52D_MetadataUsageId;
 extern const uint32_t LeanCircuit_AddNode_m8A668166575F25039CAE8744EFCE55B86B3F53E9_MetadataUsageId;
 extern const uint32_t LeanCircuit_AddPoint_mFA3365B862B56BF30AF9E80044D4209955692A17_MetadataUsageId;
@@ -43892,9 +43893,18 @@ extern "C" IL2CPP_METHOD_ATTR void InfoCard__ctor_m0F22EADCAEDD17E2F82F889D3B78B
 // System.Void JSCom::Start()
 extern "C" IL2CPP_METHOD_ATTR void JSCom_Start_mBB1331EEF1DFA0C8E838059DD0A5CAAB56AA0CBB (JSCom_t0F90B8C9ACBF12F6E0D1C5A330D9CE95298A8D46 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (JSCom_Start_mBB1331EEF1DFA0C8E838059DD0A5CAAB56AA0CBB_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		String_t* L_0 = __this->get_myJS_5();
-		JSCom_ExcuteJavaScript_m8113BA7CC77C170262205B94E4F315E7BECB8DDE(__this, L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t7B5FCB117E2FD63B6838BC52821B252E2BFB61C4_il2cpp_TypeInfo_var);
+		Debug_Log_m4B7C70BAFD477C6BDB59C88A0934F0B018D03708(L_0, /*hidden argument*/NULL);
+		String_t* L_1 = __this->get_myJS_5();
+		JSCom_ExcuteJavaScript_m8113BA7CC77C170262205B94E4F315E7BECB8DDE(__this, L_1, /*hidden argument*/NULL);
 		return;
 	}
 }

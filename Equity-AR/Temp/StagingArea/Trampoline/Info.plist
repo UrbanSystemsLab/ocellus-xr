@@ -33,6 +33,12 @@
     <string>We need a camera.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>We need a Location.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Please change 'Microphone Usage Description' with IOS Native UI Kit Editor Settings</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Please change 'Photo Library Add Usage Description' with IOS Native UI Kit Editor Settings</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Please change 'Photo Library Usage Description' with IOS Native UI Kit Editor Settings</string>
     <key>UILaunchStoryboardName~ipad</key>
     <string>LaunchScreen-iPad</string>
     <key>UILaunchStoryboardName~iphone</key>

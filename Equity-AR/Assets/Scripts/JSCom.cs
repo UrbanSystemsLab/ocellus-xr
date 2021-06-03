@@ -15,6 +15,7 @@ public class JSCom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(myJS);
         ExcuteJavaScript(myJS);
     }
 
