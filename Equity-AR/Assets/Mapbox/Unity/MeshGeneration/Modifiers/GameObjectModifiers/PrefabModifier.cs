@@ -47,8 +47,6 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 		public override void Run(VectorEntity ve, UnityTile tile)
 		{
-			//Interactions iManager = GameObject.Find("GameManager").GetComponent<Interactions>();
-			//iManager.nearbyTrees.Add(ve);
 
 			if (_options.prefab == null)
 			{
@@ -79,14 +77,22 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 		}
 
 
-
+		//the method is called each time a new vector entity is instantiated to the map
+		//it runs multiple times to instantiate all the points of one layer
         public void PositionScaleRectTransform(VectorEntity ve, UnityTile tile, GameObject go)
 		{
-			
+
+			//to check if the prefabs are 2D
 			RectTransform goRectTransform;
-			Transform stemTransform;
+
+			//to shape a tree, we'll need to instantiate the parts one by one
+			Transform stemTransform; 
 			Transform crownTransform;
 			GameObject crown;
+
+			//TreeInfoManager is a component attach to the tree prefab
+			//it keeps the specific information of each tree (vector entity)
+			//specific tree info will be displayed on the 2D screen
 			TreeInfoManager treeInfo;
 
 			IFeaturePropertySettable settable = null;
@@ -98,22 +104,26 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			string treeStructure = "test";
 			string treeCondition = "test";
 
+
+			//calculate the localPosition of each vector entity
 			foreach (var point in ve.Feature.Points[0])
 			{
 				centroidVector += point;
 			}
 			centroidVector = centroidVector / ve.Feature.Points[0].Count;
-			//Debug.Log(ve.Feature.Points[0][0]);
 
 			go.name = ve.Feature.Data.Id.ToString();
-		
+
+
+
+
 			try
 			{
 				//Getting tree DBH and convert it to meters from inch.
 				float.TryParse(ve.Feature.Properties["DBH"].ToString(), out property);
 				property = property * 0.0254f * 2.0f;
 
-				//Getting tree GenusSpeci
+				//Getting other tree information
 				treeType = ve.Feature.Properties["GenusSpeci"].ToString();
 				treeStructure = ve.Feature.Properties["TPStructur"].ToString();
 				treeCondition = ve.Feature.Properties["TPConditio"].ToString();
@@ -136,6 +146,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			crown = crownTransform.gameObject;
 			treeInfo = go.GetComponent<TreeInfoManager>();
 
+			//the code in the if statement will run when the prefab is not a 2D object
 			if (goRectTransform == null)
 			{
 				 
@@ -145,7 +156,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				if (treeFound)
 				{
 
-					//make eurhythmic trees
+					//set crown and trunk to good sizes and make eurhythmic trees
 					float crownR = 0.1f + property * 2;
 
 					stemTransform.transform.localPosition = new Vector3(0, property / 2, 0);
@@ -156,11 +167,14 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 					Material t_material = crown.GetComponent<Renderer>().material;
 
+					//fill the tree information to the TreeInfoManager component on each tree instance
 					string[] commonName = treeType.Split(new string[] { " - " }, StringSplitOptions.None);
 					treeInfo.commonName = commonName[1];
 					treeInfo.treeStructure = treeStructure;
 					treeInfo.treeCondition = treeCondition;
 
+
+					//set tree color based on its specis ans genus
 					switch (treeType)
                     {
 						case "Gleditsia triacanthos var. inermis - Thornless honeylocust":

@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 370145040}
   - component: {fileID: 370145041}
   - component: {fileID: 370145042}
+  - component: {fileID: 370145043}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -169,6 +170,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InstructionMessage: {fileID: 1676114192}
+--- !u!114 &370145043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370145039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf49ade4d0e4426f9ca251042379bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webViewPrefab: {fileID: 2105258799}
+  myJS: 
+  debugText: {fileID: 804823699}
 --- !u!1 &612803972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   webViewPrefab: {fileID: 2105258799}
-  myJS: "document.getElementById(\u2018unity-test\u2019).innerText"
+  myJS: document.getElementById('unity-test').innerText
   debugText: {fileID: 804823699}
 --- !u!1 &1611075042
 GameObject:

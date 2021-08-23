@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516205217209457929}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -630.8643, y: -2347.9314, z: -14.219489}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -46,7 +46,7 @@ MonoBehaviour:
   _options:
     locationOptions:
       latitudeLongitude: 40.7648, -73.9808
-      zoom: 13.1
+      zoom: 16
     extentOptions:
       extentType: 1
       defaultExtents:
@@ -215,7 +215,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 0
+          isActive: 1
           sublayerName: NYC_Buildings
           geometryType: 2
           layerName: building
@@ -281,7 +281,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 0
+          isActive: 1
           sublayerName: 65+
           geometryType: 2
           layerName: NYC_65plus
@@ -728,7 +728,7 @@ MonoBehaviour:
           isEnabled: 0
           entityPerCoroutine: 0
         honorBuildingIdSetting: 1
-        buildingsWithUniqueIds: 1
+        buildingsWithUniqueIds: 0
         moveFeaturePositionTo: 0
         MeshModifiers: []
         GoModifiers: []

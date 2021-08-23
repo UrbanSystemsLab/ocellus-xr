@@ -294,11 +294,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2854326395281425931, guid: 798db68093e8c447380c82509e8dd569,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2854326395281425929, guid: 798db68093e8c447380c82509e8dd569,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -323,6 +318,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854326395281425943, guid: 798db68093e8c447380c82509e8dd569,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854326395281425931, guid: 798db68093e8c447380c82509e8dd569,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854326395967359316, guid: 798db68093e8c447380c82509e8dd569,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854326395967359316, guid: 798db68093e8c447380c82509e8dd569,
+        type: 3}
+      propertyPath: m_Name
+      value: Background
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798db68093e8c447380c82509e8dd569, type: 3}
