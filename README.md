@@ -54,7 +54,7 @@ To make the ARFoundation work correctly, we need to set up Unity. First, go to W
 
 Second, go to "Edit -> Project Settings...". In the "player settings", click the Iphone icon and unfold the "Other Settings" below. Find the Bundle Identifier and replace your company name and project name. The Bundle Identifier is whatever if it is unique. Find "Requires ARKit support" and click it. You will notice that it automatically fills the "Camera Usage Description" and it appears a warning "ARKit requires iOS 11 or newer. Please set 'Target minimum iOS version' to at least 11.0". Therefore, type 11 to "Target minimum iOS version" above. The "Camera Usage Description" can be changed to anything but cannot be blank. Otherwise the camera on your iphone will not work properly.
 
-## 4. Biuld and Deploy
+## 4. Build and Deploy
 
 You can open the scene you would like to test. In the Project window, go to "Assets -> Scenes" and open the scene you want. Then, go to "Files -> Build Settings" and click the "Add Open Scenes" button. Now you can click the "Build" button.
 
