@@ -17,12 +17,14 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Vuplex.WebView.Internal;
 
 #if NET_4_6 || NET_STANDARD_2_0
     using System.Threading.Tasks;
 #endif
 
 namespace Vuplex.WebView {
+
     /// <summary>
     /// Mock IWebView implementation used for running in the Unity editor.
     /// </summary>
@@ -30,7 +32,7 @@ namespace Vuplex.WebView {
     /// MockWebView logs messages to the console to indicate when its methods are
     /// called, but it doesn't actually load or render web content.
     /// </remarks>
-    class MockWebView : MonoBehaviour, IWebView {
+    partial class MockWebView : MonoBehaviour, IWebView {
 
         public event EventHandler CloseRequested;
 
@@ -82,6 +84,8 @@ namespace Vuplex.WebView {
 
         public Texture2D Texture { get; private set; }
 
+        public string Title { get; private set; }
+
         public string Url { get; private set; }
 
         public Texture2D VideoTexture { get; private set; }
@@ -91,21 +95,7 @@ namespace Vuplex.WebView {
             Init(viewportTexture, width, height, null);
         }
 
-        public static MockWebView Instantiate() {
-
-            return (MockWebView) new GameObject("MockWebView").AddComponent<MockWebView>();
-        }
-
-        public void Init(Texture2D viewportTexture, float width, float height, Texture2D videoTexture) {
-
-            Texture = viewportTexture;
-            VideoTexture = videoTexture;
-            Size = new Vector2(width, height);
-            IsInitialized = true;
-            DontDestroyOnLoad(gameObject);
-            _log("Init() width: {0}, height: {1}", width.ToString("n4"), height.ToString("n4"));
-        }
-
+        // Note: IWebView.Blur() is deprecated.
         public void Blur() {
 
             _log("Blur()");
@@ -131,12 +121,14 @@ namespace Vuplex.WebView {
 
             _log("CanGoBack()");
             callback(false);
+            OnCanGoBack();
         }
 
         public void CanGoForward(Action<bool> callback) {
 
             _log("CanGoForward()");
             callback(false);
+            OnCanGoForward();
         }
 
     #if NET_4_6 || NET_STANDARD_2_0
@@ -152,6 +144,7 @@ namespace Vuplex.WebView {
 
             _log("CaptureScreenshot()");
             callback(new byte[0]);
+            OnCaptureScreenshot();
         }
 
         public void Click(Vector2 point) {
@@ -167,13 +160,16 @@ namespace Vuplex.WebView {
         public void Copy() {
 
             _log("Copy()");
+            OnCopy();
         }
 
         public void Cut() {
 
             _log("Cut()");
+            OnCut();
         }
 
+        // Note: IWebView.DisableViewUpdates() is deprecated.
         public void DisableViewUpdates() {
 
             _log("DisableViewUpdates()");
@@ -188,6 +184,7 @@ namespace Vuplex.WebView {
             }
         }
 
+        // Note: IWebView.EnableViewUpdates() is deprecated.
         public void EnableViewUpdates() {
 
             _log("EnableViewUpdates()");
@@ -203,16 +200,18 @@ namespace Vuplex.WebView {
     #else
         public void ExecuteJavaScript(string javaScript) {
 
-            _log("ExecuteJavaScript(\"{0}...\")", javaScript.Substring(0, 25));
+            _log("ExecuteJavaScript(\"{0}\")", _truncateIfNeeded(javaScript));
         }
     #endif
 
         public void ExecuteJavaScript(string javaScript, Action<string> callback) {
 
-            _log("ExecuteJavaScript(\"{0}...\")", javaScript.Substring(0, 25));
+            _log("ExecuteJavaScript(\"{0}\")", _truncateIfNeeded(javaScript));
             callback("");
+            OnExecuteJavaScript();
         }
 
+        // Note: IWebView.Focus() is deprecated.
         public void Focus() {
 
             _log("Focus()");
@@ -231,16 +230,19 @@ namespace Vuplex.WebView {
 
             _log("GetRawTextureData()");
             callback(new byte[0]);
+            OnGetRawTextureData();
         }
 
         public void GoBack() {
 
             _log("GoBack()");
+            OnGoBack();
         }
 
         public void GoForward() {
 
             _log("GoForward()");
+            OnGoForward();
         }
 
         public void HandleKeyboardInput(string input) {
@@ -248,12 +250,29 @@ namespace Vuplex.WebView {
             _log("HandleKeyboardInput(\"{0}\")", input);
         }
 
+        public void Init(Texture2D viewportTexture, float width, float height, Texture2D videoTexture) {
+
+            Texture = viewportTexture;
+            VideoTexture = videoTexture;
+            Size = new Vector2(width, height);
+            IsInitialized = true;
+            DontDestroyOnLoad(gameObject);
+            _log("Init() width: {0}, height: {1}", width.ToString("n4"), height.ToString("n4"));
+        }
+
+        public static MockWebView Instantiate() {
+
+            return (MockWebView) new GameObject("MockWebView").AddComponent<MockWebView>();
+        }
+
         public virtual void LoadHtml(string html) {
 
-            Url = html.Substring(0, 25);
-            _log("LoadHtml(\"{0}...\")", Url);
+            var truncatedHtml = _truncateIfNeeded(html);
+            Url = truncatedHtml;
+            _log("LoadHtml(\"{0}...\")", truncatedHtml);
+            OnLoadHtml();
             if (UrlChanged != null) {
-                UrlChanged(this, new UrlChangedEventArgs(Url, "Title", UrlActionType.Load));
+                UrlChanged(this, new UrlChangedEventArgs(Url, UrlActionType.Load));
             }
             if (LoadProgressChanged != null) {
                 LoadProgressChanged(this, new ProgressChangedEventArgs(ProgressChangeType.Finished, 1.0f));
@@ -269,8 +288,9 @@ namespace Vuplex.WebView {
 
             Url = url;
             _log("LoadUrl(\"{0}\")", url);
+            OnLoadUrl(url);
             if (UrlChanged != null) {
-                UrlChanged(this, new UrlChangedEventArgs(url, "Title", UrlActionType.Load));
+                UrlChanged(this, new UrlChangedEventArgs(url, UrlActionType.Load));
             }
             if (LoadProgressChanged != null) {
                 LoadProgressChanged(this, new ProgressChangedEventArgs(ProgressChangeType.Finished, 1.0f));
@@ -280,6 +300,7 @@ namespace Vuplex.WebView {
         public void Paste() {
 
             _log("Paste()");
+            OnPaste();
         }
 
         public void PostMessage(string data) {
@@ -313,6 +334,16 @@ namespace Vuplex.WebView {
             _log("SelectAll()");
         }
 
+        public void SetFocused(bool focused) {
+
+            _log("SetFocused({0})", focused);
+        }
+
+        public void SetRenderingEnabled(bool enabled) {
+
+            _log("SetRenderingEnabled({0})", enabled);
+        }
+
         public void SetResolution(float pixelsPerUnityUnit) {
 
             _numberOfPixelsPerUnityUnit = pixelsPerUnityUnit;
@@ -332,9 +363,35 @@ namespace Vuplex.WebView {
         List<string> _pageLoadScripts = new List<string>();
         float _numberOfPixelsPerUnityUnit = Config.NumberOfPixelsPerUnityUnit;
 
+        // Partial methods implemented by other 3D WebView packages
+        // to provide platform-specific warnings in the editor.
+        partial void OnCanGoBack();
+        partial void OnCanGoForward();
+        partial void OnCaptureScreenshot();
+        partial void OnCopy();
+        partial void OnCut();
+        partial void OnExecuteJavaScript();
+        partial void OnGetRawTextureData();
+        partial void OnGoBack();
+        partial void OnGoForward();
+        partial void OnLoadHtml();
+        partial void OnLoadUrl(string url);
+        partial void OnPaste();
+
         void _log(string message, params object[] args) {
 
-            WebViewLogger.LogFormat("[MockWebView] " + message, args);
+            #if !VUPLEX_DISABLE_MOCK_WEBVIEW_LOGGING
+                WebViewLogger.LogFormat("[MockWebView] " + message, args);
+            #endif
+        }
+
+        string _truncateIfNeeded(string str) {
+
+            var maxLength = 25;
+            if (str.Length <= maxLength) {
+                return str;
+            }
+            return str.Substring(0, maxLength) + "...";
         }
     }
 }

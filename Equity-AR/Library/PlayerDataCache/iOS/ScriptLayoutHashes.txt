@@ -1,8 +1,8 @@
 iOS
 PlayerPath?
-/Users/mariiiiiia/Desktop/UrbanSystemLab/DemoPackage/WebDebug
+/Users/lala/Desktop/USL-UnityBuildVersion/equity-ar-test-022-send
 SceneListBegin?
-Assets/Vuplex/WebView/Demos/Scenes/CanvasWebViewDemo.unity
+Assets/Scenes/Lat&Long.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TerrainDataFetcher
 b9751259642f2166c56b27bb39f65c26 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Components.VertexDebugger
@@ -260,7 +260,7 @@ e8e1d68b0ad2753021d9bac3fefc8005 Assembly-CSharp.dll:Mapbox.Unity.Map.TileProvid
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:UnityEngine.XR.iOS.UnityARAmbient
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 6509b49488d6921d8c89bd7304f56d4d Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Factories.DirectionsFactory
-dd5cc9aeb8854c866d380a6ec3b082ac Assembly-CSharp.dll:.InfoCard
+dd5cc9aeb8854c866d380a6ec3b082ac Assembly-CSharp.dll:.FaceCam
 ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.NoiseOffsetModifier
 4bde97f06861d300efacaeb1a9f04b33 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.ChamferHeightModifier
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
@@ -270,7 +270,7 @@ b13222200b65a7aab07dab0db3a30002 Assembly-CSharp.dll:UnityEngine.XR.iOS.UnityARV
 bf7611f578cc4391f4c42d7d2643311c Assembly-CSharp.dll:UnityEngine.XR.iOS.EditorHitTest
 715100c41c6723a26f0f6cadfdebaa0d Assembly-CSharp.dll:.MapManager
 fea2d676bca3c708f6b399119fa3ca3f Assembly-CSharp.dll:.UnityARUserAnchorExample
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.CanvasViewportMaterialView
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.Internal.CanvasViewportMaterialView
 290afc8da8e459e0b8dc7444bfaf5e35 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARPointCloud
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp-firstpass.dll:.DocumentationExample
 563660a00e6e81cb62dbadd1cbc099dc Assembly-CSharp.dll:Mapbox.Examples.AstronautMouseController
@@ -286,7 +286,7 @@ ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration
 344c74b3abf2e69061c6763dbfbabcea Assembly-CSharp.dll:UnityARInterface.ARFocusSquare
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Interfaces.LocationPrefabsLayerVisualizer
 ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:.MeshGenerationBase
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.Dispatcher
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.Internal.Dispatcher
 964dce81080816542d4e5b1440191200 Assembly-CSharp.dll:Lean.Touch.LeanTouch
 71bb6a6b6c8f052f948db64c7dd3ca4f SA.iOS.dll:SA.iOS.EventKit.ISN_EventKitNativeAPI
 c896001203784eaf50c0839b7a358365 Assembly-CSharp.dll:.UnityARKitPluginSettings
@@ -354,6 +354,7 @@ e9b1bb8625391eccd2ab11f9625b5536 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration
 a1b7cfcc4f40a79a3ab4402c876ba619 Assembly-CSharp.dll:GoogleARCore.ARCoreSessionConfig
 fcc7ae5ff1b0c9cad5865d5b6cee016a Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARReferencePointManager
 253ead52687ebcf6bf2e6bb68055e28a Assembly-CSharp.dll:Lean.Touch.LeanFingerOld
+1d9199ed197ef27ecdc6dea4a7ca8227 Assembly-CSharp.dll:.reloadWeb
 71bb6a6b6c8f052f948db64c7dd3ca4f SA.iOS.dll:SA.iOS.Foundation.ISN_NSNativeAPI
 290afc8da8e459e0b8dc7444bfaf5e35 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARTrackedImage
 931f489e44eadf809e9310429c99dde5 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
@@ -376,7 +377,7 @@ a418316682a78c65fed9b911a49431b1 Assembly-CSharp.dll:.Switcher
 d39905ff8fda75afed4d688761c322e1 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARFaceManager
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.VectorDataFetcher
 3b760e6526e13f7504f59e210145899a Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
-7fd35a3d0a10af95f6b386d8e1a0e039 Assembly-CSharp.dll:Vuplex.WebView.CanvasWebViewPrefab
+7c8af76957b595c02f4ceb3780366738 Assembly-CSharp.dll:Vuplex.WebView.CanvasWebViewPrefab
 ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.DisableMeshRendererModifier
 33e70513b201278e69a542b04cd2861a Assembly-CSharp.dll:Mapbox.Examples.RotateWithLocationProvider
 16dacd04869a876ea4bea0d1d2e77e34 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARPointCloudManager
@@ -419,6 +420,7 @@ fa90da47991d80f1858af300615876f4 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration
 356f748c4c909ebaa2622ab445f25c16 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Data.UnityTile
 ea34d08e7f97e87a4da43fb433578303 Assembly-CSharp.dll:Mapbox.Examples.CharacterMovement
 d4954bb7e3dcb8c453804d4ecb3d31c1 Assembly-CSharp.dll:Mapbox.Examples.PoiLabelTextSetter
+8710444029ab7733ae21ff21ca83a035 Assembly-CSharp.dll:.toggleWebView
 5054d242fa21f2ec4c034da5ef77baab Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.SmoothLineModifier
 ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.ModifierBase
 5555944b4b93f7c8fc871501aaef1399 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.TextureMonoBehaviourModifier
@@ -448,6 +450,7 @@ fc934a38e7a1eae57e2e54018b1d1f20 Assembly-CSharp.dll:Mapbox.Examples.Voxels.Voxe
 71bb6a6b6c8f052f948db64c7dd3ca4f SA.iOS.dll:SA.iOS.GameKit.ISN_GKNativeAPI
 8cf5c51abebf1f0050d538c156980f69 Assembly-CSharp.dll:Mapbox.Examples.RelocateMapByGPS
 ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Examples.ObjectInspectorModifier
+387a2dbb15cfa5deb8fd097b9f08ee7e Assembly-CSharp.dll:.JSCom
 4e0bfd1d29eec1f3cda6b997a7d81004 Assembly-CSharp.dll:Lean.Touch.LeanDragTrail
 fdbca6c6cf1e7834c0db6c574059230e Assembly-CSharp.dll:Mapbox.Unity.Location.TransformLocationProvider
 01473135d671a71d740e507b04eb93da Unity.XR.ARSubsystems.dll:UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary
@@ -461,15 +464,14 @@ f0e792afefd9f5d684aaa5a3dd8994f2 Assembly-CSharp.dll:Lean.Touch.LeanSpawn
 79b54a5303bd41764acda985a753319c Assembly-CSharp.dll:Mapbox.Examples.FollowTargetTransform
 330f62fcfa21b2047340eab154927cfc Assembly-CSharp.dll:Lean.Touch.LeanSelectableRendererColor
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.Demos.CanvasWebViewDemo
-06e14fb1aa424ad1669be9839cffc920 Assembly-CSharp.dll:Vuplex.WebView.WebViewPrefab
+278164257643f57c11bdc8464574bcee Assembly-CSharp.dll:Vuplex.WebView.WebViewPrefab
 ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.MeshModifier
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UnityARKitLightManager
 007b5ca987b5e06e4f6e4ec41a343600 Assembly-CSharp.dll:UnityARInterface.ARPointCloudVisualizer
 d30406e93dfde99d69d2b1c0ea2559b1 Assembly-CSharp.dll:Mapbox.Unity.Location.AngleSmoothingAverage
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.ViewportMaterialView
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.Internal.ViewportMaterialView
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.MockWebView
 3edf99f1f23f40846178ab8f08418322 Assembly-CSharp.dll:.UnityPointCloudExample
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UnityARCameraNearFar
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.Demos.SimpleWebViewDemo
 0855a9d1fe3a81abf4812b7ac80389b6 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.ModifierStack
-b4ce128819c2c928cdbaf584b7816814 Assembly-CSharp.dll:.JSCom

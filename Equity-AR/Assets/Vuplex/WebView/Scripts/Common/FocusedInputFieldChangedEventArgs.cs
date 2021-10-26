@@ -14,11 +14,12 @@
 * limitations under the License.
 */
 using System;
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
 
     /// <summary>
-    /// Event args for `FocusedInputFieldChangedEvent`.
+    /// Event args for `FocusedInputFieldChanged`.
     /// </summary>
     public class FocusedInputFieldChangedEventArgs : EventArgs {
 

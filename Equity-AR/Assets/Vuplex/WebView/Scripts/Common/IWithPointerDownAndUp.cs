@@ -19,8 +19,12 @@ namespace Vuplex.WebView {
     /// <summary>
     /// An interface implemented by a webview if it supports `PointerDown()`
     /// and `PointerUp()`, which can be used to implement functionality like
-    /// drag-and-drop, double-clicks, and right-clicks.
+    /// drag interactions, double-clicks, and right-clicks.
     /// </summary>
+    /// <remarks>
+    /// For information on the limitations of drag interactions on iOS and UWP, please see
+    /// https://support.vuplex.com/articles/hover-and-drag-limitations.
+    /// <remarks>
     public interface IWithPointerDownAndUp {
         /// <summary>
         /// Dispatches a "mouse down" click event.

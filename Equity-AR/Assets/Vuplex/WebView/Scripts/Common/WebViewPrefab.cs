@@ -19,33 +19,44 @@ using UnityEngine.EventSystems;
 #if NET_4_6 || NET_STANDARD_2_0
     using System.Threading.Tasks;
 #endif
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
 
     /// <summary>
-    /// `WebViewPrefab` is a prefab that makes it easy to view and interact with web content in world space.
-    /// It takes care of creating an `IWebView`, displaying its texture, and handling pointer interactions
-    /// from the user (i.e. clicking, dragging, and scrolling). So, all you need to do is specify a URL or HTML to load,
-    /// and then the user can view and interact with it. For use in a Canvas, see `CanvasWebViewPrefab` instead.
+    /// WebViewPrefab is a prefab that makes it easy to view and interact with an IWebView in 3D world space.
+    /// It takes care of creating an IWebView, displaying its texture, and handling pointer interactions
+    /// from the user, like clicking, dragging, and scrolling. So, all you need to do is specify a URL or HTML to load,
+    /// and then the user can view and interact with it. For use in a Canvas, see CanvasWebViewPrefab instead.
     /// </summary>
     /// <remarks>
-    /// There are two ways to create a `WebViewPrefab`:
-    /// 1. By dragging WebViewPrefab.prefab into your scene via the editor and then setting its "Initial URL" property.
-    /// 2. Or by creating an instance programmatically with `WebViewPrefab.Instantiate()`, waiting for
-    ///    it to initialize, and then calling methods on its `WebView` property (like `webViewPrefab.WebView.LoadUrl("https://vuplex.com")`).
-    ///
-    /// `WebViewPrefab` handles standard events from Unity's input event system
-    /// (like `IPointerDownHandler` and `IScrollHandler`), so it works with input modules that plug into the event system,
-    /// like Unity's `StandaloneInputModule` and the Oculus `OVRInputModule`.
-    ///
-    /// If your use case requires a high degree of customization, you can instead create an `IWebView`
-    /// outside of the prefab with `Web.CreateWebView()`.
+    /// There are two ways to create a WebViewPrefab:
+    /// <list type="number">
+    ///   <item>
+    ///     By dragging the WebViewPrefab.prefab file into your scene via the editor and setting its "Initial URL" property.
+    ///   </item>
+    ///   <item>
+    ///     Or by creating an instance programmatically with WebViewPrefab.Instantiate(), waiting for
+    ///     it to initialize, and then calling methods on its WebView property, like LoadUrl().
+    ///   </item>
+    /// </list>
+    /// <para>
+    /// If your use case requires a high degree of customization, you can instead create an IWebView
+    /// outside of the prefab with Web.CreateWebView().
+    /// </para>
+    /// See also:
+    /// <list type="bullet">
+    ///   <item>CanvasWebViewPrefab: https://developer.vuplex.com/webview/CanvasWebViewPrefab</item>
+    ///   <item>How clicking and scrolling works: https://support.vuplex.com/articles/clicking</item>
+    ///   <item>IWebView: https://developer.vuplex.com/webview/IWebView</item>
+    ///   <item>Web (static methods): https://developer.vuplex.com/webview/Web</item>
+    /// </list>
     /// </remarks>
     [HelpURL("https://developer.vuplex.com/webview/WebViewPrefab")]
-    public class WebViewPrefab : BaseWebViewPrefab {
+    public partial class WebViewPrefab : BaseWebViewPrefab {
 
         /// <summary>
-        /// The prefab's collider.
+        /// Gets the prefab's collider.
         /// </summary>
         public Collider Collider {
             get {
@@ -64,12 +75,28 @@ namespace Vuplex.WebView {
         [HideInInspector]
         public float InitialResolution = 1300;
 
+        /// <summary>
+        /// Determines whether the operating system's native on-screen keyboard is
+        /// automatically shown when a text input in the webview is focused. The default for
+        /// WebViewPrefab is `false`.
+        /// </summary>
+        /// <remarks>
+        /// The native on-screen keyboard is only supported for the following packages:
+        /// <list type="bullet">
+        ///   <item>3D WebView for Android (non-Gecko)</item>
+        ///   <item>3D WebView for iOS</item>
+        /// </list>
+        /// </remarks>
+        [Label("Native On-Screen Keyboard (Android and iOS only)")]
+        [Header("Platform-specific")]
+        [Tooltip("Determines whether the operating system's native on-screen keyboard is automatically shown when a text input in the webview is focused. The native on-screen keyboard is only supported for the following packages:\n• 3D WebView for Android (non-Gecko)\n• 3D WebView for iOS")]
+        public bool NativeOnScreenKeyboardEnabled;
+
         [Obsolete("The static WebViewPrefab.ScrollSensitivity property is obsolete. Please use one of the following instance properties instead: WebViewPrefab.ScrollingSensitivity or CanvasWebViewPrefab.ScrollingSensitivity.")]
         public static float ScrollSensitivity { get; set; }
 
         /// <summary>
-        /// Allows the scroll sensitivity to be adjusted.
-        /// The default sensitivity is 0.005.
+        /// Determines the scroll sensitivity. The default sensitivity for WebViewPrefab is `0.005`.
         /// </summary>
         [HideInInspector]
         public float ScrollingSensitivity = 0.005f;
@@ -78,10 +105,10 @@ namespace Vuplex.WebView {
         /// Creates a new instance with the given dimensions in Unity units.
         /// </summary>
         /// <remarks>
-        /// The `WebView` property is available after initialization completes,
-        /// which is indicated by the `Initialized` event or `WaitUntilInitialized()` method.
+        /// The WebView property is available after initialization completes,
+        /// which is indicated by the Initialized event or WaitUntilInitialized() method.
         /// A webview's default resolution is 1300px per Unity unit but can be
-        /// changed with `IWebView.SetResolution()`.
+        /// changed with SetResolution().
         /// </remarks>
         /// <example>
         /// // Create a 0.5 x 0.5 instance
@@ -101,7 +128,7 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// Like `Instantiate(float, float)`, except it also accepts an object
+        /// Like Instantiate(float, float), except it also accepts an object
         /// of options flags that can be used to alter the generated webview's behavior.
         /// </summary>
         public static WebViewPrefab Instantiate(float width, float height, WebViewOptions options) {
@@ -110,24 +137,21 @@ namespace Vuplex.WebView {
             var gameObject = (GameObject) Instantiate(prefabPrototype);
             var webViewPrefab = gameObject.GetComponent<WebViewPrefab>();
             webViewPrefab._sizeForInitialization = new Vector2(width, height);
-            webViewPrefab._optionsForInitialization = options;
+            webViewPrefab._options = options;
             return webViewPrefab;
         }
 
         /// <summary>
-        /// Like `Instantiate()`, except it initializes the instance with an existing, initialized
-        /// `IWebView` instance. This causes the `WebViewPrefab` to use the existing
-        /// `IWebView` instance instead of creating a new one.
+        /// Like Instantiate(float, float), except it initializes the instance with an existing, initialized
+        /// IWebView instance. This causes the WebViewPrefab to use the existing
+        /// IWebView instance instead of creating a new one.
         /// </summary>
         public static WebViewPrefab Instantiate(IWebView webView) {
 
-            if (!webView.IsInitialized) {
-                throw new ArgumentException("WebViewPrefab.Init(IWebView) was called with an uninitialized webview, but an initialized webview is required.");
-            }
             var prefabPrototype = (GameObject) Resources.Load("WebViewPrefab");
             var gameObject = (GameObject) Instantiate(prefabPrototype);
             var webViewPrefab = gameObject.GetComponent<WebViewPrefab>();
-            webViewPrefab._webViewForInitialization = webView;
+            webViewPrefab.SetWebViewForInitialization(webView);
             webViewPrefab._sizeForInitialization = webView.Size;
             return webViewPrefab;
         }
@@ -145,7 +169,7 @@ namespace Vuplex.WebView {
         [Obsolete("WebViewPrefab.Init() has been removed. The WebViewPrefab script now initializes itself automatically, so Init() no longer needs to be called.", true)]
         public void Init(float width, float height, WebViewOptions options) {}
 
-        [Obsolete("WebViewPrefab.Init() has been removed. The WebViewPrefab script now initializes itself automatically, so Init() no longer needs to be called.", true)]
+        [Obsolete("WebViewPrefab.Init() has been removed. The WebViewPrefab script now initializes itself automatically, so Init() no longer needs to be called. Please use WebViewPrefab.SetWebViewForInitialization(IWebView) instead.", true)]
         public void Init(IWebView webView) {}
 
         /// <summary>
@@ -170,13 +194,12 @@ namespace Vuplex.WebView {
         /// </remarks>
         public void Resize(float width, float height) {
 
-            if (_webView != null) {
-                _webView.Resize(width, height);
+            if (WebView != null) {
+                WebView.Resize(width, height);
             }
             _setViewSize(width, height);
         }
 
-        WebViewOptions _optionsForInitialization;
         Vector2 _sizeForInitialization = Vector2.zero;
         [SerializeField]
         [HideInInspector]
@@ -184,7 +207,10 @@ namespace Vuplex.WebView {
         [SerializeField]
         [HideInInspector]
         protected Transform _viewResizer;
-        IWebView _webViewForInitialization;
+
+        // Partial method implemented by various 3D WebView packages
+        // to provide platform-specific warnings.
+        partial void OnInit();
 
         protected override Vector2 _convertRatioPointToUnityUnits(Vector2 point) {
 
@@ -203,6 +229,11 @@ namespace Vuplex.WebView {
             return ScrollingSensitivity;
         }
 
+        protected override bool _getNativeOnScreenKeyboardEnabled() {
+
+            return NativeOnScreenKeyboardEnabled;
+        }
+
         protected override ViewportMaterialView _getVideoLayer() {
 
             return _videoRectPositioner.GetComponentInChildren<ViewportMaterialView>();
@@ -214,6 +245,8 @@ namespace Vuplex.WebView {
         }
 
         void _initWebViewPrefab() {
+
+            OnInit();
 
             #if VUPLEX_XR_INTERACTION_TOOLKIT
                 WebViewLogger.LogWarning("It looks like you're using a WebViewPrefab with XR Interaction Toolkit. Please use a CanvasWebViewPrefab inside a world space Canvas instead. For more information, please see <em>https://support.vuplex.com/articles/xr-interaction-toolkit</em>.");
@@ -230,12 +263,10 @@ namespace Vuplex.WebView {
                 _sizeForInitialization = transform.localScale;
                 _resetLocalScale();
             }
-            var width = _sizeForInitialization.x;
-            var height = _sizeForInitialization.y;
             _viewResizer = transform.GetChild(0);
             _videoRectPositioner = _viewResizer.Find("VideoRectPositioner");
-            _setViewSize(width, height);
-            _init(width, height, _optionsForInitialization, _webViewForInitialization);
+            _setViewSize(_sizeForInitialization.x, _sizeForInitialization.y);
+            _init(_sizeForInitialization);
         }
 
         /// <summary>

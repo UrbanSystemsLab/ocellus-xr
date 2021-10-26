@@ -15,7 +15,9 @@
 */
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView.Demos {
 
@@ -46,8 +48,19 @@ namespace Vuplex.WebView.Demos {
             return (HardwareKeyboardListener) new GameObject("HardwareKeyboardListener").AddComponent<HardwareKeyboardListener>();
         }
 
+        Regex _alphanumericRegex = new Regex("[a-zA-Z0-9]");
+        Func<string, bool> _hasValidUnityKeyName = _memoize<string, bool>(
+            javaScriptKeyName => {
+                try {
+                    var unityKeyName = _getPotentialUnityKeyName(javaScriptKeyName);
+                    Input.GetKey(unityKeyName);
+                    return true;
+                } catch {
+                    return false;
+                }
+            }
+        );
         List<string> _keysDown = new List<string>();
-
         static readonly string[] _keyValues = new string[] {
             "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "`", "-", "=", "[", "]", "\\", ";", "'", ",", ".", "/", " ", "Enter", "Backspace", "Tab", "ArrowUp", "ArrowDown", "ArrowRight", "ArrowLeft", "Escape", "Delete"
         };
@@ -62,7 +75,7 @@ namespace Vuplex.WebView.Demos {
             foreach (var key in _keyValuesUndetectableThroughInputString) {
                 // Use GetKey instead of GetKeyDown because on macOS, Input.inputString
                 // contains garbage when the arrow keys are held down.
-                if (Input.GetKey(_getUnityKeyNameForJsKeyValue(key))) {
+                if (Input.GetKey(_getPotentialUnityKeyName(key))) {
                     return true;
                 }
             }
@@ -98,11 +111,14 @@ namespace Vuplex.WebView.Demos {
             return modifiers;
         }
 
-        string _getUnityKeyNameForJsKeyValue(string keyValue) {
+        // https://docs.unity3d.com/Manual/class-InputManager.html#:~:text=the%20Input%20Manager.-,Key%20names,-follow%20these%20naming
+        static string _getPotentialUnityKeyName(string javaScriptKeyValue) {
 
-            switch (keyValue) {
+            switch (javaScriptKeyValue) {
                 case " ":
                     return "space";
+                case "Alt":
+                    return "left alt";
                 case "ArrowUp":
                     return "up";
                 case "ArrowDown":
@@ -111,10 +127,102 @@ namespace Vuplex.WebView.Demos {
                     return "right";
                 case "ArrowLeft":
                     return "left";
+                case "Control":
+                    return "left ctrl";
                 case "Enter":
                     return "return";
+                case "Meta":
+                    return "left cmd";
+                case "Shift":
+                    return "left shift";
             }
-            return keyValue.ToLower();
+            return javaScriptKeyValue.ToLower();
+        }
+
+        /// <summary>
+        /// Returns a memoized version of the given function.
+        /// </summary>
+        static Func<TArg, TReturn> _memoize<TArg, TReturn>(Func<TArg, TReturn> function) {
+
+            var cache = new Dictionary<TArg, TReturn>();
+            return arg => {
+                TReturn result;
+                if (cache.TryGetValue(arg, out result)) {
+                    return result;
+                }
+                result = function(arg);
+                cache.Add(arg, result);
+                return result;
+            };
+        }
+
+        bool _processInputString(KeyModifier modifiers) {
+
+            var keyDownHandler = KeyDownReceived;
+            foreach (var character in Input.inputString) {
+                string characterString;
+                switch (character) {
+                    case '\b':
+                        characterString = "Backspace";
+                        break;
+                    case '\n':
+                    case '\r':
+                        characterString = "Enter";
+                        break;
+                    case (char)0xF728:
+                        // 0xF728 = NSDeleteFunctionKey on macOS
+                        characterString = "Delete";
+                        break;
+                    default:
+                        characterString = character.ToString();
+                        break;
+                }
+                // For some keyboard layouts like AZERTY (e.g. French), Input.inputString will contain
+                // the correct character for a ctr+alt+{} key combination (e.g. ctrl+alt+0 makes Input.inputString equal "@"), but
+                // Input.GetKeyUp() won't return true for that key when the key combination is released
+                // (e.g. Input.GetKeyUp("@") always returns false). So, as a workaround, we emit
+                // the KeyUpReceived event immediately in that scenario instead of adding it to _keysDown.
+                var skipGetKeyUpBecauseUnityBug = modifiers != KeyModifier.None && characterString.Length == 1 && !_alphanumericRegex.IsMatch(characterString);
+                // We also need to skip calling Input.GetKeyUp() if the character isn't compatible with GetKeyUp(). For example, on
+                // Azerty keyboards, the 2 key (without modifiers) triggers "é", which can't be passed to GetKeyUp().
+                var skipGetKeyUpBecauseIncompatibleCharacter = !_hasValidUnityKeyName(characterString);
+                if (skipGetKeyUpBecauseUnityBug || skipGetKeyUpBecauseIncompatibleCharacter) {
+                    if (keyDownHandler != null) {
+                        keyDownHandler(this, new KeyboardInputEventArgs(characterString, KeyModifier.None));
+                    }
+                    var keyUpHandler = KeyUpReceived;
+                    if (keyUpHandler != null) {
+                        keyUpHandler(this, new KeyboardInputEventArgs(characterString, KeyModifier.None));
+                    }
+                } else {
+                    if (keyDownHandler != null) {
+                        keyDownHandler(this, new KeyboardInputEventArgs(characterString, modifiers));
+                    }
+                    // It's a character that works with Input.GetKeyUp(), so add it to _keysDown.
+                    _keysDown.Add(characterString);
+                }
+            }
+            return Input.inputString.Length > 0;
+        }
+
+        void _processKeysPressed(KeyModifier modifiers) {
+
+            if (!(Input.anyKeyDown || Input.inputString.Length > 0)) {
+                return;
+            }
+            var nonInputStringKeysDetected = _processKeysUndetectableThroughInputString(modifiers);
+            if (nonInputStringKeysDetected) {
+                return;
+            }
+            // Using Input.inputString when possible is preferable since it
+            // handles different languages and characters that would be hard
+            // to support using Input.GetKeyDown().
+            var inputStringKeysDetected = _processInputString(modifiers);
+            if (inputStringKeysDetected) {
+                return;
+            }
+            // If we've made it to this point, then only modifier keys by themselves have been pressed.
+            _processModifierKeysOnly(modifiers);
         }
 
         void _processKeysReleased(KeyModifier modifiers) {
@@ -126,8 +234,10 @@ namespace Vuplex.WebView.Demos {
             foreach (var key in keysDownCopy) {
                 bool keyUp = false;
                 try {
-                    keyUp = Input.GetKeyUp(_getUnityKeyNameForJsKeyValue(key));
+                    keyUp = Input.GetKeyUp(_getPotentialUnityKeyName(key));
                 } catch (ArgumentException ex) {
+                    // This would only happen if an invalid key is added to _keyValuesUndetectableThroughInputString
+                    // because other keys are verified via _hasValidUnityKeyName.
                     WebViewLogger.LogError("Invalid key value passed to Input.GetKeyUp: " + ex);
                     _keysDown.Remove(key);
                     return;
@@ -142,51 +252,42 @@ namespace Vuplex.WebView.Demos {
             }
         }
 
-        void _processKeysPressed(KeyModifier modifiers) {
+        bool _processKeysUndetectableThroughInputString(KeyModifier modifiers) {
 
-            if (!(Input.anyKeyDown || Input.inputString.Length > 0)) {
-                return;
-            }
-            var handler = KeyDownReceived;
+            var keyDownHandler = KeyDownReceived;
             var modifierKeysPressed = !(modifiers == KeyModifier.None || modifiers == KeyModifier.Shift);
             var keysUndetectableThroughInputStringArePressed = _areKeysUndetectableThroughInputStringPressed();
+            var oneOrMoreKeysProcessed = false;
             // On Windows, when modifier keys are held down, Input.inputString is blank
             // even if other keys are pressed. So, use Input.GetKeyDown() in that scenario.
-            if (modifierKeysPressed || keysUndetectableThroughInputStringArePressed) {
+            if (keysUndetectableThroughInputStringArePressed || (Input.inputString.Length == 0 && modifierKeysPressed)) {
                 foreach (var key in _keyValues) {
-                    if (Input.GetKeyDown(_getUnityKeyNameForJsKeyValue(key))) {
-                        if (handler != null) {
-                            handler(this, new KeyboardInputEventArgs(key, modifiers));
+                    if (Input.GetKeyDown(_getPotentialUnityKeyName(key))) {
+                        if (keyDownHandler != null) {
+                            keyDownHandler(this, new KeyboardInputEventArgs(key, modifiers));
                         }
                         _keysDown.Add(key);
+                        oneOrMoreKeysProcessed = true;
                     }
                 }
-            } else {
-                // Using Input.inputString when possible is preferable since it
-                // handles different languages and characters that would be hard
-                // to support using Input.GetKeyDown().
-                foreach (var character in Input.inputString) {
-                    string characterString;
-                    switch (character) {
-                        case '\b':
-                            characterString = "Backspace";
-                            break;
-                        case '\n':
-                        case '\r':
-                            characterString = "Enter";
-                            break;
-                        case (char)0xF728:
-                            // 0xF728 = NSDeleteFunctionKey on macOS
-                            characterString = "Delete";
-                            break;
-                        default:
-                            characterString = character.ToString();
-                            break;
+            }
+            return oneOrMoreKeysProcessed;
+        }
+
+        void _processModifierKeysOnly(KeyModifier modifiers) {
+
+            var keyDownHandler = KeyDownReceived;
+            foreach (var value in Enum.GetValues(typeof(KeyModifier))) {
+                var modifierValue = (KeyModifier)value;
+                if (modifierValue == KeyModifier.None) {
+                    continue;
+                }
+                if ((modifiers & modifierValue) != 0) {
+                    var key = modifierValue.ToString();
+                    if (keyDownHandler != null) {
+                        keyDownHandler(this, new KeyboardInputEventArgs(key, KeyModifier.None));
                     }
-                    if (handler != null) {
-                        handler(this, new KeyboardInputEventArgs(characterString, modifiers));
-                    }
-                    _keysDown.Add(characterString);
+                    _keysDown.Add(key);
                 }
             }
         }

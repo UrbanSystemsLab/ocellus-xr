@@ -15,7 +15,7 @@
 */
 using UnityEditor;
 
-namespace Vuplex.WebView {
+namespace Vuplex.WebView.Editor {
 
     [CustomEditor(typeof(WebViewPrefab))]
     public class WebViewPrefabInspector : BaseWebViewPrefabInspector {

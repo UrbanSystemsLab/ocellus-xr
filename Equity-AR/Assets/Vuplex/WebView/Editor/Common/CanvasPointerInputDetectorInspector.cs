@@ -15,13 +15,13 @@
 */
 using UnityEditor;
 
-namespace Vuplex.WebView {
+namespace Vuplex.WebView.Editor {
 
     /// <summary>
     /// Adds a "View documentation" link to the inspector.
     /// </summary>
     [CustomEditor(typeof(CanvasPointerInputDetector))]
-    public class CanvasPointerInputDetectorInspector : Editor {
+    public class CanvasPointerInputDetectorInspector : UnityEditor.Editor {
 
         public override void OnInspectorGUI() {
 

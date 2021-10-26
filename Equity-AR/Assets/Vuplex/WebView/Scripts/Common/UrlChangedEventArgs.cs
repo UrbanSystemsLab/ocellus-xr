@@ -22,9 +22,8 @@ namespace Vuplex.WebView {
     /// </summary>
     public class UrlChangedEventArgs : EventArgs {
 
-        public UrlChangedEventArgs(string url, string title, string type) {
+        public UrlChangedEventArgs(string url, string type) {
             Url = url;
-            Title = title;
             Type = type;
         }
 
@@ -33,10 +32,7 @@ namespace Vuplex.WebView {
         /// </summary>
         public string Url;
 
-
-        /// <summary>
-        /// The new webpage title.
-        /// </summary>
+        [Obsolete("UrlChangedEventArgs.Title has been removed. Please use IWebView.Title or IWebView.TitleChanged instead.", true)]
         public string Title;
 
         /// <summary>

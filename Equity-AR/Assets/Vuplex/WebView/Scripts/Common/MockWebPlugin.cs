@@ -15,6 +15,7 @@
 */
 using System;
 using UnityEngine;
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
     /// <summary>
@@ -70,6 +71,8 @@ namespace Vuplex.WebView {
         }
 
         public void EnableRemoteDebugging() {}
+
+        public void SetAutoplayEnabled(bool enabled) {}
 
         public void SetIgnoreCertificateErrors(bool ignore) {}
 

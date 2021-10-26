@@ -32,15 +32,20 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// Filters provided by the page to specify the allowed file types.
-        /// For more info, see [MDN's documentation for the file input `accept` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept).
+        /// Filters provided by the page to specify the allowed file types. If the page didn't specify
+        /// any file types, then this array is empty.
         /// </summary>
+        /// <seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept">
+        /// MDN's documentation for the file input `accept` attribute
+        /// </seealso>
         public readonly string[] AcceptFilters;
 
         /// <summary>
         /// Indicates whether multiple files are permitted.
-        /// For more info, see [MDN's documentation for the file input `multiple` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#multiple).
         /// </summary>
+        /// <seealso href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#multiple">
+        /// MDN's documentation for the file input `multiple` attribute
+        /// </seealso>
         public readonly bool MultipleAllowed;
 
         /// <summary>

@@ -21,13 +21,33 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Vuplex.WebView.Internal;
+
+#if NET_4_6 || NET_STANDARD_2_0
+    using System.Threading.Tasks;
+#endif
 
 namespace Vuplex.WebView {
+
     /// <summary>
-    /// The `IWebView` implementation used by 3D WebView for iOS.
-    /// This class also includes extra methods for iOS-specific functionality.
+    /// The IWebView implementation used by 3D WebView for iOS.
     /// </summary>
-    public class iOSWebView : BaseWebView, IWebView {
+    public class iOSWebView : BaseWebView,
+                              IWebView,
+                              IWithMovablePointer,
+                              IWithNative2DMode,
+                              IWithNativeOnScreenKeyboard,
+                              IWithPointerDownAndUp,
+                              IWithSettableUserAgent {
+
+        /// <see cref="IWithNative2DMode"/>
+        public bool Native2DModeEnabled { get; private set; }
+
+        /// <see cref="IWithNative2DMode"/>
+        public Rect Rect { get; private set; }
+
+        /// <see cref="IWithNative2DMode"/>
+        public bool Visible { get; private set; }
 
         public WebPluginType PluginType {
             get {
@@ -35,21 +55,9 @@ namespace Vuplex.WebView {
             }
         }
 
-        public static iOSWebView Instantiate() {
+        public static void ClearAllData() {
 
-            return (iOSWebView) new GameObject().AddComponent<iOSWebView>();
-        }
-
-        public override void Init(Texture2D viewportTexture, float width, float height, Texture2D videoTexture) {
-
-            base.Init(viewportTexture, width, height, videoTexture);
-            _nativeWebViewPtr = WebView_new(
-                gameObject.name,
-                _nativeWidth,
-                _nativeHeight,
-                videoTexture != null,
-                SystemInfo.graphicsDeviceType != GraphicsDeviceType.Metal
-            );
+            WebView_clearAllData();
         }
 
         public override void Click(Vector2 point, bool preventStealingFocus) {
@@ -82,12 +90,33 @@ namespace Vuplex.WebView {
             callback(managedBytes);
         }
 
-        public override void EnableViewUpdates() {
+#if NET_4_6 || NET_STANDARD_2_0
+        /// <summary>
+        /// Gets the cookie that matches the given URL and cookie name, or
+        /// null if no cookie matches.
+        /// </summary>
+        public static Task<Cookie> GetCookie(string url, string cookieName) {
 
-            if (_currentVideoNativeTexture != IntPtr.Zero) {
-                _videoTexture.UpdateExternalTexture(_currentVideoNativeTexture);
+            var task = new TaskCompletionSource<Cookie>();
+            GetCookie(url, cookieName, task.SetResult);
+            return task.Task;
+        }
+#endif
+
+        /// <summary>
+        /// Like the other version of GetCookie(), except it uses a callback
+        /// instead of a Task in order to be compatible with legacy .NET.
+        /// </summary>
+        public static void GetCookie(string url, string cookieName, Action<Cookie> callback) {
+
+            Cookie cookie = null;
+            var serializedCookiePtr = WebView_getCookie(url, cookieName);
+            if (serializedCookiePtr != IntPtr.Zero) {
+                var serializedCookie = Marshal.PtrToStringAnsi(serializedCookiePtr);
+                WebView_freeMemory(serializedCookiePtr);
+                cookie = Cookie.FromJson(serializedCookie);
             }
-            base.EnableViewUpdates();
+            callback(cookie);
         }
 
         /// <summary>
@@ -134,6 +163,126 @@ namespace Vuplex.WebView {
             callback(managedBytes);
         }
 
+        public static void GloballySetUserAgent(bool mobile) {
+
+            WebView_globallySetUserAgentToMobile(mobile);
+        }
+
+        public static void GloballySetUserAgent(string userAgent) {
+
+            WebView_globallySetUserAgent(userAgent);
+        }
+
+        public override void Init(Texture2D viewportTexture, float width, float height, Texture2D videoTexture) {
+
+            base.Init(viewportTexture, width, height, videoTexture);
+            _nativeWebViewPtr = WebView_new(
+                gameObject.name,
+                _nativeWidth,
+                _nativeHeight,
+                videoTexture != null,
+                SystemInfo.graphicsDeviceType != GraphicsDeviceType.Metal
+            );
+        }
+
+        /// <see cref="IWithNative2DMode"/>
+        public void InitInNative2DMode(Rect rect) {
+
+            _numberOfPixelsPerUnityUnit = 1;
+            Native2DModeEnabled = true;
+            this.Rect = rect;
+            Visible = true;
+            base.Init(null, rect.width, rect.height, null);
+            _nativeWebViewPtr = WebView_newInNative2DMode(
+                gameObject.name,
+                (int)rect.x,
+                (int)rect.y,
+                (int)rect.width,
+                (int)rect.height
+            );
+        }
+
+        public static iOSWebView Instantiate() {
+
+            return (iOSWebView) new GameObject().AddComponent<iOSWebView>();
+        }
+
+        /// <see cref="IWithMovablePointer"/>
+        public void MovePointer(Vector2 point) {
+
+            _assertValidState();
+            int nativeX = (int) (point.x * _nativeWidth);
+            int nativeY = (int) (point.y * _nativeHeight);
+            WebView_movePointer(_nativeWebViewPtr, nativeX, nativeY);
+        }
+
+        /// <see cref="IWithPointerDownAndUp"/>
+        public void PointerDown(Vector2 point) {
+
+            _pointerDown(point, MouseButton.Left, 1);
+        }
+
+        /// <see cref="IWithPointerDownAndUp"/>
+        public void PointerDown(Vector2 point, PointerOptions options) {
+
+            if (options == null) {
+                options = new PointerOptions();
+            }
+            _pointerDown(point, options.Button, options.ClickCount);
+        }
+
+        /// <see cref="IWithPointerDownAndUp"/>
+        public void PointerUp(Vector2 point) {
+
+            _pointerUp(point, MouseButton.Left, 1);
+        }
+
+        /// <see cref="IWithPointerDownAndUp"/>
+        public void PointerUp(Vector2 point, PointerOptions options) {
+
+            if (options == null) {
+                options = new PointerOptions();
+            }
+            _pointerUp(point, options.Button, options.ClickCount);
+        }
+
+        /// <summary>
+        /// Sets whether horizontal swipe gestures trigger backward and forward page navigation.
+        /// The default is `false`.
+        /// </summary>
+        /// <example>
+        /// #if UNITY_IOS &amp;&amp; !UNITY_EDITOR
+        ///     var iOSWebViewInstance = webViewPrefab.Webview as iOSWebView;
+        ///     iOSWebViewInstance.SetAllowsBackForwardNavigationGestures(true);
+        /// #endif
+        /// </example>
+        /// <seealso href="https://developer.apple.com/documentation/webkit/wkwebview/1414995-allowsbackforwardnavigationgestu">WKWebView.allowsBackForwardNavigationGestures</seealso>
+        public void SetAllowsBackForwardNavigationGestures(bool allow) {
+
+            _assertValidState();
+            WebView_setAllowsBackForwardNavigationGestures(_nativeWebViewPtr, allow);
+        }
+
+        /// <summary>
+        /// Sets whether HTML5 videos play inline or use the native full-screen controller.
+        /// The default is `true`. This method is static because the WKWebView's configuration
+        /// cannot be modified at runtime after the webview is created.
+        /// </summary>
+        /// <example>
+        /// #if UNITY_IOS &amp;&amp; !UNITY_EDITOR
+        ///     iOSWebView.SetAllowsInlineMediaPlayback(false);
+        /// #endif
+        /// </example>
+        /// <seealso href="https://developer.apple.com/documentation/webkit/wkwebviewconfiguration/1614793-allowsinlinemediaplayback">WKWebViewConfiguration.allowsInlineMediaPlayback</seealso>
+        public static void SetAllowsInlineMediaPlayback(bool allow) {
+
+            WebView_setAllowsInlineMediaPlayback(allow);
+        }
+
+        public static void SetAutoplayEnabled(bool enabled) {
+
+            WebView_setAutoplayEnabled(enabled);
+        }
 
         [Obsolete("iOSWebView.SetCustomUriSchemesEnabled() has been removed. Now when a page redirects to a URI with a custom scheme, 3D WebView will automatically emit the UrlChanged and LoadProgressChanged events for the navigation, but a deep link (i.e. to an external application) won't occur.", true)]
         public static void SetCustomUriSchemesEnabled(bool enabled) {}
@@ -143,45 +292,126 @@ namespace Vuplex.WebView {
             WebView_setIgnoreCertificateErrors(ignore);
         }
 
-        [Obsolete("iOSWebView.SetNativeKeyboardEnabled() is now deprecated. Please use Web.SetTouchScreenKeyboardEnabled() instead.")]
+        [Obsolete("iOSWebView.SetNativeKeyboardEnabled() is now deprecated. Instead, please use the NativeOnScreenKeyboardEnabled property of WebViewPrefab / CanvasWebViewPrefab or the IWithNativeOnScreenKeyboard interface.")]
         public static void SetNativeKeyboardEnabled(bool enabled) {
 
             SetTouchScreenKeyboardEnabled(enabled);
         }
 
+        /// <see cref="IWithNativeOnScreenKeyboard"/>
+        public void SetNativeOnScreenKeyboardEnabled(bool enabled) {
+
+            _assertValidState();
+            WebView_setNativeOnScreenKeyboardEnabled(_nativeWebViewPtr, enabled);
+        }
+
+        /// <see cref="IWithNative2DMode"/>
+        public void SetNativeZoomEnabled(bool enabled) {
+
+            _assertValidState();
+            _assertNative2DModeEnabled();
+            WebView_setNativeZoomEnabled(_nativeWebViewPtr, enabled);
+        }
+
+        /// <see cref="IWithNative2DMode"/>
+        public void SetRect(Rect rect) {
+
+            _assertValidState();
+            _assertNative2DModeEnabled();
+            this.Rect = rect;
+            WebView_setRect(_nativeWebViewPtr, (int)rect.x, (int)rect.y, (int)rect.width, (int)rect.height);
+        }
+
+        public override void SetRenderingEnabled(bool enabled) {
+
+            if (Native2DModeEnabled) {
+                Vuplex.WebView.Internal.Utils.LogNative2DModeWarning("SetRenderingEnabled");
+                return;
+            }
+            base.SetRenderingEnabled(enabled);
+            if (enabled && _currentVideoNativeTexture != IntPtr.Zero) {
+                _videoTexture.UpdateExternalTexture(_currentVideoNativeTexture);
+            }
+        }
+
+        public override void SetResolution(float pixelsPerUnityUnit) {
+
+            if (Native2DModeEnabled) {
+                Vuplex.WebView.Internal.Utils.LogNative2DModeWarning("SetResolution");
+                return;
+            }
+            base.SetResolution(pixelsPerUnityUnit);
+        }
+
+        /// <summary>
+        /// When Native 2D Mode is enabled, this method sets whether the scroll view bounces past
+        /// the edge of content and back again. The default is `true`. When Native 2D Mode is not
+        /// enabled, this method has no effect.
+        /// </summary>
+        /// <example>
+        /// #if UNITY_IOS &amp;&amp; !UNITY_EDITOR
+        ///     var iOSWebViewInstance = webViewPrefab.Webview as iOSWebView;
+        ///     iOSWebViewInstance.SetScrollViewBounces(false);
+        /// #endif
+        /// </example>
+        /// <seealso href="https://developer.apple.com/documentation/uikit/uiscrollview/1619420-bounces">UIScrollView.bounces</seealso>
+        public void SetScrollViewBounces(bool bounces) {
+
+            _assertValidState();
+            WebView_setScrollViewBounces(_nativeWebViewPtr, bounces);
+        }
+
+        public static void SetStorageEnabled(bool enabled) {
+
+            WebView_setStorageEnabled(enabled);
+        }
+
+        // Deprecated
         public static void SetTouchScreenKeyboardEnabled(bool enabled) {
 
             WebView_setTouchScreenKeyboardEnabled(enabled);
         }
 
-        /// <summary>
-        /// Like `Web.SetUserAgent(bool mobile)`, except it sets the user-agent
-        /// for a single webview instance instead of setting it globally.
-        /// </summary>
-        /// <remarks>
-        /// If you globally set a default user-agent using `Web.SetUserAgent()`,
-        /// you can still use this method to override the user-agent for a
-        /// single webview instance.
-        /// </remarks>
+
+        /// <see cref="IWithSettableUserAgent"/>
         public void SetUserAgent(bool mobile) {
 
             _assertValidState();
             WebView_setUserAgentToMobile(_nativeWebViewPtr, mobile);
         }
 
-        /// <summary>
-        /// Like `Web.SetUserAgent(string userAgent)`, except it sets the user-agent
-        /// for a single webview instance instead of setting it globally.
-        /// </summary>
-        /// <remarks>
-        /// If you globally set a default user-agent using `Web.SetUserAgent()`,
-        /// you can still use this method to override the user-agent for a
-        /// single webview instance.
-        /// </remarks>
+        /// <see cref="IWithSettableUserAgent"/>
         public void SetUserAgent(string userAgent) {
 
             _assertValidState();
             WebView_setUserAgent(_nativeWebViewPtr, userAgent);
+        }
+
+        /// <see cref="IWithNative2DMode"/>
+        public void SetVisible(bool visible) {
+
+            _assertValidState();
+            _assertNative2DModeEnabled();
+            Visible = visible;
+            WebView_setVisible(_nativeWebViewPtr, visible);
+        }
+
+        public override void ZoomIn() {
+
+            if (Native2DModeEnabled) {
+                Vuplex.WebView.Internal.Utils.LogNative2DModeWarning("ZoomIn");
+                return;
+            }
+            base.ZoomIn();
+        }
+
+        public override void ZoomOut() {
+
+            if (Native2DModeEnabled) {
+                Vuplex.WebView.Internal.Utils.LogNative2DModeWarning("ZoomOut");
+                return;
+            }
+            base.ZoomOut();
         }
 
         IntPtr _currentVideoNativeTexture;
@@ -201,6 +431,13 @@ namespace Vuplex.WebView {
             }
         }
 
+        void _assertNative2DModeEnabled() {
+
+            if (!Native2DModeEnabled) {
+                throw new InvalidOperationException("IWithNative2DMode methods can only be called on a webview with Native 2D Mode enabled.");
+            }
+        }
+
         /// <summary>
         /// The native plugin invokes this method.
         /// </summary>
@@ -212,7 +449,7 @@ namespace Vuplex.WebView {
             }
             var previousNativeTexture = _currentVideoNativeTexture;
             _currentVideoNativeTexture = nativeTexture;
-            if (_viewUpdatesAreEnabled) {
+            if (_renderingEnabled) {
                 _videoTexture.UpdateExternalTexture(_currentVideoNativeTexture);
             }
 
@@ -228,12 +465,31 @@ namespace Vuplex.WebView {
             StartCoroutine(_renderPluginOncePerFrame());
         }
 
+        void _pointerDown(Vector2 point, MouseButton mouseButton, int clickCount) {
+
+            _assertValidState();
+            int nativeX = (int) (point.x * _nativeWidth);
+            int nativeY = (int) (point.y * _nativeHeight);
+            WebView_pointerDown(_nativeWebViewPtr, nativeX, nativeY, (int)mouseButton, clickCount);
+        }
+
+        void _pointerUp(Vector2 point, MouseButton mouseButton, int clickCount) {
+
+            _assertValidState();
+            int nativeX = (int) (point.x * _nativeWidth);
+            int nativeY = (int) (point.y * _nativeHeight);
+            WebView_pointerUp(_nativeWebViewPtr, nativeX, nativeY, (int)mouseButton, clickCount);
+        }
+
         IEnumerator _renderPluginOncePerFrame() {
 
             while (true) {
                 yield return _waitForEndOfFrame;
-
-                if (!_viewUpdatesAreEnabled || IsDisposed) {
+                if (Native2DModeEnabled) {
+                    // The native render function isn't needed for 2D optimized mode.
+                    break;
+                }
+                if (!_renderingEnabled || IsDisposed) {
                     continue;
                 }
                 int pointerId = WebView_depositPointer(_nativeWebViewPtr);
@@ -245,6 +501,9 @@ namespace Vuplex.WebView {
         private static extern void WebView_captureScreenshot(IntPtr webViewPtr, ref IntPtr bytes, ref int length);
 
         [DllImport(_dllName)]
+        static extern void WebView_clearAllData();
+
+        [DllImport(_dllName)]
         static extern void WebView_clickWithoutStealingFocus(IntPtr webViewPtr, int x, int y);
 
         [DllImport(_dllName)]
@@ -252,6 +511,9 @@ namespace Vuplex.WebView {
 
         [DllImport(_dllName)]
         static extern void WebView_freeMemory(IntPtr bytes);
+
+        [DllImport(_dllName)]
+        static extern IntPtr WebView_getCookie(string url, string name);
 
         [DllImport(_dllName)]
         static extern IntPtr WebView_getFileUrlForBundleResource(string fileNameWithoutExtension, string fileExtension);
@@ -263,10 +525,52 @@ namespace Vuplex.WebView {
         static extern IntPtr WebView_getRenderFunction();
 
         [DllImport(_dllName)]
-        static extern IntPtr WebView_new(string gameObjectName, int width, int height, bool enableVideoSupport, bool useOpenGL);
+        static extern void WebView_globallySetUserAgentToMobile(bool mobile);
+
+        [DllImport(_dllName)]
+        static extern void WebView_globallySetUserAgent(string userAgent);
+
+        [DllImport (_dllName)]
+        static extern void WebView_movePointer(IntPtr webViewPtr, int x, int y);
+
+        [DllImport(_dllName)]
+        static extern IntPtr WebView_new(string gameObjectName, int width, int height, bool fallbackVideoSupportEnabled, bool useOpenGL);
+
+        [DllImport(_dllName)]
+        static extern IntPtr WebView_newInNative2DMode(string gameObjectName, int x, int y, int width, int height);
+
+        [DllImport (_dllName)]
+        static extern void WebView_pointerDown(IntPtr webViewPtr, int x, int y, int mouseButton, int clickCount);
+
+        [DllImport (_dllName)]
+        static extern void WebView_pointerUp(IntPtr webViewPtr, int x, int y, int mouseButton, int clickCount);
+
+        [DllImport(_dllName)]
+        static extern void WebView_setAllowsBackForwardNavigationGestures(IntPtr webViewPtr, bool allow);
+
+        [DllImport(_dllName)]
+        static extern void WebView_setAllowsInlineMediaPlayback(bool allow);
+
+        [DllImport(_dllName)]
+        static extern void WebView_setAutoplayEnabled(bool ignore);
 
         [DllImport(_dllName)]
         static extern void WebView_setIgnoreCertificateErrors(bool ignore);
+
+        [DllImport(_dllName)]
+        static extern void WebView_setNativeOnScreenKeyboardEnabled(IntPtr webViewPtr, bool enabled);
+
+        [DllImport(_dllName)]
+        static extern void WebView_setNativeZoomEnabled(IntPtr webViewPtr, bool enabled);
+
+        [DllImport (_dllName)]
+        static extern void WebView_setRect(IntPtr webViewPtr, int x, int y, int width, int height);
+
+        [DllImport (_dllName)]
+        static extern void WebView_setScrollViewBounces(IntPtr webViewPtr, bool bounces);
+
+        [DllImport(_dllName)]
+        static extern void WebView_setStorageEnabled(bool enabled);
 
         [DllImport(_dllName)]
         static extern void WebView_setTouchScreenKeyboardEnabled(bool enabled);
@@ -276,6 +580,9 @@ namespace Vuplex.WebView {
 
         [DllImport(_dllName)]
         static extern void WebView_setUserAgent(IntPtr webViewPtr, string userAgent);
+
+        [DllImport (_dllName)]
+        static extern void WebView_setVisible(IntPtr webViewPtr, bool visible);
     }
 }
 #endif

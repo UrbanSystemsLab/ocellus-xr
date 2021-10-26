@@ -18,6 +18,8 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Vuplex.WebView.Internal;
+
 #if VUPLEX_MRTK
     using Microsoft.MixedReality.Toolkit.Input;
 #endif
@@ -149,7 +151,7 @@ namespace Vuplex.WebView {
         /// </summary>
         PointerEventData _getLastPointerEventData() {
 
-            var pointerInputModule = EventSystem.current.currentInputModule as PointerInputModule;
+            var pointerInputModule = EventSystem.current?.currentInputModule as PointerInputModule;
             if (pointerInputModule == null) {
                 return null;
             }
@@ -288,7 +290,7 @@ namespace Vuplex.WebView {
 
         void Start() {
 
-            WebViewLogger.LogInfo("Just a heads-up: please ignore the warning 'BoxCollider is null...' warning from MRTK. WebViewPrefab doesn't use a BoxCollider, so it sets the bounds of NearInteractionTouchable manually, but MRTK doesn't provide a way to disable the warning.");
+            WebViewLogger.Log("Just a heads-up: please ignore the warning 'BoxCollider is null...' warning from MRTK. WebViewPrefab doesn't use a BoxCollider, so it sets the bounds of NearInteractionTouchable manually, but MRTK doesn't provide a way to disable the warning.");
             // Add a NearInteractionTouchable script to allow touch interactions
             // to trigger the IMixedRealityPointerHandler methods.
             var touchable = gameObject.AddComponent<NearInteractionTouchable>();

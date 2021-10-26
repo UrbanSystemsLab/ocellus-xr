@@ -20,8 +20,9 @@ using System.Linq;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Build;
+using Vuplex.WebView.Internal;
 
-namespace Vuplex.WebView {
+namespace Vuplex.WebView.Editor {
 
     static class EditorUtils {
 
@@ -79,8 +80,8 @@ namespace Vuplex.WebView {
             var linkStyle = new GUIStyle {
                 richText = true,
                 padding = new RectOffset {
-                    top = 10,
-                    bottom = 10
+                    top = 2,
+                    bottom = 2
                 }
             };
             var linkClicked = GUILayout.Button(
@@ -103,8 +104,8 @@ namespace Vuplex.WebView {
                 new GUIStyle {
                     richText = true,
                     padding = new RectOffset {
-                        top = 12,
-                        bottom = 10
+                        top = 4,
+                        bottom = 2
                 }
             });
             if (linkClicked) {
@@ -161,10 +162,12 @@ namespace Vuplex.WebView {
 
         public static void ForceAndroidInternetPermission() {
 
-            if (!PlayerSettings.Android.forceInternetPermission) {
-                PlayerSettings.Android.forceInternetPermission = true;
-                WebViewLogger.LogWarning("Just a heads-up: 3D WebView changed the Android player setting \"Internet Access\" to \"Require\" to ensure that it can fetch web pages from the internet. (This message will only be logged once.)");
-            }
+            #if !VUPLEX_ANDROID_DISABLE_REQUIRE_INTERNET
+                if (!PlayerSettings.Android.forceInternetPermission) {
+                    PlayerSettings.Android.forceInternetPermission = true;
+                    WebViewLogger.LogWarning("Just a heads-up: 3D WebView changed the Android player setting \"Internet Access\" to \"Require\" to ensure that it can fetch web pages from the internet. (This message will only be logged once.)");
+                }
+            #endif
         }
 
         public static string GetLinkColor() {
@@ -173,7 +176,7 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// A polyfill for `Path.Combine(string[])`, which isn't present in .NET 2.0.
+        /// A polyfill for Path.Combine(string[]), which isn't present in legacy .NET 3.5.
         /// </summary>
         public static string PathCombine(string[] pathComponents) {
 

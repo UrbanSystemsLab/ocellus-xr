@@ -18,28 +18,14 @@ using UnityEngine;
 namespace Vuplex.WebView.Demos {
 
     /// <summary>
-    /// Sets up the SimpleWebViewDemo scene, which demonstrates the following:
-    /// - displaying a `WebViewPrefab` created via the editor in world space
-    /// - creating and hooking up an on-screen keyboard
+    /// Sets up the SimpleWebViewDemo scene, which displays a WebViewPrefab
+    /// with an on-screen keyboard in world space.
     /// </summary>
     /// <remarks>
-    /// This scene includes Unity's standalone input module, so
-    /// you can click and scroll the webview using your touchscreen
-    /// or mouse.
-    ///
-    /// You can also move the camera by holding down the control key on your
-    /// keyboard and moving your mouse. When running on a device
-    /// with a gyroscope, the gyroscope controls the camera rotation instead.
-    ///
-    /// `WebViewPrefab` handles standard Unity input events, so it works with
-    /// a variety of third party input modules that extend Unity's `BaseInputModule`,
-    /// like the input modules from the Google VR and Oculus VR SDKs.
-    ///
-    /// Here are some other examples that show how to use 3D WebView with popular SDKs:
-    /// • Oculus (Quest, Go, Rift, and Gear VR): https://github.com/vuplex/oculus-webview-example
-    /// • Hololens: https://github.com/vuplex/hololens-webview-example
-    /// • AR Foundation : https://github.com/vuplex/ar-foundation-webview-example
-    /// • Google VR (Cardboard and Daydream): https://github.com/vuplex/google-vr-webview-example
+    /// Links: <br/>
+    /// - WebViewPrefab docs: https://developer.vuplex.com/webview/WebViewPrefab <br/>
+    /// - How clicking works: https://support.vuplex.com/articles/clicking <br/>
+    /// - Other examples: https://developer.vuplex.com/webview/overview#examples <br/>
     /// </remarks>
     class SimpleWebViewDemo : MonoBehaviour {
 
@@ -47,6 +33,10 @@ namespace Vuplex.WebView.Demos {
         WebViewPrefab _webViewPrefab;
 
         void Start() {
+
+            // Use a desktop User-Agent to request the desktop versions of websites.
+            // https://developer.vuplex.com/webview/Web#SetUserAgent
+            Web.SetUserAgent(false);
 
             // The WebViewPrefab's `InitialUrl` property is set via the editor, so it
             // will automatically initialize itself with that URL.

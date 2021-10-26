@@ -15,8 +15,9 @@
 */
  using UnityEngine;
  using UnityEditor;
+ using Vuplex.WebView.Internal;
 
-namespace Vuplex.WebView {
+namespace Vuplex.WebView.Editor {
 
     [CustomPropertyDrawer(typeof(LabelAttribute))]
     class LabelDrawer : PropertyDrawer {

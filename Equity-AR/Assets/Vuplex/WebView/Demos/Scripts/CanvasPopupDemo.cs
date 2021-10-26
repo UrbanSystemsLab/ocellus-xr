@@ -21,6 +21,13 @@ namespace Vuplex.WebView.Demos {
     /// Sets up the CanvasPopupDemo scene, which demonstrates how to use
     /// the IWithPopups interface with CanvasWebViewPrefab.
     /// </summary>
+    /// <remarks>
+    /// Links: <br/>
+    /// - CanvasWebViewPrefab docs: https://developer.vuplex.com/webview/CanvasWebViewPrefab <br/>
+    /// - IWithPopups: https://developer.vuplex.com/webview/IWithPopups <br/>
+    /// - How clicking works: https://support.vuplex.com/articles/clicking <br/>
+    /// - Other examples: https://developer.vuplex.com/webview/overview#examples <br/>
+    /// </remarks>
     class CanvasPopupDemo : MonoBehaviour {
 
         GameObject _canvas;
@@ -28,9 +35,6 @@ namespace Vuplex.WebView.Demos {
         HardwareKeyboardListener _hardwareKeyboardListener;
 
         void Start() {
-
-            // Enable the native touch screen keyboard for Android and iOS.
-            Web.SetTouchScreenKeyboardEnabled(true);
 
             _canvas = GameObject.Find("Canvas");
             // Create a webview for the main content.
@@ -50,12 +54,12 @@ namespace Vuplex.WebView.Demos {
                     return;
                 }
 
-                WebViewLogger.Log("Loading Pinterest as an example because it uses popups for third party login. Click 'Login', then select Facebook or Google to open a popup for authentication.");
+                Debug.Log("Loading Pinterest as an example because it uses popups for third party login. Click 'Login', then select Facebook or Google to open a popup for authentication.");
                 mainWebViewPrefab.WebView.LoadUrl("https://pinterest.com");
 
                 webViewWithPopups.SetPopupMode(PopupMode.LoadInNewWebView);
                 webViewWithPopups.PopupRequested += (webView, eventArgs) => {
-                    WebViewLogger.Log("Popup opened with URL: " + eventArgs.Url);
+                    Debug.Log("Popup opened with URL: " + eventArgs.Url);
                     var popupPrefab = CanvasWebViewPrefab.Instantiate(eventArgs.WebView);
                     _focusedPrefab = popupPrefab;
 
@@ -72,7 +76,7 @@ namespace Vuplex.WebView.Demos {
 
                     popupPrefab.Initialized += (sender, initializedEventArgs) => {
                         popupPrefab.WebView.CloseRequested += (popupWebView, closeEventArgs) => {
-                            WebViewLogger.Log("Closing the popup");
+                            Debug.Log("Closing the popup");
                             _focusedPrefab = mainWebViewPrefab;
                             popupPrefab.Destroy();
                         };

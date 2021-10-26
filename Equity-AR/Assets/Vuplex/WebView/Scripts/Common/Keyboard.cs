@@ -15,19 +15,25 @@
 */
 using System;
 using UnityEngine;
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
 
     /// <summary>
-    /// A 3D, on-screen keyboard that you can hook up to a webview for typing.
-    /// You add a Keyboard to your scene by dragging Keyboard.prefab into it
-    /// via the editor or by programmatically calling `Keyboard.Instantiate()`.
-    /// For use in a `Canvas`, please see `CanvasKeyboard` instead.
+    /// A 3D, on-screen keyboard prefab that you can hook up to a webview for typing.
+    /// You can add a Keyboard to your scene either by dragging the Keyboard.prefab file into it
+    /// via the editor or by programmatically calling Keyboard.Instantiate().
+    /// For use in a Canvas, please see CanvasKeyboard instead.
     /// </summary>
     /// <remarks>
-    /// The Keyboard's UI is a React.js app that runs inside a `WebViewPrefab` instance and
-    /// emits messages to the C# to indicate when characters have been pressed.
+    /// The Keyboard's UI is a React.js app that runs inside a WebViewPrefab and
+    /// emits messages to C# to when keys are pressed.
     /// [The keyboard UI is open source and available on GitHub](https://github.com/vuplex/unity-keyboard).
+    /// </remarks>
+    /// <remarks>
+    /// The keyboard supports layouts for the following languages and automatically sets the layout
+    /// based on the operating system's default language: English, Spanish, French, German, Russian,
+    /// Danish, Norwegian, and Swedish.
     /// </remarks>
     /// <example>
     /// // First, create a WebViewPrefab for our main web content.
@@ -40,26 +46,14 @@ namespace Vuplex.WebView {
     /// };
     /// // Add a Keyboard under the main webview.
     /// var keyboard = Keyboard.Instantiate();
-    /// keyboard.transform.parent = webViewPrefab.transform;
+    /// keyboard.transform.SetParent(webViewPrefab.transform, false);
     /// keyboard.transform.localPosition = new Vector3(0, -0.31f, 0);
-    /// keyboard.transform.localEulerAngles = new Vector3(0, 0, 0);
+    /// keyboard.transform.localEulerAngles = Vector3.zero;
     /// // Hook up the keyboard so that characters are routed to the main webview.
-    /// keyboard.InputReceived += (sender, e) => {
-    ///     webViewPrefab.WebView.HandleKeyboardInput(e.Value);
+    /// keyboard.InputReceived += (sender, eventArgs) => {
+    ///     webViewPrefab.WebView.HandleKeyboardInput(eventArgs.Value);
     /// };
     /// </example>
-    /// <remarks>
-    /// The keyboard supports layouts for the following languages and automatically sets the layout
-    /// based on the operating system's default language:
-    /// - English
-    /// - Spanish
-    /// - French
-    /// - German
-    /// - Russian
-    /// - Danish
-    /// - Norwegian
-    /// - Swedish
-    /// </remarks>
     public class Keyboard : BaseKeyboard {
 
         /// <summary>
@@ -73,7 +67,7 @@ namespace Vuplex.WebView {
         public float InitialResolution = 1300;
 
         /// <summary>
-        /// The `WebViewPrefab` instance used for the keyboard UI.
+        /// Gets the WebViewPrefab used for the keyboard UI.
         /// </summary>
         public WebViewPrefab WebViewPrefab {
             get {
@@ -85,7 +79,7 @@ namespace Vuplex.WebView {
         public void Init(float width, float height) {}
 
         /// <summary>
-        /// Creates and initializes an instance using the default width and height.
+        /// Creates an instance using the default width and height.
         /// </summary>
         public static Keyboard Instantiate() {
 
@@ -93,7 +87,7 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// Creates and initializes an instance using the specified width and height.
+        /// Creates an instance using the specified width and height.
         /// </summary>
         public static Keyboard Instantiate(float width, float height) {
 
@@ -116,7 +110,7 @@ namespace Vuplex.WebView {
             _webViewPrefab = webViewPrefab;
             webViewPrefab.InitialResolution = InitialResolution;
             _webViewPrefab.transform.SetParent(transform, false);
-            _webViewPrefab.gameObject.layer = gameObject.layer;
+            _setLayerRecursively(_webViewPrefab.gameObject, gameObject.layer);
             // Shift the WebViewPrefab up by half its height so that it's in the same place
             // as the palceholder.
             _webViewPrefab.transform.localPosition = Vector3.zero;

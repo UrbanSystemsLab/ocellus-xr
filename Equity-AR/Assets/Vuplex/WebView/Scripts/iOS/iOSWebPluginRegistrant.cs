@@ -15,7 +15,7 @@
 */
 using UnityEngine;
 
-namespace Vuplex.WebView {
+namespace Vuplex.WebView.Internal {
     /// <summary>
     /// Registers the iOS web plugin.
     /// </summary>

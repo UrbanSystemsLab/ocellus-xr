@@ -16,7 +16,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace Vuplex.WebView {
+namespace Vuplex.WebView.Editor {
 
     public static class DocumentationLinkDrawer {
 

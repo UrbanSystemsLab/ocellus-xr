@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Vuplex/WebView/Demos/Scenes/CanvasWebViewDemo.unity
+- path: Assets/Scenes/Lat&Long.unity
   isLoaded: 1
   isActive: 1

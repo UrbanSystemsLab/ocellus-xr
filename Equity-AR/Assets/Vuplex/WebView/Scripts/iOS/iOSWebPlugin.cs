@@ -16,6 +16,7 @@
 #if UNITY_IOS && !UNITY_EDITOR
 using System;
 using UnityEngine;
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
 
@@ -43,7 +44,7 @@ namespace Vuplex.WebView {
 
         public void CreateTexture(float width, float height, Action<Texture2D> callback) {
 
-            iOSWebView.CreateTexture(width, height, callback);
+            Vuplex.WebView.Internal.Utils.CreateDefaultTexture(width, height, callback);
         }
 
         public void CreateMaterial(Action<Material> callback) {
@@ -75,6 +76,11 @@ namespace Vuplex.WebView {
             WebViewLogger.Log("Remote debugging is enabled for iOS. For instructions, please see https://support.vuplex.com/articles/how-to-debug-web-content#ios.");
         }
 
+        public void SetAutoplayEnabled(bool enabled) {
+
+            iOSWebView.SetAutoplayEnabled(enabled);
+        }
+
         public void SetIgnoreCertificateErrors(bool ignore) {
 
             iOSWebView.SetIgnoreCertificateErrors(ignore);
@@ -85,6 +91,7 @@ namespace Vuplex.WebView {
             iOSWebView.SetStorageEnabled(enabled);
         }
 
+        // Deprecated
         /// <see cref="IPluginWithTouchScreenKeyboard"/>
         public void SetTouchScreenKeyboardEnabled(bool enabled) {
 

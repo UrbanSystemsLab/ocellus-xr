@@ -16,14 +16,15 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
 
     /// <summary>
-    /// Like the Keyboard component, except optimized for use in a Canvas.
-    /// You can add a CanvasKeyboard to your scene by dragging CanvasKeyboard.prefab
-    /// into a Canvas via the editor or by programmatically calling `CanvasKeyboard.Instantiate()`.
-    /// For an example, please see the CanvasWorldSpaceDemo scene.
+    /// Like the Keyboard prefab, except optimized for use in a Canvas.
+    /// You can add a CanvasKeyboard to your scene either by dragging the CanvasKeyboard.prefab file
+    /// into a Canvas via the editor or by programmatically calling CanvasKeyboard.Instantiate().
+    /// For an example, please see 3D WebView's CanvasWorldSpaceDemo scene.
     /// </summary>
     /// <example>
     /// // Create a CanvasKeyboard.
@@ -61,7 +62,7 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// Instantiates a new CanvasKeyboard.
+        /// Creates a new instance.
         /// </summary>
         public static CanvasKeyboard Instantiate() {
 
@@ -75,7 +76,7 @@ namespace Vuplex.WebView {
             var canvasWebViewPrefab = CanvasWebViewPrefab.Instantiate(_webViewOptions);
             _webViewPrefab = canvasWebViewPrefab;
             _webViewPrefab.transform.SetParent(transform, false);
-            _webViewPrefab.gameObject.layer = gameObject.layer;
+            _setLayerRecursively(_webViewPrefab.gameObject, gameObject.layer);
             var rectTransform = _webViewPrefab.transform as RectTransform;
             rectTransform.anchoredPosition3D = Vector3.zero;
             rectTransform.offsetMin = Vector2.zero;

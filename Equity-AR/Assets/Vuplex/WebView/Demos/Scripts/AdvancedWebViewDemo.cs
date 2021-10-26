@@ -16,27 +16,33 @@
 using System;
 using System.Timers;
 using UnityEngine;
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView.Demos {
 
     /// <summary>
     /// Sets up the AdvancedWebViewDemo scene, which displays web content in a main
-    /// webview and then renders a UI in a second webview to display the current URL
-    /// and provide back / forward navigation controls.
+    /// world-space WebViewPrefab and then renders a UI in a second webview to display the current URL
+    /// and provide back / forward navigation controls.<br/><br/>
     ///
-    /// The address bar currently only displays the current URL and is not an input.
+    /// <b>Note:</b> The address bar currently only displays the current URL and is not an input.
     /// I plan to add a dedicated browser prefab in the future that will include
     /// a functional address bar. In the meantime, you can edit the CONTROLS_HTML field
     /// below to implement a URL input.
     /// </summary>
     /// <remarks>
-    /// This scene demonstrates the following:
-    /// - Programmatically instantiating `WebViewPrefab`s at runtime
-    /// - Creating and hooking up an on-screen keyboard
-    /// - Using `IWebView` methods like `LoadUrl`, `LoadHtml`, `GoBack`, and `GoForward`
-    /// - Attaching handlers to the `IWebView.UrlChanged` and `MessageEmitted` events
-    /// - Message passing from C#-to-JavaScript and vice versa
-    /// - Creating a transparent webview using the transparent meta tag
+    /// This scene demonstrates the following: <br/>
+    /// - Programmatically instantiating `WebViewPrefab`s at runtime <br/>
+    /// - Creating and hooking up an on-screen keyboard <br/>
+    /// - Using `IWebView` methods like `LoadUrl`, `LoadHtml`, `GoBack`, and `GoForward` <br/>
+    /// - Attaching handlers to the `IWebView.UrlChanged` and `MessageEmitted` events <br/>
+    /// - Message passing from C#-to-JavaScript and vice versa <br/>
+    /// - Creating a transparent webview using the transparent meta tag <br/><br/>
+    ///
+    /// Links: <br/>
+    /// - WebViewPrefab docs: https://developer.vuplex.com/webview/WebViewPrefab <br/>
+    /// - How clicking works: https://support.vuplex.com/articles/clicking <br/>
+    /// - Other examples: https://developer.vuplex.com/webview/overview#examples <br/>
     /// </remarks>
     class AdvancedWebViewDemo : MonoBehaviour {
 
@@ -48,6 +54,10 @@ namespace Vuplex.WebView.Demos {
         void Start() {
 
             WebViewLogger.Log("Just a heads-up: AdvancedWebViewDemo's address bar currently only displays the current URL and is not an input. For more info, please see the comments in AdvancedWebViewDemo.cs.");
+
+            // Use a desktop User-Agent to request the desktop versions of websites.
+            // https://developer.vuplex.com/webview/Web#SetUserAgent
+            Web.SetUserAgent(false);
 
             // Create a 0.6 x 0.3 webview for the main web content.
             _mainWebViewPrefab = WebViewPrefab.Instantiate(0.6f, 0.3f);
