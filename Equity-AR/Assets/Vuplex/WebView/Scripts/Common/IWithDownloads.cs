@@ -30,6 +30,7 @@ namespace Vuplex.WebView {
     ///             Type: {eventArgs.Type},
     ///             Url: {eventArgs.Url},
     ///             Progress: {eventArgs.Progress},
+    ///             Id: {eventArgs.Id},
     ///             FilePath: {eventArgs.FilePath},
     ///             ContentType: {eventArgs.ContentType}"
     ///         );
@@ -49,8 +50,8 @@ namespace Vuplex.WebView {
 
         /// <summary>
         /// Indicates that the progress of a file download changed. Files are downloaded to
-        /// Application.temporaryCachePath, but you can move them to a different
-        /// location after they finish downloading
+        /// `Application.temporaryCachePath`, but you can move them to a different
+        /// location after they finish downloading.
         /// </summary>
         event EventHandler<DownloadChangedEventArgs> DownloadProgressChanged;
     }

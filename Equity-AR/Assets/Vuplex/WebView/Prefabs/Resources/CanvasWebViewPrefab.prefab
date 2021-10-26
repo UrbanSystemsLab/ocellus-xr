@@ -171,8 +171,10 @@ MonoBehaviour:
   LogConsoleMessages: 0
   _cachedVideoLayer: {fileID: 0}
   _cachedView: {fileID: 0}
-  _pointerInputDetectorGameObject: {fileID: 0}
+  _pointerInputDetectorMonoBehaviour: {fileID: 0}
   _webViewGameObject: {fileID: 0}
+  Native2DModeEnabled: 0
+  NativeOnScreenKeyboardEnabled: 1
   InitialResolution: 1
   ScrollingSensitivity: 15
 --- !u!222 &222163621197708754

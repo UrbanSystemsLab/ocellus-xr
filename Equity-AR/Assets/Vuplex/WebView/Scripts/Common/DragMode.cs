@@ -27,10 +27,11 @@ namespace Vuplex.WebView {
         /// <summary>
         /// Drag interactions trigger dragging within the web page
         /// (e.g. drag-and-drop, dragging to select text).
-        /// Note that this mode only works for webview implementations
-        /// that support the `IWithPointerDownAndUp` interface
-        /// (i.e. Android, Windows, and macOS).
         /// </summary>
+        /// <remarks>
+        /// For information on the limitations of drag interactions on iOS and UWP, please see
+        /// https://support.vuplex.com/articles/hover-and-drag-limitations.
+        /// <remarks>
         DragWithinPage,
         /// <summary>
         /// Drag interactions have no effect.

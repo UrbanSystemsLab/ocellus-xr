@@ -16,9 +16,11 @@
 // This can't be imported as just OptionalDependencyAttribute because
 // it would clash with other packages that define that attribute, like
 // XR Interaction Toolkit.
-using VuplexOptionalDependencyAttribute = Vuplex.WebView.ConditionalCompilation.OptionalDependencyAttribute;
+using VuplexOptionalDependencyAttribute = Vuplex.WebView.Editor.OptionalDependencyAttribute;
 
 // Detect if specific packages are installed and, if so,
 // define scripting symbols so that 3D WebView can handle them.
 [assembly: VuplexOptionalDependency("Unity.XR.Oculus.OculusLoader", "VUPLEX_OCULUS")]
 [assembly: VuplexOptionalDependency("UnityEngine.XR.Interaction.Toolkit.XRBaseInteractor", "VUPLEX_XR_INTERACTION_TOOLKIT")]
+[assembly: VuplexOptionalDependency("Microsoft.MixedReality.Toolkit.MixedRealityToolkit", "VUPLEX_MRTK")]
+[assembly: VuplexOptionalDependency("Vuplex.WebView.StandaloneWebPlugin", "VUPLEX_STANDALONE")]

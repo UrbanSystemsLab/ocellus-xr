@@ -15,8 +15,9 @@
 */
 using System;
 using System.Diagnostics;
+using Vuplex.WebView.ConditionalCompilation;
 
-namespace Vuplex.WebView.ConditionalCompilation {
+namespace Vuplex.WebView.Editor {
 
     /// <summary>
     /// From the example of how to use Unity's ConditionalCompilationUtility:

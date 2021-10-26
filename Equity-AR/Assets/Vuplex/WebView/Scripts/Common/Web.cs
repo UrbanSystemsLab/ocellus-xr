@@ -26,10 +26,13 @@ namespace Vuplex.WebView {
     /// `Web` is the top-level static class for the 3D WebView plugin.
     /// It contains static methods for configuring the module and creating resources.
     /// </summary>
+    /// <seealso cref="WebViewPrefab"/>
+    /// <seealso cref="CanvasWebViewPrefab"/>
+    /// <seealso cref="IWebView"/>
     public static class Web {
 
         /// <summary>
-        /// Indicates the default 3D WebView plugin among those
+        /// Gets the default 3D WebView plugin type among those
         /// installed for the current platform.
         /// </summary>
         public static WebPluginType DefaultPluginType {
@@ -43,8 +46,11 @@ namespace Vuplex.WebView {
         /// including cookies, storage, and cached resources.
         /// </summary>
         /// <remarks>
-        /// On Windows and macOS, this method can only be called prior to
-        /// initializing any webviews.
+        /// Important notes:
+        /// <list type="bullet">
+        ///   <item>On Windows and macOS, this method can only be called prior to initializing any webviews.</item>
+        ///   <item>On Universal Windows Platform, this method is unable to clear cookies due to a UWP limitation.</item>
+        /// </list>
         /// </remarks>
         public static void ClearAllData() {
 
@@ -56,9 +62,9 @@ namespace Vuplex.WebView {
         /// Creates a material and texture that a webview can use for rendering.
         /// </summary>
         /// <remarks>
-        /// Note that `WebViewPrefab` and `CanvasWebViewPrefab` take care of material creation for you, so you only need
-        /// to call this method directly if you need to create an `IWebView` instance outside of a prefab with
-        /// `Web.CreateWebView()`.
+        /// Note that WebViewPrefab and CanvasWebViewPrefab take care of material creation for you, so you only need
+        /// to call this method directly if you need to create an IWebView instance outside of a prefab with
+        /// Web.CreateWebView().
         /// </remarks>
         public static Task<Material> CreateMaterial() {
 
@@ -69,8 +75,8 @@ namespace Vuplex.WebView {
     #endif
 
         /// <summary>
-        /// Like the other version of `CreateMaterial()`, except it uses a callback
-        /// instead of a `Task` in order to be compatible with legacy .NET.
+        /// Like the other version of CreateMaterial(), except it uses a callback
+        /// instead of a Task in order to be compatible with legacy .NET.
         /// </summary>
         public static void CreateMaterial(Action<Material> callback) {
 
@@ -78,16 +84,10 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// Like `CreateMaterial`, except it creates a material that a webview
-        /// can use for rendering video. If the platform doesn't need a separate
-        /// material and texture for video, this method returns `null`.
+        /// Like CreateMaterial(), except it creates a material that a webview
+        /// can use for rendering video on iOS. On other platforms, this method
+        /// returns `null`.
         /// </summary>
-        /// <remarks>
-        /// Currently, iOS is the only platform that always uses a separate texture
-        /// for video. Android only uses a separate video texture on versions of Android
-        /// older than 6.0. For other platforms, video content is always integrated into
-        /// the main texture.
-        /// </remarks>
         public static void CreateVideoMaterial(Action<Material> callback) {
 
             _pluginFactory.GetPlugin().CreateVideoMaterial(callback);
@@ -101,9 +101,9 @@ namespace Vuplex.WebView {
         /// can simply use the dimensions of 1x1 like `CreateTexture(1, 1)`.
         /// </summary>
         /// <remarks>
-        /// Note that the `WebViewPrefab` takes care of texture creation for you, so you only need
-        /// to call this method directly if you need to create an `IWebView` instance outside of a prefab with
-        /// `Web.CreateWebView()`.
+        /// Note that the WebViewPrefab takes care of texture creation for you, so you only need
+        /// to call this method directly if you need to create an IWebView instance outside of a prefab with
+        /// Web.CreateWebView().
         /// </remarks>
         public static Task<Texture2D> CreateTexture(float width, float height) {
 
@@ -114,8 +114,8 @@ namespace Vuplex.WebView {
     #endif
 
         /// <summary>
-        /// Like the other version of `CreateTexture()`, except it uses a callback
-        /// instead of a `Task` in order to be compatible with legacy .NET.
+        /// Like the other version of CreateTexture(), except it uses a callback
+        /// instead of a Task in order to be compatible with legacy .NET.
         /// </summary>
         public static void CreateTexture(float width, float height, Action<Texture2D> callback) {
 
@@ -124,13 +124,13 @@ namespace Vuplex.WebView {
 
         /// <summary>
         /// Creates a new webview in a platform-agnostic way. After a webview
-        /// is created, it must be initialized by calling one of its `Init()`
+        /// is created, it must be initialized by calling one of its Init()
         /// methods.
         /// </summary>
         /// <remarks>
-        /// Note that `WebViewPrefab` takes care of creating and managing
-        /// an `IWebView` instance for you, so you only need to call this method directly
-        /// if you need to create an `IWebView` instance outside of a prefab
+        /// Note that WebViewPrefab takes care of creating and managing
+        /// an IWebView instance for you, so you only need to call this method directly
+        /// if you need to create an IWebView instance outside of a prefab
         /// (for example, to connect it to your own custom GameObject).
         /// </remarks>
         /// <example>
@@ -147,15 +147,15 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// Like `CreateWebView()`, except an array of preferred plugin types can be
+        /// Like CreateWebView(), except an array of preferred plugin types can be
         /// provided to override which 3D WebView plugin is used in the case where
         /// multiple plugins are installed for the same build platform.
         /// </summary>
         /// <remarks>
         /// Currently, Android is the only platform that supports multiple 3D WebView
-        /// plugins: `WebPluginType.Android` and `WebPluginType.AndroidGecko`. If both
-        /// plugins are installed in the same project, `WebPluginType.AndroidGecko` will be used by default.
-        /// However, you can override this to force `WebPluginType.Android` to be used instead by passing
+        /// plugins: WebPluginType.Android and WebPluginType.AndroidGecko. If both
+        /// plugins are installed in the same project, WebPluginType.AndroidGecko will be used by default.
+        /// However, you can override this to force WebPluginType.Android to be used instead by passing
         /// `new WebPluginType[] { WebPluginType.Android }`.
         /// </remarks>
         public static IWebView CreateWebView(WebPluginType[] preferredPlugins) {
@@ -173,30 +173,52 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
+        /// Sets whether pages can autoplay video with audio.
+        /// The default is disabled.
+        /// </summary>
+        /// <remarks>
+        /// Important notes:
+        /// <list type="bullet">
+        ///   <item>
+        ///     On Windows and macOS, this method can only be called prior to
+        ///     initializing any webviews.
+        ///   </item>
+        ///   <item>
+        ///     This method works for every package except for 3D WebView for UWP,
+        ///     because the underlying UWP WebView control doesn't allow autoplaying
+        ///     video with audio.
+        ///   </item>
+        /// </list>
+        /// </remarks>
+        public static void SetAutoplayEnabled(bool enabled) {
+
+            _pluginFactory.GetPlugin().SetAutoplayEnabled(enabled);
+        }
+
+        /// <summary>
         /// By default, browsers block https URLs with invalid SSL certificates
         /// from being loaded. However, this method can be used to ignore
         /// certificate errors.
         /// </summary>
         /// <remarks>
-        /// This method works for every package except for 3D WebView for UWP.
-        /// For UWP, certificates must be [whitelisted in the Package.appxmanifest file](https://www.suchan.cz/2015/10/displaying-https-page-with-invalid-certificate-in-uwp-webview/).
+        /// Important notes:
+        /// <list type="bullet">
+        ///   <item>
+        ///     On Windows and macOS, this method can only be called prior to
+        ///     initializing any webviews.
+        ///   </item>
+        ///   <item>
+        ///     This method works for every package except for 3D WebView for UWP.
+        ///     For UWP, certificates must be [whitelisted in the Package.appxmanifest file](https://www.suchan.cz/2015/10/displaying-https-page-with-invalid-certificate-in-uwp-webview/).
+        ///   </item>
+        /// </list>
         /// </remarks>
         public static void SetIgnoreCertificateErrors(bool ignore) {
 
             _pluginFactory.GetPlugin().SetIgnoreCertificateErrors(ignore);
         }
 
-        /// <summary>
-        /// Enables support for showing the native Android or iOS touch screen
-        /// keyboard when an input field is focused.
-        /// </summary>
-        /// <remarks>
-        /// This method should be called prior to initializing the desired webviews.
-        /// This functionality is currently only supported by 3D WebView for Android
-        /// and 3D WebView for iOS. For other packages, such as
-        /// 3D WebView for Android with Gecko Engine, please see
-        /// Unity's [`TouchScreenKeyboard`](https://docs.unity3d.com/ScriptReference/TouchScreenKeyboard.html) class.
-        /// </remarks>
+        [Obsolete("Web.SetTouchScreenKeyboardEnabled() is now deprecated. Please switch to using the NativeOnScreenKeyboardEnabled property of WebViewPrefab / CanvasWebViewPrefab or the IWithNativeOnScreenKeyboard interface.")]
         public static void SetTouchScreenKeyboardEnabled(bool enabled) {
 
             var pluginWithTouchScreenKeyboard = _pluginFactory.GetPlugin() as IPluginWithTouchScreenKeyboard;
@@ -220,27 +242,31 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// By default, webviews use a User-Agent that looks that of a desktop
-        /// computer so that servers return the desktop versions of websites.
-        /// If you instead want the mobile versions of websites, you can invoke
-        /// this method with `true` to use the User-Agent for a mobile device.
+        /// Globally configures all webviews to use a mobile or desktop
+        /// [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent).
+        /// By default, webviews use the browser engine's default User-Agent, but you
+        /// can force them to use a mobile User-Agent by calling `Web.SetUserAgent(true)` or a
+        /// desktop User-Agent with `Web.SetUserAgent(false)`.
         /// </summary>
         /// <remarks>
         /// On Windows and macOS, this method can only be called prior to
         /// initializing any webviews.
         /// </remarks>
+        /// <seealso cref="IWithSettableUserAgent"/>
         public static void SetUserAgent(bool mobile) {
 
             _pluginFactory.GetPlugin().SetUserAgent(mobile);
         }
 
         /// <summary>
-        /// Configures the module to use a custom User-Agent string.
+        /// Globally configures all webviews to use a custom
+        /// [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent).
         /// </summary>
         /// <remarks>
         /// On Windows and macOS, this method can only be called prior to
         /// initializing any webviews.
         /// </remarks>
+        /// <seealso cref="IWithSettableUserAgent"/>
         public static void SetUserAgent(string userAgent) {
 
             _pluginFactory.GetPlugin().SetUserAgent(userAgent);

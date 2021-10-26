@@ -15,6 +15,7 @@
 */
 namespace Vuplex.WebView {
 
+    // Deprecated
     interface IPluginWithTouchScreenKeyboard {
 
         void SetTouchScreenKeyboardEnabled(bool enabled);

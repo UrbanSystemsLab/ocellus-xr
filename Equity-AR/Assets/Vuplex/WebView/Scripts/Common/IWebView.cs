@@ -24,17 +24,34 @@ using UnityEngine;
 namespace Vuplex.WebView {
 
     /// <summary>
-    /// `IWebView` is the primary interface for loading and interacting with web content.
+    /// IWebView is the primary interface for loading and interacting with web content.
+    /// It contains methods and properties for common browser-related functionality,
+    /// like LoadUrl(), GoBack(), Reload(), and ExecuteJavaScript().
     /// </summary>
     /// <remarks>
-    /// `WebViewPrefab` takes care of creating one for you and hooking it up to the materials
-    /// in its prefab. If you want to create an `IWebView` outside of the prefab (to connect
-    /// to your own custom GameObject) you can use `Web.CreateWebView()`.
+    /// <para>
+    /// To create an IWebView, instantiate a WebViewPrefab or CanvasWebViewPrefab. After
+    /// the prefab is initialized, you can access its IWebView via the WebViewPrefab.WebView property.
+    /// If your use case requires a high degree of customization, you can instead create
+    /// an IWebView outside of a prefab (to connect to your own custom GameObject) by
+    /// using Web.CreateWebView().
+    /// </para>
+    /// <para>
+    /// For additional functionality, you can cast an IWebView to an interface for a specific
+    /// feature, like IWithDownloads or IWithPopups. For a list of additional feature interfaces and
+    /// information about how to use them, see this page: https://developer.vuplex.com/webview/additional-interfaces
+    /// </para>
+    /// See also:
+    /// <list type="bullet">
+    ///   <item>WebViewPrefab: https://developer.vuplex.com/webview/WebViewPrefab</item>
+    ///   <item>CanvasWebViewPrefab: https://developer.vuplex.com/webview/CanvasWebViewPrefab</item>
+    ///   <item>Web (static methods): https://developer.vuplex.com/webview/Web</item>
+    /// </list>
     /// </remarks>
     public interface IWebView {
 
         /// <summary>
-        /// Indicates that the page has requested to close (i.e. via `window.close()`).
+        /// Indicates that the page has requested to close (i.e. via window.close()).
         /// </summary>
         event EventHandler CloseRequested;
 
@@ -49,24 +66,31 @@ namespace Vuplex.WebView {
         event EventHandler<ConsoleMessageEventArgs> ConsoleMessageLogged;
 
         /// <summary>
-        /// Indicates that an input field was focused or unfocused. This can be used,
+        /// Indicates when an input field has been focused or unfocused. This can be used,
         /// for example, to determine when to show or hide an on-screen keyboard.
+        /// Note that this event is currently only fired for input fields focused in the main frame
+        /// and is not fired for input fields in iframes.
         /// </summary>
         event EventHandler<FocusedInputFieldChangedEventArgs> FocusedInputFieldChanged;
 
         /// <summary>
-        /// Indicates that the page load percentage changed.
+        /// Indicates that the page load progress changed.
         /// </summary>
+        /// <remarks>
+        /// On Windows and macOS, this event isn't raised for intermediate load progress (ProgressChangeType.Updated)
+        /// because Chromium doesn't provide an API for estimated load progress.
+        /// </remarks>
         event EventHandler<ProgressChangedEventArgs> LoadProgressChanged;
 
         /// <summary>
         /// Indicates that JavaScript running in the page used the `window.vuplex.postMessage`
-        /// JavaScript API to emit a message to the Unity application.
+        /// JavaScript API to emit a message to the Unity application. For more details, please see
+        /// [this support article](https://support.vuplex.com/articles/how-to-send-messages-from-javascript-to-c-sharp).
         /// </summary>
         /// <example>
         /// // JavaScript example
         /// function sendMessageToCSharp() {
-        ///   // This object passed to `postMessage()` is automatically serialized as JSON
+        ///   // This object passed to postMessage() is automatically serialized as JSON
         ///   // and is emitted via the C# MessageEmitted event. This API mimics the window.postMessage API.
         ///   window.vuplex.postMessage({ type: 'greeting', message: 'Hello from JavaScript!' });
         /// }
@@ -81,6 +105,8 @@ namespace Vuplex.WebView {
         ///   window.addEventListener('vuplexready', sendMessageToCSharp);
         /// }
         /// </example>
+        /// <seealso cref="IWebView.ExecuteJavaScript"/>
+        /// <seealso cref="IWebView.PageLoadScripts"/>
         event EventHandler<EventArgs<string>> MessageEmitted;
 
         /// <summary>
@@ -98,123 +124,150 @@ namespace Vuplex.WebView {
         /// Indicates that the URL of the webview changed, either
         /// due to user interaction or JavaScript.
         /// </summary>
+        /// <seealso cref="IWebView.Url"/>
         event EventHandler<UrlChangedEventArgs> UrlChanged;
 
         /// <summary>
         /// Indicates that the rect of the playing video changed.
         /// </summary>
         /// <remarks>
-        /// Note that `WebViewPrefab` automatically handles this event for you.
+        /// Note that WebViewPrefab automatically handles this event for you.
         /// </remarks>
         event EventHandler<EventArgs<Rect>> VideoRectChanged;
 
         /// <summary>
-        /// Indicates whether the instance has been disposed via `Dispose()`.
+        /// Gets a value indicating whether the instance has been disposed via Dispose().
         /// </summary>
         bool IsDisposed { get; }
 
         /// <summary>
-        /// Indicates whether the instance has been initialized via `Init()`.
+        /// Gets a value indicating whether the instance has been initialized via Init().
         /// </summary>
         bool IsInitialized { get; }
 
         /// <summary>
-        /// JavaScript scripts that are automatically executed in every new
-        /// page that is loaded. This list is empty by default, but the application
-        /// can add scripts.
+        /// Gets a list of JavaScript scripts that are automatically executed in every new page that is loaded.
         /// </summary>
+        /// <remarks>
+        /// This list is empty by default, but the application can add scripts. When used in conjunction
+        /// with 3D WebView's [message passing API](https://support.vuplex.com/articles/how-to-send-messages-from-javascript-to-c-sharp),
+        /// it's possible to modify the browser's behavior in significant ways, similar to creating browser extensions.
+        /// </remarks>
+        /// <example>
+        /// // Add a script that automatically hides all scrollbars.
+        /// await webViewPrefab.WaitUntilInitialized();
+        /// webViewPrefab.WebView.PageLoadScripts.Add(@"
+        ///     var styleElement = document.createElement('style');
+        ///     styleElement.innerText = 'body::-webkit-scrollbar { display: none; }';
+        ///     document.head.appendChild(styleElement);
+        /// ");
+        /// </example>
+        /// <seealso cref="IWebView.ExecuteJavaScript"/>
+        /// <seealso href="https://support.vuplex.com/articles/how-to-send-messages-from-javascript-to-c-sharp">JS-to-C# message passing</seealso>
         List<string> PageLoadScripts { get; }
 
         /// <summary>
-        /// Indicates the instance's plugin type.
+        /// Gets the instance's plugin type.
         /// </summary>
         WebPluginType PluginType { get; }
 
         /// <summary>
-        /// The webview's resolution in pixels per Unity unit.
+        /// Gets the webview's resolution in pixels per Unity unit.
         /// </summary>
-        /// <seealso cref="SizeInPixels"/>
+        /// <seealso cref="IWebView.SetResolution"/>
+        /// <seealso cref="IWebView.Size"/>
         float Resolution { get; }
 
         /// <summary>
-        /// The webview's current size in Unity units.
+        /// Gets the webview's current size in Unity units.
         /// </summary>
+        /// <seealso cref="IWebView.SizeInPixels"/>
+        /// <seealso cref="IWebView.Resize"/>
+        /// <seealso cref="IWebView.Resolution"/>
         Vector2 Size { get; }
 
         /// <summary>
-        /// The webview's current size in pixels.
+        /// Gets the webview's current size in pixels.
         /// </summary>
-        /// <seealso cref="Resolution"/>
+        /// <seealso cref="IWebView.Size"/>
+        /// <seealso cref="IWebView.Resize"/>
+        /// <seealso cref="IWebView.Resolution"/>
         Vector2 SizeInPixels { get; }
 
         /// <summary>
-        /// The texture for the webview's web content.
+        /// Gets the texture for the webview's web content.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// This texture is an "external texture" created with
-        /// `Texture2D.CreateExternalTexture()`. An undocumented characteristic
-        /// of external textures in Unity is that not all `Texture2D` methods work for them.
-        /// For example, `Texture2D.GetRawTextureData()` and `ImageConversion.EncodeToPNG()`
-        /// fail for external textures. To compensate, the `IWebView` interface includes
-        // its own`GetRawTextureData()` and `CaptureScreenshot()` methods to replace them.
+        /// Texture2D.CreateExternalTexture(). An undocumented characteristic
+        /// of external textures in Unity is that not all Texture2D methods work for them.
+        /// For example, Texture2D.GetRawTextureData() and ImageConversion.EncodeToPNG()
+        /// fail for external textures. To compensate, the IWebView interface includes
+        /// its own GetRawTextureData() and CaptureScreenshot() methods to replace them.
+        /// </para>
+        /// <para>
+        /// Another quirk of this texture is that Unity always reports its size as
+        /// 1300px × 1300px in the editor. In reality, 3D WebView resizes the
+        /// texture in native code to match the dimensions of the webview, but
+        /// Unity doesn't provide an API to notify the engine that an external texture's size
+        /// has changed. So, Unity always reports its size as the initial size that was
+        /// passed to Texture2D.CreateExternalTexture(), which in 3D WebView's case is
+        /// 1300px × 1300px.
+        /// </para>
+        /// <para>
+        /// This property is unused when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).
+        /// </para>
         /// </remarks>
         Texture2D Texture { get; }
 
         /// <summary>
-        /// The current URL.
+        /// Gets the current web page title.
         /// </summary>
+        /// <seealso cref="IWebView.TitleChanged"/>
+        string Title { get; }
+
+        /// <summary>
+        /// Gets the current URL.
+        /// </summary>
+        /// <seealso cref="IWebView.UrlChanged"/>
         string Url { get; }
 
         /// <summary>
-        /// The texture for the webview's video content.
-        /// Note that iOS uses this separate texture for video.
-        /// </summary>
-        Texture2D VideoTexture { get; }
-
-        /// <summary>
-        /// Initializes a newly created webview with the given textures created with
-        /// `Web.CreateMaterial()` and the dimensions in Unity units.
+        /// Gets the video texture used for [iOS's fallback video implementation](https://support.vuplex.com/articles/fallback-video).
+        /// On other platforms, this property is null.
         /// </summary>
         /// <remarks>
-        /// Important notes:
-        /// - If you're using `WebViewPrefab`, you don't need to call this method, because it calls it for you.
-        /// - A separate video texture is only used on Android and iOS.
-        /// - A webview's default resolution is 1300px per Unity unit but can be changed with
-        /// `IWebView.SetResolution()`.
+        /// This property is unused when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).
         /// </remarks>
-        void Init(Texture2D viewportTexture, float width, float height, Texture2D videoTexture);
+        Texture2D VideoTexture { get; }
 
-        /// <summary>
-        /// Like the other `Init()` method, but with video support disabled on Android and iOS.
-        /// </summary>
-        void Init(Texture2D viewportTexture, float width, float height);
-
-        /// <summary>
-        /// Makes the webview relinquish focus.
-        /// </summary>
+        [Obsolete("Blur() is now deprecated. Please use SetFocused(false) instead.")]
         void Blur();
 
     #if NET_4_6 || NET_STANDARD_2_0
         /// <summary>
-        /// Checks whether the webview can go back with a call to `GoBack()`.
+        /// Checks whether the webview can go back with a call to GoBack().
         /// </summary>
+        /// <seealso cref="IWebView.GoBack"/>
         Task<bool> CanGoBack();
 
         /// <summary>
-        /// Checks whether the webview can go forward with a call to `GoForward()`.
+        /// Checks whether the webview can go forward with a call to GoForward().
         /// </summary>
+        /// <seealso cref="IWebView.GoForward"/>
         Task<bool> CanGoForward();
     #endif
 
         /// <summary>
-        /// Like the other version of `CanGoBack()`, except it uses a callback
-        /// instead of a `Task` in order to be compatible with legacy .NET.
+        /// Like the other version of CanGoBack(), except it uses a callback
+        /// instead of a Task in order to be compatible with legacy .NET.
         /// </summary>
         void CanGoBack(Action<bool> callback);
 
         /// <summary>
-        /// Like the other version of `CanGoForward()`, except it uses a callback
-        /// instead of a `Task` in order to be compatible with legacy .NET.
+        /// Like the other version of CanGoForward(), except it uses a callback
+        /// instead of a Task in order to be compatible with legacy .NET.
         /// </summary>
         void CanGoForward(Action<bool> callback);
 
@@ -225,12 +278,14 @@ namespace Vuplex.WebView {
         /// <remarks>
         /// Note that on iOS, screenshots do not include video content, which appears black.
         /// </remarks>
+        /// <seealso href="https://docs.unity3d.com/ScriptReference/ImageConversion.LoadImage.html">ImageConversion.LoadImage()</seealso>
+        /// <seealso cref="IWebView.GetRawTextureData"/>
         Task<byte[]> CaptureScreenshot();
     #endif
 
         /// <summary>
-        /// Like the other version of `CaptureScreenshot()`, except it uses a callback
-        /// instead of a `Task` in order to be compatible with legacy .NET.
+        /// Like the other version of CaptureScreenshot(), except it uses a callback
+        /// instead of a Task in order to be compatible with legacy .NET.
         /// </summary>
         void CaptureScreenshot(Action<byte[]> callback);
 
@@ -249,84 +304,89 @@ namespace Vuplex.WebView {
         void Click(Vector2 point);
 
         /// <summary>
-        /// Like `Click()` but with an additional option to prevent stealing focus.
+        /// Like Click(Vector2 point) but with an additional option to prevent stealing focus.
         /// </summary>
         void Click(Vector2 point, bool preventStealingFocus);
 
         /// <summary>
         /// Copies the selected text to the clipboard.
         /// </summary>
+        /// <seealso cref="IWebView.Cut"/>
+        /// <seealso cref="IWebView.Paste"/>
+        /// <seealso cref="IWebView.SelectAll"/>
         void Copy();
 
         /// <summary>
         /// Copies the selected text to the clipboard and removes it.
         /// </summary>
+        /// <seealso cref="IWebView.Copy"/>
+        /// <seealso cref="IWebView.Paste"/>
+        /// <seealso cref="IWebView.SelectAll"/>
         void Cut();
 
-        /// <summary>
-        /// Disables the webview from rendering to its texture.
-        /// </summary>
+        [Obsolete("DisableViewUpdates() is now deprecated. Please use SetRenderingEnabled(false) instead.")]
         void DisableViewUpdates();
 
         /// <summary>
         /// Destroys the webview, releasing all of its resources.
         /// </summary>
         /// <remarks>
-        /// Note that if you're using `WebViewPrefab`, you should call
-        /// `WebViewPrefab.Destroy()` instead.
+        /// If you're using a WebViewPrefab or CanvasWebViewPrefab, please call Destroy() on the prefab instead
+        /// of calling IWebView.Dispose(). Calling IWebView.Dispose() while the prefab is still using the webview
+        /// can cause issues.
         /// </remarks>
         void Dispose();
 
-        /// <summary>
-        /// Re-enables rendering after a call to `DisableViewUpdates()`.
-        /// </summary>
+        [Obsolete("EnableViewUpdates() is now deprecated. Please use SetRenderingEnabled(true) instead.")]
         void EnableViewUpdates();
 
     #if NET_4_6 || NET_STANDARD_2_0
         /// <summary>
-        /// Executes the given script in the context of the webpage's main frame
-        /// and returns the result.
+        /// Executes the given JavaScript in the context of the page and returns the result.
         /// </summary>
         /// <remarks>
-        /// When targeting legacy .NET, this method returns `void` instead of a `Task`.
+        /// In order to run JavaScript, a web page must first be loaded. You can use the
+        /// <see cref="IWebView.LoadProgressChanged">LoadProgressChanged event</see> to run JavaScript
+        /// after a page loads.
         /// </remarks>
+        /// <example>
+        /// await webViewPrefab.WaitUntilInitialized();
+        /// webViewPrefab.WebView.LoadProgressChanged += async (sender, eventArgs) => {
+        ///     if (eventArgs.Type == ProgressChangeType.Finished) {
+        ///         var headerText = await webViewPrefab.WebView.ExecuteJavaScript("document.getElementsByTagName('h1')[0].innerText");
+        ///         Debug.Log("H1 text: " + headerText);
+        ///     }
+        /// };
+        /// </example>
+        /// <seealso cref="IWebView.PageLoadScripts"/>
+        /// <seealso href="https://support.vuplex.com/articles/how-to-send-messages-from-javascript-to-c-sharp">JS-to-C# message passing</seealso>
         Task<string> ExecuteJavaScript(string javaScript);
     #else
         /// <summary>
         /// Executes the given script in the context of the webpage's main frame.
         /// </summary>
-        /// <remarks>
-        /// When targeting legacy .NET, this method returns `void` instead of a `Task`.
-        /// </remarks>
         void ExecuteJavaScript(string javaScript);
     #endif
 
         /// <summary>
-        /// Executes the given script in the context of the webpage's main frame
-        /// and calls the given callback with the result.
+        /// Like the other version of ExecuteJavaScript(), except it uses a callback instead
+        /// of a Task in order to be compatible with legacy .NET.
         /// </summary>
-        /// <remarks>
-        /// This method is functionally equivalent to the version of `ExecuteJavaScript()`
-        /// that returns a `Task`, except it uses a callback instead of a `Task` in order
-        /// to be compatible with legacy .NET.
-        /// </remarks>
         void ExecuteJavaScript(string javaScript, Action<string> callback);
 
-        /// <summary>
-        /// Makes the webview take focus.
-        /// </summary>
+        [Obsolete("Focus() is now deprecated. Please use SetFocused(true) instead.")]
         void Focus();
 
     #if NET_4_6 || NET_STANDARD_2_0
         /// <summary>
-        /// A replacement for [`Texture2D.GetRawTextureData()`](https://docs.unity3d.com/ScriptReference/Texture2D.GetRawTextureData.html)
+        /// A replacement for [Texture2D.GetRawTextureData()](https://docs.unity3d.com/ScriptReference/Texture2D.GetRawTextureData.html)
         /// for IWebView.Texture.
         /// </summary>
         /// <remarks>
-        /// Unity's `Texture2D.GetRawTextureData()` method currently does not work for textures created with
-        /// `Texture2D.CreateExternalTexture()`. So, this method serves as a replacement by providing
+        /// Unity's Texture2D.GetRawTextureData() method currently does not work for textures created with
+        /// Texture2D.CreateExternalTexture(). So, this method serves as a replacement by providing
         /// the equivalent functionality. You can load the bytes returned by this method into another
-        /// texture using [`Texture2D.LoadRawTextureData()`](https://docs.unity3d.com/ScriptReference/Texture2D.LoadRawTextureData.html).
+        /// texture using [Texture2D.LoadRawTextureData()](https://docs.unity3d.com/ScriptReference/Texture2D.LoadRawTextureData.html).
         /// Note that on iOS, the texture data excludes video content, which appears black.
         /// </remarks>
         /// <example>
@@ -341,34 +401,58 @@ namespace Vuplex.WebView {
         /// texture.LoadRawTextureData(textureData);
         /// texture.Apply();
         /// </example>
+        /// <seealso href="https://docs.unity3d.com/ScriptReference/Texture2D.LoadRawTextureData.html">Texture2D.GetRawTextureData()</seealso>
+        /// <seealso cref="IWebView.CaptureScreenshot"/>
         Task<byte[]> GetRawTextureData();
     #endif
 
         /// <summary>
-        /// Like the other version of `GetRawTextureData()`, except it uses a callback
-        /// instead of a `Task` in order to be compatible with legacy .NET.
+        /// Like the other version of GetRawTextureData(), except it uses a callback
+        /// instead of a Task in order to be compatible with legacy .NET.
         /// </summary>
         void GetRawTextureData(Action<byte[]> callback);
 
         /// <summary>
         /// Navigates back to the previous page in the webview's history.
         /// </summary>
+        /// <seealso cref="IWebView.CanGoBack"/>
         void GoBack();
 
         /// <summary>
         /// Navigates forward to the next page in the webview's history.
         /// </summary>
+        /// <seealso cref="IWebView.CanGoForward"/>
         void GoForward();
 
         /// <summary>
-        /// Dispatches a keystroke to the webview.
+        /// Dispatches keyboard input to the webview.
         /// </summary>
         /// <param name="key">
         /// A key can either be a single character representing
-        /// a unicode character (e.g. "A", "b", "?") or a [JavaScript Key value](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values)
-        /// (e.g. "ArrowUp", "Enter").
+        /// a unicode character (e.g. "A", "b", "?") or a [JavaScript key value](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values)
+        /// (e.g. "ArrowUp", "Enter", "Backspace", "Delete").
         /// </param>
+        /// <seealso cref="IWithKeyDownAndUp"/>
         void HandleKeyboardInput(string key);
+
+        /// <summary>
+        /// Initializes a newly created webview with the given textures created with
+        /// Web.CreateMaterial() and the dimensions in Unity units.
+        /// </summary>
+        /// <remarks>
+        /// Important notes:
+        /// <list type="bullet">
+        ///   <item>If you're using WebViewPrefab, you don't need to call this method, because it calls it for you.</item>
+        ///   <item>A separate video texture is only needed for iOS's [fallback video implementation](https://support.vuplex.com/articles/fallback-video) and isn't needed for other platforms.</item>
+        ///   <item>A webview's default resolution is 1300px per Unity unit but can be changed with SetResolution().</item>
+        /// </list>
+        /// </remarks>
+        void Init(Texture2D texture, float width, float height, Texture2D videoTexture);
+
+        /// <summary>
+        /// Like the other Init() method, but with fallback video support disabled for iOS.
+        /// </summary>
+        void Init(Texture2D texture, float width, float height);
 
         /// <summary>
         /// Loads the webpage contained in the given HTML string.
@@ -397,6 +481,7 @@ namespace Vuplex.WebView {
         /// );
         /// ```
         /// ]]>
+        /// <seealso cref="IWebView.LoadUrl"/>
         void LoadHtml(string html);
 
         /// <summary>
@@ -406,17 +491,27 @@ namespace Vuplex.WebView {
         ///     (equivalent to `"file://" + Application.streamingAssetsPath + path`)
         /// - `file://` - some platforms support loading arbitrary file URLs
         /// </summary>
+        /// <seealso href="https://support.vuplex.com/articles/how-to-load-local-files">How to load local files</seealso>
+        /// <seealso cref="IWebView.LoadHtml"/>
+        /// <seealso cref="WebViewPrefab.InitialUrl"/>
         void LoadUrl(string url);
 
         /// <summary>
-        /// Like `LoadUrl(string url)`, but also sends the given HTTP request headers
-        /// when loading the URL.
+        /// Like LoadUrl(string url), but also sends the given additional HTTP request headers
+        /// when loading the URL. The headers are sent for the initial page load request but are not sent
+        /// for requests for subsequent resources, like linked JavaScript or CSS files.
         /// </summary>
+        /// <remarks>
+        /// On Windows and macOS, this method cannot be used to set the Accept-Language header.
+        /// For more info, please see [this article](https://support.vuplex.com/articles/how-to-change-accept-language-header).
+        /// </remarks>
         void LoadUrl(string url, Dictionary<string, string> additionalHttpHeaders);
 
         /// <summary>
         /// Pastes text from the clipboard.
         /// </summary>
+        /// <seealso cref="IWebView.Copy"/>
+        /// <seealso cref="IWebView.Cut"/>
         void Paste();
 
         /// <summary>
@@ -438,17 +533,21 @@ namespace Vuplex.WebView {
         /// </summary>
         /// <remarks>
         /// Important notes:
-        /// - If you're using `WebViewPrefab`, you should call
-        /// `WebViewPrefab.Resize()` instead.
-        /// - A webview's default resolution is 1300px per Unity unit but can be changed with
-        /// `IWebView.SetResolution()`.
+        /// <list type="bullet">
+        ///   <item>If you're using WebViewPrefab, you should call WebViewPrefab.Resize() instead.</item>
+        ///   <item>A webview's default resolution is 1300px per Unity unit but can be changed with SetResolution().</item>
+        /// </list>
         /// </remarks>
+        /// <seealso cref="IWebView.Size"/>
+        /// <seealso cref="IWebView.SetResolution"/>
         void Resize(float width, float height);
 
         /// <summary>
-        /// Scrolls the webview's top-level body by the given delta.
-        /// If you want to scroll a specific section of the page,
-        /// see `Scroll(Vector2 scrollDelta, Vector2 point)` instead.
+        /// Scrolls the top-level document by the given scroll delta.
+        /// This method works by calling window.scrollBy(), which doesn't
+        /// work for all web pages. An alternative is to instead use Scroll(scrollDelta, position)
+        /// to scroll at a specific location in the page. For example, you can scroll
+        /// at the middle of the page by calling `Scroll(scrollDelta, new Vector2(0.5f, 0.5f))`.
         /// </summary>
         /// <param name="scrollDelta">
         /// The scroll delta in Unity units. Because the browser's origin
@@ -475,20 +574,44 @@ namespace Vuplex.WebView {
         /// <summary>
         /// Selects all text, depending on the page's focused element.
         /// </summary>
+        /// <seealso cref="Copy"/>
         void SelectAll();
+
+        /// <summary>
+        /// Makes the webview take or relinquish focus.
+        /// </summary>
+        void SetFocused(bool focused);
+
+        /// <summary>
+        /// Enables or disables the webview's ability to render to its texture.
+        /// By default, a webview renders web content to its texture, but you can
+        /// use this method to disable or re-enable rendering.
+        /// </summary>
+        /// <remarks>
+        /// This method is ignored when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).
+        /// </remarks>
+        void SetRenderingEnabled(bool enabled);
 
         /// <summary>
         /// Sets the webview's resolution in pixels per Unity unit.
         /// You can change the resolution to make web content appear larger or smaller.
         /// </summary>
         /// <remarks>
-        /// The default resolution is 1300 pixels per Unity unit.
+        /// <para>
+        /// Unlike the other IWebView methods, this method can be called before the webview
+        /// is initialized with Init(). The default resolution is 1300 pixels per Unity unit.
         /// Setting a lower resolution decreases the pixel density, but has the effect
         /// of making web content appear larger. Setting a higher resolution increases
         /// the pixel density, but has the effect of making content appear smaller.
         /// For more information on scaling web content, see
         /// [this support article](https://support.vuplex.com/articles/how-to-scale-web-content).
+        /// </para>
+        /// <para>
+        /// This method is ignored when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).
+        /// </para>
         /// </remarks>
+        /// <seealso cref="IWebView.Resolution"/>
+        /// <seealso cref="IWebView.Resize"/>
         void SetResolution(float pixelsPerUnityUnit);
 
         /// <summary>
@@ -500,7 +623,7 @@ namespace Vuplex.WebView {
         void ZoomIn();
 
         /// <summary>
-        /// Zooms back out after a previous call to `ZoomIn()`.
+        /// Zooms back out after a previous call to ZoomIn().
         /// </summary>
         /// <remarks>
         /// Note that the zoom level gets reset when a new page is loaded.

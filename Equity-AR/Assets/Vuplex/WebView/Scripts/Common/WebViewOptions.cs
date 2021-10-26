@@ -28,10 +28,10 @@ namespace Vuplex.WebView {
         public bool clickWithoutStealingFocus;
 
         /// <summary>
-        /// On iOS devices and on Android devices that don't support native video rendering,
-        /// the iOS and Android plugins normally allocate extra resources for rendering
-        /// videos. This field can be used to optionally disable video support in those
-        /// cases so that extra resources aren't allocated.
+        /// Disables video processing for packages that use 3D WebView's
+        /// [fallback video implementation](https://support.vuplex.com/articles/fallback-video)
+        /// (i.e. iOS and, in some rare cases, Android). For packages that don't use the fallback
+        /// video implementation (i.e. most packages), this option has no effect.
         /// </summary>
         public bool disableVideo;
 

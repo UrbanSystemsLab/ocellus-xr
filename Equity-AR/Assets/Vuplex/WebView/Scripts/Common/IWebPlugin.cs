@@ -34,6 +34,8 @@ namespace Vuplex.WebView {
 
         void EnableRemoteDebugging();
 
+        void SetAutoplayEnabled(bool enabled);
+
         void SetIgnoreCertificateErrors(bool ignore);
 
         void SetStorageEnabled(bool enabled);

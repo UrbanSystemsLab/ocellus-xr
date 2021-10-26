@@ -28,6 +28,10 @@ namespace Vuplex.WebView.Demos {
 
         void Start() {
 
+            // Use a desktop User-Agent to request the desktop versions of websites.
+            // https://developer.vuplex.com/webview/Web#SetUserAgent
+            Web.SetUserAgent(false);
+
             // The CanvasWebViewPrefab's `InitialUrl` property is set via the editor, so it
             // will automatically initialize itself with that URL.
             _canvasWebViewPrefab = GameObject.Find("CanvasWebViewPrefab").GetComponent<CanvasWebViewPrefab>();

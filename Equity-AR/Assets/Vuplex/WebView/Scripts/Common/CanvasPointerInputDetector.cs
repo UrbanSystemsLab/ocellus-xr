@@ -35,7 +35,16 @@ namespace Vuplex.WebView {
             var canvas = _getCanvas();
             var camera = canvas == null || canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
             Vector2 localPoint;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(_getRectTransform(), pointerEventData.position, camera, out localPoint);
+            var mousePosition = pointerEventData.position;
+            #if (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX) && !UNITY_EDITOR
+                // To handle multiple displays on Windows and macOS, Display.RelativeMouseAt() must be used
+                // to translate the mouse position. However, Unity's UI system still has a limitation where
+                // this may not work when the monitors have different sizes / resolutions.
+                // - https://issuetracker.unity3d.com/issues/buttons-hitbox-is-offset-when-building-standalone-project-for-two-screens
+                var positionForDisplay = Display.RelativeMouseAt(new Vector3(mousePosition.x, mousePosition.y));
+                mousePosition = new Vector2(positionForDisplay.x, positionForDisplay.y);
+            #endif
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(_getRectTransform(), mousePosition, camera, out localPoint);
             return _convertToNormalizedPoint(localPoint);
         }
 

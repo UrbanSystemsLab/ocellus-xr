@@ -16,6 +16,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
 
@@ -74,6 +75,11 @@ namespace Vuplex.WebView {
                     return _uwpPlugin;
                 }
                 throw new WebViewUnavailableException("The 3D WebView for UWP plugin is not currently installed." + MORE_INFO_TEXT);
+            #elif UNITY_WEBGL
+                if (_webGLPlugin != null) {
+                    return _webGLPlugin;
+                }
+                throw new WebViewUnavailableException("The 2D WebView for WebGL plugin is not currently installed." + MORE_INFO_TEXT);
             #else
                 throw new WebViewUnavailableException("This version of 3D WebView does not support the current build platform." + MORE_INFO_TEXT);
             #endif
@@ -109,6 +115,11 @@ namespace Vuplex.WebView {
             _uwpPlugin = plugin;
         }
 
+        public static void RegisterWebGLPlugin(IWebPlugin plugin) {
+
+            _webGLPlugin = plugin;
+        }
+
         public static void RegisterWindowsPlugin(IWebPlugin plugin) {
 
             _windowsPlugin = plugin;
@@ -122,6 +133,7 @@ namespace Vuplex.WebView {
         bool _mockWarningLogged;
         const string MORE_INFO_TEXT = " For more info, please visit https://developer.vuplex.com.";
         protected static IWebPlugin _uwpPlugin;
+        protected static IWebPlugin _webGLPlugin;
         protected static IWebPlugin _windowsPlugin;
 
         /// <summary>

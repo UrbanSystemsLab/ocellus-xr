@@ -19,6 +19,7 @@ using UnityEngine.EventSystems;
 #if NET_4_6 || NET_STANDARD_2_0
     using System.Threading.Tasks;
 #endif
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
 
@@ -26,74 +27,106 @@ namespace Vuplex.WebView {
 
         /// <summary>
         /// Indicates that the prefab was clicked. Note that the prefab automatically
-        /// calls the `IWebView.Click()` method for you.
+        /// calls IWebView.Click() for you.
         /// </summary>
-        public event EventHandler<ClickedEventArgs> Clicked;
+        /// <remarks>
+        /// This event is not supported when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).
+        /// </remarks>
+        public virtual event EventHandler<ClickedEventArgs> Clicked;
 
         /// <summary>
         /// Indicates that the prefab finished initializing,
-        /// so its `WebView` property is ready to use.
+        /// so its WebView property is ready to use.
         /// </summary>
         /// <seealso cref="WaitUntilInitialized"/>
         public event EventHandler Initialized;
 
         /// <summary>
         /// Indicates that the prefab was scrolled. Note that the prefab automatically
-        /// calls the `IWebView.Scroll()` method for you.
+        /// calls IWebView.Scroll() for you.
         /// </summary>
-        public event EventHandler<ScrolledEventArgs> Scrolled;
+        /// <remarks>
+        /// This event is not supported when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).
+        /// </remarks>
+        public virtual event EventHandler<ScrolledEventArgs> Scrolled;
 
         /// <summary>
         /// If you drag the prefab into the scene via the editor,
         /// you can set this property to make it so that the instance
-        /// automatically initializes itself with the given URL. To load a new URL
-        /// after the prefab has been initialized, use `IWebView.LoadUrl()` instead.
+        /// automatically loads the given URL after it initializes. To load a new URL
+        /// at runtime, use IWebView.LoadUrl() instead.
         /// </summary>
-        [Label("Initial URL to load (optional)")]
-        [Tooltip("Or you can leave the Initial URL blank if you want to initialize the prefab programmatically by calling Init().")]
+        [Label("Initial URL (optional)")]
+        [Tooltip("You can set this to the URL that you want to load, or you can leave it blank if you'd rather add a script to load content programmatically with IWebView.LoadUrl() or LoadHtml().")]
         [HideInInspector]
+        /// <seealso href="https://support.vuplex.com/articles/how-to-load-local-files">How to load local files</seealso>
         public string InitialUrl;
 
-        [Header("Other Settings")]
         /// <summary>
         /// Determines how the prefab handles drag interactions.
         /// </summary>
-        [Tooltip("Note: \"Drag Within Page\" is not supported on iOS or UWP.")]
+        /// <remarks>
+        /// Important notes:
+        /// <list type="bullet">
+        ///   <item>This property is ignored when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).</item>
+        ///   <item>
+        ///     For information on the limitations of drag interactions on iOS and UWP, please see
+        ///     [this article](https://support.vuplex.com/articles/hover-and-drag-limitations).
+        ///   </item>
+        /// </list>
+        /// </remarks>
+        /// <seealso href="https://support.vuplex.com/articles/dragging-scrollbar">When I drag a scrollbar, why does it scroll the wrong way?</seealso>
+        [Tooltip("Determines how the prefab handles drag interactions. Note that This property is ignored when running in Native 2D Mode.")]
         public DragMode DragMode = DragMode.DragToScroll;
 
         /// <summary>
-        /// Clicking is enabled by default, but can be disabled by
-        /// setting this property to `false`.
+        /// Determines whether clicking is enabled.
         /// </summary>
+        /// <remarks>
+        /// This property is ignored when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).
+        /// </remarks>
         public bool ClickingEnabled = true;
 
         /// <summary>
-        /// Hover interactions are enabled by default, but can be disabled by
-        /// setting this property to `false`.
-        /// Note that hovering only works for webview implementations that
-        /// support the `IWithMovablePointer` interface (i.e. Android, Windows, and macOS).
+        /// Determines whether hover interactions are enabled.
         /// </summary>
-        [Tooltip("Note: Hovering is not supported on iOS or UWP.")]
+        /// <remarks>
+        /// Important notes:
+        /// <list type="bullet">
+        ///   <item>This property is ignored when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).</item>
+        ///   <item>
+        ///     For information on the limitations of hovering on iOS and UWP, please see
+        ///     [this article](https://support.vuplex.com/articles/hover-and-drag-limitations).
+        ///   </item>
+        /// </list>
+        /// </remarks>
         public bool HoveringEnabled = true;
 
         /// <summary>
-        /// Scrolling is enabled by default, but can be disabled by
-        /// setting this property to `false`.
+        /// Determines whether scrolling is enabled.
         /// </summary>
+        /// <remarks>
+        /// This property is ignored when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).
+        /// </remarks>
         public bool ScrollingEnabled = true;
 
         /// <summary>
         /// Determines the threshold (in web pixels) for triggering a drag. The default is 20.
         /// </summary>
         /// <remarks>
-        /// When the `DragMode` is set to `DragToScroll`, this property determines
-        /// the distance that the pointer must drag before it's no longer
-        /// considered a click.
-        /// </remarks>
-        /// <remarks>
-        /// When the `DragMode` is set to `DragWithinPage`, this property determines
-        /// the distance that the pointer must drag before it triggers
-        /// a drag within the page.
+        /// <list type="bullet">
+        ///   <item>
+        ///     When the prefab's DragMode is set to DragToScroll, this property determines
+        ///     the distance that the pointer must drag before it's no longer
+        ///     considered a click.
+        ///   </item>
+        ///   <item>
+        ///     When the prefab's DragMode is set to DragWithinPage, this property determines
+        ///     the distance that the pointer must drag before it triggers
+        ///     a drag within the page.
+        ///   </item>
+        ///   <item>This property is ignored when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).</item>
+        /// </list>
         /// </remarks>
         [Label("Drag Threshold (px)")]
         [Tooltip("Determines the threshold (in web pixels) for triggering a drag.")]
@@ -104,21 +137,25 @@ namespace Vuplex.WebView {
 
         [Header("Debugging")]
         /// <summary>
-        /// Determines whether remote debugging is enabled with `Web.EnableRemoteDebugging()`.
+        /// Determines whether remote debugging is enabled.
         /// </summary>
-        [Tooltip("Determines whether remote debugging is enabled with Web.EnableRemoteDebugging().")]
+        /// <seealso href="https://support.vuplex.com/articles/how-to-debug-web-content"/>
+        [Tooltip("Determines whether remote debugging is enabled.")]
         public bool RemoteDebuggingEnabled = false;
 
         /// <summary>
-        /// Determines whether JavaScript console messages from `IWebView.ConsoleMessageLogged`
+        /// Determines whether JavaScript console messages from IWebView.ConsoleMessageLogged
         /// are printed to the Unity logs.
         /// <summary>
         [Tooltip("Determines whether JavaScript console messages are printed to the Unity logs.")]
         public bool LogConsoleMessages = false;
 
         /// <summary>
-        /// The prefab's material.
+        /// Gets or sets prefab's material.
         /// </summary>
+        /// <remarks>
+        /// This property is unused when running in [Native 2D Mode](https://support.vuplex.com/articles/native-2d-mode).
+        /// </remarks>
         public Material Material {
             get {
                 return _view.Material;
@@ -129,7 +166,7 @@ namespace Vuplex.WebView {
         }
 
         /// <summary>
-        /// Controls whether the instance is visible or hidden.
+        /// Gets or sets whether the instance is visible. The default is `true`.
         /// </summary>
         public virtual bool Visible {
             get {
@@ -137,23 +174,41 @@ namespace Vuplex.WebView {
             }
             set {
                 _view.Visible = value;
-                if (_videoLayer != null) {
+                if (_videoLayerIsEnabled) {
                     _videoLayer.Visible = value;
                 }
             }
         }
 
         /// <summary>
-        /// A reference to the prefab's `IWebView` instance, which
-        /// is available after the `Initialized` event is raised.
+        /// Gets the prefab's IWebView, which
+        /// is available after the Initialized event is raised.
         /// Before initialization is complete, this property is `null`.
         /// </summary>
-        public IWebView WebView { get { return _webView; }}
+        public IWebView WebView {
+            get {
+                if (_cachedWebView == null) {
+                    if (_webViewGameObject == null) {
+                        return null;
+                    }
+                    _cachedWebView = _webViewGameObject.GetComponent<IWebView>();
+                }
+                return _cachedWebView;
+            }
+            private set {
+                var monoBehaviour = value as MonoBehaviour;
+                if (monoBehaviour == null) {
+                    throw new ArgumentException("The IWebView cannot be set successfully because it's not a MonoBehaviour.");
+                }
+                _webViewGameObject = monoBehaviour.gameObject;
+                _cachedWebView = value;
+            }
+        }
 
         /// <summary>
         /// Destroys the instance and its children. Note that you don't have
         /// to call this method if you destroy the instance's parent with
-        /// `Object.Destroy()`.
+        /// Object.Destroy().
         /// </summary>
         public void Destroy() {
 
@@ -174,23 +229,40 @@ namespace Vuplex.WebView {
 
             var previousPointerInputDetector = _pointerInputDetector;
             _pointerInputDetector = pointerInputDetector;
-            // If _webView hasn't been set yet, then _initPointerInputDetector
+            // If WebView hasn't been set yet, then _initPointerInputDetector
             // will get called before it's set to initialize _pointerInputDetector.
-            if (_webView != null) {
-                _initPointerInputDetector(_webView, previousPointerInputDetector);
+            if (WebView != null) {
+                _initPointerInputDetector(WebView, previousPointerInputDetector);
             }
+        }
+
+        /// <summary>
+        /// By default, the prefab creates a new IWebView during initialization. However,
+        /// you can call this method before the prefab initializes to pass it an existing,
+        /// initialized IWebView to use instead. This method can only be called prior to
+        /// when the prefab initializes (i.e. directly after instantiating it or setting it to active).
+        /// </summary>
+        public void SetWebViewForInitialization(IWebView webView) {
+
+            if (WebView != null) {
+                throw new ArgumentException("SetWebViewForInitialization() was called after the prefab was already initialized. Please call it before initialization instead.");
+            }
+            if (webView != null && !webView.IsInitialized) {
+                throw new ArgumentException("SetWebViewForInitialization(IWebView) was called with an uninitialized webview, but an initialized webview is required.");
+            }
+            _webViewForInitialization = webView;
         }
 
     #if NET_4_6 || NET_STANDARD_2_0
         /// <summary>
         /// Returns a task that resolves when the prefab is initialized
-        /// (i.e. when its `WebView` property is ready for use).
+        /// (i.e. when its WebView property is ready for use).
         /// </summary>
         /// <seealso cref="Initialized"/>
         public Task WaitUntilInitialized() {
 
             var taskCompletionSource = new TaskCompletionSource<bool>();
-            var isInitialized = _webView != null;
+            var isInitialized = WebView != null;
             if (isInitialized) {
                 taskCompletionSource.SetResult(true);
             } else {
@@ -211,21 +283,22 @@ namespace Vuplex.WebView {
         bool _clickIsPending;
         bool _consoleMessageLoggedHandlerAttached;
         bool _loggedDragWarning;
-        WebViewOptions _options;
+        static bool _loggedHoverWarning;
+        protected WebViewOptions _options;
         [SerializeField]
         [HideInInspector]
-        GameObject _pointerInputDetectorGameObject;
+        MonoBehaviour _pointerInputDetectorMonoBehaviour;
         IPointerInputDetector _pointerInputDetector {
             get {
-                return _pointerInputDetectorGameObject == null ? null :
-                                                                 _pointerInputDetectorGameObject.GetComponent<IPointerInputDetector>();
+                return _pointerInputDetectorMonoBehaviour == null ? null :
+                                                                    _pointerInputDetectorMonoBehaviour as IPointerInputDetector;
             }
             set {
                 var monoBehaviour = value as MonoBehaviour;
                 if (monoBehaviour == null) {
                     throw new ArgumentException("The provided IPointerInputDetector can't be successfully set because it's not a MonoBehaviour");
                 }
-                _pointerInputDetectorGameObject = monoBehaviour.gameObject;
+                _pointerInputDetectorMonoBehaviour = monoBehaviour;
             }
         }
         bool _pointerIsDown;
@@ -241,7 +314,16 @@ namespace Vuplex.WebView {
                 return _cachedVideoLayer;
             }
         }
-        bool _videoLayerDisabled;
+        bool _videoLayerIsEnabled {
+            get {
+                return _videoLayer != null && _videoLayer.gameObject.activeSelf;
+            }
+            set {
+                if (_videoLayer != null) {
+                    _videoLayer.gameObject.SetActive(value);
+                }
+            }
+        }
         Material _videoMaterial;
         protected ViewportMaterialView _view {
             get {
@@ -252,28 +334,10 @@ namespace Vuplex.WebView {
             }
         }
         Material _viewMaterial;
+        IWebView _webViewForInitialization;
         [SerializeField]
         [HideInInspector]
         GameObject _webViewGameObject;
-        protected IWebView _webView {
-            get {
-                if (_cachedWebView == null) {
-                    if (_webViewGameObject == null) {
-                        return null;
-                    }
-                    _cachedWebView = _webViewGameObject.GetComponent<IWebView>();
-                }
-                return _cachedWebView;
-            }
-            set {
-                var monoBehaviour = value as MonoBehaviour;
-                if (monoBehaviour == null) {
-                    throw new ArgumentException("The IWebView cannot be set successfully because it's not a MonoBehaviour.");
-                }
-                _webViewGameObject = monoBehaviour.gameObject;
-                _cachedWebView = value;
-            }
-        }
 
         void _attachWebViewEventHandlers(IWebView webView) {
 
@@ -292,11 +356,13 @@ namespace Vuplex.WebView {
 
         protected abstract float _getScrollingSensitivity();
 
+        protected abstract bool _getNativeOnScreenKeyboardEnabled();
+
         protected abstract ViewportMaterialView _getVideoLayer();
 
         protected abstract ViewportMaterialView _getView();
 
-        protected void _init(float width, float height, WebViewOptions options = new WebViewOptions(), IWebView initializedWebView = null) {
+        protected void _init(Vector2 size, Rect? preferNative2DModeWithRect = null) {
 
             _throwExceptionIfInitialized();
             // Remote debugging can only be enabled once, before any webviews are initialized.
@@ -304,38 +370,41 @@ namespace Vuplex.WebView {
                 _remoteDebuggingEnabled = true;
                 Web.EnableRemoteDebugging();
             }
-            _options = options;
-
-            // Only set _webView *after* the webview has been initialized to guarantee
+            // Only set WebView *after* the webview has been initialized to guarantee
             // that WebViewPrefab.WebView is ready to use as long as it's not null.
-            var webView = initializedWebView == null ? Web.CreateWebView(_options.preferredPlugins) : initializedWebView;
+            var webView = _webViewForInitialization == null ? Web.CreateWebView(_options.preferredPlugins) : _webViewForInitialization;
+            _disableHoveringIfNeeded(preferNative2DModeWithRect != null);
 
-            Web.CreateMaterial(viewMaterial => {
-                _viewMaterial = viewMaterial;
-                _view.Material = viewMaterial;
-                _initWebViewIfReady(webView, width, height);
-            });
-            if (_options.disableVideo) {
-                _videoLayerDisabled = true;
-                if (_videoLayer != null) {
-                    _videoLayer.Visible = false;
+            if (preferNative2DModeWithRect != null && webView is IWithNative2DMode) {
+                _initWebViewIfReady(webView, (Rect)preferNative2DModeWithRect, true);
+                // For Native 2D Mode, deactivate both the regular view and the video layer.
+                if (_view != null) {
+                    _view.gameObject.SetActive(false);
                 }
-                _initWebViewIfReady(webView, width, height);
+                _videoLayerIsEnabled = false;
+                return;
+            }
+
+            var rect = new Rect(Vector2.zero, size);
+            if (_options.disableVideo) {
+                _videoLayerIsEnabled = false;
             } else {
                 Web.CreateVideoMaterial(videoMaterial => {
                     if (videoMaterial == null) {
-                        _videoLayerDisabled = true;
-                        if (_videoLayer != null) {
-                            _videoLayer.Visible = false;
-                        }
+                        _videoLayerIsEnabled = false;
                     } else {
                         _videoMaterial = videoMaterial;
                         _videoLayer.Material = videoMaterial;
                         _setVideoRect(new Rect(0, 0, 0, 0));
                     }
-                    _initWebViewIfReady(webView, width, height);
+                    _initWebViewIfReady(webView, rect);
                 });
             }
+            Web.CreateMaterial(viewMaterial => {
+                _viewMaterial = viewMaterial;
+                _view.Material = viewMaterial;
+                _initWebViewIfReady(webView, rect);
+            });
         }
 
         void _initPointerInputDetector(IWebView webView, IPointerInputDetector previousPointerInputDetector = null) {
@@ -365,53 +434,63 @@ namespace Vuplex.WebView {
             _pointerInputDetector.Scrolled += InputDetector_Scrolled;
         }
 
-        void _initWebViewIfReady(IWebView webView, float width, float height) {
+        void _initWebViewIfReady(IWebView webView, Rect rect, bool enableNative2DMode = false) {
 
-            if (_view.Texture == null || (!_videoLayerDisabled && _videoLayer.Texture == null)) {
+            if (!enableNative2DMode && (_view.Texture == null || (_videoLayerIsEnabled && _videoLayer.Texture == null))) {
                 // Wait until both views' textures are ready.
                 return;
             }
             var initializedWebViewWasProvided = webView.IsInitialized;
             if (initializedWebViewWasProvided) {
-                // An initialized webview was provided via WebViewPrefab.Init(IWebView),
+                // An initialized webview was provided via WebViewPrefab.Instantiate(IWebView),
                 // so just hook up its existing textures.
                 _view.Texture = webView.Texture;
                 if (_videoLayer != null) {
                     _videoLayer.Texture = webView.VideoTexture;
                 }
             } else {
-                // Set the resolution prior to initializing the webview
-                // so the initial size is correct.
-                var initialResolution = _getInitialResolution();
-                if (initialResolution <= 0) {
-                    WebViewLogger.LogWarningFormat("Invalid value for InitialResolution ({0}) will be ignored.", initialResolution);
+                if (webView is IWithNative2DMode && enableNative2DMode) {
+                    // Initialize the new webview in Native 2D Mode.
+                    var native2DWebView = webView as IWithNative2DMode;
+                    native2DWebView.InitInNative2DMode(rect);
+                    // Hide the webview if Visible has already been set to false.
+                    native2DWebView.SetVisible(_view.Visible);
+                    _view.Visible = false;
                 } else {
-                    webView.SetResolution(initialResolution);
+                    // Initialize the new webview normally, but set its resolution first
+                    // so that the initial size is correct.
+                    var initialResolution = _getInitialResolution();
+                    if (initialResolution <= 0) {
+                        WebViewLogger.LogWarningFormat("Invalid value for InitialResolution ({0}) will be ignored.", initialResolution);
+                    } else {
+                        webView.SetResolution(initialResolution);
+                    }
+                    var videoTexture = _videoLayer == null ? null : _videoLayer.Texture;
+                    webView.Init(_view.Texture, rect.width, rect.height, videoTexture);
                 }
-                var videoTexture = _videoLayer == null ? null : _videoLayer.Texture;
-                webView.Init(_view.Texture, width, height, videoTexture);
             }
 
+            // Enable or disable the native on-screen keyboard if needed (Android and iOS only).
+            if (webView is IWithNativeOnScreenKeyboard) {
+                var nativeOnScreenKeyboardEnabled = _getNativeOnScreenKeyboardEnabled();
+                (webView as IWithNativeOnScreenKeyboard).SetNativeOnScreenKeyboardEnabled(nativeOnScreenKeyboardEnabled);
+            }
             _attachWebViewEventHandlers(webView);
-
-            // Init the pointer input detector just before setting _webView so that
-            // SetPointerInputDetector() will behave correctly if it's called before _webView is set.
+            // Init the pointer input detector just before setting WebView so that
+            // SetPointerInputDetector() will behave correctly if it's called before WebView is set.
             _initPointerInputDetector(webView);
-            // _webView can be set now that the webview is initialized.
-            _webView = webView;
+            // The webview is now fully initialized, so we can now set WebView and raise the Initialized event.
+            WebView = webView;
             var handler = Initialized;
             if (handler != null) {
                 handler(this, EventArgs.Empty);
             }
+            // Lastly, load the InitialUrl.
             if (!String.IsNullOrEmpty(InitialUrl)) {
                 if (initializedWebViewWasProvided) {
                     WebViewLogger.LogWarning("Custom InitialUrl value will be ignored because an initialized webview was provided.");
                 } else {
-                    var url = InitialUrl.Trim();
-                    if (!url.Contains(":")) {
-                        url = "http://" + url;
-                    }
-                    webView.LoadUrl(url);
+                    webView.LoadUrl(InitialUrl.Trim());
                 }
             }
         }
@@ -423,7 +502,7 @@ namespace Vuplex.WebView {
 
         void InputDetector_Dragged(object sender, EventArgs<Vector2> eventArgs) {
 
-            if (DragMode == DragMode.Disabled || _webView == null) {
+            if (DragMode == DragMode.Disabled || WebView == null) {
                 return;
             }
             var point = eventArgs.Value;
@@ -433,7 +512,7 @@ namespace Vuplex.WebView {
             var totalDragDelta = _convertRatioPointToUnityUnits(_pointerDownRatioPoint) - newDragPoint;
 
             if (DragMode == DragMode.DragWithinPage) {
-                var dragThresholdReached = totalDragDelta.magnitude * _webView.Resolution > DragThreshold;
+                var dragThresholdReached = totalDragDelta.magnitude * WebView.Resolution > DragThreshold;
                 if (dragThresholdReached) {
                     _movePointerIfNeeded(point);
                 }
@@ -447,7 +526,7 @@ namespace Vuplex.WebView {
             // Check whether to cancel a pending viewport click so that drag-to-scroll
             // doesn't unintentionally trigger a click.
             if (_clickIsPending) {
-                var dragThresholdReached = totalDragDelta.magnitude * _webView.Resolution > DragThreshold;
+                var dragThresholdReached = totalDragDelta.magnitude * WebView.Resolution > DragThreshold;
                 if (dragThresholdReached) {
                     _clickIsPending = false;
                 }
@@ -459,17 +538,17 @@ namespace Vuplex.WebView {
             _pointerIsDown = true;
             _pointerDownRatioPoint = eventArgs.Point;
 
-            if (!ClickingEnabled || _webView == null) {
+            if (!ClickingEnabled || WebView == null) {
                 return;
             }
             if (DragMode == DragMode.DragWithinPage) {
-                var webViewWithPointerDown = _webView as IWithPointerDownAndUp;
+                var webViewWithPointerDown = WebView as IWithPointerDownAndUp;
                 if (webViewWithPointerDown != null) {
                     webViewWithPointerDown.PointerDown(eventArgs.Point, eventArgs.ToPointerOptions());
                     return;
                 } else if (!_loggedDragWarning) {
                     _loggedDragWarning = true;
-                    WebViewLogger.LogWarningFormat("The WebViewPrefab's DragMode is set to DragWithinPage, but the webview implementation for this platform ({0}) doesn't support the PointerDown and PointerUp methods needed for dragging within a page. For more info, see <em>https://developer.vuplex.com/webview/IWithPointerDownAndUp</em>.", _webView.PluginType);
+                    WebViewLogger.LogWarningFormat("The WebViewPrefab's DragMode is set to DragWithinPage, but the webview implementation for this platform ({0}) doesn't support the PointerDown and PointerUp methods needed for dragging within a page. For more info, see <em>https://developer.vuplex.com/webview/IWithPointerDownAndUp</em>.", WebView.PluginType);
                     // Fallback to setting _clickIsPending so Click() can be called.
                 }
             }
@@ -498,13 +577,13 @@ namespace Vuplex.WebView {
         protected virtual void InputDetector_PointerUp(object sender, PointerEventArgs eventArgs) {
 
             _pointerIsDown = false;
-            if (!ClickingEnabled || _webView == null) {
+            if (!ClickingEnabled || WebView == null) {
                 return;
             }
-            var webViewWithPointerDownAndUp = _webView as IWithPointerDownAndUp;
+            var webViewWithPointerDownAndUp = WebView as IWithPointerDownAndUp;
             if (DragMode == DragMode.DragWithinPage && webViewWithPointerDownAndUp != null) {
                 var totalDragDelta = _convertRatioPointToUnityUnits(_pointerDownRatioPoint) - _convertRatioPointToUnityUnits(eventArgs.Point);
-                var dragThresholdReached = totalDragDelta.magnitude * _webView.Resolution > DragThreshold;
+                var dragThresholdReached = totalDragDelta.magnitude * WebView.Resolution > DragThreshold;
                 var pointerUpPoint = dragThresholdReached ? eventArgs.Point : _pointerDownRatioPoint;
                 webViewWithPointerDownAndUp.PointerUp(pointerUpPoint, eventArgs.ToPointerOptions());
             } else {
@@ -514,7 +593,7 @@ namespace Vuplex.WebView {
                 _clickIsPending = false;
                 // PointerDown() and PointerUp() don't support the preventStealingFocus parameter.
                 if (webViewWithPointerDownAndUp == null || _options.clickWithoutStealingFocus) {
-                    _webView.Click(eventArgs.Point, _options.clickWithoutStealingFocus);
+                    WebView.Click(eventArgs.Point, _options.clickWithoutStealingFocus);
                 } else {
                     var pointerOptions = eventArgs.ToPointerOptions();
                     webViewWithPointerDownAndUp.PointerDown(eventArgs.Point, pointerOptions);
@@ -538,9 +617,27 @@ namespace Vuplex.WebView {
             _scrollIfNeeded(scaledScrollDelta, eventArgs.Point);
         }
 
+        void _disableHoveringIfNeeded(bool native2DModePreferred) {
+
+            #if (UNITY_IOS || UNITY_WSA) && !VUPLEX_NO_DISABLING_HOVER_FOR_PERFORMANCE
+                if (!HoveringEnabled) {
+                    return;
+                }
+                if (native2DModePreferred) {
+                    // Hovering isn't detected in Native 2D Mode, so logging a warning is unnecessary.
+                    return;
+                }
+                HoveringEnabled = false;
+                if (!_loggedHoverWarning) {
+                    _loggedHoverWarning = true;
+                    WebViewLogger.LogWarning("WebViewPrefab.HoveringEnabled is automatically set to false by default on iOS and UWP in order to optimize performance. However, you can override this by adding the scripting symbol VUPLEX_NO_DISABLING_HOVER_FOR_PERFORMANCE in player settings. For more info, see <em>https://support.vuplex.com/articles/hover-and-drag-limitations</em>.");
+                }
+            #endif
+        }
+
         void _movePointerIfNeeded(Vector2 point) {
 
-            var webViewWithMovablePointer = _webView as IWithMovablePointer;
+            var webViewWithMovablePointer = WebView as IWithMovablePointer;
             if (webViewWithMovablePointer == null) {
                 return;
             }
@@ -552,8 +649,8 @@ namespace Vuplex.WebView {
 
         void OnDestroy() {
 
-            if (_webView != null && !_webView.IsDisposed) {
-                _webView.Dispose();
+            if (WebView != null && !WebView.IsDisposed) {
+                WebView.Dispose();
             }
             Destroy();
             // Unity doesn't automatically destroy materials and textures
@@ -571,10 +668,10 @@ namespace Vuplex.WebView {
         void _scrollIfNeeded(Vector2 scrollDelta, Vector2 point) {
 
             // scrollDelta can be zero when the user drags the cursor off the screen.
-            if (!ScrollingEnabled || _webView == null || scrollDelta == Vector2.zero) {
+            if (!ScrollingEnabled || WebView == null || scrollDelta == Vector2.zero) {
                 return;
             }
-            _webView.Scroll(scrollDelta, point);
+            WebView.Scroll(scrollDelta, point);
             var handler = Scrolled;
             if (handler != null) {
                 handler(this, new ScrolledEventArgs(scrollDelta, point));
@@ -585,6 +682,9 @@ namespace Vuplex.WebView {
 
         void _setVideoRect(Rect videoRect) {
 
+            if (_videoLayer == null) {
+                return;
+            }
             _view.SetCutoutRect(videoRect);
             _setVideoLayerPosition(videoRect);
             // This code applies a cropping rect to the video layer's shader based on what part of the video (if any)
@@ -605,7 +705,7 @@ namespace Vuplex.WebView {
 
         void _throwExceptionIfInitialized() {
 
-            if (_webView != null) {
+            if (WebView != null) {
                 throw new InvalidOperationException("Init() cannot be called on a WebViewPrefab that has already been initialized.");
             }
         }
@@ -613,9 +713,9 @@ namespace Vuplex.WebView {
         void Update() {
 
             // Check if LogConsoleMessages is changed from false to true at runtime.
-            if (LogConsoleMessages && !_consoleMessageLoggedHandlerAttached && _webView != null) {
+            if (LogConsoleMessages && !_consoleMessageLoggedHandlerAttached && WebView != null) {
                 _consoleMessageLoggedHandlerAttached = true;
-                _webView.ConsoleMessageLogged += WebView_ConsoleMessageLogged;
+                WebView.ConsoleMessageLogged += WebView_ConsoleMessageLogged;
             }
         }
 

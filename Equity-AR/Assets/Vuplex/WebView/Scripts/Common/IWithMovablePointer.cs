@@ -18,8 +18,12 @@ using UnityEngine;
 namespace Vuplex.WebView {
     /// <summary>
     /// An interface implemented by a webview if it supports `MovePointer`,
-    /// which can be used to implement hover or drag-and-drop interactions.
+    /// which can be used to implement hover or drag interactions.
     /// </summary>
+    /// <remarks>
+    /// For information on the limitations of hover and drag interactions on iOS and UWP, please see
+    /// https://support.vuplex.comarticles/hover-and-drag-limitations.
+    /// <remarks>
     public interface IWithMovablePointer {
         /// <summary>
         /// Moves the pointer to the given point in the webpage.
@@ -27,7 +31,7 @@ namespace Vuplex.WebView {
         /// <remarks>
         /// This can be used to trigger hover effects in the page or can be used
         /// in conjunction with the `IWithPointerDownAndUp` interface to implement
-        /// drag-and-drop interactions.
+        /// drag interactions.
         /// </remarks>
         /// <param name="point">
         /// The x and y components of the point are values

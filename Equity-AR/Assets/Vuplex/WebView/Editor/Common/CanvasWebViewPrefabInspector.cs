@@ -15,13 +15,32 @@
 */
 using UnityEditor;
 
-namespace Vuplex.WebView {
+namespace Vuplex.WebView.Editor {
 
     [CustomEditor(typeof(CanvasWebViewPrefab))]
     public class CanvasWebViewPrefabInspector : BaseWebViewPrefabInspector {
 
+        public override void OnEnable() {
+
+            base.OnEnable();
+            serializedObject.Update();
+            _native2DModeEnabled = serializedObject.FindProperty("Native2DModeEnabled");
+        }
+
+        SerializedProperty _native2DModeEnabled;
+
         protected override string _getDocumentationLink() {
             return "https://developer.vuplex.com/webview/CanvasWebViewPrefab";
+        }
+
+        protected override void _renderCustomOtherSettings() {
+
+            EditorGUILayout.HelpBox("These settings are used with the default rendering mode but are ignored when running in native 2D mode.", MessageType.Info);
+        }
+
+        protected override void _renderCustomPlatformSpecificSettings() {
+
+            EditorGUILayout.PropertyField(_native2DModeEnabled);
         }
     }
 }

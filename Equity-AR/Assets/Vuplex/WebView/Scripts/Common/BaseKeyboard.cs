@@ -51,6 +51,10 @@ namespace Vuplex.WebView {
                     // On Android Gecko, hovering steals focus.
                     _webViewPrefab.HoveringEnabled = false;
                 }
+                // Scrolling and dragging can also cause the keyboard
+                // to steal focus on Android Gecko, so just disable them.
+                _webViewPrefab.ScrollingEnabled = false;
+                _webViewPrefab.DragMode = DragMode.Disabled;
                 _webViewPrefab.WebView.MessageEmitted += WebView_MessageEmitted;
                 // Android Gecko and Hololens don't support transparent webviews, so set the cutout
                 // rect to the entire view so that the shader makes its black background
@@ -114,6 +118,19 @@ namespace Vuplex.WebView {
             };
             var serializedMessage = JsonUtility.ToJson(message);
             _webViewPrefab.WebView.PostMessage(serializedMessage);
+        }
+
+        protected static void _setLayerRecursively(GameObject gameObject, int layer) {
+
+            if (gameObject == null) {
+                return;
+            }
+            gameObject.layer = layer;
+            foreach (Transform child in gameObject.transform) {
+                if (child != null) {
+                    _setLayerRecursively(child.gameObject, layer);
+                }
+            }
         }
     }
 }

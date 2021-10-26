@@ -15,6 +15,7 @@
 */
 using System;
 using UnityEngine;
+using Vuplex.WebView.Internal;
 
 namespace Vuplex.WebView {
 

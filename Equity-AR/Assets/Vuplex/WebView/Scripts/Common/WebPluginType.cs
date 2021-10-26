@@ -21,6 +21,7 @@ namespace Vuplex.WebView {
         iOS,
         Mac,
         Mock,
+        WebGL,
         Windows,
         UniversalWindowsPlatform
     }

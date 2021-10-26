@@ -22,9 +22,10 @@ namespace Vuplex.WebView {
     /// </summary>
     public class DownloadChangedEventArgs : EventArgs {
 
-        public DownloadChangedEventArgs(string contentType, string filePath, float progress, ProgressChangeType type, string url) {
+        public DownloadChangedEventArgs(string contentType, string filePath, string id, float progress, ProgressChangeType type, string url) {
             ContentType = contentType;
             FilePath = filePath;
+            Id = id;
             Progress = progress;
             Type = type;
             Url = url;
@@ -34,20 +35,26 @@ namespace Vuplex.WebView {
         /// The mime type indicated by the `Content-Type` response header,
         /// or `null` if no content type was specified.
         /// </summary>
-        readonly public string ContentType;
+        public readonly string ContentType;
 
         /// <summary>
         /// The full file path of the downloaded file. Files are downloaded to
-        /// Application.temporaryCachePath, but you can move them to a different
+        /// `Application.temporaryCachePath`, but you can move them to a different
         /// location after they finish downloading.
         /// </summary>
-        readonly public string FilePath;
+        public readonly string FilePath;
+
+        /// <summary>
+        /// An identifier for the file, which can be used to track the
+        /// file's download progress across multiple invocations of the `DownloadChanged` event.
+        /// </summary>
+        public readonly string Id;
 
         /// <summary>
         /// The estimated download progress, normalized to a float between 0 and 1.
         /// Note that not all platforms support intermediate progress updates.
         /// </summary>
-        readonly public float Progress;
+        public readonly float Progress;
 
         /// <summary>
         /// The download progress event type. Note that not all platforms
@@ -58,7 +65,7 @@ namespace Vuplex.WebView {
         /// <summary>
         /// The URL from which the file was downloaded.
         /// </summary>
-        readonly public string Url;
+        public readonly string Url;
     }
 }
 

@@ -18,15 +18,26 @@ using UnityEngine;
 namespace Vuplex.WebView.Demos {
 
     /// <summary>
-    /// Sets up the CanvasPopupDemo scene, which demonstrates how to use
+    /// Sets up the PopupDemo scene, which demonstrates how to use
     /// the IWithPopups interface with WebViewPrefab.
     /// </summary>
+    /// <remarks>
+    /// Links: <br/>
+    /// - WebViewPrefab docs: https://developer.vuplex.com/webview/WebViewPrefab <br/>
+    /// - IWithPopups: https://developer.vuplex.com/webview/IWithPopups <br/>
+    /// - How clicking works: https://support.vuplex.com/articles/clicking <br/>
+    /// - Other examples: https://developer.vuplex.com/webview/overview#examples <br/>
+    /// </remarks>
     class PopupDemo : MonoBehaviour {
 
         WebViewPrefab _focusedPrefab;
         HardwareKeyboardListener _hardwareKeyboardListener;
 
         void Start() {
+
+            // Use a desktop User-Agent to request the desktop versions of websites.
+            // https://developer.vuplex.com/webview/Web#SetUserAgent
+            Web.SetUserAgent(false);
 
             // Create a 0.6 x 0.3 webview for the main web content.
             var mainWebViewPrefab = WebViewPrefab.Instantiate(0.6f, 0.3f);
@@ -42,12 +53,12 @@ namespace Vuplex.WebView.Demos {
                     return;
                 }
 
-                WebViewLogger.Log("Loading Pinterest as an example because it uses popups for third party login. Click 'Login', then select Facebook or Google to open a popup for authentication.");
+                Debug.Log("Loading Pinterest as an example because it uses popups for third party login. Click 'Login', then select Facebook or Google to open a popup for authentication.");
                 mainWebViewPrefab.WebView.LoadUrl("https://pinterest.com");
 
                 webViewWithPopups.SetPopupMode(PopupMode.LoadInNewWebView);
                 webViewWithPopups.PopupRequested += (webView, eventArgs) => {
-                    WebViewLogger.Log("Popup opened with URL: " + eventArgs.Url);
+                    Debug.Log("Popup opened with URL: " + eventArgs.Url);
                     var popupPrefab = WebViewPrefab.Instantiate(eventArgs.WebView);
                     _focusedPrefab = popupPrefab;
                     popupPrefab.transform.parent = transform;
@@ -56,7 +67,7 @@ namespace Vuplex.WebView.Demos {
                     popupPrefab.transform.localEulerAngles = new Vector3(0, 180, 0);
                     popupPrefab.Initialized += (sender, initializedEventArgs) => {
                         popupPrefab.WebView.CloseRequested += (popupWebView, closeEventArgs) => {
-                            WebViewLogger.Log("Closing the popup");
+                            Debug.Log("Closing the popup");
                             _focusedPrefab = mainWebViewPrefab;
                             popupPrefab.Destroy();
                         };

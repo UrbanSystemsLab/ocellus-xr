@@ -22,7 +22,7 @@ using UnityEditor.Build;
 using UnityEditor.Callbacks;
 using UnityEditor.iOS.Xcode;
 
-namespace Vuplex.WebView {
+namespace Vuplex.WebView.Editor {
 
     /// <summary>
     ///  Makes the following changes to the generated Xcode project:

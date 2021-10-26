@@ -20,17 +20,7 @@ namespace Vuplex.WebView {
     [Serializable]
     public class UrlAction {
 
-        public UrlAction() {}
-
-        public UrlAction(string url, string title, string type) {
-            Url = url;
-            Title = title;
-            Type = type;
-        }
-
         public string Url;
-
-        public string Title;
 
         /// <see cref="UrlActionType"/>
         public string Type;
