@@ -28,10 +28,6 @@ public class JSCom : MonoBehaviour
             Debug.Log("JSON IS HERE!!!");
         };
     }
-    private void Update()
-    {
-        //Debug.Log("@@@@@@@");
-    }
 
     public void ReceiveJsonButton()
     {
@@ -45,7 +41,7 @@ public class JSCom : MonoBehaviour
 
     public void SendJsonButton()
     {
-        webViewPrefab.WebView.UrlChanged += (sender, e) =>
+        webViewPrefab.Initialized += (sender, e) =>
         {
             webViewPrefab.WebView.LoadProgressChanged += WebView_LoadProgressChanged;
         };
