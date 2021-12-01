@@ -41,6 +41,7 @@ public class JSCom : MonoBehaviour
 
     public void SendJsonButton()
     {
+
         webViewPrefab.Initialized += (sender, e) =>
         {
             webViewPrefab.WebView.LoadProgressChanged += WebView_LoadProgressChanged;
@@ -62,7 +63,15 @@ public class JSCom : MonoBehaviour
         // Send a message after the page has loaded.
         if (eventArgs.Type == ProgressChangeType.Finished)
         {
-            webViewPrefab.WebView.PostMessage("{\"type\": \"greeting\", \"message\": \"Hello from Elena!\"}");
+            MessageClass messageClass = new MessageClass();
+            messageClass.message.latitude = AskLocation.Instance.lat;
+            messageClass.message.longtitude = AskLocation.Instance.lon;
+            messageClass.message.id = Random.Range(0, 10);
+            messageClass.message.sent = true;
+            string JSON = JsonUtility.ToJson(messageClass);
+            //Debug.Log(JSON);
+
+            webViewPrefab.WebView.PostMessage(JSON);
         }
     }
 
