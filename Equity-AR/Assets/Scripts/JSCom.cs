@@ -76,10 +76,10 @@ public class JSCom : MonoBehaviour
             {
                 var headerText = await webViewPrefab.WebView.ExecuteJavaScript(myJS);
                 infoText.text += headerText;
-                Debug.Log("my text is "+ headerText);
+                Debug.Log("my text is " + headerText);
             }
         };
     }
 
-    
+
 }

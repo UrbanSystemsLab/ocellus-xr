@@ -1,8 +1,8 @@
 iOS
 PlayerPath?
-/Users/lala/Desktop/USL-UnityBuildVersion/equity-ar-test-023-send
+/Users/lala/Desktop/USL-UnityBuildVersion/equity-ar-test-025-switch1
 SceneListBegin?
-Assets/Scenes/Lat&Long.unity
+Assets/Scenes/Switch 1 Map.unity
 SceneListEnd?
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TerrainDataFetcher
 b9751259642f2166c56b27bb39f65c26 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Components.VertexDebugger
@@ -46,6 +46,7 @@ c3a3572e43af691ece9d1180e73b89c4 Assembly-CSharp.dll:Mapbox.Unity.Location.Devic
 5c02f28a4b832a7a93964fc337726128 Assembly-CSharp.dll:.TapToPlaceObject
 23dfd1cd63a3bc183a0f1afec0f15fc7 Assembly-CSharp.dll:Mapbox.Unity.Location.AngleSmoothingLowPass
 9e95ef84e8c2a99b2e9a9017423ae1d8 Assembly-CSharp.dll:.TreeInfoManager
+c282e8e5ef50a38633110880ef121e7a Assembly-CSharp.dll:.AskLocation
 ce9de2d2cf899735f51215dae2cd32d7 Assembly-CSharp.dll:UnityARInterface.MatchingScalePicker
 b6978e66c5e3e2cb9b5b4f047f01fac3 Assembly-CSharp.dll:Mapbox.Examples.POIPlacementScriptExample
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Factories.VectorTileFactory
@@ -467,6 +468,7 @@ f0e792afefd9f5d684aaa5a3dd8994f2 Assembly-CSharp.dll:Lean.Touch.LeanSpawn
 278164257643f57c11bdc8464574bcee Assembly-CSharp.dll:Vuplex.WebView.WebViewPrefab
 ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:Mapbox.Unity.MeshGeneration.Modifiers.MeshModifier
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.UnityARKitLightManager
+2981ccecff2420641cc93cf3e2049f5f Assembly-CSharp.dll:.UpdateLocation
 007b5ca987b5e06e4f6e4ec41a343600 Assembly-CSharp.dll:UnityARInterface.ARPointCloudVisualizer
 d30406e93dfde99d69d2b1c0ea2559b1 Assembly-CSharp.dll:Mapbox.Unity.Location.AngleSmoothingAverage
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Vuplex.WebView.Internal.ViewportMaterialView

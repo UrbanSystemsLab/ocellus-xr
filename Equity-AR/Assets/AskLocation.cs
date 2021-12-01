@@ -1,14 +1,21 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AskLocation : MonoBehaviour
 {
+    public static AskLocation Instance
+    {
+        set;
+        get;
+    }
     public float lat;
     public float lon;
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
         StartCoroutine(StartLocationService());
     }
 
