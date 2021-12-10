@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AskLocation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/JSCom.cs">
     <Files>
-      <File FileName="Assets/Scripts/JSCom.cs" Line="86" Column="1" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="58" Column="44" />
       <File FileName="Assets/reloadWeb.cs" />
       <File FileName="Assets/Vuplex/WebView/Demos/Scripts/CanvasWebViewDemo.cs" />
-      <File FileName="Assets/UpdateLocation.cs" Line="12" Column="37" />
-      <File FileName="Assets/Scripts/Switcher.cs" Line="1" Column="1" />
+      <File FileName="Assets/UpdateLocation.cs" />
+      <File FileName="Assets/Scripts/Switcher.cs" />
       <File FileName="Assets/MessageClass.cs" Line="12" Column="23" />
-      <File FileName="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/FileMonitor.cs" Line="168" Column="1" />
+      <File FileName="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/FileMonitor.cs" />
       <File FileName="Assets/AskLocation.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -15,7 +15,9 @@
         <State name="__root__">
           <Node name="Equity-AR" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="JSCom.cs" selected="True" />
+              </Node>
               <Node name="ThirdPartyAssets" expanded="True">
                 <Node name="WoLfulus" expanded="True">
                   <Node name="LineEnding" expanded="True">
@@ -30,7 +32,6 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="AskLocation.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -40,7 +41,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="89074b60-0a07-4002-ab5f-268dfc877c5a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0550d7e2-151f-4ea4-980c-b2c48f1213ff" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
