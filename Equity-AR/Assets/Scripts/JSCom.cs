@@ -12,50 +12,74 @@ public class JSCom : MonoBehaviour
     //public string myJS;
     public Text infoText;
 
-    // Start is called before the first frame update
-    void Start()
+
+    async void Start()
     {
-        //Old communication function that change innerHTML of the webpage
-        //Debug.Log(myJS);
-        //ExcuteJavaScript(myJS);
+        await webViewPrefab.WaitUntilInitialized();
 
-        SendJsonButton();
+        Debug.Log("the webview is ready in unity");
+        MessageClass messageClass = new MessageClass();
+        messageClass.message.latitude = AskLocation.Instance.lat;
+        messageClass.message.longtitude = AskLocation.Instance.lon;
+        messageClass.message.id = Random.Range(0, 10);
+        messageClass.message.sent = true;
+        string JSON = JsonUtility.ToJson(messageClass);
+        Debug.Log("constructing JSON string now");
+        // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
+        // is null until the prefab has initialized.
+        // Use the LoadProgressChanged event to determine when the page has loaded.
+        webViewPrefab.WebView.LoadProgressChanged += (sender, eventArgs) => {
+            // Send a message after the page has loaded.
+            if (eventArgs.Type == ProgressChangeType.Finished)
+            {
+                webViewPrefab.WebView.PostMessage(JSON);
+                Debug.Log("post JSON string from Unity to Javascript");
+            }
+        };
 
-        webViewPrefab.Clicked += (sender, e) =>
-        {
-            //Receiving Json function
-            webViewPrefab.WebView.MessageEmitted += WebView_MessageEmitted;
-            Debug.Log("JSON IS HERE!!!");
+
+        clickingDetection();
+
+    }
+
+    private void clickingDetection()
+    {
+        webViewPrefab.WebView.PageLoadScripts.Add("document.documentElement.addEventListener('click', () => vuplex.postMessage('clicked'));");
+        webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
+            if (eventArgs.Value == "clicked")
+            {
+                Debug.Log("The webview was clicked");
+                infoText.text += eventArgs.Value;
+                Debug.Log(eventArgs.Value);
+            }
+            else
+            {
+                Debug.Log("The webview is doing something else");
+                Debug.Log(eventArgs.Value);
+            }
+            //const data = JSON.parse(message.data);
+            //if (MessageType)
         };
     }
 
-    public void ReceiveJsonButton()
-    {
-        webViewPrefab.Initialized += (sender, e) =>
-        {
-            //Receiving Json function
-            webViewPrefab.WebView.MessageEmitted += WebView_MessageEmitted;
-        };
-        Debug.Log("receive Button is working");
-    }
 
-    public void SendJsonButton()
-    {
+    //public void ReceiveJsonButton()
+    //{
+    //    webViewPrefab.Initialized += (sender, e) =>
+    //    {
+    //        //Receiving Json function
+    //        webViewPrefab.WebView.MessageEmitted += WebView_MessageEmitted;
+    //    };
+    //    Debug.Log("receive Button is working");
+    //}
 
-        webViewPrefab.Initialized += (sender, e) =>
-        {
-            webViewPrefab.WebView.LoadProgressChanged += WebView_LoadProgressChanged;
-        };
-        Debug.Log("Successfully send a JSON message");
-    }
-
-    //Receive Json
-    void WebView_MessageEmitted(object sender, EventArgs<string> eventArgs)
-    {
-        var json = eventArgs.Value;
-        Debug.Log("JSON received: " + json);
-        infoText.text += json;
-    }
+    ////Receive Json
+    //void WebView_MessageEmitted(object sender, EventArgs<string> eventArgs)
+    //{
+    //    var json = eventArgs.Value;
+    //    Debug.Log("JSON received: " + json);
+    //    infoText.text += json;
+    //}
 
     //Send Json
     void WebView_LoadProgressChanged(object sender, ProgressChangedEventArgs eventArgs)
