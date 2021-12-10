@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2A6FA72B-F185-8576-E010-162EE3995D02}</ProjectGuid>
+    <ProjectGuid>{F7216EDB-617B-250F-8E54-59564054F5F7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
@@ -71,46 +71,46 @@
     <Compile Include="Assets\Plugins\StansAssets\Foundation\APIModules\Public\SamplesUIFactory\Editor\UIBuilders\TabsBuilder.cs" />
     <Compile Include="Assets\Plugins\StansAssets\Foundation\APIModules\Public\SamplesUIFactory\Editor\UIBuilders\TitlePanelBuilder.cs" />
     <Reference Include="Unity.XR.ARKit">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.XR.ARKit.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.XR.ARKit.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARSubsystems">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARSubsystems.Editor">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARCore">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARFoundation.Editor">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARFoundation">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARCore.Editor">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.XR.ARCore.Editor.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.XR.ARCore.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARKit.Editor">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/ScriptAssemblies/Unity.XR.ARKit.Editor.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/Unity.XR.ARKit.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2018.4.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -353,52 +353,52 @@
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandler">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Google.JarResolver_v1.2.122.0">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.122.0.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.122.0.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandlerImpl_v1.2.122.0">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.122.0.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.122.0.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver_v1.2.122.0">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.122.0.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.122.0.dll</HintPath>
     </Reference>
     <Reference Include="MapboxAccountsUnity">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/Mapbox/Core/Plugins/Mapbox/MapboxAccounts/net35/MapboxAccountsUnity.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/MapboxAccounts/net35/MapboxAccountsUnity.dll</HintPath>
     </Reference>
     <Reference Include="Mapbox.VectorTile.Geometry">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.Geometry.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.Geometry.dll</HintPath>
     </Reference>
     <Reference Include="Mapbox.VectorTile.ExtensionMethods">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.ExtensionMethods.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.ExtensionMethods.dll</HintPath>
     </Reference>
     <Reference Include="Mapbox.VectorTile.PbfReader">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.PbfReader.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.PbfReader.dll</HintPath>
     </Reference>
     <Reference Include="Mapbox.VectorTile.VectorTileReader">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.VectorTileReader.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.VectorTileReader.dll</HintPath>
     </Reference>
     <Reference Include="Mapbox.Json">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.Json/Net35/Mapbox.Json.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.Json/Net35/Mapbox.Json.dll</HintPath>
     </Reference>
     <Reference Include="Mapbox.IO.Compression">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>/Users/lala/Desktop/equity-ar-master/Equity-AR copy/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>/Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2018.4.13f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -763,43 +763,43 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{D8C4E201-1B16-C92B-F405-2F9F0E414AFE}</Project>
+      <Project>{69B20D20-37BB-37B2-154F-08B3D992217A}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="SA.Foundation.csproj">
-      <Project>{1C5B9D34-9D75-99DC-4BE1-C984FE99E7F5}</Project>
+      <Project>{149DECB0-A173-2CA3-84A8-47D8D307FD6F}</Project>
       <Name>SA.Foundation</Name>
     </ProjectReference>
     <ProjectReference Include="SA.iOS.csproj">
-      <Project>{192DE6E7-94F3-9238-6F6D-2890574CBD9C}</Project>
+      <Project>{5DAEBD5F-9D9A-AC12-5542-DC8624CAAA54}</Project>
       <Name>SA.iOS</Name>
     </ProjectReference>
     <ProjectReference Include="SA.iOS.XCode.Editor.csproj">
-      <Project>{E9A74A53-C544-CC53-3BAF-0B404D980DD4}</Project>
+      <Project>{9A03E680-5910-C4C0-27F3-625976688239}</Project>
       <Name>SA.iOS.XCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SA.Foundation.ThirdParty.Editor.csproj">
-      <Project>{DDA59CD1-8952-14A1-548F-10956E8CE8BB}</Project>
+      <Project>{DBC4BBA8-74B2-B920-5D33-5DF5BC350F18}</Project>
       <Name>SA.Foundation.ThirdParty.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SA.iOS.Editor.csproj">
-      <Project>{9DE817B6-A272-9C39-BFE3-11B00DFFD60D}</Project>
+      <Project>{4795FC67-C918-E69D-C855-B13B31A70EA4}</Project>
       <Name>SA.iOS.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SA.Foundation.Editor.csproj">
-      <Project>{146D03C9-0F7A-5C04-7FAD-038E3E12D577}</Project>
+      <Project>{82AA983D-9909-EE22-ECDA-B3A85FF0B4B8}</Project>
       <Name>SA.Foundation.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="StansAssets.Foundation.csproj">
-      <Project>{C53D9CDF-003B-522A-FEF5-4B6B58212E2F}</Project>
+      <Project>{E61C53B3-80A0-D16A-8A4C-57F610C82151}</Project>
       <Name>StansAssets.Foundation</Name>
     </ProjectReference>
     <ProjectReference Include="StansAssets.Foundation.Editor.csproj">
-      <Project>{24E4BA1C-0F40-2410-9CE2-C0ABE974F7B7}</Project>
+      <Project>{8F4E18BC-720B-7A3A-2E18-8809385953A1}</Project>
       <Name>StansAssets.Foundation.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SA.iOS.XCode.csproj">
-      <Project>{F62CC1F5-1D4A-606E-29A2-BB710B25A3D5}</Project>
+      <Project>{A9DE3087-6CE3-2147-7DC8-54FD684ACBA4}</Project>
       <Name>SA.iOS.XCode</Name>
     </ProjectReference>
   </ItemGroup>

@@ -24,5 +24,7 @@ public class reloadWeb : MonoBehaviour
         //await webViewPrefab.WaitUntilInitialized();
         webViewPrefab.WebView.LoadUrl(url);
         Debug.Log("load url: " + url);
+
+        
     }
 }
