@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/toggleWebView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MessageClass.cs">
     <Files>
+      <File FileName="Assets/Scripts/UpdateLocation.cs" Line="11" Column="6" />
       <File FileName="Assets/Scripts/reloadWeb.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/JSCom.cs" Line="21" Column="56" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="21" Column="53" />
       <File FileName="Assets/Vuplex/WebView/Demos/Scripts/CanvasWebViewDemo.cs" />
       <File FileName="Assets/Scripts/Switcher.cs" />
       <File FileName="Assets/Scripts/toggleWebView.cs" Line="20" Column="10" />
+      <File FileName="Assets/Scripts/AskLocation.cs" Line="18" Column="39" />
+      <File FileName="Assets/Scripts/MessageClass.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +16,7 @@
           <Node name="Equity-AR" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="toggleWebView.cs" selected="True" />
+                <Node name="MessageClass.cs" selected="True" />
               </Node>
               <Node name="ThirdPartyAssets" expanded="True">
                 <Node name="WoLfulus" expanded="True">
@@ -38,7 +41,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e9d42a27-3f89-47db-bb0d-9458b2056e63" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ccc71f50-f8f9-47eb-ab34-4bca2154d4ab" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

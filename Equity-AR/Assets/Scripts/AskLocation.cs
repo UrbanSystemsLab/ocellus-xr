@@ -9,9 +9,10 @@ public class AskLocation : MonoBehaviour
         set;
         get;
     }
+
     public float lat;
     public float lon;
-    // Start is called before the first frame update
+ 
     void Start()
     {
         Instance = this;
@@ -20,10 +21,6 @@ public class AskLocation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private IEnumerator StartLocationService()
     {
         if (!Input.location.isEnabledByUser)

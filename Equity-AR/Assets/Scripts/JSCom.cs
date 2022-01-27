@@ -23,7 +23,7 @@ public class JSCom : MonoBehaviour
         messageClass.message.longtitude = AskLocation.Instance.lon;
         messageClass.message.id = Random.Range(0, 10);
         messageClass.message.sent = true;
-        string JSON = JsonUtility.ToJson(messageClass);
+        //string JSON = JsonUtility.ToJson(messageClass);
         Debug.Log("constructing JSON string now");
         // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
         // is null until the prefab has initialized.
@@ -32,8 +32,29 @@ public class JSCom : MonoBehaviour
             // Send a message after the page has loaded.
             if (eventArgs.Type == ProgressChangeType.Finished)
             {
-                webViewPrefab.WebView.PostMessage(JSON);
-                Debug.Log("post JSON string from Unity to Javascript");
+                if (!Input.location.isEnabledByUser)
+                {
+                    //User has not enable location service, give it a default lat&lon :Central Park
+                    messageClass.message.latitude = 40.7812f;
+                    messageClass.message.longtitude = -73.9665f;
+                    messageClass.message.id = Random.Range(0, 10);
+                    messageClass.message.sent = true;
+                    string JSON = JsonUtility.ToJson(messageClass);
+                    webViewPrefab.WebView.PostMessage(JSON);
+                    Debug.Log("post Central Park Default string from Unity to Javascript");
+                }
+                else
+                {
+                    //User enable location service,get user's location and post message
+                    messageClass.message.latitude = AskLocation.Instance.lat;
+                    messageClass.message.longtitude = AskLocation.Instance.lon;
+                    messageClass.message.id = Random.Range(0, 10);
+                    messageClass.message.sent = true;
+                    string JSON = JsonUtility.ToJson(messageClass);
+                    webViewPrefab.WebView.PostMessage(JSON);
+                    webViewPrefab.WebView.PostMessage(JSON);
+                    Debug.Log("post JSON string from Unity to Javascript");
+                }
             }
         };
 
@@ -55,6 +76,7 @@ public class JSCom : MonoBehaviour
             else
             {
                 Debug.Log("The webview is doing something else");
+                infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
             }
             //const data = JSON.parse(message.data);
