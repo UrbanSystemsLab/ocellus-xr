@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MessageClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/JSCom.cs">
     <Files>
       <File FileName="Assets/Scripts/UpdateLocation.cs" Line="11" Column="6" />
       <File FileName="Assets/Scripts/reloadWeb.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/JSCom.cs" Line="21" Column="53" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="25" Column="42" />
       <File FileName="Assets/Vuplex/WebView/Demos/Scripts/CanvasWebViewDemo.cs" />
       <File FileName="Assets/Scripts/Switcher.cs" />
       <File FileName="Assets/Scripts/toggleWebView.cs" Line="20" Column="10" />
-      <File FileName="Assets/Scripts/AskLocation.cs" Line="18" Column="39" />
-      <File FileName="Assets/Scripts/MessageClass.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MessageClass.cs" Line="4" Column="26" />
+      <File FileName="Assets/Scripts/AskLocation.cs" Line="11" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +16,7 @@
           <Node name="Equity-AR" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="MessageClass.cs" selected="True" />
+                <Node name="JSCom.cs" selected="True" />
               </Node>
               <Node name="ThirdPartyAssets" expanded="True">
                 <Node name="WoLfulus" expanded="True">
