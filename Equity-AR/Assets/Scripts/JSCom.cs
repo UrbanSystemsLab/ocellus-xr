@@ -65,19 +65,24 @@ public class JSCom : MonoBehaviour
 
     private void clickingDetection()
     {
+        //This line of code is to insert JavaScript code into the web that is running in vulplex in unity
         webViewPrefab.WebView.PageLoadScripts.Add("document.documentElement.addEventListener('click', () => vuplex.postMessage('clicked'));");
+        //Whenever there is a message get sent to Unity, this is the function to receive and handle it.
         webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
             if (eventArgs.Value == "clicked")
             {
+
                 Debug.Log("The webview was clicked");
                 infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
+                //print "clicked"
             }
             else
             {
                 Debug.Log("The webview is doing something else");
                 infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
+                // print JSON
             }
             //const data = JSON.parse(message.data);
             //if (MessageType)
