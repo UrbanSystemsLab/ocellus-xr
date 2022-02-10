@@ -25,6 +25,7 @@ public class JSCom : MonoBehaviour
         messageClass.message.sent = true;
         //string JSON = JsonUtility.ToJson(messageClass);
         Debug.Log("constructing JSON string now");
+
         // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
         // is null until the prefab has initialized.
         // Use the LoadProgressChanged event to determine when the page has loaded.
@@ -83,6 +84,14 @@ public class JSCom : MonoBehaviour
                 infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
                 // print JSON
+
+                //testing for parsing json
+                //string testing = @"{""type"":""layer"",""data"":{""layer"":""heat""}}";
+                //string testing = "{\"type\": \"layer\"}";
+                MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
+                gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
+                Debug.Log("the layer is : " + gotData.data.layer);
+
             }
             //const data = JSON.parse(message.data);
             //if (MessageType)
