@@ -11,7 +11,7 @@ public class JSCom : MonoBehaviour
     public CanvasWebViewPrefab webViewPrefab;
     //public string myJS;
     public Text infoText;
-
+    MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
 
     async void Start()
     {
@@ -25,6 +25,8 @@ public class JSCom : MonoBehaviour
         messageClass.message.sent = true;
         //string JSON = JsonUtility.ToJson(messageClass);
         Debug.Log("constructing JSON string now");
+
+        
 
         // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
         // is null until the prefab has initialized.
@@ -91,6 +93,11 @@ public class JSCom : MonoBehaviour
                 MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
                 gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
                 Debug.Log("the layer is : " + gotData.data.layer);
+                //storing the json data in WebInfoStats
+                WebInfoStats.Stats.currentLayer = gotData.data.layer;
+                WebInfoStats.Stats.selectedLat = gotData.data.lat;
+                WebInfoStats.Stats.selectedLon = gotData.data.lon;
+
 
             }
             //const data = JSON.parse(message.data);
