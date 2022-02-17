@@ -49,6 +49,22 @@ public class Switcher : MonoBehaviour
         incomeisActive = false;
         openSpaceisActive = false;
         sixtyFivePlusisActive = false;
+
+        var tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Temperature");
+        var floodLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("FloodPlane");
+        if (WebInfoStats.Stats.currentLayer != null)
+        {
+            if(WebInfoStats.Stats.currentLayer == "heat" && !heatmapisActive)
+            {
+                tempLayer.SetActive(true);
+                heatmapisActive = true;
+            }else if(WebInfoStats.Stats.currentLayer == "flood" && !floodisActive)
+            {
+                floodLayer.SetActive(true);
+                floodisActive = true;
+            }
+            
+        }
     }
 
     private void Update()
