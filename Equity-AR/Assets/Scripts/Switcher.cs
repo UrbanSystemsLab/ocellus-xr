@@ -52,6 +52,7 @@ public class Switcher : MonoBehaviour
 
         var tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Temperature");
         var floodLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("FloodPlane");
+        var NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
         if (WebInfoStats.Stats.currentLayer != null)
         {
             if(WebInfoStats.Stats.currentLayer == "heat" && !heatmapisActive)

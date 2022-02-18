@@ -7,7 +7,7 @@
       <File FileName="Assets/Scripts/UpdateLocation.cs" />
       <File FileName="Assets/Scripts/reloadWeb.cs" />
       <File FileName="Assets/Vuplex/WebView/Demos/Scripts/CanvasWebViewDemo.cs" />
-      <File FileName="Assets/Scripts/Switcher.cs" Line="57" Column="61" />
+      <File FileName="Assets/Scripts/Switcher.cs" Line="69" Column="6" />
       <File FileName="Assets/Scripts/toggleWebView.cs" />
       <File FileName="Assets/Scripts/MessageClass.cs" />
       <File FileName="Assets/Scripts/AskLocation.cs" />
