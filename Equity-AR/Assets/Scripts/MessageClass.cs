@@ -13,7 +13,24 @@ public class MessageClass : MonoBehaviour
         public bool sent;
     }
 
+    [Serializable]
+    public struct RecieveJSON
+    {
+        public string type;
+        public DataContent data;
+    }
+
+    [Serializable]
+    public struct DataContent
+    {
+        public string layer;
+        public float lat;
+        public float lon;
+    }
+
 
     [SerializeField]
     public Message message;
+    public DataContent data;
+    public RecieveJSON recievedJSON;
 }

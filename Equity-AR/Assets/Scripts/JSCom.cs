@@ -11,7 +11,7 @@ public class JSCom : MonoBehaviour
     public CanvasWebViewPrefab webViewPrefab;
     //public string myJS;
     public Text infoText;
-
+    MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
 
     async void Start()
     {
@@ -25,6 +25,9 @@ public class JSCom : MonoBehaviour
         messageClass.message.sent = true;
         //string JSON = JsonUtility.ToJson(messageClass);
         Debug.Log("constructing JSON string now");
+
+        
+
         // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
         // is null until the prefab has initialized.
         // Use the LoadProgressChanged event to determine when the page has loaded.
@@ -65,19 +68,37 @@ public class JSCom : MonoBehaviour
 
     private void clickingDetection()
     {
+        //This line of code is to insert JavaScript code into the web that is running in vulplex in unity
         webViewPrefab.WebView.PageLoadScripts.Add("document.documentElement.addEventListener('click', () => vuplex.postMessage('clicked'));");
+        //Whenever there is a message get sent to Unity, this is the function to receive and handle it.
         webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
             if (eventArgs.Value == "clicked")
             {
+
                 Debug.Log("The webview was clicked");
                 infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
+                //print "clicked"
             }
             else
             {
                 Debug.Log("The webview is doing something else");
                 infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
+                // print JSON
+
+                //testing for parsing json
+                //string testing = @"{""type"":""layer"",""data"":{""layer"":""heat""}}";
+                //string testing = "{\"type\": \"layer\"}";
+                MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
+                gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
+                Debug.Log("the layer is : " + gotData.data.layer);
+                //storing the json data in WebInfoStats
+                WebInfoStats.Stats.currentLayer = gotData.data.layer;
+                WebInfoStats.Stats.selectedLat = gotData.data.lat;
+                WebInfoStats.Stats.selectedLon = gotData.data.lon;
+
+
             }
             //const data = JSON.parse(message.data);
             //if (MessageType)
