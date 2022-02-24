@@ -1,21 +1,22 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SliderHandler.cs">
     <Files>
-      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" Line="38" Column="15" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" Line="41" Column="50" />
       <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="74" Column="61" />
-      <File FileName="Assets/Scripts/JSCom.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UpdateLocation.cs" />
-      <File FileName="Assets/Scripts/reloadWeb.cs" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="101" Column="1" />
+      <File FileName="Assets/Scripts/UpdateLocation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/reloadWeb.cs" Line="1" Column="1" />
       <File FileName="Assets/Vuplex/WebView/Demos/Scripts/CanvasWebViewDemo.cs" />
-      <File FileName="Assets/Scripts/Switcher.cs" />
-      <File FileName="Assets/Scripts/toggleWebView.cs" />
+      <File FileName="Assets/Scripts/Switcher.cs" Line="73" Column="39" />
+      <File FileName="Assets/Scripts/toggleWebView.cs" Line="32" Column="1" />
       <File FileName="Assets/Scripts/MessageClass.cs" />
       <File FileName="Assets/Scripts/AskLocation.cs" />
       <File FileName="Assets/Scripts/WebInfoStats.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Unity/Map/TileProviders/RangeTileProvider.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SceneController.cs" />
+      <File FileName="Assets/Scripts/SceneController.cs" Line="1" Column="1" />
       <File FileName="Assets/Vuplex/WebView/Demos/Scripts/CameraRotator.cs" Line="1" Column="1" />
+      <File FileName="Assets/SliderHandler.cs" Line="7" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,9 +25,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Mapbox" expanded="True">
                 <Node name="Examples" expanded="True">
-                  <Node name="Scripts" expanded="True">
-                    <Node name="ForwardGeocodeUserInput.cs" selected="True" />
-                  </Node>
+                  <Node name="Scripts" expanded="True" />
                 </Node>
                 <Node name="Unity" expanded="True">
                   <Node name="Map" expanded="True">
@@ -49,6 +48,7 @@
                   </Node>
                 </Node>
               </Node>
+              <Node name="SliderHandler.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -50,29 +50,7 @@ public class Switcher : MonoBehaviour
         openSpaceisActive = false;
         sixtyFivePlusisActive = false;
 
-        var tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Temperature");
-        var floodLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("FloodPlane");
-        //var NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
-        if (WebInfoStats.Stats.currentLayer != null)
-        {
-            if(WebInfoStats.Stats.currentLayer == "heat" && !heatmapisActive)
-            {
-                tempLayer.SetActive(true);
-                //NY_buildings.SetActive(false);
-                heatmapisActive = true;
-                Debug.Log("Heat Layer is now displaying");
-            }else if(WebInfoStats.Stats.currentLayer == "flood" && !floodisActive)
-            {
-                floodLayer.SetActive(true);
-                //NY_buildings.SetActive(false);
-                floodisActive = true;
-                Debug.Log("Flood Layer is now displaying");
-            }
-        }
-        else
-        {
-            Debug.Log("WebInfo does not have any stats!!!");
-        }
+        
     }
 
     private void Update()
@@ -81,6 +59,34 @@ public class Switcher : MonoBehaviour
         //{
         //    _abstractMap = FindObjectOfType<AbstractMap>();
         //}
+
+        var tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Temperature");
+        var floodLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("FloodPlane");
+        var NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
+        if (WebInfoStats.Stats.currentLayer != null)
+        {
+            if (WebInfoStats.Stats.currentLayer == "heat" && !heatmapisActive)
+            {
+                tempLayer.SetActive(true);
+                NY_buildings.SetActive(false);
+                heatmapisActive = true;
+                floodisActive = false;
+                Debug.Log("Heat Layer is now displaying");
+            }
+            else if (WebInfoStats.Stats.currentLayer == "flood" && !floodisActive)
+            {
+                floodLayer.SetActive(true);
+                NY_buildings.SetActive(false);
+                floodisActive = true;
+                heatmapisActive = false;
+                Debug.Log("Flood Layer is now displaying");
+            }
+        }
+        else
+        {
+            NY_buildings.SetActive(true);
+            Debug.Log("WebInfo does not have any stats!!!");
+        }
     }
 
     

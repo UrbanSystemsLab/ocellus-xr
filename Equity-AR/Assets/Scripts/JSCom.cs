@@ -11,6 +11,7 @@ public class JSCom : MonoBehaviour
     public CanvasWebViewPrefab webViewPrefab;
     //public string myJS;
     public Text infoText;
+    public GameObject webViewObject;
     MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
 
     async void Start()
@@ -98,6 +99,7 @@ public class JSCom : MonoBehaviour
                 WebInfoStats.Stats.selectedLat = gotData.data.lat;
                 WebInfoStats.Stats.selectedLon = gotData.data.lon;
 
+                webViewObject.SetActive(false);
 
             }
             //const data = JSON.parse(message.data);

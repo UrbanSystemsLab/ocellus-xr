@@ -616,6 +616,7 @@
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\WebHandler.cs" />
     <Compile Include="Assets\Scripts\WebInfoStats.cs" />
+    <Compile Include="Assets\SliderHandler.cs" />
     <Compile Include="Assets\UnityARInterface\ARRemote\Scripts\ARRemoteDevice.cs" />
     <Compile Include="Assets\UnityARInterface\ARRemote\Scripts\ARRemoteEditor.cs" />
     <Compile Include="Assets\UnityARInterface\ARRemote\Scripts\ARRemoteEditorInterface.cs" />
