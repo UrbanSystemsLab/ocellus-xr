@@ -7,7 +7,7 @@ using System;
 
 public class Switcher : MonoBehaviour
 {
-
+    //This script is in Map Manager inside Map Prefab.
     [SerializeField] private Button heatmapButton;
     [SerializeField] private Button greenroofButton;
     [SerializeField] private Button floodButton;
@@ -36,7 +36,7 @@ public class Switcher : MonoBehaviour
     private bool openSpaceisActive;
     private bool sixtyFivePlusisActive;
 
-    private AbstractMap _abstractMap;
+    public AbstractMap _abstractMap;
 
     public TapToPlaceObject MapState;
     private VectorSubLayerProperties vectorDataTest;
@@ -52,28 +52,35 @@ public class Switcher : MonoBehaviour
 
         var tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Temperature");
         var floodLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("FloodPlane");
-        var NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
+        //var NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
         if (WebInfoStats.Stats.currentLayer != null)
         {
             if(WebInfoStats.Stats.currentLayer == "heat" && !heatmapisActive)
             {
                 tempLayer.SetActive(true);
+                //NY_buildings.SetActive(false);
                 heatmapisActive = true;
+                Debug.Log("Heat Layer is now displaying");
             }else if(WebInfoStats.Stats.currentLayer == "flood" && !floodisActive)
             {
                 floodLayer.SetActive(true);
+                //NY_buildings.SetActive(false);
                 floodisActive = true;
+                Debug.Log("Flood Layer is now displaying");
             }
-            
+        }
+        else
+        {
+            Debug.Log("WebInfo does not have any stats!!!");
         }
     }
 
     private void Update()
     {
-        if (MapState.isPlaced && _abstractMap == null)
-        {
-            _abstractMap = FindObjectOfType<AbstractMap>();
-        }
+        //if (MapState.isPlaced && _abstractMap == null)
+        //{
+        //    _abstractMap = FindObjectOfType<AbstractMap>();
+        //}
     }
 
     
