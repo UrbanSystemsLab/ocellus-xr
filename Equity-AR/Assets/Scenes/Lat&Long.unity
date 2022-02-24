@@ -1815,7 +1815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1535822479614194, guid: 3e10f3b6a733e441c8352020cff2f1f6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224179541092979990, guid: 3e10f3b6a733e441c8352020cff2f1f6,
         type: 3}
@@ -3131,6 +3131,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189756482}
   m_CullTransparentMesh: 0
+--- !u!1 &1223410833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223410835}
+  - component: {fileID: 1223410834}
+  m_Layer: 0
+  m_Name: toggleWebViewManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1223410834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223410833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c901497d18b1b4d478e6044738fa224c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webViewPrefab: {fileID: 1999712601}
+  PlaceObjectFunction: {fileID: 864032069}
+--- !u!4 &1223410835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223410833}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1200.6, y: 669.3693, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1224661591
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,7 +3614,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1874443550}
+      - m_Target: {fileID: 1223410834}
         m_MethodName: turnOffWeb
         m_Mode: 1
         m_Arguments:
@@ -3580,7 +3625,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1874443550}
+      - m_Target: {fileID: 1223410834}
         m_MethodName: openPlaceObject
         m_Mode: 1
         m_Arguments:
@@ -4142,18 +4187,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817449335}
   m_CullTransparentMesh: 0
---- !u!114 &1874443550 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1874443550, guid: e69228a722b3445a6a2d02feb4b3d76c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1884845818}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c901497d18b1b4d478e6044738fa224c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1884845818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4166,6 +4199,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Search&ZoomUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1874443550, guid: e69228a722b3445a6a2d02feb4b3d76c, type: 3}
+      propertyPath: webViewPrefab
+      value: 
+      objectReference: {fileID: 232983523}
+    - target: {fileID: 1874443550, guid: e69228a722b3445a6a2d02feb4b3d76c, type: 3}
+      propertyPath: PlaceObjectFunction
+      value: 
+      objectReference: {fileID: 864032069}
+    - target: {fileID: 1874443550, guid: e69228a722b3445a6a2d02feb4b3d76c, type: 3}
+      propertyPath: webViewObject
+      value: 
+      objectReference: {fileID: 232983523}
     - target: {fileID: 3458539936068133958, guid: e69228a722b3445a6a2d02feb4b3d76c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4296,18 +4341,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1874443550, guid: e69228a722b3445a6a2d02feb4b3d76c, type: 3}
-      propertyPath: webViewPrefab
+    - target: {fileID: 1877458086, guid: e69228a722b3445a6a2d02feb4b3d76c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 232983523}
-    - target: {fileID: 1874443550, guid: e69228a722b3445a6a2d02feb4b3d76c, type: 3}
-      propertyPath: PlaceObjectFunction
-      value: 
-      objectReference: {fileID: 864032069}
-    - target: {fileID: 1874443550, guid: e69228a722b3445a6a2d02feb4b3d76c, type: 3}
-      propertyPath: webViewObject
-      value: 
-      objectReference: {fileID: 232983523}
+      objectReference: {fileID: 1223410834}
+    - target: {fileID: 1877458086, guid: e69228a722b3445a6a2d02feb4b3d76c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: turnOffWeb
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e69228a722b3445a6a2d02feb4b3d76c, type: 3}
 --- !u!1 &1896476003
@@ -4350,6 +4391,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1999712601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1589489459947714, guid: 3e10f3b6a733e441c8352020cff2f1f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 722392715}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2051039045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3235003314826140544, guid: e69228a722b3445a6a2d02feb4b3d76c,

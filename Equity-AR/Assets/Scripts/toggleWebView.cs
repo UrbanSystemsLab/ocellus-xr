@@ -11,7 +11,6 @@ public class toggleWebView : MonoBehaviour
 
     public TapToPlaceObject PlaceObjectFunction;
 
-    public GameObject webViewObject;
     public void turnOffWeb()
     {
         if (webViewPrefab.activeSelf)
@@ -32,7 +31,7 @@ public class toggleWebView : MonoBehaviour
 
     private void Update()
     {
-        if (!webViewObject.activeSelf)
+        if (!webViewPrefab.activeSelf)
         {
             openPlaceObject();
         }

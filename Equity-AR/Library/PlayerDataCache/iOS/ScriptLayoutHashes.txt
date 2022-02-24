@@ -294,6 +294,7 @@ ba6ef9e2082e09d9399eaef28d94d812 Assembly-CSharp.dll:.MeshGenerationBase
 71bb6a6b6c8f052f948db64c7dd3ca4f SA.iOS.dll:SA.iOS.EventKit.ISN_EventKitNativeAPI
 c896001203784eaf50c0839b7a358365 Assembly-CSharp.dll:.UnityARKitPluginSettings
 4326d1e3ad2be563855e0ee0cac8ddb9 Assembly-CSharp.dll:Lean.Common.Examples.LeanCircuit
+f309223ebe831a446d2fa601bb538f2f Assembly-CSharp.dll:.SliderHandler
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARFaceMeshVisualizer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp-firstpass.dll:SA.iOS.Examples.GameKitUseExample
 7f68db3ead3c921056816a15f3b52cc8 Assembly-CSharp-firstpass.dll:SA.iOS.Examples.ISN_UIKitExample
