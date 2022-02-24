@@ -3160,7 +3160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c901497d18b1b4d478e6044738fa224c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webViewPrefab: {fileID: 1999712601}
+  webViewPrefab: {fileID: 232983523}
   PlaceObjectFunction: {fileID: 864032069}
 --- !u!4 &1223410835
 Transform:
@@ -4391,12 +4391,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1999712601 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1589489459947714, guid: 3e10f3b6a733e441c8352020cff2f1f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 722392715}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2051039045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3235003314826140544, guid: e69228a722b3445a6a2d02feb4b3d76c,

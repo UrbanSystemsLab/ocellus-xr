@@ -40,6 +40,7 @@ public class Switcher : MonoBehaviour
 
     public TapToPlaceObject MapState;
     private VectorSubLayerProperties vectorDataTest;
+    private ArrayList allLayer;
 
     private void Start()
     {
@@ -67,17 +68,20 @@ public class Switcher : MonoBehaviour
         {
             if (WebInfoStats.Stats.currentLayer == "heat" && !heatmapisActive)
             {
+
                 tempLayer.SetActive(true);
                 NY_buildings.SetActive(false);
                 heatmapisActive = true;
+                floodLayer.SetActive(false);
                 floodisActive = false;
                 Debug.Log("Heat Layer is now displaying");
             }
             else if (WebInfoStats.Stats.currentLayer == "flood" && !floodisActive)
             {
                 floodLayer.SetActive(true);
-                NY_buildings.SetActive(false);
+                NY_buildings.SetActive(true);
                 floodisActive = true;
+                tempLayer.SetActive(false);
                 heatmapisActive = false;
                 Debug.Log("Flood Layer is now displaying");
             }
@@ -89,7 +93,20 @@ public class Switcher : MonoBehaviour
         }
     }
 
-    
+    private void getAllLayer()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            allLayer[i]=_abstractMap.VectorData.GetFeatureSubLayerAtIndex(i);
+        }
+    }
+    private void deactivateAllLayer()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            //allLayer[i].SetActive(false);
+        }
+    }
 
     //Create a button click function to switch between heatmap and normal NY_buildings layers.
     public void Temperature()

@@ -117,8 +117,8 @@ public class TapToPlaceObject : MonoBehaviour
             reloadMapCanvas.SetActive(true);
             calibrationPage.SetActive(false);
             isCalibrating = false;
-            map.GetComponent<LeanPinchScale>().enabled = false;
-            map.GetComponent<LeanTwistRotateAxis>().enabled = false;
+            //map.GetComponent<LeanPinchScale>().enabled = false;
+            //map.GetComponent<LeanTwistRotateAxis>().enabled = false;
         }
         else
         {

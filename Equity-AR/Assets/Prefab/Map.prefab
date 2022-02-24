@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 4818977998235323254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 2100941133}
   - {fileID: 201072850292321857}
@@ -216,21 +216,6 @@ PrefabInstance:
         type: 3}
       propertyPath: _options.tileMaterial
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
-        type: 3}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].coreOptions.isActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
-        type: 3}
-      propertyPath: _previewOptions.isPreviewEnabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7259d664b0914439ab4b2e113f6782a8, type: 3}

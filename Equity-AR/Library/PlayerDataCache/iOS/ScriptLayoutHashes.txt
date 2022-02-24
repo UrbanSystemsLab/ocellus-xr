@@ -1,6 +1,6 @@
 iOS
 PlayerPath?
-/Users/lala/Desktop/USL-UnityBuildVersion/equity-ar-test-050-testLayer
+/Users/lala/Desktop/USL-UnityBuildVersion/equity-ar-test-052-MeetingDemo
 SceneListBegin?
 Assets/Scenes/Lat&Long.unity
 SceneListEnd?
