@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TapToPlaceObject.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VerticalLayoutUI.cs">
     <Files>
       <File FileName="Assets/Scripts/toggleWebView.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" />
       <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="122" Column="10" />
-      <File FileName="Assets/Scripts/JSCom.cs" Line="102" Column="30" />
+      <File FileName="Assets/Scripts/JSCom.cs" />
       <File FileName="Assets/Scripts/UpdateLocation.cs" />
       <File FileName="Assets/Scripts/reloadWeb.cs" />
       <File FileName="Assets/Vuplex/WebView/Demos/Scripts/CanvasWebViewDemo.cs" />
-      <File FileName="Assets/Scripts/Switcher.cs" Line="83" Column="38" />
+      <File FileName="Assets/Scripts/Switcher.cs" />
       <File FileName="Assets/Scripts/MessageClass.cs" />
       <File FileName="Assets/Scripts/AskLocation.cs" />
       <File FileName="Assets/Scripts/WebInfoStats.cs" />
@@ -16,8 +16,9 @@
       <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
       <File FileName="Assets/Scripts/SceneController.cs" />
       <File FileName="Assets/Vuplex/WebView/Demos/Scripts/CameraRotator.cs" />
-      <File FileName="Assets/SliderHandler.cs" />
-      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" Line="498" Column="17" />
+      <File FileName="Assets/SliderHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" />
+      <File FileName="Assets/VerticalLayoutUI.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -34,9 +35,7 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="TapToPlaceObject.cs" selected="True" />
-              </Node>
+              <Node name="Scripts" expanded="True" />
               <Node name="ThirdPartyAssets" expanded="True">
                 <Node name="WoLfulus" expanded="True">
                   <Node name="LineEnding" expanded="True">
@@ -51,8 +50,14 @@
                   </Node>
                 </Node>
               </Node>
+              <Node name="VerticalLayoutUI.cs" selected="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -60,7 +65,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2a91fe7a-c292-4cdb-aa60-77107cc51af1" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0efd2afb-2d88-4212-8b2e-9ba952d1cb5d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

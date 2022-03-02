@@ -686,6 +686,7 @@
     <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARUserAnchor.cs" />
     <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\UnityARSessionNativeInterface.cs" />
     <Compile Include="Assets\UnityARKitPlugin\UnityARKitPluginSettings.cs" />
+    <Compile Include="Assets\VerticalLayoutUI.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\AdvancedWebViewDemo.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CameraRotator.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CanvasPopupDemo.cs" />
