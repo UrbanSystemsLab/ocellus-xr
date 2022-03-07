@@ -569,6 +569,7 @@
     <Compile Include="Assets\MapboxAR\Unity\Ar\SimpleAutomaticSynchronizationContextBehaviour.cs" />
     <Compile Include="Assets\MapboxAR\Unity\Ar\SnapAlignmentStrategy.cs" />
     <Compile Include="Assets\MapboxAR\Unity\Ar\Utilities\PlotRoute.cs" />
+    <Compile Include="Assets\MinimizeScreenFeature.cs" />
     <Compile Include="Assets\RestClient\DemoScene\Scripts\MainScript.cs" />
     <Compile Include="Assets\RestClient\DemoScene\Scripts\Model\Photo.cs" />
     <Compile Include="Assets\RestClient\DemoScene\Scripts\Model\Post.cs" />
@@ -616,6 +617,7 @@
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\WebHandler.cs" />
     <Compile Include="Assets\Scripts\WebInfoStats.cs" />
+    <Compile Include="Assets\SliderHandler.cs" />
     <Compile Include="Assets\UnityARInterface\ARRemote\Scripts\ARRemoteDevice.cs" />
     <Compile Include="Assets\UnityARInterface\ARRemote\Scripts\ARRemoteEditor.cs" />
     <Compile Include="Assets\UnityARInterface\ARRemote\Scripts\ARRemoteEditorInterface.cs" />
@@ -685,6 +687,8 @@
     <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARUserAnchor.cs" />
     <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\UnityARSessionNativeInterface.cs" />
     <Compile Include="Assets\UnityARKitPlugin\UnityARKitPluginSettings.cs" />
+    <Compile Include="Assets\VerticalFullScreenUI.cs" />
+    <Compile Include="Assets\VerticalLayoutUI.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\AdvancedWebViewDemo.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CameraRotator.cs" />
     <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CanvasPopupDemo.cs" />

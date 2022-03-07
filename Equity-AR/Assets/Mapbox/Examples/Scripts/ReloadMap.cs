@@ -34,7 +34,7 @@
 			{
 				Debug.LogError("Error: No Abstract Map component found in scene.");
 				return;
-			}
+            }
 			if (_zoomSlider != null)
 			{
 				_map.OnUpdated += () => { _zoomSlider.value = _map.Zoom; };

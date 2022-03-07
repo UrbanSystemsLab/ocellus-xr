@@ -1,48 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5079559377000949867
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8159510674604471611}
-  - component: {fileID: 8306187428904917318}
-  m_Layer: 0
-  m_Name: TileProvider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8159510674604471611
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5079559377000949867}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6083926238275887988}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8306187428904917318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5079559377000949867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d7ff8ed3b76a4ee5a451d64a5393e3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6083926238275887993
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,8 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8159510674604471611}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,9 +58,9 @@ MonoBehaviour:
           disposeBuffer: 0
         rangeAroundCenterOptions:
           west: 1
-          north: 1
+          north: 2
           east: 1
-          south: 1
+          south: 2
         rangeAroundTransformOptions:
           targetTransform: {fileID: 0}
           visibleBuffer: 0
@@ -142,7 +98,7 @@ MonoBehaviour:
           Id: mapbox.terrain-rgb
           Modified: 
           UserName: 
-      elevationLayerType: 0
+      elevationLayerType: 1
       requiredOptions:
         exaggerationFactor: 1
       colliderOptions:
@@ -171,6 +127,7 @@ MonoBehaviour:
         - green_infrastructure
         - income_final
         - NYC_65plus
+        - NYC_heatmap
         - NYC_OpenSpace
         - NYCtemp
         - split-green-roofs
@@ -179,7 +136,7 @@ MonoBehaviour:
         isActive: 1
         layerSource:
           Name: Mapbox Streets v7
-          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e
+          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e,equity.cxc73xaa
           Modified: 
           UserName: 
       useOptimizedStyle: 0
@@ -194,10 +151,10 @@ MonoBehaviour:
       vectorSubLayers:
       - coreOptions:
           sourceId: 
-          isActive: 0
+          isActive: 1
           sublayerName: Temperature
           geometryType: 2
-          layerName: NYCtemp
+          layerName: NYC_heatmap
           snapToTerrain: 1
           combineMeshes: 1
         lineGeometryOptions:
@@ -207,7 +164,7 @@ MonoBehaviour:
           JoinType: 1
           CapType: 1
         filterOptions:
-          _selectedLayerName: NYCtemp
+          _selectedLayerName: NYC_heatmap
           filters: []
           combinerType: 0
         extrusionOptions:
@@ -240,9 +197,9 @@ MonoBehaviour:
             texturingType: 0
             materials:
             - Materials:
-              - {fileID: 2100000, guid: 1400d7b6b4230466db09a1af49b696bb, type: 2}
+              - {fileID: 2100000, guid: 687d8681f312940548e6ad41045da59e, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
+              - {fileID: 2100000, guid: 687d8681f312940548e6ad41045da59e, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -260,7 +217,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: NYC_Buildings
           geometryType: 2
           layerName: building
@@ -373,7 +330,7 @@ MonoBehaviour:
             - Materials:
               - {fileID: 2100000, guid: 9904b7ad9554f46aa823ab59f13e8a6d, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
+              - {fileID: 2100000, guid: 9904b7ad9554f46aa823ab59f13e8a6d, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -438,7 +395,7 @@ MonoBehaviour:
             - Materials:
               - {fileID: 2100000, guid: 1115488c1bebc4309b8e0a154a8946a3, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
+              - {fileID: 2100000, guid: 1115488c1bebc4309b8e0a154a8946a3, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -474,7 +431,7 @@ MonoBehaviour:
           combinerType: 0
         extrusionOptions:
           _selectedLayerName: 2050s-100y
-          extrusionType: 5
+          extrusionType: 3
           extrusionGeometryType: 1
           propertyName: height
           propertyDescription: Unavailable in Selected Layer.
@@ -542,9 +499,9 @@ MonoBehaviour:
           extrusionType: 5
           extrusionGeometryType: 1
           propertyName: height
-          propertyDescription: Number
-          minimumHeight: 0
-          maximumHeight: 1.01
+          propertyDescription: Unavailable in Selected Layer.
+          minimumHeight: 2
+          maximumHeight: 20
           extrusionScaleFactor: 1
         colliderOptions:
           colliderType: 0
@@ -568,7 +525,7 @@ MonoBehaviour:
             - Materials:
               - {fileID: 2100000, guid: 6f7c6798fb71a44d6bbdf5e503fa3c84, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
+              - {fileID: 2100000, guid: 6f7c6798fb71a44d6bbdf5e503fa3c84, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -656,7 +613,7 @@ MonoBehaviour:
           sublayerName: GreenRoof
           geometryType: 2
           layerName: split-green-roofs
-          snapToTerrain: 0
+          snapToTerrain: 1
           combineMeshes: 0
         lineGeometryOptions:
           Width: 1
@@ -699,7 +656,7 @@ MonoBehaviour:
             - Materials:
               - {fileID: 2100000, guid: 260de6e7fe9224e8c991a6cee4ff5dc6, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
+              - {fileID: 2100000, guid: 260de6e7fe9224e8c991a6cee4ff5dc6, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -716,9 +673,9 @@ MonoBehaviour:
         _maskValue: 0
         selectedTypes: 
       locationPrefabList: []
-  _tileProvider: {fileID: 8306187428904917318}
+  _tileProvider: {fileID: 0}
   _previewOptions:
-    isPreviewEnabled: 1
+    isPreviewEnabled: 0
 --- !u!114 &6083926238275887991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,7 +683,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6083926238275887993}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c73c1ab94e28d244827af556dca1ed2, type: 3}
   m_Name: 
@@ -749,7 +706,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6083926238275887993}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc7c91b26689a054d88448aba6dfe424, type: 3}
   m_Name: 
