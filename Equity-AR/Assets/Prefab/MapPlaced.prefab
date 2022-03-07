@@ -57,9 +57,9 @@ MonoBehaviour:
           visibleBuffer: 0
           disposeBuffer: 0
         rangeAroundCenterOptions:
-          west: 2
+          west: 1
           north: 2
-          east: 2
+          east: 1
           south: 2
         rangeAroundTransformOptions:
           targetTransform: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
           Id: mapbox.terrain-rgb
           Modified: 
           UserName: 
-      elevationLayerType: 0
+      elevationLayerType: 1
       requiredOptions:
         exaggerationFactor: 1
       colliderOptions:
@@ -127,6 +127,7 @@ MonoBehaviour:
         - green_infrastructure
         - income_final
         - NYC_65plus
+        - NYC_heatmap
         - NYC_OpenSpace
         - NYCtemp
         - split-green-roofs
@@ -135,7 +136,7 @@ MonoBehaviour:
         isActive: 1
         layerSource:
           Name: Mapbox Streets v7
-          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e
+          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e,equity.cxc73xaa
           Modified: 
           UserName: 
       useOptimizedStyle: 0
@@ -150,10 +151,10 @@ MonoBehaviour:
       vectorSubLayers:
       - coreOptions:
           sourceId: 
-          isActive: 0
+          isActive: 1
           sublayerName: Temperature
           geometryType: 2
-          layerName: NYCtemp
+          layerName: NYC_heatmap
           snapToTerrain: 1
           combineMeshes: 1
         lineGeometryOptions:
@@ -163,7 +164,7 @@ MonoBehaviour:
           JoinType: 1
           CapType: 1
         filterOptions:
-          _selectedLayerName: NYCtemp
+          _selectedLayerName: NYC_heatmap
           filters: []
           combinerType: 0
         extrusionOptions:
@@ -196,9 +197,9 @@ MonoBehaviour:
             texturingType: 0
             materials:
             - Materials:
-              - {fileID: 2100000, guid: 1400d7b6b4230466db09a1af49b696bb, type: 2}
+              - {fileID: 2100000, guid: 687d8681f312940548e6ad41045da59e, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: 1400d7b6b4230466db09a1af49b696bb, type: 2}
+              - {fileID: 2100000, guid: 687d8681f312940548e6ad41045da59e, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -216,7 +217,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: NYC_Buildings
           geometryType: 2
           layerName: building
@@ -329,7 +330,7 @@ MonoBehaviour:
             - Materials:
               - {fileID: 2100000, guid: 9904b7ad9554f46aa823ab59f13e8a6d, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
+              - {fileID: 2100000, guid: 9904b7ad9554f46aa823ab59f13e8a6d, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -394,7 +395,7 @@ MonoBehaviour:
             - Materials:
               - {fileID: 2100000, guid: 1115488c1bebc4309b8e0a154a8946a3, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
+              - {fileID: 2100000, guid: 1115488c1bebc4309b8e0a154a8946a3, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -430,7 +431,7 @@ MonoBehaviour:
           combinerType: 0
         extrusionOptions:
           _selectedLayerName: 2050s-100y
-          extrusionType: 5
+          extrusionType: 3
           extrusionGeometryType: 1
           propertyName: height
           propertyDescription: Unavailable in Selected Layer.
@@ -498,9 +499,9 @@ MonoBehaviour:
           extrusionType: 5
           extrusionGeometryType: 1
           propertyName: height
-          propertyDescription: Number
-          minimumHeight: 0
-          maximumHeight: 1.01
+          propertyDescription: Unavailable in Selected Layer.
+          minimumHeight: 2
+          maximumHeight: 20
           extrusionScaleFactor: 1
         colliderOptions:
           colliderType: 0
@@ -524,7 +525,7 @@ MonoBehaviour:
             - Materials:
               - {fileID: 2100000, guid: 6f7c6798fb71a44d6bbdf5e503fa3c84, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
+              - {fileID: 2100000, guid: 6f7c6798fb71a44d6bbdf5e503fa3c84, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -612,7 +613,7 @@ MonoBehaviour:
           sublayerName: GreenRoof
           geometryType: 2
           layerName: split-green-roofs
-          snapToTerrain: 0
+          snapToTerrain: 1
           combineMeshes: 0
         lineGeometryOptions:
           Width: 1
@@ -655,7 +656,7 @@ MonoBehaviour:
             - Materials:
               - {fileID: 2100000, guid: 260de6e7fe9224e8c991a6cee4ff5dc6, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
+              - {fileID: 2100000, guid: 260de6e7fe9224e8c991a6cee4ff5dc6, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,

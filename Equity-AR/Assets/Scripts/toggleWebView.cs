@@ -10,6 +10,10 @@ public class toggleWebView : MonoBehaviour
     public GameObject webViewPrefab;
 
     public TapToPlaceObject PlaceObjectFunction;
+    public GameObject taptoplacetext;
+    public GameObject caliPage;
+    public GameObject mainPage;
+    public GameObject fullBnt;
 
     public void turnOffWeb()
     {
@@ -34,6 +38,10 @@ public class toggleWebView : MonoBehaviour
         if (!webViewPrefab.activeSelf)
         {
             openPlaceObject();
+            //taptoplacetext.SetActive(true);
+            //caliPage.SetActive(true);
+            //mainPage.SetActive(true);
+            fullBnt.SetActive(true);
         }
     }
 
