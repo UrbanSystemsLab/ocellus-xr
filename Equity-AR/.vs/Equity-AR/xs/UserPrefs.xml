@@ -1,23 +1,24 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VerticalLayoutUI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DistanceToCheckpoint.cs">
     <Files>
       <File FileName="Assets/Scripts/SceneController.cs" Line="24" Column="1" IsPinned="True" />
-      <File FileName="Assets/Scripts/toggleWebView.cs" Line="44" Column="37" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="122" Column="10" />
-      <File FileName="Assets/Scripts/JSCom.cs" Line="100" Column="60" />
+      <File FileName="Assets/Scripts/toggleWebView.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
+      <File FileName="Assets/Scripts/JSCom.cs" />
       <File FileName="Assets/Scripts/Switcher.cs" />
       <File FileName="Assets/Scripts/MessageClass.cs" />
       <File FileName="Assets/Scripts/AskLocation.cs" />
       <File FileName="Assets/Scripts/WebInfoStats.cs" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" Line="1" Column="1" />
-      <File FileName="Assets/SliderHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
+      <File FileName="Assets/SliderHandler.cs" />
       <File FileName="Assets/VerticalLayoutUI.cs" Line="38" Column="29" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="269" Column="43" />
-      <File FileName="Assets/VerticalFullScreenUI.cs" Line="20" Column="1" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
+      <File FileName="Assets/VerticalFullScreenUI.cs" />
       <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" Line="1" Column="1" />
-      <File FileName="Assets/MinimizeScreenFeature.cs" Line="47" Column="37" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
+      <File FileName="Assets/MinimizeScreenFeature.cs" />
+      <File FileName="Assets/Scripts/DistanceToCheckpoint.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -39,7 +40,9 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="Scripts" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="SceneController.cs" selected="True" />
+              </Node>
               <Node name="ThirdPartyAssets" expanded="True">
                 <Node name="WoLfulus" expanded="True">
                   <Node name="LineEnding" expanded="True">
@@ -54,14 +57,8 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="VerticalLayoutUI.cs" selected="True" />
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Unity" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -69,7 +66,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0efd2afb-2d88-4212-8b2e-9ba952d1cb5d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b9584571-ec1d-43da-a305-108c88810fbd" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
