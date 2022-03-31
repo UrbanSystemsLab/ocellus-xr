@@ -104,7 +104,6 @@ namespace UnityARInterface
             m_ARInterface.UpdateCamera(m_ARCamera);
 
             Pose pose = new Pose();
-            //pose.position = new Vector3(0.0f, 2.0f, 0.0f);
             if (m_ARInterface.TryGetPose(ref pose))
             {
                 m_ARCamera.transform.localPosition = pose.position;
