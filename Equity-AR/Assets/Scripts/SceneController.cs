@@ -15,12 +15,4 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
-    private void Update()
-    {
-        if(WebInfoStats.Stats.currentLayer == "explore")
-        {
-            LoadWorldScaleAR();
-        }
-    }
 }

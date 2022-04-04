@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Lat&Long.unity
+- path: Assets/Scenes/WorldScaleAR.unity
   isLoaded: 1
   isActive: 1

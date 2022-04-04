@@ -2,7 +2,6 @@
 {
 	using System;
 	using UnityEngine;
-	using System.Collections;
 
 	public abstract class AbstractLocationProvider : MonoBehaviour, ILocationProvider
 	{
@@ -26,6 +25,5 @@
 		{
 			OnLocationUpdated(location);
 		}
-		
 	}
 }
