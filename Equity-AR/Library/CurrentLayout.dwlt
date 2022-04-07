@@ -17,6 +17,7 @@ MonoBehaviour:
     x: 0
     y: 53
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1440
     height: 791
   m_ShowMode: 4
@@ -24,6 +25,8 @@ MonoBehaviour:
   m_RootView: {fileID: 2}
   m_MinSize: {x: 950, y: 498}
 =======
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
     width: 1151
     height: 788
   m_ShowMode: 4
@@ -53,10 +56,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1440
     height: 791
   m_MinSize: {x: 950, y: 498}
 =======
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
     width: 1151
     height: 788
   m_MinSize: {x: 950, y: 300}
@@ -125,6 +131,7 @@ MonoBehaviour:
     x: 0
     y: 30
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1440
     height: 741
   m_MinSize: {x: 681, y: 448}
@@ -139,6 +146,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 12
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+    width: 1151
+    height: 738
+  m_MinSize: {x: 683, y: 448}
+  m_MaxSize: {x: 12008, y: 8048}
+  vertical: 0
+  controlID: 12
+>>>>>>> parent of f4c4c05e (merge the new version)
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,6 +174,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1125
     height: 741
   m_MinSize: {x: 406, y: 448}
@@ -173,6 +189,14 @@ MonoBehaviour:
   vertical: 1
   controlID: 13
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+    width: 853
+    height: 738
+  m_MinSize: {x: 406, y: 448}
+  m_MaxSize: {x: 8006, y: 8048}
+  vertical: 1
+  controlID: 13
+>>>>>>> parent of f4c4c05e (merge the new version)
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,12 +217,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1125
     height: 443
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
   controlID: 1386
+=======
+    width: 853
+    height: 419
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
+  vertical: 0
+  controlID: 14
+>>>>>>> parent of f4c4c05e (merge the new version)
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,13 +249,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 548
     height: 443
+=======
+    width: 353
+    height: 419
+>>>>>>> parent of f4c4c05e (merge the new version)
   m_MinSize: {x: 202, y: 224}
   m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
+<<<<<<< HEAD
   - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 1
@@ -236,6 +275,11 @@ MonoBehaviour:
   controlID: 14
 --- !u!114 &8
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &9
+>>>>>>> parent of f4c4c05e (merge the new version)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,6 +294,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 0
 <<<<<<< HEAD
@@ -277,6 +322,21 @@ MonoBehaviour:
   m_LastSelected: 0
 --- !u!114 &9
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+    x: 353
+    y: 0
+    width: 500
+    height: 419
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &10
+>>>>>>> parent of f4c4c05e (merge the new version)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,6 +353,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
     x: 0
+<<<<<<< HEAD
     y: 443
     width: 1125
     height: 298
@@ -321,6 +382,21 @@ MonoBehaviour:
   m_LastSelected: 0
 --- !u!114 &10
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+    y: 419
+    width: 853
+    height: 319
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 16}
+  - {fileID: 17}
+  - {fileID: 12}
+  m_Selected: 2
+  m_LastSelected: 0
+--- !u!114 &11
+>>>>>>> parent of f4c4c05e (merge the new version)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -335,6 +411,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 419
     width: 853
@@ -577,6 +654,20 @@ MonoBehaviour:
   m_LastSelected: 0
 --- !u!114 &12
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+    x: 853
+    y: 0
+    width: 298
+    height: 738
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &12
+>>>>>>> parent of f4c4c05e (merge the new version)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -665,7 +756,10 @@ MonoBehaviour:
   m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
 --- !u!114 &13
+<<<<<<< HEAD
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -686,6 +780,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 548
     y: 83
 <<<<<<< HEAD
@@ -695,6 +790,12 @@ MonoBehaviour:
     width: 351
     height: 399
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+    x: 0
+    y: 83
+    width: 351
+    height: 399
+>>>>>>> parent of f4c4c05e (merge the new version)
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
@@ -707,7 +808,10 @@ MonoBehaviour:
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: d6fbffff
+<<<<<<< HEAD
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -724,10 +828,14 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
         m_ClientGUIView: {fileID: 9}
 =======
         m_ClientGUIView: {fileID: 8}
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+        m_ClientGUIView: {fileID: 8}
+>>>>>>> parent of f4c4c05e (merge the new version)
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -735,9 +843,12 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_WindowGUID: bc0bb56da635246a18bc69e463dc83b1
 --- !u!114 &17
 =======
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
   m_WindowGUID: 16ebb46af85724f7c96731fbbe36695e
 --- !u!114 &14
 MonoBehaviour:
@@ -820,7 +931,10 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 --- !u!114 &15
+<<<<<<< HEAD
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -871,16 +985,22 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 526
     width: 1123
     height: 278
 =======
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
     x: -97
     y: -494
     width: 851
     height: 354
+<<<<<<< HEAD
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -895,6 +1015,7 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes
 =======
     - Assets
@@ -907,22 +1028,35 @@ MonoBehaviour:
 =======
   - Assets
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+    - Assets
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets
+>>>>>>> parent of f4c4c05e (merge the new version)
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 1771}
     m_SelectedIDs: 266b0000
     m_LastClickedID: 27430
     m_ExpandedIDs: 00000000d0340000d6340000d8340000263500003e3500004c350000a8350000ac3500003a3600003c360000443600005c3600005e3600006a3600008c3600008e360000c036000068380000da3800005c3e0000843e00008c3e0000a03e0000b03e0000bc3e0000be3e0000203f00003c3f00004c3f0000883f00008a3f0000b66900003e6a0000766a0000c06a0000c86a0000246b00003a6b00009e6b0000b46b0000c86b0000e66b0000186d0000ba6d0000a46e0000a66e0000d86e00000e6f0000b26f00009e730000a073000000ca9a3b
 =======
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: ca340000
     m_LastClickedID: 13514
     m_ExpandedIDs: 00000000ce340000fa34000012350000203500007c350000803500000e36000010360000183600003036000032360000943600003c380000ae380000303e0000583e0000603e0000743e0000843e0000903e0000923e0000f43e0000103f0000203f00005c3f00005e3f00009843000058440000a2440000aa440000064500001c4500008045000096450000aa450000c8450000f44600007c4800007e480000b0480000e64800008a4900003050000032500000
+<<<<<<< HEAD
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -951,10 +1085,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000d0340000d6340000d8340000263500003e3500004c350000a8350000ac3500003a3600003c360000443600005c3600005e3600006a3600008c3600008e360000c036000068380000da3800005c3e0000843e00008c3e0000a03e0000b03e0000bc3e0000be3e0000203f00003c3f00004c3f0000883f00008a3f0000b66900003e6a0000766a0000c06a0000c86a0000246b00003a6b00009e6b0000b46b0000c86b0000e66b0000186d0000ba6d0000a46e0000a66e0000d86e00000e6f0000b26f00009e730000a073000000ca9a3b
 =======
     m_ExpandedIDs: 00000000ce340000fa34000012350000203500007c350000803500000e36000010360000183600003036000032360000943600003c380000ae380000303e0000583e0000603e0000743e0000843e0000903e0000923e0000f43e0000103f0000203f00005c3f00005e3f00009843000058440000a2440000aa440000064500001c4500008045000096450000aa450000c8450000f44600007c4800007e480000b0480000e64800008a4900003050000032500000
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+    m_ExpandedIDs: 00000000ce340000fa34000012350000203500007c350000803500000e36000010360000183600003036000032360000943600003c380000ae380000303e0000583e0000603e0000743e0000843e0000903e0000923e0000f43e0000103f0000203f00005c3f00005e3f00009843000058440000a2440000aa440000064500001c4500008045000096450000aa450000c8450000f44600007c4800007e480000b0480000e64800008a4900003050000032500000
+>>>>>>> parent of f4c4c05e (merge the new version)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -989,7 +1127,10 @@ MonoBehaviour:
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000086b100004c480000123e0000c65b0000ce5b00000c3e0000103e00009839000000000000664b0000
+<<<<<<< HEAD
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+>>>>>>> parent of f4c4c05e (merge the new version)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1017,10 +1158,14 @@ MonoBehaviour:
     m_GridSize: 64
   m_DirectoriesAreaWidth: 297
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &18
 =======
 --- !u!114 &17
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+--- !u!114 &17
+>>>>>>> parent of f4c4c05e (merge the new version)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1041,6 +1186,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 0
     y: 526
@@ -1136,6 +1282,14 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 >>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
+=======
+    x: -97
+    y: -494
+    width: 851
+    height: 354
+  m_PersistentViewDataDictionary: {fileID: 0}
+--- !u!114 &18
+>>>>>>> parent of f4c4c05e (merge the new version)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
