@@ -1,11 +1,24 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DistanceToCheckpoint.cs">
     <Files>
-      <File FileName="Assets/Scripts/TreeInfoManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mapbox/Unity/Location/LocationProviderFactory.cs" Line="147" Column="1" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/UnityTile.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TreeInfoFinder.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SceneController.cs" Line="24" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/toggleWebView.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
+      <File FileName="Assets/Scripts/JSCom.cs" />
+      <File FileName="Assets/Scripts/Switcher.cs" />
+      <File FileName="Assets/Scripts/MessageClass.cs" />
+      <File FileName="Assets/Scripts/AskLocation.cs" />
+      <File FileName="Assets/Scripts/WebInfoStats.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
+      <File FileName="Assets/SliderHandler.cs" />
+      <File FileName="Assets/VerticalLayoutUI.cs" Line="38" Column="29" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
+      <File FileName="Assets/VerticalFullScreenUI.cs" />
+      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
+      <File FileName="Assets/MinimizeScreenFeature.cs" />
+      <File FileName="Assets/Scripts/DistanceToCheckpoint.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,21 +31,18 @@
                 </Node>
                 <Node name="Shaders" expanded="True" />
                 <Node name="Unity" expanded="True">
-                  <Node name="Location" expanded="True" />
                   <Node name="Map" expanded="True">
                     <Node name="TileProviders" expanded="True" />
                   </Node>
                   <Node name="MeshGeneration" expanded="True">
                     <Node name="Data" expanded="True" />
-                    <Node name="Modifiers" expanded="True">
-                      <Node name="GameObjectModifiers" expanded="True">
-                        <Node name="PrefabModifier.cs" selected="True" />
-                      </Node>
-                    </Node>
+                    <Node name="Modifiers" expanded="True" />
                   </Node>
                 </Node>
               </Node>
-              <Node name="Scripts" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="SceneController.cs" selected="True" />
+              </Node>
               <Node name="ThirdPartyAssets" expanded="True">
                 <Node name="WoLfulus" expanded="True">
                   <Node name="LineEnding" expanded="True">
@@ -56,7 +66,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4040c3a7-4eb1-4b5b-881e-c65487556531" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b9584571-ec1d-43da-a305-108c88810fbd" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
