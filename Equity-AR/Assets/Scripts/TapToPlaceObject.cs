@@ -71,8 +71,8 @@ public class TapToPlaceObject : MonoBehaviour
         isPlaced = true;
         calibrationPage.SetActive(true);
         TapToPlaceMap.SetActive(false);
-        map.GetComponent<LeanPinchScale>().enabled = true;
-        map.GetComponent<LeanTwistRotateAxis>().enabled = true;
+        //map.GetComponent<LeanPinchScale>().enabled = true;
+        //map.GetComponent<LeanTwistRotateAxis>().enabled = true;
         isCalibrating = true;
     }
 
@@ -117,8 +117,8 @@ public class TapToPlaceObject : MonoBehaviour
             reloadMapCanvas.SetActive(true);
             calibrationPage.SetActive(false);
             isCalibrating = false;
-            map.GetComponent<LeanPinchScale>().enabled = false;
-            map.GetComponent<LeanTwistRotateAxis>().enabled = false;
+            //map.GetComponent<LeanPinchScale>().enabled = false;
+            //map.GetComponent<LeanTwistRotateAxis>().enabled = false;
         }
         else
         {

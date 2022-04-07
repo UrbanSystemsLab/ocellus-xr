@@ -67,6 +67,7 @@
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\ComputerVisionController.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\EdgeDetector.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\TextureReader.cs" />
+    <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\TextureReaderApi.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\InstantPreview\Scripts\InstantPreviewInput.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\InstantPreview\Scripts\InstantPreviewManager.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\InstantPreview\Scripts\InstantPreviewTrackedPoseDriver.cs" />
@@ -270,7 +271,6 @@
     <Compile Include="Assets\Mapbox\Examples\2_AstronautGame\AstronautGame\Astronaut\CharacterMovement.cs" />
     <Compile Include="Assets\Mapbox\Examples\3_POIPlacement\POIPlacementScriptExample.cs" />
     <Compile Include="Assets\Mapbox\Examples\4_ReplaceFeatures\Scripts\BlinkLight.cs" />
-    <Compile Include="Assets\Mapbox\Examples\4_ReplaceFeatures\Textures\TextureReaderApi.cs" />
     <Compile Include="Assets\Mapbox\Examples\5_Playground\Scripts\DirectionsExample.cs" />
     <Compile Include="Assets\Mapbox\Examples\5_Playground\Scripts\ForwardGeocoderExample.cs" />
     <Compile Include="Assets\Mapbox\Examples\5_Playground\Scripts\LogLocationProviderData.cs" />
