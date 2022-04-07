@@ -5,6 +5,7 @@
 namespace Mapbox.Unity.Location
 {
 	using UnityEngine;
+	using UnityEngine.UI;
 	using Mapbox.Unity.Map;
 	using System.Text.RegularExpressions;
 
@@ -33,7 +34,6 @@ namespace Mapbox.Unity.Location
 
 		[SerializeField]
 		bool _dontDestroyOnLoad;
-
 
 		/// <summary>
 		/// The singleton instance of this factory.

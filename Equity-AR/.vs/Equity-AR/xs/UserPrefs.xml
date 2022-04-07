@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Editor/UnityARBuildPostprocessor.cs">
     <Files>
@@ -12,11 +13,35 @@
       <File FileName="Assets/UnityARInterface/Scripts/ARCoreInterface.cs" Line="167" Column="50" />
       <File FileName="Assets/Mapbox/Unity/Editor/Build/Mapbox_iOS_build.cs" Line="24" Column="43" />
       <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Editor/UnityARBuildPostprocessor.cs" Line="83" Column="1" />
+=======
+﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DistanceToCheckpoint.cs">
+    <Files>
+      <File FileName="Assets/Scripts/SceneController.cs" Line="24" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/toggleWebView.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
+      <File FileName="Assets/Scripts/JSCom.cs" />
+      <File FileName="Assets/Scripts/Switcher.cs" />
+      <File FileName="Assets/Scripts/MessageClass.cs" />
+      <File FileName="Assets/Scripts/AskLocation.cs" />
+      <File FileName="Assets/Scripts/WebInfoStats.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
+      <File FileName="Assets/SliderHandler.cs" />
+      <File FileName="Assets/VerticalLayoutUI.cs" Line="38" Column="29" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
+      <File FileName="Assets/VerticalFullScreenUI.cs" />
+      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
+      <File FileName="Assets/MinimizeScreenFeature.cs" />
+      <File FileName="Assets/Scripts/DistanceToCheckpoint.cs" Line="1" Column="1" />
+>>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Equity-AR" expanded="True">
+<<<<<<< HEAD
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="UnityARInterface" expanded="True">
@@ -33,6 +58,31 @@
                     <Node name="Editor" expanded="True">
                       <Node name="Build" expanded="True" />
                     </Node>
+=======
+            <Node name="Assets" expanded="True">
+              <Node name="Mapbox" expanded="True">
+                <Node name="Examples" expanded="True">
+                  <Node name="Scripts" expanded="True" />
+                </Node>
+                <Node name="Shaders" expanded="True" />
+                <Node name="Unity" expanded="True">
+                  <Node name="Map" expanded="True">
+                    <Node name="TileProviders" expanded="True" />
+                  </Node>
+                  <Node name="MeshGeneration" expanded="True">
+                    <Node name="Data" expanded="True" />
+                    <Node name="Modifiers" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="SceneController.cs" selected="True" />
+              </Node>
+              <Node name="ThirdPartyAssets" expanded="True">
+                <Node name="WoLfulus" expanded="True">
+                  <Node name="LineEnding" expanded="True">
+                    <Node name="Editor" expanded="True" />
+>>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
                   </Node>
                 </Node>
                 <Node name="UnityARKitPlugin" expanded="True">
@@ -56,7 +106,11 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="045cde33-6477-47e1-8a6e-6f5b0c9951cb" />
+=======
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b9584571-ec1d-43da-a305-108c88810fbd" />
+>>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
