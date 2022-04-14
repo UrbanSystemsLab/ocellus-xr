@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.XR;
+using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.iOS;
 
 namespace UnityARInterface
@@ -23,7 +23,7 @@ namespace UnityARInterface
         private byte[] m_TextureUVBytes;
         private byte[] m_TextureYBytes2;
         private byte[] m_TextureUVBytes2;
-        private ARBackgroundRenderer m_BackgroundRenderer;
+        private ARCameraBackground m_BackgroundRenderer;
         private Texture2D _videoTextureY;
         private Texture2D _videoTextureCbCr;
         private GCHandle m_PinnedYArray;
@@ -59,8 +59,8 @@ namespace UnityARInterface
                     return;
 
                 m_BackgroundRendering = value;
-                m_BackgroundRenderer.mode = m_BackgroundRendering && m_CanRenderBackground ?
-                    ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
+                //m_BackgroundRenderer.mode = m_BackgroundRendering && m_CanRenderBackground ?
+                //    ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
 
                 m_Camera.clearFlags = CameraClearFlags.SolidColor;
                 m_Camera.backgroundColor = Color.black;
@@ -223,8 +223,8 @@ namespace UnityARInterface
 
             BackgroundRendering = false;
             m_CanRenderBackground = false;
-            m_BackgroundRenderer.backgroundMaterial = null;
-            m_BackgroundRenderer.camera = null;
+            m_BackgroundRenderer.customMaterial = null;
+            //m_BackgroundRenderer.camera = null;
             m_BackgroundRenderer = null;
             IsRunning = false;
         }
@@ -287,9 +287,9 @@ namespace UnityARInterface
             m_Camera = camera;
             m_ClearMaterial = Resources.Load("YUVMaterial", typeof(Material)) as Material;
 
-            m_BackgroundRenderer = new ARBackgroundRenderer();
-            m_BackgroundRenderer.backgroundMaterial = m_ClearMaterial;
-            m_BackgroundRenderer.camera = camera;
+            m_BackgroundRenderer = new ARCameraBackground();
+            m_BackgroundRenderer.customMaterial = m_ClearMaterial;
+            //m_BackgroundRenderer.camera = camera;
         }
 
         public override void UpdateCamera(Camera camera)

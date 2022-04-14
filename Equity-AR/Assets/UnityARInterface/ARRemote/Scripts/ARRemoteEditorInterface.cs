@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Networking.PlayerConnection;
 using Utils;
 using System.Collections;
-using UnityEngine.XR;
+using UnityEngine.XR.ARFoundation;
 
 #if UNITY_EDITOR
 using UnityEditor.Networking.PlayerConnection;
@@ -37,7 +37,7 @@ namespace UnityARInterface
         private Camera m_CachedCamera;
         private LightEstimate m_LightEstimate;
         private CameraImage m_CameraImage;
-        private ARBackgroundRenderer m_BackgroundRenderer;
+        private ARCameraBackground m_BackgroundRenderer;
         public bool connected { get { return m_CurrentPlayerId != -1; } }
         public int playerId { get { return m_CurrentPlayerId; } }
 
@@ -55,8 +55,8 @@ namespace UnityARInterface
                 m_BackgroundRendering = value;
 
                 if (m_BackgroundRenderer != null){
-                    m_BackgroundRenderer.mode = m_BackgroundRendering ? 
-                        ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
+                    //m_BackgroundRenderer.mode = m_BackgroundRendering ? 
+                    //    ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
                 }
 
                 if (editorConnection != null)
@@ -110,13 +110,13 @@ namespace UnityARInterface
             YUVMaterial.SetTexture("_textureCbCr", m_RemoteScreenUVTexture);
 
             if(m_BackgroundRenderer != null){
-                m_BackgroundRenderer.backgroundMaterial = null;
-                m_BackgroundRenderer.camera = null;
+                //m_BackgroundRenderer.backgroundMaterial = null;
+                //m_BackgroundRenderer.camera = null;
             }
 
-            m_BackgroundRenderer = new ARBackgroundRenderer();
-            m_BackgroundRenderer.backgroundMaterial = YUVMaterial;
-            m_BackgroundRenderer.camera = m_CachedCamera;
+            m_BackgroundRenderer = new ARCameraBackground();
+            m_BackgroundRenderer.customMaterial = YUVMaterial;
+            //m_BackgroundRenderer.camera = m_CachedCamera;
             //Set mode and send to player
             BackgroundRendering = m_BackgroundRendering;
            
@@ -307,7 +307,7 @@ namespace UnityARInterface
                 camera.projectionMatrix = m_Frame.projectionMatrix;
                 if (m_BackgroundRenderer != null)
                 {
-                    m_BackgroundRenderer.backgroundMaterial.SetMatrix("_DisplayTransform",GetDisplayTransform());
+                    m_BackgroundRenderer.customMaterial.SetMatrix("_DisplayTransform",GetDisplayTransform());
                 }
             }
         }

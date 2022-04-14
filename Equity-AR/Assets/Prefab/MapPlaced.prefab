@@ -151,7 +151,7 @@ MonoBehaviour:
       vectorSubLayers:
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: Temperature
           geometryType: 2
           layerName: NYC_heatmap
@@ -217,7 +217,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 0
+          isActive: 1
           sublayerName: NYC_Buildings
           geometryType: 2
           layerName: building
@@ -245,20 +245,19 @@ MonoBehaviour:
         colliderOptions:
           colliderType: 0
         materialOptions:
-          style: 1
-          texturingType: 3
+          style: 3
+          texturingType: 2
           materials:
           - Materials:
             - {fileID: 0}
           - Materials:
             - {fileID: 0}
-          atlasInfo: {fileID: 11400000, guid: 4df87964fe5004278acef942d9a878d4, type: 2}
+          atlasInfo: {fileID: 11400000, guid: 59ca6a03aa1ab4d5797fc37bc0f37797, type: 2}
           lightStyleOpacity: 1
-          darkStyleOpacity: 1
+          darkStyleOpacity: 0.079
           colorStyleColor: {r: 0.1764706, g: 0.8509805, b: 1, a: 1}
           samplePalettes: 1
-          colorPalette: {fileID: 11400000, guid: ef118b5e263da4b1fa4327ca1d3e0c7b,
-            type: 2}
+          colorPalette: {fileID: 0}
           customStyleOptions:
             texturingType: 3
             materials:

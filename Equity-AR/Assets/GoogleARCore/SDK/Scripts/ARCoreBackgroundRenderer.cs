@@ -24,7 +24,7 @@ namespace GoogleARCore
     using System.Collections.Generic;
     using GoogleARCoreInternal;
     using UnityEngine;
-    using UnityEngine.XR;
+    using UnityEngine.XR.ARFoundation;
 
     /// <summary>
     /// Renders the device's camera as a background to the attached Unity camera component.
@@ -40,7 +40,7 @@ namespace GoogleARCore
 
         private Camera m_Camera;
 
-        private ARBackgroundRenderer m_BackgroundRenderer;
+        private ARCameraBackground m_BackgroundRenderer;
 
         private void OnEnable()
         {
@@ -90,10 +90,10 @@ namespace GoogleARCore
 
             if (m_BackgroundRenderer == null)
             {
-                m_BackgroundRenderer = new ARBackgroundRenderer();
-                m_BackgroundRenderer.backgroundMaterial = BackgroundMaterial;
-                m_BackgroundRenderer.camera = m_Camera;
-                m_BackgroundRenderer.mode = ARRenderMode.MaterialAsBackground;
+                m_BackgroundRenderer = new ARCameraBackground();
+                m_BackgroundRenderer.customMaterial = BackgroundMaterial;
+                //m_BackgroundRenderer.camera = m_Camera;
+                //m_BackgroundRenderer.mode = ARRenderMode.MaterialAsBackground;
             }
         }
 
@@ -101,7 +101,7 @@ namespace GoogleARCore
         {
             if (m_BackgroundRenderer != null)
             {
-                m_BackgroundRenderer.camera = null;
+                //m_BackgroundRenderer.camera = null;
                 m_BackgroundRenderer = null;
             }
         }
