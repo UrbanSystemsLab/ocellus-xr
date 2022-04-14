@@ -12,27 +12,27 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51729
+53394
 Successfully changed project path to: /Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR
 /Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 116.94 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 148.38 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/lala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets
 GfxDevice: creating device client; threaded=0
-2022-04-08 13:46:55.057 Unity[18799:324823] Color LCD preferred device: Intel(R) UHD Graphics 630 (low power)
-2022-04-08 13:46:55.077 Unity[18799:324823] Metal devices available: 2
-2022-04-08 13:46:55.077 Unity[18799:324823] 0: AMD Radeon Pro 560X (high power)
-2022-04-08 13:46:55.077 Unity[18799:324823] 1: Intel(R) UHD Graphics 630 (low power)
-2022-04-08 13:46:55.098 Unity[18799:324823] Using device AMD Radeon Pro 560X (high power)
+2022-04-14 00:19:44.493 Unity[9392:335479] Color LCD preferred device: Intel(R) UHD Graphics 630 (low power)
+2022-04-14 00:19:44.493 Unity[9392:335479] Metal devices available: 2
+2022-04-14 00:19:44.493 Unity[9392:335479] 0: AMD Radeon Pro 560X (high power)
+2022-04-14 00:19:44.493 Unity[9392:335479] 1: Intel(R) UHD Graphics 630 (low power)
+2022-04-14 00:19:44.494 Unity[9392:335479] Using device AMD Radeon Pro 560X (high power)
 Initializing Metal device caps: AMD Radeon Pro 560X
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56799
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56392
 Begin MonoManager ReloadAssembly
 Error scanning for extension ivy.xml files: System.UnauthorizedAccessException: Access to the path '/Applications/Unity/Hub/Editor/2020.3.0f1/PlaybackEngines/WebGLSupport/BuildTools/Emscripten_Mac/node' is denied.
   at System.IO.__Error.WinIOError (System.Int32 errorCode, System.String maybeFullPath) [0x00129] in <eae584ce26bc40229c1b1aa476bfa589>:0 
@@ -48,690 +48,58 @@ Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.0f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.0f1/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.005010 seconds.
+Registered in 0.003205 seconds.
 Native extension for Lumin target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 71.87 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 80.15 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.567 seconds
+- Completed reload, in  2.360 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.012758 seconds.
+Registered in 0.012086 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 74.87 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 68.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.355 seconds
+- Completed reload, in  1.354 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
-Refreshing native plugins compatible for Editor in 1.48 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3318 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 214.4 MB.
-System memory in use after: 214.6 MB.
+System memory in use before: 214.6 MB.
+System memory in use after: 214.8 MB.
 
 Unloading 152 unused Assets to reduce memory usage. Loaded Objects now: 3644.
-Total: 2.432312 ms (FindLiveObjects: 0.394946 ms CreateObjectMapping: 0.198963 ms MarkObjects: 1.726706 ms  DeleteObjects: 0.110821 ms)
+Total: 2.905351 ms (FindLiveObjects: 0.516719 ms CreateObjectMapping: 0.132200 ms MarkObjects: 2.142520 ms  DeleteObjects: 0.113106 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefab/Tree.prefab
-  artifactKey: Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Tree.prefab using Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7bb7dc22dfbc1718272e0cc88ae5d75') in 1.119415 seconds
-  Import took 1.126190 seconds .
+  path: Assets/Scenes/Test.unity
+  artifactKey: Guid(a6ce96c1a1e9a408690f0c7bae1b380f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Test.unity using Guid(a6ce96c1a1e9a408690f0c7bae1b380f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12a9d2725454be89116bc7ec49d550d7') in 0.017695 seconds
+  Import took 0.023462 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000227 seconds.
-  path: Assets/Prefab/Map.prefab
-  artifactKey: Guid(be8e0cecf6c9047db92452e5c428d940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Map.prefab using Guid(be8e0cecf6c9047db92452e5c428d940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1655873e4c1bc87f00bfd9b086cab375') in 0.037250 seconds
-  Import took 0.042238 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Prefab/MapPlaced.prefab
-  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c758ce007546b0c53960f38ab0ad9b6') in 0.006619 seconds
-  Import took 0.011680 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/Prefab/Bioswale.prefab
-  artifactKey: Guid(5abb8246793744e77904e6b16aa71d95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Bioswale.prefab using Guid(5abb8246793744e77904e6b16aa71d95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f07f48e901621a96b52ebbe0eefcf21') in 0.015692 seconds
-  Import took 0.021229 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000240 seconds.
-  path: Assets/Prefab/TreeInfo.prefab
-  artifactKey: Guid(798db68093e8c447380c82509e8dd569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TreeInfo.prefab using Guid(798db68093e8c447380c82509e8dd569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92115e32f6736d329a2ee03957765438') in 0.016398 seconds
-  Import took 0.022044 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.042372 seconds.
-  path: Assets/Prefab/TreeInfo.prefab
-  artifactKey: Guid(798db68093e8c447380c82509e8dd569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TreeInfo.prefab using Guid(798db68093e8c447380c82509e8dd569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92115e32f6736d329a2ee03957765438') in 0.013235 seconds
-  Import took 0.018997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.523533 seconds.
-  path: Assets/Scenes/Test Meeting.unity
-  artifactKey: Guid(eb80911c151e143d8aed8a40d95156f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Test Meeting.unity using Guid(eb80911c151e143d8aed8a40d95156f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd946dd5fc43e2734e72a0e4916e95337') in 0.002223 seconds
-  Import took 0.009321 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.862149 seconds.
-  path: Assets/Scenes/WorldScaleAR.unity
-  artifactKey: Guid(bed6a69e1d5bd4d76a20e27300e201da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/WorldScaleAR.unity using Guid(bed6a69e1d5bd4d76a20e27300e201da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24d058fa84249acbd588218c18200f2d') in 0.002160 seconds
-  Import took 0.007537 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 103.507550 seconds.
-  path: Assets/Prefab/Tree.prefab
-  artifactKey: Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Tree.prefab using Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ab842bdc05121a8550e9531423ded7a') in 0.030099 seconds
-  Import took 0.036238 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.692506 seconds.
-  path: Assets/Prefab/Tree.prefab
-  artifactKey: Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Tree.prefab using Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d5d36bad4cb154d2c72be276af1916b') in 0.015889 seconds
-  Import took 0.021925 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 44.044737 seconds.
-  path: Assets/Prefab/Tree.prefab
-  artifactKey: Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Tree.prefab using Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbc8b627fc95aff869d0ff1fbf1c5e57') in 0.018714 seconds
-  Import took 0.024446 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.309320 seconds.
-  path: Assets/Prefab/Tree.prefab
-  artifactKey: Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Tree.prefab using Guid(465c4d7c597ed47a6b04805c0f3ffc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04332aab2131db4d3135aa24e3ca32e8') in 0.016761 seconds
-  Import took 0.022768 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.018537 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.692 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.94 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 216.5 MB.
-System memory in use after: 216.7 MB.
-
-Unloading 143 unused Assets to reduce memory usage. Loaded Objects now: 3657.
-Total: 3.269769 ms (FindLiveObjects: 0.412681 ms CreateObjectMapping: 0.225461 ms MarkObjects: 2.548983 ms  DeleteObjects: 0.081304 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Import Request.
-  Time since last request: 530.314251 seconds.
-  path: Assets/Mapbox/Examples/3_POIPlacement/Resources/ArtsPoiLabelPrefab.prefab
-  artifactKey: Guid(29d1abf5ba6514d81a7974353f130ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/3_POIPlacement/Resources/ArtsPoiLabelPrefab.prefab using Guid(29d1abf5ba6514d81a7974353f130ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ac4bcf05b6b58655b63e096926940a9') in 0.123796 seconds
-  Import took 0.129592 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000267 seconds.
-  path: Assets/Vuplex/WebView/Prefabs/Resources/CanvasWebViewPrefab.prefab
-  artifactKey: Guid(3e10f3b6a733e441c8352020cff2f1f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Vuplex/WebView/Prefabs/Resources/CanvasWebViewPrefab.prefab using Guid(3e10f3b6a733e441c8352020cff2f1f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '341d457bdfcdf6461ae18a1e01fd66bc') in 0.007292 seconds
-  Import took 0.012497 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Prefabs/collisionPlanePrefab.prefab
-  artifactKey: Guid(813dd14a7826b4795823dd39ac4cc050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Prefabs/collisionPlanePrefab.prefab using Guid(813dd14a7826b4795823dd39ac4cc050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be28a07dd12b3862010a680d54256e3f') in 0.004357 seconds
-  Import took 0.009813 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000247 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Prefabs/BallPrefab.prefab
-  artifactKey: Guid(e11b49885a57845e3b22a6355928ed72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Prefabs/BallPrefab.prefab using Guid(e11b49885a57845e3b22a6355928ed72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8df6576a91c26da5a6d7c5164c4239a') in 0.477918 seconds
-  Import took 0.483555 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Mapbox/Examples/1_DataExplorer/Modules/MotorwayJunctionLayer/PointPrefab.prefab
-  artifactKey: Guid(cef2154b086ac7244b859a4cb18fe659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/1_DataExplorer/Modules/MotorwayJunctionLayer/PointPrefab.prefab using Guid(cef2154b086ac7244b859a4cb18fe659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f7a3132c727b7ea193620c8ebdb0aaa') in 0.227141 seconds
-  Import took 0.232461 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Prefabs/PointCloudPrefab.prefab
-  artifactKey: Guid(5ea2b6d738c7e43d6b8ff9e8a5e91b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Prefabs/PointCloudPrefab.prefab using Guid(5ea2b6d738c7e43d6b8ff9e8a5e91b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63d1eb8807c5ee1e4f60ba4473b46d61') in 0.064443 seconds
-  Import took 0.070341 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000266 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Prefabs/ParticlePrefab.prefab
-  artifactKey: Guid(87db9decf4b3e4cb8bf3eea22ccd37f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Prefabs/ParticlePrefab.prefab using Guid(87db9decf4b3e4cb8bf3eea22ccd37f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b00bce6c1a84dc94cdc64ccd83a02cc3') in 0.007147 seconds
-  Import took 0.014364 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/Mapbox/Examples/Resources/MakiPrefab.prefab
-  artifactKey: Guid(39c06c41287c07843b78097666be5c58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/Resources/MakiPrefab.prefab using Guid(39c06c41287c07843b78097666be5c58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faebf297cc8f037554d50b1e6e94e3ee') in 0.004775 seconds
-  Import took 0.012687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000560 seconds.
-  path: Assets/Mapbox/Examples/3_POIPlacement/Resources/OutdoorPoiLabelPrefab.prefab
-  artifactKey: Guid(b0e54a880e97f4c5ead7dcc1c0918e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/3_POIPlacement/Resources/OutdoorPoiLabelPrefab.prefab using Guid(b0e54a880e97f4c5ead7dcc1c0918e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc67f3cbf65b7c68c57eeab598182548') in 0.013638 seconds
-  Import took 0.025110 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000304 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Prefabs/debugPlanePrefab.prefab
-  artifactKey: Guid(f879aaf3eeb0c467eb22cbaf08dc97a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Prefabs/debugPlanePrefab.prefab using Guid(f879aaf3eeb0c467eb22cbaf08dc97a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6d821467d0a59eda6ce2525ddb71cf0') in 0.054711 seconds
-  Import took 0.061694 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000407 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Prefabs/ParticlePrefab.prefab
-  artifactKey: Guid(8049ec78edc7a450ea776237de46d3f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Prefabs/ParticlePrefab.prefab using Guid(8049ec78edc7a450ea776237de46d3f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb29b67d702d2ae8c25debf89d4ef0c1') in 0.004575 seconds
-  Import took 0.011676 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000278 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Prefabs/ParticlePainterPrefab.prefab
-  artifactKey: Guid(23fb18886a0df4747bc4fa66d6868045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Prefabs/ParticlePainterPrefab.prefab using Guid(23fb18886a0df4747bc4fa66d6868045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ffd7a1770a306dd46ae3bf33f1c2a4e') in 0.004989 seconds
-  Import took 0.012714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Prefabs/collisionPlanePrefab.prefab
-  artifactKey: Guid(7909ccbcf86d64781ae480042279f368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Prefabs/collisionPlanePrefab.prefab using Guid(7909ccbcf86d64781ae480042279f368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '371e821bfa26c62d4603634ef117ee6c') in 0.005769 seconds
-  Import took 0.014523 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000312 seconds.
-  path: Assets/Mapbox/Examples/1_DataExplorer/Modules/Resources/ExplorerCountryLabelPrefabModifier.asset
-  artifactKey: Guid(90f8fc7667430374d9ddd1907cf522dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/1_DataExplorer/Modules/Resources/ExplorerCountryLabelPrefabModifier.asset using Guid(90f8fc7667430374d9ddd1907cf522dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb3e5cb59dbccadad090f0c3e6d313b8') in 0.420592 seconds
-  Import took 0.427307 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/Mapbox/Examples/3_POIPlacement/Resources/NightlifePoiLabelPrefab.prefab
-  artifactKey: Guid(61bcd2d324dd34bb9b722d856749c28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/3_POIPlacement/Resources/NightlifePoiLabelPrefab.prefab using Guid(61bcd2d324dd34bb9b722d856749c28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77972a47f25b84d3bb7c099528adabaa') in 0.014730 seconds
-  Import took 0.020195 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000258 seconds.
-  path: Assets/Mapbox/Examples/Prefabs/CustomMarkerPrefab.prefab
-  artifactKey: Guid(9b5b1b761a8994c07affd0a05396633b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/Prefabs/CustomMarkerPrefab.prefab using Guid(9b5b1b761a8994c07affd0a05396633b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b98ad607f5e24f388d428b62976c10ff') in 0.013365 seconds
-  Import took 0.021543 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000345 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Prefabs/AxesPrefab.prefab
-  artifactKey: Guid(8855f6e449b9d4d3fae7f0a1a5ff9c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Prefabs/AxesPrefab.prefab using Guid(8855f6e449b9d4d3fae7f0a1a5ff9c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f611a716d69a3bd7e1b9003a30d32dc') in 0.313889 seconds
-  Import took 0.319861 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Prefabs/occlusionPlanePrefab.prefab
-  artifactKey: Guid(7efa6a20912a94315ab013cc4e1bf14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Prefabs/occlusionPlanePrefab.prefab using Guid(7efa6a20912a94315ab013cc4e1bf14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '762118d0090c7a93a3c43f55478798da') in 0.037583 seconds
-  Import took 0.042835 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/Mapbox/Examples/1_DataExplorer/Modules/MotorwayJunctionLayer/ExplorerPointPrefabModifier.asset
-  artifactKey: Guid(ceca5248b4c18354d8089a76da2f7f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/1_DataExplorer/Modules/MotorwayJunctionLayer/ExplorerPointPrefabModifier.asset using Guid(ceca5248b4c18354d8089a76da2f7f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e1346aa07dc12d4d299b77b2a07edaf') in 0.004424 seconds
-  Import took 0.010357 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000211 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Prefabs/debugPlanePrefab.prefab
-  artifactKey: Guid(2c9427dfd106e4aefa08705ac5020bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Prefabs/debugPlanePrefab.prefab using Guid(2c9427dfd106e4aefa08705ac5020bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5bbc5e30e97668da46fe090a7a4c018') in 0.018192 seconds
-  Import took 0.024359 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Mapbox/Examples/3_POIPlacement/Resources/DefaultPoiLabelPrefab.prefab
-  artifactKey: Guid(d748e6a0b26334f4d933c1438339484d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/3_POIPlacement/Resources/DefaultPoiLabelPrefab.prefab using Guid(d748e6a0b26334f4d933c1438339484d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '687f52efb0b700e94ade96a918d1b657') in 0.024892 seconds
-  Import took 0.032548 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/Mapbox/User/Modifiers/NewPrefabModifier.asset
-  artifactKey: Guid(5d97fc6b55524410390578e9416c0b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/User/Modifiers/NewPrefabModifier.asset using Guid(5d97fc6b55524410390578e9416c0b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cbd93c7f2ebd4d76f677cb51a8a40cd') in 0.006384 seconds
-  Import took 0.014207 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Prefabs/ParticlePainterPrefab.prefab
-  artifactKey: Guid(200646a121c9c46f69245ca2c1b789ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Prefabs/ParticlePainterPrefab.prefab using Guid(200646a121c9c46f69245ca2c1b789ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b309f3798c77bc4f3a2b919d70cf160') in 0.006963 seconds
-  Import took 0.012850 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Prefabs/PointCloudPrefab.prefab
-  artifactKey: Guid(02d2a544d8d594d30b790e76398d0873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Prefabs/PointCloudPrefab.prefab using Guid(02d2a544d8d594d30b790e76398d0873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39def988bd21f1994d63857f4deda8b2') in 0.012696 seconds
-  Import took 0.019578 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000389 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Prefabs/BallPrefab.prefab
-  artifactKey: Guid(5d3487f0564ef43a3a490872441571c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Prefabs/BallPrefab.prefab using Guid(5d3487f0564ef43a3a490872441571c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e47a4d0bc034cb40ca95d315a530df29') in 0.020212 seconds
-  Import took 0.029567 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000429 seconds.
-  path: Assets/Mapbox/Examples/3_POIPlacement/Resources/FoodPoiLabelPrefab.prefab
-  artifactKey: Guid(fafbd32423ea04e379d8321b4d370fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/3_POIPlacement/Resources/FoodPoiLabelPrefab.prefab using Guid(fafbd32423ea04e379d8321b4d370fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '488d719b55ac5f047de7ebd11fad20a9') in 0.018964 seconds
-  Import took 0.027295 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000326 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Prefabs/occlusionPlanePrefab.prefab
-  artifactKey: Guid(9eb96f002ffce4560879b18f2e0502e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Prefabs/occlusionPlanePrefab.prefab using Guid(9eb96f002ffce4560879b18f2e0502e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '840c3e8a0753cf76fe57d6808180f1a7') in 0.018361 seconds
-  Import took 0.028789 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000368 seconds.
-  path: Assets/Mapbox/Examples/1_DataExplorer/Modules/Resources/LabelPrefab.prefab
-  artifactKey: Guid(0940fff5996150e4cb6c1f69c781a29a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/1_DataExplorer/Modules/Resources/LabelPrefab.prefab using Guid(0940fff5996150e4cb6c1f69c781a29a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84f1d4007a44c218eff8dbe26f80e2fc') in 0.007856 seconds
-  Import took 0.015870 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/Mapbox/Examples/Resources/MakiUiPrefab.prefab
-  artifactKey: Guid(4e3a8050aac992649b0cb2bc0e9be702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/Resources/MakiUiPrefab.prefab using Guid(4e3a8050aac992649b0cb2bc0e9be702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36cd80707728e4ac20b0135e6f317557') in 0.019296 seconds
-  Import took 0.025768 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.062031 seconds.
-  path: Assets/Mapbox/Resources/Mapbox/PrefabList.asset
-  artifactKey: Guid(8d2ff5cb743b345f4a7ff8b3cdc69f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Resources/Mapbox/PrefabList.asset using Guid(8d2ff5cb743b345f4a7ff8b3cdc69f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84fb0e7abd28f3935439d32cef95dff4') in 0.010589 seconds
-  Import took 0.017574 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000814 seconds.
-  path: Assets/Mapbox/Resources/Mapbox/PrefabList.asset
-  artifactKey: Guid(8d2ff5cb743b345f4a7ff8b3cdc69f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Resources/Mapbox/PrefabList.asset using Guid(8d2ff5cb743b345f4a7ff8b3cdc69f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84fb0e7abd28f3935439d32cef95dff4') in 0.009472 seconds
-  Import took 0.016322 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.578335 seconds.
-  path: Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs
-  artifactKey: Guid(dd8aacc1880ff504d9531b4d61c86458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs using Guid(dd8aacc1880ff504d9531b4d61c86458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c60933354d6241631604bd8b5b31e7d') in 0.243423 seconds
-  Import took 0.248526 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 276.385808 seconds.
-  path: Assets/Scripts/DistanceToCheckpoint.cs
-  artifactKey: Guid(13d60f38413a844a4b51aa00dd058d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DistanceToCheckpoint.cs using Guid(13d60f38413a844a4b51aa00dd058d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70722b12f966f20e9dfde02322c8cc5b') in 0.010655 seconds
-  Import took 0.021785 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.019353 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.903 seconds
-Platform modules already initialized, skipping
-Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 2.12 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 226.1 MB.
-System memory in use after: 226.3 MB.
-
-Unloading 148 unused Assets to reduce memory usage. Loaded Objects now: 3664.
-Total: 4.026010 ms (FindLiveObjects: 0.516175 ms CreateObjectMapping: 0.254019 ms MarkObjects: 2.903600 ms  DeleteObjects: 0.347358 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Import Request.
-  Time since last request: 1444.168030 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Materials/2000px-Checkerboard_pattern.svg.mat
-  artifactKey: Guid(48f9ec19142bd7e4c9f2441ab5799cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Materials/2000px-Checkerboard_pattern.svg.mat using Guid(48f9ec19142bd7e4c9f2441ab5799cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53bbb92643064e6dc04cd06c379a884e') in 0.283562 seconds
-  Import took 0.291624 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000392 seconds.
-  path: Assets/Plugins/StansAssets/NativePlugins/IOSNativePro/Editor/Art/Icons/AdSupport_icon.png
-  artifactKey: Guid(8633bb0b63f2fb5469a15a19d8e9499a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/StansAssets/NativePlugins/IOSNativePro/Editor/Art/Icons/AdSupport_icon.png using Guid(8633bb0b63f2fb5469a15a19d8e9499a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029e1b649fd205171143a4b2631702e1') in 2.850001 seconds
-  Import took 2.860105 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000344 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Textures/debugPlaneTile.png
-  artifactKey: Guid(a4fbc30277350415784c22e2009351b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Textures/debugPlaneTile.png using Guid(a4fbc30277350415784c22e2009351b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d73564ee8cfa7ea7703ec7c38d4c46') in 0.019456 seconds
-  Import took 0.030865 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000417 seconds.
-  path: Assets/Mapbox/Examples/_sharedModules/AddToTreeCollectionModifier.asset
-  artifactKey: Guid(d534c6a861f735c4dab3990ac3c05158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/_sharedModules/AddToTreeCollectionModifier.asset using Guid(d534c6a861f735c4dab3990ac3c05158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd8fda805a7dd0e2d169f39ce66cb80') in 0.010557 seconds
-  Import took 0.018934 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000361 seconds.
-  path: Assets/Mapbox/Examples/Resources/maki/amusement-park-15.png
-  artifactKey: Guid(2b59ad5241786eb46be431351c72b926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/Resources/maki/amusement-park-15.png using Guid(2b59ad5241786eb46be431351c72b926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c8d0e136fde07be2e5f8f3ce11595de') in 0.036394 seconds
-  Import took 0.044803 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000378 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Materials/2000px-Checkerboard_patternUV.svg.mat
-  artifactKey: Guid(66fbc43c67b564bb4a4c2c2dcd6c1970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Materials/2000px-Checkerboard_patternUV.svg.mat using Guid(66fbc43c67b564bb4a4c2c2dcd6c1970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be15af020fcf461eb39258113186835e') in 0.016581 seconds
-  Import took 0.025257 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/Mapbox/Examples/_sharedModules/BasicsVectorTileFactory.asset
-  artifactKey: Guid(ee4d24cec5a998543b716563b2b77dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/_sharedModules/BasicsVectorTileFactory.asset using Guid(ee4d24cec5a998543b716563b2b77dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e072228acdcdfe5370d10ad177182591') in 0.008838 seconds
-  Import took 0.017544 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000362 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Materials/2000px-Checkerboard_pattern.svg.mat
-  artifactKey: Guid(e84be04171352498ca16f0b156930511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Materials/2000px-Checkerboard_pattern.svg.mat using Guid(e84be04171352498ca16f0b156930511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6456f27e3652bd4fa55e8d6a3901ace2') in 0.013613 seconds
-  Import took 0.023120 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000346 seconds.
-  path: Assets/UnityARInterface/Examples/Common/Materials/2000px-Checkerboard_patternUV.svg.mat
-  artifactKey: Guid(ac1e3e424b9c345d1889a4c3932d6669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARInterface/Examples/Common/Materials/2000px-Checkerboard_patternUV.svg.mat using Guid(ac1e3e424b9c345d1889a4c3932d6669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38d75f086a4d1d72a0057022e999d6f4') in 0.012448 seconds
-  Import took 0.020720 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000344 seconds.
-  path: Assets/Mapbox/Examples/_sharedModules/PoiVectorTileFactory.asset
-  artifactKey: Guid(b6db6e4901cc50246b1ed5c328d73872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/_sharedModules/PoiVectorTileFactory.asset using Guid(b6db6e4901cc50246b1ed5c328d73872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7d5e575b384d229b2cfbbba7d55d2c0') in 0.003117 seconds
-  Import took 0.012531 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000477 seconds.
-  path: Assets/UnityARKitPlugin/Examples/Common/Textures/debugPlaneTile.png
-  artifactKey: Guid(5db0892a9f35841a1aafa4d2f617eaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/Examples/Common/Textures/debugPlaneTile.png using Guid(5db0892a9f35841a1aafa4d2f617eaf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '935dc06b8e3eac39543562ddf8ec1859') in 0.014133 seconds
-  Import took 0.023355 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000326 seconds.
-  path: Assets/Mapbox/Examples/Resources/maki/america-football-15.png
-  artifactKey: Guid(0ab7e81663cf1d94e9bd71c89d6f82d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/Resources/maki/america-football-15.png using Guid(0ab7e81663cf1d94e9bd71c89d6f82d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '008022f881b3251de649aec18617e02b') in 0.016537 seconds
-  Import took 0.025728 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000353 seconds.
-  path: Assets/Mapbox/Examples/Resources/maki/airport-15.png
-  artifactKey: Guid(4002ecd3ce59a53409ed9e054f72fbf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/Resources/maki/airport-15.png using Guid(4002ecd3ce59a53409ed9e054f72fbf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f96e25d8b741300aadb169e9e15bab7') in 0.013792 seconds
-  Import took 0.022537 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.713630 seconds.
-  path: Assets/Mapbox/Resources/Mapbox/ScenesList.asset
-  artifactKey: Guid(5424214e66dd94ac79007c7c31989849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Resources/Mapbox/ScenesList.asset using Guid(5424214e66dd94ac79007c7c31989849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4cec9d61f4595f89034980cffe7f85b') in 0.017061 seconds
-  Import took 0.026783 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000323 seconds.
-  path: Assets/Mapbox/Examples/_sharedModules/StylingVectorTileFactory.asset
-  artifactKey: Guid(923119689e177024682db7c643a8d54b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/_sharedModules/StylingVectorTileFactory.asset using Guid(923119689e177024682db7c643a8d54b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e96bb939067c5c2d5a831ba6685ab9a0') in 0.003515 seconds
-  Import took 0.014827 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002528 seconds.
-  path: Assets/Mapbox/Resources/Mapbox/ScenesList.asset
-  artifactKey: Guid(5424214e66dd94ac79007c7c31989849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Resources/Mapbox/ScenesList.asset using Guid(5424214e66dd94ac79007c7c31989849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4cec9d61f4595f89034980cffe7f85b') in 0.015263 seconds
-  Import took 0.025227 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.988215 seconds.
-  path: Assets/Mapbox/Examples/_sharedModules/TerrainVectorTileFactory.asset
-  artifactKey: Guid(e4c27502735c942dca373c40a29e5a58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/_sharedModules/TerrainVectorTileFactory.asset using Guid(e4c27502735c942dca373c40a29e5a58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2db2ead33db5a16538f9be19b2ead4f2') in 0.003718 seconds
-  Import took 0.012221 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.433686 seconds.
-  path: Assets/Mapbox/Core/mapbox-sdk-cs/Map/Tile.cs
-  artifactKey: Guid(8010c0fffeba24190a0e4a5a5f4317c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Core/mapbox-sdk-cs/Map/Tile.cs using Guid(8010c0fffeba24190a0e4a5a5f4317c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8269d0dd4c703a25e594571da39197c') in 0.003067 seconds
-  Import took 0.010835 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006393 seconds.
-  path: Assets/Mapbox/Core/mapbox-sdk-cs/Map/Tile.cs
-  artifactKey: Guid(8010c0fffeba24190a0e4a5a5f4317c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Core/mapbox-sdk-cs/Map/Tile.cs using Guid(8010c0fffeba24190a0e4a5a5f4317c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8269d0dd4c703a25e594571da39197c') in 0.002744 seconds
-  Import took 0.010470 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.541391 seconds.
-  path: Assets/Mapbox/Unity/MeshGeneration/Data/UnityTile.cs
-  artifactKey: Guid(def0795d2b7c06547bcfdb57ec6f201b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Unity/MeshGeneration/Data/UnityTile.cs using Guid(def0795d2b7c06547bcfdb57ec6f201b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a359a83263d3bdb1bec77c48b4ae7b8') in 0.004006 seconds
-  Import took 0.012778 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 137.076951 seconds.
-  path: Assets/UnityARKitPlugin/ARKitRemote/ARKitRemoteConnection.prefab
-  artifactKey: Guid(8ce7d6271a01a4274a00066492aed04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityARKitPlugin/ARKitRemote/ARKitRemoteConnection.prefab using Guid(8ce7d6271a01a4274a00066492aed04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d1d29b14dbac56f733a48b18e47d8ec') in 0.013390 seconds
-  Import took 0.019148 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Lean/Touch/Examples/Textures/ArrowStraight.png
-  artifactKey: Guid(f613827a3c667ec40b5b739c13f5524c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Lean/Touch/Examples/Textures/ArrowStraight.png using Guid(f613827a3c667ec40b5b739c13f5524c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7460dcdb3b44951fda23002d9e1edc6d') in 0.022650 seconds
-  Import took 0.028133 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/Mapbox/Examples/2_AstronautGame/AstronautGame/Astronaut/Astro@walk.fbx
-  artifactKey: Guid(fc9c407526569a040aff73ce885504c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/2_AstronautGame/AstronautGame/Astronaut/Astro@walk.fbx using Guid(fc9c407526569a040aff73ce885504c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3746027789d75a7ebe25c57ba69da0a') in 1.852361 seconds
-  Import took 1.859532 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/Mapbox/Examples/2_AstronautGame/AstronautGame/Park/LocationGameSpawnTreeModifier.asset
-  artifactKey: Guid(e425dc440a40d9a4080794105e9f66ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/2_AstronautGame/AstronautGame/Park/LocationGameSpawnTreeModifier.asset using Guid(e425dc440a40d9a4080794105e9f66ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43a31c9b2e3e4b3105f982e6e4b0fe06') in 0.007657 seconds
-  Import took 0.014254 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000312 seconds.
-  path: Assets/UI/tree-conifer.png
-  artifactKey: Guid(3ea2ca555d1fb4dd08ae7c607c2362f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UI/tree-conifer.png using Guid(3ea2ca555d1fb4dd08ae7c607c2362f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ad3564f14f8de95c27ce01a7ddc50d') in 0.016159 seconds
-  Import took 0.023302 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000383 seconds.
-  path: Assets/Mapbox/User/Modifiers/TreeModifier.asset
-  artifactKey: Guid(9d87843b2402c4dac97800c7509f5b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/User/Modifiers/TreeModifier.asset using Guid(9d87843b2402c4dac97800c7509f5b45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18de7920d48a3082760a7c7c655e2a14') in 0.063522 seconds
-  Import took 0.069789 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000257 seconds.
-  path: Assets/Mapbox/Examples/2_AstronautGame/AstronautGame/Astronaut/Astro@idle.fbx
-  artifactKey: Guid(60910c35c31b61e429ee83165006de91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mapbox/Examples/2_AstronautGame/AstronautGame/Astronaut/Astro@idle.fbx using Guid(60910c35c31b61e429ee83165006de91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2b0fc6a7efec1b8cfdd98245729e321') in 1.163668 seconds
-  Import took 1.169286 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000291 seconds.
-  path: Assets/Materials/Tree.mat
-  artifactKey: Guid(9910223b23a93469eba84088d81348d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Tree.mat using Guid(9910223b23a93469eba84088d81348d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2811bf8422ca173f25fe908a71fcc216') in 0.261310 seconds
-  Import took 0.266587 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.693715 seconds.
-  path: Assets/Scripts/TreeInfoFinder.cs
-  artifactKey: Guid(48331aa9476904b4abaff2a37bd6790f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/TreeInfoFinder.cs using Guid(48331aa9476904b4abaff2a37bd6790f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca340acb403c215f8eb106d81fa146d1') in 0.004558 seconds
-  Import took 0.012172 seconds .
+  Time since last request: 6.836985 seconds.
+  path: Assets/Scenes/Switch 2 Maps.unity
+  artifactKey: Guid(1f2a870a365034a13989d7693b444641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Switch 2 Maps.unity using Guid(1f2a870a365034a13989d7693b444641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66c0b4fbeffbea01e5a82b780a8c1a92') in 0.001463 seconds
+  Import took 0.007343 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
