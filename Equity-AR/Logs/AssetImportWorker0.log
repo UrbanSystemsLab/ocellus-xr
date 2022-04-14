@@ -522,3 +522,4 @@ Received Import Request.
 Start importing Assets/Scenes/Lat&Long.unity using Guid(53902d2aa8c4c421ba9df082479dc432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1081d90eff095093995154dfcc05e65') in 0.014298 seconds
   Import took 0.020031 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
