@@ -4,7 +4,7 @@ using UnityEngine;
 using GoogleARCore;
 using System.Collections;
 using System.Runtime.InteropServices;
-using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR;
 
 namespace UnityARInterface
 {
@@ -48,7 +48,7 @@ namespace UnityARInterface
         private Dictionary<TrackedPlane, BoundedPlane> m_TrackedPlanes = new Dictionary<TrackedPlane, BoundedPlane>();
         private ARCoreSession m_ARCoreSession;
         private ARCoreSessionConfig m_ARCoreSessionConfig;
-        private ARCameraBackground m_BackgroundRenderer;
+        private ARBackgroundRenderer m_BackgroundRenderer;
         private Matrix4x4 m_DisplayTransform = Matrix4x4.identity;
         private List<Vector4> m_TempPointCloud = new List<Vector4>();
         private Dictionary<ARAnchor, Anchor> m_Anchors = new Dictionary<ARAnchor, Anchor>();
@@ -76,8 +76,8 @@ namespace UnityARInterface
                     return;
 
                 m_BackgroundRendering = value;
-                //m_BackgroundRenderer.mode = m_BackgroundRendering ? 
-                //    ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
+                m_BackgroundRenderer.mode = m_BackgroundRendering ? 
+                    ARRenderMode.MaterialAsBackground : ARRenderMode.StandardBackground;
             }
         }
 
@@ -163,8 +163,8 @@ namespace UnityARInterface
             m_ARCoreSession.enabled = false;
             TextureReader_destroy();
             BackgroundRendering = false;
-            m_BackgroundRenderer.customMaterial = null;
-            //m_BackgroundRenderer.camera = null;
+            m_BackgroundRenderer.backgroundMaterial = null;
+            m_BackgroundRenderer.camera = null;
             m_BackgroundRenderer = null;
             IsRunning = false;
         }
