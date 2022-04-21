@@ -29,7 +29,7 @@ namespace SA.iOS.XCode
             proj.ReadFromFile(pbxProjPath);
 
 #if UNITY_2019_3_OR_NEWER
-                var targetGuid = proj.GetUnityMainTargetGuid();
+                var targetGuid = proj.GetUnityFrameworkTargetGuid();
                 var frameworkTargetGuid = proj.GetUnityFrameworkTargetGuid();
 #else
             var targetGuid = proj.TargetGuidByName("Unity-iPhone");

@@ -16,7 +16,7 @@ public class TreeInfoManager : MonoBehaviour
     private bool numAdded = false;
     public GameObject infocard;
     public TextMeshPro treeName;
-    Transform transform;
+    private Transform mytransform;
 
     //public Transform infoTrans;
 
@@ -26,13 +26,13 @@ public class TreeInfoManager : MonoBehaviour
     {
         mainCam = GameObject.Find("Main Camera").GetComponent<Transform>();
         treeNum = GameObject.Find("TreeNum").GetComponent<Text>();
-        transform = GetComponent<Transform>();
+        mytransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        dist = Vector3.Distance(transform.position, mainCam.position);
+        dist = Vector3.Distance(mytransform.position, mainCam.position);
         
         if (dist < 20.0f)
         {
