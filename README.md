@@ -1,6 +1,6 @@
 # Equity-AR
 
-Unity: 2018.4.13f1  Mapbox SDK: 2.1.1
+Unity: [2020.3.0f1](https://unity3d.com/get-unity/download/archive)  Mapbox SDK: 2.1.1
 
 This is the research codes about Mapbox-unity for Equity AR project.
 
