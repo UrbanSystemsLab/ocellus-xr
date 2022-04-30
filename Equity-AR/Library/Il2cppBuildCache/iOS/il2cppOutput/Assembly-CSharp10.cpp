@@ -42772,7 +42772,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void moveDistance_Start_mF0DD55E3E414EF829605
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// rb = GetComponent<Rigidbody>();
+		// rb = this.GetComponent<Rigidbody>();
 		Rigidbody_t101F2E2F9F16E765A77429B2DE4527D2047A887A * L_0;
 		L_0 = Component_GetComponent_TisRigidbody_t101F2E2F9F16E765A77429B2DE4527D2047A887A_m9DC24AA806B0B65E917751F7A3AFDB58861157CE(__this, /*hidden argument*/Component_GetComponent_TisRigidbody_t101F2E2F9F16E765A77429B2DE4527D2047A887A_m9DC24AA806B0B65E917751F7A3AFDB58861157CE_RuntimeMethod_var);
 		__this->set_rb_4(L_0);

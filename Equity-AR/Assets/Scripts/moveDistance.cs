@@ -9,7 +9,7 @@ public class moveDistance : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -17,6 +17,7 @@ public class moveDistance : MonoBehaviour
     {
         dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
         dirZ = Input.GetAxisRaw("Vertical") * moveSpeed;
+
     }
 
     private void FixedUpdate()
