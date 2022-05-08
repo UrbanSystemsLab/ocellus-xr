@@ -1250,7 +1250,7 @@ ScriptsOnlyBuild:
     className: QuadTreeMapVisualizer
   - hash:
       serializedVersion: 2
-      Hash: 246d79a3c9c13d1692ae7041e9ce93ec
+      Hash: ee12ac38e7a35b391313f40f160f615e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MessageClass
@@ -3112,4 +3112,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Lat&Long.unity
   - Assets/Scenes/WorldScaleAR.unity
-  playerPath: /Users/elenalalala/Desktop/USLBuild/WithNewLink
+  playerPath: /Users/elenalalala/Desktop/USLBuild/weird testing

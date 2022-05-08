@@ -1,40 +1,31 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MapboxAR/Scripts/ManualSync/UpdateMapPosByARPlaneY.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs">
     <Files>
-      <File FileName="Assets/UnityARInterface/Scripts/ARCoreInterface.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="Assets/Scripts/MapManager.cs" />
-      <File FileName="Assets/Scripts/SceneController.cs" />
-      <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Editor/UnityARBuildPostprocessor.cs" />
-      <File FileName="Assets/UnityARInterface/ARRemote/Scripts/ARRemoteEditorInterface.cs" />
-      <File FileName="Assets/Scripts/toggleWebView.cs" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
-      <File FileName="Assets/Scripts/JSCom.cs" />
-      <File FileName="Assets/Scripts/Switcher.cs" />
-      <File FileName="Assets/Scripts/MessageClass.cs" />
-      <File FileName="Assets/Scripts/AskLocation.cs" />
-      <File FileName="Assets/Scripts/WebInfoStats.cs" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="95" Column="65" IsPinned="True" />
+      <File FileName="Assets/Scripts/MessageClass.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/AskLocation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" Line="1" Column="1" />
       <File FileName="Assets/SliderHandler.cs" />
       <File FileName="Assets/VerticalLayoutUI.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="1" Column="1" />
       <File FileName="Assets/VerticalFullScreenUI.cs" />
       <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
       <File FileName="Assets/MinimizeScreenFeature.cs" />
       <File FileName="Assets/Scripts/DistanceToCheckpoint.cs" />
       <File FileName="Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs" />
-      <File FileName="Assets/UnityARInterface/Scripts/ARKitInterface.cs" />
+      <File FileName="Assets/UnityARInterface/Scripts/ARKitInterface.cs" Line="1" Column="1" />
       <File FileName="Assets/Mapbox/Unity/Editor/Build/Mapbox_iOS_build.cs" />
       <File FileName="Assets/Plugins/StansAssets/NativePlugins/IOSDeploy/Editor/Scripts/ISD_PostProcess.cs" />
       <File FileName="Assets/Vuplex/WebView/Editor/iOS/iOSBuildScript.cs" />
       <File FileName="Assets/MapboxAR/Examples/ARPrerequisiteInfo.cs" />
       <File FileName="Assets/UnityARInterface/Scripts/ARController.cs" />
-      <File FileName="Assets/Scripts/TreeInfoManager.cs" Line="35" Column="1" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/PositionWithLocationProvider.cs" Line="83" Column="83" />
-      <File FileName="Assets/UnityARInterface/Scripts/ARPointCloudVisualizer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" Line="1" Column="1" />
-      <File FileName="Assets/MapboxAR/Scripts/ManualSync/UpdateMapPosByARPlaneY.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TreeInfoManager.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/PositionWithLocationProvider.cs" />
+      <File FileName="Assets/UnityARInterface/Scripts/ARPointCloudVisualizer.cs" />
+      <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="106" Column="47" />
+      <File FileName="Assets/Scripts/toggleWebView.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -43,19 +34,23 @@
             <Node name="Assets" expanded="True">
               <Node name="Mapbox" expanded="True">
                 <Node name="Examples" expanded="True">
-                  <Node name="Scripts" expanded="True" />
+                  <Node name="Scripts" expanded="True">
+                    <Node name="ForwardGeocodeUserInput.cs" selected="True" />
+                  </Node>
                 </Node>
                 <Node name="Unity" expanded="True">
                   <Node name="Map" expanded="True" />
+                  <Node name="MeshGeneration" expanded="True">
+                    <Node name="Modifiers" expanded="True" />
+                  </Node>
                 </Node>
               </Node>
               <Node name="MapboxAR" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="ManualSync" expanded="True">
-                    <Node name="UpdateMapPosByARPlaneY.cs" selected="True" />
-                  </Node>
+                  <Node name="ManualSync" expanded="True" />
                 </Node>
               </Node>
+              <Node name="Scripts" expanded="True" />
               <Node name="UnityARInterface" expanded="True">
                 <Node name="Scripts" expanded="True" />
               </Node>
@@ -68,7 +63,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3cbdb427-662f-4991-bcd4-65613cbd797f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="054ccf09-ab92-42a3-a3ac-8806cac2336a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -7,10 +7,8 @@ public class MessageClass : MonoBehaviour
     [Serializable]
     public struct Message
     {
-        public float latitude;
-        public float longtitude;
-        public int id;
-        public bool sent;
+        public string sentType;
+        public DataContent messageContent;
     }
 
     [Serializable]
@@ -18,12 +16,28 @@ public class MessageClass : MonoBehaviour
     {
         public string type;
         public DataContent data;
+        
+
     }
 
     [Serializable]
     public struct DataContent
     {
-        public string layer;
+        public Layer layer;
+        public Location location;
+    }
+
+    [Serializable]
+    public struct Layer
+    {
+        public string id;
+        public string name;
+        public string description;
+    }
+
+    [Serializable]
+    public struct Location
+    {
         public float lat;
         public float lon;
     }

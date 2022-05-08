@@ -100,7 +100,7 @@ public class TapToPlaceObject : MonoBehaviour
 
         if (placementPoseIsValid)
         {
-            Debug.Log(1);
+            //Debug.Log(1);
             placementPose = hits[0].pose;
 
             var cameraForward = newCamera.transform.forward;

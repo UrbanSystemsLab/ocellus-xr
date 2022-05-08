@@ -1533,6 +1533,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral6E4D0F8C794410D5945584E773472799217D841E
 IL2CPP_EXTERN_C String_t* _stringLiteral6EDBD62D07BF6567A703F4C3957363AC9B2D7BDF;
 IL2CPP_EXTERN_C String_t* _stringLiteral6F62D32353DD6BD43DFAC367ED5BD767EA7870E4;
 IL2CPP_EXTERN_C String_t* _stringLiteral7093F2D1EE12DE50787158B12EF3E12AD23B731B;
+IL2CPP_EXTERN_C String_t* _stringLiteral709432AC98753C2ADF6F62B372AFB9611F14DD81;
 IL2CPP_EXTERN_C String_t* _stringLiteral70C10BF59D6B7DD31DBB201F25233B19B90AE6DD;
 IL2CPP_EXTERN_C String_t* _stringLiteral70CF70BEE2E6DFDE9DC7CEDD951035044A83A9D7;
 IL2CPP_EXTERN_C String_t* _stringLiteral71467016F286944E55739CC247B74C70C8372066;
@@ -10251,122 +10252,88 @@ public:
 };
 
 
-// MessageClass/DataContent
-struct  DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 
+// MessageClass/Layer
+struct  Layer_t666C69705E1B02751B3632428A4D26DDFB098742 
 {
 public:
-	// System.String MessageClass/DataContent::layer
-	String_t* ___layer_0;
-	// System.Single MessageClass/DataContent::lat
-	float ___lat_1;
-	// System.Single MessageClass/DataContent::lon
-	float ___lon_2;
+	// System.String MessageClass/Layer::id
+	String_t* ___id_0;
+	// System.String MessageClass/Layer::name
+	String_t* ___name_1;
+	// System.String MessageClass/Layer::description
+	String_t* ___description_2;
 
 public:
-	inline static int32_t get_offset_of_layer_0() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___layer_0)); }
-	inline String_t* get_layer_0() const { return ___layer_0; }
-	inline String_t** get_address_of_layer_0() { return &___layer_0; }
-	inline void set_layer_0(String_t* value)
+	inline static int32_t get_offset_of_id_0() { return static_cast<int32_t>(offsetof(Layer_t666C69705E1B02751B3632428A4D26DDFB098742, ___id_0)); }
+	inline String_t* get_id_0() const { return ___id_0; }
+	inline String_t** get_address_of_id_0() { return &___id_0; }
+	inline void set_id_0(String_t* value)
 	{
-		___layer_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___layer_0), (void*)value);
+		___id_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___id_0), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_lat_1() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___lat_1)); }
-	inline float get_lat_1() const { return ___lat_1; }
-	inline float* get_address_of_lat_1() { return &___lat_1; }
-	inline void set_lat_1(float value)
+	inline static int32_t get_offset_of_name_1() { return static_cast<int32_t>(offsetof(Layer_t666C69705E1B02751B3632428A4D26DDFB098742, ___name_1)); }
+	inline String_t* get_name_1() const { return ___name_1; }
+	inline String_t** get_address_of_name_1() { return &___name_1; }
+	inline void set_name_1(String_t* value)
 	{
-		___lat_1 = value;
+		___name_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___name_1), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_lon_2() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___lon_2)); }
-	inline float get_lon_2() const { return ___lon_2; }
-	inline float* get_address_of_lon_2() { return &___lon_2; }
-	inline void set_lon_2(float value)
+	inline static int32_t get_offset_of_description_2() { return static_cast<int32_t>(offsetof(Layer_t666C69705E1B02751B3632428A4D26DDFB098742, ___description_2)); }
+	inline String_t* get_description_2() const { return ___description_2; }
+	inline String_t** get_address_of_description_2() { return &___description_2; }
+	inline void set_description_2(String_t* value)
 	{
-		___lon_2 = value;
+		___description_2 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___description_2), (void*)value);
 	}
 };
 
-// Native definition for P/Invoke marshalling of MessageClass/DataContent
-struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke
+// Native definition for P/Invoke marshalling of MessageClass/Layer
+struct Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_pinvoke
 {
-	char* ___layer_0;
-	float ___lat_1;
-	float ___lon_2;
+	char* ___id_0;
+	char* ___name_1;
+	char* ___description_2;
 };
-// Native definition for COM marshalling of MessageClass/DataContent
-struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com
+// Native definition for COM marshalling of MessageClass/Layer
+struct Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_com
 {
-	Il2CppChar* ___layer_0;
-	float ___lat_1;
-	float ___lon_2;
+	Il2CppChar* ___id_0;
+	Il2CppChar* ___name_1;
+	Il2CppChar* ___description_2;
 };
 
-// MessageClass/Message
-struct  Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 
+// MessageClass/Location
+struct  Location_t9728E739BA516BD3B72435362794CB8658F524C3 
 {
 public:
-	// System.Single MessageClass/Message::latitude
-	float ___latitude_0;
-	// System.Single MessageClass/Message::longtitude
-	float ___longtitude_1;
-	// System.Int32 MessageClass/Message::id
-	int32_t ___id_2;
-	// System.Boolean MessageClass/Message::sent
-	bool ___sent_3;
+	// System.Single MessageClass/Location::lat
+	float ___lat_0;
+	// System.Single MessageClass/Location::lon
+	float ___lon_1;
 
 public:
-	inline static int32_t get_offset_of_latitude_0() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___latitude_0)); }
-	inline float get_latitude_0() const { return ___latitude_0; }
-	inline float* get_address_of_latitude_0() { return &___latitude_0; }
-	inline void set_latitude_0(float value)
+	inline static int32_t get_offset_of_lat_0() { return static_cast<int32_t>(offsetof(Location_t9728E739BA516BD3B72435362794CB8658F524C3, ___lat_0)); }
+	inline float get_lat_0() const { return ___lat_0; }
+	inline float* get_address_of_lat_0() { return &___lat_0; }
+	inline void set_lat_0(float value)
 	{
-		___latitude_0 = value;
+		___lat_0 = value;
 	}
 
-	inline static int32_t get_offset_of_longtitude_1() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___longtitude_1)); }
-	inline float get_longtitude_1() const { return ___longtitude_1; }
-	inline float* get_address_of_longtitude_1() { return &___longtitude_1; }
-	inline void set_longtitude_1(float value)
+	inline static int32_t get_offset_of_lon_1() { return static_cast<int32_t>(offsetof(Location_t9728E739BA516BD3B72435362794CB8658F524C3, ___lon_1)); }
+	inline float get_lon_1() const { return ___lon_1; }
+	inline float* get_address_of_lon_1() { return &___lon_1; }
+	inline void set_lon_1(float value)
 	{
-		___longtitude_1 = value;
-	}
-
-	inline static int32_t get_offset_of_id_2() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___id_2)); }
-	inline int32_t get_id_2() const { return ___id_2; }
-	inline int32_t* get_address_of_id_2() { return &___id_2; }
-	inline void set_id_2(int32_t value)
-	{
-		___id_2 = value;
-	}
-
-	inline static int32_t get_offset_of_sent_3() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___sent_3)); }
-	inline bool get_sent_3() const { return ___sent_3; }
-	inline bool* get_address_of_sent_3() { return &___sent_3; }
-	inline void set_sent_3(bool value)
-	{
-		___sent_3 = value;
+		___lon_1 = value;
 	}
 };
 
-// Native definition for P/Invoke marshalling of MessageClass/Message
-struct Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_marshaled_pinvoke
-{
-	float ___latitude_0;
-	float ___longtitude_1;
-	int32_t ___id_2;
-	int32_t ___sent_3;
-};
-// Native definition for COM marshalling of MessageClass/Message
-struct Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_marshaled_com
-{
-	float ___latitude_0;
-	float ___longtitude_1;
-	int32_t ___id_2;
-	int32_t ___sent_3;
-};
 
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Threading.Tasks.VoidTaskResult>
 struct  AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD 
@@ -14201,46 +14168,51 @@ public:
 };
 
 
-// MessageClass/RecieveJSON
-struct  RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D 
+// MessageClass/DataContent
+struct  DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 
 {
 public:
-	// System.String MessageClass/RecieveJSON::type
-	String_t* ___type_0;
-	// MessageClass/DataContent MessageClass/RecieveJSON::data
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  ___data_1;
+	// MessageClass/Layer MessageClass/DataContent::layer
+	Layer_t666C69705E1B02751B3632428A4D26DDFB098742  ___layer_0;
+	// MessageClass/Location MessageClass/DataContent::location
+	Location_t9728E739BA516BD3B72435362794CB8658F524C3  ___location_1;
 
 public:
-	inline static int32_t get_offset_of_type_0() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___type_0)); }
-	inline String_t* get_type_0() const { return ___type_0; }
-	inline String_t** get_address_of_type_0() { return &___type_0; }
-	inline void set_type_0(String_t* value)
+	inline static int32_t get_offset_of_layer_0() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___layer_0)); }
+	inline Layer_t666C69705E1B02751B3632428A4D26DDFB098742  get_layer_0() const { return ___layer_0; }
+	inline Layer_t666C69705E1B02751B3632428A4D26DDFB098742 * get_address_of_layer_0() { return &___layer_0; }
+	inline void set_layer_0(Layer_t666C69705E1B02751B3632428A4D26DDFB098742  value)
 	{
-		___type_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___type_0), (void*)value);
+		___layer_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)&(((&___layer_0))->___id_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&___layer_0))->___description_2), (void*)NULL);
+		#endif
 	}
 
-	inline static int32_t get_offset_of_data_1() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___data_1)); }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  get_data_1() const { return ___data_1; }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * get_address_of_data_1() { return &___data_1; }
-	inline void set_data_1(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
+	inline static int32_t get_offset_of_location_1() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___location_1)); }
+	inline Location_t9728E739BA516BD3B72435362794CB8658F524C3  get_location_1() const { return ___location_1; }
+	inline Location_t9728E739BA516BD3B72435362794CB8658F524C3 * get_address_of_location_1() { return &___location_1; }
+	inline void set_location_1(Location_t9728E739BA516BD3B72435362794CB8658F524C3  value)
 	{
-		___data_1 = value;
-		Il2CppCodeGenWriteBarrier((void**)&(((&___data_1))->___layer_0), (void*)NULL);
+		___location_1 = value;
 	}
 };
 
-// Native definition for P/Invoke marshalling of MessageClass/RecieveJSON
-struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_pinvoke
+// Native definition for P/Invoke marshalling of MessageClass/DataContent
+struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke
 {
-	char* ___type_0;
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke ___data_1;
+	Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_pinvoke ___layer_0;
+	Location_t9728E739BA516BD3B72435362794CB8658F524C3  ___location_1;
 };
-// Native definition for COM marshalling of MessageClass/RecieveJSON
-struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_com
+// Native definition for COM marshalling of MessageClass/DataContent
+struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com
 {
-	Il2CppChar* ___type_0;
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com ___data_1;
+	Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_com ___layer_0;
+	Location_t9728E739BA516BD3B72435362794CB8658F524C3  ___location_1;
 };
 
 // UnityEngine.UI.Navigation/Mode
@@ -17888,6 +17860,102 @@ public:
 };
 
 
+// MessageClass/Message
+struct  Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 
+{
+public:
+	// System.String MessageClass/Message::sentType
+	String_t* ___sentType_0;
+	// MessageClass/DataContent MessageClass/Message::messageContent
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  ___messageContent_1;
+
+public:
+	inline static int32_t get_offset_of_sentType_0() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___sentType_0)); }
+	inline String_t* get_sentType_0() const { return ___sentType_0; }
+	inline String_t** get_address_of_sentType_0() { return &___sentType_0; }
+	inline void set_sentType_0(String_t* value)
+	{
+		___sentType_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___sentType_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_messageContent_1() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___messageContent_1)); }
+	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  get_messageContent_1() const { return ___messageContent_1; }
+	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * get_address_of_messageContent_1() { return &___messageContent_1; }
+	inline void set_messageContent_1(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
+	{
+		___messageContent_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___messageContent_1))->___layer_0))->___id_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___messageContent_1))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___messageContent_1))->___layer_0))->___description_2), (void*)NULL);
+		#endif
+	}
+};
+
+// Native definition for P/Invoke marshalling of MessageClass/Message
+struct Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_marshaled_pinvoke
+{
+	char* ___sentType_0;
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke ___messageContent_1;
+};
+// Native definition for COM marshalling of MessageClass/Message
+struct Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_marshaled_com
+{
+	Il2CppChar* ___sentType_0;
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com ___messageContent_1;
+};
+
+// MessageClass/RecieveJSON
+struct  RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D 
+{
+public:
+	// System.String MessageClass/RecieveJSON::type
+	String_t* ___type_0;
+	// MessageClass/DataContent MessageClass/RecieveJSON::data
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  ___data_1;
+
+public:
+	inline static int32_t get_offset_of_type_0() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___type_0)); }
+	inline String_t* get_type_0() const { return ___type_0; }
+	inline String_t** get_address_of_type_0() { return &___type_0; }
+	inline void set_type_0(String_t* value)
+	{
+		___type_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___type_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_data_1() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___data_1)); }
+	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  get_data_1() const { return ___data_1; }
+	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * get_address_of_data_1() { return &___data_1; }
+	inline void set_data_1(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
+	{
+		___data_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_1))->___layer_0))->___id_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_1))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_1))->___layer_0))->___description_2), (void*)NULL);
+		#endif
+	}
+};
+
+// Native definition for P/Invoke marshalling of MessageClass/RecieveJSON
+struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_pinvoke
+{
+	char* ___type_0;
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke ___data_1;
+};
+// Native definition for COM marshalling of MessageClass/RecieveJSON
+struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_com
+{
+	Il2CppChar* ___type_0;
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com ___data_1;
+};
+
 // System.Action`1<System.String[]>
 struct  Action_1_t0F808BECFC00C2BA783741BFBB1E452E1850A394  : public MulticastDelegate_t
 {
@@ -21103,7 +21171,13 @@ public:
 		___gotData_7 = value;
 		Il2CppCodeGenWriteBarrier((void**)&(((&___gotData_7))->___type_0), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___gotData_7))->___data_1))->___layer_0), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___gotData_7))->___data_1))->___layer_0))->___id_0), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___gotData_7))->___data_1))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___gotData_7))->___data_1))->___layer_0))->___description_2), (void*)NULL);
 		#endif
 	}
 };
@@ -21428,6 +21502,16 @@ public:
 	inline void set_message_4(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6  value)
 	{
 		___message_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)&(((&___message_4))->___sentType_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___message_4))->___messageContent_1))->___layer_0))->___id_0), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___message_4))->___messageContent_1))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___message_4))->___messageContent_1))->___layer_0))->___description_2), (void*)NULL);
+		#endif
 	}
 
 	inline static int32_t get_offset_of_data_5() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___data_5)); }
@@ -21436,7 +21520,13 @@ public:
 	inline void set_data_5(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
 	{
 		___data_5 = value;
-		Il2CppCodeGenWriteBarrier((void**)&(((&___data_5))->___layer_0), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___id_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___description_2), (void*)NULL);
+		#endif
 	}
 
 	inline static int32_t get_offset_of_recievedJSON_6() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___recievedJSON_6)); }
@@ -21447,7 +21537,13 @@ public:
 		___recievedJSON_6 = value;
 		Il2CppCodeGenWriteBarrier((void**)&(((&___recievedJSON_6))->___type_0), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___recievedJSON_6))->___data_1))->___layer_0), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___id_0), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___description_2), (void*)NULL);
 		#endif
 	}
 };
@@ -25487,8 +25583,8 @@ inline void EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218 (Even
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageClass__ctor_m12195EDD51BEA37CC7B42442FD009F17FACC8FE4 (MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * __this, const RuntimeMethod* method);
 // AskLocation AskLocation::get_Instance()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AskLocation_t8FFE8B733E0220724F331DC7A86430ADF575B40E * AskLocation_get_Instance_m1781DC3694576A12CB2E9394755155BD86C5B174_inline (const RuntimeMethod* method);
-// System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A (int32_t ___minInclusive0, int32_t ___maxExclusive1, const RuntimeMethod* method);
+// WebInfoStats WebInfoStats::get_Stats()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline (const RuntimeMethod* method);
 // System.String UnityEngine.JsonUtility::ToJson(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JsonUtility_ToJson_mF4F097C9AEC7699970E3E7E99EF8FF2F44DA1B5C (RuntimeObject * ___obj0, const RuntimeMethod* method);
 // System.Runtime.CompilerServices.AsyncTaskMethodBuilder System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create()
@@ -25510,8 +25606,6 @@ inline RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  JsonUtility_FromJs
 {
 	return ((  RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  (*) (String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42_gshared)(___json0, method);
 }
-// WebInfoStats WebInfoStats::get_Stats()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline (const RuntimeMethod* method);
 // System.Void Mapbox.Utils.JsonConverters.LonLatToVector2dConverter::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LonLatToVector2dConverter__ctor_mB4F32D991AC6ED787B18C1E4BC98DBA56223BDF1 (LonLatToVector2dConverter_t95C96C59586DA9EF409275C088F7E974F6CDBDB8 * __this, const RuntimeMethod* method);
 // System.Void Mapbox.Utils.JsonConverters.BboxToVector2dBoundsConverter::.ctor()
@@ -43001,13 +43095,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_clickingDetection_mD2730D73D238157
 		//         //string testing = "{\"type\": \"layer\"}";
 		//         MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
 		//         gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
-		//         Debug.Log("the layer is : " + gotData.data.layer);
+		//         Debug.Log("the layer is : " + gotData.data.layer.id);
 		//         //storing the json data in WebInfoStats
-		//         WebInfoStats.Stats.currentLayer = gotData.data.layer;
-		//         WebInfoStats.Stats.selectedLat = gotData.data.lat;
-		//         WebInfoStats.Stats.selectedLon = gotData.data.lon;
+		//         WebInfoStats.Stats.currentLayer = gotData.data.layer.name;
+		//         WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
+		//         WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
 		// 
-		//         webViewObject.SetActive(false);
+		//         //webViewObject.SetActive(false);
 		// 
 		//     }
 		//     //const data = JSON.parse(message.data);
@@ -43033,6 +43127,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_WebView_LoadProgressChanged_m1226E
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral709432AC98753C2ADF6F62B372AFB9611F14DD81);
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* V_0 = NULL;
@@ -43043,58 +43138,63 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_WebView_LoadProgressChanged_m1226E
 		int32_t L_1 = L_0->get_Type_2();
 		if ((!(((uint32_t)L_1) == ((uint32_t)1))))
 		{
-			goto IL_006e;
+			goto IL_008f;
 		}
 	}
 	{
 		// MessageClass messageClass = new MessageClass();
 		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_2 = (MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 *)il2cpp_codegen_object_new(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6_il2cpp_TypeInfo_var);
 		MessageClass__ctor_m12195EDD51BEA37CC7B42442FD009F17FACC8FE4(L_2, /*hidden argument*/NULL);
-		// messageClass.message.latitude = AskLocation.Instance.lat;
+		// messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
 		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_3 = L_2;
 		NullCheck(L_3);
 		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_4 = L_3->get_address_of_message_4();
-		AskLocation_t8FFE8B733E0220724F331DC7A86430ADF575B40E * L_5;
-		L_5 = AskLocation_get_Instance_m1781DC3694576A12CB2E9394755155BD86C5B174_inline(/*hidden argument*/NULL);
-		NullCheck(L_5);
-		float L_6 = L_5->get_lat_5();
-		L_4->set_latitude_0(L_6);
-		// messageClass.message.longtitude = AskLocation.Instance.lon;
-		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_7 = L_3;
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_5 = L_4->get_address_of_messageContent_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3 * L_6 = L_5->get_address_of_location_1();
+		AskLocation_t8FFE8B733E0220724F331DC7A86430ADF575B40E * L_7;
+		L_7 = AskLocation_get_Instance_m1781DC3694576A12CB2E9394755155BD86C5B174_inline(/*hidden argument*/NULL);
 		NullCheck(L_7);
-		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_8 = L_7->get_address_of_message_4();
-		AskLocation_t8FFE8B733E0220724F331DC7A86430ADF575B40E * L_9;
-		L_9 = AskLocation_get_Instance_m1781DC3694576A12CB2E9394755155BD86C5B174_inline(/*hidden argument*/NULL);
+		float L_8 = L_7->get_lat_5();
+		L_6->set_lat_0(L_8);
+		// messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_9 = L_3;
 		NullCheck(L_9);
-		float L_10 = L_9->get_lon_6();
-		L_8->set_longtitude_1(L_10);
-		// messageClass.message.id = Random.Range(0, 10);
-		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_11 = L_7;
-		NullCheck(L_11);
-		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_12 = L_11->get_address_of_message_4();
-		int32_t L_13;
-		L_13 = Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A(0, ((int32_t)10), /*hidden argument*/NULL);
-		L_12->set_id_2(L_13);
-		// messageClass.message.sent = true;
-		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_14 = L_11;
-		NullCheck(L_14);
-		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_15 = L_14->get_address_of_message_4();
-		L_15->set_sent_3((bool)1);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_10 = L_9->get_address_of_message_4();
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_11 = L_10->get_address_of_messageContent_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3 * L_12 = L_11->get_address_of_location_1();
+		AskLocation_t8FFE8B733E0220724F331DC7A86430ADF575B40E * L_13;
+		L_13 = AskLocation_get_Instance_m1781DC3694576A12CB2E9394755155BD86C5B174_inline(/*hidden argument*/NULL);
+		NullCheck(L_13);
+		float L_14 = L_13->get_lon_6();
+		L_12->set_lon_1(L_14);
+		// messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer + "heat";
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_15 = L_9;
+		NullCheck(L_15);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_16 = L_15->get_address_of_message_4();
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_17 = L_16->get_address_of_messageContent_1();
+		Layer_t666C69705E1B02751B3632428A4D26DDFB098742 * L_18 = L_17->get_address_of_layer_0();
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_19;
+		L_19 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		NullCheck(L_19);
+		String_t* L_20 = L_19->get_currentLayer_5();
+		String_t* L_21;
+		L_21 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_20, _stringLiteral709432AC98753C2ADF6F62B372AFB9611F14DD81, /*hidden argument*/NULL);
+		L_18->set_id_0(L_21);
 		// string JSON = JsonUtility.ToJson(messageClass);
-		String_t* L_16;
-		L_16 = JsonUtility_ToJson_mF4F097C9AEC7699970E3E7E99EF8FF2F44DA1B5C(L_14, /*hidden argument*/NULL);
-		V_0 = L_16;
+		String_t* L_22;
+		L_22 = JsonUtility_ToJson_mF4F097C9AEC7699970E3E7E99EF8FF2F44DA1B5C(L_15, /*hidden argument*/NULL);
+		V_0 = L_22;
 		// webViewPrefab.WebView.PostMessage(JSON);
-		CanvasWebViewPrefab_tBA29146094CB4C872D4879E97AC68DA099409180 * L_17 = __this->get_webViewPrefab_4();
-		NullCheck(L_17);
-		RuntimeObject* L_18;
-		L_18 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_17, /*hidden argument*/NULL);
-		String_t* L_19 = V_0;
-		NullCheck(L_18);
-		InterfaceActionInvoker1< String_t* >::Invoke(57 /* System.Void Vuplex.WebView.IWebView::PostMessage(System.String) */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_18, L_19);
+		CanvasWebViewPrefab_tBA29146094CB4C872D4879E97AC68DA099409180 * L_23 = __this->get_webViewPrefab_4();
+		NullCheck(L_23);
+		RuntimeObject* L_24;
+		L_24 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_23, /*hidden argument*/NULL);
+		String_t* L_25 = V_0;
+		NullCheck(L_24);
+		InterfaceActionInvoker1< String_t* >::Invoke(57 /* System.Void Vuplex.WebView.IWebView::PostMessage(System.String) */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_24, L_25);
 	}
 
-IL_006e:
+IL_008f:
 	{
 		// }
 		return;
@@ -43234,41 +43334,41 @@ IL_0044:
 		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_21;
 		L_21 = JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42(L_20, /*hidden argument*/JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42_RuntimeMethod_var);
 		V_0 = L_21;
-		// Debug.Log("the layer is : " + gotData.data.layer);
+		// Debug.Log("the layer is : " + gotData.data.layer.id);
 		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_22 = V_0;
 		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_23 = L_22.get_data_1();
-		String_t* L_24 = L_23.get_layer_0();
-		String_t* L_25;
-		L_25 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteralF3C43CB5794D9746AF9CFD83EC12C8C393D98B26, L_24, /*hidden argument*/NULL);
-		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_25, /*hidden argument*/NULL);
-		// WebInfoStats.Stats.currentLayer = gotData.data.layer;
-		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_26;
-		L_26 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_27 = V_0;
-		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_28 = L_27.get_data_1();
-		String_t* L_29 = L_28.get_layer_0();
-		NullCheck(L_26);
-		L_26->set_currentLayer_5(L_29);
-		// WebInfoStats.Stats.selectedLat = gotData.data.lat;
-		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_30;
-		L_30 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_31 = V_0;
-		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_32 = L_31.get_data_1();
-		float L_33 = L_32.get_lat_1();
-		NullCheck(L_30);
-		L_30->set_selectedLat_6(L_33);
-		// WebInfoStats.Stats.selectedLon = gotData.data.lon;
-		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_34;
-		L_34 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_35 = V_0;
-		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_36 = L_35.get_data_1();
-		float L_37 = L_36.get_lon_2();
-		NullCheck(L_34);
-		L_34->set_selectedLon_7(L_37);
-		// webViewObject.SetActive(false);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_38 = __this->get_webViewObject_6();
-		NullCheck(L_38);
-		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_38, (bool)0, /*hidden argument*/NULL);
+		Layer_t666C69705E1B02751B3632428A4D26DDFB098742  L_24 = L_23.get_layer_0();
+		String_t* L_25 = L_24.get_id_0();
+		String_t* L_26;
+		L_26 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteralF3C43CB5794D9746AF9CFD83EC12C8C393D98B26, L_25, /*hidden argument*/NULL);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_26, /*hidden argument*/NULL);
+		// WebInfoStats.Stats.currentLayer = gotData.data.layer.name;
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_27;
+		L_27 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_28 = V_0;
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_29 = L_28.get_data_1();
+		Layer_t666C69705E1B02751B3632428A4D26DDFB098742  L_30 = L_29.get_layer_0();
+		String_t* L_31 = L_30.get_name_1();
+		NullCheck(L_27);
+		L_27->set_currentLayer_5(L_31);
+		// WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_32;
+		L_32 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_33 = V_0;
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_34 = L_33.get_data_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3  L_35 = L_34.get_location_1();
+		float L_36 = L_35.get_lat_0();
+		NullCheck(L_32);
+		L_32->set_selectedLat_6(L_36);
+		// WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_37;
+		L_37 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_38 = V_0;
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_39 = L_38.get_data_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3  L_40 = L_39.get_location_1();
+		float L_41 = L_40.get_lon_1();
+		NullCheck(L_37);
+		L_37->set_selectedLon_7(L_41);
 		// };
 		return;
 	}

@@ -20,10 +20,9 @@ public class JSCom : MonoBehaviour
 
         Debug.Log("the webview is ready in unity");
         MessageClass messageClass = new MessageClass();
-        messageClass.message.latitude = AskLocation.Instance.lat;
-        messageClass.message.longtitude = AskLocation.Instance.lon;
-        messageClass.message.id = Random.Range(0, 10);
-        messageClass.message.sent = true;
+        messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
+        messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
+        messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer + "heat";
         //string JSON = JsonUtility.ToJson(messageClass);
         Debug.Log("constructing JSON string now");
 
@@ -39,10 +38,9 @@ public class JSCom : MonoBehaviour
                 if (!Input.location.isEnabledByUser)
                 {
                     //User has not enable location service, give it a default lat&lon :Central Park
-                    messageClass.message.latitude = 40.7812f;
-                    messageClass.message.longtitude = -73.9665f;
-                    messageClass.message.id = Random.Range(0, 10);
-                    messageClass.message.sent = true;
+                    messageClass.message.messageContent.location.lat = 40.7812f;
+                    messageClass.message.messageContent.location.lon = -73.9665f;
+                    messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer ;
                     string JSON = JsonUtility.ToJson(messageClass);
                     webViewPrefab.WebView.PostMessage(JSON);
                     Debug.Log("post Central Park Default string from Unity to Javascript");
@@ -50,12 +48,9 @@ public class JSCom : MonoBehaviour
                 else
                 {
                     //User enable location service,get user's location and post message
-                    messageClass.message.latitude = AskLocation.Instance.lat;
-                    messageClass.message.longtitude = AskLocation.Instance.lon;
-                    messageClass.message.id = Random.Range(0, 10);
-                    messageClass.message.sent = true;
+                    messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
+                    messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
                     string JSON = JsonUtility.ToJson(messageClass);
-                    webViewPrefab.WebView.PostMessage(JSON);
                     webViewPrefab.WebView.PostMessage(JSON);
                     Debug.Log("post JSON string from Unity to Javascript");
                 }
@@ -93,11 +88,11 @@ public class JSCom : MonoBehaviour
                 //string testing = "{\"type\": \"layer\"}";
                 MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
                 gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
-                Debug.Log("the layer is : " + gotData.data.layer);
+                Debug.Log("the layer is : " + gotData.data.layer.id);
                 //storing the json data in WebInfoStats
-                WebInfoStats.Stats.currentLayer = gotData.data.layer;
-                WebInfoStats.Stats.selectedLat = gotData.data.lat;
-                WebInfoStats.Stats.selectedLon = gotData.data.lon;
+                WebInfoStats.Stats.currentLayer = gotData.data.layer.name;
+                WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
+                WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
 
                 webViewObject.SetActive(false);
 
@@ -133,10 +128,9 @@ public class JSCom : MonoBehaviour
         if (eventArgs.Type == ProgressChangeType.Finished)
         {
             MessageClass messageClass = new MessageClass();
-            messageClass.message.latitude = AskLocation.Instance.lat;
-            messageClass.message.longtitude = AskLocation.Instance.lon;
-            messageClass.message.id = Random.Range(0, 10);
-            messageClass.message.sent = true;
+            messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
+            messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
+            messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer + "heat";
             string JSON = JsonUtility.ToJson(messageClass);
             //Debug.Log(JSON);
 

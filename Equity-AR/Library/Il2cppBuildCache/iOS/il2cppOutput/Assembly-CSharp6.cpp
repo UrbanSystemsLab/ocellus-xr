@@ -11372,122 +11372,88 @@ struct WebViewOptions_t13C9D028049632B6DBB08A44249BB1789CEA2208_marshaled_com
 	int32_t* ___preferredPlugins_2;
 };
 
-// MessageClass/DataContent
-struct  DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 
+// MessageClass/Layer
+struct  Layer_t666C69705E1B02751B3632428A4D26DDFB098742 
 {
 public:
-	// System.String MessageClass/DataContent::layer
-	String_t* ___layer_0;
-	// System.Single MessageClass/DataContent::lat
-	float ___lat_1;
-	// System.Single MessageClass/DataContent::lon
-	float ___lon_2;
+	// System.String MessageClass/Layer::id
+	String_t* ___id_0;
+	// System.String MessageClass/Layer::name
+	String_t* ___name_1;
+	// System.String MessageClass/Layer::description
+	String_t* ___description_2;
 
 public:
-	inline static int32_t get_offset_of_layer_0() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___layer_0)); }
-	inline String_t* get_layer_0() const { return ___layer_0; }
-	inline String_t** get_address_of_layer_0() { return &___layer_0; }
-	inline void set_layer_0(String_t* value)
+	inline static int32_t get_offset_of_id_0() { return static_cast<int32_t>(offsetof(Layer_t666C69705E1B02751B3632428A4D26DDFB098742, ___id_0)); }
+	inline String_t* get_id_0() const { return ___id_0; }
+	inline String_t** get_address_of_id_0() { return &___id_0; }
+	inline void set_id_0(String_t* value)
 	{
-		___layer_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___layer_0), (void*)value);
+		___id_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___id_0), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_lat_1() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___lat_1)); }
-	inline float get_lat_1() const { return ___lat_1; }
-	inline float* get_address_of_lat_1() { return &___lat_1; }
-	inline void set_lat_1(float value)
+	inline static int32_t get_offset_of_name_1() { return static_cast<int32_t>(offsetof(Layer_t666C69705E1B02751B3632428A4D26DDFB098742, ___name_1)); }
+	inline String_t* get_name_1() const { return ___name_1; }
+	inline String_t** get_address_of_name_1() { return &___name_1; }
+	inline void set_name_1(String_t* value)
 	{
-		___lat_1 = value;
+		___name_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___name_1), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_lon_2() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___lon_2)); }
-	inline float get_lon_2() const { return ___lon_2; }
-	inline float* get_address_of_lon_2() { return &___lon_2; }
-	inline void set_lon_2(float value)
+	inline static int32_t get_offset_of_description_2() { return static_cast<int32_t>(offsetof(Layer_t666C69705E1B02751B3632428A4D26DDFB098742, ___description_2)); }
+	inline String_t* get_description_2() const { return ___description_2; }
+	inline String_t** get_address_of_description_2() { return &___description_2; }
+	inline void set_description_2(String_t* value)
 	{
-		___lon_2 = value;
+		___description_2 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___description_2), (void*)value);
 	}
 };
 
-// Native definition for P/Invoke marshalling of MessageClass/DataContent
-struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke
+// Native definition for P/Invoke marshalling of MessageClass/Layer
+struct Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_pinvoke
 {
-	char* ___layer_0;
-	float ___lat_1;
-	float ___lon_2;
+	char* ___id_0;
+	char* ___name_1;
+	char* ___description_2;
 };
-// Native definition for COM marshalling of MessageClass/DataContent
-struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com
+// Native definition for COM marshalling of MessageClass/Layer
+struct Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_com
 {
-	Il2CppChar* ___layer_0;
-	float ___lat_1;
-	float ___lon_2;
+	Il2CppChar* ___id_0;
+	Il2CppChar* ___name_1;
+	Il2CppChar* ___description_2;
 };
 
-// MessageClass/Message
-struct  Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 
+// MessageClass/Location
+struct  Location_t9728E739BA516BD3B72435362794CB8658F524C3 
 {
 public:
-	// System.Single MessageClass/Message::latitude
-	float ___latitude_0;
-	// System.Single MessageClass/Message::longtitude
-	float ___longtitude_1;
-	// System.Int32 MessageClass/Message::id
-	int32_t ___id_2;
-	// System.Boolean MessageClass/Message::sent
-	bool ___sent_3;
+	// System.Single MessageClass/Location::lat
+	float ___lat_0;
+	// System.Single MessageClass/Location::lon
+	float ___lon_1;
 
 public:
-	inline static int32_t get_offset_of_latitude_0() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___latitude_0)); }
-	inline float get_latitude_0() const { return ___latitude_0; }
-	inline float* get_address_of_latitude_0() { return &___latitude_0; }
-	inline void set_latitude_0(float value)
+	inline static int32_t get_offset_of_lat_0() { return static_cast<int32_t>(offsetof(Location_t9728E739BA516BD3B72435362794CB8658F524C3, ___lat_0)); }
+	inline float get_lat_0() const { return ___lat_0; }
+	inline float* get_address_of_lat_0() { return &___lat_0; }
+	inline void set_lat_0(float value)
 	{
-		___latitude_0 = value;
+		___lat_0 = value;
 	}
 
-	inline static int32_t get_offset_of_longtitude_1() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___longtitude_1)); }
-	inline float get_longtitude_1() const { return ___longtitude_1; }
-	inline float* get_address_of_longtitude_1() { return &___longtitude_1; }
-	inline void set_longtitude_1(float value)
+	inline static int32_t get_offset_of_lon_1() { return static_cast<int32_t>(offsetof(Location_t9728E739BA516BD3B72435362794CB8658F524C3, ___lon_1)); }
+	inline float get_lon_1() const { return ___lon_1; }
+	inline float* get_address_of_lon_1() { return &___lon_1; }
+	inline void set_lon_1(float value)
 	{
-		___longtitude_1 = value;
-	}
-
-	inline static int32_t get_offset_of_id_2() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___id_2)); }
-	inline int32_t get_id_2() const { return ___id_2; }
-	inline int32_t* get_address_of_id_2() { return &___id_2; }
-	inline void set_id_2(int32_t value)
-	{
-		___id_2 = value;
-	}
-
-	inline static int32_t get_offset_of_sent_3() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___sent_3)); }
-	inline bool get_sent_3() const { return ___sent_3; }
-	inline bool* get_address_of_sent_3() { return &___sent_3; }
-	inline void set_sent_3(bool value)
-	{
-		___sent_3 = value;
+		___lon_1 = value;
 	}
 };
 
-// Native definition for P/Invoke marshalling of MessageClass/Message
-struct Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_marshaled_pinvoke
-{
-	float ___latitude_0;
-	float ___longtitude_1;
-	int32_t ___id_2;
-	int32_t ___sent_3;
-};
-// Native definition for COM marshalling of MessageClass/Message
-struct Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_marshaled_com
-{
-	float ___latitude_0;
-	float ___longtitude_1;
-	int32_t ___id_2;
-	int32_t ___sent_3;
-};
 
 // RSG.Promise/ResolveHandler
 struct  ResolveHandler_t66BFBE9E5D626E0D00C7D8F6B5805636693E50D8 
@@ -15526,46 +15492,51 @@ public:
 };
 
 
-// MessageClass/RecieveJSON
-struct  RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D 
+// MessageClass/DataContent
+struct  DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 
 {
 public:
-	// System.String MessageClass/RecieveJSON::type
-	String_t* ___type_0;
-	// MessageClass/DataContent MessageClass/RecieveJSON::data
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  ___data_1;
+	// MessageClass/Layer MessageClass/DataContent::layer
+	Layer_t666C69705E1B02751B3632428A4D26DDFB098742  ___layer_0;
+	// MessageClass/Location MessageClass/DataContent::location
+	Location_t9728E739BA516BD3B72435362794CB8658F524C3  ___location_1;
 
 public:
-	inline static int32_t get_offset_of_type_0() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___type_0)); }
-	inline String_t* get_type_0() const { return ___type_0; }
-	inline String_t** get_address_of_type_0() { return &___type_0; }
-	inline void set_type_0(String_t* value)
+	inline static int32_t get_offset_of_layer_0() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___layer_0)); }
+	inline Layer_t666C69705E1B02751B3632428A4D26DDFB098742  get_layer_0() const { return ___layer_0; }
+	inline Layer_t666C69705E1B02751B3632428A4D26DDFB098742 * get_address_of_layer_0() { return &___layer_0; }
+	inline void set_layer_0(Layer_t666C69705E1B02751B3632428A4D26DDFB098742  value)
 	{
-		___type_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___type_0), (void*)value);
+		___layer_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)&(((&___layer_0))->___id_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&___layer_0))->___description_2), (void*)NULL);
+		#endif
 	}
 
-	inline static int32_t get_offset_of_data_1() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___data_1)); }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  get_data_1() const { return ___data_1; }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * get_address_of_data_1() { return &___data_1; }
-	inline void set_data_1(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
+	inline static int32_t get_offset_of_location_1() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___location_1)); }
+	inline Location_t9728E739BA516BD3B72435362794CB8658F524C3  get_location_1() const { return ___location_1; }
+	inline Location_t9728E739BA516BD3B72435362794CB8658F524C3 * get_address_of_location_1() { return &___location_1; }
+	inline void set_location_1(Location_t9728E739BA516BD3B72435362794CB8658F524C3  value)
 	{
-		___data_1 = value;
-		Il2CppCodeGenWriteBarrier((void**)&(((&___data_1))->___layer_0), (void*)NULL);
+		___location_1 = value;
 	}
 };
 
-// Native definition for P/Invoke marshalling of MessageClass/RecieveJSON
-struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_pinvoke
+// Native definition for P/Invoke marshalling of MessageClass/DataContent
+struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke
 {
-	char* ___type_0;
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke ___data_1;
+	Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_pinvoke ___layer_0;
+	Location_t9728E739BA516BD3B72435362794CB8658F524C3  ___location_1;
 };
-// Native definition for COM marshalling of MessageClass/RecieveJSON
-struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_com
+// Native definition for COM marshalling of MessageClass/DataContent
+struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com
 {
-	Il2CppChar* ___type_0;
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com ___data_1;
+	Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_com ___layer_0;
+	Location_t9728E739BA516BD3B72435362794CB8658F524C3  ___location_1;
 };
 
 // UnityEngine.UI.Navigation/Mode
@@ -18655,6 +18626,102 @@ public:
 	}
 };
 
+
+// MessageClass/Message
+struct  Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 
+{
+public:
+	// System.String MessageClass/Message::sentType
+	String_t* ___sentType_0;
+	// MessageClass/DataContent MessageClass/Message::messageContent
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  ___messageContent_1;
+
+public:
+	inline static int32_t get_offset_of_sentType_0() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___sentType_0)); }
+	inline String_t* get_sentType_0() const { return ___sentType_0; }
+	inline String_t** get_address_of_sentType_0() { return &___sentType_0; }
+	inline void set_sentType_0(String_t* value)
+	{
+		___sentType_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___sentType_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_messageContent_1() { return static_cast<int32_t>(offsetof(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6, ___messageContent_1)); }
+	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  get_messageContent_1() const { return ___messageContent_1; }
+	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * get_address_of_messageContent_1() { return &___messageContent_1; }
+	inline void set_messageContent_1(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
+	{
+		___messageContent_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___messageContent_1))->___layer_0))->___id_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___messageContent_1))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___messageContent_1))->___layer_0))->___description_2), (void*)NULL);
+		#endif
+	}
+};
+
+// Native definition for P/Invoke marshalling of MessageClass/Message
+struct Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_marshaled_pinvoke
+{
+	char* ___sentType_0;
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke ___messageContent_1;
+};
+// Native definition for COM marshalling of MessageClass/Message
+struct Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_marshaled_com
+{
+	Il2CppChar* ___sentType_0;
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com ___messageContent_1;
+};
+
+// MessageClass/RecieveJSON
+struct  RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D 
+{
+public:
+	// System.String MessageClass/RecieveJSON::type
+	String_t* ___type_0;
+	// MessageClass/DataContent MessageClass/RecieveJSON::data
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  ___data_1;
+
+public:
+	inline static int32_t get_offset_of_type_0() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___type_0)); }
+	inline String_t* get_type_0() const { return ___type_0; }
+	inline String_t** get_address_of_type_0() { return &___type_0; }
+	inline void set_type_0(String_t* value)
+	{
+		___type_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___type_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_data_1() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___data_1)); }
+	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  get_data_1() const { return ___data_1; }
+	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * get_address_of_data_1() { return &___data_1; }
+	inline void set_data_1(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
+	{
+		___data_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_1))->___layer_0))->___id_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_1))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_1))->___layer_0))->___description_2), (void*)NULL);
+		#endif
+	}
+};
+
+// Native definition for P/Invoke marshalling of MessageClass/RecieveJSON
+struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_pinvoke
+{
+	char* ___type_0;
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke ___data_1;
+};
+// Native definition for COM marshalling of MessageClass/RecieveJSON
+struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_com
+{
+	Il2CppChar* ___type_0;
+	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com ___data_1;
+};
 
 // System.Action`1<System.Collections.Generic.List`1<UnityEngine.GameObject>>
 struct  Action_1_tA02B006DFBC28A0C9C8F658D1F002C1BB356F3C4  : public MulticastDelegate_t
@@ -21815,6 +21882,16 @@ public:
 	inline void set_message_4(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6  value)
 	{
 		___message_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)&(((&___message_4))->___sentType_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___message_4))->___messageContent_1))->___layer_0))->___id_0), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___message_4))->___messageContent_1))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___message_4))->___messageContent_1))->___layer_0))->___description_2), (void*)NULL);
+		#endif
 	}
 
 	inline static int32_t get_offset_of_data_5() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___data_5)); }
@@ -21823,7 +21900,13 @@ public:
 	inline void set_data_5(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
 	{
 		___data_5 = value;
-		Il2CppCodeGenWriteBarrier((void**)&(((&___data_5))->___layer_0), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___id_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___description_2), (void*)NULL);
+		#endif
 	}
 
 	inline static int32_t get_offset_of_recievedJSON_6() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___recievedJSON_6)); }
@@ -21834,7 +21917,13 @@ public:
 		___recievedJSON_6 = value;
 		Il2CppCodeGenWriteBarrier((void**)&(((&___recievedJSON_6))->___type_0), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___recievedJSON_6))->___data_1))->___layer_0), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___id_0), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___name_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___description_2), (void*)NULL);
 		#endif
 	}
 };
