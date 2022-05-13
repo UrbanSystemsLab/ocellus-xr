@@ -67,9 +67,10 @@ public class Switcher : MonoBehaviour
         var sixtyFivePlusLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("65+");
         var greenroofLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("GreenRoof");
         var openSpaceLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("OpenSpace");
-        if (WebInfoStats.Stats.currentLayer != null)
+        if (WebInfoStats.Stats.currentLayerID != null)
         {
-            if (WebInfoStats.Stats.currentLayer == "heat" && !heatmapisActive)
+            //adding more layer switcher
+            if (WebInfoStats.Stats.currentLayerID == "equity.cxc73xaa" && !heatmapisActive)
             {
                 deactivateAllLayer();
 
@@ -77,7 +78,7 @@ public class Switcher : MonoBehaviour
                 heatmapisActive = true;
                 Debug.Log("Heat Layer is now displaying");
             }
-            else if (WebInfoStats.Stats.currentLayer == "flood" && !floodisActive)
+            else if (WebInfoStats.Stats.currentLayerID == "equity.dmmqh0kw" && !floodisActive)
             {
                 deactivateAllLayer();
 
@@ -86,34 +87,36 @@ public class Switcher : MonoBehaviour
                 floodisActive = true;
                 Debug.Log("Flood Layer is now displaying");
             }
-            else if(WebInfoStats.Stats.currentLayer == "65+" && !sixtyFivePlusisActive)
+            else if(WebInfoStats.Stats.currentLayerID == "equity.0qf98zo6" && !sixtyFivePlusisActive)
             {
                 deactivateAllLayer();
 
                 sixtyFivePlusLayer.SetActive(true);
                 sixtyFivePlusisActive = true;
             }
-            else if (WebInfoStats.Stats.currentLayer == "income" && !incomeisActive)
+            else if (WebInfoStats.Stats.currentLayerID == "equity.16d8ns8l" && !incomeisActive)
             {
                 deactivateAllLayer();
 
                 incomeLayer.SetActive(true);
                 incomeisActive = true;
             }
-            else if (WebInfoStats.Stats.currentLayer == "open-space" && !openSpaceisActive)
+            else if (WebInfoStats.Stats.currentLayerID == "equity.755pqg03" && !openSpaceisActive)
             {
                 deactivateAllLayer();
 
                 openSpaceLayer.SetActive(true);
                 openSpaceisActive = true;
             }
-            else if (WebInfoStats.Stats.currentLayer == "green-roofs" && !greenroofisActive)
+            else if (WebInfoStats.Stats.currentLayerID == "equity.8clwnj6e" && !greenroofisActive)
             {
                 deactivateAllLayer();
 
                 greenroofLayer.SetActive(true);
                 greenroofisActive = true;
             }
+            //Debug.Log( WebInfoStats.Stats.currentLayerName + "is the name of the layer");
+            //Debug.Log(WebInfoStats.Stats.currentLayerID+ "is the id of the layer");
         }
         else
         {

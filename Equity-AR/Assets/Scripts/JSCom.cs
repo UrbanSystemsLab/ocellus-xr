@@ -22,7 +22,7 @@ public class JSCom : MonoBehaviour
         MessageClass messageClass = new MessageClass();
         messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
         messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
-        messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer + "heat";
+        messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerName + "heat";
         //string JSON = JsonUtility.ToJson(messageClass);
         Debug.Log("constructing JSON string now");
 
@@ -40,7 +40,7 @@ public class JSCom : MonoBehaviour
                     //User has not enable location service, give it a default lat&lon :Central Park
                     messageClass.message.messageContent.location.lat = 40.7812f;
                     messageClass.message.messageContent.location.lon = -73.9665f;
-                    messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer ;
+                    messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerName ;
                     string JSON = JsonUtility.ToJson(messageClass);
                     webViewPrefab.WebView.PostMessage(JSON);
                     Debug.Log("post Central Park Default string from Unity to Javascript");
@@ -88,13 +88,18 @@ public class JSCom : MonoBehaviour
                 //string testing = "{\"type\": \"layer\"}";
                 MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
                 gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
-                Debug.Log("the layer is : " + gotData.data.layer.id);
-                //storing the json data in WebInfoStats
-                WebInfoStats.Stats.currentLayer = gotData.data.layer.name;
-                WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
-                WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
+                Debug.Log("JavaScript send layer of : " + gotData.data.layer.name + gotData.type);
+                if (gotData.type == "ar" || gotData.type == "live")
+                {
+                    //storing the json data in WebInfoStats
+                    WebInfoStats.Stats.currentLayerName = gotData.data.layer.name;
+                    WebInfoStats.Stats.currentLayerID = gotData.data.layer.id;
+                    WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
+                    WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
+                    WebInfoStats.Stats.sceneType = gotData.type;
 
-                webViewObject.SetActive(false);
+                    webViewObject.SetActive(false);
+                }
 
             }
             //const data = JSON.parse(message.data);
@@ -130,7 +135,7 @@ public class JSCom : MonoBehaviour
             MessageClass messageClass = new MessageClass();
             messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
             messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
-            messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer + "heat";
+            messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerName + "heat";
             string JSON = JsonUtility.ToJson(messageClass);
             //Debug.Log(JSON);
 

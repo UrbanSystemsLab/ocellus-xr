@@ -1385,7 +1385,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral62F7054E6A2625C3487203F978E4F748D6E8281D
 IL2CPP_EXTERN_C String_t* _stringLiteral667DA27170736CB83FADE187CFFDD4752F79C8B6;
 IL2CPP_EXTERN_C String_t* _stringLiteral6AA0B8F4F156397A4FE074AA00E37E0CB6523155;
 IL2CPP_EXTERN_C String_t* _stringLiteral6B866DCFF4A3EC3D3C30879F029D88106601B1B2;
-IL2CPP_EXTERN_C String_t* _stringLiteral6E3146EF410836B7705CA65CD7A76650EF754828;
 IL2CPP_EXTERN_C String_t* _stringLiteral738F291E53E97C08DAE378C71EF70A60E31AE900;
 IL2CPP_EXTERN_C String_t* _stringLiteral73ABF34C8AD2D825CF736818FA27971FAA127B97;
 IL2CPP_EXTERN_C String_t* _stringLiteral754720B26A2AB7A23F971811C5999DFA5854F861;
@@ -1414,6 +1413,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralA6C0ECB9431B19E08F6B2DB28C72765B3EE30A7F
 IL2CPP_EXTERN_C String_t* _stringLiteralA72FBABDDB1D1FF549FA5036D51CB34ACAE2A541;
 IL2CPP_EXTERN_C String_t* _stringLiteralA937F8589FD524116B8CF6168CB8EE8FDA6BDD05;
 IL2CPP_EXTERN_C String_t* _stringLiteralA9E286F5B189AA7E5321E19452FD80B4D11ECE25;
+IL2CPP_EXTERN_C String_t* _stringLiteralAA594F8C287F75CBADF5C873DAB25D3DAB44867A;
 IL2CPP_EXTERN_C String_t* _stringLiteralAAFF9AC919636647F5C185ECA28CFA072EE8082F;
 IL2CPP_EXTERN_C String_t* _stringLiteralAC57953D3C2D09ACE89744B7C138F0AEB5787513;
 IL2CPP_EXTERN_C String_t* _stringLiteralAEDD08AE4A4E4272D6D9F7D80331B89796903AEC;
@@ -20942,37 +20942,59 @@ public:
 struct  WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
 {
 public:
-	// System.String WebInfoStats::currentLayer
-	String_t* ___currentLayer_5;
+	// System.String WebInfoStats::currentLayerName
+	String_t* ___currentLayerName_5;
+	// System.String WebInfoStats::currentLayerID
+	String_t* ___currentLayerID_6;
+	// System.String WebInfoStats::sceneType
+	String_t* ___sceneType_7;
 	// System.Single WebInfoStats::selectedLat
-	float ___selectedLat_6;
+	float ___selectedLat_8;
 	// System.Single WebInfoStats::selectedLon
-	float ___selectedLon_7;
+	float ___selectedLon_9;
 
 public:
-	inline static int32_t get_offset_of_currentLayer_5() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___currentLayer_5)); }
-	inline String_t* get_currentLayer_5() const { return ___currentLayer_5; }
-	inline String_t** get_address_of_currentLayer_5() { return &___currentLayer_5; }
-	inline void set_currentLayer_5(String_t* value)
+	inline static int32_t get_offset_of_currentLayerName_5() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___currentLayerName_5)); }
+	inline String_t* get_currentLayerName_5() const { return ___currentLayerName_5; }
+	inline String_t** get_address_of_currentLayerName_5() { return &___currentLayerName_5; }
+	inline void set_currentLayerName_5(String_t* value)
 	{
-		___currentLayer_5 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___currentLayer_5), (void*)value);
+		___currentLayerName_5 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___currentLayerName_5), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_selectedLat_6() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLat_6)); }
-	inline float get_selectedLat_6() const { return ___selectedLat_6; }
-	inline float* get_address_of_selectedLat_6() { return &___selectedLat_6; }
-	inline void set_selectedLat_6(float value)
+	inline static int32_t get_offset_of_currentLayerID_6() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___currentLayerID_6)); }
+	inline String_t* get_currentLayerID_6() const { return ___currentLayerID_6; }
+	inline String_t** get_address_of_currentLayerID_6() { return &___currentLayerID_6; }
+	inline void set_currentLayerID_6(String_t* value)
 	{
-		___selectedLat_6 = value;
+		___currentLayerID_6 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___currentLayerID_6), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_selectedLon_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLon_7)); }
-	inline float get_selectedLon_7() const { return ___selectedLon_7; }
-	inline float* get_address_of_selectedLon_7() { return &___selectedLon_7; }
-	inline void set_selectedLon_7(float value)
+	inline static int32_t get_offset_of_sceneType_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___sceneType_7)); }
+	inline String_t* get_sceneType_7() const { return ___sceneType_7; }
+	inline String_t** get_address_of_sceneType_7() { return &___sceneType_7; }
+	inline void set_sceneType_7(String_t* value)
 	{
-		___selectedLon_7 = value;
+		___sceneType_7 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___sceneType_7), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_selectedLat_8() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLat_8)); }
+	inline float get_selectedLat_8() const { return ___selectedLat_8; }
+	inline float* get_address_of_selectedLat_8() { return &___selectedLat_8; }
+	inline void set_selectedLat_8(float value)
+	{
+		___selectedLat_8 = value;
+	}
+
+	inline static int32_t get_offset_of_selectedLon_9() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLon_9)); }
+	inline float get_selectedLon_9() const { return ___selectedLon_9; }
+	inline float* get_address_of_selectedLon_9() { return &___selectedLon_9; }
+	inline void set_selectedLon_9(float value)
+	{
+		___selectedLon_9 = value;
 	}
 };
 
@@ -46078,17 +46100,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneController_Update_m4E482D951B939F40
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6E3146EF410836B7705CA65CD7A76650EF754828);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAA594F8C287F75CBADF5C873DAB25D3DAB44867A);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if(WebInfoStats.Stats.currentLayer == "explore")
+		// if(WebInfoStats.Stats.sceneType == "live")
 		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_0;
 		L_0 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
 		NullCheck(L_0);
-		String_t* L_1 = L_0->get_currentLayer_5();
+		String_t* L_1 = L_0->get_sceneType_7();
 		bool L_2;
-		L_2 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_1, _stringLiteral6E3146EF410836B7705CA65CD7A76650EF754828, /*hidden argument*/NULL);
+		L_2 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_1, _stringLiteralAA594F8C287F75CBADF5C873DAB25D3DAB44867A, /*hidden argument*/NULL);
 		if (!L_2)
 		{
 			goto IL_001c;

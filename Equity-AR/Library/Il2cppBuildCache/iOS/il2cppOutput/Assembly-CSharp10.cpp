@@ -27771,37 +27771,59 @@ public:
 struct  WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
 {
 public:
-	// System.String WebInfoStats::currentLayer
-	String_t* ___currentLayer_5;
+	// System.String WebInfoStats::currentLayerName
+	String_t* ___currentLayerName_5;
+	// System.String WebInfoStats::currentLayerID
+	String_t* ___currentLayerID_6;
+	// System.String WebInfoStats::sceneType
+	String_t* ___sceneType_7;
 	// System.Single WebInfoStats::selectedLat
-	float ___selectedLat_6;
+	float ___selectedLat_8;
 	// System.Single WebInfoStats::selectedLon
-	float ___selectedLon_7;
+	float ___selectedLon_9;
 
 public:
-	inline static int32_t get_offset_of_currentLayer_5() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___currentLayer_5)); }
-	inline String_t* get_currentLayer_5() const { return ___currentLayer_5; }
-	inline String_t** get_address_of_currentLayer_5() { return &___currentLayer_5; }
-	inline void set_currentLayer_5(String_t* value)
+	inline static int32_t get_offset_of_currentLayerName_5() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___currentLayerName_5)); }
+	inline String_t* get_currentLayerName_5() const { return ___currentLayerName_5; }
+	inline String_t** get_address_of_currentLayerName_5() { return &___currentLayerName_5; }
+	inline void set_currentLayerName_5(String_t* value)
 	{
-		___currentLayer_5 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___currentLayer_5), (void*)value);
+		___currentLayerName_5 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___currentLayerName_5), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_selectedLat_6() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLat_6)); }
-	inline float get_selectedLat_6() const { return ___selectedLat_6; }
-	inline float* get_address_of_selectedLat_6() { return &___selectedLat_6; }
-	inline void set_selectedLat_6(float value)
+	inline static int32_t get_offset_of_currentLayerID_6() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___currentLayerID_6)); }
+	inline String_t* get_currentLayerID_6() const { return ___currentLayerID_6; }
+	inline String_t** get_address_of_currentLayerID_6() { return &___currentLayerID_6; }
+	inline void set_currentLayerID_6(String_t* value)
 	{
-		___selectedLat_6 = value;
+		___currentLayerID_6 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___currentLayerID_6), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_selectedLon_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLon_7)); }
-	inline float get_selectedLon_7() const { return ___selectedLon_7; }
-	inline float* get_address_of_selectedLon_7() { return &___selectedLon_7; }
-	inline void set_selectedLon_7(float value)
+	inline static int32_t get_offset_of_sceneType_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___sceneType_7)); }
+	inline String_t* get_sceneType_7() const { return ___sceneType_7; }
+	inline String_t** get_address_of_sceneType_7() { return &___sceneType_7; }
+	inline void set_sceneType_7(String_t* value)
 	{
-		___selectedLon_7 = value;
+		___sceneType_7 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___sceneType_7), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_selectedLat_8() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLat_8)); }
+	inline float get_selectedLat_8() const { return ___selectedLat_8; }
+	inline float* get_address_of_selectedLat_8() { return &___selectedLat_8; }
+	inline void set_selectedLat_8(float value)
+	{
+		___selectedLat_8 = value;
+	}
+
+	inline static int32_t get_offset_of_selectedLon_9() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLon_9)); }
+	inline float get_selectedLon_9() const { return ___selectedLon_9; }
+	inline float* get_address_of_selectedLon_9() { return &___selectedLon_9; }
+	inline void set_selectedLon_9(float value)
+	{
+		___selectedLon_9 = value;
 	}
 };
 
@@ -55772,7 +55794,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0_U3CStartU3Eb__0
 		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_10 = L_9->get_address_of_messageContent_1();
 		Location_t9728E739BA516BD3B72435362794CB8658F524C3 * L_11 = L_10->get_address_of_location_1();
 		L_11->set_lon_1((-73.9664993f));
-		// messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer ;
+		// messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerName ;
 		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_12 = __this->get_messageClass_0();
 		NullCheck(L_12);
 		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_13 = L_12->get_address_of_message_4();
@@ -55781,7 +55803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0_U3CStartU3Eb__0
 		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_16;
 		L_16 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
 		NullCheck(L_16);
-		String_t* L_17 = L_16->get_currentLayer_5();
+		String_t* L_17 = L_16->get_currentLayerName_5();
 		L_15->set_id_0(L_17);
 		// string JSON = JsonUtility.ToJson(messageClass);
 		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_18 = __this->get_messageClass_0();
@@ -56238,7 +56260,7 @@ IL_0086:
 			NullCheck(L_31);
 			float L_32 = L_31->get_lon_6();
 			L_30->set_lon_1(L_32);
-			// messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer + "heat";
+			// messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerName + "heat";
 			U3CU3Ec__DisplayClass4_0_t3E88F469409D767B0B90C2E768532643E4B9C3DF * L_33 = __this->get_U3CU3E8__1_3();
 			NullCheck(L_33);
 			MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_34 = L_33->get_messageClass_0();
@@ -56249,7 +56271,7 @@ IL_0086:
 			WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_38;
 			L_38 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
 			NullCheck(L_38);
-			String_t* L_39 = L_38->get_currentLayer_5();
+			String_t* L_39 = L_38->get_currentLayerName_5();
 			String_t* L_40;
 			L_40 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_39, _stringLiteral709432AC98753C2ADF6F62B372AFB9611F14DD81, /*hidden argument*/NULL);
 			L_37->set_id_0(L_40);
@@ -56264,7 +56286,7 @@ IL_0086:
 			//             //User has not enable location service, give it a default lat&lon :Central Park
 			//             messageClass.message.messageContent.location.lat = 40.7812f;
 			//             messageClass.message.messageContent.location.lon = -73.9665f;
-			//             messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayer ;
+			//             messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerName ;
 			//             string JSON = JsonUtility.ToJson(messageClass);
 			//             webViewPrefab.WebView.PostMessage(JSON);
 			//             Debug.Log("post Central Park Default string from Unity to Javascript");

@@ -10,7 +10,9 @@ public class WebInfoStats : MonoBehaviour
         set;
     }
 
-    public string currentLayer;
+    public string currentLayerName;
+    public string currentLayerID;
+    public string sceneType;
     //public int pageIndex;
     public float selectedLat;
     public float selectedLon;

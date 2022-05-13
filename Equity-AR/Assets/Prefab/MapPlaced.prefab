@@ -117,8 +117,21 @@ MonoBehaviour:
   _vectorData:
     _layerProperty:
       tileJsonData:
-        tileJSONLoaded: 1
-        LayerDisplayNames: []
+        tileJSONLoaded: 0
+        LayerDisplayNames:
+        - 2020s-100y
+        - 2020s-500y
+        - 2050s-100y
+        - 2050s-500y
+        - building
+        - green_infrastructure
+        - income_final
+        - NYC_65plus
+        - NYC_heatmap
+        - NYC_OpenSpace
+        - nycFlood1
+        - NYCtemp
+        - split-green-roofs
       _sourceType: 2
       sourceOptions:
         isActive: 1
@@ -661,7 +674,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: Extreme Flood
           geometryType: 2
           layerName: nycFlood1

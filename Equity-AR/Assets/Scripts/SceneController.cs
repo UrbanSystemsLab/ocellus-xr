@@ -18,7 +18,7 @@ public class SceneController : MonoBehaviour
 
     private void Update()
     {
-        if(WebInfoStats.Stats.currentLayer == "explore")
+        if(WebInfoStats.Stats.sceneType == "live")
         {
             LoadWorldScaleAR();
         }

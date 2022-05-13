@@ -1,58 +1,85 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MessageClass.cs">
     <Files>
-      <File FileName="Assets/Scripts/JSCom.cs" Line="95" Column="65" IsPinned="True" />
-      <File FileName="Assets/Scripts/MessageClass.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="Assets/Scripts/AskLocation.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="97" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/MessageClass.cs" Line="30" Column="19" IsPinned="True" />
+      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" IsPinned="True" />
+      <File FileName="Assets/Scripts/AskLocation.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
       <File FileName="Assets/SliderHandler.cs" />
       <File FileName="Assets/VerticalLayoutUI.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="1" Column="1" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
       <File FileName="Assets/VerticalFullScreenUI.cs" />
-      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
       <File FileName="Assets/MinimizeScreenFeature.cs" />
-      <File FileName="Assets/Scripts/DistanceToCheckpoint.cs" />
       <File FileName="Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs" />
-      <File FileName="Assets/UnityARInterface/Scripts/ARKitInterface.cs" Line="1" Column="1" />
+      <File FileName="Assets/UnityARInterface/Scripts/ARKitInterface.cs" />
       <File FileName="Assets/Mapbox/Unity/Editor/Build/Mapbox_iOS_build.cs" />
-      <File FileName="Assets/Plugins/StansAssets/NativePlugins/IOSDeploy/Editor/Scripts/ISD_PostProcess.cs" />
       <File FileName="Assets/Vuplex/WebView/Editor/iOS/iOSBuildScript.cs" />
-      <File FileName="Assets/MapboxAR/Examples/ARPrerequisiteInfo.cs" />
-      <File FileName="Assets/UnityARInterface/Scripts/ARController.cs" />
-      <File FileName="Assets/Scripts/TreeInfoManager.cs" />
       <File FileName="Assets/Mapbox/Examples/Scripts/PositionWithLocationProvider.cs" />
       <File FileName="Assets/UnityARInterface/Scripts/ARPointCloudVisualizer.cs" />
       <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="106" Column="47" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
       <File FileName="Assets/Scripts/toggleWebView.cs" />
+      <File FileName="Assets/Scripts/MapManager.cs" />
+      <File FileName="Assets/Scripts/Switcher.cs" />
+      <File FileName="Assets/Scripts/WebInfoStats.cs" />
+      <File FileName="Assets/Scripts/SceneController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Equity-AR" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="GoogleARCore" expanded="True">
+                <Node name="SDK" expanded="True">
+                  <Node name="Scripts" expanded="True" />
+                </Node>
+              </Node>
               <Node name="Mapbox" expanded="True">
                 <Node name="Examples" expanded="True">
-                  <Node name="Scripts" expanded="True">
-                    <Node name="ForwardGeocodeUserInput.cs" selected="True" />
-                  </Node>
+                  <Node name="Scripts" expanded="True" />
                 </Node>
                 <Node name="Unity" expanded="True">
+                  <Node name="Editor" expanded="True">
+                    <Node name="Build" expanded="True" />
+                  </Node>
                   <Node name="Map" expanded="True" />
                   <Node name="MeshGeneration" expanded="True">
+                    <Node name="Data" expanded="True" />
                     <Node name="Modifiers" expanded="True" />
                   </Node>
                 </Node>
               </Node>
               <Node name="MapboxAR" expanded="True">
+                <Node name="Examples" expanded="True" />
                 <Node name="Scripts" expanded="True">
                   <Node name="ManualSync" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Scripts" expanded="True" />
+              <Node name="Plugins" expanded="True">
+                <Node name="StansAssets" expanded="True">
+                  <Node name="NativePlugins" expanded="True">
+                    <Node name="IOSDeploy" expanded="True">
+                      <Node name="Editor" expanded="True">
+                        <Node name="Scripts" expanded="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="MessageClass.cs" selected="True" />
+              </Node>
               <Node name="UnityARInterface" expanded="True">
                 <Node name="Scripts" expanded="True" />
+              </Node>
+              <Node name="Vuplex" expanded="True">
+                <Node name="WebView" expanded="True">
+                  <Node name="Editor" expanded="True">
+                    <Node name="iOS" expanded="True" />
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -63,7 +90,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="054ccf09-ab92-42a3-a3ac-8806cac2336a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d50f0758-9f9a-4c17-8f00-eb648f7610e3" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
