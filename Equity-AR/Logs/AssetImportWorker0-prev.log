@@ -1,0 +1,606 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+62281
+Successfully changed project path to: /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR
+/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 105.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.0f1 (c7b5465681fb)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets
+GfxDevice: creating device client; threaded=0
+2022-05-26 00:50:31.580 Unity[27593:862758] (null) preferred device: Apple M1 Pro (high power)
+2022-05-26 00:50:31.580 Unity[27593:862758] Metal devices available: 1
+2022-05-26 00:50:31.580 Unity[27593:862758] 0: Apple M1 Pro (high power)
+2022-05-26 00:50:31.580 Unity[27593:862758] Using device Apple M1 Pro (high power)
+Initializing Metal device caps: Apple M1 Pro
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56593
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.001444 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 74.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.132 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006983 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 70.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.249 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3318 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 210.3 MB.
+System memory in use after: 210.5 MB.
+
+Unloading 152 unused Assets to reduce memory usage. Loaded Objects now: 3644.
+Total: 1.952000 ms (FindLiveObjects: 0.274917 ms CreateObjectMapping: 0.075833 ms MarkObjects: 1.473083 ms  DeleteObjects: 0.127125 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Mapbox/Examples/Resources/maki/aerialway-15.png
+  artifactKey: Guid(c80c2e2443adb6d478363a64f4adfb6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/Resources/maki/aerialway-15.png using Guid(c80c2e2443adb6d478363a64f4adfb6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16ec75b246ea81b5539be675cea4893f') in 0.540892 seconds
+  Import took 0.545107 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Mapbox/Examples/Resources/maki/alcohol-shop-15.png
+  artifactKey: Guid(df4b49bce9c77c44b95674e6c1249cfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/Resources/maki/alcohol-shop-15.png using Guid(df4b49bce9c77c44b95674e6c1249cfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3558b8910a21269220c62ff0a09240cc') in 0.009582 seconds
+  Import took 0.013242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Mapbox/Examples/_sharedModules/AddToTreeCollectionModifier.asset
+  artifactKey: Guid(d534c6a861f735c4dab3990ac3c05158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/_sharedModules/AddToTreeCollectionModifier.asset using Guid(d534c6a861f735c4dab3990ac3c05158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd8fda805a7dd0e2d169f39ce66cb80') in 0.417896 seconds
+  Import took 0.421489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Mapbox/Examples/_sharedModules/AddRemoveBuildingMonobehavior.asset
+  artifactKey: Guid(13e618a59576440f598bb23fcb160b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/_sharedModules/AddRemoveBuildingMonobehavior.asset using Guid(13e618a59576440f598bb23fcb160b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae8707f3774e78ba3d81a59e3f3e7fa0') in 0.003327 seconds
+  Import took 0.006857 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Mapbox/Examples/Resources/maki/airfield-15.png
+  artifactKey: Guid(f98ca583e42f68e47bfb1021409de126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/Resources/maki/airfield-15.png using Guid(f98ca583e42f68e47bfb1021409de126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b658295ecdf825b021ab23c074c5365f') in 0.007838 seconds
+  Import took 0.011781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Mapbox/Examples/Resources/maki/america-football-15.png
+  artifactKey: Guid(0ab7e81663cf1d94e9bd71c89d6f82d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/Resources/maki/america-football-15.png using Guid(0ab7e81663cf1d94e9bd71c89d6f82d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06bcf434dbbe02631deaa51830e49627') in 0.007264 seconds
+  Import took 0.010932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.026324 seconds.
+  path: Assets/Mapbox/Examples/3_POIPlacement/Modifiers/ArtsPoiLabelModifier.asset
+  artifactKey: Guid(4aeb61055bc3e481795eabb6cbf767f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/3_POIPlacement/Modifiers/ArtsPoiLabelModifier.asset using Guid(4aeb61055bc3e481795eabb6cbf767f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4e4d99e40bdd5c293c859235497022e') in 0.005509 seconds
+  Import took 0.010790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasFacades_detailMask_1.png
+  artifactKey: Guid(36bfefc139bfa434daf90848bb333e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasFacades_detailMask_1.png using Guid(36bfefc139bfa434daf90848bb333e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c02d081b3dbad69d842c2075326dd28f') in 0.032903 seconds
+  Import took 0.037562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasFacades_base.png
+  artifactKey: Guid(4d520150ef3724e4bb52237605c761df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasFacades_base.png using Guid(4d520150ef3724e4bb52237605c761df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b9422d0948df39017b88ad1fb53ce6') in 0.014134 seconds
+  Import took 0.017955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasRoofs_detailMask_1.png
+  artifactKey: Guid(a7ad6933f58d64d56a4879cc266290b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasRoofs_detailMask_1.png using Guid(a7ad6933f58d64d56a4879cc266290b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a2245c733212afd7c93b3ab0b23f4fa') in 0.056429 seconds
+  Import took 0.060412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasRoofs_base.png
+  artifactKey: Guid(89d3c1f500b7e4b8bba0ce9b760e9134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasRoofs_base.png using Guid(89d3c1f500b7e4b8bba0ce9b760e9134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aeecd62115e61f5d6c609c9fc268dc4') in 0.016112 seconds
+  Import took 0.019891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Mapbox/Examples/3_POIPlacement/Modifiers/ArtsPoiLabelModifier.asset
+  artifactKey: Guid(4aeb61055bc3e481795eabb6cbf767f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/3_POIPlacement/Modifiers/ArtsPoiLabelModifier.asset using Guid(4aeb61055bc3e481795eabb6cbf767f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4e4d99e40bdd5c293c859235497022e') in 0.002653 seconds
+  Import took 0.006493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasFacades_detailMask_2.png
+  artifactKey: Guid(aaebc04bedf1444bebad66d5386b3744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasFacades_detailMask_2.png using Guid(aaebc04bedf1444bebad66d5386b3744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba989acd7e6fd29744ad19ba98c7334') in 0.013213 seconds
+  Import took 0.016886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Mapbox/Examples/3_POIPlacement/Resources/ArtsPoiLabelPrefab.prefab
+  artifactKey: Guid(29d1abf5ba6514d81a7974353f130ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/3_POIPlacement/Resources/ArtsPoiLabelPrefab.prefab using Guid(29d1abf5ba6514d81a7974353f130ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ac4bcf05b6b58655b63e096926940a9') in 0.493952 seconds
+  Import took 0.497671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.785702 seconds.
+  path: Assets/Mapbox/Examples/4_ReplaceFeatures/Prefabs/Building Pivot.prefab
+  artifactKey: Guid(c71927789464440f59ea08b68c2f1073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/4_ReplaceFeatures/Prefabs/Building Pivot.prefab using Guid(c71927789464440f59ea08b68c2f1073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f0c26dba6b23960bb364d56ff1301d') in 0.059258 seconds
+  Import took 0.066578 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Mapbox/Examples/Resources/BuildingWallSlice.prefab
+  artifactKey: Guid(89250ee3e89eb154696df0625b55305b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/Resources/BuildingWallSlice.prefab using Guid(89250ee3e89eb154696df0625b55305b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8adc2770519826ff21d875f972e3ea7') in 0.025456 seconds
+  Import took 0.029295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Mapbox/Examples/Resources/maki/central-building-15.png
+  artifactKey: Guid(ed7defaa52ba7d74ab20777beeb9db9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/Resources/maki/central-building-15.png using Guid(ed7defaa52ba7d74ab20777beeb9db9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16c701c416679035c18a0a4bd2d6c711') in 0.011246 seconds
+  Import took 0.014970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Plugins/StansAssets/NativePlugins/IOSDeploy/Editor/Art/Icons/buildSettings.png
+  artifactKey: Guid(0f529d344dc854876848e91ca087bfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/StansAssets/NativePlugins/IOSDeploy/Editor/Art/Icons/buildSettings.png using Guid(0f529d344dc854876848e91ca087bfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59f1a4e467ff85ad15f83130c3bcd0b5') in 0.008974 seconds
+  Import took 0.012741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Mapbox/Resources/HeroStructures/Meshes/ChryslerBuilding.fbx
+  artifactKey: Guid(9ef00dc880db74fa2a52720b0b7b3c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/HeroStructures/Meshes/ChryslerBuilding.fbx using Guid(9ef00dc880db74fa2a52720b0b7b3c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3ecf0e699d4747e83bcdb8539172d9') in 0.285234 seconds
+  Import took 0.288875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Mapbox/Examples/Resources/maki/building-15.png
+  artifactKey: Guid(c28cf76c7e16569499fe77e47467dff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/Resources/maki/building-15.png using Guid(c28cf76c7e16569499fe77e47467dff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86dc2c659e21722b63ec2337d61492f8') in 0.008427 seconds
+  Import took 0.011854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasRoofs_detailMask_2.png
+  artifactKey: Guid(abf274fea99064d7f9087e58ccaf6d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/MapboxStyles/Styles/MapboxSampleStyles/Simple/Assets/Textures/BuildingAtlasRoofs_detailMask_2.png using Guid(abf274fea99064d7f9087e58ccaf6d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fefb0eabcbdc8be7e8f12bfb52a744e') in 0.007798 seconds
+  Import took 0.011617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Mapbox/Resources/HeroStructures/Prefabs/ChryslerBuilding.prefab
+  artifactKey: Guid(aedce91c327268742b81a28f40485857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/HeroStructures/Prefabs/ChryslerBuilding.prefab using Guid(aedce91c327268742b81a28f40485857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c27cc73c3f7de22b41bdc08b39b66236') in 0.007187 seconds
+  Import took 0.010985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Mapbox/Examples/1_DataExplorer/BuildingCollection.asset
+  artifactKey: Guid(f11fd5ce183f93846858df725d8eab7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/1_DataExplorer/BuildingCollection.asset using Guid(f11fd5ce183f93846858df725d8eab7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbdc28ed9eaf18d6020cecfa885d0288') in 0.002554 seconds
+  Import took 0.006170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009967 seconds.
+  path: Assets/Mapbox/Resources/HeroStructures/Prefabs/ChryslerBuilding.prefab
+  artifactKey: Guid(aedce91c327268742b81a28f40485857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/HeroStructures/Prefabs/ChryslerBuilding.prefab using Guid(aedce91c327268742b81a28f40485857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c27cc73c3f7de22b41bdc08b39b66236') in 0.006654 seconds
+  Import took 0.010973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.547398 seconds.
+  path: Assets/MapboxAR/Examples/ARTabletop/ARTableMapVisualizer/ClipBuildingHeightModifier.asset
+  artifactKey: Guid(236d4341bd743443ab8495048bc8bb13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MapboxAR/Examples/ARTabletop/ARTableMapVisualizer/ClipBuildingHeightModifier.asset using Guid(236d4341bd743443ab8495048bc8bb13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18694631e05c270fcbaf078f85237441') in 0.003137 seconds
+  Import took 0.007290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/MapboxAR/Examples/ARTabletop/ARTableMapVisualizer/ClipBuildingLayerModifier.asset
+  artifactKey: Guid(3b6cb2e34194d42dfbf3d6dd37152df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MapboxAR/Examples/ARTabletop/ARTableMapVisualizer/ClipBuildingLayerModifier.asset using Guid(3b6cb2e34194d42dfbf3d6dd37152df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '894c00f95d352a08ae9d7f2717006730') in 0.002711 seconds
+  Import took 0.006286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/MapboxAR/Materials/DebugBuildings.mat
+  artifactKey: Guid(c5af501b9ca374cf1948c4571862c6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MapboxAR/Materials/DebugBuildings.mat using Guid(c5af501b9ca374cf1948c4571862c6f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6398e8d2b1fa6e108385018d8db5df8') in 0.351337 seconds
+  Import took 0.354886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/MapboxAR/Examples/ARTabletop/ARTableMapVisualizer/ClipMergedBuildingStack.asset
+  artifactKey: Guid(0fb96108893574e37b5bfed68598692a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MapboxAR/Examples/ARTabletop/ARTableMapVisualizer/ClipMergedBuildingStack.asset using Guid(0fb96108893574e37b5bfed68598692a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05897c6fabb673bbe5ca062b864779b8') in 0.010796 seconds
+  Import took 0.014307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Mapbox/Examples/Resources/DriveBuildingMaterial.mat
+  artifactKey: Guid(a84d22a5fa79bce4396212d84ad11831) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/Resources/DriveBuildingMaterial.mat using Guid(a84d22a5fa79bce4396212d84ad11831) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47422d586a6c9f2835a9a7d806356a66') in 0.014446 seconds
+  Import took 0.018184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/MapboxAR/Examples/ARTabletop/ARTableMapVisualizer/ClipBuildingTextureModifier.asset
+  artifactKey: Guid(62c2c2d8b045f42988694e7dbed7250e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MapboxAR/Examples/ARTabletop/ARTableMapVisualizer/ClipBuildingTextureModifier.asset using Guid(62c2c2d8b045f42988694e7dbed7250e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd51147a7f5518ed8d3d6bd04f34001b4') in 0.001668 seconds
+  Import took 0.005492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.086215 seconds.
+  path: Assets/Mapbox/Resources/HeroStructures/Meshes/EmpireStateBuilding.fbx
+  artifactKey: Guid(5a2fea3a89fae4f97b0661209286d9b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/HeroStructures/Meshes/EmpireStateBuilding.fbx using Guid(5a2fea3a89fae4f97b0661209286d9b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64f568f34ca14fbba52742c728c71c13') in 0.020463 seconds
+  Import took 0.028413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Mapbox/Resources/HeroStructures/Prefabs/EmpireStateBuilding.prefab
+  artifactKey: Guid(f845fd35405547d4ca0a433a01c502c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Resources/HeroStructures/Prefabs/EmpireStateBuilding.prefab using Guid(f845fd35405547d4ca0a433a01c502c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3aaf63a7b3cfae74e1bf8a1a6342aa4') in 0.011876 seconds
+  Import took 0.016023 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Mapbox/Examples/1_DataExplorer/Modules/BuildingLayer/ExplorerDefaultBuilding.asset
+  artifactKey: Guid(cf704fe8cf1ef0e4a96a47c6a96ab23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/1_DataExplorer/Modules/BuildingLayer/ExplorerDefaultBuilding.asset using Guid(cf704fe8cf1ef0e4a96a47c6a96ab23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f683f8595a3f01d608fa601083638df') in 0.004298 seconds
+  Import took 0.008273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Mapbox/Examples/1_DataExplorer/Modules/BuildingLayer/ExplorerBuildingLayer.asset
+  artifactKey: Guid(1d2c597868e13c84b9c6c8e013ef80e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/1_DataExplorer/Modules/BuildingLayer/ExplorerBuildingLayer.asset using Guid(1d2c597868e13c84b9c6c8e013ef80e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0d031b64fb837b3b99b650029b03cbd') in 0.003267 seconds
+  Import took 0.006961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026546 seconds.
+  path: Assets/Mapbox/Examples/4_ReplaceFeatures/Materials/FuturisticBuilding.mat
+  artifactKey: Guid(bcdc978d68ad74fdfbf505307563a8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/4_ReplaceFeatures/Materials/FuturisticBuilding.mat using Guid(bcdc978d68ad74fdfbf505307563a8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '036e73a284d788cc74cf6851d35b07e6') in 0.006740 seconds
+  Import took 0.011138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Mapbox/Examples/4_ReplaceFeatures/Textures/FuturisticBuilding [Albedo].png
+  artifactKey: Guid(35f9d408432e04487bba4cd10a5e389a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/4_ReplaceFeatures/Textures/FuturisticBuilding [Albedo].png using Guid(35f9d408432e04487bba4cd10a5e389a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '583e50da8f620287c9c4166106edc151') in 0.004943 seconds
+  Import took 0.008682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/UnityARInterface/Resources/GuiSkin.guiskin
+  artifactKey: Guid(eda3469a863a93c419bf83c292590651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityARInterface/Resources/GuiSkin.guiskin using Guid(eda3469a863a93c419bf83c292590651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db76ad4d35ffb00f18144e3185cc771d') in 0.058162 seconds
+  Import took 0.062067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Mapbox/Examples/4_ReplaceFeatures/Materials/FuturisticBuilding.mat
+  artifactKey: Guid(bcdc978d68ad74fdfbf505307563a8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/4_ReplaceFeatures/Materials/FuturisticBuilding.mat using Guid(bcdc978d68ad74fdfbf505307563a8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '036e73a284d788cc74cf6851d35b07e6') in 0.007556 seconds
+  Import took 0.011346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.916731 seconds.
+  path: Assets/Lean/Common/Examples/Prefabs/InfoInUI.prefab
+  artifactKey: Guid(b7e3732f1c49d95408549ade82d6d9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lean/Common/Examples/Prefabs/InfoInUI.prefab using Guid(b7e3732f1c49d95408549ade82d6d9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab8d4ac250aee3d533723f41c90cff6f') in 0.007326 seconds
+  Import took 0.011626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002688 seconds.
+  path: Assets/Lean/Common/Examples/Prefabs/InfoInUI.prefab
+  artifactKey: Guid(b7e3732f1c49d95408549ade82d6d9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lean/Common/Examples/Prefabs/InfoInUI.prefab using Guid(b7e3732f1c49d95408549ade82d6d9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab8d4ac250aee3d533723f41c90cff6f') in 0.004190 seconds
+  Import took 0.007977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.589417 seconds.
+  path: Assets/MinimizeScreenFeature.cs
+  artifactKey: Guid(f54035adf77cf412e8fade89085b339e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MinimizeScreenFeature.cs using Guid(f54035adf77cf412e8fade89085b339e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '473defeb986546a1b6dd81d913558fab') in 0.984637 seconds
+  Import took 0.989093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 115.955691 seconds.
+  path: Assets/VerticalLayoutUI.cs
+  artifactKey: Guid(2f9561a9ce4a0425088780ddb1dee9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VerticalLayoutUI.cs using Guid(2f9561a9ce4a0425088780ddb1dee9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a465962d55cf319ae80876f641ce5f7') in 0.003498 seconds
+  Import took 0.007757 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004848 seconds.
+  path: Assets/VerticalLayoutUI.cs
+  artifactKey: Guid(2f9561a9ce4a0425088780ddb1dee9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VerticalLayoutUI.cs using Guid(2f9561a9ce4a0425088780ddb1dee9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a465962d55cf319ae80876f641ce5f7') in 0.000831 seconds
+  Import took 0.004638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.769071 seconds.
+  path: Assets/VerticalFullScreenUI.cs
+  artifactKey: Guid(b810cd441df9b4caa9ab8fd0082bdc08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VerticalFullScreenUI.cs using Guid(b810cd441df9b4caa9ab8fd0082bdc08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48491234c2cc895fb20168097ef39469') in 0.000961 seconds
+  Import took 0.005114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001433 seconds.
+  path: Assets/VerticalFullScreenUI.cs
+  artifactKey: Guid(b810cd441df9b4caa9ab8fd0082bdc08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VerticalFullScreenUI.cs using Guid(b810cd441df9b4caa9ab8fd0082bdc08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48491234c2cc895fb20168097ef39469') in 0.000892 seconds
+  Import took 0.004766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.314528 seconds.
+  path: Assets/VerticalLayoutUI.cs
+  artifactKey: Guid(2f9561a9ce4a0425088780ddb1dee9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VerticalLayoutUI.cs using Guid(2f9561a9ce4a0425088780ddb1dee9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0561ac143ff0eca97a3a0015f393d492') in 0.002851 seconds
+  Import took 0.011848 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005101 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.163 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 238.3 MB.
+System memory in use after: 238.5 MB.
+
+Unloading 144 unused Assets to reduce memory usage. Loaded Objects now: 3699.
+Total: 1.796625 ms (FindLiveObjects: 0.307958 ms CreateObjectMapping: 0.090708 ms MarkObjects: 1.327583 ms  DeleteObjects: 0.069000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006111 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.418 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 238.5 MB.
+System memory in use after: 238.8 MB.
+
+Unloading 143 unused Assets to reduce memory usage. Loaded Objects now: 3703.
+Total: 2.102542 ms (FindLiveObjects: 0.431959 ms CreateObjectMapping: 0.084833 ms MarkObjects: 1.495208 ms  DeleteObjects: 0.088917 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005466 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.239 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 238.8 MB.
+System memory in use after: 239.0 MB.
+
+Unloading 143 unused Assets to reduce memory usage. Loaded Objects now: 3707.
+Total: 2.283417 ms (FindLiveObjects: 0.395583 ms CreateObjectMapping: 0.081709 ms MarkObjects: 1.703041 ms  DeleteObjects: 0.101459 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006017 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.173 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 239.1 MB.
+System memory in use after: 239.3 MB.
+
+Unloading 143 unused Assets to reduce memory usage. Loaded Objects now: 3711.
+Total: 1.877458 ms (FindLiveObjects: 0.321667 ms CreateObjectMapping: 0.075208 ms MarkObjects: 1.396541 ms  DeleteObjects: 0.082500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005509 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.234 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 239.3 MB.
+System memory in use after: 239.5 MB.
+
+Unloading 143 unused Assets to reduce memory usage. Loaded Objects now: 3715.
+Total: 1.898334 ms (FindLiveObjects: 0.322292 ms CreateObjectMapping: 0.077083 ms MarkObjects: 1.421000 ms  DeleteObjects: 0.076459 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005643 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.296 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 239.5 MB.
+System memory in use after: 239.8 MB.
+
+Unloading 143 unused Assets to reduce memory usage. Loaded Objects now: 3719.
+Total: 2.202791 ms (FindLiveObjects: 0.414333 ms CreateObjectMapping: 0.086791 ms MarkObjects: 1.601709 ms  DeleteObjects: 0.097833 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 28.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 140 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.7 MB.
+System memory in use after: 180.9 MB.
+
+Unloading 140 unused Assets to reduce memory usage. Loaded Objects now: 3719.
+Total: 1.888958 ms (FindLiveObjects: 0.274459 ms CreateObjectMapping: 0.078084 ms MarkObjects: 1.450916 ms  DeleteObjects: 0.084500 ms)
+

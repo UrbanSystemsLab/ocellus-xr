@@ -38,7 +38,7 @@ public class JSCom : MonoBehaviour
             }
             else
             {
-                Debug.Log("The webview is doing something else");
+                Debug.Log("The webview is getting the data!");
                 infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
                 // print JSON
@@ -80,10 +80,10 @@ public class JSCom : MonoBehaviour
         // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
         // is null until the prefab has initialized.
         // Use the LoadProgressChanged event to determine when the page has loaded.
-        webViewPrefab.WebView.LoadProgressChanged += (sender, eventArgs) => {
-            // Send a message after the page has loaded.
-            if (eventArgs.Type == ProgressChangeType.Finished)
-            {
+        //webViewPrefab.WebView.LoadProgressChanged += (sender, eventArgs) => {
+        //    // Send a message after the page has loaded.
+        //    if (eventArgs.Type == ProgressChangeType.Finished)
+        //    {
                 if (!Input.location.isEnabledByUser)
                 {
                     //User has not enable location service, give it a default lat&lon :Central Park
@@ -104,8 +104,9 @@ public class JSCom : MonoBehaviour
 
                 string JSON = JsonUtility.ToJson(messageClass);
                 webViewPrefab.WebView.PostMessage(JSON);
-            }
-        };
+                Debug.Log("finish sending message from Unity!");
+        //    }
+        //};
     }
 
 

@@ -2,16 +2,16 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/JSCom.cs">
     <Files>
       <File FileName="Assets/Scripts/JSCom.cs" Line="108" Column="11" IsPinned="True" />
-      <File FileName="Assets/Scripts/MessageClass.cs" Line="11" Column="32" IsPinned="True" />
-      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="Assets/Scripts/AskLocation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MessageClass.cs" IsPinned="True" />
+      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" IsPinned="True" />
+      <File FileName="Assets/Scripts/AskLocation.cs" />
       <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
       <File FileName="Assets/SliderHandler.cs" />
-      <File FileName="Assets/VerticalLayoutUI.cs" Line="47" Column="10" />
+      <File FileName="Assets/VerticalLayoutUI.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
       <File FileName="Assets/VerticalFullScreenUI.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
-      <File FileName="Assets/MinimizeScreenFeature.cs" Line="1" Column="1" />
+      <File FileName="Assets/MinimizeScreenFeature.cs" />
       <File FileName="Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs" />
       <File FileName="Assets/UnityARInterface/Scripts/ARKitInterface.cs" />
       <File FileName="Assets/Mapbox/Unity/Editor/Build/Mapbox_iOS_build.cs" />
@@ -19,13 +19,13 @@
       <File FileName="Assets/Mapbox/Examples/Scripts/PositionWithLocationProvider.cs" />
       <File FileName="Assets/UnityARInterface/Scripts/ARPointCloudVisualizer.cs" />
       <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="26" Column="32" />
-      <File FileName="Assets/Scripts/toggleWebView.cs" Line="38" Column="104" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
+      <File FileName="Assets/Scripts/toggleWebView.cs" />
       <File FileName="Assets/Scripts/MapManager.cs" />
       <File FileName="Assets/Scripts/Switcher.cs" />
-      <File FileName="Assets/Scripts/WebInfoStats.cs" Line="5" Column="14" />
+      <File FileName="Assets/Scripts/WebInfoStats.cs" />
       <File FileName="Assets/Scripts/SceneController.cs" />
-      <File FileName="Assets/Vuplex/WebView/Scripts/Common/BaseWebViewPrefab.cs" Line="188" Column="25" />
+      <File FileName="Assets/Vuplex/WebView/Scripts/Common/BaseWebViewPrefab.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
