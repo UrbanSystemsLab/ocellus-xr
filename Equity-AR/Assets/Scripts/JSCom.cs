@@ -18,46 +18,6 @@ public class JSCom : MonoBehaviour
     {
         await webViewPrefab.WaitUntilInitialized();
 
-        Debug.Log("the webview is ready in unity");
-        MessageClass messageClass = new MessageClass();
-        messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
-        messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
-        messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerName + "heat";
-        //string JSON = JsonUtility.ToJson(messageClass);
-        Debug.Log("constructing JSON string now");
-
-        
-
-        // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
-        // is null until the prefab has initialized.
-        // Use the LoadProgressChanged event to determine when the page has loaded.
-        webViewPrefab.WebView.LoadProgressChanged += (sender, eventArgs) => {
-            // Send a message after the page has loaded.
-            if (eventArgs.Type == ProgressChangeType.Finished)
-            {
-                if (!Input.location.isEnabledByUser)
-                {
-                    //User has not enable location service, give it a default lat&lon :Central Park
-                    messageClass.message.messageContent.location.lat = 40.7812f;
-                    messageClass.message.messageContent.location.lon = -73.9665f;
-                    messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerName ;
-                    string JSON = JsonUtility.ToJson(messageClass);
-                    webViewPrefab.WebView.PostMessage(JSON);
-                    Debug.Log("post Central Park Default string from Unity to Javascript");
-                }
-                else
-                {
-                    //User enable location service,get user's location and post message
-                    messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
-                    messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
-                    string JSON = JsonUtility.ToJson(messageClass);
-                    webViewPrefab.WebView.PostMessage(JSON);
-                    Debug.Log("post JSON string from Unity to Javascript");
-                }
-            }
-        };
-
-
         clickingDetection();
 
     }
@@ -98,12 +58,53 @@ public class JSCom : MonoBehaviour
                     WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
                     WebInfoStats.Stats.sceneType = gotData.type;
 
-                    webViewObject.SetActive(false);
+                    //webViewObject.SetActive(false);
+                    constructMessage();
                 }
 
             }
             //const data = JSON.parse(message.data);
             //if (MessageType)
+        };
+    }
+
+    private void constructMessage()
+    {
+
+        Debug.Log("the webview is ready in unity");
+        MessageClass messageClass = new MessageClass();
+        //string JSON = JsonUtility.ToJson(messageClass);
+        Debug.Log("constructing JSON string now");
+
+
+        // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
+        // is null until the prefab has initialized.
+        // Use the LoadProgressChanged event to determine when the page has loaded.
+        webViewPrefab.WebView.LoadProgressChanged += (sender, eventArgs) => {
+            // Send a message after the page has loaded.
+            if (eventArgs.Type == ProgressChangeType.Finished)
+            {
+                if (!Input.location.isEnabledByUser)
+                {
+                    //User has not enable location service, give it a default lat&lon :Central Park
+                    messageClass.message.messageContent.location.lat = 40.7812f;
+                    messageClass.message.messageContent.location.lon = -73.9665f;
+                    Debug.Log("post Central Park Default string from Unity to Javascript");
+                }
+                else
+                {
+                    //User enable location service,get user's location and post message
+                    messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
+                    messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
+                    Debug.Log("post JSON string from Unity to Javascript");
+                }
+                messageClass.message.sentType = "testingType";
+                messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerID;
+                messageClass.message.messageContent.layer.name = WebInfoStats.Stats.currentLayerName;
+
+                string JSON = JsonUtility.ToJson(messageClass);
+                webViewPrefab.WebView.PostMessage(JSON);
+            }
         };
     }
 

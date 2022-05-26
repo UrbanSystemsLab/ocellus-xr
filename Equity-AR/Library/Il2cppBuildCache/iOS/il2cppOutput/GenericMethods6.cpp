@@ -866,10 +866,8 @@ struct DropdownEvent_tEB2C75C3DBC789936B31D9A979FD62E047846CFB;
 struct OptionData_t5F665DC13C1E4307727D66ECC1100B3A77E3E857;
 // UnityEngine.UI.Dropdown/OptionDataList
 struct OptionDataList_t524EBDB7A2B178269FD5B4740108D0EC6404B4B6;
-// JSCom/<>c__DisplayClass4_0
-struct U3CU3Ec__DisplayClass4_0_t3E88F469409D767B0B90C2E768532643E4B9C3DF;
-// JSCom/<>c__DisplayClass7_0
-struct U3CU3Ec__DisplayClass7_0_t52CD5CAA203755EC9D6A5193FED056055179D7A6;
+// JSCom/<>c__DisplayClass8_0
+struct U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F;
 // System.Threading.Tasks.Task/ContingentProperties
 struct ContingentProperties_t1E249C737B8B8644ED1D60EEFA101D326B199EA0;
 
@@ -1059,7 +1057,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Array_Sort_TisXmlSchemaObjectEntry_t7B722E7
 IL2CPP_EXTERN_C const RuntimeMethod* Array_TrueForAll_TisRuntimeObject_m87FDEF97246748B2A0A5CB432A913CE142FE729A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisRuntimeObject_mF158763EE84651A2D09034FFFE4818D703544376_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisU3CConnectU3Ed__16_tA63A4A00134BC6D6990E42A53B5B5B7EA557F2EC_m1ACDAADBF5297897D47ABF1630CC92D1C4F99548_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m0C73D309A5EECCA7E55FD8CFA09ACCA11F2E20B7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m295F5B297DCDADD4CC527F9BDB0D8277F24E5130_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisU3CFinishWritingU3Ed__30_t92D988525BB918A5495EEB7308C5D6B1736F7877_mF1355BF53E3E097D6AC7D8DEA65C6812E55FBA08_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisU3CInitReadAsyncU3Ed__61_t329281CA297EEFAD683A8D2BF26E662E01908937_mE668EE1470EF44F240009779B3836AB9D7AEE24D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisU3CInitializeU3Ed__34_tDEA0599318F5D525A23E56EB2509B6B2525C4BDF_m6D09A3DDCE8C56501850D3C5D3D7A1ED5546DE0C_RuntimeMethod_var;
@@ -1081,7 +1079,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CFinishRe
 IL2CPP_EXTERN_C const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509_m44EE1E3B98EFFCDBAC041C110D1591D910636548_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CStartSchedulerU3Ed__32_tAA797169C53B54E906E549A49C758A7290FEBF64_m53F123785BD8CDF0968BD897688CDC3A1E98E683_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CStartU3Ed__4_tC097C2B8FE6995CC159DA7DF2828B7811247499E_mAEA3E29F2E42A70423D01109785C7575B4D580AC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m3CE96D4D96C708FC10D92B0C01AFC6EAFC3E4CC6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_mB271086F6E2720EA3AF6394F852D6F223995D45C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BaseInvokableCall_ThrowOnInvalidArg_TisBoolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_m794D6FBF42D6423C9C1782E9AADA12433BE56182_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BaseInvokableCall_ThrowOnInvalidArg_TisColor_tF40DAF76C04FFECF3FE6024F85A294741C9CC659_mEBE76BD370EAA7BA62409D0C3B9159DB4FFEF73E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* BaseInvokableCall_ThrowOnInvalidArg_TisInt32Enum_t9B63F771913F2B6D586F1173B44A41FBE26F6B5C_m7AE9091EA025AF40FB3623C02E3A8A6C0727E338_RuntimeMethod_var;
@@ -16024,10 +16022,8 @@ public:
 	AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6  ___U3CU3Et__builder_1;
 	// JSCom JSCom/<Start>d__4::<>4__this
 	JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * ___U3CU3E4__this_2;
-	// JSCom/<>c__DisplayClass4_0 JSCom/<Start>d__4::<>8__1
-	U3CU3Ec__DisplayClass4_0_t3E88F469409D767B0B90C2E768532643E4B9C3DF * ___U3CU3E8__1_3;
 	// System.Runtime.CompilerServices.TaskAwaiter JSCom/<Start>d__4::<>u__1
-	TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C  ___U3CU3Eu__1_4;
+	TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C  ___U3CU3Eu__1_3;
 
 public:
 	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CStartU3Ed__4_tC097C2B8FE6995CC159DA7DF2828B7811247499E, ___U3CU3E1__state_0)); }
@@ -16065,22 +16061,13 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E4__this_2), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3E8__1_3() { return static_cast<int32_t>(offsetof(U3CStartU3Ed__4_tC097C2B8FE6995CC159DA7DF2828B7811247499E, ___U3CU3E8__1_3)); }
-	inline U3CU3Ec__DisplayClass4_0_t3E88F469409D767B0B90C2E768532643E4B9C3DF * get_U3CU3E8__1_3() const { return ___U3CU3E8__1_3; }
-	inline U3CU3Ec__DisplayClass4_0_t3E88F469409D767B0B90C2E768532643E4B9C3DF ** get_address_of_U3CU3E8__1_3() { return &___U3CU3E8__1_3; }
-	inline void set_U3CU3E8__1_3(U3CU3Ec__DisplayClass4_0_t3E88F469409D767B0B90C2E768532643E4B9C3DF * value)
+	inline static int32_t get_offset_of_U3CU3Eu__1_3() { return static_cast<int32_t>(offsetof(U3CStartU3Ed__4_tC097C2B8FE6995CC159DA7DF2828B7811247499E, ___U3CU3Eu__1_3)); }
+	inline TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C  get_U3CU3Eu__1_3() const { return ___U3CU3Eu__1_3; }
+	inline TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * get_address_of_U3CU3Eu__1_3() { return &___U3CU3Eu__1_3; }
+	inline void set_U3CU3Eu__1_3(TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C  value)
 	{
-		___U3CU3E8__1_3 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E8__1_3), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_U3CU3Eu__1_4() { return static_cast<int32_t>(offsetof(U3CStartU3Ed__4_tC097C2B8FE6995CC159DA7DF2828B7811247499E, ___U3CU3Eu__1_4)); }
-	inline TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C  get_U3CU3Eu__1_4() const { return ___U3CU3Eu__1_4; }
-	inline TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * get_address_of_U3CU3Eu__1_4() { return &___U3CU3Eu__1_4; }
-	inline void set_U3CU3Eu__1_4(TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C  value)
-	{
-		___U3CU3Eu__1_4 = value;
-		Il2CppCodeGenWriteBarrier((void**)&(((&___U3CU3Eu__1_4))->___m_task_0), (void*)NULL);
+		___U3CU3Eu__1_3 = value;
+		Il2CppCodeGenWriteBarrier((void**)&(((&___U3CU3Eu__1_3))->___m_task_0), (void*)NULL);
 	}
 };
 
@@ -16352,23 +16339,23 @@ public:
 };
 
 
-// JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d
-struct  U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E 
+// JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d
+struct  U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 
 {
 public:
-	// System.Int32 JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d::<>1__state
+	// System.Int32 JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d::<>t__builder
+	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d::<>t__builder
 	AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6  ___U3CU3Et__builder_1;
-	// Vuplex.WebView.ProgressChangedEventArgs JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d::eventArgs
+	// Vuplex.WebView.ProgressChangedEventArgs JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d::eventArgs
 	ProgressChangedEventArgs_t1E932488A49A8E10A0278FD4E62A82B884BEB11B * ___eventArgs_2;
-	// JSCom/<>c__DisplayClass7_0 JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d::<>4__this
-	U3CU3Ec__DisplayClass7_0_t52CD5CAA203755EC9D6A5193FED056055179D7A6 * ___U3CU3E4__this_3;
-	// System.Runtime.CompilerServices.TaskAwaiter`1<System.String> JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d::<>u__1
+	// JSCom/<>c__DisplayClass8_0 JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d::<>4__this
+	U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F * ___U3CU3E4__this_3;
+	// System.Runtime.CompilerServices.TaskAwaiter`1<System.String> JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d::<>u__1
 	TaskAwaiter_1_t454F5B9CE4CDFF1EE8835FB7E6FCB8441363315D  ___U3CU3Eu__1_4;
 
 public:
-	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E, ___U3CU3E1__state_0)); }
+	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7, ___U3CU3E1__state_0)); }
 	inline int32_t get_U3CU3E1__state_0() const { return ___U3CU3E1__state_0; }
 	inline int32_t* get_address_of_U3CU3E1__state_0() { return &___U3CU3E1__state_0; }
 	inline void set_U3CU3E1__state_0(int32_t value)
@@ -16376,7 +16363,7 @@ public:
 		___U3CU3E1__state_0 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3Et__builder_1() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E, ___U3CU3Et__builder_1)); }
+	inline static int32_t get_offset_of_U3CU3Et__builder_1() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7, ___U3CU3Et__builder_1)); }
 	inline AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6  get_U3CU3Et__builder_1() const { return ___U3CU3Et__builder_1; }
 	inline AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * get_address_of_U3CU3Et__builder_1() { return &___U3CU3Et__builder_1; }
 	inline void set_U3CU3Et__builder_1(AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6  value)
@@ -16394,7 +16381,7 @@ public:
 		#endif
 	}
 
-	inline static int32_t get_offset_of_eventArgs_2() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E, ___eventArgs_2)); }
+	inline static int32_t get_offset_of_eventArgs_2() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7, ___eventArgs_2)); }
 	inline ProgressChangedEventArgs_t1E932488A49A8E10A0278FD4E62A82B884BEB11B * get_eventArgs_2() const { return ___eventArgs_2; }
 	inline ProgressChangedEventArgs_t1E932488A49A8E10A0278FD4E62A82B884BEB11B ** get_address_of_eventArgs_2() { return &___eventArgs_2; }
 	inline void set_eventArgs_2(ProgressChangedEventArgs_t1E932488A49A8E10A0278FD4E62A82B884BEB11B * value)
@@ -16403,16 +16390,16 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___eventArgs_2), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3E4__this_3() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E, ___U3CU3E4__this_3)); }
-	inline U3CU3Ec__DisplayClass7_0_t52CD5CAA203755EC9D6A5193FED056055179D7A6 * get_U3CU3E4__this_3() const { return ___U3CU3E4__this_3; }
-	inline U3CU3Ec__DisplayClass7_0_t52CD5CAA203755EC9D6A5193FED056055179D7A6 ** get_address_of_U3CU3E4__this_3() { return &___U3CU3E4__this_3; }
-	inline void set_U3CU3E4__this_3(U3CU3Ec__DisplayClass7_0_t52CD5CAA203755EC9D6A5193FED056055179D7A6 * value)
+	inline static int32_t get_offset_of_U3CU3E4__this_3() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7, ___U3CU3E4__this_3)); }
+	inline U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F * get_U3CU3E4__this_3() const { return ___U3CU3E4__this_3; }
+	inline U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F ** get_address_of_U3CU3E4__this_3() { return &___U3CU3E4__this_3; }
+	inline void set_U3CU3E4__this_3(U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F * value)
 	{
 		___U3CU3E4__this_3 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E4__this_3), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3Eu__1_4() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E, ___U3CU3Eu__1_4)); }
+	inline static int32_t get_offset_of_U3CU3Eu__1_4() { return static_cast<int32_t>(offsetof(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7, ___U3CU3Eu__1_4)); }
 	inline TaskAwaiter_1_t454F5B9CE4CDFF1EE8835FB7E6FCB8441363315D  get_U3CU3Eu__1_4() const { return ___U3CU3Eu__1_4; }
 	inline TaskAwaiter_1_t454F5B9CE4CDFF1EE8835FB7E6FCB8441363315D * get_address_of_U3CU3Eu__1_4() { return &___U3CU3Eu__1_4; }
 	inline void set_U3CU3Eu__1_4(TaskAwaiter_1_t454F5B9CE4CDFF1EE8835FB7E6FCB8441363315D  value)
@@ -17303,25 +17290,25 @@ public:
 };
 
 
-// JSCom/<ExcuteJavaScript>d__7
-struct  U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 
+// JSCom/<ExcuteJavaScript>d__8
+struct  U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 
 {
 public:
-	// System.Int32 JSCom/<ExcuteJavaScript>d__7::<>1__state
+	// System.Int32 JSCom/<ExcuteJavaScript>d__8::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder JSCom/<ExcuteJavaScript>d__7::<>t__builder
+	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder JSCom/<ExcuteJavaScript>d__8::<>t__builder
 	AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B  ___U3CU3Et__builder_1;
-	// JSCom JSCom/<ExcuteJavaScript>d__7::<>4__this
+	// JSCom JSCom/<ExcuteJavaScript>d__8::<>4__this
 	JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * ___U3CU3E4__this_2;
-	// System.String JSCom/<ExcuteJavaScript>d__7::myJS
+	// System.String JSCom/<ExcuteJavaScript>d__8::myJS
 	String_t* ___myJS_3;
-	// JSCom/<>c__DisplayClass7_0 JSCom/<ExcuteJavaScript>d__7::<>8__1
-	U3CU3Ec__DisplayClass7_0_t52CD5CAA203755EC9D6A5193FED056055179D7A6 * ___U3CU3E8__1_4;
-	// System.Runtime.CompilerServices.TaskAwaiter JSCom/<ExcuteJavaScript>d__7::<>u__1
+	// JSCom/<>c__DisplayClass8_0 JSCom/<ExcuteJavaScript>d__8::<>8__1
+	U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F * ___U3CU3E8__1_4;
+	// System.Runtime.CompilerServices.TaskAwaiter JSCom/<ExcuteJavaScript>d__8::<>u__1
 	TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C  ___U3CU3Eu__1_5;
 
 public:
-	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0, ___U3CU3E1__state_0)); }
+	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213, ___U3CU3E1__state_0)); }
 	inline int32_t get_U3CU3E1__state_0() const { return ___U3CU3E1__state_0; }
 	inline int32_t* get_address_of_U3CU3E1__state_0() { return &___U3CU3E1__state_0; }
 	inline void set_U3CU3E1__state_0(int32_t value)
@@ -17329,7 +17316,7 @@ public:
 		___U3CU3E1__state_0 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3Et__builder_1() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0, ___U3CU3Et__builder_1)); }
+	inline static int32_t get_offset_of_U3CU3Et__builder_1() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213, ___U3CU3Et__builder_1)); }
 	inline AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B  get_U3CU3Et__builder_1() const { return ___U3CU3Et__builder_1; }
 	inline AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * get_address_of_U3CU3Et__builder_1() { return &___U3CU3Et__builder_1; }
 	inline void set_U3CU3Et__builder_1(AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B  value)
@@ -17344,7 +17331,7 @@ public:
 		#endif
 	}
 
-	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0, ___U3CU3E4__this_2)); }
+	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213, ___U3CU3E4__this_2)); }
 	inline JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * get_U3CU3E4__this_2() const { return ___U3CU3E4__this_2; }
 	inline JSCom_t405735338C026C27A23A4739D94D75A1261A93FC ** get_address_of_U3CU3E4__this_2() { return &___U3CU3E4__this_2; }
 	inline void set_U3CU3E4__this_2(JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * value)
@@ -17353,7 +17340,7 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E4__this_2), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_myJS_3() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0, ___myJS_3)); }
+	inline static int32_t get_offset_of_myJS_3() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213, ___myJS_3)); }
 	inline String_t* get_myJS_3() const { return ___myJS_3; }
 	inline String_t** get_address_of_myJS_3() { return &___myJS_3; }
 	inline void set_myJS_3(String_t* value)
@@ -17362,16 +17349,16 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___myJS_3), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3E8__1_4() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0, ___U3CU3E8__1_4)); }
-	inline U3CU3Ec__DisplayClass7_0_t52CD5CAA203755EC9D6A5193FED056055179D7A6 * get_U3CU3E8__1_4() const { return ___U3CU3E8__1_4; }
-	inline U3CU3Ec__DisplayClass7_0_t52CD5CAA203755EC9D6A5193FED056055179D7A6 ** get_address_of_U3CU3E8__1_4() { return &___U3CU3E8__1_4; }
-	inline void set_U3CU3E8__1_4(U3CU3Ec__DisplayClass7_0_t52CD5CAA203755EC9D6A5193FED056055179D7A6 * value)
+	inline static int32_t get_offset_of_U3CU3E8__1_4() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213, ___U3CU3E8__1_4)); }
+	inline U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F * get_U3CU3E8__1_4() const { return ___U3CU3E8__1_4; }
+	inline U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F ** get_address_of_U3CU3E8__1_4() { return &___U3CU3E8__1_4; }
+	inline void set_U3CU3E8__1_4(U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F * value)
 	{
 		___U3CU3E8__1_4 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E8__1_4), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3Eu__1_5() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0, ___U3CU3Eu__1_5)); }
+	inline static int32_t get_offset_of_U3CU3Eu__1_5() { return static_cast<int32_t>(offsetof(U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213, ___U3CU3Eu__1_5)); }
 	inline TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C  get_U3CU3Eu__1_5() const { return ___U3CU3Eu__1_5; }
 	inline TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * get_address_of_U3CU3Eu__1_5() { return &___U3CU3Eu__1_5; }
 	inline void set_U3CU3Eu__1_5(TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C  value)
@@ -21967,10 +21954,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_AwaitUnsafeOnComp
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_m38AE1EC6646AA6208EADEBF6B1D4C1E593828856_gshared (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD * __this, RuntimeObject ** ___awaiter0, RuntimeObject ** ___stateMachine1, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Object,System.Object>(TAwaiter&,TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_mB32E2BA5CA04406B4D32B8B036D2FB908F515726_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, RuntimeObject ** ___awaiter0, RuntimeObject ** ___stateMachine1, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Threading.Tasks.VoidTaskResult>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__7>(!!0&,!!1&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m82388F72A42B6AE50E8032BF2F2592BF062AF1A6_gshared (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine1, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__7>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_mFB36D684E8FE1A8BBEF4C575B2859BEEF5BF0CE2_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine1, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Threading.Tasks.VoidTaskResult>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__8>(!!0&,!!1&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m2E44AA27BBBD88B31D592DB9E3FDC1A8C06A1E09_gshared (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine1, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__8>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_mE6F64AA526EAE774BD3D40DDAAA228C31607B921_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine1, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Threading.Tasks.VoidTaskResult>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,System.Net.WebRequestStream/<Initialize>d__34>(!!0&,!!1&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CInitializeU3Ed__34_tDEA0599318F5D525A23E56EB2509B6B2525C4BDF_mC531D65F76BB35FFCC5965B8FFB2E668C6C381EB_gshared (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CInitializeU3Ed__34_tDEA0599318F5D525A23E56EB2509B6B2525C4BDF * ___stateMachine1, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,System.Net.WebRequestStream/<Initialize>d__34>(TAwaiter&,TStateMachine&)
@@ -22049,8 +22036,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisRuntimeO
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CProcessOperationU3Ed__24_t947D01160C24F0E290A08065E5E22CF9B57B7B8F_m2207C77B2606D2E3E263019428FB9A79D37B0F43_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CProcessOperationU3Ed__24_t947D01160C24F0E290A08065E5E22CF9B57B7B8F * ___stateMachine0, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<System.Security.Cryptography.CryptoStream/<WriteAsyncInternal>d__37>(TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CWriteAsyncInternalU3Ed__37_tA3EF177C6A131D3592E16BE287ADA414A14FD361_m5A3E13CA613AFE51618B2702701D9297A9A680B6_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CWriteAsyncInternalU3Ed__37_tA3EF177C6A131D3592E16BE287ADA414A14FD361 * ___stateMachine0, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<JSCom/<ExcuteJavaScript>d__7>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m0C73D309A5EECCA7E55FD8CFA09ACCA11F2E20B7_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine0, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<JSCom/<ExcuteJavaScript>d__8>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m295F5B297DCDADD4CC527F9BDB0D8277F24E5130_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine0, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<Mono.Net.Security.MobileAuthenticatedStream/<InnerWrite>d__67>(TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CInnerWriteU3Ed__67_t5A8A4FE7DB1603476080F8220B53E3D2C9A0B32B_m8766D02676D8310992655EABCAE1FD39B6F4137D_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CInnerWriteU3Ed__67_t5A8A4FE7DB1603476080F8220B53E3D2C9A0B32B * ___stateMachine0, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<Mono.Net.Security.MobileAuthenticatedStream/<ProcessAuthentication>d__47>(TStateMachine&)
@@ -22087,8 +22074,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnComp
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisConfiguredTaskAwaiter_t2CE498F9A6CE5405242AE2D77F03E58985B7C3ED_TisU3CStartSchedulerU3Ed__32_tAA797169C53B54E906E549A49C758A7290FEBF64_m2B6098796F1FD614B56CC323892F272B55C498F6_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, ConfiguredTaskAwaiter_t2CE498F9A6CE5405242AE2D77F03E58985B7C3ED * ___awaiter0, U3CStartSchedulerU3Ed__32_tAA797169C53B54E906E549A49C758A7290FEBF64 * ___stateMachine1, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1/ConfiguredTaskAwaiter<System.Object>,System.Net.WebOperation/<Run>d__54>(TAwaiter&,TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisConfiguredTaskAwaiter_t2CE498F9A6CE5405242AE2D77F03E58985B7C3ED_TisU3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509_m9BC55C8D6D935173EA7E9CAF9B81A293A6A4D3B9_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, ConfiguredTaskAwaiter_t2CE498F9A6CE5405242AE2D77F03E58985B7C3ED * ___awaiter0, U3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509 * ___stateMachine1, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m4333D7D9A201B8F95D35012F0388A5F49C8819A2_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE * ___awaiter0, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * ___stateMachine1, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_m9EF42413B7463F13462F2BD00E0F4D9A05D0CC4C_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE * ___awaiter0, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * ___stateMachine1, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Object,System.Object>(TAwaiter&,TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_m7BE3C991C9BC01BC0E34298B658EC833394E2091_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, RuntimeObject ** ___awaiter0, RuntimeObject ** ___stateMachine1, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<Start>d__4>(TAwaiter&,TStateMachine&)
@@ -22105,8 +22092,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CStart
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CFinishReadingU3Ed__55_tC1AF2664DB41BE304409A8806A1532512C96D2C5_mF49576345098C83BEC57AC1AA6DAEF0A4D14AC6A_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, U3CFinishReadingU3Ed__55_tC1AF2664DB41BE304409A8806A1532512C96D2C5 * ___stateMachine0, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<System.Net.WebOperation/<Run>d__54>(TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509_m44EE1E3B98EFFCDBAC041C110D1591D910636548_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, U3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509 * ___stateMachine0, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m3CE96D4D96C708FC10D92B0C01AFC6EAFC3E4CC6_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * ___stateMachine0, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_mB271086F6E2720EA3AF6394F852D6F223995D45C_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * ___stateMachine0, const RuntimeMethod* method);
 // System.Collections.Generic.List`1/Enumerator<!0> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_tB6009981BD4E3881E3EC83627255A24198F902D6  List_1_GetEnumerator_m1739A5E25DF502A6984F9B98CFCAC2D3FABCF233_gshared (List_1_t3F94120C77410A62EAE48421CF166B83AB95A2F5 * __this, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1/Enumerator<System.Object>::get_Current()
@@ -22239,15 +22226,15 @@ inline void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRu
 {
 	((  void (*) (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *, RuntimeObject **, RuntimeObject **, const RuntimeMethod*))AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_mB32E2BA5CA04406B4D32B8B036D2FB908F515726_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Threading.Tasks.VoidTaskResult>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__7>(!!0&,!!1&)
-inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m82388F72A42B6AE50E8032BF2F2592BF062AF1A6 (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Threading.Tasks.VoidTaskResult>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__8>(!!0&,!!1&)
+inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m2E44AA27BBBD88B31D592DB9E3FDC1A8C06A1E09 (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD *, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C *, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 *, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m82388F72A42B6AE50E8032BF2F2592BF062AF1A6_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD *, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C *, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 *, const RuntimeMethod*))AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m2E44AA27BBBD88B31D592DB9E3FDC1A8C06A1E09_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__7>(TAwaiter&,TStateMachine&)
-inline void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_mFB36D684E8FE1A8BBEF4C575B2859BEEF5BF0CE2 (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__8>(TAwaiter&,TStateMachine&)
+inline void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_mE6F64AA526EAE774BD3D40DDAAA228C31607B921 (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C *, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 *, const RuntimeMethod*))AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_mFB36D684E8FE1A8BBEF4C575B2859BEEF5BF0CE2_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C *, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 *, const RuntimeMethod*))AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_mE6F64AA526EAE774BD3D40DDAAA228C31607B921_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<System.Threading.Tasks.VoidTaskResult>::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,System.Net.WebRequestStream/<Initialize>d__34>(!!0&,!!1&)
 inline void AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CInitializeU3Ed__34_tDEA0599318F5D525A23E56EB2509B6B2525C4BDF_mC531D65F76BB35FFCC5965B8FFB2E668C6C381EB (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CInitializeU3Ed__34_tDEA0599318F5D525A23E56EB2509B6B2525C4BDF * ___stateMachine1, const RuntimeMethod* method)
@@ -22454,12 +22441,12 @@ inline void AsyncTaskMethodBuilder_Start_TisU3CWriteAsyncInternalU3Ed__37_tA3EF1
 {
 	((  void (*) (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *, U3CWriteAsyncInternalU3Ed__37_tA3EF177C6A131D3592E16BE287ADA414A14FD361 *, const RuntimeMethod*))AsyncTaskMethodBuilder_Start_TisU3CWriteAsyncInternalU3Ed__37_tA3EF177C6A131D3592E16BE287ADA414A14FD361_m5A3E13CA613AFE51618B2702701D9297A9A680B6_gshared)(__this, ___stateMachine0, method);
 }
-// System.Void JSCom/<ExcuteJavaScript>d__7::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExcuteJavaScriptU3Ed__7_MoveNext_mFB4D8D405B5BB90D54D5EA42651BE3BF485A2E74 (U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * __this, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<JSCom/<ExcuteJavaScript>d__7>(TStateMachine&)
-inline void AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m0C73D309A5EECCA7E55FD8CFA09ACCA11F2E20B7 (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine0, const RuntimeMethod* method)
+// System.Void JSCom/<ExcuteJavaScript>d__8::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CExcuteJavaScriptU3Ed__8_MoveNext_mA94AD960A838F4B6119DA4ADB116E0D7C3C79CB9 (U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * __this, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<JSCom/<ExcuteJavaScript>d__8>(TStateMachine&)
+inline void AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m295F5B297DCDADD4CC527F9BDB0D8277F24E5130 (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 *, const RuntimeMethod*))AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m0C73D309A5EECCA7E55FD8CFA09ACCA11F2E20B7_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 *, const RuntimeMethod*))AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m295F5B297DCDADD4CC527F9BDB0D8277F24E5130_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void Mono.Net.Security.MobileAuthenticatedStream/<InnerWrite>d__67::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInnerWriteU3Ed__67_MoveNext_m39FA739B0AE2BDF2EF4122C92A31BE2D016CEEF0 (U3CInnerWriteU3Ed__67_t5A8A4FE7DB1603476080F8220B53E3D2C9A0B32B * __this, const RuntimeMethod* method);
@@ -22599,10 +22586,10 @@ inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisConfiguredTaskAwait
 {
 	((  void (*) (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *, ConfiguredTaskAwaiter_t2CE498F9A6CE5405242AE2D77F03E58985B7C3ED *, U3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509 *, const RuntimeMethod*))AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisConfiguredTaskAwaiter_t2CE498F9A6CE5405242AE2D77F03E58985B7C3ED_TisU3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509_m9BC55C8D6D935173EA7E9CAF9B81A293A6A4D3B9_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d>(TAwaiter&,TStateMachine&)
-inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m4333D7D9A201B8F95D35012F0388A5F49C8819A2 (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE * ___awaiter0, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d>(TAwaiter&,TStateMachine&)
+inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_m9EF42413B7463F13462F2BD00E0F4D9A05D0CC4C (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE * ___awaiter0, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE *, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E *, const RuntimeMethod*))AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m4333D7D9A201B8F95D35012F0388A5F49C8819A2_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE *, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 *, const RuntimeMethod*))AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_m9EF42413B7463F13462F2BD00E0F4D9A05D0CC4C_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Object,System.Object>(TAwaiter&,TStateMachine&)
 inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_m7BE3C991C9BC01BC0E34298B658EC833394E2091 (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, RuntimeObject ** ___awaiter0, RuntimeObject ** ___stateMachine1, const RuntimeMethod* method)
@@ -22656,12 +22643,12 @@ inline void AsyncVoidMethodBuilder_Start_TisU3CRunU3Ed__54_t8263D7D167D4F130EC07
 {
 	((  void (*) (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *, U3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509 *, const RuntimeMethod*))AsyncVoidMethodBuilder_Start_TisU3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509_m44EE1E3B98EFFCDBAC041C110D1591D910636548_gshared)(__this, ___stateMachine0, method);
 }
-// System.Void JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3CExcuteJavaScriptU3Eb__0U3Ed_MoveNext_mC44D52732A983AE8CA8C2812AEB84E3BE2687889 (U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * __this, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d>(TStateMachine&)
-inline void AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m3CE96D4D96C708FC10D92B0C01AFC6EAFC3E4CC6 (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * ___stateMachine0, const RuntimeMethod* method)
+// System.Void JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3CExcuteJavaScriptU3Eb__0U3Ed_MoveNext_m07B82E07DB594D588362DA185EC233B067F49B4D (U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * __this, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d>(TStateMachine&)
+inline void AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_mB271086F6E2720EA3AF6394F852D6F223995D45C (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E *, const RuntimeMethod*))AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m3CE96D4D96C708FC10D92B0C01AFC6EAFC3E4CC6_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 *, const RuntimeMethod*))AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_mB271086F6E2720EA3AF6394F852D6F223995D45C_gshared)(__this, ___stateMachine0, method);
 }
 // System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t * Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E (RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  ___handle0, const RuntimeMethod* method);
@@ -38454,22 +38441,22 @@ IL2CPP_EXTERN_C  void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeOb
 	AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * _thisAdjusted = reinterpret_cast<AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *>(__this + _offset);
 	AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_mB32E2BA5CA04406B4D32B8B036D2FB908F515726(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__7>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_mFB36D684E8FE1A8BBEF4C575B2859BEEF5BF0CE2_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,JSCom/<ExcuteJavaScript>d__8>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_mE6F64AA526EAE774BD3D40DDAAA228C31607B921_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine1, const RuntimeMethod* method)
 {
 	{
 		AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD * L_0 = (AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD *)__this->get_address_of_m_builder_1();
 		TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * L_1 = ___awaiter0;
-		U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * L_2 = ___stateMachine1;
-		AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m82388F72A42B6AE50E8032BF2F2592BF062AF1A6((AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD *)(AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD *)L_0, (TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C *)(TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C *)L_1, (U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 *)(U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 *)L_2, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
+		U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * L_2 = ___stateMachine1;
+		AsyncTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m2E44AA27BBBD88B31D592DB9E3FDC1A8C06A1E09((AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD *)(AsyncTaskMethodBuilder_1_t3E10C35B53D8718724E2BF748600FB762F4719AD *)L_0, (TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C *)(TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C *)L_1, (U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 *)(U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 *)L_2, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 0));
 		return;
 	}
 }
-IL2CPP_EXTERN_C  void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_mFB36D684E8FE1A8BBEF4C575B2859BEEF5BF0CE2_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine1, const RuntimeMethod* method)
+IL2CPP_EXTERN_C  void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_mE6F64AA526EAE774BD3D40DDAAA228C31607B921_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine1, const RuntimeMethod* method)
 {
 	int32_t _offset = 1;
 	AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * _thisAdjusted = reinterpret_cast<AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *>(__this + _offset);
-	AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_mFB36D684E8FE1A8BBEF4C575B2859BEEF5BF0CE2(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
+	AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_mE6F64AA526EAE774BD3D40DDAAA228C31607B921(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,System.Net.WebRequestStream/<Initialize>d__34>(TAwaiter&,TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C_TisU3CInitializeU3Ed__34_tDEA0599318F5D525A23E56EB2509B6B2525C4BDF_mFEDF504025B03083218BB9E4926EDA892B1ADE95_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, TaskAwaiter_t3780D365E9D10C2D6C4E76C78AA0CDF92B8F181C * ___awaiter0, U3CInitializeU3Ed__34_tDEA0599318F5D525A23E56EB2509B6B2525C4BDF * ___stateMachine1, const RuntimeMethod* method)
@@ -38979,8 +38966,8 @@ IL2CPP_EXTERN_C  void AsyncTaskMethodBuilder_Start_TisU3CWriteAsyncInternalU3Ed_
 	AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * _thisAdjusted = reinterpret_cast<AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *>(__this + _offset);
 	AsyncTaskMethodBuilder_Start_TisU3CWriteAsyncInternalU3Ed__37_tA3EF177C6A131D3592E16BE287ADA414A14FD361_m5A3E13CA613AFE51618B2702701D9297A9A680B6(_thisAdjusted, ___stateMachine0, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<JSCom/<ExcuteJavaScript>d__7>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m0C73D309A5EECCA7E55FD8CFA09ACCA11F2E20B7_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine0, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<JSCom/<ExcuteJavaScript>d__8>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m295F5B297DCDADD4CC527F9BDB0D8277F24E5130_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -38998,7 +38985,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CExcut
 	{
 		ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB * L_1 = (ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB_il2cpp_TypeInfo_var)));
 		ArgumentNullException__ctor_m81AB157B93BFE2FBFDB08B88F84B444293042F97(L_1, (String_t*)((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralC70965A7D491520CA8D04D4EA01613EFED3309E0)), /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m0C73D309A5EECCA7E55FD8CFA09ACCA11F2E20B7_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m295F5B297DCDADD4CC527F9BDB0D8277F24E5130_RuntimeMethod_var)));
 	}
 
 IL_0018:
@@ -39012,8 +38999,8 @@ IL_0025:
 	{ // begin try (depth: 1)
 		IL2CPP_RUNTIME_CLASS_INIT(ExecutionContext_t16AC73BB21FEEEAD34A017877AC18DD8BB836414_il2cpp_TypeInfo_var);
 		ExecutionContext_EstablishCopyOnWriteScope_m526741703B27626D3AD07B14ADA3FECBF5C4E8DD((ExecutionContextSwitcher_t11B7DEE83408478EE3D5E29C988E5385AA9D7277 *)(ExecutionContextSwitcher_t11B7DEE83408478EE3D5E29C988E5385AA9D7277 *)(&V_0), /*hidden argument*/NULL);
-		U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * L_2 = ___stateMachine0;
-		U3CExcuteJavaScriptU3Ed__7_MoveNext_mFB4D8D405B5BB90D54D5EA42651BE3BF485A2E74((U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 *)(U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 *)L_2, /*hidden argument*/NULL);
+		U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * L_2 = ___stateMachine0;
+		U3CExcuteJavaScriptU3Ed__8_MoveNext_mA94AD960A838F4B6119DA4ADB116E0D7C3C79CB9((U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 *)(U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 *)L_2, /*hidden argument*/NULL);
 		IL2CPP_LEAVE(0x42, FINALLY_003a);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -39038,11 +39025,11 @@ IL_0042:
 		return;
 	}
 }
-IL2CPP_EXTERN_C  void AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m0C73D309A5EECCA7E55FD8CFA09ACCA11F2E20B7_AdjustorThunk (RuntimeObject * __this, U3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0 * ___stateMachine0, const RuntimeMethod* method)
+IL2CPP_EXTERN_C  void AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m295F5B297DCDADD4CC527F9BDB0D8277F24E5130_AdjustorThunk (RuntimeObject * __this, U3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213 * ___stateMachine0, const RuntimeMethod* method)
 {
 	int32_t _offset = 1;
 	AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * _thisAdjusted = reinterpret_cast<AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B *>(__this + _offset);
-	AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__7_t1FAE9EEE82EAB6C179E67D08E32D4024752BB7C0_m0C73D309A5EECCA7E55FD8CFA09ACCA11F2E20B7(_thisAdjusted, ___stateMachine0, method);
+	AsyncTaskMethodBuilder_Start_TisU3CExcuteJavaScriptU3Ed__8_tF19E650339A6E82CF6F141646EE8F845DCFDA213_m295F5B297DCDADD4CC527F9BDB0D8277F24E5130(_thisAdjusted, ___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<Mono.Net.Security.MobileAuthenticatedStream/<InnerWrite>d__67>(TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_Start_TisU3CInnerWriteU3Ed__67_t5A8A4FE7DB1603476080F8220B53E3D2C9A0B32B_m8766D02676D8310992655EABCAE1FD39B6F4137D_gshared (AsyncTaskMethodBuilder_t7A010673279CD8726E70047F1D15B3D17C56503B * __this, U3CInnerWriteU3Ed__67_t5A8A4FE7DB1603476080F8220B53E3D2C9A0B32B * ___stateMachine0, const RuntimeMethod* method)
@@ -40451,8 +40438,8 @@ IL2CPP_EXTERN_C  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisConfigure
 	AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *>(__this + _offset);
 	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisConfiguredTaskAwaiter_t2CE498F9A6CE5405242AE2D77F03E58985B7C3ED_TisU3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509_m9BC55C8D6D935173EA7E9CAF9B81A293A6A4D3B9(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d>(TAwaiter&,TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m4333D7D9A201B8F95D35012F0388A5F49C8819A2_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE * ___awaiter0, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d>(TAwaiter&,TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_m9EF42413B7463F13462F2BD00E0F4D9A05D0CC4C_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE * ___awaiter0, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * ___stateMachine1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -40531,12 +40518,12 @@ IL_0034:
 			NullCheck((Task_t804B25CFE3FC13AAEE16C8FA3BF52513F2A8DB60 *)L_7);
 			int32_t L_8;
 			L_8 = Task_get_Id_m34DAC27D91939B78DCD73A26085505A0B4D7235C((Task_t804B25CFE3FC13AAEE16C8FA3BF52513F2A8DB60 *)L_7, /*hidden argument*/NULL);
-			U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * L_9 = ___stateMachine1;
+			U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * L_9 = ___stateMachine1;
 			RuntimeObject * L_10 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), L_9);
 			NullCheck((RuntimeObject *)L_10);
 			Type_t * L_11;
 			L_11 = Object_GetType_m571FE8360C10B98C23AAF1F066D92C08CC94F45B((RuntimeObject *)L_10, /*hidden argument*/NULL);
-			*L_9 = *(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E *)UnBox(L_10);
+			*L_9 = *(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 *)UnBox(L_10);
 			NullCheck((MemberInfo_t *)L_11);
 			String_t* L_12;
 			L_12 = VirtFuncInvoker0< String_t* >::Invoke(8 /* System.String System.Reflection.MemberInfo::get_Name() */, (MemberInfo_t *)L_11);
@@ -40548,9 +40535,9 @@ IL_0034:
 IL_0062:
 		{
 			AsyncMethodBuilderCore_t2C85055E04767C52B9F66144476FCBF500DBFA34 * L_14 = (AsyncMethodBuilderCore_t2C85055E04767C52B9F66144476FCBF500DBFA34 *)__this->get_address_of_m_coreState_1();
-			U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * L_15 = ___stateMachine1;
-			U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E  L_16 = (*(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E *)L_15);
-			U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E  L_17 = L_16;
+			U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * L_15 = ___stateMachine1;
+			U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7  L_16 = (*(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 *)L_15);
+			U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7  L_17 = L_16;
 			RuntimeObject * L_18 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_17);
 			MoveNextRunner_tFAEA0BEDD353E2E34E8E287C67B1F5572FD30C2D * L_19 = V_0;
 			AsyncMethodBuilderCore_PostBoxInitialization_m22C1D9A2745255C6FC1426D4CB0C4355FBDA07E3((AsyncMethodBuilderCore_t2C85055E04767C52B9F66144476FCBF500DBFA34 *)(AsyncMethodBuilderCore_t2C85055E04767C52B9F66144476FCBF500DBFA34 *)L_14, (RuntimeObject*)L_18, (MoveNextRunner_tFAEA0BEDD353E2E34E8E287C67B1F5572FD30C2D *)L_19, (Task_t804B25CFE3FC13AAEE16C8FA3BF52513F2A8DB60 *)NULL, /*hidden argument*/NULL);
@@ -40589,11 +40576,11 @@ IL_0091:
 		return;
 	}
 }
-IL2CPP_EXTERN_C  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m4333D7D9A201B8F95D35012F0388A5F49C8819A2_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE * ___awaiter0, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * ___stateMachine1, const RuntimeMethod* method)
+IL2CPP_EXTERN_C  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_m9EF42413B7463F13462F2BD00E0F4D9A05D0CC4C_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE * ___awaiter0, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * ___stateMachine1, const RuntimeMethod* method)
 {
 	int32_t _offset = 1;
 	AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *>(__this + _offset);
-	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m4333D7D9A201B8F95D35012F0388A5F49C8819A2(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
+	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t2631C6B4AF6F87F9DA4817BE4B0962E01B4F47FE_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_m9EF42413B7463F13462F2BD00E0F4D9A05D0CC4C(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Object,System.Object>(TAwaiter&,TStateMachine&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_m7BE3C991C9BC01BC0E34298B658EC833394E2091_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, RuntimeObject ** ___awaiter0, RuntimeObject ** ___stateMachine1, const RuntimeMethod* method)
@@ -41345,8 +41332,8 @@ IL2CPP_EXTERN_C  void AsyncVoidMethodBuilder_Start_TisU3CRunU3Ed__54_t8263D7D167
 	AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *>(__this + _offset);
 	AsyncVoidMethodBuilder_Start_TisU3CRunU3Ed__54_t8263D7D167D4F130EC07407225D6F5AF4DA7D509_m44EE1E3B98EFFCDBAC041C110D1591D910636548(_thisAdjusted, ___stateMachine0, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<JSCom/<>c__DisplayClass7_0/<<ExcuteJavaScript>b__0>d>(TStateMachine&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m3CE96D4D96C708FC10D92B0C01AFC6EAFC3E4CC6_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * ___stateMachine0, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<JSCom/<>c__DisplayClass8_0/<<ExcuteJavaScript>b__0>d>(TStateMachine&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_mB271086F6E2720EA3AF6394F852D6F223995D45C_gshared (AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * __this, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * ___stateMachine0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -41364,7 +41351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CU3CEx
 	{
 		ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB * L_1 = (ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB_il2cpp_TypeInfo_var)));
 		ArgumentNullException__ctor_m81AB157B93BFE2FBFDB08B88F84B444293042F97(L_1, (String_t*)((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralC70965A7D491520CA8D04D4EA01613EFED3309E0)), /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m3CE96D4D96C708FC10D92B0C01AFC6EAFC3E4CC6_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_mB271086F6E2720EA3AF6394F852D6F223995D45C_RuntimeMethod_var)));
 	}
 
 IL_0018:
@@ -41378,8 +41365,8 @@ IL_0025:
 	{ // begin try (depth: 1)
 		IL2CPP_RUNTIME_CLASS_INIT(ExecutionContext_t16AC73BB21FEEEAD34A017877AC18DD8BB836414_il2cpp_TypeInfo_var);
 		ExecutionContext_EstablishCopyOnWriteScope_m526741703B27626D3AD07B14ADA3FECBF5C4E8DD((ExecutionContextSwitcher_t11B7DEE83408478EE3D5E29C988E5385AA9D7277 *)(ExecutionContextSwitcher_t11B7DEE83408478EE3D5E29C988E5385AA9D7277 *)(&V_0), /*hidden argument*/NULL);
-		U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * L_2 = ___stateMachine0;
-		U3CU3CExcuteJavaScriptU3Eb__0U3Ed_MoveNext_mC44D52732A983AE8CA8C2812AEB84E3BE2687889((U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E *)(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E *)L_2, /*hidden argument*/NULL);
+		U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * L_2 = ___stateMachine0;
+		U3CU3CExcuteJavaScriptU3Eb__0U3Ed_MoveNext_m07B82E07DB594D588362DA185EC233B067F49B4D((U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 *)(U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 *)L_2, /*hidden argument*/NULL);
 		IL2CPP_LEAVE(0x42, FINALLY_003a);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -41404,11 +41391,11 @@ IL_0042:
 		return;
 	}
 }
-IL2CPP_EXTERN_C  void AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m3CE96D4D96C708FC10D92B0C01AFC6EAFC3E4CC6_AdjustorThunk (RuntimeObject * __this, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E * ___stateMachine0, const RuntimeMethod* method)
+IL2CPP_EXTERN_C  void AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_mB271086F6E2720EA3AF6394F852D6F223995D45C_AdjustorThunk (RuntimeObject * __this, U3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7 * ___stateMachine0, const RuntimeMethod* method)
 {
 	int32_t _offset = 1;
 	AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_tA31C888168B27AABF7B0D9E7DF720547D4892DE6 *>(__this + _offset);
-	AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t8457EF3A2FF22012B77DE6D1E145E6D45FF0D03E_m3CE96D4D96C708FC10D92B0C01AFC6EAFC3E4CC6(_thisAdjusted, ___stateMachine0, method);
+	AsyncVoidMethodBuilder_Start_TisU3CU3CExcuteJavaScriptU3Eb__0U3Ed_t0EC343DF03C44EB8377F79963CCE42C7217EABC7_mB271086F6E2720EA3AF6394F852D6F223995D45C(_thisAdjusted, ___stateMachine0, method);
 }
 // T UnityEngine.AttributeHelperEngine::GetCustomAttributeOfType<System.Object>(System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * AttributeHelperEngine_GetCustomAttributeOfType_TisRuntimeObject_mEF75BCEED0FF97BB5B2C574F6DBB612BA0BE6FE7_gshared (Type_t * ___klass0, const RuntimeMethod* method)

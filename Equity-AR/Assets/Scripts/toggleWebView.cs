@@ -35,6 +35,7 @@ public class toggleWebView : MonoBehaviour
 
     private void Update()
     {
+        //change the check to data-driven, when user press enter ar button, it will open place Object. 
         if (!webViewPrefab.activeSelf)
         {
             openPlaceObject();

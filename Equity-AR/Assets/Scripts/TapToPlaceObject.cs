@@ -69,7 +69,7 @@ public class TapToPlaceObject : MonoBehaviour
     {
         map = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
         isPlaced = true;
-        calibrationPage.SetActive(true);
+        //calibrationPage.SetActive(true);
         TapToPlaceMap.SetActive(false);
         //map.GetComponent<LeanPinchScale>().enabled = true;
         //map.GetComponent<LeanTwistRotateAxis>().enabled = true;

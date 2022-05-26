@@ -43,7 +43,7 @@ public class VerticalLayoutUI : MonoBehaviour
             m.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 30, 30);
 
             
-        Debug.Log(Screen.height);
+        //Debug.Log(Screen.height);
         }
         else
         {

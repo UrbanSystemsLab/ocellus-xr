@@ -44,7 +44,6 @@ ScriptsOnlyBuild:
     - Mapbox.Unity.Utilities.Console
     - Mapbox.Unity.Utilities.DebugTools.SceneData
     - Mapbox.Unity.Utilities.DebugTools.ScenesList
-    - Mapbox.Unity.Utilities.Runnable
     - Marker
     - MessageClass
     - MinimizeScreenFeature
@@ -3112,4 +3111,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Lat&Long.unity
   - Assets/Scenes/WorldScaleAR.unity
-  playerPath: /Users/elenalalala/Desktop/USLBuild/weird testing
+  playerPath: /Users/elenalalala/Desktop/USLBuild/3-27
