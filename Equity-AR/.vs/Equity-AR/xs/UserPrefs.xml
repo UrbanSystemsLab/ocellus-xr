@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs">
     <Files>
-      <File FileName="Assets/Scripts/JSCom.cs" Line="101" Column="61" IsPinned="True" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="48" Column="54" IsPinned="True" />
       <File FileName="Assets/Scripts/MessageClass.cs" Line="26" Column="28" IsPinned="True" />
       <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" IsPinned="True" />
-      <File FileName="Assets/Scripts/AskLocation.cs" />
-      <File FileName="Assets/Scripts/WebInfoStats.cs" />
+      <File FileName="Assets/Scripts/AskLocation.cs" Line="14" Column="22" />
+      <File FileName="Assets/Scripts/WebInfoStats.cs" Line="13" Column="36" />
       <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
       <File FileName="Assets/SliderHandler.cs" />
       <File FileName="Assets/VerticalLayoutUI.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="155" Column="35" />
       <File FileName="Assets/VerticalFullScreenUI.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
       <File FileName="Assets/MinimizeScreenFeature.cs" />
@@ -20,18 +20,19 @@
       <File FileName="Assets/Mapbox/Examples/Scripts/PositionWithLocationProvider.cs" />
       <File FileName="Assets/UnityARInterface/Scripts/ARPointCloudVisualizer.cs" />
       <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
-      <File FileName="Assets/Scripts/toggleWebView.cs" />
-      <File FileName="Assets/Scripts/MapManager.cs" />
-      <File FileName="Assets/Scripts/Switcher.cs" />
-      <File FileName="Assets/Scripts/SceneController.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="38" Column="56" />
+      <File FileName="Assets/Scripts/toggleWebView.cs" Line="39" Column="45" />
+      <File FileName="Assets/Scripts/MapManager.cs" Line="21" Column="19" />
+      <File FileName="Assets/Scripts/Switcher.cs" Line="80" Column="35" />
+      <File FileName="Assets/Scripts/SceneController.cs" Line="26" Column="2" />
       <File FileName="Assets/Vuplex/WebView/Scripts/Common/BaseWebViewPrefab.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="138" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Equity-AR" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
+            <Node name="Assets" expanded="True">
               <Node name="GoogleARCore" expanded="True">
                 <Node name="SDK" expanded="True">
                   <Node name="Scripts" expanded="True" />
@@ -48,7 +49,10 @@
                   <Node name="Map" expanded="True" />
                   <Node name="MeshGeneration" expanded="True">
                     <Node name="Data" expanded="True" />
-                    <Node name="Modifiers" expanded="True" />
+                    <Node name="Modifiers" expanded="True">
+                      <Node name="GameObjectModifiers" expanded="True" />
+                      <Node name="MergedModifierStack.cs" selected="True" />
+                    </Node>
                   </Node>
                 </Node>
               </Node>

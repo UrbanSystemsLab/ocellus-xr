@@ -9,7 +9,8 @@ using Lean.Touch;
 
 public class TapToPlaceObject : MonoBehaviour
 {
-
+    [SerializeField]
+    public static bool mapIsLoaded = false;
     
     public GameObject objectToPlace;
     public GameObject placementIndicator;
@@ -42,6 +43,8 @@ public class TapToPlaceObject : MonoBehaviour
         TapToPlaceMap.SetActive(true);
         
         isCalibrating = false;
+
+        mapIsLoaded = true;
     }
 
     // Update is called once per frame

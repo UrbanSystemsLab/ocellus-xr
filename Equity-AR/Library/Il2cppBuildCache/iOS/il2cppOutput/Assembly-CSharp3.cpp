@@ -469,6 +469,8 @@ struct NodeU5BU5D_tD20A307CF4F372428173A0C5B43252F0FFAFBCAD;
 struct PathU5BU5D_tA2C65BFA1992C47732E27A9149B3880A9B660C53;
 // GoogleARCore.ARCoreSession
 struct ARCoreSession_t45143007678B89588B7EDE736EE9C78050B5F282;
+// UnityEngine.XR.ARFoundation.ARRaycastManager
+struct ARRaycastManager_t76CDCF27810673048562A85CAD0E3FEEB3D7328F;
 // Mapbox.Unity.Map.AbstractLayer
 struct AbstractLayer_t9119A5D4963E0A571EA18BFE16FFEE14587EA5F1;
 // Mapbox.Unity.Location.AbstractLocationProvider
@@ -1313,6 +1315,7 @@ IL2CPP_EXTERN_C RuntimeClass* SubLayerFantasyStyle_tA9A5E2E23CA9EEAED7C3A3247D8E
 IL2CPP_EXTERN_C RuntimeClass* SubLayerLightStyle_t945AF43AC8C727772C10244A91B7BFD6C39FF0E9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SubLayerRealisticStyle_t57482EDDA36954162D065B3963BC18978438D2A8_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SubLayerSimpleStyle_tE8CD29BF96FEC4615604BF0A2E3F738C8D57FBF8_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TerrainColliderOptions_t58A27844387E4EF31D961F0F075CD354D5FD8983_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TerrainSideWallOptions_t40DE5F02F70A6D5CEB7A796670FD6B7941C07745_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Texture2D_t9B604D0D8E28032123641A7E7338FA872E2698BF_il2cpp_TypeInfo_var;
@@ -1833,7 +1836,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* ImageryLayer_RedrawLayer_mD9F4E2562522C25A7
 IL2CPP_EXTERN_C const RuntimeMethod* ImageryLayer_U3CInitializeU3Eb__18_0_mED82386D7539F6E93C6C7A063F8D93F35B754D3C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ImmediatePositionWithLocationProvider_U3CStartU3Eb__5_0_m578868E3FE559FE2E98B05154DA1B1186E46BDD9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* InitializeMapWithLocationProvider_LocationProvider_OnLocationUpdated_m881917B9A42EEB27529B02702BEE051DF19D5E7C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* JSCom_U3CclickingDetectionU3Eb__5_0_m45F085E29A846ED5C8E96A444D32C83655A0F5D4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* JSCom_U3CRecieveMessageFromWebU3Eb__5_0_m58801B5F44449094DBA594F914D2CC44E248DCE4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisFileSelectionMessage_tDE7555DC2F6445288F7DD8FD2E118D67D167D97A_m6DEFFAA062A41659F88CBDF8B9BEBA2EBD80FB81_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* KDNode_1_AddPoint_mC68CF0CDD12CD399C76708F905EA17C2D886277F_RuntimeMethod_var;
@@ -21510,6 +21513,169 @@ public:
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___message_4))->___messageContent_1))->___layer_0))->___description_2), (void*)NULL);
 		#endif
+	}
+};
+
+
+// TapToPlaceObject
+struct  TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
+{
+public:
+	// UnityEngine.GameObject TapToPlaceObject::objectToPlace
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___objectToPlace_5;
+	// UnityEngine.GameObject TapToPlaceObject::placementIndicator
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___placementIndicator_6;
+	// System.Boolean TapToPlaceObject::isPlaced
+	bool ___isPlaced_7;
+	// UnityEngine.GameObject TapToPlaceObject::mainPage
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___mainPage_8;
+	// UnityEngine.GameObject TapToPlaceObject::TapToPlaceMap
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___TapToPlaceMap_9;
+	// UnityEngine.GameObject TapToPlaceObject::calibrationPage
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___calibrationPage_10;
+	// UnityEngine.Camera TapToPlaceObject::newCamera
+	Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * ___newCamera_11;
+	// UnityEngine.GameObject TapToPlaceObject::reloadMapCanvas
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___reloadMapCanvas_12;
+	// UnityEngine.XR.ARFoundation.ARRaycastManager TapToPlaceObject::raycastManager
+	ARRaycastManager_t76CDCF27810673048562A85CAD0E3FEEB3D7328F * ___raycastManager_13;
+	// UnityEngine.Pose TapToPlaceObject::placementPose
+	Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A  ___placementPose_14;
+	// System.Boolean TapToPlaceObject::placementPoseIsValid
+	bool ___placementPoseIsValid_15;
+	// System.Boolean TapToPlaceObject::isCalibrating
+	bool ___isCalibrating_16;
+	// UnityEngine.GameObject TapToPlaceObject::map
+	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___map_17;
+
+public:
+	inline static int32_t get_offset_of_objectToPlace_5() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___objectToPlace_5)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_objectToPlace_5() const { return ___objectToPlace_5; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_objectToPlace_5() { return &___objectToPlace_5; }
+	inline void set_objectToPlace_5(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___objectToPlace_5 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___objectToPlace_5), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_placementIndicator_6() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___placementIndicator_6)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_placementIndicator_6() const { return ___placementIndicator_6; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_placementIndicator_6() { return &___placementIndicator_6; }
+	inline void set_placementIndicator_6(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___placementIndicator_6 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___placementIndicator_6), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_isPlaced_7() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___isPlaced_7)); }
+	inline bool get_isPlaced_7() const { return ___isPlaced_7; }
+	inline bool* get_address_of_isPlaced_7() { return &___isPlaced_7; }
+	inline void set_isPlaced_7(bool value)
+	{
+		___isPlaced_7 = value;
+	}
+
+	inline static int32_t get_offset_of_mainPage_8() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___mainPage_8)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_mainPage_8() const { return ___mainPage_8; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_mainPage_8() { return &___mainPage_8; }
+	inline void set_mainPage_8(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___mainPage_8 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___mainPage_8), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_TapToPlaceMap_9() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___TapToPlaceMap_9)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_TapToPlaceMap_9() const { return ___TapToPlaceMap_9; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_TapToPlaceMap_9() { return &___TapToPlaceMap_9; }
+	inline void set_TapToPlaceMap_9(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___TapToPlaceMap_9 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___TapToPlaceMap_9), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_calibrationPage_10() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___calibrationPage_10)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_calibrationPage_10() const { return ___calibrationPage_10; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_calibrationPage_10() { return &___calibrationPage_10; }
+	inline void set_calibrationPage_10(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___calibrationPage_10 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___calibrationPage_10), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_newCamera_11() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___newCamera_11)); }
+	inline Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * get_newCamera_11() const { return ___newCamera_11; }
+	inline Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C ** get_address_of_newCamera_11() { return &___newCamera_11; }
+	inline void set_newCamera_11(Camera_tC44E094BAB53AFC8A014C6F9CFCE11F4FC38006C * value)
+	{
+		___newCamera_11 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___newCamera_11), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_reloadMapCanvas_12() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___reloadMapCanvas_12)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_reloadMapCanvas_12() const { return ___reloadMapCanvas_12; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_reloadMapCanvas_12() { return &___reloadMapCanvas_12; }
+	inline void set_reloadMapCanvas_12(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___reloadMapCanvas_12 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___reloadMapCanvas_12), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_raycastManager_13() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___raycastManager_13)); }
+	inline ARRaycastManager_t76CDCF27810673048562A85CAD0E3FEEB3D7328F * get_raycastManager_13() const { return ___raycastManager_13; }
+	inline ARRaycastManager_t76CDCF27810673048562A85CAD0E3FEEB3D7328F ** get_address_of_raycastManager_13() { return &___raycastManager_13; }
+	inline void set_raycastManager_13(ARRaycastManager_t76CDCF27810673048562A85CAD0E3FEEB3D7328F * value)
+	{
+		___raycastManager_13 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___raycastManager_13), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_placementPose_14() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___placementPose_14)); }
+	inline Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A  get_placementPose_14() const { return ___placementPose_14; }
+	inline Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A * get_address_of_placementPose_14() { return &___placementPose_14; }
+	inline void set_placementPose_14(Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A  value)
+	{
+		___placementPose_14 = value;
+	}
+
+	inline static int32_t get_offset_of_placementPoseIsValid_15() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___placementPoseIsValid_15)); }
+	inline bool get_placementPoseIsValid_15() const { return ___placementPoseIsValid_15; }
+	inline bool* get_address_of_placementPoseIsValid_15() { return &___placementPoseIsValid_15; }
+	inline void set_placementPoseIsValid_15(bool value)
+	{
+		___placementPoseIsValid_15 = value;
+	}
+
+	inline static int32_t get_offset_of_isCalibrating_16() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___isCalibrating_16)); }
+	inline bool get_isCalibrating_16() const { return ___isCalibrating_16; }
+	inline bool* get_address_of_isCalibrating_16() { return &___isCalibrating_16; }
+	inline void set_isCalibrating_16(bool value)
+	{
+		___isCalibrating_16 = value;
+	}
+
+	inline static int32_t get_offset_of_map_17() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849, ___map_17)); }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * get_map_17() const { return ___map_17; }
+	inline GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 ** get_address_of_map_17() { return &___map_17; }
+	inline void set_map_17(GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * value)
+	{
+		___map_17 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___map_17), (void*)value);
+	}
+};
+
+struct TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849_StaticFields
+{
+public:
+	// System.Boolean TapToPlaceObject::mapIsLoaded
+	bool ___mapIsLoaded_4;
+
+public:
+	inline static int32_t get_offset_of_mapIsLoaded_4() { return static_cast<int32_t>(offsetof(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849_StaticFields, ___mapIsLoaded_4)); }
+	inline bool get_mapIsLoaded_4() const { return ___mapIsLoaded_4; }
+	inline bool* get_address_of_mapIsLoaded_4() { return &___mapIsLoaded_4; }
+	inline void set_mapIsLoaded_4(bool value)
+	{
+		___mapIsLoaded_4 = value;
 	}
 };
 
@@ -43042,8 +43208,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_Start_m80DBDD9CEBA7A20E93D6FFD8D17
 		return;
 	}
 }
-// System.Void JSCom::clickingDetection()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_clickingDetection_mD2730D73D238157F0B53CE0322FFB6E533E0BA24 (JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * __this, const RuntimeMethod* method)
+// System.Void JSCom::RecieveMessageFromWeb()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_RecieveMessageFromWeb_mE971673DDC57D112153DFAF56E2E8EC2034BA79A (JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -43051,26 +43217,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_clickingDetection_mD2730D73D238157
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JSCom_U3CclickingDetectionU3Eb__5_0_m45F085E29A846ED5C8E96A444D32C83655A0F5D4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JSCom_U3CRecieveMessageFromWebU3Eb__5_0_m58801B5F44449094DBA594F914D2CC44E248DCE4_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
 		// webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
-		//     //if (eventArgs.Value == "clicked")
-		//     //{
-		// 
-		//     //    Debug.Log("The webview was clicked");
-		//     //    infoText.text += eventArgs.Value;
-		//     //    Debug.Log(eventArgs.Value);
-		//     //    //print "clicked"
-		//     //}
-		//     //else
-		//     //{
 		//         Debug.Log("The webview is getting the data!");
 		//         infoText.text += eventArgs.Value;
 		//         Debug.Log(eventArgs.Value);
-		//         // print JSON
 		// 
+		//         //Parsing json
 		//         //testing for parsing json
 		//         //string testing = @"{""type"":""layer"",""data"":{""layer"":""heat""}}";
 		//         //string testing = "{\"type\": \"layer\"}";
@@ -43086,18 +43242,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_clickingDetection_mD2730D73D238157
 		//             WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
 		//             WebInfoStats.Stats.type = gotData.type;
 		// 
-		//             //webViewObject.SetActive(false);
-		//             constructMessage();
-		//         }
+		//             if (TapToPlaceObject.mapIsLoaded)
+		//             {
+		//                 constructMessage();
+		//                 webViewObject.SetActive(false);
+		//             }
+		//     }
 		// 
-		//     //}
+		// 
 		// };
 		CanvasWebViewPrefab_tBA29146094CB4C872D4879E97AC68DA099409180 * L_0 = __this->get_webViewPrefab_4();
 		NullCheck(L_0);
 		RuntimeObject* L_1;
 		L_1 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_0, /*hidden argument*/NULL);
 		EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D * L_2 = (EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D *)il2cpp_codegen_object_new(EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D_il2cpp_TypeInfo_var);
-		EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218(L_2, __this, (intptr_t)((intptr_t)JSCom_U3CclickingDetectionU3Eb__5_0_m45F085E29A846ED5C8E96A444D32C83655A0F5D4_RuntimeMethod_var), /*hidden argument*/EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218_RuntimeMethod_var);
+		EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218(L_2, __this, (intptr_t)((intptr_t)JSCom_U3CRecieveMessageFromWebU3Eb__5_0_m58801B5F44449094DBA594F914D2CC44E248DCE4_RuntimeMethod_var), /*hidden argument*/EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218_RuntimeMethod_var);
 		NullCheck(L_1);
 		InterfaceActionInvoker1< EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D * >::Invoke(8 /* System.Void Vuplex.WebView.IWebView::add_MessageEmitted(System.EventHandler`1<Vuplex.WebView.EventArgs`1<System.String>>) */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_1, L_2);
 		// }
@@ -43374,8 +43533,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom__ctor_mCAEF49179DA19BCDD364825A143
 		return;
 	}
 }
-// System.Void JSCom::<clickingDetection>b__5_0(System.Object,Vuplex.WebView.EventArgs`1<System.String>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_U3CclickingDetectionU3Eb__5_0_m45F085E29A846ED5C8E96A444D32C83655A0F5D4 (JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * __this, RuntimeObject * ___sender0, EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * ___eventArgs1, const RuntimeMethod* method)
+// System.Void JSCom::<RecieveMessageFromWeb>b__5_0(System.Object,Vuplex.WebView.EventArgs`1<System.String>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_U3CRecieveMessageFromWebU3Eb__5_0_m58801B5F44449094DBA594F914D2CC44E248DCE4 (JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * __this, RuntimeObject * ___sender0, EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * ___eventArgs1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -43383,6 +43542,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_U3CclickingDetectionU3Eb__5_0_m45F
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral04C01DED91CA34E7D3322BE41D6D40AEAA7571F6);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2F815AA5337CF85337C3C01C65835E1EE9CA7A9E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral903B8C1EF36009AA876A865426B6853A18141FFA);
@@ -43442,7 +43602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_U3CclickingDetectionU3Eb__5_0_m45F
 		L_20 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_19, _stringLiteral903B8C1EF36009AA876A865426B6853A18141FFA, /*hidden argument*/NULL);
 		if (L_20)
 		{
-			goto IL_008e;
+			goto IL_0091;
 		}
 	}
 	{
@@ -43452,11 +43612,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_U3CclickingDetectionU3Eb__5_0_m45F
 		L_23 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_22, _stringLiteralAA594F8C287F75CBADF5C873DAB25D3DAB44867A, /*hidden argument*/NULL);
 		if (!L_23)
 		{
-			goto IL_010c;
+			goto IL_0122;
 		}
 	}
 
-IL_008e:
+IL_0091:
 	{
 		// WebInfoStats.Stats.currentLayerName = gotData.data.layer.name;
 		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_24;
@@ -43501,11 +43661,24 @@ IL_008e:
 		String_t* L_46 = L_45.get_type_0();
 		NullCheck(L_44);
 		L_44->set_type_7(L_46);
+		// if (TapToPlaceObject.mapIsLoaded)
+		IL2CPP_RUNTIME_CLASS_INIT(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849_il2cpp_TypeInfo_var);
+		bool L_47 = ((TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849_StaticFields*)il2cpp_codegen_static_fields_for(TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849_il2cpp_TypeInfo_var))->get_mapIsLoaded_4();
+		if (!L_47)
+		{
+			goto IL_0122;
+		}
+	}
+	{
 		// constructMessage();
 		JSCom_constructMessage_m96F65B025840B7BCCD643DAF98A0C1420052046C(__this, /*hidden argument*/NULL);
+		// webViewObject.SetActive(false);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_48 = __this->get_webViewObject_6();
+		NullCheck(L_48);
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_48, (bool)0, /*hidden argument*/NULL);
 	}
 
-IL_010c:
+IL_0122:
 	{
 		// };
 		return;

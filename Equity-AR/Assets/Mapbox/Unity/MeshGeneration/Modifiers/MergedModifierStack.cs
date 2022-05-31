@@ -147,7 +147,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
                 try
                 {
                     float.TryParse(feature.Properties["risk"].ToString(), out tempValue);
-					Debug.Log(tempValue);
+					//Debug.Log(tempValue);
 
                 }
                 catch (Exception ex)

@@ -17,32 +17,19 @@ public class JSCom : MonoBehaviour
     async void Start()
     {
         await webViewPrefab.WaitUntilInitialized();
-
-        clickingDetection();
+        RecieveMessageFromWeb();
 
     }
 
-    private void clickingDetection()
+    private void RecieveMessageFromWeb()
     {
-        //This line of code is to insert JavaScript code into the web that is running in vulplex in unity
-        //webViewPrefab.WebView.PageLoadScripts.Add("document.documentElement.addEventListener('click', () => vuplex.postMessage('clicked'));");
         //Whenever there is a message get sent to Unity, this is the function to receive and handle it.
         webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
-            //if (eventArgs.Value == "clicked")
-            //{
-
-            //    Debug.Log("The webview was clicked");
-            //    infoText.text += eventArgs.Value;
-            //    Debug.Log(eventArgs.Value);
-            //    //print "clicked"
-            //}
-            //else
-            //{
                 Debug.Log("The webview is getting the data!");
                 infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
-                // print JSON
-
+                
+                //Parsing json
                 //testing for parsing json
                 //string testing = @"{""type"":""layer"",""data"":{""layer"":""heat""}}";
                 //string testing = "{\"type\": \"layer\"}";
@@ -58,11 +45,14 @@ public class JSCom : MonoBehaviour
                     WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
                     WebInfoStats.Stats.type = gotData.type;
 
-                    //webViewObject.SetActive(false);
-                    constructMessage();
-                }
+                    if (TapToPlaceObject.mapIsLoaded)
+                    {
+                        constructMessage();
+                        webViewObject.SetActive(false);
+                    }
+            }
 
-            //}
+                
         };
     }
 

@@ -62,7 +62,6 @@ MonoBehaviour:
   sixtyFivePlus0: {fileID: 21300000, guid: e2c789aff763947d7b45a33ad217e3ec, type: 3}
   sixtyFivePlus1: {fileID: 21300000, guid: 4866b54d11e01433fa10968a20ba6aaf, type: 3}
   _abstractMap: {fileID: 8481666064474462950}
-  MapState: {fileID: 0}
 --- !u!1 &4818977998235323254
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,10 +146,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8858399291076263019}
     m_Modifications:
-    - target: {fileID: 6083926238275887993, guid: 7259d664b0914439ab4b2e113f6782a8,
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
-      propertyPath: m_Name
-      value: MapPlaced
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _tileProvider
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _options.tileMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _options.loadingTexture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _previewOptions.isPreviewEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[1].materialOptions.materials.Array.data[0].Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[1].materialOptions.materials.Array.data[1].Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[6].materialOptions.materials.Array.data[0].Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[6].materialOptions.materials.Array.data[1].Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
@@ -169,28 +213,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
-        type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 1
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6083926238275887988, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
@@ -207,20 +246,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+    - target: {fileID: 6083926238275887993, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
-      propertyPath: _options.loadingTexture
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
-        type: 3}
-      propertyPath: _options.tileMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
-        type: 3}
-      propertyPath: _previewOptions.isPreviewEnabled
-      value: 0
+      propertyPath: m_Name
+      value: MapPlaced
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7259d664b0914439ab4b2e113f6782a8, type: 3}

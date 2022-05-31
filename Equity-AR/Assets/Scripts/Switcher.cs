@@ -77,7 +77,7 @@ public class Switcher : MonoBehaviour
         coolingLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Cooling Stations");
         redliningLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Redlining");
 
-        floodLayer.SetActive(true);
+        tempLayer.SetActive(true);
     }
 
     private void Update()
