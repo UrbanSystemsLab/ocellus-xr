@@ -16942,8 +16942,8 @@ public:
 	String_t* ___currentLayerName_5;
 	// System.String WebInfoStats::currentLayerID
 	String_t* ___currentLayerID_6;
-	// System.String WebInfoStats::sceneType
-	String_t* ___sceneType_7;
+	// System.String WebInfoStats::type
+	String_t* ___type_7;
 	// System.Single WebInfoStats::selectedLat
 	float ___selectedLat_8;
 	// System.Single WebInfoStats::selectedLon
@@ -16968,13 +16968,13 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___currentLayerID_6), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_sceneType_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___sceneType_7)); }
-	inline String_t* get_sceneType_7() const { return ___sceneType_7; }
-	inline String_t** get_address_of_sceneType_7() { return &___sceneType_7; }
-	inline void set_sceneType_7(String_t* value)
+	inline static int32_t get_offset_of_type_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___type_7)); }
+	inline String_t* get_type_7() const { return ___type_7; }
+	inline String_t** get_address_of_type_7() { return &___type_7; }
+	inline void set_type_7(String_t* value)
 	{
-		___sceneType_7 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___sceneType_7), (void*)value);
+		___type_7 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___type_7), (void*)value);
 	}
 
 	inline static int32_t get_offset_of_selectedLat_8() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLat_8)); }

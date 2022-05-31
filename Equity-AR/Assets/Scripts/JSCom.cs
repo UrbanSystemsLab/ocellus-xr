@@ -25,19 +25,19 @@ public class JSCom : MonoBehaviour
     private void clickingDetection()
     {
         //This line of code is to insert JavaScript code into the web that is running in vulplex in unity
-        webViewPrefab.WebView.PageLoadScripts.Add("document.documentElement.addEventListener('click', () => vuplex.postMessage('clicked'));");
+        //webViewPrefab.WebView.PageLoadScripts.Add("document.documentElement.addEventListener('click', () => vuplex.postMessage('clicked'));");
         //Whenever there is a message get sent to Unity, this is the function to receive and handle it.
         webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
-            if (eventArgs.Value == "clicked")
-            {
+            //if (eventArgs.Value == "clicked")
+            //{
 
-                Debug.Log("The webview was clicked");
-                infoText.text += eventArgs.Value;
-                Debug.Log(eventArgs.Value);
-                //print "clicked"
-            }
-            else
-            {
+            //    Debug.Log("The webview was clicked");
+            //    infoText.text += eventArgs.Value;
+            //    Debug.Log(eventArgs.Value);
+            //    //print "clicked"
+            //}
+            //else
+            //{
                 Debug.Log("The webview is getting the data!");
                 infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
@@ -56,15 +56,13 @@ public class JSCom : MonoBehaviour
                     WebInfoStats.Stats.currentLayerID = gotData.data.layer.id;
                     WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
                     WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
-                    WebInfoStats.Stats.sceneType = gotData.type;
+                    WebInfoStats.Stats.type = gotData.type;
 
                     //webViewObject.SetActive(false);
                     constructMessage();
                 }
 
-            }
-            //const data = JSON.parse(message.data);
-            //if (MessageType)
+            //}
         };
     }
 
@@ -98,11 +96,11 @@ public class JSCom : MonoBehaviour
                     messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
                     Debug.Log("post JSON string from Unity to Javascript");
                 }
-                messageClass.message.sentType = "testingType";
+                messageClass.message.sentType = WebInfoStats.Stats.type;
                 messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerID;
                 messageClass.message.messageContent.layer.name = WebInfoStats.Stats.currentLayerName;
 
-                string JSON = JsonUtility.ToJson(messageClass);
+                string JSON = JsonUtility.ToJson(messageClass.message);
                 webViewPrefab.WebView.PostMessage(JSON);
                 Debug.Log("finish sending message from Unity!");
         //    }

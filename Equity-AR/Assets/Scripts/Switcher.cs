@@ -8,6 +8,8 @@ using System;
 public class Switcher : MonoBehaviour
 {
     //This script is in Map Manager inside Map Prefab.
+
+
     [SerializeField] private Button heatmapButton;
     [SerializeField] private Button greenroofButton;
     [SerializeField] private Button floodButton;
@@ -35,12 +37,22 @@ public class Switcher : MonoBehaviour
     private bool incomeisActive;
     private bool openSpaceisActive;
     private bool sixtyFivePlusisActive;
+    private bool PEJAisActive;
+    private bool coolingisActive;
+    private bool redliningisActive;
 
     public AbstractMap _abstractMap;
 
-    public TapToPlaceObject MapState;
-    private VectorSubLayerProperties vectorDataTest;
-    private ArrayList allLayer;
+    private VectorSubLayerProperties NY_buildings;
+    private VectorSubLayerProperties tempLayer;
+    private VectorSubLayerProperties floodLayer;
+    private VectorSubLayerProperties incomeLayer;
+    private VectorSubLayerProperties sixtyFivePlusLayer;
+    private VectorSubLayerProperties greenroofLayer;
+    private VectorSubLayerProperties openSpaceLayer;
+    private VectorSubLayerProperties PEJALayer;
+    private VectorSubLayerProperties coolingLayer;
+    private VectorSubLayerProperties redliningLayer;
 
     private void Start()
     {
@@ -50,23 +62,27 @@ public class Switcher : MonoBehaviour
         incomeisActive = false;
         openSpaceisActive = false;
         sixtyFivePlusisActive = false;
+        PEJAisActive = false;
+        coolingisActive = false;
+        redliningisActive = false;
 
-        
+        NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
+        tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Heat Risk");
+        floodLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Flood Zone");
+        incomeLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Income");
+        sixtyFivePlusLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Elderly Population");
+        greenroofLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Green Roofs");
+        openSpaceLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Open Space");
+        PEJALayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("PEJA");
+        coolingLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Cooling Stations");
+        redliningLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Redlining");
+
+        floodLayer.SetActive(true);
     }
 
     private void Update()
     {
-        //if (MapState.isPlaced && _abstractMap == null)
-        //{
-        //    _abstractMap = FindObjectOfType<AbstractMap>();
-        //}
-        var NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
-        var tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Temperature");
-        var floodLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("FloodPlane");
-        var incomeLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Income");
-        var sixtyFivePlusLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("65+");
-        var greenroofLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("GreenRoof");
-        var openSpaceLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("OpenSpace");
+
         if (WebInfoStats.Stats.currentLayerID != null)
         {
             //adding more layer switcher
@@ -115,8 +131,27 @@ public class Switcher : MonoBehaviour
                 greenroofLayer.SetActive(true);
                 greenroofisActive = true;
             }
-            //Debug.Log( WebInfoStats.Stats.currentLayerName + "is the name of the layer");
-            //Debug.Log(WebInfoStats.Stats.currentLayerID+ "is the id of the layer");
+            else if (WebInfoStats.Stats.currentLayerID == "equity.dsxc6fdt" && !coolingisActive)
+            {
+                deactivateAllLayer();
+
+                coolingLayer.SetActive(true);
+                coolingisActive = true;
+            }
+            else if (WebInfoStats.Stats.currentLayerID == "equity.c7f9efui" && !PEJAisActive)
+            {
+                deactivateAllLayer();
+
+                PEJALayer.SetActive(true);
+                PEJAisActive = true;
+            }
+            else if (WebInfoStats.Stats.currentLayerID == "equity.3t4w37ok" && !redliningisActive)
+            {
+                deactivateAllLayer();
+
+                redliningLayer.SetActive(true);
+                redliningisActive = true;
+            }
         }
         else
         {
@@ -128,14 +163,6 @@ public class Switcher : MonoBehaviour
     
     private void deactivateAllLayer()
     {
-        var NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
-        var tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Temperature");
-        var floodLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("FloodPlane");
-        var incomeLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Income");
-        var sixtyFivePlusLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("65+");
-        var greenroofLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("GreenRoof");
-        var openSpaceLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("OpenSpace");
-
         sixtyFivePlusLayer.SetActive(false);
         NY_buildings.SetActive(false);
         tempLayer.SetActive(false);
@@ -143,6 +170,9 @@ public class Switcher : MonoBehaviour
         incomeLayer.SetActive(false);
         greenroofLayer.SetActive(false);
         openSpaceLayer.SetActive(false);
+        PEJALayer.SetActive(false);
+        coolingLayer.SetActive(false);
+        redliningLayer.SetActive(false);
     }
 
     //Create a button click function to switch between heatmap and normal NY_buildings layers.

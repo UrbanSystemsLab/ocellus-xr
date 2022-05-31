@@ -45,6 +45,4 @@ public class MessageClass : MonoBehaviour
 
     [SerializeField]
     public Message message;
-    public DataContent data;
-    public RecieveJSON recievedJSON;
 }

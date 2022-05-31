@@ -4632,20 +4632,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message:
-    latitude: 0
-    longtitude: 0
-    id: 0
-    sent: 0
-  data:
-    layer: 
-    lat: 0
-    lon: 0
-  recievedJSON:
-    type: 
-    data:
-      layer: 
-      lat: 0
-      lon: 0
+    sentType: 
+    messageContent:
+      layer:
+        id: 
+        name: 
+        description: 
+      location:
+        lat: 0
+        lon: 0
 --- !u!114 &1101674282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4658,7 +4653,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ef6945b04af4764aab112daa8a5076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLayer: 
+  currentLayerName: 
+  currentLayerID: 
+  type: 
   selectedLat: 0
   selectedLon: 0
 --- !u!1 &1189756482

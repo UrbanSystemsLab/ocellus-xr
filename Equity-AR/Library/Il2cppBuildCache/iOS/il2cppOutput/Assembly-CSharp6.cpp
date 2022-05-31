@@ -18675,54 +18675,6 @@ struct Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_marshaled_com
 	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com ___messageContent_1;
 };
 
-// MessageClass/RecieveJSON
-struct  RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D 
-{
-public:
-	// System.String MessageClass/RecieveJSON::type
-	String_t* ___type_0;
-	// MessageClass/DataContent MessageClass/RecieveJSON::data
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  ___data_1;
-
-public:
-	inline static int32_t get_offset_of_type_0() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___type_0)); }
-	inline String_t* get_type_0() const { return ___type_0; }
-	inline String_t** get_address_of_type_0() { return &___type_0; }
-	inline void set_type_0(String_t* value)
-	{
-		___type_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___type_0), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_data_1() { return static_cast<int32_t>(offsetof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D, ___data_1)); }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  get_data_1() const { return ___data_1; }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * get_address_of_data_1() { return &___data_1; }
-	inline void set_data_1(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
-	{
-		___data_1 = value;
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_1))->___layer_0))->___id_0), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_1))->___layer_0))->___name_1), (void*)NULL);
-		#endif
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_1))->___layer_0))->___description_2), (void*)NULL);
-		#endif
-	}
-};
-
-// Native definition for P/Invoke marshalling of MessageClass/RecieveJSON
-struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_pinvoke
-{
-	char* ___type_0;
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke ___data_1;
-};
-// Native definition for COM marshalling of MessageClass/RecieveJSON
-struct RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_marshaled_com
-{
-	Il2CppChar* ___type_0;
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com ___data_1;
-};
-
 // System.Action`1<System.Collections.Generic.List`1<UnityEngine.GameObject>>
 struct  Action_1_tA02B006DFBC28A0C9C8F658D1F002C1BB356F3C4  : public MulticastDelegate_t
 {
@@ -21870,10 +21822,6 @@ struct  MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6  : public MonoBeh
 public:
 	// MessageClass/Message MessageClass::message
 	Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6  ___message_4;
-	// MessageClass/DataContent MessageClass::data
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  ___data_5;
-	// MessageClass/RecieveJSON MessageClass::recievedJSON
-	RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  ___recievedJSON_6;
 
 public:
 	inline static int32_t get_offset_of_message_4() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___message_4)); }
@@ -21891,39 +21839,6 @@ public:
 		#endif
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___message_4))->___messageContent_1))->___layer_0))->___description_2), (void*)NULL);
-		#endif
-	}
-
-	inline static int32_t get_offset_of_data_5() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___data_5)); }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  get_data_5() const { return ___data_5; }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * get_address_of_data_5() { return &___data_5; }
-	inline void set_data_5(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
-	{
-		___data_5 = value;
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___id_0), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___name_1), (void*)NULL);
-		#endif
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___description_2), (void*)NULL);
-		#endif
-	}
-
-	inline static int32_t get_offset_of_recievedJSON_6() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___recievedJSON_6)); }
-	inline RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  get_recievedJSON_6() const { return ___recievedJSON_6; }
-	inline RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D * get_address_of_recievedJSON_6() { return &___recievedJSON_6; }
-	inline void set_recievedJSON_6(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  value)
-	{
-		___recievedJSON_6 = value;
-		Il2CppCodeGenWriteBarrier((void**)&(((&___recievedJSON_6))->___type_0), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___id_0), (void*)NULL);
-		#endif
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___name_1), (void*)NULL);
-		#endif
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___description_2), (void*)NULL);
 		#endif
 	}
 };

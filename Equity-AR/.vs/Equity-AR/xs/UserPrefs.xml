@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/JSCom.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneController.cs">
     <Files>
-      <File FileName="Assets/Scripts/JSCom.cs" Line="108" Column="11" IsPinned="True" />
-      <File FileName="Assets/Scripts/MessageClass.cs" IsPinned="True" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="101" Column="61" IsPinned="True" />
+      <File FileName="Assets/Scripts/MessageClass.cs" Line="26" Column="28" IsPinned="True" />
       <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" IsPinned="True" />
       <File FileName="Assets/Scripts/AskLocation.cs" />
+      <File FileName="Assets/Scripts/WebInfoStats.cs" />
       <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
       <File FileName="Assets/SliderHandler.cs" />
       <File FileName="Assets/VerticalLayoutUI.cs" />
@@ -23,15 +24,14 @@
       <File FileName="Assets/Scripts/toggleWebView.cs" />
       <File FileName="Assets/Scripts/MapManager.cs" />
       <File FileName="Assets/Scripts/Switcher.cs" />
-      <File FileName="Assets/Scripts/WebInfoStats.cs" />
-      <File FileName="Assets/Scripts/SceneController.cs" />
+      <File FileName="Assets/Scripts/SceneController.cs" Line="21" Column="1" />
       <File FileName="Assets/Vuplex/WebView/Scripts/Common/BaseWebViewPrefab.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Equity-AR" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="GoogleARCore" expanded="True">
                 <Node name="SDK" expanded="True">
                   <Node name="Scripts" expanded="True" />
@@ -69,9 +69,7 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="JSCom.cs" selected="True" />
-              </Node>
+              <Node name="Scripts" expanded="True" />
               <Node name="UnityARInterface" expanded="True">
                 <Node name="Scripts" expanded="True" />
               </Node>
@@ -94,7 +92,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3e3f6892-e3a9-4431-acc6-4d855a39faff" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="043e0e71-9bda-45ea-88de-fad0b52729cd" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -191,8 +191,6 @@ struct EventHandler_1_tF55D4062E76C6B29BFD9ABC90E7EB62BF5259E82;
 struct EventHandler_1_tBCC00E70AD4CBDF199E2A6D8FCFA1D8D93F53ABF;
 // System.EventHandler`1<System.Object>
 struct EventHandler_1_tFA1C30E54FA1061D79E711F65F9A174BFBD8CDCB;
-// System.EventHandler`1<Vuplex.WebView.ProgressChangedEventArgs>
-struct EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4;
 // System.EventHandler`1<Vuplex.WebView.ScrolledEventArgs>
 struct EventHandler_1_t24BCEA0C01521095E56C2CF20034BDD19F16C361;
 // System.EventHandler`1<Mapbox.Map.TileErrorEventArgs>
@@ -819,6 +817,8 @@ struct LightEstimateApi_tCFAB7359500281D32364127044D8874BC4D66E75;
 struct LineGeometryOptions_tE1BF919C7A117501C6A118D3621E92166FAB0899;
 // Mapbox.Unity.Location.LocationProviderFactory
 struct LocationProviderFactory_tDBB2AC92DAFA335BCE4510DCF0E6794027831384;
+// UnityEngine.LocationService
+struct LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855;
 // Mapbox.Utils.JsonConverters.LonLatToVector2dConverter
 struct LonLatToVector2dConverter_t95C96C59586DA9EF409275C088F7E974F6CDBDB8;
 // Mapbox.Unity.MeshGeneration.Factories.MapImageFactory
@@ -1127,8 +1127,6 @@ struct U3CInstallApkAndRunIfConnectedU3Ed__11_t2B0B3048C82926BBCB1BD31424D637300
 struct U3CUpdateLoopU3Ed__8_t5EA553940C631A9597C086D0A73C7D13CB9B0043;
 // GoogleARCoreInternal.InstantPreviewManager/Result
 struct Result_tE10F49D9923064F6CBD758A1226973D525D4D0BF;
-// JSCom/<>c__DisplayClass6_0
-struct U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF;
 // JSCom/<>c__DisplayClass8_0
 struct U3CU3Ec__DisplayClass8_0_tB88DBC724EBACC5701025026E41E704EAE58596F;
 // Mapbox.Unity.MeshGeneration.Filters.LayerFilterCombiner/<>c__DisplayClass2_0
@@ -1210,7 +1208,6 @@ IL2CPP_EXTERN_C RuntimeClass* ElevationRequiredOptions_tA481D06BCBE7A079D9A51591
 IL2CPP_EXTERN_C RuntimeClass* Enum_t23B90B40F60E677A8025267341651C94AE079CDA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EventArgs_tBCAACA538A5195B6D6C8DFCC3524A2A4A67FD8BA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EventHandler_1_tBCC00E70AD4CBDF199E2A6D8FCFA1D8D93F53ABF_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
@@ -1282,6 +1279,7 @@ IL2CPP_EXTERN_C RuntimeClass* Math_tA269614262430118C9FC5C4D9EF4F61C812568F0_il2
 IL2CPP_EXTERN_C RuntimeClass* MeshDataArray_tA048246F097C358A9938717DCCA1DBB5D5E0872F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Mesh_t2F5992DBA650D5862B43D3823ACD997132A57DA6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* NativeTouch_t3CD8E0FFB5745BB8C504AFF3F4692D63FA5F8D19_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Node_tDDEC6A7AE4915EAC5D60643AFBD5CF29A45223CD_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_tC1F4EE0DB0B7300255F5FD4AF64FE4C585CF5ADE_il2cpp_TypeInfo_var;
@@ -1331,7 +1329,6 @@ IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass13_0_t7E3F1429B226505D53DFCBD
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass2_0_t22CC49EB0DA93DB3A02E8FFCC1BD92C2D59E67A3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass2_0_tC0422EAE3D176FEDDD8707FEE3E5ACDEDF671B97_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass3_0_t56D199234D7C3D7966669DD448C62C6BC3717000_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass9_0_t0C182EE256443E06928545F10F3AB180FDDC8D67_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t35E4DF4B5FF829D6D625598E65C39D12EA1D4072_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t51238A447FAF214C32B4EAB70FFD39B045951BC8_il2cpp_TypeInfo_var;
@@ -1397,6 +1394,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1345294A90AF9D9CCF72963F2B18C65DABFD8C21
 IL2CPP_EXTERN_C String_t* _stringLiteral141A377D8AB0BC9959C88AA18203CAC121D15850;
 IL2CPP_EXTERN_C String_t* _stringLiteral143E81EFFD2A45A84EE9B4CAB2E2518E5DE34BBB;
 IL2CPP_EXTERN_C String_t* _stringLiteral14E338D17C42E552FA7AF42CDAE40CA1F0E8A04D;
+IL2CPP_EXTERN_C String_t* _stringLiteral14EC4F3242E878ACA2D9F0293EDB8E3490C7C4F5;
 IL2CPP_EXTERN_C String_t* _stringLiteral15503B05E8729C1CA6C074ACA1836DD4A0317BAF;
 IL2CPP_EXTERN_C String_t* _stringLiteral15662E0898110CFF8FF92A40C5368A224E812257;
 IL2CPP_EXTERN_C String_t* _stringLiteral1661F39C11E17713ECC509301038B55652C9BDD8;
@@ -1435,6 +1433,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral25F5EF17AC725A91FE3F3CE895C16ED6DD9B3499
 IL2CPP_EXTERN_C String_t* _stringLiteral2823F651EBEBA28341F48F2EA379145CB37946BC;
 IL2CPP_EXTERN_C String_t* _stringLiteral297053DD260F1A612E64AEB43C06286160BA63A8;
 IL2CPP_EXTERN_C String_t* _stringLiteral29C179775960B3BB65E5669959DD5CEA816D8038;
+IL2CPP_EXTERN_C String_t* _stringLiteral29ECE7569790A67C434C25FFBDF0D2C5A9F03908;
 IL2CPP_EXTERN_C String_t* _stringLiteral2A774073ADBB53EC249CB5E54FC9E2B1C065BF6F;
 IL2CPP_EXTERN_C String_t* _stringLiteral2AD776B6E9A75540E993F500C384D4CEA82BDE93;
 IL2CPP_EXTERN_C String_t* _stringLiteral2B9B6C84CC15492CCB290C4B79418FA6D7DD24C1;
@@ -1449,6 +1448,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral2DF871AB9E167187E905FBCDDD13747E0D02C0B2
 IL2CPP_EXTERN_C String_t* _stringLiteral2F015B40A25EC90C12BC2845EC2B7B3C8B4B7DEE;
 IL2CPP_EXTERN_C String_t* _stringLiteral2F51EC61239D9B579354E9AC8B8806EF140E8C36;
 IL2CPP_EXTERN_C String_t* _stringLiteral2F7234099CCD07F9C0939ACCC13D7F7F6E95DBAD;
+IL2CPP_EXTERN_C String_t* _stringLiteral2F815AA5337CF85337C3C01C65835E1EE9CA7A9E;
 IL2CPP_EXTERN_C String_t* _stringLiteral334DBAE9A6DA59897CF1642C275E694C7A89B83E;
 IL2CPP_EXTERN_C String_t* _stringLiteral3350F7CFF33A20F73C463497562656A628A6256F;
 IL2CPP_EXTERN_C String_t* _stringLiteral350425B4F6800C2AE48DC8724184C767438C8158;
@@ -1466,6 +1466,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral39EB5FB30D042CC5830A5688FBEBA1FF9F1E3FE7
 IL2CPP_EXTERN_C String_t* _stringLiteral3A69E8F6A6A7962C13FE7A38F1661BCCCF0E9515;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B0698B62A26CA2140DAC043A6FBEEED6F314865;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B2C1C62D4D1C2A0C8A9AC42DB00D33C654F9AD0;
+IL2CPP_EXTERN_C String_t* _stringLiteral3C3FC42EDF50AF1F08ED8DE492F97E81B8C503A0;
 IL2CPP_EXTERN_C String_t* _stringLiteral3C41A859C65B3A0285D898D6E67AD38C7C0C704B;
 IL2CPP_EXTERN_C String_t* _stringLiteral4133EC0E83E4C69B6C0094B47BFD1408F0C8D4C5;
 IL2CPP_EXTERN_C String_t* _stringLiteral416E98CC1F9029D100D677E35EE7BE5F67B3B45F;
@@ -1595,7 +1596,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral96681A2B198D42859DB500CC97021274BD2004F1
 IL2CPP_EXTERN_C String_t* _stringLiteral97B00FD8314B9B3431027FDEC04736184544263B;
 IL2CPP_EXTERN_C String_t* _stringLiteral996E5360F80E16B2189CC1E536C91CE68083F694;
 IL2CPP_EXTERN_C String_t* _stringLiteral9A2D9BCAAF959CA24F178BD347009C063013641C;
-IL2CPP_EXTERN_C String_t* _stringLiteral9A5EEEF766EFDFCADD33C859EC6457F4C2AA9F4D;
 IL2CPP_EXTERN_C String_t* _stringLiteral9CE1604D659135925CCC4DD1F526AFFE42E689F1;
 IL2CPP_EXTERN_C String_t* _stringLiteral9D5313975DA8153FF9A5262016CB413A4E84846E;
 IL2CPP_EXTERN_C String_t* _stringLiteral9DFFC3267C5F999585E61B45BA9C8DF18D4B02CA;
@@ -1603,7 +1603,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral9EBB3627BF7342DA0A07FB50F5D893E3928207E3
 IL2CPP_EXTERN_C String_t* _stringLiteral9F1948EB8BB2F6B8E9FB863DEF0C1B4178B4C8EC;
 IL2CPP_EXTERN_C String_t* _stringLiteralA02431CF7C501A5B368C91E41283419D8FA9FB03;
 IL2CPP_EXTERN_C String_t* _stringLiteralA067DCF7E189AC44F89249565422DE596AC9C3D6;
-IL2CPP_EXTERN_C String_t* _stringLiteralA1F6D22822BA71BB12547743F711C1BCBAEC8471;
 IL2CPP_EXTERN_C String_t* _stringLiteralA30EDF4C3D32C20053D4BD5BD873E2AC0CA5DD40;
 IL2CPP_EXTERN_C String_t* _stringLiteralA33A5CAE02B786C2060461DF8C6764B4C05E9423;
 IL2CPP_EXTERN_C String_t* _stringLiteralA36A334192126F9F46985D1ECB5A56CBA9459993;
@@ -1641,7 +1640,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralC1771FD048FA0C5283A6D1085A6C3493F05C1302
 IL2CPP_EXTERN_C String_t* _stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB;
 IL2CPP_EXTERN_C String_t* _stringLiteralC1E0482ABDB4530F47C01C2A81FB06ED6E98A110;
 IL2CPP_EXTERN_C String_t* _stringLiteralC1E32F72345703FF2E031003C5D531B2D49DA99B;
-IL2CPP_EXTERN_C String_t* _stringLiteralC1EBBA863C4CF7E0932C8325E2A21E01AD33310F;
 IL2CPP_EXTERN_C String_t* _stringLiteralC295AE7F3D676E2CAA3DE0DC641EF335E57A2E37;
 IL2CPP_EXTERN_C String_t* _stringLiteralC2B72F3E7F7180C1A826C117F9EF88F15A97E3EB;
 IL2CPP_EXTERN_C String_t* _stringLiteralC2C58C14F80FE15CB7FAD306D8247A286534C6C4;
@@ -1658,7 +1656,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralC650AF132C4F5162F85D515A87DD4B73376B14F6
 IL2CPP_EXTERN_C String_t* _stringLiteralC73E714E40C7061F71E88766D2763CA4CCB0F49D;
 IL2CPP_EXTERN_C String_t* _stringLiteralC74FDC38F5B9428CBA3E8CF45B4AB77D63226A2D;
 IL2CPP_EXTERN_C String_t* _stringLiteralC84D0C8E7AEF586F233453AAC3F4DC1C3596F65F;
-IL2CPP_EXTERN_C String_t* _stringLiteralC884735644934E1E04357F297B98CBC98B189DE7;
 IL2CPP_EXTERN_C String_t* _stringLiteralC938F06E8EA6DECFF1D6D3CE539FE114CE8A8C71;
 IL2CPP_EXTERN_C String_t* _stringLiteralC9CE6F839EE1AA563AFD21D7263F699A81869793;
 IL2CPP_EXTERN_C String_t* _stringLiteralCA0A218A2B9125C8B166ACA04AA47CE7CFE67C4E;
@@ -1801,7 +1798,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mD4A4C70B47EA071FD28
 IL2CPP_EXTERN_C const RuntimeMethod* EventArgs_1__ctor_m37D494EFE9DB3B841969B9B81E03CE71F0C124E2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EventHandler_1_Invoke_m44CE402729459404444831F0B4F13E7765BF63B1_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* EventHandler_1__ctor_m09593C46350C4F70B6FC546D0C219B6AB53942B5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ForwardGeocodeResource_set_Country_mE86F43A514D3520DD13FA4DD225D9F47738BD04D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ForwardGeocodeUserInput_HandleGeocoderResponse_m75A8A32D6CA3927FE600CD20C606BC51B3E5BC56_RuntimeMethod_var;
@@ -1934,7 +1930,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass2_0_U3CTryU3Eb__0_m0AD
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass2_0_U3CTryU3Eb__1_m21A7E4C2D7D1B86838BAD0A0351FCE9CFBB89FAD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass2_0_U3CTryU3Eb__2_m828B42EB9D7CC0732CB01C8BB2633551BC728491_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass3_0_U3CBuildUrlU3Eb__0_mDFB7EBC5B80A07C2899A8B10EE18130CC2AE4157_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass6_0_U3CconstructMessageU3Eb__0_m8BA1E6A6678B988587924F7AAD99BA3E0F5104E3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass9_0_U3CproxyResponseU3Eb__0_m826A498900FA3CEE9059633FF19CFE211A44AA5A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityAction_1__ctor_mBB6FF824ECCAE3C08CD8B015E235BBDC15BCF43F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m35A8B5EA067599AC8BEA652A1DA4085B8E366398_RuntimeMethod_var;
@@ -5337,6 +5332,15 @@ public:
 };
 
 
+// UnityEngine.LocationService
+struct  LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+
 // Mapbox.Unity.MapboxAccess
 struct  MapboxAccess_tF2FEA8EBB4BCA38B15A49FDEFC76FC43BB714948  : public RuntimeObject
 {
@@ -7532,36 +7536,6 @@ public:
 	{
 		___U3CinstallThreadU3E5__4_7 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___U3CinstallThreadU3E5__4_7), (void*)value);
-	}
-};
-
-
-// JSCom/<>c__DisplayClass6_0
-struct  U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF  : public RuntimeObject
-{
-public:
-	// MessageClass JSCom/<>c__DisplayClass6_0::messageClass
-	MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * ___messageClass_0;
-	// JSCom JSCom/<>c__DisplayClass6_0::<>4__this
-	JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * ___U3CU3E4__this_1;
-
-public:
-	inline static int32_t get_offset_of_messageClass_0() { return static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF, ___messageClass_0)); }
-	inline MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * get_messageClass_0() const { return ___messageClass_0; }
-	inline MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 ** get_address_of_messageClass_0() { return &___messageClass_0; }
-	inline void set_messageClass_0(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * value)
-	{
-		___messageClass_0 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___messageClass_0), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_U3CU3E4__this_1() { return static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF, ___U3CU3E4__this_1)); }
-	inline JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * get_U3CU3E4__this_1() const { return ___U3CU3E4__this_1; }
-	inline JSCom_t405735338C026C27A23A4739D94D75A1261A93FC ** get_address_of_U3CU3E4__this_1() { return &___U3CU3E4__this_1; }
-	inline void set_U3CU3E4__this_1(JSCom_t405735338C026C27A23A4739D94D75A1261A93FC * value)
-	{
-		___U3CU3E4__this_1 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___U3CU3E4__this_1), (void*)value);
 	}
 };
 
@@ -18124,15 +18098,6 @@ public:
 };
 
 
-// System.EventHandler`1<Vuplex.WebView.ProgressChangedEventArgs>
-struct  EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-
 // System.Func`1<System.String>
 struct  Func_1_t2F3325DADD1F420568A48646BFC825E9F29472B1  : public MulticastDelegate_t
 {
@@ -21527,10 +21492,6 @@ struct  MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6  : public MonoBeh
 public:
 	// MessageClass/Message MessageClass::message
 	Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6  ___message_4;
-	// MessageClass/DataContent MessageClass::data
-	DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  ___data_5;
-	// MessageClass/RecieveJSON MessageClass::recievedJSON
-	RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  ___recievedJSON_6;
 
 public:
 	inline static int32_t get_offset_of_message_4() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___message_4)); }
@@ -21548,39 +21509,6 @@ public:
 		#endif
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___message_4))->___messageContent_1))->___layer_0))->___description_2), (void*)NULL);
-		#endif
-	}
-
-	inline static int32_t get_offset_of_data_5() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___data_5)); }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  get_data_5() const { return ___data_5; }
-	inline DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * get_address_of_data_5() { return &___data_5; }
-	inline void set_data_5(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  value)
-	{
-		___data_5 = value;
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___id_0), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___name_1), (void*)NULL);
-		#endif
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&(((&___data_5))->___layer_0))->___description_2), (void*)NULL);
-		#endif
-	}
-
-	inline static int32_t get_offset_of_recievedJSON_6() { return static_cast<int32_t>(offsetof(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6, ___recievedJSON_6)); }
-	inline RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  get_recievedJSON_6() const { return ___recievedJSON_6; }
-	inline RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D * get_address_of_recievedJSON_6() { return &___recievedJSON_6; }
-	inline void set_recievedJSON_6(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  value)
-	{
-		___recievedJSON_6 = value;
-		Il2CppCodeGenWriteBarrier((void**)&(((&___recievedJSON_6))->___type_0), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___id_0), (void*)NULL);
-		#endif
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___name_1), (void*)NULL);
-		#endif
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&((&((&(((&___recievedJSON_6))->___data_1))->___layer_0))->___description_2), (void*)NULL);
 		#endif
 	}
 };
@@ -21962,8 +21890,8 @@ public:
 	String_t* ___currentLayerName_5;
 	// System.String WebInfoStats::currentLayerID
 	String_t* ___currentLayerID_6;
-	// System.String WebInfoStats::sceneType
-	String_t* ___sceneType_7;
+	// System.String WebInfoStats::type
+	String_t* ___type_7;
 	// System.Single WebInfoStats::selectedLat
 	float ___selectedLat_8;
 	// System.Single WebInfoStats::selectedLon
@@ -21988,13 +21916,13 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___currentLayerID_6), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_sceneType_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___sceneType_7)); }
-	inline String_t* get_sceneType_7() const { return ___sceneType_7; }
-	inline String_t** get_address_of_sceneType_7() { return &___sceneType_7; }
-	inline void set_sceneType_7(String_t* value)
+	inline static int32_t get_offset_of_type_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___type_7)); }
+	inline String_t* get_type_7() const { return ___type_7; }
+	inline String_t** get_address_of_type_7() { return &___type_7; }
+	inline void set_type_7(String_t* value)
 	{
-		___sceneType_7 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___sceneType_7), (void*)value);
+		___type_7 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___type_7), (void*)value);
 	}
 
 	inline static int32_t get_offset_of_selectedLat_8() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLat_8)); }
@@ -25638,15 +25566,12 @@ inline void EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218 (Even
 {
 	((  void (*) (EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D *, RuntimeObject *, intptr_t, const RuntimeMethod*))EventHandler_1__ctor_m55B15D6747B269625FC10375E6008AA99BD498B4_gshared)(__this, ___object0, ___method1, method);
 }
-// System.Void JSCom/<>c__DisplayClass6_0::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass6_0__ctor_m2D755CF06E354C6279C86355358F3E17395B9DCE (U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF * __this, const RuntimeMethod* method);
 // System.Void MessageClass::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MessageClass__ctor_m12195EDD51BEA37CC7B42442FD009F17FACC8FE4 (MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * __this, const RuntimeMethod* method);
-// System.Void System.EventHandler`1<Vuplex.WebView.ProgressChangedEventArgs>::.ctor(System.Object,System.IntPtr)
-inline void EventHandler_1__ctor_m09593C46350C4F70B6FC546D0C219B6AB53942B5 (EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4 * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method)
-{
-	((  void (*) (EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4 *, RuntimeObject *, intptr_t, const RuntimeMethod*))EventHandler_1__ctor_m55B15D6747B269625FC10375E6008AA99BD498B4_gshared)(__this, ___object0, ___method1, method);
-}
+// UnityEngine.LocationService UnityEngine.Input::get_location()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * Input_get_location_m5D0AE1016E410D3D7411904D0706456DE383F4E5 (const RuntimeMethod* method);
+// System.Boolean UnityEngine.LocationService::get_isEnabledByUser()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LocationService_get_isEnabledByUser_mD26BB9D35EC9DE4B38F7771B5E910B14EFC2B00A (LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * __this, const RuntimeMethod* method);
 // AskLocation AskLocation::get_Instance()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AskLocation_t8FFE8B733E0220724F331DC7A86430ADF575B40E * AskLocation_get_Instance_m1781DC3694576A12CB2E9394755155BD86C5B174_inline (const RuntimeMethod* method);
 // WebInfoStats WebInfoStats::get_Stats()
@@ -43127,33 +43052,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_clickingDetection_mD2730D73D238157
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JSCom_U3CclickingDetectionU3Eb__5_0_m45F085E29A846ED5C8E96A444D32C83655A0F5D4_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m627ED3F7C50096BB8934F778CB980E79483BD2AE_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA1F6D22822BA71BB12547743F711C1BCBAEC8471);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// webViewPrefab.WebView.PageLoadScripts.Add("document.documentElement.addEventListener('click', () => vuplex.postMessage('clicked'));");
-		CanvasWebViewPrefab_tBA29146094CB4C872D4879E97AC68DA099409180 * L_0 = __this->get_webViewPrefab_4();
-		NullCheck(L_0);
-		RuntimeObject* L_1;
-		L_1 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_0, /*hidden argument*/NULL);
-		NullCheck(L_1);
-		List_1_t6C9F81EDBF0F4A31A9B0DA372D2EF34BDA3A1AF3 * L_2;
-		L_2 = InterfaceFuncInvoker0< List_1_t6C9F81EDBF0F4A31A9B0DA372D2EF34BDA3A1AF3 * >::Invoke(20 /* System.Collections.Generic.List`1<System.String> Vuplex.WebView.IWebView::get_PageLoadScripts() */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_1);
-		NullCheck(L_2);
-		List_1_Add_m627ED3F7C50096BB8934F778CB980E79483BD2AE(L_2, _stringLiteralA1F6D22822BA71BB12547743F711C1BCBAEC8471, /*hidden argument*/List_1_Add_m627ED3F7C50096BB8934F778CB980E79483BD2AE_RuntimeMethod_var);
 		// webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
-		//     if (eventArgs.Value == "clicked")
-		//     {
+		//     //if (eventArgs.Value == "clicked")
+		//     //{
 		// 
-		//         Debug.Log("The webview was clicked");
-		//         infoText.text += eventArgs.Value;
-		//         Debug.Log(eventArgs.Value);
-		//         //print "clicked"
-		//     }
-		//     else
-		//     {
-		//         Debug.Log("The webview is doing something else");
+		//     //    Debug.Log("The webview was clicked");
+		//     //    infoText.text += eventArgs.Value;
+		//     //    Debug.Log(eventArgs.Value);
+		//     //    //print "clicked"
+		//     //}
+		//     //else
+		//     //{
+		//         Debug.Log("The webview is getting the data!");
 		//         infoText.text += eventArgs.Value;
 		//         Debug.Log(eventArgs.Value);
 		//         // print JSON
@@ -43171,24 +43084,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_clickingDetection_mD2730D73D238157
 		//             WebInfoStats.Stats.currentLayerID = gotData.data.layer.id;
 		//             WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
 		//             WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
-		//             WebInfoStats.Stats.sceneType = gotData.type;
+		//             WebInfoStats.Stats.type = gotData.type;
 		// 
 		//             //webViewObject.SetActive(false);
 		//             constructMessage();
 		//         }
 		// 
-		//     }
-		//     //const data = JSON.parse(message.data);
-		//     //if (MessageType)
+		//     //}
 		// };
-		CanvasWebViewPrefab_tBA29146094CB4C872D4879E97AC68DA099409180 * L_3 = __this->get_webViewPrefab_4();
-		NullCheck(L_3);
-		RuntimeObject* L_4;
-		L_4 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_3, /*hidden argument*/NULL);
-		EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D * L_5 = (EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D *)il2cpp_codegen_object_new(EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D_il2cpp_TypeInfo_var);
-		EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218(L_5, __this, (intptr_t)((intptr_t)JSCom_U3CclickingDetectionU3Eb__5_0_m45F085E29A846ED5C8E96A444D32C83655A0F5D4_RuntimeMethod_var), /*hidden argument*/EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218_RuntimeMethod_var);
-		NullCheck(L_4);
-		InterfaceActionInvoker1< EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D * >::Invoke(8 /* System.Void Vuplex.WebView.IWebView::add_MessageEmitted(System.EventHandler`1<Vuplex.WebView.EventArgs`1<System.String>>) */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_4, L_5);
+		CanvasWebViewPrefab_tBA29146094CB4C872D4879E97AC68DA099409180 * L_0 = __this->get_webViewPrefab_4();
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_0, /*hidden argument*/NULL);
+		EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D * L_2 = (EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D *)il2cpp_codegen_object_new(EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D_il2cpp_TypeInfo_var);
+		EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218(L_2, __this, (intptr_t)((intptr_t)JSCom_U3CclickingDetectionU3Eb__5_0_m45F085E29A846ED5C8E96A444D32C83655A0F5D4_RuntimeMethod_var), /*hidden argument*/EventHandler_1__ctor_m7A7A64BC562F88A69541E18C3C11D7F5B6159218_RuntimeMethod_var);
+		NullCheck(L_1);
+		InterfaceActionInvoker1< EventHandler_1_t48B659E8A04B374D57AC577E14D0787F0653B63D * >::Invoke(8 /* System.Void Vuplex.WebView.IWebView::add_MessageEmitted(System.EventHandler`1<Vuplex.WebView.EventArgs`1<System.String>>) */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_1, L_2);
 		// }
 		return;
 	}
@@ -43200,70 +43111,143 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_constructMessage_m96F65B025840B7BC
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventHandler_1__ctor_m09593C46350C4F70B6FC546D0C219B6AB53942B5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass6_0_U3CconstructMessageU3Eb__0_m8BA1E6A6678B988587924F7AAD99BA3E0F5104E3_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral14EC4F3242E878ACA2D9F0293EDB8E3490C7C4F5);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1E16BE361FFC506A185E4F4E796722538B7B8440);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral29ECE7569790A67C434C25FFBDF0D2C5A9F03908);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3C3FC42EDF50AF1F08ED8DE492F97E81B8C503A0);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral79C0E16BE3BF1147268A77726CD260B32673AE4D);
 		s_Il2CppMethodInitialized = true;
 	}
-	U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF * V_0 = NULL;
+	MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * V_0 = NULL;
+	String_t* V_1 = NULL;
 	{
-		U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF * L_0 = (U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF *)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF_il2cpp_TypeInfo_var);
-		U3CU3Ec__DisplayClass6_0__ctor_m2D755CF06E354C6279C86355358F3E17395B9DCE(L_0, /*hidden argument*/NULL);
-		V_0 = L_0;
-		U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF * L_1 = V_0;
-		NullCheck(L_1);
-		L_1->set_U3CU3E4__this_1(__this);
 		// Debug.Log("the webview is ready in unity");
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral79C0E16BE3BF1147268A77726CD260B32673AE4D, /*hidden argument*/NULL);
 		// MessageClass messageClass = new MessageClass();
-		U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF * L_2 = V_0;
-		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_3 = (MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 *)il2cpp_codegen_object_new(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6_il2cpp_TypeInfo_var);
-		MessageClass__ctor_m12195EDD51BEA37CC7B42442FD009F17FACC8FE4(L_3, /*hidden argument*/NULL);
-		NullCheck(L_2);
-		L_2->set_messageClass_0(L_3);
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_0 = (MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 *)il2cpp_codegen_object_new(MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6_il2cpp_TypeInfo_var);
+		MessageClass__ctor_m12195EDD51BEA37CC7B42442FD009F17FACC8FE4(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
 		// Debug.Log("constructing JSON string now");
 		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral1E16BE361FFC506A185E4F4E796722538B7B8440, /*hidden argument*/NULL);
-		// webViewPrefab.WebView.LoadProgressChanged += (sender, eventArgs) => {
-		//     // Send a message after the page has loaded.
-		//     if (eventArgs.Type == ProgressChangeType.Finished)
-		//     {
-		//         if (!Input.location.isEnabledByUser)
-		//         {
-		//             //User has not enable location service, give it a default lat&lon :Central Park
-		//             messageClass.message.messageContent.location.lat = 40.7812f;
-		//             messageClass.message.messageContent.location.lon = -73.9665f;
-		//             Debug.Log("post Central Park Default string from Unity to Javascript");
-		//         }
-		//         else
-		//         {
-		//             //User enable location service,get user's location and post message
-		//             messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
-		//             messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
-		//             Debug.Log("post JSON string from Unity to Javascript");
-		//         }
-		//         messageClass.message.sentType = "testingType";
-		//         messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerID;
-		//         messageClass.message.messageContent.layer.name = WebInfoStats.Stats.currentLayerName;
-		// 
-		//         string JSON = JsonUtility.ToJson(messageClass);
-		//         webViewPrefab.WebView.PostMessage(JSON);
-		//     }
-		// };
-		CanvasWebViewPrefab_tBA29146094CB4C872D4879E97AC68DA099409180 * L_4 = __this->get_webViewPrefab_4();
-		NullCheck(L_4);
-		RuntimeObject* L_5;
-		L_5 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_4, /*hidden argument*/NULL);
-		U3CU3Ec__DisplayClass6_0_t6B838A455B542C9AE6DD314F35063AD6DB13A9FF * L_6 = V_0;
-		EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4 * L_7 = (EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4 *)il2cpp_codegen_object_new(EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4_il2cpp_TypeInfo_var);
-		EventHandler_1__ctor_m09593C46350C4F70B6FC546D0C219B6AB53942B5(L_7, L_6, (intptr_t)((intptr_t)U3CU3Ec__DisplayClass6_0_U3CconstructMessageU3Eb__0_m8BA1E6A6678B988587924F7AAD99BA3E0F5104E3_RuntimeMethod_var), /*hidden argument*/EventHandler_1__ctor_m09593C46350C4F70B6FC546D0C219B6AB53942B5_RuntimeMethod_var);
-		NullCheck(L_5);
-		InterfaceActionInvoker1< EventHandler_1_t8EE7F393A98500CC3B3D1B1A1D3A6F98B1368DF4 * >::Invoke(6 /* System.Void Vuplex.WebView.IWebView::add_LoadProgressChanged(System.EventHandler`1<Vuplex.WebView.ProgressChangedEventArgs>) */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_5, L_7);
+		// if (!Input.location.isEnabledByUser)
+		LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * L_1;
+		L_1 = Input_get_location_m5D0AE1016E410D3D7411904D0706456DE383F4E5(/*hidden argument*/NULL);
+		NullCheck(L_1);
+		bool L_2;
+		L_2 = LocationService_get_isEnabledByUser_mD26BB9D35EC9DE4B38F7771B5E910B14EFC2B00A(L_1, /*hidden argument*/NULL);
+		if (L_2)
+		{
+			goto IL_0066;
+		}
+	}
+	{
+		// messageClass.message.messageContent.location.lat = 40.7812f;
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_3 = V_0;
+		NullCheck(L_3);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_4 = L_3->get_address_of_message_4();
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_5 = L_4->get_address_of_messageContent_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3 * L_6 = L_5->get_address_of_location_1();
+		L_6->set_lat_0((40.7812004f));
+		// messageClass.message.messageContent.location.lon = -73.9665f;
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_7 = V_0;
+		NullCheck(L_7);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_8 = L_7->get_address_of_message_4();
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_9 = L_8->get_address_of_messageContent_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3 * L_10 = L_9->get_address_of_location_1();
+		L_10->set_lon_1((-73.9664993f));
+		// Debug.Log("post Central Park Default string from Unity to Javascript");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral29ECE7569790A67C434C25FFBDF0D2C5A9F03908, /*hidden argument*/NULL);
+		// }
+		goto IL_00ae;
+	}
+
+IL_0066:
+	{
+		// messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_11 = V_0;
+		NullCheck(L_11);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_12 = L_11->get_address_of_message_4();
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_13 = L_12->get_address_of_messageContent_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3 * L_14 = L_13->get_address_of_location_1();
+		AskLocation_t8FFE8B733E0220724F331DC7A86430ADF575B40E * L_15;
+		L_15 = AskLocation_get_Instance_m1781DC3694576A12CB2E9394755155BD86C5B174_inline(/*hidden argument*/NULL);
+		NullCheck(L_15);
+		float L_16 = L_15->get_lat_5();
+		L_14->set_lat_0(L_16);
+		// messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_17 = V_0;
+		NullCheck(L_17);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_18 = L_17->get_address_of_message_4();
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_19 = L_18->get_address_of_messageContent_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3 * L_20 = L_19->get_address_of_location_1();
+		AskLocation_t8FFE8B733E0220724F331DC7A86430ADF575B40E * L_21;
+		L_21 = AskLocation_get_Instance_m1781DC3694576A12CB2E9394755155BD86C5B174_inline(/*hidden argument*/NULL);
+		NullCheck(L_21);
+		float L_22 = L_21->get_lon_6();
+		L_20->set_lon_1(L_22);
+		// Debug.Log("post JSON string from Unity to Javascript");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral14EC4F3242E878ACA2D9F0293EDB8E3490C7C4F5, /*hidden argument*/NULL);
+	}
+
+IL_00ae:
+	{
+		// messageClass.message.sentType = WebInfoStats.Stats.type;
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_23 = V_0;
+		NullCheck(L_23);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_24 = L_23->get_address_of_message_4();
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_25;
+		L_25 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		NullCheck(L_25);
+		String_t* L_26 = L_25->get_type_7();
+		L_24->set_sentType_0(L_26);
+		// messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerID;
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_27 = V_0;
+		NullCheck(L_27);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_28 = L_27->get_address_of_message_4();
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_29 = L_28->get_address_of_messageContent_1();
+		Layer_t666C69705E1B02751B3632428A4D26DDFB098742 * L_30 = L_29->get_address_of_layer_0();
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_31;
+		L_31 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		NullCheck(L_31);
+		String_t* L_32 = L_31->get_currentLayerID_6();
+		L_30->set_id_0(L_32);
+		// messageClass.message.messageContent.layer.name = WebInfoStats.Stats.currentLayerName;
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_33 = V_0;
+		NullCheck(L_33);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6 * L_34 = L_33->get_address_of_message_4();
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386 * L_35 = L_34->get_address_of_messageContent_1();
+		Layer_t666C69705E1B02751B3632428A4D26DDFB098742 * L_36 = L_35->get_address_of_layer_0();
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_37;
+		L_37 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		NullCheck(L_37);
+		String_t* L_38 = L_37->get_currentLayerName_5();
+		L_36->set_name_1(L_38);
+		// string JSON = JsonUtility.ToJson(messageClass.message);
+		MessageClass_t12A961D89E65D5D96FBEEA1E641A9BCCA56A60F6 * L_39 = V_0;
+		NullCheck(L_39);
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6  L_40 = L_39->get_message_4();
+		Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6  L_41 = L_40;
+		RuntimeObject * L_42 = Box(Message_t19439B4A062AA075F245584DD02E60B8E84EB6A6_il2cpp_TypeInfo_var, &L_41);
+		String_t* L_43;
+		L_43 = JsonUtility_ToJson_mF4F097C9AEC7699970E3E7E99EF8FF2F44DA1B5C(L_42, /*hidden argument*/NULL);
+		V_1 = L_43;
+		// webViewPrefab.WebView.PostMessage(JSON);
+		CanvasWebViewPrefab_tBA29146094CB4C872D4879E97AC68DA099409180 * L_44 = __this->get_webViewPrefab_4();
+		NullCheck(L_44);
+		RuntimeObject* L_45;
+		L_45 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_44, /*hidden argument*/NULL);
+		String_t* L_46 = V_1;
+		NullCheck(L_45);
+		InterfaceActionInvoker1< String_t* >::Invoke(57 /* System.Void Vuplex.WebView.IWebView::PostMessage(System.String) */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_45, L_46);
+		// Debug.Log("finish sending message from Unity!");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral3C3FC42EDF50AF1F08ED8DE492F97E81B8C503A0, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -43400,172 +43384,128 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JSCom_U3CclickingDetectionU3Eb__5_0_m45F
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral04C01DED91CA34E7D3322BE41D6D40AEAA7571F6);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2F815AA5337CF85337C3C01C65835E1EE9CA7A9E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral903B8C1EF36009AA876A865426B6853A18141FFA);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9A5EEEF766EFDFCADD33C859EC6457F4C2AA9F4D);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAA594F8C287F75CBADF5C873DAB25D3DAB44867A);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC1EBBA863C4CF7E0932C8325E2A21E01AD33310F);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC884735644934E1E04357F297B98CBC98B189DE7);
 		s_Il2CppMethodInitialized = true;
 	}
 	RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		// if (eventArgs.Value == "clicked")
-		EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * L_0 = ___eventArgs1;
-		NullCheck(L_0);
-		String_t* L_1;
-		L_1 = EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_inline(L_0, /*hidden argument*/EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
-		bool L_2;
-		L_2 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_1, _stringLiteralC1EBBA863C4CF7E0932C8325E2A21E01AD33310F, /*hidden argument*/NULL);
-		if (!L_2)
-		{
-			goto IL_0044;
-		}
-	}
-	{
-		// Debug.Log("The webview was clicked");
+		// Debug.Log("The webview is getting the data!");
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral9A5EEEF766EFDFCADD33C859EC6457F4C2AA9F4D, /*hidden argument*/NULL);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral2F815AA5337CF85337C3C01C65835E1EE9CA7A9E, /*hidden argument*/NULL);
 		// infoText.text += eventArgs.Value;
-		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_3 = __this->get_infoText_5();
-		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_4 = L_3;
-		NullCheck(L_4);
+		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_0 = __this->get_infoText_5();
+		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_1 = L_0;
+		NullCheck(L_1);
+		String_t* L_2;
+		L_2 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_1);
+		EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * L_3 = ___eventArgs1;
+		NullCheck(L_3);
+		String_t* L_4;
+		L_4 = EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_inline(L_3, /*hidden argument*/EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
 		String_t* L_5;
-		L_5 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_4);
+		L_5 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_2, L_4, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, L_5);
+		// Debug.Log(eventArgs.Value);
 		EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * L_6 = ___eventArgs1;
 		NullCheck(L_6);
 		String_t* L_7;
 		L_7 = EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_inline(L_6, /*hidden argument*/EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
-		String_t* L_8;
-		L_8 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_5, L_7, /*hidden argument*/NULL);
-		NullCheck(L_4);
-		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_4, L_8);
-		// Debug.Log(eventArgs.Value);
-		EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * L_9 = ___eventArgs1;
-		NullCheck(L_9);
-		String_t* L_10;
-		L_10 = EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_inline(L_9, /*hidden argument*/EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
-		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_10, /*hidden argument*/NULL);
-		// }
-		return;
-	}
-
-IL_0044:
-	{
-		// Debug.Log("The webview is doing something else");
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteralC884735644934E1E04357F297B98CBC98B189DE7, /*hidden argument*/NULL);
-		// infoText.text += eventArgs.Value;
-		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_11 = __this->get_infoText_5();
-		Text_t6A2339DA6C05AE2646FC1A6C8FCC127391BE7FA1 * L_12 = L_11;
-		NullCheck(L_12);
-		String_t* L_13;
-		L_13 = VirtFuncInvoker0< String_t* >::Invoke(74 /* System.String UnityEngine.UI.Text::get_text() */, L_12);
-		EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * L_14 = ___eventArgs1;
-		NullCheck(L_14);
-		String_t* L_15;
-		L_15 = EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_inline(L_14, /*hidden argument*/EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
-		String_t* L_16;
-		L_16 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(L_13, L_15, /*hidden argument*/NULL);
-		NullCheck(L_12);
-		VirtActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_12, L_16);
-		// Debug.Log(eventArgs.Value);
-		EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * L_17 = ___eventArgs1;
-		NullCheck(L_17);
-		String_t* L_18;
-		L_18 = EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_inline(L_17, /*hidden argument*/EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
-		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_18, /*hidden argument*/NULL);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_7, /*hidden argument*/NULL);
 		// MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
 		il2cpp_codegen_initobj((&V_0), sizeof(RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D ));
 		// gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
-		EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * L_19 = ___eventArgs1;
-		NullCheck(L_19);
-		String_t* L_20;
-		L_20 = EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_inline(L_19, /*hidden argument*/EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_21;
-		L_21 = JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42(L_20, /*hidden argument*/JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42_RuntimeMethod_var);
-		V_0 = L_21;
+		EventArgs_1_tD4958047E1B21C704769B2B4E5D72B5B3878EDA8 * L_8 = ___eventArgs1;
+		NullCheck(L_8);
+		String_t* L_9;
+		L_9 = EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_inline(L_8, /*hidden argument*/EventArgs_1_get_Value_m99C3A8662F6B918BBDA8FC3CFE40152B19094630_RuntimeMethod_var);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_10;
+		L_10 = JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42(L_9, /*hidden argument*/JsonUtility_FromJson_TisRecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D_m479A32F2E11A3C6AF4E159D85E2961725E981F42_RuntimeMethod_var);
+		V_0 = L_10;
 		// Debug.Log("JavaScript send layer of : " + gotData.data.layer.name + gotData.type);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_22 = V_0;
-		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_23 = L_22.get_data_1();
-		Layer_t666C69705E1B02751B3632428A4D26DDFB098742  L_24 = L_23.get_layer_0();
-		String_t* L_25 = L_24.get_name_1();
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_26 = V_0;
-		String_t* L_27 = L_26.get_type_0();
-		String_t* L_28;
-		L_28 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(_stringLiteral04C01DED91CA34E7D3322BE41D6D40AEAA7571F6, L_25, L_27, /*hidden argument*/NULL);
-		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_28, /*hidden argument*/NULL);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_11 = V_0;
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_12 = L_11.get_data_1();
+		Layer_t666C69705E1B02751B3632428A4D26DDFB098742  L_13 = L_12.get_layer_0();
+		String_t* L_14 = L_13.get_name_1();
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_15 = V_0;
+		String_t* L_16 = L_15.get_type_0();
+		String_t* L_17;
+		L_17 = String_Concat_m89EAB4C6A96B0E5C3F87300D6BE78D386B9EFC44(_stringLiteral04C01DED91CA34E7D3322BE41D6D40AEAA7571F6, L_14, L_16, /*hidden argument*/NULL);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_17, /*hidden argument*/NULL);
 		// if (gotData.type == "ar" || gotData.type == "live")
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_29 = V_0;
-		String_t* L_30 = L_29.get_type_0();
-		bool L_31;
-		L_31 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_30, _stringLiteral903B8C1EF36009AA876A865426B6853A18141FFA, /*hidden argument*/NULL);
-		if (L_31)
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_18 = V_0;
+		String_t* L_19 = L_18.get_type_0();
+		bool L_20;
+		L_20 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_19, _stringLiteral903B8C1EF36009AA876A865426B6853A18141FFA, /*hidden argument*/NULL);
+		if (L_20)
 		{
-			goto IL_00d2;
+			goto IL_008e;
 		}
 	}
 	{
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_32 = V_0;
-		String_t* L_33 = L_32.get_type_0();
-		bool L_34;
-		L_34 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_33, _stringLiteralAA594F8C287F75CBADF5C873DAB25D3DAB44867A, /*hidden argument*/NULL);
-		if (!L_34)
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_21 = V_0;
+		String_t* L_22 = L_21.get_type_0();
+		bool L_23;
+		L_23 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_22, _stringLiteralAA594F8C287F75CBADF5C873DAB25D3DAB44867A, /*hidden argument*/NULL);
+		if (!L_23)
 		{
-			goto IL_0150;
+			goto IL_010c;
 		}
 	}
 
-IL_00d2:
+IL_008e:
 	{
 		// WebInfoStats.Stats.currentLayerName = gotData.data.layer.name;
-		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_35;
-		L_35 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_36 = V_0;
-		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_37 = L_36.get_data_1();
-		Layer_t666C69705E1B02751B3632428A4D26DDFB098742  L_38 = L_37.get_layer_0();
-		String_t* L_39 = L_38.get_name_1();
-		NullCheck(L_35);
-		L_35->set_currentLayerName_5(L_39);
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_24;
+		L_24 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_25 = V_0;
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_26 = L_25.get_data_1();
+		Layer_t666C69705E1B02751B3632428A4D26DDFB098742  L_27 = L_26.get_layer_0();
+		String_t* L_28 = L_27.get_name_1();
+		NullCheck(L_24);
+		L_24->set_currentLayerName_5(L_28);
 		// WebInfoStats.Stats.currentLayerID = gotData.data.layer.id;
-		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_40;
-		L_40 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_41 = V_0;
-		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_42 = L_41.get_data_1();
-		Layer_t666C69705E1B02751B3632428A4D26DDFB098742  L_43 = L_42.get_layer_0();
-		String_t* L_44 = L_43.get_id_0();
-		NullCheck(L_40);
-		L_40->set_currentLayerID_6(L_44);
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_29;
+		L_29 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_30 = V_0;
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_31 = L_30.get_data_1();
+		Layer_t666C69705E1B02751B3632428A4D26DDFB098742  L_32 = L_31.get_layer_0();
+		String_t* L_33 = L_32.get_id_0();
+		NullCheck(L_29);
+		L_29->set_currentLayerID_6(L_33);
 		// WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
-		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_45;
-		L_45 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_46 = V_0;
-		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_47 = L_46.get_data_1();
-		Location_t9728E739BA516BD3B72435362794CB8658F524C3  L_48 = L_47.get_location_1();
-		float L_49 = L_48.get_lat_0();
-		NullCheck(L_45);
-		L_45->set_selectedLat_8(L_49);
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_34;
+		L_34 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_35 = V_0;
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_36 = L_35.get_data_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3  L_37 = L_36.get_location_1();
+		float L_38 = L_37.get_lat_0();
+		NullCheck(L_34);
+		L_34->set_selectedLat_8(L_38);
 		// WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
-		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_50;
-		L_50 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_51 = V_0;
-		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_52 = L_51.get_data_1();
-		Location_t9728E739BA516BD3B72435362794CB8658F524C3  L_53 = L_52.get_location_1();
-		float L_54 = L_53.get_lon_1();
-		NullCheck(L_50);
-		L_50->set_selectedLon_9(L_54);
-		// WebInfoStats.Stats.sceneType = gotData.type;
-		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_55;
-		L_55 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
-		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_56 = V_0;
-		String_t* L_57 = L_56.get_type_0();
-		NullCheck(L_55);
-		L_55->set_sceneType_7(L_57);
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_39;
+		L_39 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_40 = V_0;
+		DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386  L_41 = L_40.get_data_1();
+		Location_t9728E739BA516BD3B72435362794CB8658F524C3  L_42 = L_41.get_location_1();
+		float L_43 = L_42.get_lon_1();
+		NullCheck(L_39);
+		L_39->set_selectedLon_9(L_43);
+		// WebInfoStats.Stats.type = gotData.type;
+		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_44;
+		L_44 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
+		RecieveJSON_t97DBC6F4547780CC3BCDB594AF98BF13F0662C4D  L_45 = V_0;
+		String_t* L_46 = L_45.get_type_0();
+		NullCheck(L_44);
+		L_44->set_type_7(L_46);
 		// constructMessage();
 		JSCom_constructMessage_m96F65B025840B7BCCD643DAF98A0C1420052046C(__this, /*hidden argument*/NULL);
 	}
 
-IL_0150:
+IL_010c:
 	{
 		// };
 		return;

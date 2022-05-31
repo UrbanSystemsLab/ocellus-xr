@@ -20946,8 +20946,8 @@ public:
 	String_t* ___currentLayerName_5;
 	// System.String WebInfoStats::currentLayerID
 	String_t* ___currentLayerID_6;
-	// System.String WebInfoStats::sceneType
-	String_t* ___sceneType_7;
+	// System.String WebInfoStats::type
+	String_t* ___type_7;
 	// System.Single WebInfoStats::selectedLat
 	float ___selectedLat_8;
 	// System.Single WebInfoStats::selectedLon
@@ -20972,13 +20972,13 @@ public:
 		Il2CppCodeGenWriteBarrier((void**)(&___currentLayerID_6), (void*)value);
 	}
 
-	inline static int32_t get_offset_of_sceneType_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___sceneType_7)); }
-	inline String_t* get_sceneType_7() const { return ___sceneType_7; }
-	inline String_t** get_address_of_sceneType_7() { return &___sceneType_7; }
-	inline void set_sceneType_7(String_t* value)
+	inline static int32_t get_offset_of_type_7() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___type_7)); }
+	inline String_t* get_type_7() const { return ___type_7; }
+	inline String_t** get_address_of_type_7() { return &___type_7; }
+	inline void set_type_7(String_t* value)
 	{
-		___sceneType_7 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___sceneType_7), (void*)value);
+		___type_7 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___type_7), (void*)value);
 	}
 
 	inline static int32_t get_offset_of_selectedLat_8() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___selectedLat_8)); }
@@ -46104,11 +46104,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneController_Update_m4E482D951B939F40
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if(WebInfoStats.Stats.sceneType == "live")
+		// if(WebInfoStats.Stats.type == "live")
 		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_0;
 		L_0 = WebInfoStats_get_Stats_m97A6647C9E9F0AF58649A6592D4B75A19B0AA704_inline(/*hidden argument*/NULL);
 		NullCheck(L_0);
-		String_t* L_1 = L_0->get_sceneType_7();
+		String_t* L_1 = L_0->get_type_7();
 		bool L_2;
 		L_2 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_1, _stringLiteralAA594F8C287F75CBADF5C873DAB25D3DAB44867A, /*hidden argument*/NULL);
 		if (!L_2)
