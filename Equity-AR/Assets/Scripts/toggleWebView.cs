@@ -43,6 +43,9 @@ public class toggleWebView : MonoBehaviour
             //caliPage.SetActive(true);
             //mainPage.SetActive(true);
             fullBnt.SetActive(true);
+            mainPage.SetActive(true);
+
+
         }
     }
 

@@ -37,7 +37,6 @@ ScriptsOnlyBuild:
     - Mapbox.Unity.Map.AbstractMap
     - Mapbox.Unity.Map.InitializeMapWithLocationProvider
     - Mapbox.Unity.Map.MapVisualizer
-    - Mapbox.Unity.Map.TileProviders.RangeTileProvider
     - Mapbox.Unity.MeshGeneration.Data.AtlasInfo
     - Mapbox.Unity.MeshGeneration.Modifiers.ModifierStack
     - Mapbox.Unity.MeshGeneration.Modifiers.PrefabModifier
@@ -96,6 +95,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
+    Unity.XR.ARCore.Editor.dll:
+    - UnityEditor.XR.ARCore.ARCoreSettings
     Unity.XR.ARFoundation.dll:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
@@ -272,8 +273,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5388}
     - Class: 114
       Script: {instanceID: 5448}
-    - Class: 114
-      Script: {instanceID: 5472}
     - Class: 114
       Script: {instanceID: 5566}
     - Class: 114

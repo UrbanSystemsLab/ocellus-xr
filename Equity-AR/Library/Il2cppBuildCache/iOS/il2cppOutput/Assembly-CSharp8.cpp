@@ -25457,8 +25457,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Switcher_Start_m98EF100477CCB1706DB4FA8B
 		VectorSubLayerProperties_tAA9AAFFC6F69EAA1FDE4219D099527203B2D8204 * L_29;
 		L_29 = InterfaceFuncInvoker1< VectorSubLayerProperties_tAA9AAFFC6F69EAA1FDE4219D099527203B2D8204 *, String_t* >::Invoke(18 /* Mapbox.Unity.Map.VectorSubLayerProperties Mapbox.Unity.Map.IVectorDataLayer::FindFeatureSubLayerWithName(System.String) */, IVectorDataLayer_tC749EA9FD67A17499D1A90CBFEF5C1F1133C2E52_il2cpp_TypeInfo_var, L_28, _stringLiteral382702390CE16236EFC179404543CD915677332C);
 		__this->set_redliningLayer_41(L_29);
-		// floodLayer.SetActive(true);
-		VectorSubLayerProperties_tAA9AAFFC6F69EAA1FDE4219D099527203B2D8204 * L_30 = __this->get_floodLayer_34();
+		// tempLayer.SetActive(true);
+		VectorSubLayerProperties_tAA9AAFFC6F69EAA1FDE4219D099527203B2D8204 * L_30 = __this->get_tempLayer_33();
 		NullCheck(L_30);
 		VirtActionInvoker1< bool >::Invoke(16 /* System.Void Mapbox.Unity.Map.VectorSubLayerProperties::SetActive(System.Boolean) */, L_30, (bool)1);
 		// }
@@ -27873,31 +27873,69 @@ IL_004f:
 // System.Void TapToPlaceObject::PlaceObject()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TapToPlaceObject_PlaceObject_m50F8580930404A9664E42388494F2D77FEF9A7B7 (TapToPlaceObject_tD48ADBE0FD3C490938EEAA7F81D63489DE232849 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if(map!= null)
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = __this->get_map_17();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mE1F187520BD83FB7D86A6D850710C4D42B864E90(L_0, (Object_tF2F3778131EFF286AF62B7B013A170F95A91571A *)NULL, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0046;
+		}
+	}
 	{
 		// map.transform.position = placementPose.position;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = __this->get_map_17();
-		NullCheck(L_0);
-		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_1;
-		L_1 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_0, /*hidden argument*/NULL);
-		Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A * L_2 = __this->get_address_of_placementPose_14();
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_3 = L_2->get_position_0();
-		NullCheck(L_1);
-		Transform_set_position_mB169E52D57EEAC1E3F22C5395968714E4F00AC91(L_1, L_3, /*hidden argument*/NULL);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_2 = __this->get_map_17();
+		NullCheck(L_2);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_3;
+		L_3 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_2, /*hidden argument*/NULL);
+		Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A * L_4 = __this->get_address_of_placementPose_14();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_5 = L_4->get_position_0();
+		NullCheck(L_3);
+		Transform_set_position_mB169E52D57EEAC1E3F22C5395968714E4F00AC91(L_3, L_5, /*hidden argument*/NULL);
 		// map.transform.rotation = placementPose.rotation;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_4 = __this->get_map_17();
-		NullCheck(L_4);
-		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_5;
-		L_5 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_4, /*hidden argument*/NULL);
-		Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A * L_6 = __this->get_address_of_placementPose_14();
-		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_7 = L_6->get_rotation_1();
-		NullCheck(L_5);
-		Transform_set_rotation_m1B5F3D4CE984AB31254615C9C71B0E54978583B4(L_5, L_7, /*hidden argument*/NULL);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_6 = __this->get_map_17();
+		NullCheck(L_6);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_7;
+		L_7 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_6, /*hidden argument*/NULL);
+		Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A * L_8 = __this->get_address_of_placementPose_14();
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_9 = L_8->get_rotation_1();
+		NullCheck(L_7);
+		Transform_set_rotation_m1B5F3D4CE984AB31254615C9C71B0E54978583B4(L_7, L_9, /*hidden argument*/NULL);
+		// }
+		goto IL_006d;
+	}
+
+IL_0046:
+	{
+		// map = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_10 = __this->get_objectToPlace_5();
+		Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A * L_11 = __this->get_address_of_placementPose_14();
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_12 = L_11->get_position_0();
+		Pose_t9F30358E65733E60A1DC8682FDB7104F40C9434A * L_13 = __this->get_address_of_placementPose_14();
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_14 = L_13->get_rotation_1();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_15;
+		L_15 = Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B(L_10, L_12, L_14, /*hidden argument*/Object_Instantiate_TisGameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319_m81B599A0051F8F4543E5C73A11585E96E940943B_RuntimeMethod_var);
+		__this->set_map_17(L_15);
+	}
+
+IL_006d:
+	{
 		// isPlaced = true;
 		__this->set_isPlaced_7((bool)1);
 		// TapToPlaceMap.SetActive(false);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_8 = __this->get_TapToPlaceMap_9();
-		NullCheck(L_8);
-		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_8, (bool)0, /*hidden argument*/NULL);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_16 = __this->get_TapToPlaceMap_9();
+		NullCheck(L_16);
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_16, (bool)0, /*hidden argument*/NULL);
 		// isCalibrating = true;
 		__this->set_isCalibrating_16((bool)1);
 		// }

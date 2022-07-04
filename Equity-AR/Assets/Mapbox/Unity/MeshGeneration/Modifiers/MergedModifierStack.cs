@@ -142,12 +142,12 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
             {
 				
 
-                if (tempValue <= 1)
+                if (tempValue < 0)
                     return null;
                 try
                 {
                     float.TryParse(feature.Properties["risk"].ToString(), out tempValue);
-					//Debug.Log(tempValue);
+					Debug.Log(tempValue);
 
                 }
                 catch (Exception ex)
@@ -160,7 +160,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
             if (float.TryParse(feature.Properties["height"].ToString(), out incomeValue))
             {
-                if (incomeValue <= 1)
+                if (incomeValue < 0)
                     return null;
                 try
                 {
@@ -177,7 +177,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
             if (float.TryParse(feature.Properties["height"].ToString(), out sixtyFiveValue))
             {
-                if (sixtyFiveValue <= 1)
+                if (sixtyFiveValue < 0)
                     return null;
 
                 try

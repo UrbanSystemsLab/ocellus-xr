@@ -71,9 +71,16 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void PlaceObject()
     {
-        //map = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
-        map.transform.position = placementPose.position;
-        map.transform.rotation = placementPose.rotation;
+        if(map!= null)
+        {
+            map.transform.position = placementPose.position;
+            map.transform.rotation = placementPose.rotation;
+        }
+        else
+        {
+            map = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
+        }
+
         isPlaced = true;
         //calibrationPage.SetActive(true);
         TapToPlaceMap.SetActive(false);

@@ -47323,7 +47323,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void toggleWebView_Update_m7D28768E89044037CB
 		String_t* L_1 = L_0->get_type_7();
 		if (!L_1)
 		{
-			goto IL_001e;
+			goto IL_002a;
 		}
 	}
 	{
@@ -47333,9 +47333,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void toggleWebView_Update_m7D28768E89044037CB
 		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_2 = __this->get_fullBnt_9();
 		NullCheck(L_2);
 		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_2, (bool)1, /*hidden argument*/NULL);
+		// mainPage.SetActive(true);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_3 = __this->get_mainPage_8();
+		NullCheck(L_3);
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_3, (bool)1, /*hidden argument*/NULL);
 	}
 
-IL_001e:
+IL_002a:
 	{
 		// }
 		return;

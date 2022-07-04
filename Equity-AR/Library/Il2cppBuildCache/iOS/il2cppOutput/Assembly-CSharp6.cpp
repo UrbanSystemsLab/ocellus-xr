@@ -29248,9 +29248,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072
 		}
 	}
 	{
-		// if (tempValue <= 1)
+		// if (tempValue < 0)
 		float L_11 = V_0;
-		if ((!(((float)L_11) <= ((float)(1.0f)))))
+		if ((!(((float)L_11) < ((float)(0.0f)))))
 		{
 			goto IL_0036;
 		}
@@ -29338,9 +29338,9 @@ IL_0081:
 		}
 	}
 	{
-		// if (incomeValue <= 1)
+		// if (incomeValue < 0)
 		float L_28 = V_1;
-		if ((!(((float)L_28) <= ((float)(1.0f)))))
+		if ((!(((float)L_28) < ((float)(0.0f)))))
 		{
 			goto IL_00a9;
 		}
@@ -29422,9 +29422,9 @@ IL_00e9:
 		}
 	}
 	{
-		// if (sixtyFiveValue <= 1)
+		// if (sixtyFiveValue < 0)
 		float L_42 = V_2;
-		if ((!(((float)L_42) <= ((float)(1.0f)))))
+		if ((!(((float)L_42) < ((float)(0.0f)))))
 		{
 			goto IL_0111;
 		}

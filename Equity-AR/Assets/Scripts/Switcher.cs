@@ -76,7 +76,6 @@ public class Switcher : MonoBehaviour
         PEJALayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("PEJA");
         coolingLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Cooling Stations");
         redliningLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Redlining");
-
         tempLayer.SetActive(true);
     }
 
