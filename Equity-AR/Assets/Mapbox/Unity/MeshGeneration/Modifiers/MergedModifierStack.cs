@@ -123,7 +123,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			float tempValue;
 			float incomeValue;
 			float sixtyFiveValue;
-			string redlining = "";
+			//string redlining = "";
 
 			//Debug.Log(feature.Properties["area_description_data"].ToString());
 
@@ -140,14 +140,14 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
             if (float.TryParse(feature.Properties["height"].ToString(), out tempValue))
             {
-				
 
-                if (tempValue < 0)
+				Debug.Log(tempValue);
+				if (tempValue < 0)
                     return null;
                 try
                 {
                     float.TryParse(feature.Properties["risk"].ToString(), out tempValue);
-					Debug.Log(tempValue);
+					
 
                 }
                 catch (Exception ex)

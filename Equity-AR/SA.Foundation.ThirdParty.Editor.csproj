@@ -701,11 +701,11 @@
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>

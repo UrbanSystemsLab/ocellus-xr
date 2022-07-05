@@ -93,28 +93,8 @@ public class JSCom : MonoBehaviour
                 string JSON = JsonUtility.ToJson(messageClass.message);
                 webViewPrefab.WebView.PostMessage(JSON);
                 Debug.Log("finish sending message from Unity!");
-        //    }
-        //};
+
     }
-
-
-    //public void ReceiveJsonButton()
-    //{
-    //    webViewPrefab.Initialized += (sender, e) =>
-    //    {
-    //        //Receiving Json function
-    //        webViewPrefab.WebView.MessageEmitted += WebView_MessageEmitted;
-    //    };
-    //    Debug.Log("receive Button is working");
-    //}
-
-    ////Receive Json
-    //void WebView_MessageEmitted(object sender, EventArgs<string> eventArgs)
-    //{
-    //    var json = eventArgs.Value;
-    //    Debug.Log("JSON received: " + json);
-    //    infoText.text += json;
-    //}
 
     //Send Json
     void WebView_LoadProgressChanged(object sender, ProgressChangedEventArgs eventArgs)
@@ -131,21 +111,6 @@ public class JSCom : MonoBehaviour
 
             webViewPrefab.WebView.PostMessage(JSON);
         }
-    }
-
-
-    async Task ExcuteJavaScript(string myJS)
-    {
-        infoText.text += "Async function is running\n";
-        await webViewPrefab.WaitUntilInitialized();
-        webViewPrefab.WebView.LoadProgressChanged += async (sender, eventArgs) => {
-            if (eventArgs.Type == ProgressChangeType.Finished)
-            {
-                var headerText = await webViewPrefab.WebView.ExecuteJavaScript(myJS);
-                infoText.text += headerText;
-                Debug.Log("my text is " + headerText);
-            }
-        };
     }
 
 

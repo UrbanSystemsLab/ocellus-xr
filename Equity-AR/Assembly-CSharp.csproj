@@ -251,7 +251,7 @@
      <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CanvasWebViewDemo.cs" />
      <Compile Include="Assets\Mapbox\Examples\5_Playground\Scripts\ForwardGeocoderExample.cs" />
      <Compile Include="Assets\Mapbox\Unity\Location\UnityLocationWrappers\MapboxLocationServiceUnityWrapper.cs" />
-     <Compile Include="Assets\MinimizeScreenFeature.cs" />
+     <Compile Include="Assets\Scripts\MinimizeScreenFeature.cs" />
      <Compile Include="Assets\MapboxAR\Scripts\Camera\TouchCamera.cs" />
      <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Data\KdTree\DistanceFunctions.cs" />
      <Compile Include="Assets\Mapbox\Unity\SourceLayers\ImageryLayer.cs" />
@@ -533,7 +533,7 @@
      <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\GameObjectModifiers\ColliderModifier.cs" />
      <Compile Include="Assets\Vuplex\WebView\Demos\Scripts\CameraRotator.cs" />
      <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Directions\Response\DirectionsResponse.cs" />
-     <Compile Include="Assets\VerticalFullScreenUI.cs" />
+     <Compile Include="Assets\Scripts\VerticalFullScreenUI.cs" />
      <Compile Include="Assets\GoogleARCore\SDK\Scripts\TrackableHit.cs" />
      <Compile Include="Assets\Vuplex\WebView\Scripts\Common\WebViewOptions.cs" />
      <Compile Include="Assets\Mapbox\Unity\SourceLayers\MapboxDefaultElevation.cs" />
@@ -716,7 +716,7 @@
      <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Platform\IAsyncRequestFactory.cs" />
      <Compile Include="Assets\GoogleARCore\SDK\Scripts\Api\LightEstimateApi.cs" />
      <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Utils\JsonConverters\PolylineToGeoCoordinateListConverter.cs" />
-     <Compile Include="Assets\SliderHandler.cs" />
+     <Compile Include="Assets\Scripts\SliderHandler.cs" />
      <Compile Include="Assets\Vuplex\WebView\Scripts\Common\Internal\WebViewLogger.cs" />
      <Compile Include="Assets\Mapbox\Unity\Location\Logging\LocationLogWriter.cs" />
      <Compile Include="Assets\Mapbox\Unity\SourceLayers\ISubLayerFantasyStyle.cs" />
@@ -726,7 +726,7 @@
      <Compile Include="Assets\Vuplex\WebView\Scripts\Common\AuthRequestedEventArgs.cs" />
      <Compile Include="Assets\GoogleARCore\SDK\Scripts\AndroidPermissionsManager.cs" />
      <Compile Include="Assets\Mapbox\Core\mapbox-sdk-cs\Geocoding\GeocodeResource.cs" />
-     <Compile Include="Assets\VerticalLayoutUI.cs" />
+     <Compile Include="Assets\Scripts\VerticalLayoutUI.cs" />
      <Compile Include="Assets\Vuplex\WebView\Scripts\Common\Internal\StringWithIdBridgeMessage.cs" />
      <Compile Include="Assets\Mapbox\Examples\Scripts\ForwardGeocodeUserInput.cs" />
      <Compile Include="Assets\Mapbox\Unity\MeshGeneration\Modifiers\MeshModifiers\ReplaceFeatureModifier.cs" />
