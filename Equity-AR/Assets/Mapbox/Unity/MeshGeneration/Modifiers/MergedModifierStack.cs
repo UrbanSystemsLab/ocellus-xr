@@ -120,82 +120,47 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 		{
 			base.Execute(tile, feature, meshData, parent, type);
 
-			float tempValue;
-			float incomeValue;
-			float sixtyFiveValue;
-			//string redlining = "";
+			float tempValue =0;
+			float incomeValue=0;
+			float sixtyFiveValue=0;
+            //string redlining = "";
 
-			//Debug.Log(feature.Properties["area_description_data"].ToString());
+            //Debug.Log(feature.Properties["area_description_data"].ToString());
 
-			//try
-			//{
-			//	redlining = feature.Properties["holc_grade"].ToString();
-			//	Debug.Log("Data Get: " + redlining);
-			//}
-			//catch (Exception ex)
-			//{
-			//	redlining = "";
-			//	Debug.Log("Redlining layer error:" + ex.Message);
-			//}
+            //try
+            //{
+            //	redlining = feature.Properties["holc_grade"].ToString();
+            //	Debug.Log("Data Get: " + redlining);
+            //}
+            //catch (Exception ex)
+            //{
+            //	redlining = "";
+            //	Debug.Log("Redlining layer error:" + ex.Message);
+            //}
 
-            if (float.TryParse(feature.Properties["height"].ToString(), out tempValue))
+
+			//check what the incoming data belongs to
+            if (feature.Properties.ContainsKey("risk"))
             {
-
+				string temp = feature.Properties["risk"].ToString();
+				tempValue = float.Parse(temp);
 				Debug.Log(tempValue);
-				if (tempValue < 0)
-                    return null;
-                try
-                {
-                    float.TryParse(feature.Properties["risk"].ToString(), out tempValue);
-					
-
-                }
-                catch (Exception ex)
-                {
-                    tempValue = 0;
-                    Debug.Log("Temperature layer error:" + ex.Message);
-                }
-
-            }
-
-            if (float.TryParse(feature.Properties["height"].ToString(), out incomeValue))
+			}
+            else if(feature.Properties.ContainsKey("income"))
             {
-                if (incomeValue < 0)
-                    return null;
-                try
-                {
-                    float.TryParse(feature.Properties["income"].ToString(), out incomeValue);
-					//Debug.Log(incomeValue);
-
-                }
-                catch (Exception ex)
-                {
-                    incomeValue = 0;
-                    Debug.Log("Income layer error:" + ex.Message);
-                }
-            }
-
-            if (float.TryParse(feature.Properties["height"].ToString(), out sixtyFiveValue))
+				string income = feature.Properties["income"].ToString();
+				incomeValue = float.Parse(income);
+				Debug.Log(incomeValue);
+			}
+			else if (feature.Properties.ContainsKey("P_Abv65_e_"))
             {
-                if (sixtyFiveValue < 0)
-                    return null;
-
-                try
-                {
-                    float.TryParse(feature.Properties["P_Abv65_e_"].ToString(), out sixtyFiveValue);
-                }
-                catch (Exception ex)
-                {
-                    sixtyFiveValue = 0;
-                    Debug.Log("65+ layer error:" + ex.Message);
-                }
-            }
+				string sixtyFive = feature.Properties["P_Abv65_e_"].ToString();
+				sixtyFiveValue = float.Parse(sixtyFive);
+				Debug.Log(sixtyFiveValue);
+			}
 
 
-
-
-
-            if (!_cacheVertexCount.ContainsKey(tile))
+			if (!_cacheVertexCount.ContainsKey(tile))
 			{
 				_cacheVertexCount.Add(tile, 0);
 				_cached.Add(tile, _meshDataPool.GetObject());
@@ -212,7 +177,6 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				}
 			}
 
-			//Debug.Log("Not Stopped");
 
 			//add colors to buildings
 			Color baseColor = new Color(1f,1f,1f);

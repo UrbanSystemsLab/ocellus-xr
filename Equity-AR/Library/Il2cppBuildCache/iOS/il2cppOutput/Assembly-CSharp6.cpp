@@ -29248,11 +29248,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072
 		}
 	}
 	{
-		// if (tempValue < 0)
+		// Debug.Log(tempValue);
 		float L_11 = V_0;
-		if ((!(((float)L_11) < ((float)(0.0f)))))
+		float L_12 = L_11;
+		RuntimeObject * L_13 = Box(Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E_il2cpp_TypeInfo_var, &L_12);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_13, /*hidden argument*/NULL);
+		// if (tempValue < 0)
+		float L_14 = V_0;
+		if ((!(((float)L_14) < ((float)(0.0f)))))
 		{
-			goto IL_0036;
+			goto IL_0041;
 		}
 	}
 	{
@@ -29260,31 +29266,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_tC000A2E1A7CF1E10FD7BA08863287C072
 		return (GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 *)NULL;
 	}
 
-IL_0036:
+IL_0041:
 	{
 	}
 
-IL_0037:
+IL_0042:
 	try
 	{ // begin try (depth: 1)
 		// float.TryParse(feature.Properties["risk"].ToString(), out tempValue);
-		VectorFeatureUnity_t1CB82667D30F0439AFAD81AEC804B2907A76DBCF * L_12 = ___feature1;
-		NullCheck(L_12);
-		Dictionary_2_t692011309BA94F599C6042A381FC9F8B3CB08399 * L_13 = L_12->get_Properties_1();
-		NullCheck(L_13);
-		RuntimeObject * L_14;
-		L_14 = Dictionary_2_get_Item_m88AA4580D695AEA212B0DF17D8B55C98CF3B624D(L_13, _stringLiteral31C23BCEBF93A862D7408F820DA6EBA3EFBE8195, /*hidden argument*/Dictionary_2_get_Item_m88AA4580D695AEA212B0DF17D8B55C98CF3B624D_RuntimeMethod_var);
-		NullCheck(L_14);
-		String_t* L_15;
-		L_15 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_14);
-		bool L_16;
-		L_16 = Single_TryParse_mC2E0086EAB164A81380FD03BDE671C574F52E373(L_15, (float*)(&V_0), /*hidden argument*/NULL);
-		// Debug.Log(tempValue);
-		float L_17 = V_0;
-		float L_18 = L_17;
-		RuntimeObject * L_19 = Box(Single_tE07797BA3C98D4CA9B5A19413C19A76688AB899E_il2cpp_TypeInfo_var, &L_18);
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_19, /*hidden argument*/NULL);
+		VectorFeatureUnity_t1CB82667D30F0439AFAD81AEC804B2907A76DBCF * L_15 = ___feature1;
+		NullCheck(L_15);
+		Dictionary_2_t692011309BA94F599C6042A381FC9F8B3CB08399 * L_16 = L_15->get_Properties_1();
+		NullCheck(L_16);
+		RuntimeObject * L_17;
+		L_17 = Dictionary_2_get_Item_m88AA4580D695AEA212B0DF17D8B55C98CF3B624D(L_16, _stringLiteral31C23BCEBF93A862D7408F820DA6EBA3EFBE8195, /*hidden argument*/Dictionary_2_get_Item_m88AA4580D695AEA212B0DF17D8B55C98CF3B624D_RuntimeMethod_var);
+		NullCheck(L_17);
+		String_t* L_18;
+		L_18 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_17);
+		bool L_19;
+		L_19 = Single_TryParse_mC2E0086EAB164A81380FD03BDE671C574F52E373(L_18, (float*)(&V_0), /*hidden argument*/NULL);
 		// }
 		goto IL_0081;
 	} // end try (depth: 1)

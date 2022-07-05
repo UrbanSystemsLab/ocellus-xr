@@ -41,9 +41,9 @@ public class Switcher : MonoBehaviour
     private void Update()
     {
 
-        if (WebInfoStats.Stats.currentLayerName != null)
+        if (!String.IsNullOrEmpty(WebInfoStats.Stats.currentLayerName))
         {
-            Debug.Log("WebInfo has something!" + WebInfoStats.Stats.currentLayerName);
+            //Debug.Log("WebInfo has something!" + WebInfoStats.Stats.currentLayerName);
             ActivateLayer(WebInfoStats.Stats.currentLayerName);
         }
         else
@@ -60,10 +60,9 @@ public class Switcher : MonoBehaviour
         {
             NY_buildings.SetActive(true);
         }
-        else
-        {
-            VectorSubLayerProperties layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerName);
-        }
+        VectorSubLayerProperties layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerName);
+        layer.SetActive(true);
+        Debug.Log("activate" + layer);
     }
 
     private void FindLayerSourceId(string LayerId)
