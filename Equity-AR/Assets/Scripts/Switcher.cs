@@ -49,14 +49,14 @@ public class Switcher : MonoBehaviour
         else
         {
             NY_buildings.SetActive(true);
-            Debug.Log("WebInfo does not have any stats!!!");
+            //Debug.Log("WebInfo does not have any stats!!!");
         }
     }
 
     private void ActivateLayer(string LayerName)
     {
         deactivateAllLayer();
-        if (LayerName == "Flood Zone")
+        if (LayerName == "Flood Zones")
         {
             NY_buildings.SetActive(true);
         }

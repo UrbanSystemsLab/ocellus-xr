@@ -144,19 +144,19 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
             {
 				string temp = feature.Properties["risk"].ToString();
 				tempValue = float.Parse(temp);
-				Debug.Log(tempValue);
+				//Debug.Log(tempValue);
 			}
             else if(feature.Properties.ContainsKey("income"))
             {
 				string income = feature.Properties["income"].ToString();
 				incomeValue = float.Parse(income);
-				Debug.Log(incomeValue);
+				//Debug.Log(incomeValue);
 			}
 			else if (feature.Properties.ContainsKey("P_Abv65_e_"))
             {
 				string sixtyFive = feature.Properties["P_Abv65_e_"].ToString();
 				sixtyFiveValue = float.Parse(sixtyFive);
-				Debug.Log(sixtyFiveValue);
+				//Debug.Log(sixtyFiveValue);
 			}
 
 

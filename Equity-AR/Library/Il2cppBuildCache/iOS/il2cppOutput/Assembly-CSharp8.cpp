@@ -1087,7 +1087,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral58411E614A693577E690F9ED92D0F519494DA3BC
 IL2CPP_EXTERN_C String_t* _stringLiteral5C14DC276C8B2D50724A3F3F270AAC7F0E953D5B;
 IL2CPP_EXTERN_C String_t* _stringLiteral62AED9E1D4C4667B1A9FA69EDB744C282029CA07;
 IL2CPP_EXTERN_C String_t* _stringLiteral6526F399810CF71DFEA9A61667F50CA88778D37B;
-IL2CPP_EXTERN_C String_t* _stringLiteral658FB61899FA3751FD750C58B873056B137661DC;
+IL2CPP_EXTERN_C String_t* _stringLiteral6D5C93948AE272AD3BBC79DC673F97D28F05C2C3;
 IL2CPP_EXTERN_C String_t* _stringLiteral7353C41C94834E4F94476B65695D9DD63DA5FAF5;
 IL2CPP_EXTERN_C String_t* _stringLiteral74FE784595E09FD945DC4AD913891AC7AC1629B8;
 IL2CPP_EXTERN_C String_t* _stringLiteral786E4488D9401F994BB0CB36ABA98D21C26A8EC7;
@@ -1121,7 +1121,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralDC40CE8C95566D081E8CEF0E165B294AFC19BBEF
 IL2CPP_EXTERN_C String_t* _stringLiteralDD8E433A962AE759A3D1DD44074C194CEA837E98;
 IL2CPP_EXTERN_C String_t* _stringLiteralDF49DEC459F27E6005B3884AED37D97D673D6A6C;
 IL2CPP_EXTERN_C String_t* _stringLiteralE5B7E2B14B4C803243E791780786635729CB4F3B;
-IL2CPP_EXTERN_C String_t* _stringLiteralE7A86492F9BF2D6824BB02D5A0CD952AC54565E5;
 IL2CPP_EXTERN_C String_t* _stringLiteralEAA8D9C3445FEBFE3701DDB0406A86D63B80BB2F;
 IL2CPP_EXTERN_C String_t* _stringLiteralF3AFDFF8CF4EECA2CEFFAA76CE1B231800822441;
 IL2CPP_EXTERN_C String_t* _stringLiteralF45C03100BD2C2789F3B8DBAAAC35EA1B248DD23;
@@ -20667,12 +20666,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR WebInfoStats_tAB17D0A836A56F372F3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_m9AFBB5335B441B94E884B8A9D4A27AD60E3D7F7C (String_t* ___value0, const RuntimeMethod* method);
 // System.Void Switcher::ActivateLayer(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Switcher_ActivateLayer_m5FC09F2CFF127AABF50B02FD014C42D1F1692CE1 (Switcher_t95D323175D1DB24FDB6002D23DA38521548F30B1 * __this, String_t* ___LayerName0, const RuntimeMethod* method);
-// System.Void UnityEngine.Debug::Log(System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8 (RuntimeObject * ___message0, const RuntimeMethod* method);
 // System.Void Switcher::deactivateAllLayer()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Switcher_deactivateAllLayer_m0EC4F3D5E7D11A26C743855CFA6EE6CA684CF662 (Switcher_t95D323175D1DB24FDB6002D23DA38521548F30B1 * __this, const RuntimeMethod* method);
 // System.String System.String::Concat(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B (String_t* ___str00, String_t* ___str11, const RuntimeMethod* method);
+// System.Void UnityEngine.Debug::Log(System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8 (RuntimeObject * ___message0, const RuntimeMethod* method);
 // System.String[] System.String::Split(System.Char[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* String_Split_m2C74DC2B85B322998094BEDE787C378822E1F28B (String_t* __this, CharU5BU5D_t7B7FC5BC8091AA3B9CB0B29CDD80B5EE9254AA34* ___separator0, const RuntimeMethod* method);
 // System.Void System.Attribute::.ctor()
@@ -27155,13 +27154,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Switcher_Start_m98EF100477CCB1706DB4FA8B
 // System.Void Switcher::Update()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Switcher_Update_m7BC03E5B3E40E79B90ABB40BD92BA2C77AFE13CF (Switcher_t95D323175D1DB24FDB6002D23DA38521548F30B1 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral658FB61899FA3751FD750C58B873056B137661DC);
-		s_Il2CppMethodInitialized = true;
-	}
 	{
 		// if (!String.IsNullOrEmpty(WebInfoStats.Stats.currentLayerName))
 		WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495 * L_0;
@@ -27192,9 +27184,6 @@ IL_0022:
 		VectorSubLayerProperties_tAA9AAFFC6F69EAA1FDE4219D099527203B2D8204 * L_5 = __this->get_NY_buildings_5();
 		NullCheck(L_5);
 		VirtActionInvoker1< bool >::Invoke(16 /* System.Void Mapbox.Unity.Map.VectorSubLayerProperties::SetActive(System.Boolean) */, L_5, (bool)1);
-		// Debug.Log("WebInfo does not have any stats!!!");
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
-		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral658FB61899FA3751FD750C58B873056B137661DC, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -27207,7 +27196,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Switcher_ActivateLayer_m5FC09F2CFF127AAB
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IVectorDataLayer_tC749EA9FD67A17499D1A90CBFEF5C1F1133C2E52_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE7A86492F9BF2D6824BB02D5A0CD952AC54565E5);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6D5C93948AE272AD3BBC79DC673F97D28F05C2C3);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFDD982C09C7DF7957C8E1CC08711B18D96BDA605);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -27221,10 +27210,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Switcher_ActivateLayer_m5FC09F2CFF127AAB
 	{
 		// deactivateAllLayer();
 		Switcher_deactivateAllLayer_m0EC4F3D5E7D11A26C743855CFA6EE6CA684CF662(__this, /*hidden argument*/NULL);
-		// if (LayerName == "Flood Zone")
+		// if (LayerName == "Flood Zones")
 		String_t* L_0 = ___LayerName0;
 		bool L_1;
-		L_1 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_0, _stringLiteralE7A86492F9BF2D6824BB02D5A0CD952AC54565E5, /*hidden argument*/NULL);
+		L_1 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_0, _stringLiteral6D5C93948AE272AD3BBC79DC673F97D28F05C2C3, /*hidden argument*/NULL);
 		if (!L_1)
 		{
 			goto IL_001f;
@@ -28556,11 +28545,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TapToPlaceObject_Start_mA8DF707A649E3ABF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// map = Instantiate(objectToPlace, new Vector3(0,2,0), Quaternion.identity);
+		// map = Instantiate(objectToPlace, new Vector3(0,-1,0), Quaternion.identity);
 		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = __this->get_objectToPlace_5();
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_1;
 		memset((&L_1), 0, sizeof(L_1));
-		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_1), (0.0f), (2.0f), (0.0f), /*hidden argument*/NULL);
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_1), (0.0f), (-1.0f), (0.0f), /*hidden argument*/NULL);
 		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_2;
 		L_2 = Quaternion_get_identity_mF2E565DBCE793A1AE6208056D42CA7C59D83A702(/*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_il2cpp_TypeInfo_var);
