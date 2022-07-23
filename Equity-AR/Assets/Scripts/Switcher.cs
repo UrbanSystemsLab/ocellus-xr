@@ -10,7 +10,8 @@ public class Switcher : MonoBehaviour
     //This script is in Map Manager inside Map Prefab.
 
     public AbstractMap _abstractMap;
-
+    private IEnumerable<VectorSubLayerProperties> allLayer;
+    private VectorSubLayerProperties layer;
     private VectorSubLayerProperties NY_buildings;
     //private VectorSubLayerProperties tempLayer;
     //private VectorSubLayerProperties floodLayer;
@@ -24,7 +25,7 @@ public class Switcher : MonoBehaviour
 
     private void Start()
     {
-
+        allLayer = _abstractMap.VectorData.GetAllFeatureSubLayers();
 
         NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
         //tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Heat Risk");
@@ -60,9 +61,9 @@ public class Switcher : MonoBehaviour
         {
             NY_buildings.SetActive(true);
         }
-        VectorSubLayerProperties layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerName);
+        layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerName);
         layer.SetActive(true);
-        Debug.Log("activate" + layer);
+        //Debug.Log("activate" + layer);
     }
 
     private void FindLayerSourceId(string LayerId)
@@ -77,7 +78,6 @@ public class Switcher : MonoBehaviour
 
     private void deactivateAllLayer()
     {
-        IEnumerable<VectorSubLayerProperties> allLayer = _abstractMap.VectorData.GetAllFeatureSubLayers();
         foreach (VectorSubLayerProperties layer in allLayer)
         {
             layer.SetActive(false);
