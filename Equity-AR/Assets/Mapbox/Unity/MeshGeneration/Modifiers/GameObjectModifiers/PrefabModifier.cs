@@ -16,6 +16,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 	public class PrefabModifier : GameObjectModifier
 	{
 		private Dictionary<GameObject, GameObject> _objects;
+
 		[SerializeField]
 		private SpawnPrefabOptions _options;
 		private List<GameObject> _prefabList = new List<GameObject>();
@@ -53,7 +54,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				return;
 			}
 
-			GameObject go = null;
+			GameObject go;
 
 			if (_objects.ContainsKey(ve.GameObject))
 			{
@@ -115,32 +116,46 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			go.name = ve.Feature.Data.Id.ToString();
 
 
-
-
-			try
+			if (ve.Feature.Properties.ContainsKey("DBH"))
 			{
-				//Getting tree DBH and convert it to meters from inch.
-				float.TryParse(ve.Feature.Properties["DBH"].ToString(), out property);
-				property = property * 0.0254f * 2.0f;
-
-				//Getting other tree information
+				string treeProperty = ve.Feature.Properties["DBH"].ToString();
+				property = float.Parse(treeProperty) * 0.0254f * 2.0f;
 				treeType = ve.Feature.Properties["GenusSpeci"].ToString();
 				treeStructure = ve.Feature.Properties["TPStructur"].ToString();
 				treeCondition = ve.Feature.Properties["TPConditio"].ToString();
 				treeFound = true;
-
-			}
-			catch (Exception ex)
-			{
+            }
+            else
+            {
 				property = 0;
-				treeType = "null";
-				treeFound = false;
-				Debug.Log("Temperature layer error:" + ex.Message);
-			}
+                treeType = "null";
+                treeFound = false;
+            }
+
+			//try
+			//{
+			//	//Getting tree DBH and convert it to meters from inch.
+			//	float.TryParse(ve.Feature.Properties["DBH"].ToString(), out property);
+			//	property = property * 0.0254f * 2.0f;
+
+			//	//Getting other tree information
+			//	treeType = ve.Feature.Properties["GenusSpeci"].ToString();
+			//	treeStructure = ve.Feature.Properties["TPStructur"].ToString();
+			//	treeCondition = ve.Feature.Properties["TPConditio"].ToString();
+			//	treeFound = true;
+
+			//}
+			//catch (Exception ex)
+			//{
+			//	property = 0;
+			//	treeType = "null";
+			//	treeFound = false;
+			//	Debug.Log("Temperature layer error:" + ex.Message);
+			//}
 
 
 
-            goRectTransform = go.GetComponent<RectTransform>();
+			goRectTransform = go.GetComponent<RectTransform>();
 			stemTransform = go.transform.GetChild(0);
 			crownTransform = go.transform.GetChild(1);
 			crown = crownTransform.gameObject;

@@ -129,17 +129,18 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
             //try
             //{
-            //	redlining = feature.Properties["holc_grade"].ToString();
-            //	Debug.Log("Data Get: " + redlining);
+            //    redlining = feature.Properties["holc_grade"].ToString();
+            //    Debug.Log("Data Get: " + redlining);
             //}
             //catch (Exception ex)
             //{
-            //	redlining = "";
-            //	Debug.Log("Redlining layer error:" + ex.Message);
+            //    redlining = "";
+            //    Debug.Log("Redlining layer error:" + ex.Message);
             //}
+            
 
 
-			//check what the incoming data belongs to
+            //check what the incoming data belongs to
             if (feature.Properties.ContainsKey("risk"))
             {
 				string temp = feature.Properties["risk"].ToString();
@@ -279,12 +280,12 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			if (sixtyFiveValue > 75)
 			{
 				baseColor = new Color(1f, 1f, 1f);
-				Debug.Log("bigger than 75");
+				//Debug.Log("bigger than 75");
 			}
 			else if (sixtyFiveValue > 50)
 			{
 				baseColor = new Color(1f, 0.65f, 1f);
-				Debug.Log("bigger than 50");
+				//Debug.Log("bigger than 50");
 			}
 			else if (sixtyFiveValue > 25)
 			{

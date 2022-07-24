@@ -43,24 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05956bab3b40e431cb52426e35f83890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heatmapButton: {fileID: 0}
-  greenroofButton: {fileID: 0}
-  floodButton: {fileID: 0}
-  incomeButton: {fileID: 0}
-  openSpaceButton: {fileID: 0}
-  sixtyFivePlusButton: {fileID: 0}
-  heatmap0: {fileID: 21300000, guid: dea14c0c67ed4433cae04b810298066f, type: 3}
-  heatmap1: {fileID: 21300000, guid: ff0581e6dfc5145e69311f5bb2a72317, type: 3}
-  greenroof0: {fileID: 21300000, guid: f7a29784ecc8e4e768ea07e67a871e33, type: 3}
-  greenroof1: {fileID: 21300000, guid: f433b8b2bb54f4c81867ba8d46b80f1b, type: 3}
-  floodplane0: {fileID: 21300000, guid: c507e327352a34930946d84177d73397, type: 3}
-  floodplane1: {fileID: 21300000, guid: 718fa5f2e43e74edc846445145cac702, type: 3}
-  income0: {fileID: 21300000, guid: 0974be5f325d14ef8892e3d38b561251, type: 3}
-  income1: {fileID: 21300000, guid: ecc65c474b3a24c5180885703edd370f, type: 3}
-  openSpace0: {fileID: 21300000, guid: d07138b3fd08e4e95831bb6ff6e0ab82, type: 3}
-  openSpace1: {fileID: 21300000, guid: 0b0df35a3e4294e28a0c6137b4352358, type: 3}
-  sixtyFivePlus0: {fileID: 21300000, guid: e2c789aff763947d7b45a33ad217e3ec, type: 3}
-  sixtyFivePlus1: {fileID: 21300000, guid: 4866b54d11e01433fa10968a20ba6aaf, type: 3}
   _abstractMap: {fileID: 8481666064474462950}
 --- !u!1 &4818977998235323254
 GameObject:
@@ -169,6 +151,21 @@ PrefabInstance:
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
       propertyPath: _previewOptions.isPreviewEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].coreOptions.isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[1].coreOptions.isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[4].coreOptions.isActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,

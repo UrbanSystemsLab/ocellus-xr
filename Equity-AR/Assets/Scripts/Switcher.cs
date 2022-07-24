@@ -13,6 +13,8 @@ public class Switcher : MonoBehaviour
     private IEnumerable<VectorSubLayerProperties> allLayer;
     private VectorSubLayerProperties layer;
     private VectorSubLayerProperties NY_buildings;
+
+    private string currentMapLayerName = "";
     //private VectorSubLayerProperties tempLayer;
     //private VectorSubLayerProperties floodLayer;
     //private VectorSubLayerProperties incomeLayer;
@@ -37,21 +39,23 @@ public class Switcher : MonoBehaviour
         //PEJALayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("PEJA");
         //coolingLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Cooling Stations");
         //redliningLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Redlining");
+        NY_buildings.SetActive(true);
+
+
     }
 
+
+    
     private void Update()
     {
-
-        if (!String.IsNullOrEmpty(WebInfoStats.Stats.currentLayerName))
-        {
-            //Debug.Log("WebInfo has something!" + WebInfoStats.Stats.currentLayerName);
-            ActivateLayer(WebInfoStats.Stats.currentLayerName);
-        }
-        else
-        {
-            NY_buildings.SetActive(true);
-            //Debug.Log("WebInfo does not have any stats!!!");
-        }
+        
+            if(WebInfoStats.Stats.currentLayerName != currentMapLayerName)
+            {
+                ActivateLayer(WebInfoStats.Stats.currentLayerName);
+                //Debug.Log("WebInfo has something!" + WebInfoStats.Stats.currentLayerName);
+                currentMapLayerName = WebInfoStats.Stats.currentLayerName;
+            }
+ 
     }
 
     private void ActivateLayer(string LayerName)
