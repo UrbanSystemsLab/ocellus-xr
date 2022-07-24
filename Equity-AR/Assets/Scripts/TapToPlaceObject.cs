@@ -35,7 +35,8 @@ public class TapToPlaceObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        map = Instantiate(objectToPlace, new Vector3(0,2,0), Quaternion.identity);
+        map = Instantiate(objectToPlace, new Vector3(0,-1,0), Quaternion.identity);
+        map.SetActive(false);
         isPlaced = false;
         raycastManager = GetComponent<ARRaycastManager>();
         mainPage.SetActive(false);
@@ -71,9 +72,18 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void PlaceObject()
     {
-        //map = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
-        map.transform.position = placementPose.position;
-        map.transform.rotation = placementPose.rotation;
+        if(map!= null)
+        {
+            map.SetActive(true);
+            map.transform.position = placementPose.position;
+            map.transform.rotation = placementPose.rotation;
+        }
+        else
+        {
+            map = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
+            map.SetActive(true);
+        }
+
         isPlaced = true;
         //calibrationPage.SetActive(true);
         TapToPlaceMap.SetActive(false);

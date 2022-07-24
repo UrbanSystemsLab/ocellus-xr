@@ -37,7 +37,6 @@ ScriptsOnlyBuild:
     - Mapbox.Unity.Map.AbstractMap
     - Mapbox.Unity.Map.InitializeMapWithLocationProvider
     - Mapbox.Unity.Map.MapVisualizer
-    - Mapbox.Unity.Map.TileProviders.RangeTileProvider
     - Mapbox.Unity.MeshGeneration.Data.AtlasInfo
     - Mapbox.Unity.MeshGeneration.Modifiers.ModifierStack
     - Mapbox.Unity.MeshGeneration.Modifiers.PrefabModifier
@@ -45,6 +44,7 @@ ScriptsOnlyBuild:
     - Mapbox.Unity.Utilities.Console
     - Mapbox.Unity.Utilities.DebugTools.SceneData
     - Mapbox.Unity.Utilities.DebugTools.ScenesList
+    - Mapbox.Unity.Utilities.Runnable
     - Marker
     - MessageClass
     - MinimizeScreenFeature
@@ -272,8 +272,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5388}
     - Class: 114
       Script: {instanceID: 5448}
-    - Class: 114
-      Script: {instanceID: 5472}
     - Class: 114
       Script: {instanceID: 5566}
     - Class: 114
@@ -1700,7 +1698,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 080adbc57290d5077e6717386f8571a3
+      Hash: cd70520bd5b76eee38eac8c226421e73
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Switcher
@@ -3112,4 +3110,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Lat&Long.unity
   - Assets/Scenes/WorldScaleAR.unity
-  playerPath: /Users/elenalalala/Desktop/USLBuild/3-27
+  playerPath: /Users/elenalalala/Desktop/USLBuild/7-22-5

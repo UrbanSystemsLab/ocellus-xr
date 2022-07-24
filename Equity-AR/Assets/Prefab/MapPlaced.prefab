@@ -417,7 +417,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: Flood Zone
+          sublayerName: Flood Zones
           geometryType: 2
           layerName: 2050s-100y
           snapToTerrain: 1
@@ -678,7 +678,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: Extreme Flood
+          sublayerName: Extreme Flooding
           geometryType: 2
           layerName: nycFlood1
           snapToTerrain: 1
@@ -826,13 +826,13 @@ MonoBehaviour:
           combinerType: 0
         extrusionOptions:
           _selectedLayerName: redliningData
-          extrusionType: 0
-          extrusionGeometryType: 0
+          extrusionType: 5
+          extrusionGeometryType: 1
           propertyName: height
-          propertyDescription: Number
+          propertyDescription: Unavailable in Selected Layer.
           minimumHeight: 0
-          maximumHeight: 1
-          extrusionScaleFactor: 1
+          maximumHeight: 4
+          extrusionScaleFactor: 2
         colliderOptions:
           colliderType: 0
         materialOptions:
@@ -853,9 +853,9 @@ MonoBehaviour:
             texturingType: 0
             materials:
             - Materials:
-              - {fileID: 0}
+              - {fileID: 2100000, guid: c20e844700d984bc7a39185246cfb7dc, type: 2}
             - Materials:
-              - {fileID: 0}
+              - {fileID: 2100000, guid: c20e844700d984bc7a39185246cfb7dc, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -891,10 +891,10 @@ MonoBehaviour:
           combinerType: 0
         extrusionOptions:
           _selectedLayerName: PEJAs_NYS
-          extrusionType: 0
+          extrusionType: 1
           extrusionGeometryType: 0
           propertyName: height
-          propertyDescription: Number
+          propertyDescription: Unavailable in Selected Layer.
           minimumHeight: 0
           maximumHeight: 1
           extrusionScaleFactor: 1
@@ -918,9 +918,9 @@ MonoBehaviour:
             texturingType: 0
             materials:
             - Materials:
-              - {fileID: 0}
+              - {fileID: 2100000, guid: a7c2868437eddf248a6deb329de23d8e, type: 2}
             - Materials:
-              - {fileID: 0}
+              - {fileID: 2100000, guid: a7c2868437eddf248a6deb329de23d8e, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,

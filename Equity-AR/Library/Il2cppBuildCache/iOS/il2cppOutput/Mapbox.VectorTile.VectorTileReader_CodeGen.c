@@ -207,8 +207,8 @@ static const Il2CppTokenRangePair s_rgctxIndices[1] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[2] = 
 {
-	{ (Il2CppRGCTXDataType)2, 4366 },
-	{ (Il2CppRGCTXDataType)3, 32867 },
+	{ (Il2CppRGCTXDataType)2, 4367 },
+	{ (Il2CppRGCTXDataType)3, 32857 },
 };
 extern const CustomAttributesCacheGenerator g_Mapbox_VectorTile_VectorTileReader_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Mapbox_VectorTile_VectorTileReader_CodeGenModule;

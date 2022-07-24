@@ -1,91 +1,43 @@
-﻿<Properties StartupConfiguration="{A821ED88-1FF8-9F34-295E-C6F9DB15A57A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs">
     <Files>
-      <File FileName="Assets/Scripts/JSCom.cs" Line="48" Column="54" IsPinned="True" />
-      <File FileName="Assets/Scripts/MessageClass.cs" Line="26" Column="28" IsPinned="True" />
-      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" IsPinned="True" />
-      <File FileName="Assets/Scripts/AskLocation.cs" Line="14" Column="22" />
-      <File FileName="Assets/Scripts/WebInfoStats.cs" Line="13" Column="36" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/ForwardGeocodeUserInput.cs" />
-      <File FileName="Assets/SliderHandler.cs" />
-      <File FileName="Assets/VerticalLayoutUI.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="155" Column="35" />
-      <File FileName="Assets/VerticalFullScreenUI.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Data/MeshData.cs" />
-      <File FileName="Assets/MinimizeScreenFeature.cs" />
-      <File FileName="Assets/GoogleARCore/SDK/Scripts/ARCoreBackgroundRenderer.cs" />
-      <File FileName="Assets/UnityARInterface/Scripts/ARKitInterface.cs" />
-      <File FileName="Assets/Mapbox/Unity/Editor/Build/Mapbox_iOS_build.cs" />
-      <File FileName="Assets/Vuplex/WebView/Editor/iOS/iOSBuildScript.cs" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/PositionWithLocationProvider.cs" />
-      <File FileName="Assets/UnityARInterface/Scripts/ARPointCloudVisualizer.cs" />
-      <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="38" Column="56" />
-      <File FileName="Assets/Scripts/toggleWebView.cs" Line="39" Column="45" />
-      <File FileName="Assets/Scripts/MapManager.cs" Line="21" Column="19" />
-      <File FileName="Assets/Scripts/Switcher.cs" Line="80" Column="35" />
-      <File FileName="Assets/Scripts/SceneController.cs" Line="26" Column="2" />
-      <File FileName="Assets/Vuplex/WebView/Scripts/Common/BaseWebViewPrefab.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="138" Column="16" />
+      <File FileName="Assets/Scripts/MessageClass.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/Switcher.cs" Line="70" Column="41" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="40" Column="18" />
+      <File FileName="Assets/Scripts/AskLocation.cs" />
+      <File FileName="Assets/Scripts/WebInfoStats.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" Line="147" Column="17" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
+      <File FileName="Assets/Scripts/toggleWebView.cs" />
+      <File FileName="Assets/Scripts/MapManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SceneController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="124" Column="34" />
+      <File FileName="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/LogEntry.cs" />
+      <File FileName="Assets/Mapbox/Unity/SourceLayers/VectorLayer.cs" />
+      <File FileName="Assets/Mapbox/Unity/LayerProperties/VectorSubLayerProperties.cs" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/LayerVisualizers/VectorLayerVisualizer.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Equity-AR" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="GoogleARCore" expanded="True">
-                <Node name="SDK" expanded="True">
-                  <Node name="Scripts" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Mapbox" expanded="True">
-                <Node name="Examples" expanded="True">
-                  <Node name="Scripts" expanded="True" />
-                </Node>
-                <Node name="Unity" expanded="True">
-                  <Node name="Editor" expanded="True">
-                    <Node name="Build" expanded="True" />
-                  </Node>
-                  <Node name="Map" expanded="True" />
-                  <Node name="MeshGeneration" expanded="True">
-                    <Node name="Data" expanded="True" />
-                    <Node name="Modifiers" expanded="True">
-                      <Node name="GameObjectModifiers" expanded="True" />
-                      <Node name="MergedModifierStack.cs" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="MapboxAR" expanded="True">
-                <Node name="Examples" expanded="True" />
-                <Node name="Scripts" expanded="True">
-                  <Node name="ManualSync" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Plugins" expanded="True">
-                <Node name="StansAssets" expanded="True">
-                  <Node name="NativePlugins" expanded="True">
-                    <Node name="IOSDeploy" expanded="True">
-                      <Node name="Editor" expanded="True">
-                        <Node name="Scripts" expanded="True" />
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Mapbox" expanded="True">
+                  <Node name="Unity" expanded="True">
+                    <Node name="Map" expanded="True" />
+                    <Node name="MeshGeneration" expanded="True">
+                      <Node name="LayerVisualizers" expanded="True" />
+                      <Node name="Modifiers" expanded="True">
+                        <Node name="GameObjectModifiers" expanded="True">
+                          <Node name="PrefabModifier.cs" selected="True" />
+                        </Node>
                       </Node>
                     </Node>
                   </Node>
                 </Node>
-              </Node>
-              <Node name="Scripts" expanded="True" />
-              <Node name="UnityARInterface" expanded="True">
                 <Node name="Scripts" expanded="True" />
-              </Node>
-              <Node name="Vuplex" expanded="True">
-                <Node name="WebView" expanded="True">
-                  <Node name="Editor" expanded="True">
-                    <Node name="iOS" expanded="True" />
-                  </Node>
-                  <Node name="Scripts" expanded="True">
-                    <Node name="Common" expanded="True" />
-                  </Node>
-                </Node>
               </Node>
             </Node>
           </Node>
@@ -96,7 +48,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="043e0e71-9bda-45ea-88de-fad0b52729cd" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="32f927d5-2aff-454e-8f3f-e620d1e6bc23" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

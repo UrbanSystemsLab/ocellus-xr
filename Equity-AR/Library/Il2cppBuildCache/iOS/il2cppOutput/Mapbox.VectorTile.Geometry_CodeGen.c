@@ -664,16 +664,16 @@ static const Il2CppTokenRangePair s_rgctxIndices[2] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[11] = 
 {
-	{ (Il2CppRGCTXDataType)2, 4365 },
-	{ (Il2CppRGCTXDataType)3, 16096 },
-	{ (Il2CppRGCTXDataType)2, 4384 },
-	{ (Il2CppRGCTXDataType)3, 16201 },
+	{ (Il2CppRGCTXDataType)2, 4366 },
+	{ (Il2CppRGCTXDataType)3, 16094 },
+	{ (Il2CppRGCTXDataType)2, 4385 },
+	{ (Il2CppRGCTXDataType)3, 16199 },
 	{ (Il2CppRGCTXDataType)1, 101 },
 	{ (Il2CppRGCTXDataType)2, 101 },
-	{ (Il2CppRGCTXDataType)2, 5215 },
-	{ (Il2CppRGCTXDataType)3, 23102 },
-	{ (Il2CppRGCTXDataType)3, 16202 },
-	{ (Il2CppRGCTXDataType)3, 16097 },
+	{ (Il2CppRGCTXDataType)2, 5216 },
+	{ (Il2CppRGCTXDataType)3, 23100 },
+	{ (Il2CppRGCTXDataType)3, 16200 },
+	{ (Il2CppRGCTXDataType)3, 16095 },
 	{ (Il2CppRGCTXDataType)2, 685 },
 };
 extern const CustomAttributesCacheGenerator g_Mapbox_VectorTile_Geometry_AttributeGenerators[];
