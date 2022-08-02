@@ -318,6 +318,8 @@ struct EventHandler_1_tCD76EC50EEBCD9E381521191668E5C85FC66D492;
 struct EventHandler_1_t4462E42A49ED7E5D8724E86F6126A5D6E8C246BB;
 // System.EventHandler`1<Vuplex.WebView.FocusedInputFieldChangedEventArgs>
 struct EventHandler_1_t9F252B5BA664B37EE6601ADF51FBB90A7D343F62;
+// System.EventHandler`1<System.Object>
+struct EventHandler_1_tFA1C30E54FA1061D79E711F65F9A174BFBD8CDCB;
 // System.EventHandler`1<Vuplex.WebView.PopupRequestedEventArgs>
 struct EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1;
 // System.EventHandler`1<Vuplex.WebView.ProgressChangedEventArgs>
@@ -680,6 +682,8 @@ struct NotSupportedException_tB9D89F0E9470A2C423D239D7C68EE0CFD77F9339;
 struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A;
 // Vuplex.WebView.Demos.PopupDemo
 struct PopupDemo_t85AC9E8DBB151FC26D422502FCA33DD4A55663B8;
+// Vuplex.WebView.PopupRequestedEventArgs
+struct PopupRequestedEventArgs_tFE73B40E15DF3BA5CF8D3A214D805810C6F6637B;
 // Mapbox.Unity.Map.PrefabItemOptions
 struct PrefabItemOptions_t10F6188385B945BFAA705B10BCAF750E3D4D6870;
 // RSG.Promise
@@ -1013,6 +1017,7 @@ IL2CPP_EXTERN_C RuntimeClass* Colors_tE3544B9054E419D78727F2B37F628F7F92C661AD_i
 IL2CPP_EXTERN_C RuntimeClass* ColumnAttribute_tAD3FB9BD1C426E240C8DCD4D785479CAF68FCA7F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DownloadHandlerBuffer_t74D11E891308B7FD5255C8D0D876AD0DBF512B6D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_1_tDF4EBC93776823A8C2D110E5F1D36575C386AFED_il2cpp_TypeInfo_var;
@@ -1027,6 +1032,7 @@ IL2CPP_EXTERN_C RuntimeClass* ILocationProvider_tD91B8FAF7363E30B5C588126B3594B3
 IL2CPP_EXTERN_C RuntimeClass* IPromise_tAC0021E5D264C0378AAD61A8C78222896BD48D01_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IReplacementCriteria_t33353F9501B564DF371E13272381DCDA96FEFF2C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IWithPopups_t9CA38046FEC088BE7963D34C44EEF1370CC8CA54_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ImageFormatType_t21F87DE57BC9A0B3CBB969A9EA307A447841D7FA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IndexedAttributeU5BU5D_t7B1AF026A241C2512331B44C1801BD9545571915_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IndexedAttribute_t8C04E25AEA45A4BA26705033D910BEBD2356C0F6_il2cpp_TypeInfo_var;
@@ -1049,6 +1055,7 @@ IL2CPP_EXTERN_C RuntimeClass* U3CGetAllPolygonFeatureSubLayersU3Ed__43_t5B6B0E24
 IL2CPP_EXTERN_C RuntimeClass* U3CGetFeatureSubLayerByQueryU3Ed__46_tA216C0783B0BFE1910ECB689459D5FC4CA0C6158_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CGetFiltersByQueryU3Ed__21_t3070C58CFC67A015FFBAA1EA23BCB16B5CB1C656_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CGetPointsOfInterestSubLayerByQueryU3Ed__54_t3531A370C87798863DA4CC300C376C4BAAE67297_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass59_1_t2788A7F12336E23EC080FBFE7AE65E5F6A6F0863_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass62_1_tEF0D6ADD7ED5239D192D710EDC48444292B60B4D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass66_1_tC0A3F5A7C497E4D5A55DB56D42B0829F8BA820F3_il2cpp_TypeInfo_var;
@@ -1081,11 +1088,15 @@ IL2CPP_EXTERN_C String_t* _stringLiteral0236BACCD260A20F0738D0E7EDBB60850D17B36A
 IL2CPP_EXTERN_C String_t* _stringLiteral087915F54405AD1B7F0E6ADFE8D41FB99BBC5929;
 IL2CPP_EXTERN_C String_t* _stringLiteral14E338D17C42E552FA7AF42CDAE40CA1F0E8A04D;
 IL2CPP_EXTERN_C String_t* _stringLiteral29B2F8783E410CE10F7BB0B78AEE135CC0B8CF6F;
+IL2CPP_EXTERN_C String_t* _stringLiteral2FD7C9707A574F6125F09847B38E0399F1DF53A2;
 IL2CPP_EXTERN_C String_t* _stringLiteral59EA6AB031F987E7930700D26A18FEDC80746357;
 IL2CPP_EXTERN_C String_t* _stringLiteral5B58EBE31E594BF8FA4BEA3CD075473149322B18;
+IL2CPP_EXTERN_C String_t* _stringLiteral60229673F65DBD4CFD3E012FC6A50D6F5CC17BB8;
 IL2CPP_EXTERN_C String_t* _stringLiteral64058CC688A96A90239811EF06C9D20DB0499C3E;
 IL2CPP_EXTERN_C String_t* _stringLiteral738F291E53E97C08DAE378C71EF70A60E31AE900;
+IL2CPP_EXTERN_C String_t* _stringLiteral7AA3E45010635E4BF799DF327E95258793DBEB51;
 IL2CPP_EXTERN_C String_t* _stringLiteral930EDD56406E5AF72EE12437B33D92A25014F76C;
+IL2CPP_EXTERN_C String_t* _stringLiteral98F35BE03885D91D5007136006E304D1222027FF;
 IL2CPP_EXTERN_C String_t* _stringLiteralBFF9324A7A4DB3E1D645999C8B9E2DA54472D42C;
 IL2CPP_EXTERN_C String_t* _stringLiteralC62C64F00567C5368CAE37F4E64E1E82FF785677;
 IL2CPP_EXTERN_C const RuntimeMethod* Action_1_Invoke_m48902101D8F84E0110E1EA89779FE035FC93C460_RuntimeMethod_var;
@@ -1121,6 +1132,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m6A0D179C95FBC2923DF
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mB756B5BD4B188555CAD2716B58316B216F651225_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mCFBEAC604231E07F0E2C3A2DA746F527ACB6F10C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mE621DCD14EF22A4E5843D7BBE5EC24EE219540C9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* EventHandler_1__ctor_m1ED8A51B2B21AF02D592BAF0C6A28971951B331A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Func_1_Invoke_m0110FB3F2A01CB6720DC7A13194A3C2883E9EDE7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Func_1_Invoke_m2B767C38B2A278361B180E6E82C4EDD32C82CE58_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Func_1_Invoke_mD1C8CD6D4862852ABBCAF8B1C73355989B59133C_RuntimeMethod_var;
@@ -1157,6 +1169,8 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CReloadAfterDelayU3Ed__12_System_Collecti
 IL2CPP_EXTERN_C const RuntimeMethod* U3CStartU3Ed__12_System_Collections_IEnumerator_Reset_mA521C86E4D6BB0F98667ECD7D2610E8577F9A1BC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CStartU3Ed__4_System_Collections_IEnumerator_Reset_m324AD2CF2ECDBF487C514FF0D35FB513E90C5281_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CProcessLayerU3Eb__37_0_mB52D00129ACFFEE38C43BC2A783061304A193A26_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass2_0_U3CStartU3Eb__1_m4AF85CE427314BEA8504ABA2602BF9B4185E1CCC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass2_1_U3CStartU3Eb__2_m92226C13C0C7250A956823BB215EFC75CEEF38AB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass2_1_U3CStartU3Eb__3_m5C32DFDAF2B410019A834C9B94E3640F465D0368_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass52_0_U3CThenU3Eb__2_m68317E06CF2A6CB4E45914984E5E7B1C8E250B3A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass52_0_U3CThenU3Eb__3_m1DD830DC1CA6AEAB53B32028949E3349E37146EE_RuntimeMethod_var;
@@ -5694,6 +5708,24 @@ public:
 };
 
 
+// System.Int64
+struct  Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3 
+{
+public:
+	// System.Int64 System.Int64::m_value
+	int64_t ___m_value_0;
+
+public:
+	inline static int32_t get_offset_of_m_value_0() { return static_cast<int32_t>(offsetof(Int64_t378EE0D608BD3107E77238E85F30D2BBD46981F3, ___m_value_0)); }
+	inline int64_t get_m_value_0() const { return ___m_value_0; }
+	inline int64_t* get_address_of_m_value_0() { return &___m_value_0; }
+	inline void set_m_value_0(int64_t value)
+	{
+		___m_value_0 = value;
+	}
+};
+
+
 // System.IntPtr
 struct  IntPtr_t 
 {
@@ -5927,6 +5959,36 @@ public:
 	inline void set_identityMatrix_17(Matrix4x4_tDE7FF4F2E2EA284F6EFE00D627789D0E5B8B4461  value)
 	{
 		___identityMatrix_17 = value;
+	}
+};
+
+
+// Vuplex.WebView.PopupRequestedEventArgs
+struct  PopupRequestedEventArgs_tFE73B40E15DF3BA5CF8D3A214D805810C6F6637B  : public EventArgs_tBCAACA538A5195B6D6C8DFCC3524A2A4A67FD8BA
+{
+public:
+	// System.String Vuplex.WebView.PopupRequestedEventArgs::Url
+	String_t* ___Url_1;
+	// Vuplex.WebView.IWebView Vuplex.WebView.PopupRequestedEventArgs::WebView
+	RuntimeObject* ___WebView_2;
+
+public:
+	inline static int32_t get_offset_of_Url_1() { return static_cast<int32_t>(offsetof(PopupRequestedEventArgs_tFE73B40E15DF3BA5CF8D3A214D805810C6F6637B, ___Url_1)); }
+	inline String_t* get_Url_1() const { return ___Url_1; }
+	inline String_t** get_address_of_Url_1() { return &___Url_1; }
+	inline void set_Url_1(String_t* value)
+	{
+		___Url_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___Url_1), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_WebView_2() { return static_cast<int32_t>(offsetof(PopupRequestedEventArgs_tFE73B40E15DF3BA5CF8D3A214D805810C6F6637B, ___WebView_2)); }
+	inline RuntimeObject* get_WebView_2() const { return ___WebView_2; }
+	inline RuntimeObject** get_address_of_WebView_2() { return &___WebView_2; }
+	inline void set_WebView_2(RuntimeObject* value)
+	{
+		___WebView_2 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___WebView_2), (void*)value);
 	}
 };
 
@@ -6814,6 +6876,54 @@ struct WebViewOptions_t13C9D028049632B6DBB08A44249BB1789CEA2208_marshaled_com
 	int32_t* ___preferredPlugins_2;
 };
 
+// GoogleARCoreInternal.PlaneApi/ExternApi
+struct  ExternApi_t61CF6290454BC5F8C993B69130F0C671271AC467 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t ExternApi_t61CF6290454BC5F8C993B69130F0C671271AC467__padding[1];
+	};
+
+public:
+};
+
+
+// GoogleARCoreInternal.PointApi/ExternApi
+struct  ExternApi_tA3720CD96FCC4A30DFFDA1A49D59A884F03EF6F2 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t ExternApi_tA3720CD96FCC4A30DFFDA1A49D59A884F03EF6F2__padding[1];
+	};
+
+public:
+};
+
+
+// GoogleARCoreInternal.PointCloudApi/ExternApi
+struct  ExternApi_t5D9D6BBDCB628296C1EA5AFAEB2F26DDEDA609B6 
+{
+public:
+	union
+	{
+		struct
+		{
+		};
+		uint8_t ExternApi_t5D9D6BBDCB628296C1EA5AFAEB2F26DDEDA609B6__padding[1];
+	};
+
+public:
+};
+
+
 // GoogleARCoreInternal.PoseApi/ExternApi
 struct  ExternApi_tC04F734C119ECECDD62980669E00ED2C3956584B 
 {
@@ -7340,6 +7450,24 @@ public:
 
 public:
 	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(ApiTrackableType_t8099F883BFC13874CA22AB9E286EA90D403BB8A5, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+
+// GoogleARCoreInternal.ApiTrackedPointOrientationMode
+struct  ApiTrackedPointOrientationMode_t51FFB0F8C73D9AE0ED3CF0A1E81AED88997C98C4 
+{
+public:
+	// System.Int32 GoogleARCoreInternal.ApiTrackedPointOrientationMode::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(ApiTrackedPointOrientationMode_t51FFB0F8C73D9AE0ED3CF0A1E81AED88997C98C4, ___value___2)); }
 	inline int32_t get_value___2() const { return ___value___2; }
 	inline int32_t* get_address_of_value___2() { return &___value___2; }
 	inline void set_value___2(int32_t value)
@@ -8466,6 +8594,24 @@ struct Object_tF2F3778131EFF286AF62B7B013A170F95A91571A_marshaled_com
 {
 	intptr_t ___m_CachedPtr_0;
 };
+
+// Vuplex.WebView.PopupMode
+struct  PopupMode_t947CCA8B0EABCC816063DDB52F48555CADD630E3 
+{
+public:
+	// System.Int32 Vuplex.WebView.PopupMode::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(PopupMode_t947CCA8B0EABCC816063DDB52F48555CADD630E3, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
 
 // Mapbox.Unity.MeshGeneration.Modifiers.PositionTargetType
 struct  PositionTargetType_tF4D1F562DEF873FC0511FA3F4A6932D59CF7F7F7 
@@ -12549,6 +12695,15 @@ public:
 };
 
 
+// System.EventHandler`1<Vuplex.WebView.PopupRequestedEventArgs>
+struct  EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+
 // System.Func`1<System.Collections.Generic.IEnumerable`1<System.Func`1<RSG.IPromise>>>
 struct  Func_1_t16A4070E1ADB587C26EA2059F3E61A0224E517AC  : public MulticastDelegate_t
 {
@@ -16168,6 +16323,8 @@ IL2CPP_EXTERN_C void ARUserAnchor_t42C543E3E7A47B121AF64289E671E3F07120EF5D_mars
 IL2CPP_EXTERN_C void ARUserAnchor_t42C543E3E7A47B121AF64289E671E3F07120EF5D_marshal_pinvoke_back(const ARUserAnchor_t42C543E3E7A47B121AF64289E671E3F07120EF5D_marshaled_pinvoke& marshaled, ARUserAnchor_t42C543E3E7A47B121AF64289E671E3F07120EF5D& unmarshaled);
 IL2CPP_EXTERN_C void ARUserAnchor_t42C543E3E7A47B121AF64289E671E3F07120EF5D_marshal_pinvoke_cleanup(ARUserAnchor_t42C543E3E7A47B121AF64289E671E3F07120EF5D_marshaled_pinvoke& marshaled);
 
+// System.Void System.EventHandler`1<System.Object>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventHandler_1__ctor_m55B15D6747B269625FC10375E6008AA99BD498B4_gshared (EventHandler_1_tFA1C30E54FA1061D79E711F65F9A174BFBD8CDCB * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method);
 // System.Void System.Action`1<System.Object>::Invoke(!0)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m587509C88BB83721D7918D89DF07606BB752D744_gshared (Action_1_tD9663D9715FAA4E62035CFCF1AD4D094EE7872DC * __this, RuntimeObject * ___obj0, const RuntimeMethod* method);
 // !0 System.Func`1<System.Object>::Invoke()
@@ -16251,10 +16408,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * Resources_Load_TisRuntimeObje
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405 (RuntimeObject * __this, const RuntimeMethod* method);
 // Vuplex.WebView.IWebView Vuplex.WebView.BaseWebViewPrefab::get_WebView()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156 (BaseWebViewPrefab_t0E341971F6C260BD4EEC9336C16728CDEA6BF7B7 * __this, const RuntimeMethod* method);
-// System.Void System.EventHandler::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventHandler__ctor_m9D4CC7B806AFF3B790E5E1A3B891F6775A146B78 (EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method);
 // System.Void UnityEngine.Debug::Log(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8 (RuntimeObject * ___message0, const RuntimeMethod* method);
+// System.Void System.EventHandler`1<Vuplex.WebView.PopupRequestedEventArgs>::.ctor(System.Object,System.IntPtr)
+inline void EventHandler_1__ctor_m1ED8A51B2B21AF02D592BAF0C6A28971951B331A (EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method)
+{
+	((  void (*) (EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 *, RuntimeObject *, intptr_t, const RuntimeMethod*))EventHandler_1__ctor_m55B15D6747B269625FC10375E6008AA99BD498B4_gshared)(__this, ___object0, ___method1, method);
+}
+// System.Void Vuplex.WebView.Demos.PopupDemo/<>c__DisplayClass2_1::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass2_1__ctor_mE2C11D4C0A83756B97BA51A0A2340C245BA837CA (U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * __this, const RuntimeMethod* method);
+// System.String System.String::Concat(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B (String_t* ___str00, String_t* ___str11, const RuntimeMethod* method);
+// Vuplex.WebView.WebViewPrefab Vuplex.WebView.WebViewPrefab::Instantiate(Vuplex.WebView.IWebView)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * WebViewPrefab_Instantiate_mCE00EADBB583350C43CE9AAF4D62757E5CD21C59 (RuntimeObject* ___webView0, const RuntimeMethod* method);
+// UnityEngine.Transform UnityEngine.Component::get_transform()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * Component_get_transform_mE8496EBC45BEB1BADB5F314960F1DF1C952FA11F (Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::set_parent(UnityEngine.Transform)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_parent_mEAE304E1A804E8B83054CEECB5BF1E517196EC13 (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localPosition_m2A2B0033EF079077FAE7C65196078EAF5D041AFC (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::set_localEulerAngles(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localEulerAngles_mB63076996124DC76E6902A81677A6E3C814C693B (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___value0, const RuntimeMethod* method);
+// System.Void System.EventHandler::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventHandler__ctor_m9D4CC7B806AFF3B790E5E1A3B891F6775A146B78 (EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method);
+// System.Void Vuplex.WebView.BaseWebViewPrefab::add_Initialized(System.EventHandler)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseWebViewPrefab_add_Initialized_m7F89E89A30E53CEEB4C5252988A929E03B30DEED (BaseWebViewPrefab_t0E341971F6C260BD4EEC9336C16728CDEA6BF7B7 * __this, EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B * ___value0, const RuntimeMethod* method);
 // System.Void Vuplex.WebView.BaseWebViewPrefab::Destroy()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseWebViewPrefab_Destroy_mEB6B2A7CAD740414E90672C3039E4D69E6589C50 (BaseWebViewPrefab_t0E341971F6C260BD4EEC9336C16728CDEA6BF7B7 * __this, const RuntimeMethod* method);
 // System.Void RSG.Promise::InvokeRejectHandler(System.Action`1<System.Exception>,RSG.IRejectable,System.Exception)
@@ -16329,8 +16509,6 @@ inline bool Func_2_Invoke_m705DAC384F6915DB8F64BF82678BA526CFA750FB (Func_2_t711
 {
 	return ((  bool (*) (Func_2_t711DF4BC3BE225AA1589FEF2450D9F4BEE892DCC *, TimeData_t8948F87344E8CEE4E913200292BB01B24E74C108 , const RuntimeMethod*))Func_2_Invoke_m705DAC384F6915DB8F64BF82678BA526CFA750FB_gshared)(__this, ___arg0, method);
 }
-// UnityEngine.Transform UnityEngine.Component::get_transform()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * Component_get_transform_mE8496EBC45BEB1BADB5F314960F1DF1C952FA11F (Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::set_position(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_position_mB169E52D57EEAC1E3F22C5395968714E4F00AC91 (Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * __this, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___value0, const RuntimeMethod* method);
 // Mapbox.Utils.Vector2d Mapbox.Unity.Map.AbstractMap::get_CenterLatitudeLongitude()
@@ -16891,6 +17069,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIStyle_set_imagePosition_mE650EF31D865
 // System.Void System.ThrowHelper::ThrowArgumentOutOfRangeException()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowHelper_ThrowArgumentOutOfRangeException_m4841366ABC2B2AFA37C10900551D7E07522C0929 (const RuntimeMethod* method);
 #if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPlane_getCenterPose(intptr_t, intptr_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPlane_acquireSubsumedBy(intptr_t, intptr_t, intptr_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPlane_getExtentX(intptr_t, intptr_t, float*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPlane_getExtentZ(intptr_t, intptr_t, float*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPlane_getPolygonSize(intptr_t, intptr_t, int32_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPlane_getPolygon(intptr_t, intptr_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPlane_isPoseInExtents(intptr_t, intptr_t, intptr_t, int32_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPlane_isPoseInPolygon(intptr_t, intptr_t, intptr_t, int32_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPoint_getPose(intptr_t, intptr_t, intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPoint_getOrientationMode(intptr_t, intptr_t, int32_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPointCloud_getTimestamp(intptr_t, intptr_t, int64_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPointCloud_getNumberOfPoints(intptr_t, intptr_t, int32_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPointCloud_getData(intptr_t, intptr_t, intptr_t*);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+IL2CPP_EXTERN_C void DEFAULT_CALL ArPointCloud_release(intptr_t);
+#endif
+#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
 IL2CPP_EXTERN_C void DEFAULT_CALL ArPose_create(intptr_t, ApiPoseData_t09263A5BD67E24BB6E1E2014919268C400C42447 *, intptr_t*);
 #endif
 #if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
@@ -16976,6 +17196,567 @@ IL2CPP_EXTERN_C void DEFAULT_CALL ArTrackableList_getSize(intptr_t, intptr_t, in
 #endif
 #if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
 IL2CPP_EXTERN_C void DEFAULT_CALL ArTrackableList_acquireItem(intptr_t, intptr_t, int32_t, intptr_t*);
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void GoogleARCoreInternal.PlaneApi/ExternApi::ArPlane_getCenterPose(System.IntPtr,System.IntPtr,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPlane_getCenterPose_mCDF5A00410CED460E4DF9D07DF25A2F3BCEE9E7A (intptr_t ___sessionHandle0, intptr_t ___planeHandle1, intptr_t ___poseHandle2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPlane_getCenterPose", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPlane_getCenterPose)(___sessionHandle0, ___planeHandle1, ___poseHandle2);
+	#else
+	il2cppPInvokeFunc(___sessionHandle0, ___planeHandle1, ___poseHandle2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PlaneApi/ExternApi::ArPlane_acquireSubsumedBy(System.IntPtr,System.IntPtr,System.IntPtr&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPlane_acquireSubsumedBy_m7D6F5BC36775D7C0579B4BA80D64201406A70EFF (intptr_t ___sessionHandle0, intptr_t ___planeHandle1, intptr_t* ___subsumerHandle2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, intptr_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPlane_acquireSubsumedBy", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPlane_acquireSubsumedBy)(___sessionHandle0, ___planeHandle1, ___subsumerHandle2);
+	#else
+	il2cppPInvokeFunc(___sessionHandle0, ___planeHandle1, ___subsumerHandle2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PlaneApi/ExternApi::ArPlane_getExtentX(System.IntPtr,System.IntPtr,System.Single&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPlane_getExtentX_m83B17638EFABFD6DA0B68783658A774EB74B300B (intptr_t ___sessionHandle0, intptr_t ___planeHandle1, float* ___extentX2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, float*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(float*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPlane_getExtentX", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPlane_getExtentX)(___sessionHandle0, ___planeHandle1, ___extentX2);
+	#else
+	il2cppPInvokeFunc(___sessionHandle0, ___planeHandle1, ___extentX2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PlaneApi/ExternApi::ArPlane_getExtentZ(System.IntPtr,System.IntPtr,System.Single&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPlane_getExtentZ_mADE282DE28D2BED87AF000CF97AA07C4C4C53475 (intptr_t ___sessionHandle0, intptr_t ___planeHandle1, float* ___extentZ2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, float*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(float*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPlane_getExtentZ", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPlane_getExtentZ)(___sessionHandle0, ___planeHandle1, ___extentZ2);
+	#else
+	il2cppPInvokeFunc(___sessionHandle0, ___planeHandle1, ___extentZ2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PlaneApi/ExternApi::ArPlane_getPolygonSize(System.IntPtr,System.IntPtr,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPlane_getPolygonSize_mE9B50A8A6D398DA0D5A867AB3C72185231621E63 (intptr_t ___sessionHandle0, intptr_t ___planeHandle1, int32_t* ___polygonSize2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPlane_getPolygonSize", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPlane_getPolygonSize)(___sessionHandle0, ___planeHandle1, ___polygonSize2);
+	#else
+	il2cppPInvokeFunc(___sessionHandle0, ___planeHandle1, ___polygonSize2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PlaneApi/ExternApi::ArPlane_getPolygon(System.IntPtr,System.IntPtr,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPlane_getPolygon_m50DF31B49783DECF1D27C2800C1322B53B73344C (intptr_t ___sessionHandle0, intptr_t ___planeHandle1, intptr_t ___polygonXZ2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPlane_getPolygon", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPlane_getPolygon)(___sessionHandle0, ___planeHandle1, ___polygonXZ2);
+	#else
+	il2cppPInvokeFunc(___sessionHandle0, ___planeHandle1, ___polygonXZ2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PlaneApi/ExternApi::ArPlane_isPoseInExtents(System.IntPtr,System.IntPtr,System.IntPtr,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPlane_isPoseInExtents_mD77D47A1C10602DC21BDC3C570A8A62F2B2BD121 (intptr_t ___sessionHandle0, intptr_t ___planeHandle1, intptr_t ___poseHandle2, int32_t* ___isPoseInExtents3, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, intptr_t, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPlane_isPoseInExtents", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPlane_isPoseInExtents)(___sessionHandle0, ___planeHandle1, ___poseHandle2, ___isPoseInExtents3);
+	#else
+	il2cppPInvokeFunc(___sessionHandle0, ___planeHandle1, ___poseHandle2, ___isPoseInExtents3);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PlaneApi/ExternApi::ArPlane_isPoseInPolygon(System.IntPtr,System.IntPtr,System.IntPtr,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPlane_isPoseInPolygon_m4E4BACB3E975A01F0D2BBD515D89CDEEB79298E9 (intptr_t ___sessionHandle0, intptr_t ___planeHandle1, intptr_t ___poseHandle2, int32_t* ___isPoseInPolygon3, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, intptr_t, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPlane_isPoseInPolygon", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPlane_isPoseInPolygon)(___sessionHandle0, ___planeHandle1, ___poseHandle2, ___isPoseInPolygon3);
+	#else
+	il2cppPInvokeFunc(___sessionHandle0, ___planeHandle1, ___poseHandle2, ___isPoseInPolygon3);
+	#endif
+
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void GoogleARCoreInternal.PointApi/ExternApi::ArPoint_getPose(System.IntPtr,System.IntPtr,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPoint_getPose_m06768A47B477898F1190980D98EEA3FD7371CA8C (intptr_t ___session0, intptr_t ___point1, intptr_t ___out_pose2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPoint_getPose", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPoint_getPose)(___session0, ___point1, ___out_pose2);
+	#else
+	il2cppPInvokeFunc(___session0, ___point1, ___out_pose2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PointApi/ExternApi::ArPoint_getOrientationMode(System.IntPtr,System.IntPtr,GoogleARCoreInternal.ApiTrackedPointOrientationMode&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPoint_getOrientationMode_m112B1D77D8575E7BC365D881D41A725DD6CC03A3 (intptr_t ___session0, intptr_t ___point1, int32_t* ___orientationMode2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPoint_getOrientationMode", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPoint_getOrientationMode)(___session0, ___point1, ___orientationMode2);
+	#else
+	il2cppPInvokeFunc(___session0, ___point1, ___orientationMode2);
+	#endif
+
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void GoogleARCoreInternal.PointCloudApi/ExternApi::ArPointCloud_getTimestamp(System.IntPtr,System.IntPtr,System.Int64&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPointCloud_getTimestamp_mF21F77BA9F7DC4767783889BAE5F95307666D2F5 (intptr_t ___session0, intptr_t ___pointCloudHandle1, int64_t* ___timestamp2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, int64_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int64_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPointCloud_getTimestamp", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPointCloud_getTimestamp)(___session0, ___pointCloudHandle1, ___timestamp2);
+	#else
+	il2cppPInvokeFunc(___session0, ___pointCloudHandle1, ___timestamp2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PointCloudApi/ExternApi::ArPointCloud_getNumberOfPoints(System.IntPtr,System.IntPtr,System.Int32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPointCloud_getNumberOfPoints_mC0E704AD744E72EFD771FC610E4F8DFE26FAAB2B (intptr_t ___session0, intptr_t ___pointCloudHandle1, int32_t* ___pointCount2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, int32_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(int32_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPointCloud_getNumberOfPoints", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPointCloud_getNumberOfPoints)(___session0, ___pointCloudHandle1, ___pointCount2);
+	#else
+	il2cppPInvokeFunc(___session0, ___pointCloudHandle1, ___pointCount2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PointCloudApi/ExternApi::ArPointCloud_getData(System.IntPtr,System.IntPtr,System.IntPtr&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPointCloud_getData_m55B3DCDBDEEC678C86FBC28194D0B263F805C530 (intptr_t ___session0, intptr_t ___pointCloudHandle1, intptr_t* ___pointCloudData2, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t, intptr_t, intptr_t*);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t) + sizeof(intptr_t) + sizeof(intptr_t*);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPointCloud_getData", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPointCloud_getData)(___session0, ___pointCloudHandle1, ___pointCloudData2);
+	#else
+	il2cppPInvokeFunc(___session0, ___pointCloudHandle1, ___pointCloudData2);
+	#endif
+
+}
+// System.Void GoogleARCoreInternal.PointCloudApi/ExternApi::ArPointCloud_release(System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExternApi_ArPointCloud_release_m2F0AD5D91EC4A942A6F6B53A280884E1CA6CBCA7 (intptr_t ___pointCloudHandle0, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) (intptr_t);
+	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_arcore_sdk_INTERNAL
+	static PInvokeFunc il2cppPInvokeFunc;
+	if (il2cppPInvokeFunc == NULL)
+	{
+		int parameterSize = sizeof(intptr_t);
+		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("arcore_sdk"), "ArPointCloud_release", IL2CPP_CALL_DEFAULT, CHARSET_NOT_SPECIFIED, parameterSize, false);
+		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
+	}
+	#endif
+
+	// Native function invocation
+	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_arcore_sdk_INTERNAL
+	reinterpret_cast<PInvokeFunc>(ArPointCloud_release)(___pointCloudHandle0);
+	#else
+	il2cppPInvokeFunc(___pointCloudHandle0);
+	#endif
+
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Vuplex.WebView.Demos.PopupDemo/<>c__DisplayClass2_0::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass2_0__ctor_m89F16F33F912C9CA22E7B7E7F5B3F9C164DB7C45 (U3CU3Ec__DisplayClass2_0_tC41C42748D9087AB6B5F5894CD20D0D0A37D9404 * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m88880E0413421D13FD95325EDCE231707CE1F405(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Vuplex.WebView.Demos.PopupDemo/<>c__DisplayClass2_0::<Start>b__0(System.Object,System.EventArgs)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass2_0_U3CStartU3Eb__0_m40877448FA1E4FF20C1A8CA44A8583D4F091C924 (U3CU3Ec__DisplayClass2_0_tC41C42748D9087AB6B5F5894CD20D0D0A37D9404 * __this, RuntimeObject * ___s0, EventArgs_tBCAACA538A5195B6D6C8DFCC3524A2A4A67FD8BA * ___e1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventHandler_1__ctor_m1ED8A51B2B21AF02D592BAF0C6A28971951B331A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IWithPopups_t9CA38046FEC088BE7963D34C44EEF1370CC8CA54_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass2_0_U3CStartU3Eb__1_m4AF85CE427314BEA8504ABA2602BF9B4185E1CCC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2FD7C9707A574F6125F09847B38E0399F1DF53A2);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral60229673F65DBD4CFD3E012FC6A50D6F5CC17BB8);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7AA3E45010635E4BF799DF327E95258793DBEB51);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * V_1 = NULL;
+	EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * G_B4_0 = NULL;
+	RuntimeObject* G_B4_1 = NULL;
+	EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * G_B3_0 = NULL;
+	RuntimeObject* G_B3_1 = NULL;
+	{
+		// var webViewWithPopups = mainWebViewPrefab.WebView as IWithPopups;
+		WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * L_0 = __this->get_mainWebViewPrefab_0();
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_0, /*hidden argument*/NULL);
+		V_0 = ((RuntimeObject*)IsInst((RuntimeObject*)L_1, IWithPopups_t9CA38046FEC088BE7963D34C44EEF1370CC8CA54_il2cpp_TypeInfo_var));
+		// if (webViewWithPopups == null) {
+		RuntimeObject* L_2 = V_0;
+		if (L_2)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		// mainWebViewPrefab.WebView.LoadHtml(NOT_SUPPORTED_HTML);
+		WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * L_3 = __this->get_mainWebViewPrefab_0();
+		NullCheck(L_3);
+		RuntimeObject* L_4;
+		L_4 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_3, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		InterfaceActionInvoker1< String_t* >::Invoke(53 /* System.Void Vuplex.WebView.IWebView::LoadHtml(System.String) */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_4, _stringLiteral60229673F65DBD4CFD3E012FC6A50D6F5CC17BB8);
+		// return;
+		return;
+	}
+
+IL_002a:
+	{
+		// Debug.Log("Loading Pinterest as an example because it uses popups for third party login. Click 'Login', then select Facebook or Google to open a popup for authentication.");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(_stringLiteral7AA3E45010635E4BF799DF327E95258793DBEB51, /*hidden argument*/NULL);
+		// mainWebViewPrefab.WebView.LoadUrl("https://pinterest.com");
+		WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * L_5 = __this->get_mainWebViewPrefab_0();
+		NullCheck(L_5);
+		RuntimeObject* L_6;
+		L_6 = BaseWebViewPrefab_get_WebView_m95629F8B1256FBADB9ADC7770DE7958F2EA23156(L_5, /*hidden argument*/NULL);
+		NullCheck(L_6);
+		InterfaceActionInvoker1< String_t* >::Invoke(54 /* System.Void Vuplex.WebView.IWebView::LoadUrl(System.String) */, IWebView_t2A8AD5915D9A2817DDF17237F2A4BE7704DDACC0_il2cpp_TypeInfo_var, L_6, _stringLiteral2FD7C9707A574F6125F09847B38E0399F1DF53A2);
+		// webViewWithPopups.SetPopupMode(PopupMode.LoadInNewWebView);
+		RuntimeObject* L_7 = V_0;
+		NullCheck(L_7);
+		InterfaceActionInvoker1< int32_t >::Invoke(0 /* System.Void Vuplex.WebView.IWithPopups::SetPopupMode(Vuplex.WebView.PopupMode) */, IWithPopups_t9CA38046FEC088BE7963D34C44EEF1370CC8CA54_il2cpp_TypeInfo_var, L_7, 1);
+		// webViewWithPopups.PopupRequested += (webView, eventArgs) => {
+		//     Debug.Log("Popup opened with URL: " + eventArgs.Url);
+		//     var popupPrefab = WebViewPrefab.Instantiate(eventArgs.WebView);
+		//     _focusedPrefab = popupPrefab;
+		//     popupPrefab.transform.parent = transform;
+		//     // Place the popup in front of the main webview.
+		//     popupPrefab.transform.localPosition = new Vector3(0, 0, 0.39f);
+		//     popupPrefab.transform.localEulerAngles = new Vector3(0, 180, 0);
+		//     popupPrefab.Initialized += (sender, initializedEventArgs) => {
+		//         popupPrefab.WebView.CloseRequested += (popupWebView, closeEventArgs) => {
+		//             Debug.Log("Closing the popup");
+		//             _focusedPrefab = mainWebViewPrefab;
+		//             popupPrefab.Destroy();
+		//         };
+		//     };
+		// };
+		RuntimeObject* L_8 = V_0;
+		EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * L_9 = __this->get_U3CU3E9__1_2();
+		EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * L_10 = L_9;
+		G_B3_0 = L_10;
+		G_B3_1 = L_8;
+		if (L_10)
+		{
+			G_B4_0 = L_10;
+			G_B4_1 = L_8;
+			goto IL_0070;
+		}
+	}
+	{
+		EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * L_11 = (EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 *)il2cpp_codegen_object_new(EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1_il2cpp_TypeInfo_var);
+		EventHandler_1__ctor_m1ED8A51B2B21AF02D592BAF0C6A28971951B331A(L_11, __this, (intptr_t)((intptr_t)U3CU3Ec__DisplayClass2_0_U3CStartU3Eb__1_m4AF85CE427314BEA8504ABA2602BF9B4185E1CCC_RuntimeMethod_var), /*hidden argument*/EventHandler_1__ctor_m1ED8A51B2B21AF02D592BAF0C6A28971951B331A_RuntimeMethod_var);
+		EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * L_12 = L_11;
+		V_1 = L_12;
+		__this->set_U3CU3E9__1_2(L_12);
+		EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * L_13 = V_1;
+		G_B4_0 = L_13;
+		G_B4_1 = G_B3_1;
+	}
+
+IL_0070:
+	{
+		NullCheck(G_B4_1);
+		InterfaceActionInvoker1< EventHandler_1_tA08D5727EC5229185D3CA6983612ED4BBAC8A6B1 * >::Invoke(1 /* System.Void Vuplex.WebView.IWithPopups::add_PopupRequested(System.EventHandler`1<Vuplex.WebView.PopupRequestedEventArgs>) */, IWithPopups_t9CA38046FEC088BE7963D34C44EEF1370CC8CA54_il2cpp_TypeInfo_var, G_B4_1, G_B4_0);
+		// };
+		return;
+	}
+}
+// System.Void Vuplex.WebView.Demos.PopupDemo/<>c__DisplayClass2_0::<Start>b__1(System.Object,Vuplex.WebView.PopupRequestedEventArgs)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass2_0_U3CStartU3Eb__1_m4AF85CE427314BEA8504ABA2602BF9B4185E1CCC (U3CU3Ec__DisplayClass2_0_tC41C42748D9087AB6B5F5894CD20D0D0A37D9404 * __this, RuntimeObject * ___webView0, PopupRequestedEventArgs_tFE73B40E15DF3BA5CF8D3A214D805810C6F6637B * ___eventArgs1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass2_1_U3CStartU3Eb__2_m92226C13C0C7250A956823BB215EFC75CEEF38AB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral98F35BE03885D91D5007136006E304D1222027FF);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * V_0 = NULL;
+	{
+		U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * L_0 = (U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C *)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C_il2cpp_TypeInfo_var);
+		U3CU3Ec__DisplayClass2_1__ctor_mE2C11D4C0A83756B97BA51A0A2340C245BA837CA(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * L_1 = V_0;
+		NullCheck(L_1);
+		L_1->set_CSU24U3CU3E8__locals1_1(__this);
+		// Debug.Log("Popup opened with URL: " + eventArgs.Url);
+		PopupRequestedEventArgs_tFE73B40E15DF3BA5CF8D3A214D805810C6F6637B * L_2 = ___eventArgs1;
+		NullCheck(L_2);
+		String_t* L_3 = L_2->get_Url_1();
+		String_t* L_4;
+		L_4 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteral98F35BE03885D91D5007136006E304D1222027FF, L_3, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var);
+		Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8(L_4, /*hidden argument*/NULL);
+		// var popupPrefab = WebViewPrefab.Instantiate(eventArgs.WebView);
+		U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * L_5 = V_0;
+		PopupRequestedEventArgs_tFE73B40E15DF3BA5CF8D3A214D805810C6F6637B * L_6 = ___eventArgs1;
+		NullCheck(L_6);
+		RuntimeObject* L_7 = L_6->get_WebView_2();
+		WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * L_8;
+		L_8 = WebViewPrefab_Instantiate_mCE00EADBB583350C43CE9AAF4D62757E5CD21C59(L_7, /*hidden argument*/NULL);
+		NullCheck(L_5);
+		L_5->set_popupPrefab_0(L_8);
+		// _focusedPrefab = popupPrefab;
+		PopupDemo_t85AC9E8DBB151FC26D422502FCA33DD4A55663B8 * L_9 = __this->get_U3CU3E4__this_1();
+		U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * L_10 = V_0;
+		NullCheck(L_10);
+		WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * L_11 = L_10->get_popupPrefab_0();
+		NullCheck(L_9);
+		L_9->set__focusedPrefab_4(L_11);
+		// popupPrefab.transform.parent = transform;
+		U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * L_12 = V_0;
+		NullCheck(L_12);
+		WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * L_13 = L_12->get_popupPrefab_0();
+		NullCheck(L_13);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_14;
+		L_14 = Component_get_transform_mE8496EBC45BEB1BADB5F314960F1DF1C952FA11F(L_13, /*hidden argument*/NULL);
+		PopupDemo_t85AC9E8DBB151FC26D422502FCA33DD4A55663B8 * L_15 = __this->get_U3CU3E4__this_1();
+		NullCheck(L_15);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_16;
+		L_16 = Component_get_transform_mE8496EBC45BEB1BADB5F314960F1DF1C952FA11F(L_15, /*hidden argument*/NULL);
+		NullCheck(L_14);
+		Transform_set_parent_mEAE304E1A804E8B83054CEECB5BF1E517196EC13(L_14, L_16, /*hidden argument*/NULL);
+		// popupPrefab.transform.localPosition = new Vector3(0, 0, 0.39f);
+		U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * L_17 = V_0;
+		NullCheck(L_17);
+		WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * L_18 = L_17->get_popupPrefab_0();
+		NullCheck(L_18);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_19;
+		L_19 = Component_get_transform_mE8496EBC45BEB1BADB5F314960F1DF1C952FA11F(L_18, /*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_20;
+		memset((&L_20), 0, sizeof(L_20));
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_20), (0.0f), (0.0f), (0.389999986f), /*hidden argument*/NULL);
+		NullCheck(L_19);
+		Transform_set_localPosition_m2A2B0033EF079077FAE7C65196078EAF5D041AFC(L_19, L_20, /*hidden argument*/NULL);
+		// popupPrefab.transform.localEulerAngles = new Vector3(0, 180, 0);
+		U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * L_21 = V_0;
+		NullCheck(L_21);
+		WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * L_22 = L_21->get_popupPrefab_0();
+		NullCheck(L_22);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_23;
+		L_23 = Component_get_transform_mE8496EBC45BEB1BADB5F314960F1DF1C952FA11F(L_22, /*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_24;
+		memset((&L_24), 0, sizeof(L_24));
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_24), (0.0f), (180.0f), (0.0f), /*hidden argument*/NULL);
+		NullCheck(L_23);
+		Transform_set_localEulerAngles_mB63076996124DC76E6902A81677A6E3C814C693B(L_23, L_24, /*hidden argument*/NULL);
+		// popupPrefab.Initialized += (sender, initializedEventArgs) => {
+		//     popupPrefab.WebView.CloseRequested += (popupWebView, closeEventArgs) => {
+		//         Debug.Log("Closing the popup");
+		//         _focusedPrefab = mainWebViewPrefab;
+		//         popupPrefab.Destroy();
+		//     };
+		// };
+		U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * L_25 = V_0;
+		NullCheck(L_25);
+		WebViewPrefab_tA7A457664CF32A258C3B6796D1E583BF308D5D53 * L_26 = L_25->get_popupPrefab_0();
+		U3CU3Ec__DisplayClass2_1_t498A50FD092828788CDC35AC0C6EED8FA009754C * L_27 = V_0;
+		EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B * L_28 = (EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B *)il2cpp_codegen_object_new(EventHandler_t084491E53EC706ACA0A15CA17488C075B4ECA44B_il2cpp_TypeInfo_var);
+		EventHandler__ctor_m9D4CC7B806AFF3B790E5E1A3B891F6775A146B78(L_28, L_27, (intptr_t)((intptr_t)U3CU3Ec__DisplayClass2_1_U3CStartU3Eb__2_m92226C13C0C7250A956823BB215EFC75CEEF38AB_RuntimeMethod_var), /*hidden argument*/NULL);
+		NullCheck(L_26);
+		BaseWebViewPrefab_add_Initialized_m7F89E89A30E53CEEB4C5252988A929E03B30DEED(L_26, L_28, /*hidden argument*/NULL);
+		// };
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
 #endif
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -29396,6 +30177,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Styles__cctor_m0C8D2A1B018039E7B1145FAF2
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method)
+{
+	{
+		float L_0 = ___x0;
+		__this->set_x_2(L_0);
+		float L_1 = ___y1;
+		__this->set_y_3(L_1);
+		float L_2 = ___z2;
+		__this->set_z_4(L_2);
+		return;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Promise_get_CurState_mBE60E772D62CB2C8449BF67F3A2106C0E0FA720D_inline (Promise_tEDBFD36A7313DBF9B81414AB363A0171BF4B0CE7 * __this, const RuntimeMethod* method)
 {
 	{

@@ -10,11 +10,10 @@ public class toggleWebView : MonoBehaviour
     public GameObject webViewPrefab;
 
     public TapToPlaceObject PlaceObjectFunction;
-    public GameObject taptoplacetext;
-    public GameObject caliPage;
-    public GameObject mainPage;
     public GameObject fullBnt;
 
+
+    private string currentStatus = "";
     public void turnOffWeb()
     {
         if (webViewPrefab.activeSelf)
@@ -36,16 +35,16 @@ public class toggleWebView : MonoBehaviour
     private void Update()
     {
         //change the check to data-driven, when user press enter ar button, it will open place Object. 
-        if (WebInfoStats.Stats.type != null)
+        if (!string.IsNullOrEmpty(WebInfoStats.Stats.type))
         {
-            openPlaceObject();
-            //taptoplacetext.SetActive(true);
-            //caliPage.SetActive(true);
-            //mainPage.SetActive(true);
-            fullBnt.SetActive(true);
-            mainPage.SetActive(true);
+            if (WebInfoStats.Stats.type != currentStatus)
+            {
+                openPlaceObject();
+                fullBnt.SetActive(true);
 
-
+                currentStatus = WebInfoStats.Stats.type;
+            }
+            
         }
     }
 
