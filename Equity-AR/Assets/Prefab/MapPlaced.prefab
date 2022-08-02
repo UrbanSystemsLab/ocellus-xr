@@ -677,7 +677,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 0
+          isActive: 1
           sublayerName: Extreme Flooding
           geometryType: 2
           layerName: nycFlood1

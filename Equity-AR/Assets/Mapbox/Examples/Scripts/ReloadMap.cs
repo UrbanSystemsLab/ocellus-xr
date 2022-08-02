@@ -60,8 +60,10 @@
 			if (null != response.Features && response.Features.Count > 0)
 			{
 				int zoom = _map.AbsoluteZoom;
+				//Debug.Log("COULD NOT FIND SOMETHING HERE AT RELOAD.CS");
 				_map.UpdateMap(response.Features[0].Center, zoom);
-			}
+				//Debug.Log("COULD NOT FIND SOMETHING HERE AT AFTER THE RELOAD.CS");
+            }
 		}
 
 		void ForwardGeocoder_OnGeocoderResponse(ForwardGeocodeResponse response, bool resetCamera)
@@ -77,7 +79,7 @@
 			ForwardGeocoder_OnGeocoderResponse(response);
 		}
 
-		void Reload(float value)
+		public void Reload(float value)
 		{
 			if (_reloadRoutine != null)
 			{

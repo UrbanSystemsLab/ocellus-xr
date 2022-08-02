@@ -31422,6 +31422,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MinMaxPair__ctor_mF07DE4616F7B5C4AE0764E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MinimizeScreenFeature_Start_m4E9CC4AE079B8C6796EAE3C69C4B0A9F72ACAFE2 (MinimizeScreenFeature_tB99FCF0D39ED19B574466D1800C68AD919531C4F * __this, const RuntimeMethod* method)
 {
 	{
+		// UIFeature.SetActive(true);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_0 = __this->get_UIFeature_6();
+		NullCheck(L_0);
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_0, (bool)1, /*hidden argument*/NULL);
 		// }
 		return;
 	}
