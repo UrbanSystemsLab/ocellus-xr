@@ -5,15 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Lat&Long.unity
     guid: 53902d2aa8c4c421ba9df082479dc432
   - enabled: 0
     path: Assets/Scenes/Switch 1 Map.unity
     guid: f9021876c72b54bc49d87e2f51dee66d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WorldScaleAR.unity
     guid: bed6a69e1d5bd4d76a20e27300e201da
+  - enabled: 1
+    path: Assets/Scenes/TestingForLive.unity
+    guid: 7169cb5db3d334b46884abca2b058889
   - enabled: 0
     path: Assets/Vuplex/WebView/Demos/Scenes/SimpleWebViewDemo.unity
     guid: 10cf299739e784ee794fdc27cb3415bf

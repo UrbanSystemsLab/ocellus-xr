@@ -1,5 +1,5 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MinimizeScreenFeature.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs">
     <Files>
       <File FileName="Assets/Scripts/MessageClass.cs" Line="1" Column="1" IsPinned="True" />
       <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" IsPinned="True" />
@@ -8,48 +8,21 @@
       <File FileName="Assets/Scripts/AskLocation.cs" />
       <File FileName="Assets/Scripts/WebInfoStats.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="128" Column="14" />
       <File FileName="Assets/Scripts/toggleWebView.cs" />
       <File FileName="Assets/Scripts/MapManager.cs" />
       <File FileName="Assets/Scripts/SceneController.cs" />
-      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" Line="124" Column="34" />
+      <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifiers/PrefabModifier.cs" />
       <File FileName="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/LogEntry.cs" />
       <File FileName="Assets/Mapbox/Unity/SourceLayers/VectorLayer.cs" />
       <File FileName="Assets/Mapbox/Unity/LayerProperties/VectorSubLayerProperties.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/LayerVisualizers/VectorLayerVisualizer.cs" />
-      <File FileName="Assets/Scripts/SliderHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" Line="26" Column="18" />
-      <File FileName="Assets/Scripts/MinimizeScreenFeature.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SliderHandler.cs" />
+      <File FileName="Assets/Mapbox/Examples/Scripts/ReloadMap.cs" />
+      <File FileName="Assets/Scripts/MinimizeScreenFeature.cs" />
+      <File FileName="Assets/MapboxAR/Scripts/ManualSync/UpdateMapPosByARPlaneY.cs" Line="1" Column="1" />
+      <File FileName="Assets/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" Line="35" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Equity-AR" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Mapbox" expanded="True">
-                  <Node name="Examples" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                  <Node name="Unity" expanded="True">
-                    <Node name="Map" expanded="True" />
-                    <Node name="MeshGeneration" expanded="True">
-                      <Node name="LayerVisualizers" expanded="True" />
-                      <Node name="Modifiers" expanded="True">
-                        <Node name="GameObjectModifiers" expanded="True" />
-                      </Node>
-                    </Node>
-                  </Node>
-                </Node>
-                <Node name="Scripts" expanded="True">
-                  <Node name="MinimizeScreenFeature.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="b43e274b-8045-4fa1-bfdb-fa0b240b3885" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
