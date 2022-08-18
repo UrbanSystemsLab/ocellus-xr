@@ -17183,7 +17183,7 @@ IL_0338:
 			L_139 = Object_GetType_m571FE8360C10B98C23AAF1F066D92C08CC94F45B(L_138, /*hidden argument*/NULL);
 			NullCheck(L_137);
 			bool L_140;
-			L_140 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_137, L_139);
+			L_140 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_137, L_139);
 			if (!L_140)
 			{
 				goto IL_036d;

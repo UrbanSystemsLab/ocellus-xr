@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+    path: Assets/Scenes/Lat&Long 1.unity
+    guid: a5b15254ec85543d2a55a5082fd71e9f
+  - enabled: 0
     path: Assets/Scenes/Lat&Long.unity
     guid: 53902d2aa8c4c421ba9df082479dc432
   - enabled: 0
@@ -36,8 +39,6 @@ EditorBuildSettings:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 252eb88e3db0e42c69b0ed5046b82f72,
       type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 6218fda90d9b94aedbe5db45788edda0,
-      type: 2}
-    com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 6218fda90d9b94aedbe5db45788edda0,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7c7b6db9a8bca4c13997b84277cf96fb,
       type: 2}

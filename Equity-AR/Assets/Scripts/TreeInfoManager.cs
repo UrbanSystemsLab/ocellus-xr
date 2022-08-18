@@ -24,8 +24,8 @@ public class TreeInfoManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCam = GameObject.Find("Main Camera").GetComponent<Transform>();
-        treeNum = GameObject.Find("TreeNum").GetComponent<Text>();
+        mainCam = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
+        //treeNum = GameObject.Find("TreeNum").GetComponent<Text>();
         mytransform = GetComponent<Transform>();
     }
 

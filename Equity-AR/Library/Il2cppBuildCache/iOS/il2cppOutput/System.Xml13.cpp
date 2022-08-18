@@ -24654,7 +24654,7 @@ IL_00b3:
 			RuntimeObject * L_34 = ___memberValue1;
 			NullCheck(L_33);
 			bool L_35;
-			L_35 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(112 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_33, L_34);
+			L_35 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(113 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_33, L_34);
 			if (!L_35)
 			{
 				goto IL_00fb;
@@ -24688,7 +24688,7 @@ IL_00d8:
 			L_42 = TypeData_get_Type_mE27C48C269E3CC11EDE71C4D9C45B3C51C2B1B3D_inline(L_41, /*hidden argument*/NULL);
 			NullCheck(L_39);
 			bool L_43;
-			L_43 = VirtFuncInvoker1< bool, Type_t * >::Invoke(111 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_39, L_42);
+			L_43 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_39, L_42);
 			if (!L_43)
 			{
 				goto IL_00fb;
@@ -25501,7 +25501,7 @@ IL_000c:
 		Type_t * L_4 = L_3->get_type_4();
 		NullCheck(L_2);
 		bool L_5;
-		L_5 = VirtFuncInvoker1< bool, Type_t * >::Invoke(116 /* System.Boolean System.Type::Equals(System.Type) */, L_2, L_4);
+		L_5 = VirtFuncInvoker1< bool, Type_t * >::Invoke(117 /* System.Boolean System.Type::Equals(System.Type) */, L_2, L_4);
 		if (L_5)
 		{
 			goto IL_0021;

@@ -87,6 +87,7 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void UpdatePlacementIndicator()
     {
+        Debug.Log(placementIndicator.transform.position);
         if (placementPoseIsValid)
         {
             placementIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);

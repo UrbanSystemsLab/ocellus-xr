@@ -30487,7 +30487,7 @@ IL_0092:
 		Type_t * L_18 = ___underlyingType0;
 		NullCheck(L_17);
 		bool L_19;
-		L_19 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_17, L_18);
+		L_19 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_17, L_18);
 		V_3 = L_19;
 		bool L_20 = V_3;
 		if (!L_20)
@@ -30768,7 +30768,7 @@ IL_0269:
 		Type_t * L_101 = ___underlyingType0;
 		NullCheck(L_101);
 		Type_t * L_102;
-		L_102 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_101);
+		L_102 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_101);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_103 = { reinterpret_cast<intptr_t> (IEnumerable_1_t2DA210D3B033E1BEBFC81C153FA1C67749C6D264_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_104;
@@ -31004,7 +31004,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonArrayContract_CreateWrappe
 		Type_t * L_12 = __this->get__genericCollectionDefinitionType_29();
 		NullCheck(L_12);
 		Type_t * L_13;
-		L_13 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_12);
+		L_13 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_12);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_14 = { reinterpret_cast<intptr_t> (IEnumerable_1_t2DA210D3B033E1BEBFC81C153FA1C67749C6D264_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_15;
@@ -34310,7 +34310,7 @@ IL_0123:
 		L_58 = JsonContract_get_CreatedType_m940D58058BEA450E1EDA3ADA2AFB5530F139442E(__this, /*hidden argument*/NULL);
 		NullCheck(L_57);
 		bool L_59;
-		L_59 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_57, L_58);
+		L_59 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_57, L_58);
 		JsonDictionaryContract_set_ShouldCreateWrapper_m5A5242C1C58AD6E085FE1B41DC45A17CC17413FC_inline(__this, (bool)((((int32_t)L_59) == ((int32_t)0))? 1 : 0), /*hidden argument*/NULL);
 		Type_t * L_60 = V_0;
 		JsonDictionaryContract_set_DictionaryKeyType_m78D715D4A608BFE1E1668785B7EE0D9FB03A91B6_inline(__this, L_60, /*hidden argument*/NULL);
@@ -35277,7 +35277,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonObjectContract_set_ExtensionDataValu
 		Type_t * L_4 = ___value0;
 		NullCheck(L_3);
 		bool L_5;
-		L_5 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_3, L_4);
+		L_5 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_3, L_4);
 		G_B3_0 = ((int32_t)(L_5));
 		G_B3_1 = G_B1_0;
 		goto IL_001f;
@@ -37604,7 +37604,7 @@ IL_0066:
 		L_23 = JsonProperty_get_DeclaringType_mA15B9704351196FE3FFC5240CE659021CB36E225_inline(L_22, /*hidden argument*/NULL);
 		NullCheck(L_21);
 		bool L_24;
-		L_24 = VirtFuncInvoker1< bool, Type_t * >::Invoke(111 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_21, L_23);
+		L_24 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_21, L_23);
 		if (L_24)
 		{
 			goto IL_00a6;
@@ -37681,7 +37681,7 @@ IL_00b9:
 		L_39 = JsonProperty_get_DeclaringType_mA15B9704351196FE3FFC5240CE659021CB36E225_inline(L_38, /*hidden argument*/NULL);
 		NullCheck(L_37);
 		bool L_40;
-		L_40 = VirtFuncInvoker1< bool, Type_t * >::Invoke(111 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_37, L_39);
+		L_40 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_37, L_39);
 		if (L_40)
 		{
 			goto IL_00ef;
