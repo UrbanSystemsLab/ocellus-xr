@@ -1,23 +1,25 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - AskLocation
+    - ARPrerequisiteInfo
+    - DistanceToCheckpoint
+    - DontDestroyOnLoad
     - FaceCam
-    - JSCom
-    - Lean.Touch.LeanPinchScale
-    - Lean.Touch.LeanTouch
-    - Lean.Touch.LeanTwistRotateAxis
-    - MainPage
+    - MapManager
     - Mapbox.Examples.CameraBillboard
     - Mapbox.Examples.DragableDirectionWaypoint
     - Mapbox.Examples.FeatureUiMarker
+    - Mapbox.Examples.FollowTargetTransform
     - Mapbox.Examples.ForwardGeocodeUserInput
     - Mapbox.Examples.LabelTextSetter
     - Mapbox.Examples.MakiHelper
+    - Mapbox.Examples.ManualTouchCamera
     - Mapbox.Examples.PoiLabelTextSetter
     - Mapbox.Examples.PoiMarkerHelper
     - Mapbox.Examples.PositionWithLocationProvider
     - Mapbox.Examples.ReloadMap
+    - Mapbox.Examples.RelocateMapByGPS
+    - Mapbox.Examples.RotateOnYTargetTransform
     - Mapbox.Examples.TextMeshOutline
     - Mapbox.Examples.UpdateMapPosByARPlaneY
     - Mapbox.Unity.Location.DeviceLocationProvider
@@ -28,27 +30,26 @@ ScriptsOnlyBuild:
     - Mapbox.Unity.Location.TransformLocationProvider
     - Mapbox.Unity.Map.AbstractMap
     - Mapbox.Unity.Map.InitializeMapWithLocationProvider
+    - Mapbox.Unity.Map.MapVisualizer
     - Mapbox.Unity.MeshGeneration.Data.AtlasInfo
     - Mapbox.Unity.MeshGeneration.Modifiers.ModifierStack
     - Mapbox.Unity.MeshGeneration.Modifiers.PrefabModifier
     - Mapbox.Unity.MeshGeneration.Modifiers.ReplaceFeatureCollectionModifier
+    - Mapbox.Unity.Utilities.Console
     - Mapbox.Unity.Utilities.DebugTools.SceneData
     - Mapbox.Unity.Utilities.DebugTools.ScenesList
     - Mapbox.Unity.Utilities.Runnable
     - Marker
-    - MessageClass
-    - MinimizeScreenFeature
     - RayCastInteraction
+    - SceneController
     - ScriptablePalette
     - SliderHandler
-    - Switcher
-    - TapToPlaceObject
-    - ToggleManager
     - TreeInfoManager
+    - UnityARInterface.ARController
+    - UnityARInterface.ARFocusSquare
+    - UnityARInterface.ARPlaneVisualizer
+    - UnityARInterface.ARPointCloudVisualizer
     - UnityARKitPluginSettings
-    - UnityEngine.XR.ARFoundation.Samples.EnableGeoAnchors
-    - UpdateLocation
-    - VerticalFullScreenUI
     - VerticalLayoutUI
     - Vuplex.WebView.CanvasKeyboard
     - Vuplex.WebView.CanvasPointerInputDetector
@@ -58,8 +59,7 @@ ScriptsOnlyBuild:
     - Vuplex.WebView.Internal.ViewportMaterialView
     - Vuplex.WebView.Keyboard
     - Vuplex.WebView.WebViewPrefab
-    - WebInfoStats
-    - reloadWeb
+    - moveDistance
     SA.iOS.XCode.dll:
     - SA.iOS.XCode.ISD_Settings
     SA.iOS.dll:
@@ -91,7 +91,8 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
     - UnityEngine.XR.ARFoundation.ARInputManager
-    - UnityEngine.XR.ARFoundation.ARRaycastManager
+    - UnityEngine.XR.ARFoundation.AROcclusionManager
+    - UnityEngine.XR.ARFoundation.ARPoseDriver
     - UnityEngine.XR.ARFoundation.ARSession
     - UnityEngine.XR.ARFoundation.ARSessionOrigin
     Unity.XR.ARKit.Editor.dll:
@@ -113,9 +114,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-    UnityEngine.SpatialTracking.dll:
-    - UnityEngine.SpatialTracking.TrackedPoseDriver
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.BaseInput
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
@@ -128,12 +128,15 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.RawImage
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
+    - UnityEngine.UI.ToggleGroup
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/Lat&Long 1.unity:
+    Assets/Scenes/TestingForLive.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -154,13 +157,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 81
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -172,14 +177,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 980}
-    - Class: 114
-      Script: {instanceID: 1816}
-    - Class: 114
-      Script: {instanceID: 1818}
+      Script: {instanceID: 984}
     - Class: 114
       Script: {instanceID: 1820}
     - Class: 114
@@ -187,176 +186,190 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1824}
     - Class: 114
-      Script: {instanceID: 1826}
+      Script: {instanceID: 1828}
     - Class: 114
-      Script: {instanceID: 1832}
+      Script: {instanceID: 1830}
     - Class: 114
-      Script: {instanceID: 1974}
+      Script: {instanceID: 1834}
     - Class: 114
-      Script: {instanceID: 1988}
+      Script: {instanceID: 1836}
     - Class: 114
-      Script: {instanceID: 2014}
+      Script: {instanceID: 1978}
+    - Class: 114
+      Script: {instanceID: 1992}
     - Class: 114
       Script: {instanceID: 2018}
     - Class: 114
-      Script: {instanceID: 2148}
+      Script: {instanceID: 2022}
     - Class: 114
-      Script: {instanceID: 2228}
+      Script: {instanceID: 2154}
     - Class: 114
-      Script: {instanceID: 2476}
+      Script: {instanceID: 2234}
     - Class: 114
-      Script: {instanceID: 2504}
+      Script: {instanceID: 2486}
     - Class: 114
       Script: {instanceID: 2514}
     - Class: 114
-      Script: {instanceID: 2554}
+      Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2704}
+      Script: {instanceID: 2566}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2716}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2724}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2786}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 2832}
     - Class: 114
-      Script: {instanceID: 3070}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 3230}
+      Script: {instanceID: 3016}
     - Class: 114
-      Script: {instanceID: 3288}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3516}
+      Script: {instanceID: 3250}
+    - Class: 114
+      Script: {instanceID: 3308}
+    - Class: 114
+      Script: {instanceID: 3392}
+    - Class: 114
+      Script: {instanceID: 3514}
     - Class: 114
       Script: {instanceID: 3540}
     - Class: 114
-      Script: {instanceID: 3602}
+      Script: {instanceID: 3566}
     - Class: 114
-      Script: {instanceID: 3704}
+      Script: {instanceID: 3630}
     - Class: 114
-      Script: {instanceID: 3710}
-    - Class: 114
-      Script: {instanceID: 3722}
+      Script: {instanceID: 3732}
     - Class: 114
       Script: {instanceID: 3738}
     - Class: 114
-      Script: {instanceID: 3810}
+      Script: {instanceID: 3840}
     - Class: 114
-      Script: {instanceID: 3850}
+      Script: {instanceID: 3918}
     - Class: 114
-      Script: {instanceID: 3912}
+      Script: {instanceID: 3944}
     - Class: 114
-      Script: {instanceID: 4000}
+      Script: {instanceID: 4032}
     - Class: 114
-      Script: {instanceID: 4186}
+      Script: {instanceID: 4216}
     - Class: 114
-      Script: {instanceID: 4278}
+      Script: {instanceID: 4306}
     - Class: 114
-      Script: {instanceID: 4300}
+      Script: {instanceID: 4328}
     - Class: 114
-      Script: {instanceID: 4350}
+      Script: {instanceID: 4402}
     - Class: 114
-      Script: {instanceID: 4372}
+      Script: {instanceID: 4422}
     - Class: 114
-      Script: {instanceID: 4392}
+      Script: {instanceID: 4660}
     - Class: 114
-      Script: {instanceID: 4520}
+      Script: {instanceID: 4858}
     - Class: 114
-      Script: {instanceID: 4628}
+      Script: {instanceID: 4948}
     - Class: 114
-      Script: {instanceID: 4650}
+      Script: {instanceID: 5178}
     - Class: 114
-      Script: {instanceID: 4916}
+      Script: {instanceID: 5256}
     - Class: 114
-      Script: {instanceID: 4966}
+      Script: {instanceID: 5628}
     - Class: 114
-      Script: {instanceID: 5220}
+      Script: {instanceID: 5632}
     - Class: 114
-      Script: {instanceID: 5590}
+      Script: {instanceID: 5714}
     - Class: 114
-      Script: {instanceID: 5594}
+      Script: {instanceID: 5728}
     - Class: 114
-      Script: {instanceID: 5688}
+      Script: {instanceID: 5748}
     - Class: 114
-      Script: {instanceID: 5708}
+      Script: {instanceID: 5752}
     - Class: 114
-      Script: {instanceID: 5712}
+      Script: {instanceID: 5758}
     - Class: 114
-      Script: {instanceID: 5718}
+      Script: {instanceID: 5816}
     - Class: 114
-      Script: {instanceID: 5776}
+      Script: {instanceID: 5894}
     - Class: 114
-      Script: {instanceID: 5904}
+      Script: {instanceID: 5946}
     - Class: 114
-      Script: {instanceID: 6072}
+      Script: {instanceID: 5998}
     - Class: 114
-      Script: {instanceID: 6172}
+      Script: {instanceID: 6114}
     - Class: 114
-      Script: {instanceID: 6192}
+      Script: {instanceID: 6140}
     - Class: 114
-      Script: {instanceID: 6262}
+      Script: {instanceID: 6214}
+    - Class: 114
+      Script: {instanceID: 6234}
     - Class: 114
       Script: {instanceID: 6306}
     - Class: 114
-      Script: {instanceID: 6310}
+      Script: {instanceID: 6394}
     - Class: 114
-      Script: {instanceID: 6352}
+      Script: {instanceID: 6396}
     - Class: 114
-      Script: {instanceID: 6412}
+      Script: {instanceID: 6456}
     - Class: 114
-      Script: {instanceID: 6446}
+      Script: {instanceID: 6490}
     - Class: 114
-      Script: {instanceID: 6572}
+      Script: {instanceID: 6618}
     - Class: 114
-      Script: {instanceID: 6678}
+      Script: {instanceID: 6760}
     - Class: 114
-      Script: {instanceID: 6714}
+      Script: {instanceID: 6860}
     - Class: 114
-      Script: {instanceID: 6812}
+      Script: {instanceID: 7008}
     - Class: 114
-      Script: {instanceID: 6960}
+      Script: {instanceID: 7018}
     - Class: 114
-      Script: {instanceID: 6996}
+      Script: {instanceID: 7046}
     - Class: 114
-      Script: {instanceID: 7444}
+      Script: {instanceID: 7194}
     - Class: 114
-      Script: {instanceID: 7568}
+      Script: {instanceID: 7326}
     - Class: 114
-      Script: {instanceID: 7586}
+      Script: {instanceID: 7504}
     - Class: 114
       Script: {instanceID: 7626}
     - Class: 114
-      Script: {instanceID: 7646}
+      Script: {instanceID: 7630}
     - Class: 114
-      Script: {instanceID: 7934}
+      Script: {instanceID: 7648}
     - Class: 114
-      Script: {instanceID: 8056}
+      Script: {instanceID: 7690}
     - Class: 114
-      Script: {instanceID: 8084}
+      Script: {instanceID: 7872}
     - Class: 114
-      Script: {instanceID: 8126}
+      Script: {instanceID: 8008}
     - Class: 114
-      Script: {instanceID: 8292}
+      Script: {instanceID: 8162}
     - Class: 114
-      Script: {instanceID: 8624}
+      Script: {instanceID: 8184}
     - Class: 114
-      Script: {instanceID: 8716}
+      Script: {instanceID: 8622}
     - Class: 114
-      Script: {instanceID: 8718}
+      Script: {instanceID: 8710}
     - Class: 114
-      Script: {instanceID: 8738}
+      Script: {instanceID: 8806}
     - Class: 114
-      Script: {instanceID: 8786}
+      Script: {instanceID: 8826}
     - Class: 114
-      Script: {instanceID: 8962}
+      Script: {instanceID: 8876}
     - Class: 114
-      Script: {instanceID: 9006}
+      Script: {instanceID: 9054}
     - Class: 114
-      Script: {instanceID: 27104}
+      Script: {instanceID: 9100}
+    - Class: 114
+      Script: {instanceID: 9122}
     - Class: 115
       Script: {instanceID: 0}
+    - Class: 124
+      Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
@@ -365,6 +378,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -377,8 +394,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
-      Script: {instanceID: 0}
-    - Class: 258
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
@@ -1129,7 +1144,7 @@ ScriptsOnlyBuild:
     className: InputActionImporterEditor
   - hash:
       serializedVersion: 2
-      Hash: 5c801206f6ed265432f6f97d65d985ab
+      Hash: 3e1b29f6eb1b0fc642aa6b594051f0b5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ToggleManager
@@ -2833,6 +2848,12 @@ ScriptsOnlyBuild:
     className: MainScript
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.XR.ARFoundation.Samples
+    className: EnableGeoAnchors
+  - hash:
+      serializedVersion: 2
       Hash: ba6ef9e2082e09d9399eaef28d94d812
     assemblyName: Assembly-CSharp.dll
     namespaceName: Mapbox.Unity.MeshGeneration.Modifiers
@@ -3079,16 +3100,16 @@ ScriptsOnlyBuild:
     className: CanvasPopupDemo
   - hash:
       serializedVersion: 2
-      Hash: e90fe270b7729c2a22fa784bcd529d61
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Mapbox.Examples
-    className: HighlightBuildings
-  - hash:
-      serializedVersion: 2
       Hash: abf1930d8126d0b2e00e9449129a0190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: e90fe270b7729c2a22fa784bcd529d61
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Mapbox.Examples
+    className: HighlightBuildings
   - hash:
       serializedVersion: 2
       Hash: c3a3572e43af691ece9d1180e73b89c4
@@ -3119,13 +3140,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityARInterface
     className: ARFocusSquare
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityEngine.XR.ARFoundation.Samples
-    className: EnableGeoAnchors
   platform: 9
   scenePathNames:
-  - Assets/Scenes/Lat&Long 1.unity
-  playerPath: /Users/elenalalala/Desktop/USLBuild/LiveTest4
+  - Assets/Scenes/TestingForLive.unity
+  playerPath: /Users/elenalalala/Desktop/USLBuild/LiveTest5

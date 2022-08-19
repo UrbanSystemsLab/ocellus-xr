@@ -53,9 +53,10 @@ public class RayCastInteraction : MonoBehaviour
                 {
                     //Fill the blank info fields
                     treeInfoManager = objectHit.gameObject.GetComponent<TreeInfoManager>();
-                    treeCN.text = treeInfoManager.commonName;
-                    treeDescription.text = $"\nStructure of this tree: {treeInfoManager.treeStructure}" +
-                                           $"\nCondition of this tree: {treeInfoManager.treeCondition}";
+                    treeCN.text = "\n"+treeInfoManager.commonName.ToUpper();
+                    treeDescription.text = $"\n{treeInfoManager.treeStructure} Structure" +
+                                           $"\n{treeInfoManager.treeCondition} Condition" +
+                                           "\n";
 
                     //Make the info panel on screen visible and interactable
                     treeInfoCanvasGroup.alpha = 1;

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637964410200000000
-    m_Hash: 1179440111
+      ticks: 637964738940000000
+    m_Hash: 974066216
   m_LockFileStatus:
     m_FilePath: /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637964457830000000
-    m_Hash: 2414411342
+      ticks: 637964830200000000
+    m_Hash: 2369103952
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -1848,7 +1848,7 @@ m_PackageAssets:
         version: 1.0.0
       resolvedDependencies:
       - name: com.unity.xr.arsubsystems
-        version: 4.2.0
+        version: 4.2.3
       - name: com.unity.subsystemregistration
         version: 1.1.0
       - name: com.unity.modules.subsystems
@@ -2096,7 +2096,7 @@ m_PackageAssets:
         version: 4.0.1
       resolvedDependencies:
       - name: com.unity.xr.arsubsystems
-        version: 4.2.0
+        version: 4.2.3
       - name: com.unity.subsystemregistration
         version: 1.1.0
       - name: com.unity.modules.subsystems
@@ -2142,12 +2142,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
         revision: d2250746d9e0645ddb4cf008d12f833bf31603e1
         path: 
-    - packageId: com.unity.xr.arkit@4.2.0
+    - packageId: com.unity.xr.arkit@4.2.3
       testable: 0
       isDirectDependency: 1
-      version: 4.2.0
+      version: 4.2.3
       source: 1
-      resolvedPath: /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.xr.arkit@4.2.0
+      resolvedPath: /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.xr.arkit@4.2.3
       assetPath: Packages/com.unity.xr.arkit
       name: com.unity.xr.arkit
       displayName: ARKit XR Plugin
@@ -2362,14 +2362,14 @@ m_PackageAssets:
       - name: com.unity.editorcoroutines
         version: 1.0.0
       - name: com.unity.xr.arsubsystems
-        version: 4.2.0
+        version: 4.2.3
       - name: com.unity.xr.management
         version: 4.0.1
       resolvedDependencies:
       - name: com.unity.editorcoroutines
         version: 1.0.0
       - name: com.unity.xr.arsubsystems
-        version: 4.2.0
+        version: 4.2.3
       - name: com.unity.subsystemregistration
         version: 1.1.0
       - name: com.unity.modules.subsystems
@@ -2404,13 +2404,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637661118610000000
+      datePublishedTicks: 637871117290000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
-        revision: 214a8d84fe8deb14a45c8b5d6949c40b03c3495a
+        revision: 497981bbdfaf531fe240edcfa8f6edfd9aa1567e
         path: 
     - packageId: com.unity.modules.ai@1.0.0
       testable: 0
@@ -4218,12 +4218,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.editorcoroutines.git
         revision: f67fc9992bbc7a553b17375de53a8b2db136528e
         path: 
-    - packageId: com.unity.xr.arsubsystems@4.2.0
+    - packageId: com.unity.xr.arsubsystems@4.2.3
       testable: 0
       isDirectDependency: 0
-      version: 4.2.0
+      version: 4.2.3
       source: 1
-      resolvedPath: /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.xr.arsubsystems@4.2.0
+      resolvedPath: /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.xr.arsubsystems@4.2.3
       assetPath: Packages/com.unity.xr.arsubsystems
       name: com.unity.xr.arsubsystems
       displayName: AR Subsystems
@@ -4387,13 +4387,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637661118260000000
+      datePublishedTicks: 637871117090000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/arfoundation.git
-        revision: 214a8d84fe8deb14a45c8b5d6949c40b03c3495a
+        revision: 497981bbdfaf531fe240edcfa8f6edfd9aa1567e
         path: 
     - packageId: com.unity.xr.management@4.0.1
       testable: 0
