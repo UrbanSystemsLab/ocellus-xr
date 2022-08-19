@@ -16,7 +16,9 @@ public class Switcher : MonoBehaviour
 
     private string currentMapLayerName = "";
     //private VectorSubLayerProperties tempLayer;
-    //private VectorSubLayerProperties floodLayer;
+    private VectorSubLayerProperties floodLayer1;
+    private VectorSubLayerProperties floodLayer2;
+    private VectorSubLayerProperties floodLayer3;
     //private VectorSubLayerProperties incomeLayer;
     //private VectorSubLayerProperties sixtyFivePlusLayer;
     //private VectorSubLayerProperties greenroofLayer;
@@ -31,7 +33,9 @@ public class Switcher : MonoBehaviour
 
         NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
         //tempLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Heat Risk");
-        //floodLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Flood Zone");
+        floodLayer1 = _abstractMap.VectorData.FindFeatureSubLayerWithName("Flood Zones1");
+        floodLayer2 = _abstractMap.VectorData.FindFeatureSubLayerWithName("Flood Zones2");
+        floodLayer3 = _abstractMap.VectorData.FindFeatureSubLayerWithName("Flood Zones3");
         //incomeLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Income");
         //sixtyFivePlusLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Elderly Population");
         //greenroofLayer = _abstractMap.VectorData.FindFeatureSubLayerWithName("Green Roofs");
@@ -64,6 +68,9 @@ public class Switcher : MonoBehaviour
         if (LayerName == "Flood Zones")
         {
             NY_buildings.SetActive(true);
+            floodLayer1.SetActive(true);
+            floodLayer2.SetActive(true);
+            floodLayer3.SetActive(true);
         }
         layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerName);
         layer.SetActive(true);

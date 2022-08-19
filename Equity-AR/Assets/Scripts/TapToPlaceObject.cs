@@ -34,7 +34,7 @@ public class TapToPlaceObject : MonoBehaviour
     void Start()
     {
         //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
-        map = Instantiate(objectToPlace, new Vector3(0,-1,0), Quaternion.identity);
+        map = Instantiate(objectToPlace, new Vector3(0,-2,0), Quaternion.identity);
         map.SetActive(false);
 
 
@@ -87,7 +87,7 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void UpdatePlacementIndicator()
     {
-        Debug.Log(placementIndicator.transform.position);
+        //Debug.Log(placementIndicator.transform.position);
         if (placementPoseIsValid)
         {
             placementIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
