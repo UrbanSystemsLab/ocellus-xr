@@ -29,8 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5396342703071208262}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _options:
     locationOptions:
-      latitudeLongitude: 40.7648, -73.9808
+      latitudeLongitude: 40.780135, -73.96527
       zoom: 16
     extentOptions:
       extentType: 1
@@ -547,7 +546,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: Bioswale
           geometryType: 0
           layerName: green_infrastructure
@@ -743,7 +742,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: Cooling Stations
           geometryType: 0
           layerName: coolingStation
@@ -814,7 +813,7 @@ MonoBehaviour:
           geometryType: 2
           layerName: redliningData
           snapToTerrain: 1
-          combineMeshes: 0
+          combineMeshes: 1
         lineGeometryOptions:
           Width: 1
           MiterLimit: 0.2
@@ -828,12 +827,12 @@ MonoBehaviour:
         extrusionOptions:
           _selectedLayerName: redliningData
           extrusionType: 5
-          extrusionGeometryType: 1
-          propertyName: height
-          propertyDescription: Unavailable in Selected Layer.
+          extrusionGeometryType: 0
+          propertyName: holc_grade
+          propertyDescription: String
           minimumHeight: 0
-          maximumHeight: 4
-          extrusionScaleFactor: 2
+          maximumHeight: 5
+          extrusionScaleFactor: 3
         colliderOptions:
           colliderType: 0
         materialOptions:
@@ -892,13 +891,13 @@ MonoBehaviour:
           combinerType: 0
         extrusionOptions:
           _selectedLayerName: PEJAs_NYS
-          extrusionType: 1
+          extrusionType: 3
           extrusionGeometryType: 0
-          propertyName: height
-          propertyDescription: Unavailable in Selected Layer.
+          propertyName: Non_White
+          propertyDescription: Number
           minimumHeight: 0
           maximumHeight: 1
-          extrusionScaleFactor: 1
+          extrusionScaleFactor: 0.01
         colliderOptions:
           colliderType: 0
         materialOptions:
@@ -1133,9 +1132,9 @@ MonoBehaviour:
         _maskValue: 0
         selectedTypes: 
       locationPrefabList: []
-  _tileProvider: {fileID: 805230302198960519}
+  _tileProvider: {fileID: 0}
   _previewOptions:
-    isPreviewEnabled: 1
+    isPreviewEnabled: 0
 --- !u!114 &6083926238275887991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,46 +1178,3 @@ MonoBehaviour:
     RequiredSelectable: {fileID: 0}
   Axis: {x: 0, y: -1, z: 0}
   Space: 1
---- !u!1 &8719975820079808587
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5396342703071208262}
-  - component: {fileID: 805230302198960519}
-  m_Layer: 0
-  m_Name: TileProvider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5396342703071208262
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8719975820079808587}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6083926238275887988}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &805230302198960519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8719975820079808587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d7ff8ed3b76a4ee5a451d64a5393e3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

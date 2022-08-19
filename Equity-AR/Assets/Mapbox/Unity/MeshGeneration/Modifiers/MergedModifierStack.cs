@@ -125,18 +125,18 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			float sixtyFiveValue=0;
             string redlining = "";
 
-            Debug.Log(feature.Properties["area_description_data"].ToString());
+            //Debug.Log(feature.Properties["area_description_data"].ToString());
 
-            try
-            {
-                redlining = feature.Properties["holc_grade"].ToString();
-                Debug.Log("Data Get: " + redlining);
-            }
-            catch (Exception ex)
-            {
-                redlining = "";
-                Debug.Log("Redlining layer error:" + ex.Message);
-            }
+            //try
+            //{
+            //    redlining = feature.Properties["holc_grade"].ToString();
+            //    Debug.Log("Data Get: " + redlining);
+            //}
+            //catch (Exception ex)
+            //{
+            //    redlining = "";
+            //    Debug.Log("Redlining layer error:" + ex.Message);
+            //}
 
 
 
