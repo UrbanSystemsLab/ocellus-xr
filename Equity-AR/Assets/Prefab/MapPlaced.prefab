@@ -155,8 +155,8 @@ MonoBehaviour:
       vectorSubLayers:
       - coreOptions:
           sourceId: 
-          isActive: 0
-          sublayerName: equity.cxc73xaa
+          isActive: 1
+          sublayerName: Heat Risk
           geometryType: 2
           layerName: NYC_heatmap
           snapToTerrain: 1
@@ -287,7 +287,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: equity.0qf98zo6
+          sublayerName: Elderly Population
           geometryType: 2
           layerName: NYC_65plus
           snapToTerrain: 1
@@ -352,7 +352,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: equity.16d8ns8l
+          sublayerName: Income
           geometryType: 2
           layerName: income_final
           snapToTerrain: 1
@@ -416,10 +416,10 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
-          sublayerName: equity.dmmqh0kw0
+          isActive: 0
+          sublayerName: Flood Zones1
           geometryType: 2
-          layerName: 2020s-100y
+          layerName: 2050s-100y
           snapToTerrain: 1
           combineMeshes: 0
         lineGeometryOptions:
@@ -429,17 +429,17 @@ MonoBehaviour:
           JoinType: 1
           CapType: 1
         filterOptions:
-          _selectedLayerName: 2020s-100y
+          _selectedLayerName: 2050s-100y
           filters: []
           combinerType: 0
         extrusionOptions:
-          _selectedLayerName: 2020s-100y
+          _selectedLayerName: 2050s-100y
           extrusionType: 5
           extrusionGeometryType: 1
           propertyName: height
           propertyDescription: Unavailable in Selected Layer.
           minimumHeight: 5
-          maximumHeight: 7
+          maximumHeight: 5
           extrusionScaleFactor: 1
         colliderOptions:
           colliderType: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: equity.755pqg03
+          sublayerName: Open Space
           geometryType: 2
           layerName: NYC_OpenSpace
           snapToTerrain: 1
@@ -613,7 +613,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: equity.755pqg03
+          sublayerName: Green Roofs
           geometryType: 2
           layerName: split-green-roofs
           snapToTerrain: 1
@@ -678,7 +678,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: timonm.77dtkn5f
+          sublayerName: Extreme Flooding
           geometryType: 2
           layerName: nycFlood1
           snapToTerrain: 1
@@ -743,7 +743,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: equity.dsxc6fdt
+          sublayerName: Cooling Stations
           geometryType: 0
           layerName: coolingStation
           snapToTerrain: 1
@@ -809,7 +809,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: equity.3t4w37ok
+          sublayerName: Redlining
           geometryType: 2
           layerName: redliningData
           snapToTerrain: 1
@@ -874,7 +874,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: equity.c7f9efui
+          sublayerName: PEJA
           geometryType: 2
           layerName: PEJAs_NYS
           snapToTerrain: 1
@@ -938,8 +938,8 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
-          sublayerName: equity.dmmqh0kw1
+          isActive: 0
+          sublayerName: Flood Zones2
           geometryType: 2
           layerName: 2020s-500y
           snapToTerrain: 1
@@ -961,7 +961,7 @@ MonoBehaviour:
           propertyName: height
           propertyDescription: Unavailable in Selected Layer.
           minimumHeight: 0
-          maximumHeight: 5
+          maximumHeight: 3
           extrusionScaleFactor: 1
         colliderOptions:
           colliderType: 0
@@ -1003,10 +1003,10 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
-          sublayerName: equity.dmmqh0kw2
+          isActive: 0
+          sublayerName: Flood Zones3
           geometryType: 2
-          layerName: 2050s-100y
+          layerName: 2050s-500y
           snapToTerrain: 1
           combineMeshes: 0
         lineGeometryOptions:
@@ -1016,17 +1016,17 @@ MonoBehaviour:
           JoinType: 1
           CapType: 1
         filterOptions:
-          _selectedLayerName: 2050s-100y
+          _selectedLayerName: 2050s-500y
           filters: []
           combinerType: 0
         extrusionOptions:
-          _selectedLayerName: 2050s-100y
+          _selectedLayerName: 2050s-500y
           extrusionType: 5
           extrusionGeometryType: 1
           propertyName: height
           propertyDescription: Unavailable in Selected Layer.
           minimumHeight: 0
-          maximumHeight: 3
+          maximumHeight: 1
           extrusionScaleFactor: 1
         colliderOptions:
           colliderType: 0
@@ -1068,10 +1068,10 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
-          sublayerName: equity.dmmqh0kw3
+          isActive: 0
+          sublayerName: Flood Zones
           geometryType: 2
-          layerName: 2050s-500y
+          layerName: 2020s-100y
           snapToTerrain: 1
           combineMeshes: 0
         lineGeometryOptions:
@@ -1081,17 +1081,17 @@ MonoBehaviour:
           JoinType: 1
           CapType: 1
         filterOptions:
-          _selectedLayerName: 2050s-500y
+          _selectedLayerName: 2020s-100y
           filters: []
           combinerType: 0
         extrusionOptions:
-          _selectedLayerName: 2050s-500y
+          _selectedLayerName: 2020s-100y
           extrusionType: 5
           extrusionGeometryType: 1
           propertyName: height
           propertyDescription: Unavailable in Selected Layer.
           minimumHeight: 0
-          maximumHeight: 1
+          maximumHeight: 7
           extrusionScaleFactor: 1
         colliderOptions:
           colliderType: 0
