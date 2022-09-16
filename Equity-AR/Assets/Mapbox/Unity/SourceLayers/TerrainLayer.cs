@@ -213,7 +213,7 @@ namespace Mapbox.Unity.Map
 		/// <param name="terrainSource">Terrain source.</param>
 		public virtual void SetLayerSource(ElevationSourceType terrainSource = ElevationSourceType.MapboxTerrain)
 		{
-			if (terrainSource != ElevationSourceType.Custom && terrainSource != ElevationSourceType.None)
+			if (terrainSource != ElevationSourceType.Custom || terrainSource != ElevationSourceType.None)
 			{
 				_layerProperty.sourceType = terrainSource;
 				_layerProperty.sourceOptions.layerSource = MapboxDefaultElevation.GetParameters(terrainSource);

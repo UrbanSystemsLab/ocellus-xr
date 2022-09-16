@@ -25803,7 +25803,7 @@ IL_0057:
 		Type_t * L_23 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_22));
 		NullCheck(L_18);
 		bool L_24;
-		L_24 = VirtFuncInvoker1< bool, Type_t * >::Invoke(116 /* System.Boolean System.Type::Equals(System.Type) */, L_18, L_23);
+		L_24 = VirtFuncInvoker1< bool, Type_t * >::Invoke(117 /* System.Boolean System.Type::Equals(System.Type) */, L_18, L_23);
 		if (L_24)
 		{
 			goto IL_0070;
@@ -28688,7 +28688,7 @@ IL_0075:
 		Type_t * L_16 = ___type0;
 		NullCheck(L_15);
 		bool L_17;
-		L_17 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_15, L_16);
+		L_17 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_15, L_16);
 		if (!L_17)
 		{
 			goto IL_0090;
@@ -28708,7 +28708,7 @@ IL_0090:
 		Type_t * L_20 = ___type0;
 		NullCheck(L_19);
 		bool L_21;
-		L_21 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_19, L_20);
+		L_21 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_19, L_20);
 		if (!L_21)
 		{
 			goto IL_00ab;
@@ -28738,7 +28738,7 @@ IL_00ab:
 		Type_t * L_26 = ___type0;
 		NullCheck(L_25);
 		bool L_27;
-		L_27 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_25, L_26);
+		L_27 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_25, L_26);
 		if (!L_27)
 		{
 			goto IL_00ce;
@@ -29191,7 +29191,7 @@ IL_000a:
 		Type_t * L_6 = __this->get_type_0();
 		NullCheck(L_6);
 		Type_t * L_7;
-		L_7 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_6);
+		L_7 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_6);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_8 = { reinterpret_cast<intptr_t> (Nullable_1_t4EDBE007AFFA0315135B9A508DACA62D3C201867_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_9;
@@ -29368,7 +29368,7 @@ IL_0077:
 		Type_t * L_17 = __this->get_type_0();
 		NullCheck(L_16);
 		bool L_18;
-		L_18 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_16, L_17);
+		L_18 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_16, L_17);
 		if (L_18)
 		{
 			goto IL_00a6;
@@ -29399,7 +29399,7 @@ IL_00a6:
 		Type_t * L_25 = __this->get_type_0();
 		NullCheck(L_24);
 		bool L_26;
-		L_26 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_24, L_25);
+		L_26 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_24, L_25);
 		if (!L_26)
 		{
 			goto IL_00dd;
@@ -29774,10 +29774,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t * TypeData_GetGenericListItemType_m083
 		Type_t * L_4 = ___type0;
 		NullCheck(L_4);
 		Type_t * L_5;
-		L_5 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_4);
+		L_5 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_4);
 		NullCheck(L_3);
 		bool L_6;
-		L_6 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_3, L_5);
+		L_6 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_3, L_5);
 		if (!L_6)
 		{
 			goto IL_003e;
@@ -31356,7 +31356,7 @@ IL_0013:
 		Type_t * L_8 = V_0;
 		NullCheck(L_8);
 		Type_t * L_9;
-		L_9 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_8);
+		L_9 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_8);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_10 = { reinterpret_cast<intptr_t> (Nullable_1_t4EDBE007AFFA0315135B9A508DACA62D3C201867_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_11;

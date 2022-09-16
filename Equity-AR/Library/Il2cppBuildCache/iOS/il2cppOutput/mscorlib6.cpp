@@ -18839,7 +18839,7 @@ IL_0014:
 		Type_t * L_3 = ___enumType0;
 		NullCheck(L_3);
 		Type_t * L_4;
-		L_4 = VirtFuncInvoker0< Type_t * >::Invoke(107 /* System.Type System.Type::GetEnumUnderlyingType() */, L_3);
+		L_4 = VirtFuncInvoker0< Type_t * >::Invoke(108 /* System.Type System.Type::GetEnumUnderlyingType() */, L_3);
 		return L_4;
 	}
 }
@@ -18873,7 +18873,7 @@ IL_0014:
 		Type_t * L_3 = ___enumType0;
 		NullCheck(L_3);
 		RuntimeArray * L_4;
-		L_4 = VirtFuncInvoker0< RuntimeArray * >::Invoke(106 /* System.Array System.Type::GetEnumValues() */, L_3);
+		L_4 = VirtFuncInvoker0< RuntimeArray * >::Invoke(107 /* System.Array System.Type::GetEnumValues() */, L_3);
 		return L_4;
 	}
 }
@@ -18927,7 +18927,7 @@ IL_0014:
 		RuntimeObject * L_4 = ___value1;
 		NullCheck(L_3);
 		String_t* L_5;
-		L_5 = VirtFuncInvoker1< String_t*, RuntimeObject * >::Invoke(109 /* System.String System.Type::GetEnumName(System.Object) */, L_3, L_4);
+		L_5 = VirtFuncInvoker1< String_t*, RuntimeObject * >::Invoke(110 /* System.String System.Type::GetEnumName(System.Object) */, L_3, L_4);
 		return L_5;
 	}
 }
@@ -18961,7 +18961,7 @@ IL_0014:
 		Type_t * L_3 = ___enumType0;
 		NullCheck(L_3);
 		StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* L_4;
-		L_4 = VirtFuncInvoker0< StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* >::Invoke(105 /* System.String[] System.Type::GetEnumNames() */, L_3);
+		L_4 = VirtFuncInvoker0< StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* >::Invoke(106 /* System.String[] System.Type::GetEnumNames() */, L_3);
 		return L_4;
 	}
 }
@@ -19247,7 +19247,7 @@ IL_0014:
 		RuntimeObject * L_4 = ___value1;
 		NullCheck(L_3);
 		bool L_5;
-		L_5 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(108 /* System.Boolean System.Type::IsEnumDefined(System.Object) */, L_3, L_4);
+		L_5 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(109 /* System.Boolean System.Type::IsEnumDefined(System.Object) */, L_3, L_4);
 		return L_5;
 	}
 }
@@ -19382,7 +19382,7 @@ IL_0072:
 		Type_t * L_25 = ___enumType0;
 		NullCheck(L_24);
 		bool L_26;
-		L_26 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_24, L_25);
+		L_26 = VirtFuncInvoker1< bool, Type_t * >::Invoke(115 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_24, L_25);
 		if (L_26)
 		{
 			goto IL_00c1;
@@ -19925,7 +19925,7 @@ IL_000e:
 		L_4 = Object_GetType_m571FE8360C10B98C23AAF1F066D92C08CC94F45B(L_3, /*hidden argument*/NULL);
 		NullCheck(L_2);
 		bool L_5;
-		L_5 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_2, L_4);
+		L_5 = VirtFuncInvoker1< bool, Type_t * >::Invoke(115 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_2, L_4);
 		if (L_5)
 		{
 			goto IL_0049;
@@ -30954,6 +30954,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StreamReader_tA857ACC7ABF9AA4638E1291E6D2539C
 		String_t* L_0 = ___path0;
 		StreamReader_tA857ACC7ABF9AA4638E1291E6D2539C14D2963D3 * L_1 = (StreamReader_tA857ACC7ABF9AA4638E1291E6D2539C14D2963D3 *)il2cpp_codegen_object_new(StreamReader_tA857ACC7ABF9AA4638E1291E6D2539C14D2963D3_il2cpp_TypeInfo_var);
 		StreamReader__ctor_m1F07D64A9881F3A6B755881210B4E88F8E63849B(L_1, L_0, /*hidden argument*/NULL);
+		return L_1;
+	}
+}
+// System.IO.FileStream System.IO.File::OpenWrite(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FileStream_t6342275F1C1E26F5EEB5AD510933C95B78A5DA26 * File_OpenWrite_mA2DA8B05D02F9D0EC99EA6E8FB8E35E7301883B9 (String_t* ___path0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FileStream_t6342275F1C1E26F5EEB5AD510933C95B78A5DA26_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___path0;
+		FileStream_t6342275F1C1E26F5EEB5AD510933C95B78A5DA26 * L_1 = (FileStream_t6342275F1C1E26F5EEB5AD510933C95B78A5DA26 *)il2cpp_codegen_object_new(FileStream_t6342275F1C1E26F5EEB5AD510933C95B78A5DA26_il2cpp_TypeInfo_var);
+		FileStream__ctor_m3B5FED0863BA31DCF29A27B99FFDCB699626C326(L_1, L_0, 4, 2, 0, /*hidden argument*/NULL);
 		return L_1;
 	}
 }

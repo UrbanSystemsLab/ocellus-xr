@@ -45,10 +45,12 @@ public class JSCom : MonoBehaviour
                     WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
                     WebInfoStats.Stats.type = gotData.type;
 
+                    //TODO
                     if (TapToPlaceObject.mapIsLoaded)
                     {
                         constructMessage();
-                        webViewObject.SetActive(false);
+                        //TODO
+                        //webViewObject.SetActive(false);
                     }
             }
 

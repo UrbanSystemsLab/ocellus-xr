@@ -12,76 +12,434 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57381
+61826
 Successfully changed project path to: /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR
 /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 83.89 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 192.23 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets
 GfxDevice: creating device client; threaded=0
-2022-07-24 03:16:22.227 Unity[42810:910886] (null) preferred device: Apple M1 Pro (high power)
-2022-07-24 03:16:22.227 Unity[42810:910886] Metal devices available: 1
-2022-07-24 03:16:22.227 Unity[42810:910886] 0: Apple M1 Pro (high power)
-2022-07-24 03:16:22.227 Unity[42810:910886] Using device Apple M1 Pro (high power)
+2022-09-15 19:46:49.436 Unity[79224:13020973] (null) preferred device: Apple M1 Pro (high power)
+2022-09-15 19:46:49.436 Unity[79224:13020973] Metal devices available: 1
+2022-09-15 19:46:49.436 Unity[79224:13020973] 0: Apple M1 Pro (high power)
+2022-09-15 19:46:49.436 Unity[79224:13020973] Using device Apple M1 Pro (high power)
 Initializing Metal device caps: Apple M1 Pro
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56810
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56224
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000323 seconds.
+Registered in 0.001049 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 79.92 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 85.69 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.961 seconds
+- Completed reload, in  2.290 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002411 seconds.
+Registered in 0.008090 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 73.92 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 87.78 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.189 seconds
+- Completed reload, in  2.679 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
-Refreshing native plugins compatible for Editor in 1.35 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.12 seconds
+Refreshing native plugins compatible for Editor in 1.70 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3318 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 210.5 MB.
-System memory in use after: 210.6 MB.
+Unloading 3665 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 227.7 MB.
+System memory in use after: 227.9 MB.
 
-Unloading 152 unused Assets to reduce memory usage. Loaded Objects now: 3644.
-Total: 1.805417 ms (FindLiveObjects: 0.294541 ms CreateObjectMapping: 0.074750 ms MarkObjects: 1.316292 ms  DeleteObjects: 0.118833 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Prefab/Map.prefab
-  artifactKey: Guid(be8e0cecf6c9047db92452e5c428d940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Map.prefab using Guid(be8e0cecf6c9047db92452e5c428d940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4946c5d0b70bbbf5744c044b0809924e') in 0.604225 seconds
-  Import took 0.608625 seconds .
+Unloading 155 unused Assets to reduce memory usage. Loaded Objects now: 3999.
+Total: 4.633000 ms (FindLiveObjects: 0.668583 ms CreateObjectMapping: 0.100750 ms MarkObjects: 3.421250 ms  DeleteObjects: 0.440209 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000248 seconds.
+  path: Assets/Scripts/Switcher.cs
+  artifactKey: Guid(05956bab3b40e431cb52426e35f83890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Switcher.cs using Guid(05956bab3b40e431cb52426e35f83890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9163ce02c9a6b08a061db8dec685e3ad') in 1.202865 seconds
+  Import took 1.210139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3952.543056 seconds.
   path: Assets/Prefab/MapPlaced.prefab
   artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e980c409968bfc8f6be095d64277b433') in 0.007197 seconds
-  Import took 0.010873 seconds .
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7d43a520a248d444823a26098fb92a') in 1.102022 seconds
+  Import took 1.299419 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.035640 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2736478601c7efa7cb78637a38aaba9a') in 0.009714 seconds
+  Import took 0.015775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.990945 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c116a0be665cce0a36d5ae8b0e650ed4') in 0.006883 seconds
+  Import took 0.012818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.025330 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c81c3370ec8ac8293931e6ff0a8a5b5c') in 0.007218 seconds
+  Import took 0.012703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 342.076857 seconds.
+  path: Assets/Mapbox/Examples/_sharedModules/ContourMergedStyle.asset
+  artifactKey: Guid(b3647897e3930654caf419e243c60bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/_sharedModules/ContourMergedStyle.asset using Guid(b3647897e3930654caf419e243c60bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5069803d8efea833a1a93c0147779d6') in 0.166056 seconds
+  Import took 0.213338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/MapboxAR/Examples/SimpleMap/SimpleMergedBuildingStack.asset
+  artifactKey: Guid(53b0044132a1d42d09be1058489da266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MapboxAR/Examples/SimpleMap/SimpleMergedBuildingStack.asset using Guid(53b0044132a1d42d09be1058489da266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f973c1d42993939aad372f6a1c28276') in 0.005717 seconds
+  Import took 0.010675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.505008 seconds.
+  path: Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs
+  artifactKey: Guid(ef7239c46ddb6ab469994291c9603c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs using Guid(ef7239c46ddb6ab469994291c9603c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9e705b08f77e702652b21c88ab12b20') in 0.006846 seconds
+  Import took 0.011729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002423 seconds.
+  path: Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs
+  artifactKey: Guid(ef7239c46ddb6ab469994291c9603c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs using Guid(ef7239c46ddb6ab469994291c9603c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9e705b08f77e702652b21c88ab12b20') in 0.000912 seconds
+  Import took 0.005769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.477187 seconds.
+  path: Assets/Mapbox/Unity/Editor/MergedModifierStackEditor.cs
+  artifactKey: Guid(c0ec3bc7bc8e146dc8ee1fcfcded456a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Unity/Editor/MergedModifierStackEditor.cs using Guid(c0ec3bc7bc8e146dc8ee1fcfcded456a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a938ece81faf04fa6afdcbede8694cb2') in 0.001207 seconds
+  Import took 0.007220 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.005740 seconds.
+  path: Assets/Mapbox/Examples/_sharedModules/ContourTerraceMeshFactory.asset
+  artifactKey: Guid(99a5ed38fb057344493cad6cc2af7477) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/_sharedModules/ContourTerraceMeshFactory.asset using Guid(99a5ed38fb057344493cad6cc2af7477) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9102d9cfca59599944476c20f86c3fc1') in 0.005967 seconds
+  Import took 0.014384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Mapbox/Examples/1_DataExplorer/Modules/BarrierLine/ExplorerBarrierLineMeshModifier.asset
+  artifactKey: Guid(6256fede3c5b3ec4c912924d6f94a32d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/1_DataExplorer/Modules/BarrierLine/ExplorerBarrierLineMeshModifier.asset using Guid(6256fede3c5b3ec4c912924d6f94a32d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a79b9f1339aa564e82f05d84ed6df1e6') in 0.002622 seconds
+  Import took 0.006639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000525 seconds.
+  path: Assets/Mapbox/Examples/_sharedModules/MeshColliderModifier.asset
+  artifactKey: Guid(203d61015a4124744bf28f4502b286fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/_sharedModules/MeshColliderModifier.asset using Guid(203d61015a4124744bf28f4502b286fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1fb2e6270734d4d8bf09084399c61c0') in 0.001859 seconds
+  Import took 0.006020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Mapbox/Examples/_sharedModules/DisableMeshRendererModifier.asset
+  artifactKey: Guid(4aeb0629486794f25bf199af8a4f4830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/_sharedModules/DisableMeshRendererModifier.asset using Guid(4aeb0629486794f25bf199af8a4f4830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea379afae6cd8bbcf92a444b23e2f4b4') in 0.002039 seconds
+  Import took 0.006106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Mapbox/Examples/1_DataExplorer/Modules/TrafficLayer/LowTraffic/ExplorerTrafficLineMesh.asset
+  artifactKey: Guid(0270530b896eb95459207818d222f106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Examples/1_DataExplorer/Modules/TrafficLayer/LowTraffic/ExplorerTrafficLineMesh.asset using Guid(0270530b896eb95459207818d222f106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb85106f4e5727b6462108846bcf5e63') in 0.001677 seconds
+  Import took 0.006190 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.950666 seconds.
+  path: Assets/Mapbox/Unity/MeshGeneration/Modifiers/MeshModifier.cs
+  artifactKey: Guid(d61d35af106e04d44b5fc8b635f4dc55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Unity/MeshGeneration/Modifiers/MeshModifier.cs using Guid(d61d35af106e04d44b5fc8b635f4dc55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8feace88bd2bd65fa0b9e5622db2b0e7') in 0.001424 seconds
+  Import took 0.006208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.064698 seconds.
+  path: Assets/Mapbox/Unity/MeshGeneration/Modifiers/MeshGenerationBase.cs
+  artifactKey: Guid(b5a0bb09f203344eab30606cb0f57438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mapbox/Unity/MeshGeneration/Modifiers/MeshGenerationBase.cs using Guid(b5a0bb09f203344eab30606cb0f57438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a821890575dabf92add5691f635b6a31') in 0.003326 seconds
+  Import took 0.008459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3070.260802 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe9af54106db6ed5ae2ec51304581302') in 0.107609 seconds
+  Import took 0.249742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.774584 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28ebe72a309c5c06ad5261622bdc4133') in 0.012851 seconds
+  Import took 0.019304 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.714309 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '106ebb78d51d22d500dc7d00f71419ea') in 0.018445 seconds
+  Import took 0.024300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 109.793446 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb0c839dfccdd374a1e90976772cebd9') in 0.062696 seconds
+  Import took 0.122580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.605090 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b38bd995b5b069151e60157db42a528') in 0.015616 seconds
+  Import took 0.021889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.488092 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1efaa8cce62d0ce125c5b739a0da4be3') in 0.006508 seconds
+  Import took 0.012787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.349896 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1352cd5ab993774e4610f8fe5ebd315b') in 0.008947 seconds
+  Import took 0.015517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.770594 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71361e201cbf227759e3a5e34a73c34f') in 0.006657 seconds
+  Import took 0.012827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.771963 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e277bb308f8f8a0fa377ff7190814e') in 0.010685 seconds
+  Import took 0.016500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.704160 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c0beee007c76bd3d6e700be851898c6') in 0.011886 seconds
+  Import took 0.024120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.522836 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f94b9fff057142da116bc0912f0fd9fc') in 0.011017 seconds
+  Import took 0.018981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.677409 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '319c80bb6e11daf6d7a5883d9df78ab9') in 0.031790 seconds
+  Import took 0.051196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.211278 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d0a7f267d3cf90124ba47cb6ff62f1f') in 0.052498 seconds
+  Import took 0.063608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.280969 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5d6204f97eea3fc5862c8bca47d5f73') in 0.007940 seconds
+  Import took 0.013371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.390511 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98e66ce37d254445663cc58d438f246a') in 0.010601 seconds
+  Import took 0.015796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.483031 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc0fc93a93ae66dd19fed88970bcd3f0') in 0.011538 seconds
+  Import took 0.016737 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 70.998547 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14a44aa93fc28543967d4ff71d9f5fe') in 0.035772 seconds
+  Import took 0.094848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.717416 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df197de9b54cfa0a76cb53ba6239c543') in 0.008147 seconds
+  Import took 0.013371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.775417 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca1c36a7f46a7cbf8619c05a7d6225e2') in 0.011116 seconds
+  Import took 0.016248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.375787 seconds.
+  path: Assets/Prefab/MapPlaced.prefab
+  artifactKey: Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/MapPlaced.prefab using Guid(7259d664b0914439ab4b2e113f6782a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8317ed2aadccf72ed44c6faab0bdce11') in 0.155524 seconds
+  Import took 0.167714 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006629 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.239 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3619 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.9 MB.
+System memory in use after: 235.1 MB.
+
+Unloading 145 unused Assets to reduce memory usage. Loaded Objects now: 4003.
+Total: 4.260500 ms (FindLiveObjects: 0.838750 ms CreateObjectMapping: 0.106416 ms MarkObjects: 3.228917 ms  DeleteObjects: 0.084583 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005270 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.923 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3619 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 235.3 MB.
+System memory in use after: 235.5 MB.
+
+Unloading 145 unused Assets to reduce memory usage. Loaded Objects now: 4007.
+Total: 3.163458 ms (FindLiveObjects: 0.520750 ms CreateObjectMapping: 0.114625 ms MarkObjects: 2.218125 ms  DeleteObjects: 0.308708 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005046 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.925 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3619 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 235.6 MB.
+System memory in use after: 235.8 MB.
+
+Unloading 145 unused Assets to reduce memory usage. Loaded Objects now: 4011.
+Total: 3.042834 ms (FindLiveObjects: 0.669542 ms CreateObjectMapping: 0.109708 ms MarkObjects: 2.173375 ms  DeleteObjects: 0.089000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000

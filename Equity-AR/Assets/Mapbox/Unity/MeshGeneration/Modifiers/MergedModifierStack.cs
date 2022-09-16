@@ -123,7 +123,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			float tempValue =0;
 			float incomeValue=0;
 			float sixtyFiveValue=0;
-            //string redlining = "";
+            string redlining = "";
 
             //Debug.Log(feature.Properties["area_description_data"].ToString());
 
@@ -137,7 +137,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
             //    redlining = "";
             //    Debug.Log("Redlining layer error:" + ex.Message);
             //}
-            
+
 
 
             //check what the incoming data belongs to
@@ -158,6 +158,10 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				string sixtyFive = feature.Properties["P_Abv65_e_"].ToString();
 				sixtyFiveValue = float.Parse(sixtyFive);
 				//Debug.Log(sixtyFiveValue);
+			}else if (feature.Properties.ContainsKey("holc_grade"))
+            {
+				redlining = feature.Properties["holc_grade"].ToString();
+				Debug.Log(redlining);
 			}
 
 
@@ -183,49 +187,49 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			Color baseColor = new Color(1f,1f,1f);
 
 
-			//if (redlining.Equals("A"))
-			//{
-			//	baseColor = new Color(0.50f, 0.70f, 0.50f);
-			//	Debug.Log("Colorget");
-			//}
-			//else if (redlining == "B")
-			//{
-			//	baseColor = new Color(0.20f, 0.20f, 0.90f);
-			//	Debug.Log("Colorget");
-			//}
-			//else if (redlining.Equals("C"))
-			//{
-			//	baseColor = new Color(0.50f, 0.70f, 0.70f);
-			//	Debug.Log("Colorget");
-			//}
-			//else if (redlining.Equals("D"))
-			//{
-			//	baseColor = new Color(0.70f, 0.50f, 0.50f);
-			//	Debug.Log("Colorget");
-			//}
+            if (redlining.Equals("A"))
+            {
+                baseColor = new Color(0.50f, 0.70f, 0.50f);
+                Debug.Log("Colorget");
+            }
+            else if (redlining == "B")
+            {
+                baseColor = new Color(0.20f, 0.20f, 0.90f);
+                Debug.Log("Colorget");
+            }
+            else if (redlining.Equals("C"))
+            {
+                baseColor = new Color(0.50f, 0.70f, 0.70f);
+                Debug.Log("Colorget");
+            }
+            else if (redlining.Equals("D"))
+            {
+                baseColor = new Color(0.70f, 0.50f, 0.50f);
+                Debug.Log("Colorget");
+            }
 
-			//if (tempValue > 168)
-			//         {
-			//	//baseColor = new Color(0f, 0.9f, 0f);
-			//	baseColor = Color.red;
-			//         }
-			//         else if (tempValue > 147)
-			//         {
-			//	//baseColor = new Color(0.8f, 0.36f, 0.32f);
-			//	baseColor = Color.black;
-			//}
-			//         else if (tempValue > 126)
-			//         {
-			//	//baseColor = new Color(0.9f, 0.7f, 0.66f);
-			//	baseColor = Color.green;
-			//}
-			//         else if (tempValue > 104)
-			//         {
-			//	//baseColor = new Color(0.95f, 0.84f, 0.83f);
-			//	baseColor = Color.blue;
-			//             Debug.Log("less than104");
-			//         }
-			if(tempValue > 0.0008)
+            //if (tempValue > 168)
+            //         {
+            //	//baseColor = new Color(0f, 0.9f, 0f);
+            //	baseColor = Color.red;
+            //         }
+            //         else if (tempValue > 147)
+            //         {
+            //	//baseColor = new Color(0.8f, 0.36f, 0.32f);
+            //	baseColor = Color.black;
+            //}
+            //         else if (tempValue > 126)
+            //         {
+            //	//baseColor = new Color(0.9f, 0.7f, 0.66f);
+            //	baseColor = Color.green;
+            //}
+            //         else if (tempValue > 104)
+            //         {
+            //	//baseColor = new Color(0.95f, 0.84f, 0.83f);
+            //	baseColor = Color.blue;
+            //             Debug.Log("less than104");
+            //         }
+            if (tempValue > 0.0008)
             {
 				baseColor = new Color(0.9f, 0f, 0f);
 			}

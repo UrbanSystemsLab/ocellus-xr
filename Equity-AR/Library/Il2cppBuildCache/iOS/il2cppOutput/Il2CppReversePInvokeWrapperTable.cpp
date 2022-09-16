@@ -575,6 +575,24 @@ public:
 };
 
 
+// UnityEngine.XR.ARKit.NSError
+struct  NSError_t2F84A3F44A97C98D4782E39A8052CCC879098DE9 
+{
+public:
+	// System.IntPtr UnityEngine.XR.ARKit.NSError::m_Self
+	intptr_t ___m_Self_0;
+
+public:
+	inline static int32_t get_offset_of_m_Self_0() { return static_cast<int32_t>(offsetof(NSError_t2F84A3F44A97C98D4782E39A8052CCC879098DE9, ___m_Self_0)); }
+	inline intptr_t get_m_Self_0() const { return ___m_Self_0; }
+	inline intptr_t* get_address_of_m_Self_0() { return &___m_Self_0; }
+	inline void set_m_Self_0(intptr_t value)
+	{
+		___m_Self_0 = value;
+	}
+};
+
+
 // UnityEngine.TextureFormat
 struct  TextureFormat_tBED5388A0445FE978F97B41D247275B036407932 
 {
@@ -1134,6 +1152,10 @@ public:
 
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARCameraBackground_BeforeBackgroundRenderHandler_m1A225B853F7A95788FB799D22868A946C99C2975(int32_t ___eventId0);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARFaceAnchor_AddElementToManagedDictionary_mA4CFEDFB45708EB42929FD7E3A317ADFF29A07EF(intptr_t ___keyPtr0, float ___value1);
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARKitSessionDelegate_CoachingOverlayViewDidDeactivate_m5A06B8B62E22A7A6A5CFB1CCEFDC349D74E5F92A(intptr_t ___subsystemHandle0);
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARKitSessionDelegate_CoachingOverlayViewWillActivate_m7D85DF40EF5D342CC4887B2BB4EEB92D710F7D63(intptr_t ___subsystemHandle0);
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARKitSessionDelegate_ConfigurationChanged_mFF987FF47361E4CBCF19016D430985DEC0C8A784(intptr_t ___subsystemHandle0);
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARKitSessionDelegate_SessionDidFailWithError_mE8827A6164DAEBCAEB341EBA5642CF06D8C470A0(intptr_t ___subsystemHandle0, NSError_t2F84A3F44A97C98D4782E39A8052CCC879098DE9  ___error1);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARKitSessionSubsystem_OnAsyncConversionComplete_m83F502F9F96A05BA35A9FDE4C56FDB7A7843942F(int32_t ___status0, int32_t ___worldMapId1, intptr_t ___context2);
 extern "C" int32_t CDECL ReversePInvokeWrapper_DeflateStreamNative_UnmanagedRead_m1B817101FEA9D3C28DF3C9192F70557465BDFB25(intptr_t ___buffer0, int32_t ___length1, intptr_t ___data2);
 extern "C" int32_t CDECL ReversePInvokeWrapper_DeflateStreamNative_UnmanagedWrite_m531442C0133AA29BF262DFD21F81CCBE5EA7E086(intptr_t ___buffer0, int32_t ___length1, intptr_t ___data2);
@@ -1165,10 +1187,14 @@ extern "C" void DEFAULT_CALL ReversePInvokeWrapper_XRCpuImage_OnAsyncConversionC
 
 
 IL2CPP_EXTERN_C const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[];
-const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[30] = 
+const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[34] = 
 {
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARCameraBackground_BeforeBackgroundRenderHandler_m1A225B853F7A95788FB799D22868A946C99C2975),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARFaceAnchor_AddElementToManagedDictionary_mA4CFEDFB45708EB42929FD7E3A317ADFF29A07EF),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARKitSessionDelegate_CoachingOverlayViewDidDeactivate_m5A06B8B62E22A7A6A5CFB1CCEFDC349D74E5F92A),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARKitSessionDelegate_CoachingOverlayViewWillActivate_m7D85DF40EF5D342CC4887B2BB4EEB92D710F7D63),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARKitSessionDelegate_ConfigurationChanged_mFF987FF47361E4CBCF19016D430985DEC0C8A784),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARKitSessionDelegate_SessionDidFailWithError_mE8827A6164DAEBCAEB341EBA5642CF06D8C470A0),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARKitSessionSubsystem_OnAsyncConversionComplete_m83F502F9F96A05BA35A9FDE4C56FDB7A7843942F),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_DeflateStreamNative_UnmanagedRead_m1B817101FEA9D3C28DF3C9192F70557465BDFB25),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_DeflateStreamNative_UnmanagedWrite_m531442C0133AA29BF262DFD21F81CCBE5EA7E086),

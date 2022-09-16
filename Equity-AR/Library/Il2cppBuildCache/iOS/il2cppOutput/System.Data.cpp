@@ -13420,7 +13420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ADP_IsCatchableExceptionType_m273E4E4A0F
 		Type_t * L_18 = V_0;
 		NullCheck(L_17);
 		bool L_19;
-		L_19 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_17, L_18);
+		L_19 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_17, L_18);
 		return (bool)((((int32_t)L_19) == ((int32_t)0))? 1 : 0);
 	}
 

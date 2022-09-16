@@ -8356,7 +8356,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ExpressionUtils_TryQuote_m74E65BF2CA001A
 		Expression_t30A004209C10C2D9A9785B2F74EEED431A4D4660 * L_6 = *((Expression_t30A004209C10C2D9A9785B2F74EEED431A4D4660 **)L_5);
 		NullCheck(L_4);
 		bool L_7;
-		L_7 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(112 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_4, L_6);
+		L_7 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(113 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_4, L_6);
 		if (!L_7)
 		{
 			goto IL_0027;
@@ -16737,7 +16737,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TypeUtils_IsNullableType_m62BA74C943634E
 		Type_t * L_2 = ___type0;
 		NullCheck(L_2);
 		Type_t * L_3;
-		L_3 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_2);
+		L_3 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_2);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_4 = { reinterpret_cast<intptr_t> (Nullable_1_t4EDBE007AFFA0315135B9A508DACA62D3C201867_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_5;
@@ -17180,7 +17180,7 @@ IL_006c:
 		L_26 = IntrospectionExtensions_GetTypeInfo_m77034F8576BE695819427C13103C591277C1B636(L_25, /*hidden argument*/NULL);
 		NullCheck(L_26);
 		RuntimeObject* L_27;
-		L_27 = VirtFuncInvoker0< RuntimeObject* >::Invoke(121 /* System.Collections.Generic.IEnumerable`1<System.Type> System.Reflection.TypeInfo::get_ImplementedInterfaces() */, L_26);
+		L_27 = VirtFuncInvoker0< RuntimeObject* >::Invoke(122 /* System.Collections.Generic.IEnumerable`1<System.Type> System.Reflection.TypeInfo::get_ImplementedInterfaces() */, L_26);
 		NullCheck(L_27);
 		RuntimeObject* L_28;
 		L_28 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* System.Collections.Generic.IEnumerator`1<!0> System.Collections.Generic.IEnumerable`1<System.Type>::GetEnumerator() */, IEnumerable_1_tA2CFC624CD7D291A0E486D1A5FC78BF6425F9428_il2cpp_TypeInfo_var, L_27);
@@ -17404,7 +17404,7 @@ IL_003b:
 		Type_t * L_26 = ___source0;
 		NullCheck(L_26);
 		Type_t * L_27;
-		L_27 = VirtFuncInvoker0< Type_t * >::Invoke(107 /* System.Type System.Type::GetEnumUnderlyingType() */, L_26);
+		L_27 = VirtFuncInvoker0< Type_t * >::Invoke(108 /* System.Type System.Type::GetEnumUnderlyingType() */, L_26);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_28 = { reinterpret_cast<intptr_t> (Boolean_t07D1E3F34E4813023D64F584DFF7B34C9D922F37_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_29;
@@ -17488,7 +17488,7 @@ IL_0026:
 		Type_t * L_13 = V_1;
 		NullCheck(L_12);
 		bool L_14;
-		L_14 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_12, L_13);
+		L_14 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_12, L_13);
 		if (!L_14)
 		{
 			goto IL_003f;
@@ -17504,7 +17504,7 @@ IL_003f:
 		Type_t * L_16 = V_0;
 		NullCheck(L_15);
 		bool L_17;
-		L_17 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_15, L_16);
+		L_17 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_15, L_16);
 		if (!L_17)
 		{
 			goto IL_004a;
@@ -17637,7 +17637,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TypeUtils_IsDelegate_mF0A50C45CA000A5DFA
 		L_2 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_1, /*hidden argument*/NULL);
 		NullCheck(L_0);
 		bool L_3;
-		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(111 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_0, L_2);
+		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_0, L_2);
 		return L_3;
 	}
 }
@@ -17707,12 +17707,12 @@ IL_0022:
 		Type_t * L_8 = ___source0;
 		NullCheck(L_8);
 		Type_t * L_9;
-		L_9 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_8);
+		L_9 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_8);
 		V_0 = L_9;
 		Type_t * L_10 = ___dest1;
 		NullCheck(L_10);
 		Type_t * L_11;
-		L_11 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_10);
+		L_11 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_10);
 		Type_t * L_12 = V_0;
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -18751,7 +18751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TypeUtils_IsImplicitReferenceConversion_
 		Type_t * L_1 = ___source0;
 		NullCheck(L_0);
 		bool L_2;
-		L_2 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_0, L_1);
+		L_2 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_0, L_1);
 		return L_2;
 	}
 }
@@ -18904,7 +18904,7 @@ IL_0002:
 		Type_t * L_2 = ___type1;
 		NullCheck(L_2);
 		Type_t * L_3;
-		L_3 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_2);
+		L_3 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_2);
 		Type_t * L_4 = ___definition0;
 		bool L_5;
 		L_5 = TypeUtils_AreEquivalent_m8F1F3807B8297B2F7C5F22F9C48F4B163085886B(L_3, L_4, /*hidden argument*/NULL);
@@ -18935,7 +18935,7 @@ IL_001a:
 		L_10 = IntrospectionExtensions_GetTypeInfo_m77034F8576BE695819427C13103C591277C1B636(L_9, /*hidden argument*/NULL);
 		NullCheck(L_10);
 		RuntimeObject* L_11;
-		L_11 = VirtFuncInvoker0< RuntimeObject* >::Invoke(121 /* System.Collections.Generic.IEnumerable`1<System.Type> System.Reflection.TypeInfo::get_ImplementedInterfaces() */, L_10);
+		L_11 = VirtFuncInvoker0< RuntimeObject* >::Invoke(122 /* System.Collections.Generic.IEnumerable`1<System.Type> System.Reflection.TypeInfo::get_ImplementedInterfaces() */, L_10);
 		NullCheck(L_11);
 		RuntimeObject* L_12;
 		L_12 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* System.Collections.Generic.IEnumerator`1<!0> System.Collections.Generic.IEnumerable`1<System.Type>::GetEnumerator() */, IEnumerable_1_tA2CFC624CD7D291A0E486D1A5FC78BF6425F9428_il2cpp_TypeInfo_var, L_11);
@@ -19203,7 +19203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TypeUtils_AreEquivalent_m8F1F3807B8297B2
 		Type_t * L_3 = ___t21;
 		NullCheck(L_2);
 		bool L_4;
-		L_4 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_2, L_3);
+		L_4 = VirtFuncInvoker1< bool, Type_t * >::Invoke(115 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_2, L_3);
 		return L_4;
 	}
 
@@ -19255,7 +19255,7 @@ IL_000b:
 		Type_t * L_8 = ___src1;
 		NullCheck(L_7);
 		bool L_9;
-		L_9 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_7, L_8);
+		L_9 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_7, L_8);
 		return L_9;
 	}
 
@@ -19282,7 +19282,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TypeUtils_IsSameOrSubclass_m4160AAD64BB7
 		Type_t * L_4 = ___type0;
 		NullCheck(L_3);
 		bool L_5;
-		L_5 = VirtFuncInvoker1< bool, Type_t * >::Invoke(111 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_3, L_4);
+		L_5 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_3, L_4);
 		return L_5;
 	}
 

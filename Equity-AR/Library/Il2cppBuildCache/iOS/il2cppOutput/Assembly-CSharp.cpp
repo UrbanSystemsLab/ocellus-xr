@@ -43,6 +43,17 @@ struct VirtActionInvoker0
 		((Action)invokeData.methodPtr)(obj, invokeData.method);
 	}
 };
+template <typename R, typename T1, typename T2>
+struct VirtFuncInvoker2
+{
+	typedef R (*Func)(void*, T1, T2, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1, T2 p2)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
+	}
+};
 template <typename R, typename T1>
 struct VirtFuncInvoker1
 {
@@ -63,17 +74,6 @@ struct VirtActionInvoker2
 	{
 		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
 		((Action)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
-	}
-};
-template <typename R, typename T1, typename T2>
-struct VirtFuncInvoker2
-{
-	typedef R (*Func)(void*, T1, T2, const RuntimeMethod*);
-
-	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1, T2 p2)
-	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
-		return ((Func)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
 	}
 };
 template <typename T1, typename T2, typename T3>
@@ -461,6 +461,8 @@ struct ARFaceAnchor_tE5F12238473CFC83D30B8ABA163DC52F0311D77E;
 struct ARFaceGeometry_tD3133A168147FFC2E2883618081CBEE769ACC096;
 // UnityARInterface.ARFocusSquare
 struct ARFocusSquare_t72C0983546D443F4AA36366BC6E9222F972586DB;
+// UnityEngine.XR.ARFoundation.Samples.ARGeoAnchorConfigurationChooser
+struct ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D;
 // UnityARInterface.ARInterface
 struct ARInterface_tD7FD5C3E96F8AF52AC5E6294E4253CD0DD8C25E2;
 // UnityARInterface.ARKitInterface
@@ -543,6 +545,8 @@ struct BaseWebViewPrefab_t0E341971F6C260BD4EEC9336C16728CDEA6BF7B7;
 struct Behaviour_t1A3DDDCF73B4627928FBFE02ED52B7251777DBD9;
 // System.Reflection.Binder
 struct Binder_t2BEE27FD84737D1E79BC47FD67F6D3DD2F2DDA30;
+// System.Byte
+struct Byte_t0111FAB8B8685667EDDAF77683F0D8F86B659056;
 // Mapbox.Platform.Cache.CachingWebFileSource
 struct CachingWebFileSource_t01761D4216AEA323A55C2F12020E21042FEA8A1B;
 // System.Globalization.Calendar
@@ -565,6 +569,8 @@ struct CommandBuffer_t25CD231BD3E822660339DB7D0E8F8ED6B7DBEA29;
 struct CompareInfo_t4AB62EC32E8AF1E469E315620C7E3FB8B0CAE0C9;
 // UnityEngine.Component
 struct Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684;
+// UnityEngine.XR.ARSubsystems.ConfigurationChooser
+struct ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4;
 // Mapbox.Unity.Map.CoreVectorLayerProperties
 struct CoreVectorLayerProperties_t66F41FDEEDFACE93E9033E98ABB3F67275387BB9;
 // UnityEngine.Coroutine
@@ -575,6 +581,8 @@ struct CultureData_t53CDF1C5F789A28897415891667799420D3C5529;
 struct CultureInfo_t1B787142231DB79ABDCE0659823F908A040E9A98;
 // System.Globalization.DateTimeFormatInfo
 struct DateTimeFormatInfo_t0B9F6CA631A51CFC98A3C6031CF8069843137C90;
+// UnityEngine.XR.ARSubsystems.DefaultConfigurationChooser
+struct DefaultConfigurationChooser_tC3488EB08C98156663D851D9F0F0AD9294D4613F;
 // Mapbox.Unity.Map.DefaultMapExtents
 struct DefaultMapExtents_t3C33BC411DE555B7D7F8DF83FCCBE617A34FFDF6;
 // System.Delegate
@@ -687,6 +695,8 @@ struct Light_tA2F349FE839781469A0344CF6039B51512394275;
 struct LightEstimateApi_tCFAB7359500281D32364127044D8874BC4D66E75;
 // Mapbox.Unity.Map.LineGeometryOptions
 struct LineGeometryOptions_tE1BF919C7A117501C6A118D3621E92166FAB0899;
+// UnityEngine.LocationService
+struct LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855;
 // Mapbox.Unity.Map.MapExtentOptions
 struct MapExtentOptions_t365499E8A3D092BBF12D08570A70BCAD7A2C63D1;
 // Mapbox.Unity.MeshGeneration.Factories.MapImageFactory
@@ -964,6 +974,7 @@ IL2CPP_EXTERN_C RuntimeClass* ARCoreProjectSettings_t882CF55B4F55450AFB19DEFC973
 IL2CPP_EXTERN_C RuntimeClass* ARFaceAnchor_tE5F12238473CFC83D30B8ABA163DC52F0311D77E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ARFaceGeometry_tD3133A168147FFC2E2883618081CBEE769ACC096_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ARFrameUpdate_t331FD35A1021115CE90CD0EE73B10B5A626E3966_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ARInterface_tD7FD5C3E96F8AF52AC5E6294E4253CD0DD8C25E2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ARKitInterface_t7914E6F83091292FAB1CFC138D5E3F5333BE54C7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ARPlaneHandler_t08DB66079C2C92826FD8C62B8A796621AA3CC89F_il2cpp_TypeInfo_var;
@@ -989,6 +1000,7 @@ IL2CPP_EXTERN_C RuntimeClass* ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B07
 IL2CPP_EXTERN_C RuntimeClass* CircularBuffer_1_tC3925BC3655DE6729C163D8A8B94B7581C22F5C3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CultureInfo_t1B787142231DB79ABDCE0659823F908A040E9A98_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_tEB68BCBEB8EFD60F8043C67146DC05E7F50F374B_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DefaultConfigurationChooser_tC3488EB08C98156663D851D9F0F0AD9294D4613F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DictionaryVisitorHandler_t8EAF9C303931D53B57D199A13EA0AF8124879CDC_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t217D4037CD98E4B8C7E1BBFE69249C0977315942_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t390FB99C37474C9D29EEF4FEF7769F9057CF22F0_il2cpp_TypeInfo_var;
@@ -3711,6 +3723,15 @@ struct Il2CppArrayBounds;
 // System.Array
 
 
+// UnityEngine.XR.ARSubsystems.ConfigurationChooser
+struct  ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+
 // System.Globalization.CultureInfo
 struct  CultureInfo_t1B787142231DB79ABDCE0659823F908A040E9A98  : public RuntimeObject
 {
@@ -4316,6 +4337,15 @@ public:
 		___s_Instance_0 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___s_Instance_0), (void*)value);
 	}
+};
+
+
+// UnityEngine.LocationService
+struct  LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855  : public RuntimeObject
+{
+public:
+
+public:
 };
 
 
@@ -6357,6 +6387,44 @@ public:
 };
 
 
+// Unity.Collections.NativeSlice`1<UnityEngine.XR.ARSubsystems.ConfigurationDescriptor>
+struct  NativeSlice_1_tEFBDB61DC6CB8E764B0E92727E8B9EA61662F8F2 
+{
+public:
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
+
+public:
+	inline static int32_t get_offset_of_m_Buffer_0() { return static_cast<int32_t>(offsetof(NativeSlice_1_tEFBDB61DC6CB8E764B0E92727E8B9EA61662F8F2, ___m_Buffer_0)); }
+	inline uint8_t* get_m_Buffer_0() const { return ___m_Buffer_0; }
+	inline uint8_t** get_address_of_m_Buffer_0() { return &___m_Buffer_0; }
+	inline void set_m_Buffer_0(uint8_t* value)
+	{
+		___m_Buffer_0 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Stride_1() { return static_cast<int32_t>(offsetof(NativeSlice_1_tEFBDB61DC6CB8E764B0E92727E8B9EA61662F8F2, ___m_Stride_1)); }
+	inline int32_t get_m_Stride_1() const { return ___m_Stride_1; }
+	inline int32_t* get_address_of_m_Stride_1() { return &___m_Stride_1; }
+	inline void set_m_Stride_1(int32_t value)
+	{
+		___m_Stride_1 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Length_2() { return static_cast<int32_t>(offsetof(NativeSlice_1_tEFBDB61DC6CB8E764B0E92727E8B9EA61662F8F2, ___m_Length_2)); }
+	inline int32_t get_m_Length_2() const { return ___m_Length_2; }
+	inline int32_t* get_address_of_m_Length_2() { return &___m_Length_2; }
+	inline void set_m_Length_2(int32_t value)
+	{
+		___m_Length_2 = value;
+	}
+};
+
+
 // System.Nullable`1<System.Boolean>
 struct  Nullable_1_t1D1CD146BFCBDC2E53E1F700889F8C5C21063EF3 
 {
@@ -6973,6 +7041,15 @@ public:
 	{
 		___MaxValue_32 = value;
 	}
+};
+
+
+// UnityEngine.XR.ARSubsystems.DefaultConfigurationChooser
+struct  DefaultConfigurationChooser_tC3488EB08C98156663D851D9F0F0AD9294D4613F  : public ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4
+{
+public:
+
+public:
 };
 
 
@@ -10126,6 +10203,24 @@ struct Exception_t_marshaled_com
 	Il2CppSafeArray/*NONE*/* ___native_trace_ips_15;
 };
 
+// UnityEngine.XR.ARSubsystems.Feature
+struct  Feature_t079F5923A4893A9E07B968C27F44AC5FCAC87C83 
+{
+public:
+	// System.UInt64 UnityEngine.XR.ARSubsystems.Feature::value__
+	uint64_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(Feature_t079F5923A4893A9E07B968C27F44AC5FCAC87C83, ___value___2)); }
+	inline uint64_t get_value___2() const { return ___value___2; }
+	inline uint64_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(uint64_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+
 // UnityEngine.FilterMode
 struct  FilterMode_tE90A08FD96A142C761463D65E524BCDBFEEE3D19 
 {
@@ -10461,6 +10556,24 @@ struct Location_t79F530B01FA271090B1852FF2F19D200DC285F46_marshaled_com
 	Il2CppChar* ___ProviderClass_14;
 	int32_t ___IsUserHeadingUpdated_15;
 };
+
+// UnityEngine.LocationServiceStatus
+struct  LocationServiceStatus_tD2BEAE4A2A42A9D0D4D859AE1C968D278D5ACF2F 
+{
+public:
+	// System.Int32 UnityEngine.LocationServiceStatus::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(LocationServiceStatus_tD2BEAE4A2A42A9D0D4D859AE1C968D278D5ACF2F, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
 
 // Mapbox.Unity.Map.MapCoordinateSystemType
 struct  MapCoordinateSystemType_t69C5514E49B65EAAE24E098C1CE53664367EE1DE 
@@ -13016,6 +13129,44 @@ public:
 };
 
 
+// UnityEngine.XR.ARSubsystems.ConfigurationDescriptor
+struct  ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78 
+{
+public:
+	// System.IntPtr UnityEngine.XR.ARSubsystems.ConfigurationDescriptor::m_Identifier
+	intptr_t ___m_Identifier_0;
+	// UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.ConfigurationDescriptor::m_Capabilities
+	uint64_t ___m_Capabilities_1;
+	// System.Int32 UnityEngine.XR.ARSubsystems.ConfigurationDescriptor::m_Rank
+	int32_t ___m_Rank_2;
+
+public:
+	inline static int32_t get_offset_of_m_Identifier_0() { return static_cast<int32_t>(offsetof(ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78, ___m_Identifier_0)); }
+	inline intptr_t get_m_Identifier_0() const { return ___m_Identifier_0; }
+	inline intptr_t* get_address_of_m_Identifier_0() { return &___m_Identifier_0; }
+	inline void set_m_Identifier_0(intptr_t value)
+	{
+		___m_Identifier_0 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Capabilities_1() { return static_cast<int32_t>(offsetof(ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78, ___m_Capabilities_1)); }
+	inline uint64_t get_m_Capabilities_1() const { return ___m_Capabilities_1; }
+	inline uint64_t* get_address_of_m_Capabilities_1() { return &___m_Capabilities_1; }
+	inline void set_m_Capabilities_1(uint64_t value)
+	{
+		___m_Capabilities_1 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Rank_2() { return static_cast<int32_t>(offsetof(ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78, ___m_Rank_2)); }
+	inline int32_t get_m_Rank_2() const { return ___m_Rank_2; }
+	inline int32_t* get_address_of_m_Rank_2() { return &___m_Rank_2; }
+	inline void set_m_Rank_2(int32_t value)
+	{
+		___m_Rank_2 = value;
+	}
+};
+
+
 // UnityEngine.GameObject
 struct  GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319  : public Object_tF2F3778131EFF286AF62B7B013A170F95A91571A
 {
@@ -14329,6 +14480,42 @@ public:
 };
 
 
+// UnityEngine.XR.ARFoundation.Samples.ARGeoAnchorConfigurationChooser
+struct  ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D  : public ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4
+{
+public:
+
+public:
+};
+
+struct ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_StaticFields
+{
+public:
+	// UnityEngine.XR.ARSubsystems.ConfigurationChooser UnityEngine.XR.ARFoundation.Samples.ARGeoAnchorConfigurationChooser::s_DefaultChooser
+	ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4 * ___s_DefaultChooser_0;
+	// UnityEngine.XR.ARSubsystems.ConfigurationDescriptor UnityEngine.XR.ARFoundation.Samples.ARGeoAnchorConfigurationChooser::s_ARGeoConfigurationDescriptor
+	ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  ___s_ARGeoConfigurationDescriptor_1;
+
+public:
+	inline static int32_t get_offset_of_s_DefaultChooser_0() { return static_cast<int32_t>(offsetof(ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_StaticFields, ___s_DefaultChooser_0)); }
+	inline ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4 * get_s_DefaultChooser_0() const { return ___s_DefaultChooser_0; }
+	inline ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4 ** get_address_of_s_DefaultChooser_0() { return &___s_DefaultChooser_0; }
+	inline void set_s_DefaultChooser_0(ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4 * value)
+	{
+		___s_DefaultChooser_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___s_DefaultChooser_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_s_ARGeoConfigurationDescriptor_1() { return static_cast<int32_t>(offsetof(ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_StaticFields, ___s_ARGeoConfigurationDescriptor_1)); }
+	inline ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  get_s_ARGeoConfigurationDescriptor_1() const { return ___s_ARGeoConfigurationDescriptor_1; }
+	inline ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78 * get_address_of_s_ARGeoConfigurationDescriptor_1() { return &___s_ARGeoConfigurationDescriptor_1; }
+	inline void set_s_ARGeoConfigurationDescriptor_1(ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  value)
+	{
+		___s_ARGeoConfigurationDescriptor_1 = value;
+	}
+};
+
+
 // UnityARInterface.ARKitInterface
 struct  ARKitInterface_t7914E6F83091292FAB1CFC138D5E3F5333BE54C7  : public ARInterface_tD7FD5C3E96F8AF52AC5E6294E4253CD0DD8C25E2
 {
@@ -14865,6 +15052,34 @@ struct  Collider_t5E81E43C2ECA0209A7C4528E84A632712D192B02  : public Component_t
 public:
 
 public:
+};
+
+
+// UnityEngine.XR.ARSubsystems.Configuration
+struct  Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0 
+{
+public:
+	// UnityEngine.XR.ARSubsystems.ConfigurationDescriptor UnityEngine.XR.ARSubsystems.Configuration::<descriptor>k__BackingField
+	ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  ___U3CdescriptorU3Ek__BackingField_0;
+	// UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.Configuration::<features>k__BackingField
+	uint64_t ___U3CfeaturesU3Ek__BackingField_1;
+
+public:
+	inline static int32_t get_offset_of_U3CdescriptorU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0, ___U3CdescriptorU3Ek__BackingField_0)); }
+	inline ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  get_U3CdescriptorU3Ek__BackingField_0() const { return ___U3CdescriptorU3Ek__BackingField_0; }
+	inline ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78 * get_address_of_U3CdescriptorU3Ek__BackingField_0() { return &___U3CdescriptorU3Ek__BackingField_0; }
+	inline void set_U3CdescriptorU3Ek__BackingField_0(ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  value)
+	{
+		___U3CdescriptorU3Ek__BackingField_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CfeaturesU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0, ___U3CfeaturesU3Ek__BackingField_1)); }
+	inline uint64_t get_U3CfeaturesU3Ek__BackingField_1() const { return ___U3CfeaturesU3Ek__BackingField_1; }
+	inline uint64_t* get_address_of_U3CfeaturesU3Ek__BackingField_1() { return &___U3CfeaturesU3Ek__BackingField_1; }
+	inline void set_U3CfeaturesU3Ek__BackingField_1(uint64_t value)
+	{
+		___U3CfeaturesU3Ek__BackingField_1 = value;
+	}
 };
 
 
@@ -20159,6 +20374,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  Vector3_Cross_m63414F0C545EBB616F339FF8830D37F9230736A4 (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___lhs0, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___rhs1, const RuntimeMethod* method);
 // UnityEngine.Quaternion UnityEngine.Quaternion::LookRotation(UnityEngine.Vector3,UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  Quaternion_LookRotation_m8A7DB5BDBC361586191AB67ACF857F46160EE3F1 (Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___forward0, Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___upwards1, const RuntimeMethod* method);
+// UnityEngine.LocationService UnityEngine.Input::get_location()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * Input_get_location_m5D0AE1016E410D3D7411904D0706456DE383F4E5 (const RuntimeMethod* method);
+// UnityEngine.LocationServiceStatus UnityEngine.LocationService::get_status()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LocationService_get_status_m1E90C9991825BDF5A3AC066D97F9198568055C54 (LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * __this, const RuntimeMethod* method);
+// UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.ConfigurationDescriptor::get_capabilities()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint64_t ConfigurationDescriptor_get_capabilities_mD48908AE629D6E78D84F355B59CF742ABFD7C649_inline (ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78 * __this, const RuntimeMethod* method);
+// UnityEngine.XR.ARSubsystems.Feature UnityEngine.XR.ARSubsystems.FeatureExtensions::Intersection(UnityEngine.XR.ARSubsystems.Feature,UnityEngine.XR.ARSubsystems.Feature)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t FeatureExtensions_Intersection_m2CA900F610313CDD88F981646EBE46B1AD8AC5E9 (uint64_t ___self0, uint64_t ___features1, const RuntimeMethod* method);
+// System.Void UnityEngine.XR.ARSubsystems.Configuration::.ctor(UnityEngine.XR.ARSubsystems.ConfigurationDescriptor,UnityEngine.XR.ARSubsystems.Feature)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Configuration__ctor_m5A3F2286F33BA303B4C8A8E0E34ED6DA993A43BB (Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0 * __this, ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  ___descriptor0, uint64_t ___features1, const RuntimeMethod* method);
+// System.Void UnityEngine.XR.ARSubsystems.ConfigurationChooser::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConfigurationChooser__ctor_mDD8DB2D97E4DD5B6CC29809BBFDDDEA149A1150A (ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.XR.ARSubsystems.DefaultConfigurationChooser::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DefaultConfigurationChooser__ctor_m01D5B274BA5A7C81A20C94A920681CAE8466A4BC (DefaultConfigurationChooser_tC3488EB08C98156663D851D9F0F0AD9294D4613F * __this, const RuntimeMethod* method);
+// System.IntPtr UnityEngine.XR.ARFoundation.Samples.ARGeoAnchorConfigurationChooser::get_ARGeoTrackingConfigurationClass()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t ARGeoAnchorConfigurationChooser_get_ARGeoTrackingConfigurationClass_m420210848A1233F8B1DCE0790EC31AA5195EE852 (const RuntimeMethod* method);
+// System.Void UnityEngine.XR.ARSubsystems.ConfigurationDescriptor::.ctor(System.IntPtr,UnityEngine.XR.ARSubsystems.Feature,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConfigurationDescriptor__ctor_m4EE8BAE7AF1CE6855C9C8B1AA541928A5450E8FA (ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78 * __this, intptr_t ___identifier0, uint64_t ___capabilities1, int32_t ___rank2, const RuntimeMethod* method);
 // System.Void System.Action`1<UnityARInterface.BoundedPlane>::Invoke(!0)
 inline void Action_1_Invoke_m76BCDF46811EE6544AC8B6C3E3C4DA1E8A022658 (Action_1_t6F26ABB4B62D11DCDC15FB8AE6890D652B835D07 * __this, BoundedPlane_t4DAE560AE21166F769CDF55456A0105519F82D46  ___obj0, const RuntimeMethod* method)
 {
@@ -21492,6 +21725,7 @@ inline DoubleU5BU5D_t8E1B42EB2ABB79FBD193A6B8C8D97A7CDE44A4FB* Enumerable_ToArra
 // System.Void System.ThrowHelper::ThrowArgumentOutOfRangeException()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowHelper_ThrowArgumentOutOfRangeException_m4841366ABC2B2AFA37C10900551D7E07522C0929 (const RuntimeMethod* method);
 IL2CPP_EXTERN_C void DEFAULT_CALL GetBlendShapesInfo(intptr_t, Il2CppMethodPointer);
+IL2CPP_EXTERN_C intptr_t DEFAULT_CALL ARGeoTrackingConfiguration_class();
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL IsARKitFaceTrackingConfigurationSupported();
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL IsARKitSessionConfigurationSupported();
 IL2CPP_EXTERN_C int32_t DEFAULT_CALL IsARKitWorldTrackingSessionConfigurationSupported();
@@ -26991,6 +27225,127 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARFocusSquare__ctor_mBA4B96CD3895A599001
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// UnityEngine.XR.ARSubsystems.Configuration UnityEngine.XR.ARFoundation.Samples.ARGeoAnchorConfigurationChooser::ChooseConfiguration(Unity.Collections.NativeSlice`1<UnityEngine.XR.ARSubsystems.ConfigurationDescriptor>,UnityEngine.XR.ARSubsystems.Feature)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0  ARGeoAnchorConfigurationChooser_ChooseConfiguration_m79192D193AD56D7EB80879E2ABF16552CC77951D (ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D * __this, NativeSlice_1_tEFBDB61DC6CB8E764B0E92727E8B9EA61662F8F2  ___descriptors0, uint64_t ___requestedFeatures1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		// return Input.location.status == LocationServiceStatus.Running
+		//     ? new Configuration(s_ARGeoConfigurationDescriptor, requestedFeatures.Intersection(s_ARGeoConfigurationDescriptor.capabilities))
+		//     : s_DefaultChooser.ChooseConfiguration(descriptors, requestedFeatures);
+		LocationService_tDCB7C3AA7A10C4727D49676FD3A902F48C27F855 * L_0;
+		L_0 = Input_get_location_m5D0AE1016E410D3D7411904D0706456DE383F4E5(/*hidden argument*/NULL);
+		NullCheck(L_0);
+		int32_t L_1;
+		L_1 = LocationService_get_status_m1E90C9991825BDF5A3AC066D97F9198568055C54(L_0, /*hidden argument*/NULL);
+		if ((((int32_t)L_1) == ((int32_t)2)))
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var);
+		ConfigurationChooser_t0CCF856A226297A702F306A2217CF17D652E72C4 * L_2 = ((ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_StaticFields*)il2cpp_codegen_static_fields_for(ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var))->get_s_DefaultChooser_0();
+		NativeSlice_1_tEFBDB61DC6CB8E764B0E92727E8B9EA61662F8F2  L_3 = ___descriptors0;
+		uint64_t L_4 = ___requestedFeatures1;
+		NullCheck(L_2);
+		Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0  L_5;
+		L_5 = VirtFuncInvoker2< Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0 , NativeSlice_1_tEFBDB61DC6CB8E764B0E92727E8B9EA61662F8F2 , uint64_t >::Invoke(4 /* UnityEngine.XR.ARSubsystems.Configuration UnityEngine.XR.ARSubsystems.ConfigurationChooser::ChooseConfiguration(Unity.Collections.NativeSlice`1<UnityEngine.XR.ARSubsystems.ConfigurationDescriptor>,UnityEngine.XR.ARSubsystems.Feature) */, L_2, L_3, L_4);
+		return L_5;
+	}
+
+IL_001a:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var);
+		ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  L_6 = ((ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_StaticFields*)il2cpp_codegen_static_fields_for(ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var))->get_s_ARGeoConfigurationDescriptor_1();
+		uint64_t L_7 = ___requestedFeatures1;
+		ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  L_8 = ((ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_StaticFields*)il2cpp_codegen_static_fields_for(ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var))->get_s_ARGeoConfigurationDescriptor_1();
+		V_0 = L_8;
+		uint64_t L_9;
+		L_9 = ConfigurationDescriptor_get_capabilities_mD48908AE629D6E78D84F355B59CF742ABFD7C649_inline((ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78 *)(&V_0), /*hidden argument*/NULL);
+		uint64_t L_10;
+		L_10 = FeatureExtensions_Intersection_m2CA900F610313CDD88F981646EBE46B1AD8AC5E9(L_7, L_9, /*hidden argument*/NULL);
+		Configuration_t29C11C7E576D64F717543048BDA1EBCEF0CF60C0  L_11;
+		memset((&L_11), 0, sizeof(L_11));
+		Configuration__ctor_m5A3F2286F33BA303B4C8A8E0E34ED6DA993A43BB((&L_11), L_6, L_10, /*hidden argument*/NULL);
+		return L_11;
+	}
+}
+// System.IntPtr UnityEngine.XR.ARFoundation.Samples.ARGeoAnchorConfigurationChooser::get_ARGeoTrackingConfigurationClass()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t ARGeoAnchorConfigurationChooser_get_ARGeoTrackingConfigurationClass_m420210848A1233F8B1DCE0790EC31AA5195EE852 (const RuntimeMethod* method)
+{
+	typedef intptr_t (DEFAULT_CALL *PInvokeFunc) ();
+
+	// Native function invocation
+	intptr_t returnValue = reinterpret_cast<PInvokeFunc>(ARGeoTrackingConfiguration_class)();
+
+	return returnValue;
+}
+// System.Void UnityEngine.XR.ARFoundation.Samples.ARGeoAnchorConfigurationChooser::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARGeoAnchorConfigurationChooser__ctor_m7986AF96B515ADAA712557715978F57F7893FE5E (ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D * __this, const RuntimeMethod* method)
+{
+	{
+		ConfigurationChooser__ctor_mDD8DB2D97E4DD5B6CC29809BBFDDDEA149A1150A(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.XR.ARFoundation.Samples.ARGeoAnchorConfigurationChooser::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARGeoAnchorConfigurationChooser__cctor_m1AA0D4C69A3F6512094C2CD15C451450773306CE (const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DefaultConfigurationChooser_tC3488EB08C98156663D851D9F0F0AD9294D4613F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// static readonly ConfigurationChooser s_DefaultChooser = new DefaultConfigurationChooser();
+		DefaultConfigurationChooser_tC3488EB08C98156663D851D9F0F0AD9294D4613F * L_0 = (DefaultConfigurationChooser_tC3488EB08C98156663D851D9F0F0AD9294D4613F *)il2cpp_codegen_object_new(DefaultConfigurationChooser_tC3488EB08C98156663D851D9F0F0AD9294D4613F_il2cpp_TypeInfo_var);
+		DefaultConfigurationChooser__ctor_m01D5B274BA5A7C81A20C94A920681CAE8466A4BC(L_0, /*hidden argument*/NULL);
+		((ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_StaticFields*)il2cpp_codegen_static_fields_for(ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var))->set_s_DefaultChooser_0(L_0);
+		// static readonly ConfigurationDescriptor s_ARGeoConfigurationDescriptor = new ConfigurationDescriptor(
+		//     // On iOS, the "identifier" used by the ConfigurationDescriptor is the Objective-C metaclass for the type
+		//     // of configuration that should be used. In general, you should not create new ConfigurationDescriptors
+		//     // (you should pick one of the descriptors passed into ChooseConfiguration); however, this will do for this
+		//     // specific case.
+		//     ARGeoTrackingConfigurationClass,
+		// 
+		//     // These are the "features" supported by the ARGeoTrackingConfiguration
+		//     Feature.WorldFacingCamera |
+		//     Feature.PositionAndRotation |
+		//     Feature.ImageTracking |
+		//     Feature.PlaneTracking |
+		//     Feature.ObjectTracking |
+		//     Feature.EnvironmentProbes,
+		// 
+		//     // Rank is meant to be used as a tie breaker in our implementation of ChooseConfiguration, but since we will
+		//     // always choose this descriptor, it doesn't matter what value we use here.
+		//     0);
+		intptr_t L_1;
+		L_1 = ARGeoAnchorConfigurationChooser_get_ARGeoTrackingConfigurationClass_m420210848A1233F8B1DCE0790EC31AA5195EE852(/*hidden argument*/NULL);
+		ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78  L_2;
+		memset((&L_2), 0, sizeof(L_2));
+		ConfigurationDescriptor__ctor_m4EE8BAE7AF1CE6855C9C8B1AA541928A5450E8FA((&L_2), (intptr_t)L_1, ((int64_t)((int64_t)((int32_t)489))), 0, /*hidden argument*/NULL);
+		((ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_StaticFields*)il2cpp_codegen_static_fields_for(ARGeoAnchorConfigurationChooser_t4FB546EEBC0B184C494D4D605010D3A894CBE38D_il2cpp_TypeInfo_var))->set_s_ARGeoConfigurationDescriptor_1(L_2);
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -44595,6 +44950,14 @@ IL_002d:
 	{
 		float L_12 = V_0;
 		return L_12;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint64_t ConfigurationDescriptor_get_capabilities_mD48908AE629D6E78D84F355B59CF742ABFD7C649_inline (ConfigurationDescriptor_t5CD12F017FCCF861DC33D7C0D6F0121015DEEA78 * __this, const RuntimeMethod* method)
+{
+	{
+		// public Feature capabilities => m_Capabilities;
+		uint64_t L_0 = __this->get_m_Capabilities_1();
+		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  Vector2_op_Subtraction_m6E536A8C72FEAA37FF8D5E26E11D6E71EB59599A_inline (Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  ___a0, Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  ___b1, const RuntimeMethod* method)

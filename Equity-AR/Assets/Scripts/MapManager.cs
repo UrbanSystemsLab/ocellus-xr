@@ -15,7 +15,7 @@ public class MapManager : MonoBehaviour
 
     public void CalibrationDone()
     {
-        var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("buildings");
+        var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
         mapCamera.SetActive(false);
         debugCanvas.SetActive(false);
         mainCanvas.SetActive(true);
@@ -27,6 +27,10 @@ public class MapManager : MonoBehaviour
         {
             tileMaterials[i-1] = arAlignedMap.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>(); 
         }
+
+        ElevationSourceType terrainSource = ElevationSourceType.None;
+        arAlignedMap.Terrain.SetLayerSource(terrainSource);
+        //arAlignedMap.Terrain.SetLayerSource(ElevationSourceType terrainSource = 'None');
 
         Debug.Log(tileMaterials.Length);
         foreach (MeshRenderer m in tileMaterials)
@@ -50,7 +54,8 @@ public class MapManager : MonoBehaviour
 
     public void Calibration()
     {
-        var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("buildings");
+        var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
+        arAlignedMap.Terrain.SetLayerSource(ElevationSourceType.MapboxTerrain);
         mapCamera.SetActive(true);
         debugCanvas.SetActive(true);
         mainCanvas.SetActive(false);

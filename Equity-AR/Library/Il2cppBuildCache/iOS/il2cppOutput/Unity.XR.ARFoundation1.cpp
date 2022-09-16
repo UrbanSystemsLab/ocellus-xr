@@ -130,6 +130,8 @@ struct Promise_1_t4A177D2785B1022FAEDD19EC4B7D80529BEAFDAB;
 struct Promise_1_tB8B428F557CD6742430DB416C0B99C79CA1AA167;
 // UnityEngine.XR.ARSubsystems.Promise`1<UnityEngine.XR.ARSubsystems.SessionInstallationStatus>
 struct Promise_1_tB8B3F3631C923F82F653F3D73D6B3082CF7CDD88;
+// UnityEngine.XR.ARSubsystems.SerializableDictionary`2<System.String,System.Byte[]>
+struct SerializableDictionary_2_t38E86C98326D3518A94E0D7FCCAA0734250D7CD8;
 // UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3<System.Object,System.Object,System.Object>
 struct SubsystemLifecycleManager_3_t2AD5C0CEF1579C328B065CC2710E931A5F71AEF1;
 // UnityEngine.XR.ARFoundation.SubsystemLifecycleManager`3<UnityEngine.XR.ARSubsystems.XRImageTrackingSubsystem,UnityEngine.XR.ARSubsystems.XRImageTrackingSubsystemDescriptor,UnityEngine.XR.ARSubsystems.XRImageTrackingSubsystem/Provider>
@@ -4238,6 +4240,8 @@ public:
 	bool ___U3CrequiresPhysicalImageDimensionsU3Ek__BackingField_4;
 	// System.Boolean UnityEngine.XR.ARSubsystems.XRImageTrackingSubsystemDescriptor::<supportsMutableLibrary>k__BackingField
 	bool ___U3CsupportsMutableLibraryU3Ek__BackingField_5;
+	// System.Boolean UnityEngine.XR.ARSubsystems.XRImageTrackingSubsystemDescriptor::<supportsImageValidation>k__BackingField
+	bool ___U3CsupportsImageValidationU3Ek__BackingField_6;
 
 public:
 	inline static int32_t get_offset_of_U3CsupportsMovingImagesU3Ek__BackingField_3() { return static_cast<int32_t>(offsetof(XRImageTrackingSubsystemDescriptor_t3EC191739B144A8AA00CEEE03E8F7FF01D7F833B, ___U3CsupportsMovingImagesU3Ek__BackingField_3)); }
@@ -4262,6 +4266,14 @@ public:
 	inline void set_U3CsupportsMutableLibraryU3Ek__BackingField_5(bool value)
 	{
 		___U3CsupportsMutableLibraryU3Ek__BackingField_5 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CsupportsImageValidationU3Ek__BackingField_6() { return static_cast<int32_t>(offsetof(XRImageTrackingSubsystemDescriptor_t3EC191739B144A8AA00CEEE03E8F7FF01D7F833B, ___U3CsupportsImageValidationU3Ek__BackingField_6)); }
+	inline bool get_U3CsupportsImageValidationU3Ek__BackingField_6() const { return ___U3CsupportsImageValidationU3Ek__BackingField_6; }
+	inline bool* get_address_of_U3CsupportsImageValidationU3Ek__BackingField_6() { return &___U3CsupportsImageValidationU3Ek__BackingField_6; }
+	inline void set_U3CsupportsImageValidationU3Ek__BackingField_6(bool value)
+	{
+		___U3CsupportsImageValidationU3Ek__BackingField_6 = value;
 	}
 };
 
@@ -5664,8 +5676,10 @@ public:
 	uint64_t ___m_GuidLow_4;
 	// System.UInt64 UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary::m_GuidHigh
 	uint64_t ___m_GuidHigh_5;
+	// UnityEngine.XR.ARSubsystems.SerializableDictionary`2<System.String,System.Byte[]> UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary::m_DataStore
+	SerializableDictionary_2_t38E86C98326D3518A94E0D7FCCAA0734250D7CD8 * ___m_DataStore_6;
 	// System.Collections.Generic.List`1<UnityEngine.XR.ARSubsystems.XRReferenceImage> UnityEngine.XR.ARSubsystems.XRReferenceImageLibrary::m_Images
-	List_1_tBFEC44C63782254A7C0F22D20FC51F72002482EC * ___m_Images_6;
+	List_1_tBFEC44C63782254A7C0F22D20FC51F72002482EC * ___m_Images_7;
 
 public:
 	inline static int32_t get_offset_of_m_GuidLow_4() { return static_cast<int32_t>(offsetof(XRReferenceImageLibrary_tC415743C1DDCE2331D5B0F159B2A1D72A70C44B2, ___m_GuidLow_4)); }
@@ -5684,13 +5698,22 @@ public:
 		___m_GuidHigh_5 = value;
 	}
 
-	inline static int32_t get_offset_of_m_Images_6() { return static_cast<int32_t>(offsetof(XRReferenceImageLibrary_tC415743C1DDCE2331D5B0F159B2A1D72A70C44B2, ___m_Images_6)); }
-	inline List_1_tBFEC44C63782254A7C0F22D20FC51F72002482EC * get_m_Images_6() const { return ___m_Images_6; }
-	inline List_1_tBFEC44C63782254A7C0F22D20FC51F72002482EC ** get_address_of_m_Images_6() { return &___m_Images_6; }
-	inline void set_m_Images_6(List_1_tBFEC44C63782254A7C0F22D20FC51F72002482EC * value)
+	inline static int32_t get_offset_of_m_DataStore_6() { return static_cast<int32_t>(offsetof(XRReferenceImageLibrary_tC415743C1DDCE2331D5B0F159B2A1D72A70C44B2, ___m_DataStore_6)); }
+	inline SerializableDictionary_2_t38E86C98326D3518A94E0D7FCCAA0734250D7CD8 * get_m_DataStore_6() const { return ___m_DataStore_6; }
+	inline SerializableDictionary_2_t38E86C98326D3518A94E0D7FCCAA0734250D7CD8 ** get_address_of_m_DataStore_6() { return &___m_DataStore_6; }
+	inline void set_m_DataStore_6(SerializableDictionary_2_t38E86C98326D3518A94E0D7FCCAA0734250D7CD8 * value)
 	{
-		___m_Images_6 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___m_Images_6), (void*)value);
+		___m_DataStore_6 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___m_DataStore_6), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_m_Images_7() { return static_cast<int32_t>(offsetof(XRReferenceImageLibrary_tC415743C1DDCE2331D5B0F159B2A1D72A70C44B2, ___m_Images_7)); }
+	inline List_1_tBFEC44C63782254A7C0F22D20FC51F72002482EC * get_m_Images_7() const { return ___m_Images_7; }
+	inline List_1_tBFEC44C63782254A7C0F22D20FC51F72002482EC ** get_address_of_m_Images_7() { return &___m_Images_7; }
+	inline void set_m_Images_7(List_1_tBFEC44C63782254A7C0F22D20FC51F72002482EC * value)
+	{
+		___m_Images_7 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___m_Images_7), (void*)value);
 	}
 };
 
@@ -17083,7 +17106,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeReferenceImageLibrary_t760
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRImageTrackingSubsystemDescriptor_get_supportsMovingImages_m7100D7317E24CAC9D353C4FBDEAE2C3BCE6E6D4F_inline (XRImageTrackingSubsystemDescriptor_t3EC191739B144A8AA00CEEE03E8F7FF01D7F833B * __this, const RuntimeMethod* method)
 {
 	{
-		// public bool supportsMovingImages { get; private set; }
+		// public bool supportsMovingImages { get; }
 		bool L_0 = __this->get_U3CsupportsMovingImagesU3Ek__BackingField_3();
 		return L_0;
 	}

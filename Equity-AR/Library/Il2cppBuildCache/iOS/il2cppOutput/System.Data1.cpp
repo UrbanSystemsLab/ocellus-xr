@@ -19378,7 +19378,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AttributeCollection_tF551C6836E2C7F849595B7EF
 		L_2 = VirtFuncInvoker0< Type_t * >::Invoke(16 /* System.Type System.ComponentModel.PropertyDescriptor::get_PropertyType() */, __this);
 		NullCheck(L_1);
 		bool L_3;
-		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
+		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
 		if (!L_3)
 		{
 			goto IL_004b;

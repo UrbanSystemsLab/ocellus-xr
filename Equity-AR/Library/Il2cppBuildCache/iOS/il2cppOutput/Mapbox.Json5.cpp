@@ -5283,7 +5283,7 @@ IL_007e:
 		L_38 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_37, /*hidden argument*/NULL);
 		NullCheck(L_36);
 		bool L_39;
-		L_39 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_36, L_38);
+		L_39 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_36, L_38);
 		if (!L_39)
 		{
 			goto IL_00d8;
@@ -5297,7 +5297,7 @@ IL_007e:
 		L_42 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_41, /*hidden argument*/NULL);
 		NullCheck(L_40);
 		bool L_43;
-		L_43 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_40, L_42);
+		L_43 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_40, L_42);
 		G_B13_0 = ((int32_t)(L_43));
 		goto IL_00d9;
 	}
@@ -7423,7 +7423,7 @@ IL_0041:
 		Type_t * L_15 = __this->get_subTypePropertyDeclaringType_0();
 		NullCheck(G_B7_0);
 		bool L_16;
-		L_16 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, G_B7_0, L_15);
+		L_16 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, G_B7_0, L_15);
 		G_B9_0 = ((int32_t)(L_16));
 		goto IL_004f;
 	}

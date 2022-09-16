@@ -17172,7 +17172,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DataStorage_tD0EA36115182A6288321E6EF7C8B16C5
 		Type_t * L_5 = ___dataType1;
 		NullCheck(L_4);
 		bool L_6;
-		L_6 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_4, L_5);
+		L_6 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_4, L_5);
 		if (!L_6)
 		{
 			goto IL_0026;
@@ -18227,28 +18227,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Tuple_4_t565F851AA4121F24870E4537C8F66E055878
 		Type_t * L_2 = ___dataType0;
 		NullCheck(L_1);
 		bool L_3;
-		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
+		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_4 = { reinterpret_cast<intptr_t> (IChangeTracking_tAB45AB877D44D29B17348109A99C9EB06DA7D01B_0_0_0_var) };
 		Type_t * L_5;
 		L_5 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_4, /*hidden argument*/NULL);
 		Type_t * L_6 = ___dataType0;
 		NullCheck(L_5);
 		bool L_7;
-		L_7 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_5, L_6);
+		L_7 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_5, L_6);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_8 = { reinterpret_cast<intptr_t> (IRevertibleChangeTracking_tF3583D36465F6482C78DC1F97B89471840D876AE_0_0_0_var) };
 		Type_t * L_9;
 		L_9 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_8, /*hidden argument*/NULL);
 		Type_t * L_10 = ___dataType0;
 		NullCheck(L_9);
 		bool L_11;
-		L_11 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_9, L_10);
+		L_11 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_9, L_10);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_12 = { reinterpret_cast<intptr_t> (IXmlSerializable_t5BEF028D2890007426B01C2B934C2469498B8013_0_0_0_var) };
 		Type_t * L_13;
 		L_13 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_12, /*hidden argument*/NULL);
 		Type_t * L_14 = ___dataType0;
 		NullCheck(L_13);
 		bool L_15;
-		L_15 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_13, L_14);
+		L_15 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_13, L_14);
 		Tuple_4_t565F851AA4121F24870E4537C8F66E05587888DF * L_16 = (Tuple_4_t565F851AA4121F24870E4537C8F66E05587888DF *)il2cpp_codegen_object_new(Tuple_4_t565F851AA4121F24870E4537C8F66E05587888DF_il2cpp_TypeInfo_var);
 		Tuple_4__ctor_m32FAD89C8237436679603767D8CEBE51C79336C9(L_16, L_3, L_7, L_11, L_15, /*hidden argument*/Tuple_4__ctor_m32FAD89C8237436679603767D8CEBE51C79336C9_RuntimeMethod_var);
 		return L_16;
@@ -18285,7 +18285,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DataStorage_ImplementsINullableValue_m80
 		Type_t * L_3 = ___dataType1;
 		NullCheck(L_3);
 		Type_t * L_4;
-		L_4 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_3);
+		L_4 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_3);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_5 = { reinterpret_cast<intptr_t> (Nullable_1_t4EDBE007AFFA0315135B9A508DACA62D3C201867_0_0_0_var) };
 		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
 		Type_t * L_6;

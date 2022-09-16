@@ -40096,7 +40096,7 @@ IL_021e:
 			L_120 = VirtFuncInvoker0< Type_t * >::Invoke(22 /* System.Type System.Reflection.PropertyInfo::get_PropertyType() */, L_119);
 			NullCheck(L_118);
 			bool L_121;
-			L_121 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_118, L_120);
+			L_121 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_118, L_120);
 			if (L_121)
 			{
 				goto IL_02a8;

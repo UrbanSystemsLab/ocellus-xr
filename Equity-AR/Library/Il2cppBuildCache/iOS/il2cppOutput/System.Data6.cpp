@@ -33703,7 +33703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlUdtStorage__ctor_m7FDC41954FC5BDF4309
 		Type_t * L_6 = ___type1;
 		NullCheck(L_5);
 		bool L_7;
-		L_7 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_5, L_6);
+		L_7 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_5, L_6);
 		Type_t * L_8 = ___type1;
 		IL2CPP_RUNTIME_CLASS_INIT(DataStorage_tD0EA36115182A6288321E6EF7C8B16C5E19D0138_il2cpp_TypeInfo_var);
 		int32_t L_9;
@@ -33715,7 +33715,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlUdtStorage__ctor_m7FDC41954FC5BDF4309
 		Type_t * L_12 = ___type1;
 		NullCheck(L_11);
 		bool L_13;
-		L_13 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_11, L_12);
+		L_13 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_11, L_12);
 		__this->set__implementsIXmlSerializable_15(L_13);
 		RuntimeTypeHandle_tC33965ADA3E041E0C94AF05E5CB527B56482CEF9  L_14 = { reinterpret_cast<intptr_t> (IComparable_tFEDC50D0B9EA8DB2753CA1971AA5AB49AD3AC62C_0_0_0_var) };
 		Type_t * L_15;
@@ -33723,7 +33723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlUdtStorage__ctor_m7FDC41954FC5BDF4309
 		Type_t * L_16 = ___type1;
 		NullCheck(L_15);
 		bool L_17;
-		L_17 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_15, L_16);
+		L_17 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_15, L_16);
 		__this->set__implementsIComparable_16(L_17);
 		return;
 	}
@@ -34115,7 +34115,7 @@ IL_0047:
 		RuntimeObject * L_14 = ___value1;
 		NullCheck(L_13);
 		bool L_15;
-		L_15 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(112 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_13, L_14);
+		L_15 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(113 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_13, L_14);
 		if (L_15)
 		{
 			goto IL_005b;

@@ -21177,7 +21177,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CollectionUtils_IsDictionaryType_m886827
 		Type_t * L_3 = ___type0;
 		NullCheck(L_2);
 		bool L_4;
-		L_4 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_2, L_3);
+		L_4 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_2, L_3);
 		V_0 = L_4;
 		bool L_5 = V_0;
 		if (!L_5)
@@ -21380,7 +21380,7 @@ IL_006b:
 		Type_t * L_27 = ___constructorArgumentType2;
 		NullCheck(L_26);
 		bool L_28;
-		L_28 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_26, L_27);
+		L_28 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_26, L_27);
 		V_10 = L_28;
 		bool L_29 = V_10;
 		if (!L_29)
@@ -22117,7 +22117,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ConvertUtils_IsConvertible_mB2A8D4C93142
 		Type_t * L_2 = ___t0;
 		NullCheck(L_1);
 		bool L_3;
-		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
+		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
 		V_0 = L_3;
 		goto IL_0014;
 	}
@@ -22893,7 +22893,7 @@ IL_025d:
 		Type_t * L_119 = ___targetType2;
 		NullCheck(L_118);
 		bool L_120;
-		L_120 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_118, L_119);
+		L_120 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_118, L_119);
 		V_26 = L_120;
 		bool L_121 = V_26;
 		if (!L_121)
@@ -23343,7 +23343,7 @@ IL_000d:
 		Type_t * L_6 = V_0;
 		NullCheck(L_5);
 		bool L_7;
-		L_7 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_5, L_6);
+		L_7 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_5, L_6);
 		V_3 = L_7;
 		bool L_8 = V_3;
 		if (!L_8)
@@ -26474,7 +26474,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DataSetConverter_CanConvert_m2A77D28411B
 		Type_t * L_2 = ___valueType0;
 		NullCheck(L_1);
 		bool L_3;
-		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
+		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
 		V_0 = L_3;
 		goto IL_0014;
 	}
@@ -27611,7 +27611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DataTableConverter_CanConvert_mA9462655A
 		Type_t * L_2 = ___valueType0;
 		NullCheck(L_1);
 		bool L_3;
-		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
+		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
 		V_0 = L_3;
 		goto IL_0014;
 	}
@@ -33705,7 +33705,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DefaultContractResolver_ShouldSerializeE
 		L_7 = VirtFuncInvoker0< Type_t * >::Invoke(22 /* System.Type System.Reflection.PropertyInfo::get_PropertyType() */, L_6);
 		NullCheck(L_7);
 		Type_t * L_8;
-		L_8 = VirtFuncInvoker0< Type_t * >::Invoke(103 /* System.Type System.Type::GetGenericTypeDefinition() */, L_7);
+		L_8 = VirtFuncInvoker0< Type_t * >::Invoke(104 /* System.Type System.Type::GetGenericTypeDefinition() */, L_7);
 		NullCheck(L_8);
 		String_t* L_9;
 		L_9 = VirtFuncInvoker0< String_t* >::Invoke(27 /* System.String System.Type::get_FullName() */, L_8);
@@ -36833,7 +36833,7 @@ IL_0104:
 		L_54 = VirtFuncInvoker0< Type_t * >::Invoke(8 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_53);
 		NullCheck(L_50);
 		bool L_55;
-		L_55 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_50, L_54);
+		L_55 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_50, L_54);
 		G_B16_0 = ((int32_t)(L_55));
 		goto IL_011e;
 	}
@@ -37032,7 +37032,7 @@ IL_007b:
 		L_29 = VirtFuncInvoker0< Type_t * >::Invoke(8 /* System.Type System.Reflection.ParameterInfo::get_ParameterType() */, L_28);
 		NullCheck(L_25);
 		bool L_30;
-		L_30 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_25, L_29);
+		L_30 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_25, L_29);
 		G_B9_0 = ((int32_t)(L_30));
 		goto IL_0093;
 	}
@@ -37412,7 +37412,7 @@ IL_007e:
 		L_26 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_25, /*hidden argument*/NULL);
 		NullCheck(L_24);
 		bool L_27;
-		L_27 = VirtFuncInvoker1< bool, Type_t * >::Invoke(111 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_24, L_26);
+		L_27 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_24, L_26);
 		G_B11_0 = ((int32_t)(L_27));
 		goto IL_009e;
 	}
@@ -37468,7 +37468,7 @@ IL_00cc:
 		Type_t * L_38 = V_0;
 		NullCheck(L_37);
 		bool L_39;
-		L_39 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_37, L_38);
+		L_39 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_37, L_38);
 		V_9 = L_39;
 		bool L_40 = V_9;
 		if (!L_40)
@@ -37522,7 +37522,7 @@ IL_0104:
 		Type_t * L_51 = V_0;
 		NullCheck(L_50);
 		bool L_52;
-		L_52 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_50, L_51);
+		L_52 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_50, L_51);
 		G_B22_0 = ((int32_t)(L_52));
 		goto IL_011f;
 	}
@@ -37656,7 +37656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DefaultContractResolver_IsIConvertible_m
 		Type_t * L_2 = ___t0;
 		NullCheck(L_1);
 		bool L_3;
-		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
+		L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
 		if (L_3)
 		{
 			goto IL_0035;
@@ -37682,7 +37682,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DefaultContractResolver_IsIConvertible_m
 		L_9 = Nullable_GetUnderlyingType_mC5699E7E11E1AFE25365CAB564A48F0193318629(L_8, /*hidden argument*/NULL);
 		NullCheck(L_7);
 		bool L_10;
-		L_10 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_7, L_9);
+		L_10 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_7, L_9);
 		G_B4_0 = ((int32_t)(L_10));
 		goto IL_0033;
 	}
@@ -37720,7 +37720,7 @@ IL_0036:
 		Type_t * L_14 = ___t0;
 		NullCheck(L_13);
 		bool L_15;
-		L_15 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_13, L_14);
+		L_15 = VirtFuncInvoker1< bool, Type_t * >::Invoke(114 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_13, L_14);
 		V_1 = (bool)((((int32_t)L_15) == ((int32_t)0))? 1 : 0);
 		goto IL_0055;
 	}
@@ -37790,7 +37790,7 @@ IL_0012:
 		L_8 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_7, /*hidden argument*/NULL);
 		NullCheck(L_6);
 		bool L_9;
-		L_9 = VirtFuncInvoker1< bool, Type_t * >::Invoke(111 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_6, L_8);
+		L_9 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsSubclassOf(System.Type) */, L_6, L_8);
 		G_B5_0 = ((int32_t)(L_9));
 		goto IL_0032;
 	}
