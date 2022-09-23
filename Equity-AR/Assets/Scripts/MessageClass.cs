@@ -33,6 +33,7 @@ public class MessageClass : MonoBehaviour
         public string id;
         public string name;
         public string description;
+        public bool isReady;
     }
 
     [Serializable]

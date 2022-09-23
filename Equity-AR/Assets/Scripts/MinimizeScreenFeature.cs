@@ -8,7 +8,7 @@ public class MinimizeScreenFeature : MonoBehaviour
     public Sprite[] icon;
     public Image bntImg;
     public GameObject UIFeature;
-    public GameObject caliPage;
+    //public GameObject caliPage;
     public RectTransform rectTransform;
     // Start is called before the first frame update
     void Start()
@@ -40,13 +40,13 @@ public class MinimizeScreenFeature : MonoBehaviour
         {
             bntImg.sprite = icon[0];
             UIFeature.SetActive(true);
-            caliPage.SetActive(true);
+            //caliPage.SetActive(true);
         }
         else
         {
             bntImg.sprite = icon[1];
             UIFeature.SetActive(false);
-            caliPage.SetActive(false);
+            //caliPage.SetActive(false);
         }
     }
 }

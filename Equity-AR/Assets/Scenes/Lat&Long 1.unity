@@ -864,6 +864,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1323399833345613701, guid: 176a789a100ac4769acf8cc865b7feab,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2016839448753850639, guid: 176a789a100ac4769acf8cc865b7feab,
         type: 3}
       propertyPath: m_RaycastTarget
@@ -3009,7 +3014,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 76752f12fdc55422e9d5adbd3d631cdc, type: 3}
   bntImg: {fileID: 790626725}
   UIFeature: {fileID: 2051039045}
-  caliPage: {fileID: 0}
   rectTransform: {fileID: 790626722}
 --- !u!114 &790626724
 MonoBehaviour:
@@ -5928,6 +5932,7 @@ MonoBehaviour:
         id: 
         name: 
         description: 
+        isReady: 0
       location:
         lat: 0
         lon: 0
@@ -5948,6 +5953,7 @@ MonoBehaviour:
   type: 
   selectedLat: 0
   selectedLon: 0
+  layerIsReady: 0
 --- !u!1 &1181421684
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,7 +6100,6 @@ MonoBehaviour:
   PlaceObjectFunction: {fileID: 864032069}
   fullBnt: {fileID: 790626721}
   LiveSection: {fileID: 1181421684}
-  PlaceARMapUI: {fileID: 911462910}
 --- !u!4 &1223410835
 Transform:
   m_ObjectHideFlags: 0
@@ -7168,7 +7173,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 76752f12fdc55422e9d5adbd3d631cdc, type: 3}
   bntImg: {fileID: 1466631949}
   UIFeature: {fileID: 2051039045}
-  caliPage: {fileID: 0}
   rectTransform: {fileID: 0}
 --- !u!114 &1466631948
 MonoBehaviour:

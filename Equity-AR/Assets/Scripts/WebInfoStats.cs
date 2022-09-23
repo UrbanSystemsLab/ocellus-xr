@@ -16,6 +16,7 @@ public class WebInfoStats : MonoBehaviour
     //public int pageIndex;
     public float selectedLat;
     public float selectedLon;
+    public bool layerIsReady;
 
     // Start is called before the first frame update
     void Start()

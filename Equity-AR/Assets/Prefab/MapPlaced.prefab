@@ -416,7 +416,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: equity.dmmqh0kw0
           geometryType: 2
           layerName: 2020s-100y
@@ -891,9 +891,9 @@ MonoBehaviour:
           combinerType: 0
         extrusionOptions:
           _selectedLayerName: PEJAs_NYS
-          extrusionType: 3
+          extrusionType: 1
           extrusionGeometryType: 0
-          propertyName: Non_White
+          propertyName: AWATER10
           propertyDescription: Number
           minimumHeight: 0
           maximumHeight: 1
@@ -938,7 +938,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: equity.dmmqh0kw1
           geometryType: 2
           layerName: 2020s-500y
@@ -1003,7 +1003,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: equity.dmmqh0kw2
           geometryType: 2
           layerName: 2050s-100y
@@ -1068,7 +1068,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: equity.dmmqh0kw3
           geometryType: 2
           layerName: 2050s-500y

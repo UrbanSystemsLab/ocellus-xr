@@ -8,6 +8,8 @@ using System;
 public class Switcher : MonoBehaviour
 {
     //This script is in Map Manager inside Map Prefab.
+    //[SerializeField]
+    //public static bool isReady = false;
 
     public AbstractMap _abstractMap;
     private IEnumerable<VectorSubLayerProperties> allLayer;
@@ -15,11 +17,7 @@ public class Switcher : MonoBehaviour
     private VectorSubLayerProperties NY_buildings;
 
     private string currentMapLayerID = "";
-    //private VectorSubLayerProperties tempLayer;
-    private VectorSubLayerProperties floodLayer1;
-    private VectorSubLayerProperties floodLayer2;
-    private VectorSubLayerProperties floodLayer3;
-
+    
     private void Start()
     {
         allLayer = _abstractMap.VectorData.GetAllFeatureSubLayers();
@@ -37,14 +35,15 @@ public class Switcher : MonoBehaviour
         
             if(WebInfoStats.Stats.currentLayerID != currentMapLayerID)
             {
-                ActivateLayer(WebInfoStats.Stats.currentLayerID);
+                
+                WebInfoStats.Stats.layerIsReady = ActivateLayer(WebInfoStats.Stats.currentLayerID);
                 //Debug.Log("WebInfo has something!" + WebInfoStats.Stats.currentLayerName);
                 currentMapLayerID = WebInfoStats.Stats.currentLayerName;
             }
  
     }
 
-    private void ActivateLayer(string LayerID)
+    private bool ActivateLayer(string LayerID)
     {
         deactivateAllLayer();
         if (LayerID == "equity.dmmqh0kw")//the floodplains data is split into 4 different layers
@@ -61,6 +60,7 @@ public class Switcher : MonoBehaviour
             layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
             layer.SetActive(true);
         }
+        return true;
     }
 
     //private void FindLayerSourceId(string LayerId)

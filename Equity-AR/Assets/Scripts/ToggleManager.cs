@@ -11,9 +11,9 @@ public class ToggleManager : MonoBehaviour
 
     public TapToPlaceObject PlaceObjectFunction;
     public GameObject fullBnt;
-    //public GameObject LiveSection;
+    public GameObject LiveSection;
     //public GameObject PlaceARMapUI;
-    
+
 
     private string currentStatus = "";
     public void turnOffWeb()
@@ -37,7 +37,7 @@ public class ToggleManager : MonoBehaviour
 
     public void toggleLiveMap(bool input)
     {
-        //LiveSection.SetActive(input);
+        LiveSection.SetActive(input);
     }
 
     public void DestroyARMap()
@@ -67,8 +67,8 @@ public class ToggleManager : MonoBehaviour
                 {
                     fullBnt.SetActive(true);
                     togglePlaceObject(false);
-                    //DestroyARMap();
-                    //toggleLiveMap(true);
+                    DestroyARMap();
+                    toggleLiveMap(true);
                 }
 
                 currentStatus = WebInfoStats.Stats.type;

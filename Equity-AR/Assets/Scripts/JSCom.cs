@@ -12,7 +12,6 @@ public class JSCom : MonoBehaviour
     //public string myJS;
     public Text infoText;
     public GameObject webViewObject;
-    MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
 
     async void Start()
     {
@@ -36,36 +35,36 @@ public class JSCom : MonoBehaviour
                 MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
                 gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
                 Debug.Log("JavaScript send layer of : " + gotData.data.layer.name + gotData.type);
-                if (gotData.type == "ar" || gotData.type == "live")
-                {
-                    //storing the json data in WebInfoStats
-                    WebInfoStats.Stats.currentLayerName = gotData.data.layer.name;
-                    WebInfoStats.Stats.currentLayerID = gotData.data.layer.id;
-                    WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
-                    WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
-                    WebInfoStats.Stats.type = gotData.type;
+            if (gotData.type == "ar" || gotData.type == "live")
+            {
+                //storing the json data in WebInfoStats
+                WebInfoStats.Stats.currentLayerName = gotData.data.layer.name;
+                WebInfoStats.Stats.currentLayerID = gotData.data.layer.id;
+                WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
+                WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
+                WebInfoStats.Stats.type = gotData.type;
 
-                    //TODO
-                    if (TapToPlaceObject.mapIsLoaded)
-                    {
-                        constructMessage();
-                        //TODO
-                        //webViewObject.SetActive(false);
-                    }
+                //if (TapToPlaceObject.mapIsLoaded)//WebStatus.isReady?
+                constructMessage();
+                //TODO
+                webViewObject.SetActive(false);
             }
+            
+           
+                
 
                 
         };
     }
 
-    private void constructMessage()
+    public void constructMessage()
     {
 
         Debug.Log("the webview is ready in unity");
         MessageClass messageClass = new MessageClass();
         //string JSON = JsonUtility.ToJson(messageClass);
         Debug.Log("constructing JSON string now");
-
+        messageClass.message.messageContent.layer.isReady = true;
 
         // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
         // is null until the prefab has initialized.

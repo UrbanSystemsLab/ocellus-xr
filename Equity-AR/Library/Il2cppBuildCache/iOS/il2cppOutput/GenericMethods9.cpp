@@ -7864,6 +7864,8 @@ public:
 	String_t* ___name_1;
 	// System.String MessageClass/Layer::description
 	String_t* ___description_2;
+	// System.Boolean MessageClass/Layer::isReady
+	bool ___isReady_3;
 
 public:
 	inline static int32_t get_offset_of_id_0() { return static_cast<int32_t>(offsetof(Layer_t666C69705E1B02751B3632428A4D26DDFB098742, ___id_0)); }
@@ -7892,6 +7894,14 @@ public:
 		___description_2 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___description_2), (void*)value);
 	}
+
+	inline static int32_t get_offset_of_isReady_3() { return static_cast<int32_t>(offsetof(Layer_t666C69705E1B02751B3632428A4D26DDFB098742, ___isReady_3)); }
+	inline bool get_isReady_3() const { return ___isReady_3; }
+	inline bool* get_address_of_isReady_3() { return &___isReady_3; }
+	inline void set_isReady_3(bool value)
+	{
+		___isReady_3 = value;
+	}
 };
 
 // Native definition for P/Invoke marshalling of MessageClass/Layer
@@ -7900,6 +7910,7 @@ struct Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_pinvoke
 	char* ___id_0;
 	char* ___name_1;
 	char* ___description_2;
+	int32_t ___isReady_3;
 };
 // Native definition for COM marshalling of MessageClass/Layer
 struct Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_com
@@ -7907,6 +7918,7 @@ struct Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_com
 	Il2CppChar* ___id_0;
 	Il2CppChar* ___name_1;
 	Il2CppChar* ___description_2;
+	int32_t ___isReady_3;
 };
 
 // MessageClass/Location
