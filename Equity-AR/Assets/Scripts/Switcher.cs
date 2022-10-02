@@ -8,9 +8,7 @@ using System;
 public class Switcher : MonoBehaviour
 {
     //This script is in Map Manager inside Map Prefab.
-    //[SerializeField]
-    //public static bool isReady = false;
-
+    public static Switcher instance;
     public AbstractMap _abstractMap;
     private IEnumerable<VectorSubLayerProperties> allLayer;
     private VectorSubLayerProperties layer;
@@ -20,6 +18,7 @@ public class Switcher : MonoBehaviour
     
     private void Start()
     {
+        instance = this;
         allLayer = _abstractMap.VectorData.GetAllFeatureSubLayers();
 
         NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
@@ -43,7 +42,7 @@ public class Switcher : MonoBehaviour
  
     }
 
-    private bool ActivateLayer(string LayerID)
+    public bool ActivateLayer(string LayerID)
     {
         deactivateAllLayer();
         if (LayerID == "equity.dmmqh0kw")//the floodplains data is split into 4 different layers

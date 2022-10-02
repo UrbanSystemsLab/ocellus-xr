@@ -204,8 +204,8 @@ extern void JSCom_constructMessage_m96F65B025840B7BCCD643DAF98A0C1420052046C (vo
 extern void JSCom_WebView_LoadProgressChanged_m1226E1CB765A659EE8D65EFDAEB3FBC41B3A84E1 (void);
 // 0x0000005D System.Void JSCom::.ctor()
 extern void JSCom__ctor_mCAEF49179DA19BCDD364825A1436A72CFEBE131B (void);
-// 0x0000005E System.Void JSCom::<RecieveMessageFromWeb>b__4_0(System.Object,Vuplex.WebView.EventArgs`1<System.String>)
-extern void JSCom_U3CRecieveMessageFromWebU3Eb__4_0_m6F4BF6B1E03D8CF4A9ACADA10E674418FF851964 (void);
+// 0x0000005E System.Void JSCom::<RecieveMessageFromWeb>b__6_0(System.Object,Vuplex.WebView.EventArgs`1<System.String>)
+extern void JSCom_U3CRecieveMessageFromWebU3Eb__6_0_mC5413A4E580E556112838EA1F47CC1644537B28C (void);
 // 0x0000005F System.Void MainPage::ShowInformation()
 extern void MainPage_ShowInformation_m6880EE9055EAD1AE7DD573ACE43E1D8600EDE6B3 (void);
 // 0x00000060 System.Void MainPage::.ctor()
@@ -10528,10 +10528,10 @@ extern void U3CStartLocationServiceU3Ed__7_System_Collections_Generic_IEnumerato
 extern void U3CStartLocationServiceU3Ed__7_System_Collections_IEnumerator_Reset_m49FB0EF670F05D3791AC020B5D88635A516347D9 (void);
 // 0x00001615 System.Object AskLocation/<StartLocationService>d__7::System.Collections.IEnumerator.get_Current()
 extern void U3CStartLocationServiceU3Ed__7_System_Collections_IEnumerator_get_Current_m22DC78B5CD8EBCC6D15B67B5772612CAFD505A5D (void);
-// 0x00001616 System.Void JSCom/<Start>d__3::MoveNext()
-extern void U3CStartU3Ed__3_MoveNext_m9B16DA29B222055D2D47194EFCD10C00916CFC53 (void);
-// 0x00001617 System.Void JSCom/<Start>d__3::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
-extern void U3CStartU3Ed__3_SetStateMachine_m79DB2765CA218352675D93DB419F068E4F42C4D1 (void);
+// 0x00001616 System.Void JSCom/<Start>d__5::MoveNext()
+extern void U3CStartU3Ed__5_MoveNext_m9374842F61EFB6DEA6229FEEE5E24B391C9DE255 (void);
+// 0x00001617 System.Void JSCom/<Start>d__5::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+extern void U3CStartU3Ed__5_SetStateMachine_m5347EF49C2EAFFF5C668B391157A3F9B7BD7603B (void);
 // 0x00001618 System.Void URLLocationUpdate/<Start>d__4::.ctor(System.Int32)
 extern void U3CStartU3Ed__4__ctor_mC3A6D2AE5B3E5EAF581339BC9240F6393393E48C (void);
 // 0x00001619 System.Void URLLocationUpdate/<Start>d__4::System.IDisposable.Dispose()
@@ -12440,7 +12440,7 @@ static Il2CppMethodPointer s_methodPointers[6642] =
 	JSCom_constructMessage_m96F65B025840B7BCCD643DAF98A0C1420052046C,
 	JSCom_WebView_LoadProgressChanged_m1226E1CB765A659EE8D65EFDAEB3FBC41B3A84E1,
 	JSCom__ctor_mCAEF49179DA19BCDD364825A1436A72CFEBE131B,
-	JSCom_U3CRecieveMessageFromWebU3Eb__4_0_m6F4BF6B1E03D8CF4A9ACADA10E674418FF851964,
+	JSCom_U3CRecieveMessageFromWebU3Eb__6_0_mC5413A4E580E556112838EA1F47CC1644537B28C,
 	MainPage_ShowInformation_m6880EE9055EAD1AE7DD573ACE43E1D8600EDE6B3,
 	MainPage__ctor_m058AFDFBC6CEE224F61EEE951E3F891582C5AABA,
 	MapManager_CalibrationDone_m106143413A62BD5DCDA732F95625FF9BF3467CF2,
@@ -18000,8 +18000,8 @@ static Il2CppMethodPointer s_methodPointers[6642] =
 	U3CStartLocationServiceU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA31DDAACD610644842D0298C05B328E3A6DDC669,
 	U3CStartLocationServiceU3Ed__7_System_Collections_IEnumerator_Reset_m49FB0EF670F05D3791AC020B5D88635A516347D9,
 	U3CStartLocationServiceU3Ed__7_System_Collections_IEnumerator_get_Current_m22DC78B5CD8EBCC6D15B67B5772612CAFD505A5D,
-	U3CStartU3Ed__3_MoveNext_m9B16DA29B222055D2D47194EFCD10C00916CFC53,
-	U3CStartU3Ed__3_SetStateMachine_m79DB2765CA218352675D93DB419F068E4F42C4D1,
+	U3CStartU3Ed__5_MoveNext_m9374842F61EFB6DEA6229FEEE5E24B391C9DE255,
+	U3CStartU3Ed__5_SetStateMachine_m5347EF49C2EAFFF5C668B391157A3F9B7BD7603B,
 	U3CStartU3Ed__4__ctor_mC3A6D2AE5B3E5EAF581339BC9240F6393393E48C,
 	U3CStartU3Ed__4_System_IDisposable_Dispose_m3198F274D1A4F5F7F5BDAA6698B6A73CDA95B374,
 	U3CStartU3Ed__4_MoveNext_m22EF9408AE9E87C85AF7CE364D1881EABF919666,
@@ -19141,8 +19141,8 @@ extern void ARKitWorldTrackingSessionConfiguration__ctor_m19E2BCF0B1CD550EAD99A3
 extern void ARKitFaceTrackingConfiguration_get_IsSupported_mBC5440D4FAAC68F1261D53EE493E55BDE8606422_AdjustorThunk (void);
 extern void ARKitFaceTrackingConfiguration_set_IsSupported_m1B28A268C902EF7F365A249D8EBD63C6BA1AE9A0_AdjustorThunk (void);
 extern void ARKitFaceTrackingConfiguration__ctor_m6F0B67E77BF5DB5751ED2DC78B6DE016ED032394_AdjustorThunk (void);
-extern void U3CStartU3Ed__3_MoveNext_m9B16DA29B222055D2D47194EFCD10C00916CFC53_AdjustorThunk (void);
-extern void U3CStartU3Ed__3_SetStateMachine_m79DB2765CA218352675D93DB419F068E4F42C4D1_AdjustorThunk (void);
+extern void U3CStartU3Ed__5_MoveNext_m9374842F61EFB6DEA6229FEEE5E24B391C9DE255_AdjustorThunk (void);
+extern void U3CStartU3Ed__5_SetStateMachine_m5347EF49C2EAFFF5C668B391157A3F9B7BD7603B_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[153] = 
 {
 	{ 0x060006B8, BoundedPlane_get_normal_m1CC5DAAA96407EA5E70A2ACDDBEEED665E686093_AdjustorThunk },
@@ -19296,8 +19296,8 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[153] =
 	{ 0x06001578, ARKitFaceTrackingConfiguration_get_IsSupported_mBC5440D4FAAC68F1261D53EE493E55BDE8606422_AdjustorThunk },
 	{ 0x06001579, ARKitFaceTrackingConfiguration_set_IsSupported_m1B28A268C902EF7F365A249D8EBD63C6BA1AE9A0_AdjustorThunk },
 	{ 0x0600157A, ARKitFaceTrackingConfiguration__ctor_m6F0B67E77BF5DB5751ED2DC78B6DE016ED032394_AdjustorThunk },
-	{ 0x06001616, U3CStartU3Ed__3_MoveNext_m9B16DA29B222055D2D47194EFCD10C00916CFC53_AdjustorThunk },
-	{ 0x06001617, U3CStartU3Ed__3_SetStateMachine_m79DB2765CA218352675D93DB419F068E4F42C4D1_AdjustorThunk },
+	{ 0x06001616, U3CStartU3Ed__5_MoveNext_m9374842F61EFB6DEA6229FEEE5E24B391C9DE255_AdjustorThunk },
+	{ 0x06001617, U3CStartU3Ed__5_SetStateMachine_m5347EF49C2EAFFF5C668B391157A3F9B7BD7603B_AdjustorThunk },
 };
 static const int32_t s_InvokerIndices[6642] = 
 {

@@ -19833,6 +19833,8 @@ public:
 	float ___selectedLon_9;
 	// System.Boolean WebInfoStats::layerIsReady
 	bool ___layerIsReady_10;
+	// System.Boolean WebInfoStats::webviewIsOpen
+	bool ___webviewIsOpen_11;
 
 public:
 	inline static int32_t get_offset_of_currentLayerName_5() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___currentLayerName_5)); }
@@ -19884,6 +19886,14 @@ public:
 	inline void set_layerIsReady_10(bool value)
 	{
 		___layerIsReady_10 = value;
+	}
+
+	inline static int32_t get_offset_of_webviewIsOpen_11() { return static_cast<int32_t>(offsetof(WebInfoStats_tAB17D0A836A56F372F39CBBC511B36F9C6391495, ___webviewIsOpen_11)); }
+	inline bool get_webviewIsOpen_11() const { return ___webviewIsOpen_11; }
+	inline bool* get_address_of_webviewIsOpen_11() { return &___webviewIsOpen_11; }
+	inline void set_webviewIsOpen_11(bool value)
+	{
+		___webviewIsOpen_11 = value;
 	}
 };
 

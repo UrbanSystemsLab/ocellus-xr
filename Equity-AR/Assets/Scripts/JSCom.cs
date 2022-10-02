@@ -12,6 +12,8 @@ public class JSCom : MonoBehaviour
     //public string myJS;
     public Text infoText;
     public GameObject webViewObject;
+    public GameObject map;
+    private GameObject preloadMap;
 
     async void Start()
     {
@@ -43,17 +45,30 @@ public class JSCom : MonoBehaviour
                 WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
                 WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
                 WebInfoStats.Stats.type = gotData.type;
+                WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
+
+                //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
+                preloadMap = Instantiate(map, new Vector3(0, -2, 0), Quaternion.identity);
+                bool preloadIsFinished = Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
+                //preloadMap.SetActive(false);
 
                 //if (TapToPlaceObject.mapIsLoaded)//WebStatus.isReady?
-                constructMessage();
-                //TODO
+                if (preloadIsFinished)
+                {
+                    preloadMap.SetActive(false);
+                    constructMessage();
+                }
+            }
+
+            if (!gotData.data.webviewIsOpen)
+            {
                 webViewObject.SetActive(false);
             }
-            
-           
-                
 
-                
+
+
+
+
         };
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 public class MessageClass : MonoBehaviour
 {
     //Create a custom struct and apply [Serializable] attribute to it
+    //Data structure for sending web message
     [Serializable]
     public struct Message
     {
@@ -11,12 +12,12 @@ public class MessageClass : MonoBehaviour
         public DataContent messageContent;
     }
 
+    //Data structure for recieving JSON from web
     [Serializable]
     public struct RecieveJSON
     {
         public string type;
         public DataContent data;
-        
 
     }
 
@@ -25,6 +26,7 @@ public class MessageClass : MonoBehaviour
     {
         public Layer layer;
         public Location location;
+        public bool webviewIsOpen;
     }
 
     [Serializable]

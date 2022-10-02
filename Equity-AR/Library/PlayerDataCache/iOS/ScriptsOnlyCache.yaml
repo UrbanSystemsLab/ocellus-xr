@@ -72,8 +72,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.XR.ARCore.Editor.dll:
-    - UnityEditor.XR.ARCore.ARCoreSettings
     Unity.XR.ARFoundation.dll:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
@@ -1075,7 +1073,7 @@ ScriptsOnlyBuild:
     className: QuadTreeMapVisualizer
   - hash:
       serializedVersion: 2
-      Hash: c27862ee92580419cf1ace8f37950da0
+      Hash: 841428ba8f8fd5d047f8325229b0e519
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MessageClass
@@ -1087,7 +1085,7 @@ ScriptsOnlyBuild:
     className: InputActionImporterEditor
   - hash:
       serializedVersion: 2
-      Hash: 3e1b29f6eb1b0fc642aa6b594051f0b5
+      Hash: 123c72bcd98fdc1cb8ec9dda2d99e3ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ToggleManager
@@ -1123,7 +1121,7 @@ ScriptsOnlyBuild:
     className: ForwardGeocoderExample
   - hash:
       serializedVersion: 2
-      Hash: 70c9e8f89134d82cf2b1095c68152a03
+      Hash: f1e04573ba230ebfe47e26108531970a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MinimizeScreenFeature
@@ -2737,7 +2735,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 847a433fe1d92472974002b9aea64645
+      Hash: eb541bc31f0fff98c10f69819e777149
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WebInfoStats
@@ -2767,7 +2765,7 @@ ScriptsOnlyBuild:
     className: SetCameraHeight
   - hash:
       serializedVersion: 2
-      Hash: 1ffd8766e1c050aaf3e6fab3854c750e
+      Hash: 752d36235399f4af5c472f47d0a98d82
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JSCom

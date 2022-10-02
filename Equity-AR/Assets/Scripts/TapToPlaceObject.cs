@@ -34,8 +34,10 @@ public class TapToPlaceObject : MonoBehaviour
     void Start()
     {
         //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
-        map = Instantiate(objectToPlace, new Vector3(0,-2,0), Quaternion.identity);
-        map.SetActive(false);
+        //map = Instantiate(objectToPlace, new Vector3(0,-2,0), Quaternion.identity);
+        //Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
+        //map.SetActive(false);
+        
 
 
         isPlaced = false;
@@ -49,8 +51,11 @@ public class TapToPlaceObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
+        if(map == null)
+        {
+            Debug.Log("finding map in tap to place object");
+            map = GameObject.FindGameObjectWithTag("Map");
+        }
 
         if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !isPlaced)
         {
@@ -66,28 +71,22 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void PlaceObject()
     {
-        if(map!= null)
+        //Set the preloaded map to visible
+        if (map != null)
         {
             map.SetActive(true);
             map.transform.position = placementPose.position;
             map.transform.rotation = placementPose.rotation;
         }
-        else
-        {
-            map = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
-            map.SetActive(true);
-        }
+        
 
         isPlaced = true;
         TapToPlaceMap.SetActive(false);
-        //map.GetComponent<LeanPinchScale>().enabled = true;
-        //map.GetComponent<LeanTwistRotateAxis>().enabled = true;
         isCalibrating = true;
     }
 
     private void UpdatePlacementIndicator()
     {
-        //Debug.Log("placement is valid" + placementPoseIsValid);
         if (placementPoseIsValid)
         {
             placementIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);

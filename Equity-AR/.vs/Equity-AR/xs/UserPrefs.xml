@@ -4,14 +4,14 @@
       <File FileName="Assets/Scripts/MessageClass.cs" Line="36" Column="29" IsPinned="True" />
       <File FileName="Assets/Mapbox/Unity/Map/AbstractMap.cs" IsPinned="True" />
       <File FileName="Assets/Scripts/TreeInfoManager.cs" IsPinned="True" />
-      <File FileName="Assets/Scripts/Switcher.cs" Line="17" Column="51" />
-      <File FileName="Assets/Scripts/JSCom.cs" Line="46" Column="1" />
-      <File FileName="Assets/Scripts/TapToPlaceObject.cs" Line="58" Column="10" />
+      <File FileName="Assets/Scripts/Switcher.cs" />
+      <File FileName="Assets/Scripts/JSCom.cs" Line="50" Column="48" />
+      <File FileName="Assets/Scripts/TapToPlaceObject.cs" />
       <File FileName="Assets/Scripts/URLLocationUpdate.cs" />
       <File FileName="Assets/Mapbox/Unity/MeshGeneration/Modifiers/MergedModifierStack.cs" />
       <File FileName="Assets/Scripts/WebInfoStats.cs" />
-      <File FileName="Assets/Scripts/ToggleManager.cs" Line="17" Column="1" />
-      <File FileName="Assets/Scripts/MinimizeScreenFeature.cs" Line="42" Column="39" />
+      <File FileName="Assets/Scripts/ToggleManager.cs" />
+      <File FileName="Assets/Scripts/MinimizeScreenFeature.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

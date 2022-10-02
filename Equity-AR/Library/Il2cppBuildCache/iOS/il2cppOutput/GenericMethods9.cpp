@@ -12287,6 +12287,8 @@ public:
 	Layer_t666C69705E1B02751B3632428A4D26DDFB098742  ___layer_0;
 	// MessageClass/Location MessageClass/DataContent::location
 	Location_t9728E739BA516BD3B72435362794CB8658F524C3  ___location_1;
+	// System.Boolean MessageClass/DataContent::webviewIsOpen
+	bool ___webviewIsOpen_2;
 
 public:
 	inline static int32_t get_offset_of_layer_0() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___layer_0)); }
@@ -12311,6 +12313,14 @@ public:
 	{
 		___location_1 = value;
 	}
+
+	inline static int32_t get_offset_of_webviewIsOpen_2() { return static_cast<int32_t>(offsetof(DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386, ___webviewIsOpen_2)); }
+	inline bool get_webviewIsOpen_2() const { return ___webviewIsOpen_2; }
+	inline bool* get_address_of_webviewIsOpen_2() { return &___webviewIsOpen_2; }
+	inline void set_webviewIsOpen_2(bool value)
+	{
+		___webviewIsOpen_2 = value;
+	}
 };
 
 // Native definition for P/Invoke marshalling of MessageClass/DataContent
@@ -12318,12 +12328,14 @@ struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_pinvoke
 {
 	Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_pinvoke ___layer_0;
 	Location_t9728E739BA516BD3B72435362794CB8658F524C3  ___location_1;
+	int32_t ___webviewIsOpen_2;
 };
 // Native definition for COM marshalling of MessageClass/DataContent
 struct DataContent_tA8C17A832CB9D081B79A48A284BF7155C6CCE386_marshaled_com
 {
 	Layer_t666C69705E1B02751B3632428A4D26DDFB098742_marshaled_com ___layer_0;
 	Location_t9728E739BA516BD3B72435362794CB8658F524C3  ___location_1;
+	int32_t ___webviewIsOpen_2;
 };
 
 // UnityEngine.InputSystem.XInput.XInputController/DeviceFlags
