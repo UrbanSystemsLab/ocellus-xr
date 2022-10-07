@@ -11,6 +11,8 @@ public class TapToPlaceObject : MonoBehaviour
 {
     [SerializeField]
     public static bool mapIsLoaded = false;
+
+    //public static TapToPlaceObject instance;
     
     public GameObject objectToPlace;
     public GameObject placementIndicator;
@@ -27,17 +29,18 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void Awake()
     {
+        //instance = this;
         reloadMapCanvas.SetActive(false);
+        //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
+        map = Instantiate(objectToPlace, new Vector3(0, -2, 0), Quaternion.identity);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
-        //map = Instantiate(objectToPlace, new Vector3(0,-2,0), Quaternion.identity);
-        //Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
-        //map.SetActive(false);
         
+        
+
 
 
         isPlaced = false;
@@ -51,11 +54,6 @@ public class TapToPlaceObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(map == null)
-        {
-            Debug.Log("finding map in tap to place object");
-            map = GameObject.FindGameObjectWithTag("Map");
-        }
 
         if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !isPlaced)
         {
@@ -65,7 +63,6 @@ public class TapToPlaceObject : MonoBehaviour
         if (!isPlaced)
         {
             UpdatePlacementPose();
-            UpdatePlacementIndicator();
         }
     }
 
@@ -85,14 +82,6 @@ public class TapToPlaceObject : MonoBehaviour
         isCalibrating = true;
     }
 
-    private void UpdatePlacementIndicator()
-    {
-        if (placementPoseIsValid)
-        {
-            placementIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
-        }
-    }
-
     private void UpdatePlacementPose()
     {
         var screenCenter = newCamera.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
@@ -108,6 +97,7 @@ public class TapToPlaceObject : MonoBehaviour
             var cameraForward = newCamera.transform.forward;
             var cameraBearing = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
             placementPose.rotation = Quaternion.LookRotation(cameraBearing);
+            placementIndicator.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
         }
     }
 
@@ -133,4 +123,9 @@ public class TapToPlaceObject : MonoBehaviour
         }
         
     }
+
+    //public GameObject gotMap()
+    //{
+    //    return map;
+    //}
 }

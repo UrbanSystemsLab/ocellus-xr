@@ -15814,7 +15814,7 @@ IL_00a3:
 		L_23 = SimpleType_get_Namespace_mAAA9E44494BBC6854B824AA57DAC2D364F88FCA3_inline(L_22, /*hidden argument*/NULL);
 		NullCheck(L_21);
 		RuntimeObject * L_24;
-		L_24 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_21, L_23);
+		L_24 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(24 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_21, L_23);
 		G_B11_0 = ((String_t*)CastclassSealed((RuntimeObject*)L_24, String_t_il2cpp_TypeInfo_var));
 	}
 

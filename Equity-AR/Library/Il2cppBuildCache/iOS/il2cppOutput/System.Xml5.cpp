@@ -160,6 +160,8 @@ struct Dictionary_2_t0015CBF964B0687CBB5ECFDDE06671A8F3DDE4BC;
 struct Dictionary_2_tC94E9875910491F8130C2DC8B11E4D1548A55162;
 // System.Collections.Generic.Dictionary`2<System.String,System.Xml.Schema.SchemaNotation>
 struct Dictionary_2_t09B46EB6F8DDD621EBD0DA4C8C9BA1E5749E9121;
+// System.Collections.Generic.Dictionary`2<MS.Internal.Xml.Cache.XPathNodeRef,MS.Internal.Xml.Cache.XPathNodeRef>
+struct Dictionary_2_t4EDA304EB239333A04A5B9AA8551E2714497961C;
 // System.Collections.Generic.Dictionary`2<System.Xml.XmlQualifiedName,System.Xml.Schema.SchemaAttDef>
 struct Dictionary_2_t1FAD0C7CC6F970A1F41D0F7433B8D62A408D1C58;
 // System.Collections.Generic.Dictionary`2<System.Xml.XmlQualifiedName,System.Xml.Schema.SchemaElementDecl>
@@ -428,6 +430,8 @@ struct ValidationState_t90630C9B3683DC8C0D4B040DC419CBEE0D99FABD;
 struct Variable_t133E2D7093553AEDD74A553E0DF24E2CD8D65E24;
 // System.Void
 struct Void_t700C6383A2A510C2CF4DD86DABD5CA9FF70ADAC5;
+// System.Xml.XPath.XPathDocument
+struct XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28;
 // System.Xml.XPath.XPathException
 struct XPathException_t792CC10AAED271C28CC28747BE2649D6D4A7DF5B;
 // System.Xml.XPath.XPathItem
@@ -440,6 +444,8 @@ struct XPathNavigatorKeyComparer_tE86B3B19B683A126542CC0AE8531465FFE4DDA2A;
 struct XPathNode_t8136D06F11AFD28E2F7CF363AD9198C32FA0FEF7;
 // MS.Internal.Xml.Cache.XPathNodeInfoAtom
 struct XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6;
+// MS.Internal.Xml.Cache.XPathNodePageInfo
+struct XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708;
 // MS.Internal.Xml.XPath.XPathParser
 struct XPathParser_t9F8A2170D8913A4B154CECDAE6497B81ACBFA533;
 // MS.Internal.Xml.XPath.XPathScanner
@@ -4124,12 +4130,217 @@ struct ValueType_tDBF999C1B75C48C68621878250DBF6CDBCF51E52_marshaled_com
 {
 };
 
+// System.Xml.XPath.XPathDocument
+struct  XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28  : public RuntimeObject
+{
+public:
+	// MS.Internal.Xml.Cache.XPathNode[] System.Xml.XPath.XPathDocument::pageXmlNmsp
+	XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* ___pageXmlNmsp_0;
+	// System.Int32 System.Xml.XPath.XPathDocument::idxXmlNmsp
+	int32_t ___idxXmlNmsp_1;
+	// System.Xml.XmlNameTable System.Xml.XPath.XPathDocument::nameTable
+	XmlNameTable_t5A8AA505CA799E0DC25E9815E4106817D2E1E280 * ___nameTable_2;
+	// System.Boolean System.Xml.XPath.XPathDocument::hasLineInfo
+	bool ___hasLineInfo_3;
+	// System.Collections.Generic.Dictionary`2<MS.Internal.Xml.Cache.XPathNodeRef,MS.Internal.Xml.Cache.XPathNodeRef> System.Xml.XPath.XPathDocument::mapNmsp
+	Dictionary_2_t4EDA304EB239333A04A5B9AA8551E2714497961C * ___mapNmsp_4;
+
+public:
+	inline static int32_t get_offset_of_pageXmlNmsp_0() { return static_cast<int32_t>(offsetof(XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28, ___pageXmlNmsp_0)); }
+	inline XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* get_pageXmlNmsp_0() const { return ___pageXmlNmsp_0; }
+	inline XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986** get_address_of_pageXmlNmsp_0() { return &___pageXmlNmsp_0; }
+	inline void set_pageXmlNmsp_0(XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* value)
+	{
+		___pageXmlNmsp_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___pageXmlNmsp_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_idxXmlNmsp_1() { return static_cast<int32_t>(offsetof(XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28, ___idxXmlNmsp_1)); }
+	inline int32_t get_idxXmlNmsp_1() const { return ___idxXmlNmsp_1; }
+	inline int32_t* get_address_of_idxXmlNmsp_1() { return &___idxXmlNmsp_1; }
+	inline void set_idxXmlNmsp_1(int32_t value)
+	{
+		___idxXmlNmsp_1 = value;
+	}
+
+	inline static int32_t get_offset_of_nameTable_2() { return static_cast<int32_t>(offsetof(XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28, ___nameTable_2)); }
+	inline XmlNameTable_t5A8AA505CA799E0DC25E9815E4106817D2E1E280 * get_nameTable_2() const { return ___nameTable_2; }
+	inline XmlNameTable_t5A8AA505CA799E0DC25E9815E4106817D2E1E280 ** get_address_of_nameTable_2() { return &___nameTable_2; }
+	inline void set_nameTable_2(XmlNameTable_t5A8AA505CA799E0DC25E9815E4106817D2E1E280 * value)
+	{
+		___nameTable_2 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___nameTable_2), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_hasLineInfo_3() { return static_cast<int32_t>(offsetof(XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28, ___hasLineInfo_3)); }
+	inline bool get_hasLineInfo_3() const { return ___hasLineInfo_3; }
+	inline bool* get_address_of_hasLineInfo_3() { return &___hasLineInfo_3; }
+	inline void set_hasLineInfo_3(bool value)
+	{
+		___hasLineInfo_3 = value;
+	}
+
+	inline static int32_t get_offset_of_mapNmsp_4() { return static_cast<int32_t>(offsetof(XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28, ___mapNmsp_4)); }
+	inline Dictionary_2_t4EDA304EB239333A04A5B9AA8551E2714497961C * get_mapNmsp_4() const { return ___mapNmsp_4; }
+	inline Dictionary_2_t4EDA304EB239333A04A5B9AA8551E2714497961C ** get_address_of_mapNmsp_4() { return &___mapNmsp_4; }
+	inline void set_mapNmsp_4(Dictionary_2_t4EDA304EB239333A04A5B9AA8551E2714497961C * value)
+	{
+		___mapNmsp_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___mapNmsp_4), (void*)value);
+	}
+};
+
+
 // System.Xml.XPath.XPathItem
 struct  XPathItem_t053B6F865E42EB40BFD03AE958B99844501E5701  : public RuntimeObject
 {
 public:
 
 public:
+};
+
+
+// MS.Internal.Xml.Cache.XPathNodeInfoAtom
+struct  XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6  : public RuntimeObject
+{
+public:
+	// System.String MS.Internal.Xml.Cache.XPathNodeInfoAtom::localName
+	String_t* ___localName_0;
+	// System.String MS.Internal.Xml.Cache.XPathNodeInfoAtom::namespaceUri
+	String_t* ___namespaceUri_1;
+	// System.String MS.Internal.Xml.Cache.XPathNodeInfoAtom::prefix
+	String_t* ___prefix_2;
+	// MS.Internal.Xml.Cache.XPathNode[] MS.Internal.Xml.Cache.XPathNodeInfoAtom::pageParent
+	XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* ___pageParent_3;
+	// MS.Internal.Xml.Cache.XPathNode[] MS.Internal.Xml.Cache.XPathNodeInfoAtom::pageSibling
+	XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* ___pageSibling_4;
+	// System.Xml.XPath.XPathDocument MS.Internal.Xml.Cache.XPathNodeInfoAtom::doc
+	XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28 * ___doc_5;
+	// System.Int32 MS.Internal.Xml.Cache.XPathNodeInfoAtom::lineNumBase
+	int32_t ___lineNumBase_6;
+	// System.Int32 MS.Internal.Xml.Cache.XPathNodeInfoAtom::linePosBase
+	int32_t ___linePosBase_7;
+	// MS.Internal.Xml.Cache.XPathNodePageInfo MS.Internal.Xml.Cache.XPathNodeInfoAtom::pageInfo
+	XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708 * ___pageInfo_8;
+
+public:
+	inline static int32_t get_offset_of_localName_0() { return static_cast<int32_t>(offsetof(XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6, ___localName_0)); }
+	inline String_t* get_localName_0() const { return ___localName_0; }
+	inline String_t** get_address_of_localName_0() { return &___localName_0; }
+	inline void set_localName_0(String_t* value)
+	{
+		___localName_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___localName_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_namespaceUri_1() { return static_cast<int32_t>(offsetof(XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6, ___namespaceUri_1)); }
+	inline String_t* get_namespaceUri_1() const { return ___namespaceUri_1; }
+	inline String_t** get_address_of_namespaceUri_1() { return &___namespaceUri_1; }
+	inline void set_namespaceUri_1(String_t* value)
+	{
+		___namespaceUri_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___namespaceUri_1), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_prefix_2() { return static_cast<int32_t>(offsetof(XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6, ___prefix_2)); }
+	inline String_t* get_prefix_2() const { return ___prefix_2; }
+	inline String_t** get_address_of_prefix_2() { return &___prefix_2; }
+	inline void set_prefix_2(String_t* value)
+	{
+		___prefix_2 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___prefix_2), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_pageParent_3() { return static_cast<int32_t>(offsetof(XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6, ___pageParent_3)); }
+	inline XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* get_pageParent_3() const { return ___pageParent_3; }
+	inline XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986** get_address_of_pageParent_3() { return &___pageParent_3; }
+	inline void set_pageParent_3(XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* value)
+	{
+		___pageParent_3 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___pageParent_3), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_pageSibling_4() { return static_cast<int32_t>(offsetof(XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6, ___pageSibling_4)); }
+	inline XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* get_pageSibling_4() const { return ___pageSibling_4; }
+	inline XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986** get_address_of_pageSibling_4() { return &___pageSibling_4; }
+	inline void set_pageSibling_4(XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* value)
+	{
+		___pageSibling_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___pageSibling_4), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_doc_5() { return static_cast<int32_t>(offsetof(XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6, ___doc_5)); }
+	inline XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28 * get_doc_5() const { return ___doc_5; }
+	inline XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28 ** get_address_of_doc_5() { return &___doc_5; }
+	inline void set_doc_5(XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28 * value)
+	{
+		___doc_5 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___doc_5), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_lineNumBase_6() { return static_cast<int32_t>(offsetof(XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6, ___lineNumBase_6)); }
+	inline int32_t get_lineNumBase_6() const { return ___lineNumBase_6; }
+	inline int32_t* get_address_of_lineNumBase_6() { return &___lineNumBase_6; }
+	inline void set_lineNumBase_6(int32_t value)
+	{
+		___lineNumBase_6 = value;
+	}
+
+	inline static int32_t get_offset_of_linePosBase_7() { return static_cast<int32_t>(offsetof(XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6, ___linePosBase_7)); }
+	inline int32_t get_linePosBase_7() const { return ___linePosBase_7; }
+	inline int32_t* get_address_of_linePosBase_7() { return &___linePosBase_7; }
+	inline void set_linePosBase_7(int32_t value)
+	{
+		___linePosBase_7 = value;
+	}
+
+	inline static int32_t get_offset_of_pageInfo_8() { return static_cast<int32_t>(offsetof(XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6, ___pageInfo_8)); }
+	inline XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708 * get_pageInfo_8() const { return ___pageInfo_8; }
+	inline XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708 ** get_address_of_pageInfo_8() { return &___pageInfo_8; }
+	inline void set_pageInfo_8(XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708 * value)
+	{
+		___pageInfo_8 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___pageInfo_8), (void*)value);
+	}
+};
+
+
+// MS.Internal.Xml.Cache.XPathNodePageInfo
+struct  XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708  : public RuntimeObject
+{
+public:
+	// System.Int32 MS.Internal.Xml.Cache.XPathNodePageInfo::pageNum
+	int32_t ___pageNum_0;
+	// System.Int32 MS.Internal.Xml.Cache.XPathNodePageInfo::nodeCount
+	int32_t ___nodeCount_1;
+	// MS.Internal.Xml.Cache.XPathNode[] MS.Internal.Xml.Cache.XPathNodePageInfo::pageNext
+	XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* ___pageNext_2;
+
+public:
+	inline static int32_t get_offset_of_pageNum_0() { return static_cast<int32_t>(offsetof(XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708, ___pageNum_0)); }
+	inline int32_t get_pageNum_0() const { return ___pageNum_0; }
+	inline int32_t* get_address_of_pageNum_0() { return &___pageNum_0; }
+	inline void set_pageNum_0(int32_t value)
+	{
+		___pageNum_0 = value;
+	}
+
+	inline static int32_t get_offset_of_nodeCount_1() { return static_cast<int32_t>(offsetof(XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708, ___nodeCount_1)); }
+	inline int32_t get_nodeCount_1() const { return ___nodeCount_1; }
+	inline int32_t* get_address_of_nodeCount_1() { return &___nodeCount_1; }
+	inline void set_nodeCount_1(int32_t value)
+	{
+		___nodeCount_1 = value;
+	}
+
+	inline static int32_t get_offset_of_pageNext_2() { return static_cast<int32_t>(offsetof(XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708, ___pageNext_2)); }
+	inline XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* get_pageNext_2() const { return ___pageNext_2; }
+	inline XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986** get_address_of_pageNext_2() { return &___pageNext_2; }
+	inline void set_pageNext_2(XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* value)
+	{
+		___pageNext_2 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___pageNext_2), (void*)value);
+	}
 };
 
 
@@ -16863,6 +17074,118 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlLoader_LoadInnerXmlAttribute_m15BB1E3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// MS.Internal.Xml.Cache.XPathNodePageInfo MS.Internal.Xml.Cache.XPathNodeInfoAtom::get_PageInfo()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708 * XPathNodeInfoAtom_get_PageInfo_mB81A5A21438257DC31AE8F1AC8535621D85206A3 (XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6 * __this, const RuntimeMethod* method)
+{
+	{
+		XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708 * L_0 = __this->get_pageInfo_8();
+		return L_0;
+	}
+}
+// System.String MS.Internal.Xml.Cache.XPathNodeInfoAtom::get_LocalName()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XPathNodeInfoAtom_get_LocalName_mD7465F5C48EDCE54972ABDE7BA78B8D9357BEABE (XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6 * __this, const RuntimeMethod* method)
+{
+	{
+		String_t* L_0 = __this->get_localName_0();
+		return L_0;
+	}
+}
+// System.String MS.Internal.Xml.Cache.XPathNodeInfoAtom::get_NamespaceUri()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XPathNodeInfoAtom_get_NamespaceUri_m09443195AF53EA937D16A91EB5069A98669551AC (XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6 * __this, const RuntimeMethod* method)
+{
+	{
+		String_t* L_0 = __this->get_namespaceUri_1();
+		return L_0;
+	}
+}
+// System.String MS.Internal.Xml.Cache.XPathNodeInfoAtom::get_Prefix()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* XPathNodeInfoAtom_get_Prefix_m42B407DB4B3D7D15A394AE84C3CDDAB1F8AB8E66 (XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6 * __this, const RuntimeMethod* method)
+{
+	{
+		String_t* L_0 = __this->get_prefix_2();
+		return L_0;
+	}
+}
+// MS.Internal.Xml.Cache.XPathNode[] MS.Internal.Xml.Cache.XPathNodeInfoAtom::get_SiblingPage()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* XPathNodeInfoAtom_get_SiblingPage_m7A8883FF04C2C7A701D96CA6974FA498A8092D6A (XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6 * __this, const RuntimeMethod* method)
+{
+	{
+		XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* L_0 = __this->get_pageSibling_4();
+		return L_0;
+	}
+}
+// MS.Internal.Xml.Cache.XPathNode[] MS.Internal.Xml.Cache.XPathNodeInfoAtom::get_ParentPage()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* XPathNodeInfoAtom_get_ParentPage_m0999A1E58410F76F13D2990CEBDB6E5E2AF064C6 (XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6 * __this, const RuntimeMethod* method)
+{
+	{
+		XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* L_0 = __this->get_pageParent_3();
+		return L_0;
+	}
+}
+// System.Xml.XPath.XPathDocument MS.Internal.Xml.Cache.XPathNodeInfoAtom::get_Document()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28 * XPathNodeInfoAtom_get_Document_m9C3A5ABC778BE58D1FDBE0E3E624902E5866C77A (XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6 * __this, const RuntimeMethod* method)
+{
+	{
+		XPathDocument_t4CC99965F59C02B7EA91F475F5B3A2BC843A7A28 * L_0 = __this->get_doc_5();
+		return L_0;
+	}
+}
+// System.Int32 MS.Internal.Xml.Cache.XPathNodeInfoAtom::get_LineNumberBase()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XPathNodeInfoAtom_get_LineNumberBase_m4323FC22AC71DF4533FE3C476334BF552F9B3715 (XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6 * __this, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = __this->get_lineNumBase_6();
+		return L_0;
+	}
+}
+// System.Int32 MS.Internal.Xml.Cache.XPathNodeInfoAtom::get_LinePositionBase()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XPathNodeInfoAtom_get_LinePositionBase_m99CBCA66EAC3E16F01CCE0F797980925A00CC572 (XPathNodeInfoAtom_tD28503461CDC6B0676C301A1559C7530C8D129C6 * __this, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = __this->get_linePosBase_7();
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Int32 MS.Internal.Xml.Cache.XPathNodePageInfo::get_PageNumber()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XPathNodePageInfo_get_PageNumber_m5C6A15FAED0B070B79BD588DCF48561E03835700 (XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708 * __this, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = __this->get_pageNum_0();
+		return L_0;
+	}
+}
+// System.Int32 MS.Internal.Xml.Cache.XPathNodePageInfo::get_NodeCount()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XPathNodePageInfo_get_NodeCount_m353B9E0EF9932CBEF1B43CA3791AD00490927642 (XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708 * __this, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = __this->get_nodeCount_1();
+		return L_0;
+	}
+}
+// MS.Internal.Xml.Cache.XPathNode[] MS.Internal.Xml.Cache.XPathNodePageInfo::get_NextPage()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* XPathNodePageInfo_get_NextPage_m3B387708F855B7E42B4E01A8ACF91A7B4901B9B0 (XPathNodePageInfo_t42FCE8FCA339F27BAF782D09BB4D5BA363667708 * __this, const RuntimeMethod* method)
+{
+	{
+		XPathNodeU5BU5D_t9C12796872BE720EA06A401CEBEE89CCB2482986* L_0 = __this->get_pageNext_2();
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 
 
 // Conversion methods for marshalling of: MS.Internal.Xml.Cache.XPathNodeRef
@@ -18817,7 +19140,7 @@ IL_0064:
 		String_t* L_16 = V_1;
 		NullCheck(L_15);
 		RuntimeObject * L_17;
-		L_17 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_15, L_16);
+		L_17 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(24 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_15, L_16);
 		V_3 = ((ParamInfo_t7A9EBF07D6023E4940D08075BD40C687F395999A *)CastclassClass((RuntimeObject*)L_17, ParamInfo_t7A9EBF07D6023E4940D08075BD40C687F395999A_il2cpp_TypeInfo_var));
 		ParamInfo_t7A9EBF07D6023E4940D08075BD40C687F395999A * L_18 = V_3;
 		if (!L_18)
@@ -19599,7 +19922,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XPathParser_GetAxis_mD12F8BA3CA3AD6C5
 		L_2 = XPathScanner_get_Name_m98F42DDF09588F6C47D8D171A38D975ED7C298C3_inline(L_1, /*hidden argument*/NULL);
 		NullCheck(L_0);
 		RuntimeObject * L_3;
-		L_3 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_0, L_2);
+		L_3 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(24 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_0, L_2);
 		RuntimeObject * L_4 = L_3;
 		G_B1_0 = L_4;
 		if (L_4)
@@ -21748,7 +22071,7 @@ IL_00a2:
 		Hashtable_t7565AB92A12227AD5BADD6911F10D87EE52509AC * L_40 = L_39->get__UndeclaredElements_35();
 		NullCheck(L_40);
 		RuntimeObject* L_41;
-		L_41 = VirtFuncInvoker0< RuntimeObject* >::Invoke(29 /* System.Collections.ICollection System.Collections.Hashtable::get_Values() */, L_40);
+		L_41 = VirtFuncInvoker0< RuntimeObject* >::Invoke(30 /* System.Collections.ICollection System.Collections.Hashtable::get_Values() */, L_40);
 		NullCheck(L_41);
 		RuntimeObject* L_42;
 		L_42 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* System.Collections.IEnumerator System.Collections.IEnumerable::GetEnumerator() */, IEnumerable_t47A618747A1BB2A868710316F7372094849163A2_il2cpp_TypeInfo_var, L_41);
@@ -22013,7 +22336,7 @@ IL_0031:
 		XmlQualifiedName_t7A0154DCFCA5749B28B5B0CAE578FDF65EE17905 * L_28 = V_0;
 		NullCheck(L_27);
 		RuntimeObject * L_29;
-		L_29 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_27, L_28);
+		L_29 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(24 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_27, L_28);
 		if (!L_29)
 		{
 			goto IL_0089;
@@ -22025,7 +22348,7 @@ IL_0031:
 		Hashtable_t7565AB92A12227AD5BADD6911F10D87EE52509AC * L_31 = L_30->get__UndeclaredElements_35();
 		XmlQualifiedName_t7A0154DCFCA5749B28B5B0CAE578FDF65EE17905 * L_32 = V_0;
 		NullCheck(L_31);
-		VirtActionInvoker1< RuntimeObject * >::Invoke(30 /* System.Void System.Collections.Hashtable::Remove(System.Object) */, L_31, L_32);
+		VirtActionInvoker1< RuntimeObject * >::Invoke(31 /* System.Void System.Collections.Hashtable::Remove(System.Object) */, L_31, L_32);
 	}
 
 IL_0089:
@@ -22735,7 +23058,7 @@ IL_0035:
 		XmlQualifiedName_t7A0154DCFCA5749B28B5B0CAE578FDF65EE17905 * L_19 = V_4;
 		NullCheck(L_18);
 		RuntimeObject * L_20;
-		L_20 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_18, L_19);
+		L_20 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(24 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_18, L_19);
 		V_3 = ((SchemaAttDef_t0B189A0724F18BAE2DB9DD31C1294D986EF2EF68 *)CastclassSealed((RuntimeObject*)L_20, SchemaAttDef_t0B189A0724F18BAE2DB9DD31C1294D986EF2EF68_il2cpp_TypeInfo_var));
 		SchemaAttDef_t0B189A0724F18BAE2DB9DD31C1294D986EF2EF68 * L_21 = V_3;
 		if (!L_21)
@@ -23196,7 +23519,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XdrBuilder_XDR_BuildAttributeType_Name_m
 		XmlQualifiedName_t7A0154DCFCA5749B28B5B0CAE578FDF65EE17905 * L_17 = V_0;
 		NullCheck(L_16);
 		RuntimeObject * L_18;
-		L_18 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_16, L_17);
+		L_18 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(24 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_16, L_17);
 		if (L_18)
 		{
 			goto IL_006d;
@@ -23854,7 +24177,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XdrBuilder_XDR_BuildElement_Type_m1F4197
 		XmlQualifiedName_t7A0154DCFCA5749B28B5B0CAE578FDF65EE17905 * L_8 = V_0;
 		NullCheck(L_7);
 		RuntimeObject * L_9;
-		L_9 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_7, L_8);
+		L_9 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(24 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_7, L_8);
 		V_1 = ((SchemaElementDecl_t2C010D7212311FC98219214B53CEC6084997243B *)CastclassSealed((RuntimeObject*)L_9, SchemaElementDecl_t2C010D7212311FC98219214B53CEC6084997243B_il2cpp_TypeInfo_var));
 		SchemaElementDecl_t2C010D7212311FC98219214B53CEC6084997243B * L_10 = V_1;
 		if (L_10)
@@ -24196,7 +24519,7 @@ IL_001d:
 		XmlQualifiedName_t7A0154DCFCA5749B28B5B0CAE578FDF65EE17905 * L_17 = V_1;
 		NullCheck(L_16);
 		RuntimeObject * L_18;
-		L_18 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_16, L_17);
+		L_18 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(24 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_16, L_17);
 		V_0 = ((SchemaAttDef_t0B189A0724F18BAE2DB9DD31C1294D986EF2EF68 *)CastclassSealed((RuntimeObject*)L_18, SchemaAttDef_t0B189A0724F18BAE2DB9DD31C1294D986EF2EF68_il2cpp_TypeInfo_var));
 	}
 
@@ -29828,7 +30151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * XdrValidator_FindId_m18D435C2
 		String_t* L_2 = ___name0;
 		NullCheck(L_1);
 		RuntimeObject * L_3;
-		L_3 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(23 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_1, L_2);
+		L_3 = VirtFuncInvoker1< RuntimeObject *, RuntimeObject * >::Invoke(24 /* System.Object System.Collections.Hashtable::get_Item(System.Object) */, L_1, L_2);
 		return L_3;
 	}
 

@@ -373,7 +373,7 @@ static void AssemblyU2DCSharpU2Dfirstpass_CustomAttributesCacheGenerator(CustomA
 	}
 	{
 		DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B * tmp = (DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B *)cache->attributes[2];
-		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 2LL, NULL);
+		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 263LL, NULL);
 	}
 }
 static void ASIdentifierManagerExample_t47F31498B0CBF8F6294BDC4DD62AB7BFE54B0552_CustomAttributesCacheGenerator_advertisingTrackingEnabled(CustomAttributesCache* cache)

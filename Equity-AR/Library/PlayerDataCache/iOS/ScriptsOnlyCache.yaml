@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AskLocation
+    - FaceCam
     - JSCom
     - Lean.Touch.LeanPinchScale
     - Lean.Touch.LeanTouch
@@ -15,9 +16,18 @@ ScriptsOnlyBuild:
     - Mapbox.Examples.MakiHelper
     - Mapbox.Examples.PoiLabelTextSetter
     - Mapbox.Examples.PoiMarkerHelper
+    - Mapbox.Examples.PositionWithLocationProvider
     - Mapbox.Examples.ReloadMap
     - Mapbox.Examples.TextMeshOutline
+    - Mapbox.Examples.UpdateMapPosByARPlaneY
+    - Mapbox.Unity.Location.DeviceLocationProvider
+    - Mapbox.Unity.Location.DeviceLocationProviderAndroidNative
+    - Mapbox.Unity.Location.EditorLocationProvider
+    - Mapbox.Unity.Location.LocationArrayEditorLocationProvider
+    - Mapbox.Unity.Location.LocationProviderFactory
+    - Mapbox.Unity.Location.TransformLocationProvider
     - Mapbox.Unity.Map.AbstractMap
+    - Mapbox.Unity.Map.InitializeMapWithLocationProvider
     - Mapbox.Unity.MeshGeneration.Data.AtlasInfo
     - Mapbox.Unity.MeshGeneration.Modifiers.ModifierStack
     - Mapbox.Unity.MeshGeneration.Modifiers.PrefabModifier
@@ -28,13 +38,15 @@ ScriptsOnlyBuild:
     - Marker
     - MessageClass
     - MinimizeScreenFeature
-    - SceneController
+    - RayCastInteraction
     - ScriptablePalette
     - SliderHandler
     - Switcher
     - TapToPlaceObject
     - ToggleManager
+    - TreeInfoManager
     - UnityARKitPluginSettings
+    - UnityEngine.XR.ARFoundation.Samples.EnableGeoAnchors
     - UpdateLocation
     - VerticalFullScreenUI
     - VerticalLayoutUI
@@ -71,7 +83,10 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
+    Unity.XR.ARCore.Editor.dll:
+    - UnityEditor.XR.ARCore.ARCoreSettings
     Unity.XR.ARFoundation.dll:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
@@ -115,9 +130,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/Lat&Long.unity:
+    Assets/Scenes/Lat&Long 1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -169,6 +185,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1824}
     - Class: 114
+      Script: {instanceID: 1826}
+    - Class: 114
       Script: {instanceID: 1828}
     - Class: 114
       Script: {instanceID: 1834}
@@ -191,15 +209,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2524}
     - Class: 114
+      Script: {instanceID: 2564}
+    - Class: 114
+      Script: {instanceID: 2714}
+    - Class: 114
       Script: {instanceID: 2784}
     - Class: 114
       Script: {instanceID: 2830}
+    - Class: 114
+      Script: {instanceID: 2898}
     - Class: 114
       Script: {instanceID: 3014}
     - Class: 114
       Script: {instanceID: 3084}
     - Class: 114
       Script: {instanceID: 3248}
+    - Class: 114
+      Script: {instanceID: 3306}
     - Class: 114
       Script: {instanceID: 3538}
     - Class: 114
@@ -221,13 +247,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3942}
     - Class: 114
+      Script: {instanceID: 4030}
+    - Class: 114
       Script: {instanceID: 4214}
+    - Class: 114
+      Script: {instanceID: 4304}
     - Class: 114
       Script: {instanceID: 4326}
     - Class: 114
       Script: {instanceID: 4376}
     - Class: 114
       Script: {instanceID: 4400}
+    - Class: 114
+      Script: {instanceID: 4420}
     - Class: 114
       Script: {instanceID: 4548}
     - Class: 114
@@ -239,9 +271,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4996}
     - Class: 114
-      Script: {instanceID: 5176}
-    - Class: 114
       Script: {instanceID: 5250}
+    - Class: 114
+      Script: {instanceID: 5626}
     - Class: 114
       Script: {instanceID: 5630}
     - Class: 114
@@ -250,6 +282,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5746}
     - Class: 114
       Script: {instanceID: 5750}
+    - Class: 114
+      Script: {instanceID: 5756}
     - Class: 114
       Script: {instanceID: 5814}
     - Class: 114
@@ -289,9 +323,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7628}
     - Class: 114
+      Script: {instanceID: 7646}
+    - Class: 114
       Script: {instanceID: 7688}
     - Class: 114
       Script: {instanceID: 7708}
+    - Class: 114
+      Script: {instanceID: 8006}
     - Class: 114
       Script: {instanceID: 8132}
     - Class: 114
@@ -301,6 +339,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8370}
     - Class: 114
+      Script: {instanceID: 8412}
+    - Class: 114
       Script: {instanceID: 8708}
     - Class: 114
       Script: {instanceID: 8802}
@@ -308,6 +348,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8804}
     - Class: 114
       Script: {instanceID: 8824}
+    - Class: 114
+      Script: {instanceID: 8874}
+    - Class: 114
+      Script: {instanceID: 9052}
     - Class: 114
       Script: {instanceID: 9098}
     - Class: 115
@@ -2765,7 +2809,7 @@ ScriptsOnlyBuild:
     className: SetCameraHeight
   - hash:
       serializedVersion: 2
-      Hash: 752d36235399f4af5c472f47d0a98d82
+      Hash: 1ffd8766e1c050aaf3e6fab3854c750e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JSCom
@@ -3083,5 +3127,5 @@ ScriptsOnlyBuild:
     className: ARFocusSquare
   platform: 9
   scenePathNames:
-  - Assets/Scenes/Lat&Long.unity
-  playerPath: /Users/elenalalala/Desktop/USLBuild/callback
+  - Assets/Scenes/Lat&Long 1.unity
+  playerPath: /Users/elenalalala/Desktop/USLBuild/tack

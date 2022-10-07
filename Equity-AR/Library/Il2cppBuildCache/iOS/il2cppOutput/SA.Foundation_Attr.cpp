@@ -531,7 +531,7 @@ static void SA_Foundation_CustomAttributesCacheGenerator(CustomAttributesCache* 
 	}
 	{
 		DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B * tmp = (DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B *)cache->attributes[2];
-		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 2LL, NULL);
+		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 263LL, NULL);
 	}
 }
 static void SA_AssetDatabase_tF95963E33A0113EE3B3313740155F947B73398BD_CustomAttributesCacheGenerator_SA_AssetDatabase_FindAssetsWithExtentions_mE05BF4B441A218328CE366137487213D15F96389____extentions1(CustomAttributesCache* cache)

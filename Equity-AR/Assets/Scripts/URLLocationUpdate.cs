@@ -11,8 +11,6 @@ public class URLLocationUpdate : MonoBehaviour
 {
     //public Text currentLocation;
     ILocationProvider _locationProvider;
-
-    private bool unclicked = true;
     public CanvasWebViewPrefab webCanvas;
     public string url = ""; 
 
@@ -30,7 +28,7 @@ public class URLLocationUpdate : MonoBehaviour
         webCanvas.InitialUrl = url;
     }
 
-    void CurrentLocation(Mapbox.Unity.Location.Location location)
+    void CurrentLocation(Location location)
     {
         string[] latlon = location.LatitudeLongitude.ToString().Split(',');
         url = $"http://http://nyc.urbansystemslab.com/?mapKey=%22-LgdI9lPwGFXTSfwwjiz%22&mapPosition=%7B%22" +

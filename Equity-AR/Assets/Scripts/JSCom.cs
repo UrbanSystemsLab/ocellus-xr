@@ -12,14 +12,16 @@ public class JSCom : MonoBehaviour
     //public string myJS;
     public Text infoText;
     public GameObject webViewObject;
-    public GameObject map;
+    //public GameObject map;
     private GameObject preloadMap;
 
     async void Start()
     {
         await webViewPrefab.WaitUntilInitialized();
         RecieveMessageFromWeb();
-
+        preloadMap = GameObject.FindGameObjectWithTag("Map");
+        //Debug.Log(preloadMap);
+        preloadMap.SetActive(false);
     }
 
     private void RecieveMessageFromWeb()
@@ -37,6 +39,13 @@ public class JSCom : MonoBehaviour
                 MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
                 gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
                 Debug.Log("JavaScript send layer of : " + gotData.data.layer.name + gotData.type);
+
+            if (!gotData.data.webviewIsOpen)
+            {
+                webViewObject.SetActive(false);
+            }
+
+
             if (gotData.type == "ar" || gotData.type == "live")
             {
                 //storing the json data in WebInfoStats
@@ -45,10 +54,13 @@ public class JSCom : MonoBehaviour
                 WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
                 WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
                 WebInfoStats.Stats.type = gotData.type;
+                Debug.Log("open has not yet data");
                 WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
+                Debug.Log("open has data");
 
-                //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
-                preloadMap = Instantiate(map, new Vector3(0, -2, 0), Quaternion.identity);
+                //TODO this map can not be find......Test it first
+                preloadMap.SetActive(true);
+                Debug.Log("MAP HASSSSS ITTTT");
                 bool preloadIsFinished = Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
                 //preloadMap.SetActive(false);
 
@@ -60,10 +72,7 @@ public class JSCom : MonoBehaviour
                 }
             }
 
-            if (!gotData.data.webviewIsOpen)
-            {
-                webViewObject.SetActive(false);
-            }
+            
 
 
 

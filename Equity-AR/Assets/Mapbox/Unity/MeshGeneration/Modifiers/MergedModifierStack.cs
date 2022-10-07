@@ -161,8 +161,8 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			}else if (feature.Properties.ContainsKey("holc_grade"))
             {
 				redlining = feature.Properties["holc_grade"].ToString();
-				Debug.Log(redlining);
-			}
+				//Debug.Log(redlining);
+            }
 
 
 			if (!_cacheVertexCount.ContainsKey(tile))

@@ -38,13 +38,13 @@ static Il2CppMethodPointer s_methodPointers[7] =
 };
 static const int32_t s_InvokerIndices[7] = 
 {
-	5173,
-	5143,
-	5110,
-	5173,
-	5173,
-	5143,
-	4221,
+	5215,
+	5185,
+	5152,
+	5215,
+	5215,
+	5185,
+	4255,
 };
 extern const CustomAttributesCacheGenerator g_System_Runtime_Serialization_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Runtime_Serialization_CodeGenModule;
