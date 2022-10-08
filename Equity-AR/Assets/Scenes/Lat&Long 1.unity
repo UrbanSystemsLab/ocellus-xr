@@ -4483,6 +4483,7 @@ MonoBehaviour:
   webViewPrefab: {fileID: 1355596148}
   infoText: {fileID: 40318633}
   webViewObject: {fileID: 232983523}
+  map: {fileID: 4818977998235323254, guid: 4e2e3ba0eb3f449bb83cfe5c6b272fb6, type: 3}
 --- !u!1 &864032066
 GameObject:
   m_ObjectHideFlags: 0
@@ -4543,7 +4544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a700071834b44e9896b44547f6c7a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPlace: {fileID: 4818977998235323254, guid: be8e0cecf6c9047db92452e5c428d940,
+  objectToPlace: {fileID: 4818977998235323254, guid: 4e2e3ba0eb3f449bb83cfe5c6b272fb6,
     type: 3}
   placementIndicator: {fileID: 16412171}
   isPlaced: 0
@@ -5936,6 +5937,7 @@ MonoBehaviour:
       location:
         lat: 0
         lon: 0
+      webviewIsOpen: 0
 --- !u!114 &1101674282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5954,6 +5956,7 @@ MonoBehaviour:
   selectedLat: 0
   selectedLon: 0
   layerIsReady: 0
+  webviewIsOpen: 0
 --- !u!1 &1181421684
 GameObject:
   m_ObjectHideFlags: 0

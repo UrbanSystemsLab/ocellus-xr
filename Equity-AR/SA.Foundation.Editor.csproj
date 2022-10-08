@@ -333,49 +333,49 @@
  <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
  </Reference>
  <Reference Include="MapboxAccountsUnity">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/MapboxAccounts/net35/MapboxAccountsUnity.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/MapboxAccounts/net35/MapboxAccountsUnity.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.analytics@3.5.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Library/PackageCache/com.unity.analytics@3.5.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="Mapbox.Json">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.Json/Net35/Mapbox.Json.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.Json/Net35/Mapbox.Json.dll</HintPath>
  </Reference>
  <Reference Include="Mapbox.VectorTile.VectorTileReader">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.VectorTileReader.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.VectorTileReader.dll</HintPath>
  </Reference>
  <Reference Include="Mapbox.IO.Compression">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver_v1.2.122.0">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.122.0.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.122.0.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Library/PackageCache/com.unity.analytics@3.5.3/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver_v1.2.122.0">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.122.0.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.122.0.dll</HintPath>
  </Reference>
  <Reference Include="Mapbox.VectorTile.ExtensionMethods">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.ExtensionMethods.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.ExtensionMethods.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandlerImpl_v1.2.122.0">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.122.0.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.122.0.dll</HintPath>
  </Reference>
  <Reference Include="Mapbox.VectorTile.PbfReader">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.PbfReader.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.PbfReader.dll</HintPath>
  </Reference>
  <Reference Include="Mapbox.VectorTile.Geometry">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.Geometry.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.Geometry.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -729,16 +729,16 @@
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>/Users/elenalalala/Desktop/ocellus-xr/Equity-AR/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

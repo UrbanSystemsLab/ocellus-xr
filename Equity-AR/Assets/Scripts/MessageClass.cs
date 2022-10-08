@@ -21,6 +21,7 @@ public class MessageClass : MonoBehaviour
 
     }
 
+
     [Serializable]
     public struct DataContent
     {

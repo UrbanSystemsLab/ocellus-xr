@@ -10,6 +10,7 @@ public class WebInfoStats : MonoBehaviour
         set;
     }
 
+
     public string currentLayerName;
     public string currentLayerID;
     public string type;
