@@ -1,2 +1,0 @@
-/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/obj/Debug/StansAssets.Foundation.Editor.csproj.AssemblyReference.cache
-/Users/elenalalala/Desktop/equity-ar-master copy/equity-ar/Equity-AR/obj/Debug/StansAssets.Foundation.Editor.csproj.CoreCompileInputs.cache
