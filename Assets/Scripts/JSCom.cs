@@ -54,20 +54,19 @@ public class JSCom : MonoBehaviour
                 WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
                 WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
                 WebInfoStats.Stats.type = gotData.type;
-                Debug.Log("open has not yet data");
+                //Debug.Log("open has not yet data");
                 WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
-                Debug.Log("open has data");
+                //Debug.Log("open has data");
 
-                //TODO this map can not be find......Test it first
-                preloadMap.SetActive(true);
-                Debug.Log("MAP HASSSSS ITTTT");
+                //preloadMap.SetActive(true);
+                //Debug.Log("MAP HASSSSS ITTTT");
                 bool preloadIsFinished = Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
                 //preloadMap.SetActive(false);
 
                 //if (TapToPlaceObject.mapIsLoaded)//WebStatus.isReady?
                 if (preloadIsFinished)
                 {
-                    preloadMap.SetActive(false);
+                    //preloadMap.SetActive(false);
                     constructMessage();
                 }
             }
@@ -79,6 +78,27 @@ public class JSCom : MonoBehaviour
 
 
         };
+    }
+
+    public void RecieveMessageFromWebTest()
+    {
+        Debug.Log("The webview is getting the data!");
+
+        if (WebInfoStats.Stats.type == "ar")
+        {
+            
+            //preloadMap.SetActive(true);
+            //Debug.Log("MAP HASSSSS ITTTT");
+            bool preloadIsFinished = Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
+            //preloadMap.SetActive(false);
+
+            //if (TapToPlaceObject.mapIsLoaded)//WebStatus.isReady?
+            if (preloadIsFinished)
+            {
+                //preloadMap.SetActive(false);
+                constructMessage();
+            }
+        }
     }
 
     public void constructMessage()

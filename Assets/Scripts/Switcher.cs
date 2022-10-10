@@ -32,13 +32,13 @@ public class Switcher : MonoBehaviour
     private void Update()
     {
         
-            if(WebInfoStats.Stats.currentLayerID != currentMapLayerID)
-            {
+            //if(WebInfoStats.Stats.currentLayerID != currentMapLayerID)
+            //{
                 
-                WebInfoStats.Stats.layerIsReady = ActivateLayer(WebInfoStats.Stats.currentLayerID);
-                //Debug.Log("WebInfo has something!" + WebInfoStats.Stats.currentLayerName);
-                currentMapLayerID = WebInfoStats.Stats.currentLayerName;
-            }
+            //    WebInfoStats.Stats.layerIsReady = ActivateLayer(WebInfoStats.Stats.currentLayerID);
+            //    //Debug.Log("WebInfo has something!" + WebInfoStats.Stats.currentLayerName);
+            //    currentMapLayerID = WebInfoStats.Stats.currentLayerName;
+            //}
  
     }
 
