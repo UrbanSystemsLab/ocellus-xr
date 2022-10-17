@@ -19,13 +19,14 @@ public class JSCom : MonoBehaviour
     {
         await webViewPrefab.WaitUntilInitialized();
         RecieveMessageFromWeb();
-        preloadMap = GameObject.FindGameObjectWithTag("Map");
+        //preloadMap = GameObject.FindGameObjectWithTag("Map");
         //Debug.Log(preloadMap);
-        preloadMap.SetActive(false);
+        //preloadMap.SetActive(false);
     }
 
     private void RecieveMessageFromWeb()
     {
+
         //Whenever there is a message get sent to Unity, this is the function to receive and handle it.
         webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
                 Debug.Log("The webview is getting the data!");
@@ -54,20 +55,25 @@ public class JSCom : MonoBehaviour
                 WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
                 WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
                 WebInfoStats.Stats.type = gotData.type;
-                //Debug.Log("open has not yet data");
                 WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
+                //Debug.Log("open has not yet data");
                 //Debug.Log("open has data");
 
-                //preloadMap.SetActive(true);
                 //Debug.Log("MAP HASSSSS ITTTT");
-                bool preloadIsFinished = Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
-                //preloadMap.SetActive(false);
+                //bool preloadIsFinished = Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
 
-                //if (TapToPlaceObject.mapIsLoaded)//WebStatus.isReady?
-                if (preloadIsFinished)
+                //if (preloadIsFinished)
+                //{
+                constructMessage();
+                //}
+
+
+                //Start Loading Content Scene
+                if(WebInfoStats.Stats.type == "ar")
                 {
-                    //preloadMap.SetActive(false);
-                    constructMessage();
+                    Debug.Log("start to load AR scene.....");
+                    AppManager.instance.LoadAR();
+                    Debug.Log("Finish!! loading ar");
                 }
             }
 

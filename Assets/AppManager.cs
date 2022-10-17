@@ -8,6 +8,9 @@ public class AppManager : MonoBehaviour
 {
     public static AppManager instance;
     public GameObject loadingScreen;
+    public Slider progressBar;
+    private float totalSceneProgress;
+    private List<AsyncOperation> sceneLoading = new List<AsyncOperation>();
 
     private void Awake()
     {
@@ -16,11 +19,53 @@ public class AppManager : MonoBehaviour
         SceneManager.LoadSceneAsync((int)SceneIndexes.MENU, LoadSceneMode.Additive);
     }
 
-    public void LoadApp()
+    public void LoadAR()
+    {
+        loadingScreen.gameObject.SetActive(true);
+
+
+        sceneLoading.Add(SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU));
+        sceneLoading.Add(SceneManager.LoadSceneAsync((int)SceneIndexes.AR, LoadSceneMode.Additive));
+
+        StartCoroutine(GetSceneLoadingProgress());
+    }
+
+    public void LoadLive()
     {
         loadingScreen.SetActive(true);
-        SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU);
-        SceneManager.LoadSceneAsync((int)SceneIndexes.AR, LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync((int)SceneIndexes.LIVE, LoadSceneMode.Additive);
+
+
+        sceneLoading.Add(SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU));
+        sceneLoading.Add(SceneManager.LoadSceneAsync((int)SceneIndexes.LIVE, LoadSceneMode.Additive));
+
+        StartCoroutine(GetSceneLoadingProgress());
+    }
+
+    public IEnumerator GetSceneLoadingProgress()
+    {
+        for(int i = 0; i < sceneLoading.Count; i++)
+        {
+            while (!sceneLoading[i].isDone)
+            {
+                totalSceneProgress = 0;
+                foreach(AsyncOperation operation in sceneLoading)
+                {
+                    totalSceneProgress += operation.progress;
+                }
+
+                totalSceneProgress = totalSceneProgress / sceneLoading.Count;
+                Debug.Log(totalSceneProgress);
+                progressBar.value = totalSceneProgress;
+                yield return null;
+            }
+        }
+
+        //reset async operation list
+        sceneLoading = null;
+
+        //turn the loading screen off
+        Debug.Log("loading screen should be false");
+        loadingScreen.gameObject.SetActive(false);
+        Debug.Log("turnning it off");
     }
 }
