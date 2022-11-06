@@ -13,33 +13,20 @@ public class Switcher : MonoBehaviour
     private IEnumerable<VectorSubLayerProperties> allLayer;
     private VectorSubLayerProperties layer;
     private VectorSubLayerProperties NY_buildings;
+    public GameObject map;
 
-    private string currentMapLayerID = "";
-    
     private void Start()
     {
         instance = this;
         allLayer = _abstractMap.VectorData.GetAllFeatureSubLayers();
 
         NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
-        NY_buildings.SetActive(true);
-
-
-    }
-
-
-    
-    private void Update()
-    {
-        
-            //if(WebInfoStats.Stats.currentLayerID != currentMapLayerID)
-            //{
-                
-            //    WebInfoStats.Stats.layerIsReady = ActivateLayer(WebInfoStats.Stats.currentLayerID);
-            //    //Debug.Log("WebInfo has something!" + WebInfoStats.Stats.currentLayerName);
-            //    currentMapLayerID = WebInfoStats.Stats.currentLayerName;
-            //}
- 
+        //NY_buildings.SetActive(true);
+        //Debug.Log(WebInfoStats.Stats.currentLayerID);
+        ActivateLayer(WebInfoStats.Stats.currentLayerID);
+        //deactive map after loading the expected layer
+        //this.gameObject.transform.parent.gameObject.SetActive(false);
+        map.SetActive(false);
     }
 
     public bool ActivateLayer(string LayerID)
@@ -79,6 +66,7 @@ public class Switcher : MonoBehaviour
             layer.SetActive(false);
         }
     }
+
 
 }
 

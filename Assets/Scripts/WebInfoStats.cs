@@ -20,7 +20,7 @@ public class WebInfoStats : MonoBehaviour
     public bool webviewIsOpen;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Stats = this;
     }

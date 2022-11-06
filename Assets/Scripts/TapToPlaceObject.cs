@@ -32,14 +32,13 @@ public class TapToPlaceObject : MonoBehaviour
         //instance = this;
         reloadMapCanvas.SetActive(false);
         //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
+        //map = GameObject.FindGameObjectWithTag("Map");
         map = Instantiate(objectToPlace, new Vector3(0, -2, 0), Quaternion.identity);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        
 
 
 
@@ -54,7 +53,6 @@ public class TapToPlaceObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !isPlaced)
         {
             PlaceObject();

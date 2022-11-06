@@ -16,7 +16,7 @@ public class AppManager : MonoBehaviour
     {
         instance = this;
 
-        SceneManager.LoadSceneAsync((int)SceneIndexes.MENU, LoadSceneMode.Additive);
+        sceneLoading.Add(SceneManager.LoadSceneAsync((int)SceneIndexes.MENU, LoadSceneMode.Additive));
     }
 
     public void LoadAR()

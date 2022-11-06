@@ -155,7 +155,7 @@ MonoBehaviour:
       vectorSubLayers:
       - coreOptions:
           sourceId: 
-          isActive: 0
+          isActive: 1
           sublayerName: equity.cxc73xaa
           geometryType: 2
           layerName: NYC_heatmap

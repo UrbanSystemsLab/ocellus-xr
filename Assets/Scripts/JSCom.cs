@@ -10,7 +10,6 @@ public class JSCom : MonoBehaviour
 {
     public CanvasWebViewPrefab webViewPrefab;
     //public string myJS;
-    public Text infoText;
     public GameObject webViewObject;
     //public GameObject map;
     private GameObject preloadMap;
@@ -30,7 +29,6 @@ public class JSCom : MonoBehaviour
         //Whenever there is a message get sent to Unity, this is the function to receive and handle it.
         webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
                 Debug.Log("The webview is getting the data!");
-                infoText.text += eventArgs.Value;
                 Debug.Log(eventArgs.Value);
                 
                 //Parsing json
