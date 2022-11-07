@@ -53,11 +53,8 @@ public class AppManager : MonoBehaviour
         _currentSceneIndex = (int)SceneIndexes.AR;
         List<AsyncOperation> sceneLoading = new List<AsyncOperation>();
         SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU);
-        Debug.Log("11111");
         AsyncOperation operation = SceneManager.LoadSceneAsync((int)SceneIndexes.AR, LoadSceneMode.Additive);
-        //operation.allowSceneActivation = false;
         operation.completed += ActivateTransientScene;
-        Debug.Log("22222");
         sceneLoading.Add(operation);
         StartCoroutine(GetSceneLoadingProgress(sceneLoading, (int)SceneIndexes.AR));
     }
@@ -66,11 +63,14 @@ public class AppManager : MonoBehaviour
     {
         progressBar.value = 0;
         loadingScreen.SetActive(true);
+        _currentSceneIndex = (int)SceneIndexes.LIVE;
         List<AsyncOperation> sceneLoading = new List<AsyncOperation>();
 
         sceneLoading.Add(SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU));
-        sceneLoading.Add(SceneManager.LoadSceneAsync((int)SceneIndexes.LIVE, LoadSceneMode.Additive));
-        //SceneManager.SetActiveScene(SceneManager.GetSceneAt((int)SceneIndexes.LIVE));
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync((int)SceneIndexes.LIVE, LoadSceneMode.Additive);
+        operation.completed += ActivateTransientScene;
+        sceneLoading.Add(operation);
         StartCoroutine(GetSceneLoadingProgress(sceneLoading, (int)SceneIndexes.LIVE));
     }
 
@@ -83,7 +83,7 @@ public class AppManager : MonoBehaviour
                 totalSceneProgress = 0;
                 foreach(AsyncOperation operation in operations)
                 {
-                    totalSceneProgress += Mathf.Clamp01(operation.progress / 0.9f);
+                    totalSceneProgress += operation.progress;
 
                 }
 

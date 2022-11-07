@@ -34,11 +34,13 @@ public class ToggleManager : MonoBehaviour
     {
         if (webViewPrefab.activeSelf)
         {
-            webViewPrefab.SetActive(false);
+            //webViewPrefab.SetActive(false);
+            AppManager.instance.LoadAR();
         }
         else
         {
-            webViewPrefab.SetActive(true);
+            //webViewPrefab.SetActive(true);
+            AppManager.instance.LoadMenu();
         }
         
     }
