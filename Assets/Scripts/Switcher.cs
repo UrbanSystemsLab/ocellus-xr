@@ -26,25 +26,38 @@ public class Switcher : MonoBehaviour
         ActivateLayer(WebInfoStats.Stats.currentLayerID);
         //deactive map after loading the expected layer
         //this.gameObject.transform.parent.gameObject.SetActive(false);
+        //map.SetActive(false);
+    }
+
+    public void DeactivateMap()
+    {
         map.SetActive(false);
     }
 
     public bool ActivateLayer(string LayerID)
     {
-        deactivateAllLayer();
-        if (LayerID == "equity.dmmqh0kw")//the floodplains data is split into 4 different layers
+        if(LayerID == null)
         {
-            NY_buildings.SetActive(true);
-            for(int i = 0; i < 4; i++)
-            {
-                LayerID += i;
-                layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
-            }
+            deactivateAllLayer();
+            Debug.Log("Layer ID in WebInfoStatus is NULL");
         }
         else
         {
-            layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
-            layer.SetActive(true);
+            deactivateAllLayer();
+            if (LayerID == "equity.dmmqh0kw")//the floodplains data is split into 4 different layers
+            {
+                NY_buildings.SetActive(true);
+                for (int i = 0; i < 4; i++)
+                {
+                    LayerID += i;
+                    layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
+                }
+            }
+            else
+            {
+                layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
+                layer.SetActive(true);
+            }
         }
         return true;
     }

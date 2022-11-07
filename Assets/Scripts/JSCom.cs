@@ -71,7 +71,18 @@ public class JSCom : MonoBehaviour
                 {
                     Debug.Log("start to load AR scene.....");
                     AppManager.instance.LoadAR();
+                    //preloadMap = GameObject.FindGameObjectWithTag("Map");
+                    //preloadMap.SetActive(false);
                     Debug.Log("Finish!! loading ar");
+                }
+
+                if (WebInfoStats.Stats.type == "live")
+                {
+                    Debug.Log("start to load live scene.....");
+                    AppManager.instance.LoadLive();
+                    //preloadMap = GameObject.FindGameObjectWithTag("Map");
+                    //preloadMap.SetActive(false);
+                    Debug.Log("Finish!! loading live");
                 }
             }
 
@@ -84,13 +95,14 @@ public class JSCom : MonoBehaviour
         };
     }
 
+    //this method is only used for testing purpose, linked with testing loading button, to stimulate choosing a layer
     public void RecieveMessageFromWebTest()
     {
         Debug.Log("The webview is getting the data!");
 
         if (WebInfoStats.Stats.type == "ar")
         {
-            
+
             //preloadMap.SetActive(true);
             //Debug.Log("MAP HASSSSS ITTTT");
             bool preloadIsFinished = Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);

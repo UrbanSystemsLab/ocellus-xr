@@ -4368,6 +4368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abstractMap: {fileID: 808201928}
+  map: {fileID: 0}
 --- !u!1 &816370543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4693,7 +4694,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   webViewPrefab: {fileID: 1355596148}
-  infoText: {fileID: 40318633}
   webViewObject: {fileID: 232983523}
 --- !u!1 &864032066
 GameObject:
@@ -6864,7 +6864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1395780545
 MonoBehaviour:
   m_ObjectHideFlags: 0
