@@ -30,7 +30,7 @@ public class TapToPlaceObject : MonoBehaviour
     private void Awake()
     {
         //instance = this;
-        reloadMapCanvas.SetActive(false);
+        //reloadMapCanvas.SetActive(false);
         //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
         //map = GameObject.FindGameObjectWithTag("Map");
         map = Instantiate(objectToPlace, new Vector3(0, -2, 0), Quaternion.identity);
@@ -117,7 +117,8 @@ public class TapToPlaceObject : MonoBehaviour
         {
             if(map != null)
             {
-                Destroy(map);
+                map.SetActive(false);
+                //Destroy(map);
             }
             reloadMapCanvas.SetActive(false);
             TapToPlaceMap.SetActive(true);
@@ -126,9 +127,4 @@ public class TapToPlaceObject : MonoBehaviour
         }
         
     }
-
-    //public GameObject gotMap()
-    //{
-    //    return map;
-    //}
 }

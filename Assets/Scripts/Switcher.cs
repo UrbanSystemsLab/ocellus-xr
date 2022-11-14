@@ -29,9 +29,9 @@ public class Switcher : MonoBehaviour
         //map.SetActive(false);
     }
 
-    public void DeactivateMap()
+    public void ToggleMap(bool input)
     {
-        map.SetActive(false);
+        map.SetActive(input);
     }
 
     public bool ActivateLayer(string LayerID)

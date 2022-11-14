@@ -9,13 +9,13 @@ public class ToggleManager : MonoBehaviour
 {
 
     public GameObject webViewPrefab;
-
+    public static ToggleManager instance;
     public TapToPlaceObject PlaceObjectFunction;
     public GameObject fullBnt;
     public GameObject LiveSection;
     //public GameObject PlaceARMapUI;
 
-    private UnityEvent statsIsActive;
+    //private UnityEvent statsIsActive;
 
     private string currentStatus = "";
 
@@ -23,8 +23,9 @@ public class ToggleManager : MonoBehaviour
 
     private void Start()
     {
-        if (statsIsActive == null)
-            statsIsActive = new UnityEvent();
+        instance = this;
+        //if (statsIsActive == null)
+        //    statsIsActive = new UnityEvent();
 
         preloadMap = GameObject.FindGameObjectWithTag("Map");
     }
@@ -32,16 +33,18 @@ public class ToggleManager : MonoBehaviour
 
     public void turnOffWeb()
     {
-        if (webViewPrefab.activeSelf)
-        {
-            //webViewPrefab.SetActive(false);
-            AppManager.instance.LoadAR();
-        }
-        else
-        {
-            //webViewPrefab.SetActive(true);
-            AppManager.instance.LoadMenu();
-        }
+        //if (webViewPrefab.activeSelf)
+        //{
+        //    //webViewPrefab.SetActive(false);
+        //    AppManager.instance.LoadAR();
+        //}
+        //else
+        //{
+        //    //webViewPrefab.SetActive(true);
+        //    AppManager.instance.LoadMenu();
+        //}
+        toggleLiveMap(false);
+        AppManager.instance.LoadMenu();
         
     }
 
@@ -53,11 +56,16 @@ public class ToggleManager : MonoBehaviour
 
     public void toggleLiveMap(bool input)
     {
+        if (!input)
+        {
+            DestroyARMap();
+        }
         LiveSection.SetActive(input);
     }
 
     public void DestroyARMap()
     {
+        preloadMap = GameObject.FindGameObjectWithTag("Map");
         if (preloadMap)
         {
             Destroy(preloadMap.gameObject);
