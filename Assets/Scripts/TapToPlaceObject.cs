@@ -6,6 +6,7 @@ using UnityEngine.Experimental.XR;
 using System;
 using UnityEngine.UI;
 using Lean.Touch;
+using UnityEngine.SceneManagement;
 
 public class TapToPlaceObject : MonoBehaviour
 {
@@ -33,15 +34,22 @@ public class TapToPlaceObject : MonoBehaviour
         //reloadMapCanvas.SetActive(false);
         //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
         //map = GameObject.FindGameObjectWithTag("Map");
-        map = Instantiate(objectToPlace, new Vector3(0, -2, 0), Quaternion.identity);
+        Debug.Log("in the awake:L "+ SceneManager.GetActiveScene().name);
+        //if(SceneManager.GetActiveScene().name == "AR")
+        //{
+            //map = Instantiate(objectToPlace, new Vector3(0, -2, 0), Quaternion.identity);
+        //}
         //map.SetActive(false);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
-
+        Debug.Log("in the start: " + SceneManager.GetActiveScene().name);
+        if (SceneManager.GetActiveScene().name == "AR")
+        {
+            map = Instantiate(objectToPlace, new Vector3(0, -2, 0), Quaternion.identity);
+        }   
 
         isPlaced = false;
         raycastManager = GetComponent<ARRaycastManager>();

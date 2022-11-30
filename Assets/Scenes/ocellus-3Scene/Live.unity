@@ -1601,53 +1601,6 @@ MonoBehaviour:
   _map: {fileID: 808201928}
   _positionFollowFactor: 30
   _useTransformLocationProvider: 1
---- !u!28 &285165460
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 2
-  m_Width: 1
-  m_Height: 1
-  m_CompleteImageSize: 4
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  m_PlatformBlob: 
-  image data: 4
-  _typelessdata: cdcdcdcd
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &337336489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,82 +2474,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00002002716, y: 273.39905}
   m_SizeDelta: {x: 2436, y: 5274.7}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!21 &619159630
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Standard
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &690066997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3460,8 +3337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _options:
     locationOptions:
-      latitudeLongitude: 40.7648, -73.9808
-      zoom: 17
+      latitudeLongitude: 40.780135, -73.96527
+      zoom: 15
     extentOptions:
       extentType: 1
       defaultExtents:
@@ -3471,9 +3348,9 @@ MonoBehaviour:
           disposeBuffer: 0
         rangeAroundCenterOptions:
           west: 1
-          north: 1
+          north: 2
           east: 1
-          south: 1
+          south: 2
         rangeAroundTransformOptions:
           targetTransform: {fileID: 0}
           visibleBuffer: 0
@@ -3484,8 +3361,8 @@ MonoBehaviour:
     scalingOptions:
       scalingType: 1
       unityTileSize: 100
-    loadingTexture: {fileID: 285165460}
-    tileMaterial: {fileID: 619159630}
+    loadingTexture: {fileID: 0}
+    tileMaterial: {fileID: 0}
   _initializeOnStart: 1
   _imagery:
     _layerProperty:
@@ -3503,7 +3380,7 @@ MonoBehaviour:
         useMipMap: 0
   _terrain:
     _layerProperty:
-      sourceType: 2
+      sourceType: 0
       sourceOptions:
         isActive: 1
         layerSource:
@@ -3511,7 +3388,7 @@ MonoBehaviour:
           Id: mapbox.terrain-rgb
           Modified: 
           UserName: 
-      elevationLayerType: 0
+      elevationLayerType: 1
       requiredOptions:
         exaggerationFactor: 1
       colliderOptions:
@@ -3543,7 +3420,6 @@ MonoBehaviour:
         - NYC_65plus
         - NYC_heatmap
         - NYC_OpenSpace
-        - NYC_trees_2019
         - nycFlood1
         - NYCtemp
         - PEJAs_NYS
@@ -3554,7 +3430,7 @@ MonoBehaviour:
         isActive: 1
         layerSource:
           Name: Mapbox Streets v7
-          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e,equity.cxc73xaa,timonm.77dtkn5f,equity.dsxc6fdt,equity.c7f9efui,equity.3t4w37ok,equity.0n1b1jwo
+          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e,equity.cxc73xaa,timonm.77dtkn5f,equity.dsxc6fdt,equity.c7f9efui,equity.3t4w37ok
           Modified: 
           UserName: 
       useOptimizedStyle: 0
@@ -3569,8 +3445,8 @@ MonoBehaviour:
       vectorSubLayers:
       - coreOptions:
           sourceId: 
-          isActive: 0
-          sublayerName: Heat Risk
+          isActive: 1
+          sublayerName: equity.cxc73xaa
           geometryType: 2
           layerName: NYC_heatmap
           snapToTerrain: 1
@@ -3701,7 +3577,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: Elderly Population
+          sublayerName: equity.0qf98zo6
           geometryType: 2
           layerName: NYC_65plus
           snapToTerrain: 1
@@ -3766,7 +3642,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: Income
+          sublayerName: equity.16d8ns8l
           geometryType: 2
           layerName: income_final
           snapToTerrain: 1
@@ -3831,9 +3707,9 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: Flood Zones
+          sublayerName: equity.dmmqh0kw0
           geometryType: 2
-          layerName: 2050s-100y
+          layerName: 2020s-100y
           snapToTerrain: 1
           combineMeshes: 0
         lineGeometryOptions:
@@ -3843,17 +3719,17 @@ MonoBehaviour:
           JoinType: 1
           CapType: 1
         filterOptions:
-          _selectedLayerName: 2050s-100y
+          _selectedLayerName: 2020s-100y
           filters: []
           combinerType: 0
         extrusionOptions:
-          _selectedLayerName: 2050s-100y
-          extrusionType: 3
+          _selectedLayerName: 2020s-100y
+          extrusionType: 5
           extrusionGeometryType: 1
           propertyName: height
           propertyDescription: Unavailable in Selected Layer.
           minimumHeight: 5
-          maximumHeight: 2
+          maximumHeight: 7
           extrusionScaleFactor: 1
         colliderOptions:
           colliderType: 0
@@ -3875,7 +3751,7 @@ MonoBehaviour:
             texturingType: 0
             materials:
             - Materials:
-              - {fileID: 2100000, guid: 905d91c1eafb146ea848a39dbd4510e9, type: 2}
+              - {fileID: 2100000, guid: a7000cb59d83a4844afd6689e58e5ac5, type: 2}
             - Materials:
               - {fileID: 2100000, guid: ef70788dbdd934c40a215bb90b44e4da, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
@@ -3896,7 +3772,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: Open Space
+          sublayerName: equity.755pqg03
           geometryType: 2
           layerName: NYC_OpenSpace
           snapToTerrain: 1
@@ -4027,7 +3903,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: Green Roofs
+          sublayerName: equity.755pqg03
           geometryType: 2
           layerName: split-green-roofs
           snapToTerrain: 1
@@ -4091,8 +3967,8 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
-          sublayerName: Extreme Flooding
+          isActive: 0
+          sublayerName: timonm.77dtkn5f
           geometryType: 2
           layerName: nycFlood1
           snapToTerrain: 1
@@ -4157,7 +4033,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: Cooling Stations
+          sublayerName: equity.dsxc6fdt
           geometryType: 0
           layerName: coolingStation
           snapToTerrain: 1
@@ -4216,18 +4092,18 @@ MonoBehaviour:
         moveFeaturePositionTo: 0
         MeshModifiers: []
         GoModifiers:
-        - {fileID: 11400000, guid: cc542d741bf62414eb92d17c2e79a781, type: 2}
+        - {fileID: 11400000, guid: a369d78555aa94e4cb05ee1836bed984, type: 2}
         presetFeatureType: 4
         _maskValue: 0
         selectedTypes: 
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: Redlining
+          sublayerName: equity.3t4w37ok
           geometryType: 2
           layerName: redliningData
           snapToTerrain: 1
-          combineMeshes: 0
+          combineMeshes: 1
         lineGeometryOptions:
           Width: 1
           MiterLimit: 0.2
@@ -4241,12 +4117,12 @@ MonoBehaviour:
         extrusionOptions:
           _selectedLayerName: redliningData
           extrusionType: 5
-          extrusionGeometryType: 1
-          propertyName: height
-          propertyDescription: Unavailable in Selected Layer.
+          extrusionGeometryType: 0
+          propertyName: holc_grade
+          propertyDescription: String
           minimumHeight: 0
-          maximumHeight: 4
-          extrusionScaleFactor: 2
+          maximumHeight: 5
+          extrusionScaleFactor: 3
         colliderOptions:
           colliderType: 0
         materialOptions:
@@ -4288,7 +4164,7 @@ MonoBehaviour:
       - coreOptions:
           sourceId: 
           isActive: 0
-          sublayerName: PEJA
+          sublayerName: equity.c7f9efui
           geometryType: 2
           layerName: PEJAs_NYS
           snapToTerrain: 1
@@ -4307,11 +4183,11 @@ MonoBehaviour:
           _selectedLayerName: PEJAs_NYS
           extrusionType: 1
           extrusionGeometryType: 0
-          propertyName: height
-          propertyDescription: Unavailable in Selected Layer.
+          propertyName: AWATER10
+          propertyDescription: Number
           minimumHeight: 0
           maximumHeight: 1
-          extrusionScaleFactor: 1
+          extrusionScaleFactor: 0.01
         colliderOptions:
           colliderType: 0
         materialOptions:
@@ -4352,10 +4228,10 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 1
-          sublayerName: Tree
-          geometryType: 0
-          layerName: NYC_trees_2019
+          isActive: 0
+          sublayerName: equity.dmmqh0kw1
+          geometryType: 2
+          layerName: 2020s-500y
           snapToTerrain: 1
           combineMeshes: 0
         lineGeometryOptions:
@@ -4365,13 +4241,143 @@ MonoBehaviour:
           JoinType: 1
           CapType: 1
         filterOptions:
-          _selectedLayerName: NYC_trees_2019
+          _selectedLayerName: 2020s-500y
           filters: []
           combinerType: 0
         extrusionOptions:
-          _selectedLayerName: PEJAs_NYS
-          extrusionType: 0
-          extrusionGeometryType: 0
+          _selectedLayerName: 2020s-500y
+          extrusionType: 5
+          extrusionGeometryType: 1
+          propertyName: height
+          propertyDescription: Unavailable in Selected Layer.
+          minimumHeight: 0
+          maximumHeight: 5
+          extrusionScaleFactor: 1
+        colliderOptions:
+          colliderType: 0
+        materialOptions:
+          style: 0
+          texturingType: 2
+          materials:
+          - Materials:
+            - {fileID: 0}
+          - Materials:
+            - {fileID: 0}
+          atlasInfo: {fileID: 0}
+          lightStyleOpacity: 1
+          darkStyleOpacity: 1
+          colorStyleColor: {r: 0.1764706, g: 0.8509805, b: 1, a: 1}
+          samplePalettes: 1
+          colorPalette: {fileID: 0}
+          customStyleOptions:
+            texturingType: 0
+            materials:
+            - Materials:
+              - {fileID: 2100000, guid: 0cd71d32f9bd24155a6ed923b24d14af, type: 2}
+            - Materials:
+              - {fileID: 2100000, guid: 0cd71d32f9bd24155a6ed923b24d14af, type: 2}
+            atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
+              type: 2}
+            colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
+              type: 2}
+        performanceOptions:
+          isEnabled: 0
+          entityPerCoroutine: 0
+        honorBuildingIdSetting: 1
+        buildingsWithUniqueIds: 0
+        moveFeaturePositionTo: 0
+        MeshModifiers: []
+        GoModifiers: []
+        presetFeatureType: 4
+        _maskValue: 0
+        selectedTypes: 
+      - coreOptions:
+          sourceId: 
+          isActive: 0
+          sublayerName: equity.dmmqh0kw2
+          geometryType: 2
+          layerName: 2050s-100y
+          snapToTerrain: 1
+          combineMeshes: 0
+        lineGeometryOptions:
+          Width: 1
+          MiterLimit: 0.2
+          RoundLimit: 1.05
+          JoinType: 1
+          CapType: 1
+        filterOptions:
+          _selectedLayerName: 2050s-100y
+          filters: []
+          combinerType: 0
+        extrusionOptions:
+          _selectedLayerName: 2050s-100y
+          extrusionType: 5
+          extrusionGeometryType: 1
+          propertyName: height
+          propertyDescription: Unavailable in Selected Layer.
+          minimumHeight: 0
+          maximumHeight: 3
+          extrusionScaleFactor: 1
+        colliderOptions:
+          colliderType: 0
+        materialOptions:
+          style: 0
+          texturingType: 2
+          materials:
+          - Materials:
+            - {fileID: 0}
+          - Materials:
+            - {fileID: 0}
+          atlasInfo: {fileID: 0}
+          lightStyleOpacity: 1
+          darkStyleOpacity: 1
+          colorStyleColor: {r: 0.1764706, g: 0.8509805, b: 1, a: 1}
+          samplePalettes: 1
+          colorPalette: {fileID: 0}
+          customStyleOptions:
+            texturingType: 0
+            materials:
+            - Materials:
+              - {fileID: 2100000, guid: 376afbfbc39344c1da41615526d00ff8, type: 2}
+            - Materials:
+              - {fileID: 2100000, guid: a7000cb59d83a4844afd6689e58e5ac5, type: 2}
+            atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
+              type: 2}
+            colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
+              type: 2}
+        performanceOptions:
+          isEnabled: 0
+          entityPerCoroutine: 0
+        honorBuildingIdSetting: 1
+        buildingsWithUniqueIds: 0
+        moveFeaturePositionTo: 0
+        MeshModifiers: []
+        GoModifiers: []
+        presetFeatureType: 4
+        _maskValue: 0
+        selectedTypes: 
+      - coreOptions:
+          sourceId: 
+          isActive: 0
+          sublayerName: equity.dmmqh0kw3
+          geometryType: 2
+          layerName: 2050s-500y
+          snapToTerrain: 1
+          combineMeshes: 0
+        lineGeometryOptions:
+          Width: 1
+          MiterLimit: 0.2
+          RoundLimit: 1.05
+          JoinType: 1
+          CapType: 1
+        filterOptions:
+          _selectedLayerName: 2050s-500y
+          filters: []
+          combinerType: 0
+        extrusionOptions:
+          _selectedLayerName: 2050s-500y
+          extrusionType: 5
+          extrusionGeometryType: 1
           propertyName: height
           propertyDescription: Unavailable in Selected Layer.
           minimumHeight: 0
@@ -4397,9 +4403,9 @@ MonoBehaviour:
             texturingType: 0
             materials:
             - Materials:
-              - {fileID: 0}
+              - {fileID: 2100000, guid: 905d91c1eafb146ea848a39dbd4510e9, type: 2}
             - Materials:
-              - {fileID: 0}
+              - {fileID: 2100000, guid: 376afbfbc39344c1da41615526d00ff8, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -4407,12 +4413,11 @@ MonoBehaviour:
         performanceOptions:
           isEnabled: 0
           entityPerCoroutine: 0
-        honorBuildingIdSetting: 0
+        honorBuildingIdSetting: 1
         buildingsWithUniqueIds: 0
         moveFeaturePositionTo: 0
         MeshModifiers: []
-        GoModifiers:
-        - {fileID: 11400000, guid: 9d87843b2402c4dac97800c7509f5b45, type: 2}
+        GoModifiers: []
         presetFeatureType: 4
         _maskValue: 0
         selectedTypes: 
@@ -6161,7 +6166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1101674279
 MonoBehaviour:
   m_ObjectHideFlags: 0
