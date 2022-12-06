@@ -70,7 +70,7 @@ public class JSCom : MonoBehaviour
                 if(WebInfoStats.Stats.type == "ar")
                 {
                     Debug.Log("start to load AR scene.....");
-                    AppManager.instance.LoadAR();
+                    AppManager.instance.LoadScene(SceneIndexes.AR);
                     //preloadMap = GameObject.FindGameObjectWithTag("Map");
                     //preloadMap.SetActive(false);
                     Debug.Log("Finish!! loading ar");
@@ -79,7 +79,7 @@ public class JSCom : MonoBehaviour
                 if (WebInfoStats.Stats.type == "live")
                 {
                     Debug.Log("start to load live scene.....");
-                    AppManager.instance.LoadLive();
+                    AppManager.instance.LoadScene(SceneIndexes.LIVE);
                     //preloadMap = GameObject.FindGameObjectWithTag("Map");
                     //preloadMap.SetActive(false);
                     Debug.Log("Finish!! loading live");

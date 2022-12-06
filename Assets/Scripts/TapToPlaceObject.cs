@@ -49,7 +49,7 @@ public class TapToPlaceObject : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "AR")
         {
             map = Instantiate(objectToPlace, new Vector3(0, -2, 0), Quaternion.identity);
-        }   
+        }
 
         isPlaced = false;
         raycastManager = GetComponent<ARRaycastManager>();

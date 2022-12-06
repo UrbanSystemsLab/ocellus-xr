@@ -25,50 +25,46 @@ public class AppManager : MonoBehaviour
     {
         instance = this;
 
-        LoadMenu();
+        //StartCoroutine(MenuSetUp());
+        SceneManager.LoadSceneAsync((int)SceneIndexes.MENU, LoadSceneMode.Additive);
+        //LoadScene(SceneIndexes.MENU);
+    }
+    public IEnumerator MenuSetUp()
+    {
+        LoadScene(SceneIndexes.MENU);
+        yield return null;
     }
 
-    public void LoadMenu()
+    public void LoadScene(SceneIndexes scene)
     {
-        //setup loading page
-        progressBar.value = 0;
-        loadingScreen.gameObject.SetActive(true);
 
-        //list of all the loading operation that needed to perform
-        List<AsyncOperation> sceneLoading = new List<AsyncOperation>();
+        if (scene != SceneIndexes.MENU)
+        {
+            SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU);
+        }
+        else
+        {
+            //check if AR/LIVE is active and unload AR/Live when coming back to Menu
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        }
 
-        //check if AR/LIVE is active and unload AR/Live when coming back to Menu
-        AsyncOperation unloadAR = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        sceneLoading.Add(unloadAR);
+        //set current scene to main scene
+        _currentSceneIndex = (int)scene;
 
-        _currentSceneIndex = (int)SceneIndexes.MENU;
+        //load the scene
+        AsyncOperation operation = SceneManager.LoadSceneAsync((int)scene, LoadSceneMode.Additive);
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync((int)SceneIndexes.MENU, LoadSceneMode.Additive);
-        //operation.allowSceneActivation = false;
+        //change the active scene to current scene
         operation.completed += ActivateTransientScene;
-        sceneLoading.Add(operation);
 
-        StartCoroutine(GetSceneLoadingProgress(sceneLoading,(int)SceneIndexes.MENU));
-    }
+        //get the loading progress
+        StartCoroutine(GetSceneLoadingProgress(operation));
 
-
-    public void LoadAR()
-    {
-        progressBar.value = 0;
-        loadingScreen.gameObject.SetActive(true);
-
-        _currentSceneIndex = (int)SceneIndexes.AR;
-        List<AsyncOperation> sceneLoading = new List<AsyncOperation>();
-
-        AsyncOperation unloadMenu = SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU);
-        sceneLoading.Add(unloadMenu);
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync((int)SceneIndexes.AR, LoadSceneMode.Additive);
-        operation.completed += ActivateTransientScene;
-        sceneLoading.Add(operation);
-
-        StartCoroutine(GetSceneLoadingProgress(sceneLoading, (int)SceneIndexes.AR));
-        preloadSceneAsset(SceneIndexes.AR);
+        //setup the preload scene asset for AR and Live
+        if (scene != SceneIndexes.MENU)
+        {
+            preloadSceneAsset(scene);
+        }
     }
 
     public void preloadSceneAsset(SceneIndexes scene)
@@ -105,47 +101,41 @@ public class AppManager : MonoBehaviour
         }
     }
 
-    public void LoadLive()
+    /*
+     * for testing purposes, loadScene wrapper
+     */
+    public void loadAR()
     {
-        progressBar.value = 0;
-        loadingScreen.SetActive(true);
-        _currentSceneIndex = (int)SceneIndexes.LIVE;
-        List<AsyncOperation> sceneLoading = new List<AsyncOperation>();
-
-        AsyncOperation unloadMenu = SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU);
-        sceneLoading.Add(unloadMenu);
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync((int)SceneIndexes.LIVE, LoadSceneMode.Additive);
-        operation.completed += ActivateTransientScene;
-        sceneLoading.Add(operation);
-
-        StartCoroutine(GetSceneLoadingProgress(sceneLoading, (int)SceneIndexes.LIVE));
-        preloadSceneAsset(SceneIndexes.LIVE);
+        LoadScene(SceneIndexes.AR);
     }
 
-    public IEnumerator GetSceneLoadingProgress(List<AsyncOperation> operations, int activeIndex)
+    /*
+     * for testing purposes, loadScene wrapper
+     */
+    public void loadLive()
     {
-        if(operations != null)
+        LoadScene(SceneIndexes.LIVE);
+    }
+
+    public IEnumerator GetSceneLoadingProgress(AsyncOperation operation)
+    {
+
+        progressBar.value = 0;
+        if (operation != null)
         {
-            for (int i = 0; i < operations.Count; i++)
+            while (operation.progress < 1)
             {
-                Debug.Log("i:" + i);
-                while (!operations[i].isDone)
+                if (!loadingScreen.activeSelf)
                 {
-                    totalSceneProgress = 0;
-                    foreach (AsyncOperation operation in operations)
-                    {
-                        totalSceneProgress += operation.progress;
-
-                    }
-
-                    totalSceneProgress = totalSceneProgress / operations.Count;
-                    Debug.Log(totalSceneProgress);
-                    progressBar.value = totalSceneProgress;
-
-                    yield return null;
+                    loadingScreen.gameObject.SetActive(true);
                 }
+                totalSceneProgress += operation.progress;
+                Debug.Log(totalSceneProgress);
+                progressBar.value = totalSceneProgress;
+
+                yield return null;
             }
+
         }
 
         ////reset async operation list

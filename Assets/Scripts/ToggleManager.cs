@@ -44,7 +44,7 @@ public class ToggleManager : MonoBehaviour
         //    AppManager.instance.LoadMenu();
         //}
         toggleLiveMap(false);
-        AppManager.instance.LoadMenu();
+        AppManager.instance.LoadScene(SceneIndexes.MENU);
         
     }
 
@@ -80,28 +80,28 @@ public class ToggleManager : MonoBehaviour
         //    return;
         //}
         //Debug.Log("helllooooooooo");
-        if (WebInfoStats.Stats.type != null)
-        {
-            if (WebInfoStats.Stats.type != currentStatus)
-            {
-                if (WebInfoStats.Stats.type == "ar")
-                {
-                    fullBnt.SetActive(true);
-                    togglePlaceObject(true);
-                    //toggleLiveMap(false);
-                }
-                else if (WebInfoStats.Stats.type == "live")
-                {
-                    fullBnt.SetActive(true);
-                    togglePlaceObject(false);
-                    DestroyARMap();
-                    toggleLiveMap(true);
-                }
+        //if (WebInfoStats.Stats.type != null)
+        //{
+        //    if (WebInfoStats.Stats.type != currentStatus)
+        //    {
+        //        if (WebInfoStats.Stats.type == "ar")
+        //        {
+        //            fullBnt.SetActive(true);
+        //            togglePlaceObject(true);
+        //            //toggleLiveMap(false);
+        //        }
+        //        else if (WebInfoStats.Stats.type == "live")
+        //        {
+        //            fullBnt.SetActive(true);
+        //            togglePlaceObject(false);
+        //            DestroyARMap();
+        //            toggleLiveMap(true);
+        //        }
 
-                currentStatus = WebInfoStats.Stats.type;
-            }
+        //        currentStatus = WebInfoStats.Stats.type;
+        //    }
 
-        }
+        //}
     }
 
 }
