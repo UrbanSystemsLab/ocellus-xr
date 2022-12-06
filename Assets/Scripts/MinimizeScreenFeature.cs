@@ -11,7 +11,10 @@ public class MinimizeScreenFeature : MonoBehaviour
     //public GameObject caliPage;
     public RectTransform rectTransform;
     // Start is called before the first frame update
-
+    private void Start()
+    {
+        changeIcon();
+    }
     // Update is called once per frame
     void Update()
     {

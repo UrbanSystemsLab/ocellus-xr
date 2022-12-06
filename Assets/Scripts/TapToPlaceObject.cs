@@ -114,15 +114,6 @@ public class TapToPlaceObject : MonoBehaviour
 
     public void Calibration()
     {
-        if (isCalibrating)
-        {
-            reloadMapCanvas.SetActive(true);
-            isCalibrating = false;
-            //map.GetComponent<LeanPinchScale>().enabled = false;
-            //map.GetComponent<LeanTwistRotateAxis>().enabled = false;
-        }
-        else
-        {
             if(map != null)
             {
                 map.SetActive(false);
@@ -132,7 +123,6 @@ public class TapToPlaceObject : MonoBehaviour
             TapToPlaceMap.SetActive(true);
             isPlaced = false;
             isCalibrating = false;
-        }
-        
     }
+        
 }

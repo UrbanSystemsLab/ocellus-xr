@@ -47,6 +47,7 @@ public class AppManager : MonoBehaviour
         //operation.allowSceneActivation = false;
         operation.completed += ActivateTransientScene;
         sceneLoading.Add(operation);
+
         StartCoroutine(GetSceneLoadingProgress(sceneLoading,(int)SceneIndexes.MENU));
     }
 
@@ -58,10 +59,14 @@ public class AppManager : MonoBehaviour
 
         _currentSceneIndex = (int)SceneIndexes.AR;
         List<AsyncOperation> sceneLoading = new List<AsyncOperation>();
-        SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU);
+
+        AsyncOperation unloadMenu = SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU);
+        sceneLoading.Add(unloadMenu);
+
         AsyncOperation operation = SceneManager.LoadSceneAsync((int)SceneIndexes.AR, LoadSceneMode.Additive);
         operation.completed += ActivateTransientScene;
         sceneLoading.Add(operation);
+
         StartCoroutine(GetSceneLoadingProgress(sceneLoading, (int)SceneIndexes.AR));
         preloadSceneAsset(SceneIndexes.AR);
     }
@@ -107,33 +112,39 @@ public class AppManager : MonoBehaviour
         _currentSceneIndex = (int)SceneIndexes.LIVE;
         List<AsyncOperation> sceneLoading = new List<AsyncOperation>();
 
-        sceneLoading.Add(SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU));
+        AsyncOperation unloadMenu = SceneManager.UnloadSceneAsync((int)SceneIndexes.MENU);
+        sceneLoading.Add(unloadMenu);
 
         AsyncOperation operation = SceneManager.LoadSceneAsync((int)SceneIndexes.LIVE, LoadSceneMode.Additive);
         operation.completed += ActivateTransientScene;
         sceneLoading.Add(operation);
+
         StartCoroutine(GetSceneLoadingProgress(sceneLoading, (int)SceneIndexes.LIVE));
         preloadSceneAsset(SceneIndexes.LIVE);
     }
 
     public IEnumerator GetSceneLoadingProgress(List<AsyncOperation> operations, int activeIndex)
     {
-        for(int i = 0; i < operations.Count; i++)
+        if(operations != null)
         {
-            while (!operations[i].isDone)
+            for (int i = 0; i < operations.Count; i++)
             {
-                totalSceneProgress = 0;
-                foreach(AsyncOperation operation in operations)
+                Debug.Log("i:" + i);
+                while (!operations[i].isDone)
                 {
-                    totalSceneProgress += operation.progress;
+                    totalSceneProgress = 0;
+                    foreach (AsyncOperation operation in operations)
+                    {
+                        totalSceneProgress += operation.progress;
 
+                    }
+
+                    totalSceneProgress = totalSceneProgress / operations.Count;
+                    Debug.Log(totalSceneProgress);
+                    progressBar.value = totalSceneProgress;
+
+                    yield return null;
                 }
-
-                totalSceneProgress = totalSceneProgress / operations.Count;
-                Debug.Log(totalSceneProgress);
-                progressBar.value = totalSceneProgress;
-                
-                yield return null;
             }
         }
 
