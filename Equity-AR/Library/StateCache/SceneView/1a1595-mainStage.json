@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-17.208755493164064,"y":1.7034006118774415,"z":41.796878814697269},"rotation":{"x":0.07674562931060791,"y":0.4940711557865143,"z":-0.04383980482816696,"w":0.8649173378944397},"size":27.640480041503908,"orthographic":false}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-17.208755493164064,"y":1.7034010887145997,"z":41.796878814697269},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":3.2289416790008547,"orthographic":false}
->>>>>>> parent of a8fb8535 (Merge pull request #11 from UrbanSystemsLab/worldscaleAR/thuan)
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-17.208755493164064,"y":1.7034010887145997,"z":41.796878814697269},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":3.2289416790008547,"orthographic":false}
->>>>>>> parent of f4c4c05e (merge the new version)
