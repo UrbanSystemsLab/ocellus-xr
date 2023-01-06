@@ -34,6 +34,11 @@ public class Switcher : MonoBehaviour
         map.SetActive(input);
     }
 
+    /// <summary>
+    /// Activate layer by map id
+    /// </summary>
+    /// <param name="LayerID"></param>
+    /// <returns></returns>
     public bool ActivateLayer(string LayerID)
     {
         if(LayerID == null)
