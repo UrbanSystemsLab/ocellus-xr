@@ -51,6 +51,7 @@ public class Switcher : MonoBehaviour
                 {
                     LayerID += i;
                     layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
+                    layer.SetActive(true);
                 }
             }
             else

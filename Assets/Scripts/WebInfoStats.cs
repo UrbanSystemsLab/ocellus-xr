@@ -24,10 +24,4 @@ public class WebInfoStats : MonoBehaviour
     {
         Stats = this;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
