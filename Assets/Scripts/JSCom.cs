@@ -21,6 +21,9 @@ public class JSCom : MonoBehaviour
         //preloadMap = GameObject.FindGameObjectWithTag("Map");
         //Debug.Log(preloadMap);
         //preloadMap.SetActive(false);
+        // Wait until the page has loaded to execute JavaScript
+        //var html = await webViewPrefab.WebView.ExecuteJavaScript("document.documentElement.outerHTML");
+        //Debug.Log("HTML: " + html);
     }
 
     private void RecieveMessageFromWeb()
@@ -30,12 +33,18 @@ public class JSCom : MonoBehaviour
         webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
                 Debug.Log("The webview is getting the data!");
                 Debug.Log(eventArgs.Value);
-                
-                //Parsing json
-                //testing for parsing json
-                //string testing = @"{""type"":""layer"",""data"":{""layer"":""heat""}}";
-                //string testing = "{\"type\": \"layer\"}";
-                MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
+                Debug.Log("start with is : " + eventArgs.Value.StartsWith("http"));
+            if (eventArgs.Value.StartsWith("http"))
+            {
+                Debug.Log("is http~~");
+                Application.OpenURL(eventArgs.Value);
+            }
+
+            //Parsing json
+            //testing for parsing json
+            //string testing = @"{""type"":""layer"",""data"":{""layer"":""heat""}}";
+            //string testing = "{\"type\": \"layer\"}";
+            MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
                 gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
                 Debug.Log("JavaScript send layer of : " + gotData.data.layer.name + gotData.type);
 
@@ -44,6 +53,13 @@ public class JSCom : MonoBehaviour
                 webViewObject.SetActive(false);
             }
 
+            Debug.Log("start with is : " + eventArgs.Value.StartsWith("http"));
+
+            if (eventArgs.Value.StartsWith("http"))
+            {
+                Debug.Log("is http~~");
+                Application.OpenURL(eventArgs.Value);
+            }
 
             if (gotData.type == "ar" || gotData.type == "live")
             {

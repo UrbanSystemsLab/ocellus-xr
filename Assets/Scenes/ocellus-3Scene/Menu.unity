@@ -2887,7 +2887,7 @@ PrefabInstance:
     - target: {fileID: 114949863196309792, guid: 3e10f3b6a733e441c8352020cff2f1f6,
         type: 3}
       propertyPath: InitialUrl
-      value: https://ocellus-xr.herokuapp.com/
+      value: https://ocellus-xr.herokuapp.com
       objectReference: {fileID: 0}
     - target: {fileID: 114949863196309792, guid: 3e10f3b6a733e441c8352020cff2f1f6,
         type: 3}
@@ -6154,8 +6154,8 @@ MonoBehaviour:
   currentLayerName: 
   currentLayerID: 
   type: 
-  selectedLat: 0
-  selectedLon: 0
+  selectedLat: 40.780136
+  selectedLon: -73.96527
   layerIsReady: 0
   webviewIsOpen: 0
 --- !u!1 &1181421684
