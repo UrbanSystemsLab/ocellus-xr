@@ -19,6 +19,10 @@ public class JSCom : MonoBehaviour
     {
         //wait for webview to be initialized
         await webViewPrefab.WaitUntilInitialized();
+        if(WebInfoStats.Stats.module != -1 && WebInfoStats.Stats.slide != -1)
+        {
+            sendModuleSlides(WebInfoStats.Stats.module, WebInfoStats.Stats.slide);
+        }
         RecieveMessageFromWeb();
     }
 
@@ -46,7 +50,7 @@ public class JSCom : MonoBehaviour
             //string testing = "{\"type\": \"layer\"}";
             MessageClass.RecieveJSON gotData = new MessageClass.RecieveJSON();
             gotData = JsonUtility.FromJson<MessageClass.RecieveJSON>(eventArgs.Value);
-            Debug.Log("JavaScript send layer of : " + gotData.data.layer.name + gotData.type);
+            Debug.Log("JavaScript send layer of : " + gotData.data.layer.name + " "+ gotData.type);
 
             if (!gotData.data.webviewIsOpen)
             {
@@ -97,6 +101,7 @@ public class JSCom : MonoBehaviour
         WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
         WebInfoStats.Stats.type = gotData.type;
         WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
+        WebInfoStats.Stats.legendXML = gotData.data.layer.svg;
     }
 
     /// <summary>
@@ -144,9 +149,9 @@ public class JSCom : MonoBehaviour
         //    {
                 if (!Input.location.isEnabledByUser)
                 {
-                    //User has not enable location service, give it a default lat&lon :Central Park
-                    messageClass.message.messageContent.location.lat = 40.7812f;
-                    messageClass.message.messageContent.location.lon = -73.9665f;
+                    //User has not enable location service, give it a default lat&lon : Claremont Park
+                    messageClass.message.messageContent.location.lat = 40.840244f;
+                    messageClass.message.messageContent.location.lon = -73.907231f;
                     Debug.Log("post Central Park Default string from Unity to Javascript");
                 }
                 else
@@ -154,6 +159,7 @@ public class JSCom : MonoBehaviour
                     //User enable location service,get user's location and post message
                     messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
                     messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
+                    Debug.Log("User current location is: " + AskLocation.Instance.lat + ", " + AskLocation.Instance.lon);
                     Debug.Log("post JSON string from Unity to Javascript");
                 }
                 messageClass.message.sentType = WebInfoStats.Stats.type;
@@ -164,6 +170,27 @@ public class JSCom : MonoBehaviour
                 webViewPrefab.WebView.PostMessage(JSON);
                 Debug.Log("finish sending message from Unity!");
 
+    }
+
+    /// <summary>
+    /// Sending module and slide where user left off, back to webview, so that user can restore previous pages.
+    /// </summary>
+    /// <param name="module"></param>
+    /// <param name="slide"></param>
+    public void sendModuleSlides(int module, int slide)
+    {
+        MessageClass messageClass = new MessageClass();
+        //string JSON = JsonUtility.ToJson(messageClass);
+        Debug.Log("constructing Modules/Slides now");
+        messageClass.message.messageContent.layer.isReady = true;
+
+        messageClass.callback.type = "Module/Slide";
+        messageClass.callback.module = WebInfoStats.Stats.module;
+        messageClass.callback.slide = WebInfoStats.Stats.slide;
+
+        string JSON = JsonUtility.ToJson(messageClass.callback);
+        webViewPrefab.WebView.PostMessage(JSON);
+        Debug.Log("finish sending module/slide from Unity!");
     }
 
     //Send Json

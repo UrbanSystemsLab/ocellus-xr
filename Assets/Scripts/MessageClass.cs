@@ -36,6 +36,7 @@ public class MessageClass : MonoBehaviour
         public string name;
         public string description;
         public bool isReady;
+        public string svg;
     }
 
     [Serializable]
@@ -48,4 +49,19 @@ public class MessageClass : MonoBehaviour
 
     [SerializeField]
     public Message message;
+
+
+    //data structure for module and slides
+
+
+    [SerializeField]
+    public ModuleSlide callback;
+
+    [Serializable]
+    public struct ModuleSlide
+    {
+        public string type;
+        public int module;
+        public int slide;
+    }
 }

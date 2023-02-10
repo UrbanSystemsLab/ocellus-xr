@@ -11,7 +11,11 @@ public class reloadWeb : MonoBehaviour
     public CanvasWebViewPrefab webViewPrefab;
     private string url;
     // Start is called before the first frame update
-    
+
+    private void Start()
+    {
+        //if(WebInfoStats.Stats.)
+    }
 
     public void readInputField(string link)
     {

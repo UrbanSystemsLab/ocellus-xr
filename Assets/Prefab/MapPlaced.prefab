@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _options:
     locationOptions:
-      latitudeLongitude: 40.780135, -73.96527
+      latitudeLongitude: 40.840244, -73.907231
       zoom: 15
     extentOptions:
       extentType: 1
@@ -117,30 +117,14 @@ MonoBehaviour:
   _vectorData:
     _layerProperty:
       tileJsonData:
-        tileJSONLoaded: 0
-        LayerDisplayNames:
-        - 2020s-100y
-        - 2020s-500y
-        - 2050s-100y
-        - 2050s-500y
-        - building
-        - coolingStation
-        - green_infrastructure
-        - income_final
-        - NYC_65plus
-        - NYC_heatmap
-        - NYC_OpenSpace
-        - nycFlood1
-        - NYCtemp
-        - PEJAs_NYS
-        - redliningData
-        - split-green-roofs
+        tileJSONLoaded: 1
+        LayerDisplayNames: []
       _sourceType: 2
       sourceOptions:
         isActive: 1
         layerSource:
           Name: Mapbox Streets v7
-          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e,equity.cxc73xaa,timonm.77dtkn5f,equity.dsxc6fdt,equity.c7f9efui,equity.3t4w37ok
+          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e,equity.cxc73xaa,timonm.77dtkn5f,equity.dsxc6fdt,equity.c7f9efui,equity.3t4w37ok,timonm.5werclko,timonm.aq9icb9d,timonm.6d5byyoy
           Modified: 
           UserName: 
       useOptimizedStyle: 0
@@ -155,7 +139,7 @@ MonoBehaviour:
       vectorSubLayers:
       - coreOptions:
           sourceId: 
-          isActive: 1
+          isActive: 0
           sublayerName: equity.cxc73xaa
           geometryType: 2
           layerName: NYC_heatmap
@@ -808,7 +792,7 @@ MonoBehaviour:
         selectedTypes: 
       - coreOptions:
           sourceId: 
-          isActive: 0
+          isActive: 1
           sublayerName: equity.3t4w37ok
           geometryType: 2
           layerName: redliningData
@@ -826,13 +810,13 @@ MonoBehaviour:
           combinerType: 0
         extrusionOptions:
           _selectedLayerName: redliningData
-          extrusionType: 5
-          extrusionGeometryType: 0
+          extrusionType: 1
+          extrusionGeometryType: 1
           propertyName: holc_grade
           propertyDescription: String
           minimumHeight: 0
           maximumHeight: 5
-          extrusionScaleFactor: 3
+          extrusionScaleFactor: 0
         colliderOptions:
           colliderType: 0
         materialOptions:
@@ -1125,6 +1109,71 @@ MonoBehaviour:
           entityPerCoroutine: 0
         honorBuildingIdSetting: 1
         buildingsWithUniqueIds: 0
+        moveFeaturePositionTo: 0
+        MeshModifiers: []
+        GoModifiers: []
+        presetFeatureType: 4
+        _maskValue: 0
+        selectedTypes: 
+      - coreOptions:
+          sourceId: 
+          isActive: 1
+          sublayerName: timonm.aq9icb9d
+          geometryType: 3
+          layerName: 
+          snapToTerrain: 1
+          combineMeshes: 0
+        lineGeometryOptions:
+          Width: 1
+          MiterLimit: 0.2
+          RoundLimit: 1.05
+          JoinType: 1
+          CapType: 1
+        filterOptions:
+          _selectedLayerName: 
+          filters: []
+          combinerType: 0
+        extrusionOptions:
+          _selectedLayerName: 2050s-500y
+          extrusionType: 0
+          extrusionGeometryType: 0
+          propertyName: height
+          propertyDescription: Unavailable in Selected Layer.
+          minimumHeight: 0
+          maximumHeight: 1
+          extrusionScaleFactor: 1
+        colliderOptions:
+          colliderType: 0
+        materialOptions:
+          style: 0
+          texturingType: 2
+          materials:
+          - Materials:
+            - {fileID: 0}
+          - Materials:
+            - {fileID: 0}
+          atlasInfo: {fileID: 0}
+          lightStyleOpacity: 1
+          darkStyleOpacity: 1
+          colorStyleColor: {r: 0.1764706, g: 0.8509805, b: 1, a: 1}
+          samplePalettes: 1
+          colorPalette: {fileID: 0}
+          customStyleOptions:
+            texturingType: 0
+            materials:
+            - Materials:
+              - {fileID: 0}
+            - Materials:
+              - {fileID: 0}
+            atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
+              type: 2}
+            colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
+              type: 2}
+        performanceOptions:
+          isEnabled: 0
+          entityPerCoroutine: 0
+        honorBuildingIdSetting: 1
+        buildingsWithUniqueIds: 1
         moveFeaturePositionTo: 0
         MeshModifiers: []
         GoModifiers: []
