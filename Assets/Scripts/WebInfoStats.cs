@@ -18,7 +18,7 @@ public class WebInfoStats : MonoBehaviour
     public float selectedLon;
     public bool layerIsReady;
     public bool webviewIsOpen;
-    public string legendXML;
+    public string legendMapKey;
     public int module = -1;
     public int slide = -1;
 

@@ -101,7 +101,7 @@ public class JSCom : MonoBehaviour
         WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
         WebInfoStats.Stats.type = gotData.type;
         WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
-        WebInfoStats.Stats.legendXML = gotData.data.layer.svg;
+        WebInfoStats.Stats.legendMapKey = gotData.data.layer.mapKey;
     }
 
     /// <summary>

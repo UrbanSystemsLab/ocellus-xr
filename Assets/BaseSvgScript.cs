@@ -12,7 +12,7 @@ public class BaseSvgScript : MonoBehaviour
 
     private void Start()
     {
-        svg = WebInfoStats.Stats.legendXML;
+        //svg = WebInfoStats.Stats.legendXML;
     }
 
     protected List<VectorUtils.Geometry> GetGeometries()

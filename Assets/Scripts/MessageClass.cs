@@ -33,10 +33,10 @@ public class MessageClass : MonoBehaviour
     public struct Layer
     {
         public string id;
+        public string mapKey;
         public string name;
         public string description;
         public bool isReady;
-        public string svg;
     }
 
     [Serializable]

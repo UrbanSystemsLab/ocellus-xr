@@ -124,24 +124,25 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			float incomeValue=0;
 			float sixtyFiveValue=0;
             string redlining = "";
+			float PEJA_Non_WhiteValue = 0;
 
-            //Debug.Log(feature.Properties["area_description_data"].ToString());
+			//Debug.Log(feature.Properties["area_description_data"].ToString());
 
-            //try
-            //{
-            //    redlining = feature.Properties["holc_grade"].ToString();
-            //    Debug.Log("Data Get: " + redlining);
-            //}
-            //catch (Exception ex)
-            //{
-            //    redlining = "";
-            //    Debug.Log("Redlining layer error:" + ex.Message);
-            //}
+			//try
+			//{
+			//    redlining = feature.Properties["holc_grade"].ToString();
+			//    Debug.Log("Data Get: " + redlining);
+			//}
+			//catch (Exception ex)
+			//{
+			//    redlining = "";
+			//    Debug.Log("Redlining layer error:" + ex.Message);
+			//}
 
 
 
-            //check what the incoming data belongs to
-            if (feature.Properties.ContainsKey("risk"))
+			//check what the incoming data belongs to
+			if (feature.Properties.ContainsKey("risk"))
             {
 				string temp = feature.Properties["risk"].ToString();
 				tempValue = float.Parse(temp);
@@ -162,6 +163,11 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
             {
 				redlining = feature.Properties["holc_grade"].ToString();
 				//Debug.Log(redlining);
+            }else if (feature.Properties.ContainsKey("Non_White"))
+            {
+				string PEJA_Non_White = feature.Properties["Non_White"].ToString();
+				PEJA_Non_WhiteValue = float.Parse(PEJA_Non_White);
+				//Debug.Log(PEJA_Non_WhiteValue);
             }
 
 
@@ -185,6 +191,12 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 			//add colors to buildings
 			Color baseColor = new Color(1f,1f,1f);
+
+			if(PEJA_Non_WhiteValue > 511)
+            {
+				Debug.Log("bigger than 511");
+				baseColor = new Color(1f, 0f, 0f);
+			}
 
 
             if (redlining.Equals("A"))
