@@ -50,10 +50,14 @@ public class TreeInfoManager : MonoBehaviour
             treeName.text = commonName;
             //add 1 to the treenum
             numAdded = true;
-            int newNum;
-            int.TryParse(treeNum.text, out newNum);
+            int newNum = -2;
+            try
+            {
+                int.TryParse(treeNum.text, out newNum);
+            }
+            catch { }
             newNum += 1;
-            treeNum.text = $"{newNum}";
+            //treeNum.text = $"{newNum}";
         }
 
         if (inCircle == false && numAdded == true)
@@ -61,8 +65,12 @@ public class TreeInfoManager : MonoBehaviour
             infocard.SetActive(false);
             //minus 1 to the treenum
             numAdded = false;
-            int newNum;
-            int.TryParse(treeNum.text, out newNum);
+            int newNum = -1;
+            try
+            {
+                int.TryParse(treeNum.text, out newNum);
+            }
+            catch { }
             newNum -= 1;
             treeNum.text = $"{newNum}";
         }

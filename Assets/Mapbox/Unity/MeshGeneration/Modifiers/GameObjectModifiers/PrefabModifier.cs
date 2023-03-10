@@ -120,7 +120,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			{
 				string treeProperty = ve.Feature.Properties["DBH"].ToString();
 				property = float.Parse(treeProperty) * 0.0254f * 2.0f;
-				Debug.Log("DBH is:" + property);
+				//Debug.Log("DBH is:" + property);
 				treeType = ve.Feature.Properties["GenusSpeci"].ToString();
 				treeStructure = ve.Feature.Properties["TPStructur"].ToString();
 				treeCondition = ve.Feature.Properties["TPConditio"].ToString();

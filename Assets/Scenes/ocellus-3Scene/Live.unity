@@ -1077,7 +1077,7 @@ PrefabInstance:
     - target: {fileID: 113288910717355086, guid: 176a789a100ac4769acf8cc865b7feab,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -80
+      value: -1200
       objectReference: {fileID: 0}
     - target: {fileID: 113288910717355086, guid: 176a789a100ac4769acf8cc865b7feab,
         type: 3}
@@ -1122,7 +1122,7 @@ PrefabInstance:
     - target: {fileID: 113288910717355086, guid: 176a789a100ac4769acf8cc865b7feab,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 113288910717355086, guid: 176a789a100ac4769acf8cc865b7feab,
         type: 3}
@@ -1174,36 +1174,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreeInfoDetails
       objectReference: {fileID: 0}
-    - target: {fileID: 5317199564438887476, guid: 176a789a100ac4769acf8cc865b7feab,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5317199564438887476, guid: 176a789a100ac4769acf8cc865b7feab,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5317199564438887476, guid: 176a789a100ac4769acf8cc865b7feab,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5317199564438887476, guid: 176a789a100ac4769acf8cc865b7feab,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5317199564438887476, guid: 176a789a100ac4769acf8cc865b7feab,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5317199564438887476, guid: 176a789a100ac4769acf8cc865b7feab,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8819683238229651487, guid: 176a789a100ac4769acf8cc865b7feab,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1219,21 +1189,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1818613265}
-    - target: {fileID: 8819683238229651487, guid: 176a789a100ac4769acf8cc865b7feab,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: set_blocksRaycasts
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819683238229651487, guid: 176a789a100ac4769acf8cc865b7feab,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: set_alpha
-      objectReference: {fileID: 0}
-    - target: {fileID: 8819683238229651487, guid: 176a789a100ac4769acf8cc865b7feab,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: set_interactable
-      objectReference: {fileID: 0}
     - target: {fileID: 8819683238229651487, guid: 176a789a100ac4769acf8cc865b7feab,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1535,7 +1490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &254168404
 Transform:
   m_ObjectHideFlags: 0
@@ -4158,9 +4113,9 @@ MonoBehaviour:
             texturingType: 0
             materials:
             - Materials:
-              - {fileID: 2100000, guid: 905d91c1eafb146ea848a39dbd4510e9, type: 2}
+              - {fileID: 2100000, guid: c6d38711520119c4e89ddf1ea6adc007, type: 2}
             - Materials:
-              - {fileID: 2100000, guid: 905d91c1eafb146ea848a39dbd4510e9, type: 2}
+              - {fileID: 2100000, guid: c6d38711520119c4e89ddf1ea6adc007, type: 2}
             atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
               type: 2}
             colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
@@ -7310,7 +7265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1395780545
 MonoBehaviour:
   m_ObjectHideFlags: 0
