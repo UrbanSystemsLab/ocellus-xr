@@ -125,6 +125,8 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			float sixtyFiveValue=0;
             string redlining = "";
 			float PEJA_Non_WhiteValue = 0;
+			float PEJA_Bel_PovValue = 0;
+			string PEJA_Urban_Rura = "";
 
 			//Debug.Log(feature.Properties["area_description_data"].ToString());
 
@@ -143,35 +145,55 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 			//check what the incoming data belongs to
 			if (feature.Properties.ContainsKey("risk"))
-            {
+			{
 				string temp = feature.Properties["risk"].ToString();
 				tempValue = float.Parse(temp);
 				//Debug.Log(tempValue);
 			}
-            else if(feature.Properties.ContainsKey("income"))
-            {
+			else if (feature.Properties.ContainsKey("income"))
+			{
 				string income = feature.Properties["income"].ToString();
 				incomeValue = float.Parse(income);
 				//Debug.Log(incomeValue);
 			}
 			else if (feature.Properties.ContainsKey("P_Abv65_e_"))
-            {
+			{
 				string sixtyFive = feature.Properties["P_Abv65_e_"].ToString();
 				sixtyFiveValue = float.Parse(sixtyFive);
 				//Debug.Log(sixtyFiveValue);
-			}else if (feature.Properties.ContainsKey("holc_grade"))
-            {
+			}
+			else if (feature.Properties.ContainsKey("holc_grade"))
+			{
 				redlining = feature.Properties["holc_grade"].ToString();
 				//Debug.Log(redlining);
-            }else if (feature.Properties.ContainsKey("Non_White"))
-            {
+			}
+			else if (feature.Properties.ContainsKey("Non_White"))
+			{
 				string PEJA_Non_White = feature.Properties["Non_White"].ToString();
 				PEJA_Non_WhiteValue = float.Parse(PEJA_Non_White);
 				//Debug.Log(PEJA_Non_WhiteValue);
-            }
+
+				string PEJA_Bel_Pov = feature.Properties["PCT_BelPov"].ToString();
+				PEJA_Bel_PovValue = float.Parse(PEJA_Bel_Pov);
+
+				//List<string> keys = feature.Properties.Keys.ToList();
+				//keys.ToList().ForEach(i => Debug.Log(i.ToString()));
+
+                if (feature.Properties.ContainsKey("Urban_Rura"))
+                {
+					PEJA_Urban_Rura = feature.Properties["Urban_Rura"].ToString();
+					Debug.Log(PEJA_Urban_Rura);
+				}
+
+			}
+			else if (feature.Properties.ContainsKey("Urban_Rura"))
+            {
+				//PEJA_Urban_Rura = feature.Properties["Urban_Rura"].ToString();
+				//Debug.Log(PEJA_Urban_Rura);
+			}
 
 
-			if (!_cacheVertexCount.ContainsKey(tile))
+				if (!_cacheVertexCount.ContainsKey(tile))
 			{
 				_cacheVertexCount.Add(tile, 0);
 				_cached.Add(tile, _meshDataPool.GetObject());
@@ -194,12 +216,30 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 
 			if(PEJA_Non_WhiteValue > 511)
             {
-				Debug.Log("bigger than 511");
 				baseColor = new Color(1f, 0f, 0f);
 			}
 
+			if(PEJA_Bel_PovValue > 50.0f)
+            {
+				baseColor = new Color(0f, 1f, 0f);
+			}
 
-            if (redlining.Equals("A"))
+			if (PEJA_Bel_PovValue > 50.0f && PEJA_Non_WhiteValue > 511)
+            {
+				baseColor = new Color(0f, 0f, 1f);
+			}
+
+				//         if (PEJA_Urban_Rura.Equals("U")){
+
+				//	baseColor = new Color(1f, 1f, 1f);
+				//}
+				//else if (PEJA_Urban_Rura.Equals("R"))
+				//         {
+				//	baseColor = new Color(0f, 0f, 1f);
+				//}
+
+
+				if (redlining.Equals("A"))
             {
                 baseColor = new Color(0.50f, 0.70f, 0.50f);
                 Debug.Log("Colorget");

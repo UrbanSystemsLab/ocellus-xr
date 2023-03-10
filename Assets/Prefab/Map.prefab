@@ -181,6 +181,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[15].coreOptions.isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[16].coreOptions.isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
       propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[11].buildingsWithUniqueIds
       value: 0
       objectReference: {fileID: 0}

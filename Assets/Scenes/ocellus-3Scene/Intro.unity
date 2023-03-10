@@ -335,7 +335,7 @@ RectTransform:
   m_GameObject: {fileID: 1179553221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.71, y: 0.71, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1408928402}
   m_Father: {fileID: 1159132509}
@@ -420,7 +420,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408928401}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: d39f01f59568c4c25819274add4f2a88, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 2f8fc80850cf840ccb16f54c241ee92a, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -439,12 +439,12 @@ VideoPlayer:
   - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
+  m_DirectAudioMutes: 01
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
-  m_SkipOnDrop: 0
+  m_SkipOnDrop: 1
   m_Looping: 0
-  m_WaitForFirstFrame: 0
+  m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!1 &2048906586
@@ -543,4 +543,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4cd8529d4c145899492e777d4d7422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoTime: 3
+  videoTime: 5

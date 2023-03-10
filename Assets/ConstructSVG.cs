@@ -11,8 +11,11 @@ public class ConstructSVG : MonoBehaviour
     {
         if (WebInfoStats.Stats.legendMapKey != null)
         {
-            webCanvas.InitialUrl = 
-                "http://ocellus.urbansystemslab.com/?legendExport=true&locationKey=%22-L6yAJF2pGYdw-yyPp6t%22&mapKey=%22" + WebInfoStats.Stats.legendMapKey + "%22" ;
+            webCanvas.InitialUrl =
+                "http://ocellus.urbansystemslab.com/?legendExport=true&locationKey=%22-L6yAJF2pGYdw-yyPp6t%22&mapKey=%22" + WebInfoStats.Stats.legendMapKey + "%22";
+            //webCanvas.InitialUrl =
+            //    "http://ocellus.urbansystemslab.com/?legendExport=true&locationKey=\"-L6yAJF2pGYdw-yyPp6t%22&mapKey=\"" + WebInfoStats.Stats.legendMapKey + "\"";
+            //Debug.Log("Loading Legend URL: " + webCanvas.InitialUrl);
         }
     }
 }

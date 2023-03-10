@@ -33,8 +33,8 @@ public class MessageClass : MonoBehaviour
     public struct Layer
     {
         public string id;
-        public string mapKey;
         public string name;
+        public string mapId;
         public string description;
         public bool isReady;
     }

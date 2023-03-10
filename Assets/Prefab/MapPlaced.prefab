@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _options:
     locationOptions:
-      latitudeLongitude: 40.75324, -74.001982
+      latitudeLongitude: 40.840244, -73.907231
       zoom: 15
     extentOptions:
       extentType: 1
@@ -102,7 +102,7 @@ MonoBehaviour:
       requiredOptions:
         exaggerationFactor: 1
       colliderOptions:
-        addCollider: 0
+        addCollider: 1
       modificationOptions:
         sampleCount: 10
         useRelativeHeight: 1
@@ -131,6 +131,7 @@ MonoBehaviour:
         - NYC_heatmap
         - NYC_OpenSpace
         - nycFlood1
+        - nycFlood1
         - nycFloodMod
         - NYCtemp
         - PEJAs_NYS
@@ -141,7 +142,7 @@ MonoBehaviour:
         isActive: 1
         layerSource:
           Name: Mapbox Streets v7
-          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e,equity.cxc73xaa,timonm.77dtkn5f,equity.dsxc6fdt,equity.c7f9efui,equity.3t4w37ok,timonm.5werclko,
+          Id: mapbox.3d-buildings,equity.19fnjujj,equity.0qf98zo6,equity.16d8ns8l,equity.dmmqh0kw,equity.755pqg03,equity.0anappre,equity.8clwnj6e,equity.cxc73xaa,timonm.77dtkn5f,equity.dsxc6fdt,equity.c7f9efui,equity.3t4w37ok,timonm.5werclko,timonm.6d5byyoy
           Modified: 
           UserName: 
       useOptimizedStyle: 0
@@ -1191,6 +1192,71 @@ MonoBehaviour:
           entityPerCoroutine: 0
         honorBuildingIdSetting: 1
         buildingsWithUniqueIds: 1
+        moveFeaturePositionTo: 0
+        MeshModifiers: []
+        GoModifiers: []
+        presetFeatureType: 4
+        _maskValue: 0
+        selectedTypes: 
+      - coreOptions:
+          sourceId: 
+          isActive: 0
+          sublayerName: timonm.6d5byyoy
+          geometryType: 2
+          layerName: NYCtemp
+          snapToTerrain: 1
+          combineMeshes: 1
+        lineGeometryOptions:
+          Width: 1
+          MiterLimit: 0.2
+          RoundLimit: 1.05
+          JoinType: 1
+          CapType: 1
+        filterOptions:
+          _selectedLayerName: NYCtemp
+          filters: []
+          combinerType: 0
+        extrusionOptions:
+          _selectedLayerName: NYCtemp
+          extrusionType: 0
+          extrusionGeometryType: 0
+          propertyName: Urban_Rura
+          propertyDescription: String
+          minimumHeight: 0
+          maximumHeight: 1
+          extrusionScaleFactor: 1
+        colliderOptions:
+          colliderType: 0
+        materialOptions:
+          style: 0
+          texturingType: 2
+          materials:
+          - Materials:
+            - {fileID: 0}
+          - Materials:
+            - {fileID: 0}
+          atlasInfo: {fileID: 0}
+          lightStyleOpacity: 1
+          darkStyleOpacity: 1
+          colorStyleColor: {r: 0.1764706, g: 0.8509805, b: 1, a: 1}
+          samplePalettes: 1
+          colorPalette: {fileID: 0}
+          customStyleOptions:
+            texturingType: 0
+            materials:
+            - Materials:
+              - {fileID: 2100000, guid: 69c3c648559bfd34eaae3ff327107596, type: 2}
+            - Materials:
+              - {fileID: 0}
+            atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
+              type: 2}
+            colorPalette: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
+              type: 2}
+        performanceOptions:
+          isEnabled: 0
+          entityPerCoroutine: 0
+        honorBuildingIdSetting: 1
+        buildingsWithUniqueIds: 0
         moveFeaturePositionTo: 0
         MeshModifiers: []
         GoModifiers: []
