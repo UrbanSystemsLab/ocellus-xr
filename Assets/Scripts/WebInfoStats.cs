@@ -19,8 +19,7 @@ public class WebInfoStats : MonoBehaviour
     public bool layerIsReady;
     public bool webviewIsOpen;
     public string legendMapKey;
-    public int module = -1;
-    public int slide = -1;
+    public int[] curSlides;
 
     // Start is called before the first frame update
     void Awake()

@@ -19,10 +19,10 @@ public class JSCom : MonoBehaviour
     {
         //wait for webview to be initialized
         await webViewPrefab.WaitUntilInitialized();
-        if(WebInfoStats.Stats.module != -1 && WebInfoStats.Stats.slide != -1)
-        {
-            sendModuleSlides(WebInfoStats.Stats.module, WebInfoStats.Stats.slide);
-        }
+        //if(WebInfoStats.Stats.module != -1 && WebInfoStats.Stats.slide != -1)
+        //{
+        //    sendModuleSlides(WebInfoStats.Stats.module, WebInfoStats.Stats.slide);
+        //}
         RecieveMessageFromWeb();
     }
 
@@ -102,6 +102,7 @@ public class JSCom : MonoBehaviour
         WebInfoStats.Stats.type = gotData.type;
         WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
         WebInfoStats.Stats.legendMapKey = gotData.data.layer.mapId;
+        WebInfoStats.Stats.curSlides = gotData.data.layer.slideTuple;
         Debug.Log("storing map id in Unity: " + WebInfoStats.Stats.legendMapKey);
     }
 
@@ -166,6 +167,7 @@ public class JSCom : MonoBehaviour
                 messageClass.message.sentType = WebInfoStats.Stats.type;
                 messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerID;
                 messageClass.message.messageContent.layer.name = WebInfoStats.Stats.currentLayerName;
+                messageClass.message.messageContent.layer.slideTuple = WebInfoStats.Stats.curSlides;
 
                 string JSON = JsonUtility.ToJson(messageClass.message);
                 webViewPrefab.WebView.PostMessage(JSON);
@@ -178,21 +180,21 @@ public class JSCom : MonoBehaviour
     /// </summary>
     /// <param name="module"></param>
     /// <param name="slide"></param>
-    public void sendModuleSlides(int module, int slide)
-    {
-        MessageClass messageClass = new MessageClass();
-        //string JSON = JsonUtility.ToJson(messageClass);
-        Debug.Log("constructing Modules/Slides now");
-        messageClass.message.messageContent.layer.isReady = true;
+    //public void sendModuleSlides(int module, int slide)
+    //{
+    //    MessageClass messageClass = new MessageClass();
+    //    //string JSON = JsonUtility.ToJson(messageClass);
+    //    Debug.Log("constructing Modules/Slides now");
+    //    messageClass.message.messageContent.layer.isReady = true;
 
-        messageClass.callback.type = "Module/Slide";
-        messageClass.callback.module = WebInfoStats.Stats.module;
-        messageClass.callback.slide = WebInfoStats.Stats.slide;
+    //    messageClass.callback.type = "Module/Slide";
+    //    messageClass.callback.module = WebInfoStats.Stats.module;
+    //    messageClass.callback.slide = WebInfoStats.Stats.slide;
 
-        string JSON = JsonUtility.ToJson(messageClass.callback);
-        webViewPrefab.WebView.PostMessage(JSON);
-        Debug.Log("finish sending module/slide from Unity!");
-    }
+    //    string JSON = JsonUtility.ToJson(messageClass.callback);
+    //    webViewPrefab.WebView.PostMessage(JSON);
+    //    Debug.Log("finish sending module/slide from Unity!");
+    //}
 
     //Send Json
     //void WebView_LoadProgressChanged(object sender, ProgressChangedEventArgs eventArgs)

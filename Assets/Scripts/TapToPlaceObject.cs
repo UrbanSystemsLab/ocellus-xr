@@ -22,6 +22,9 @@ public class TapToPlaceObject : MonoBehaviour
     public Camera newCamera;
     public GameObject reloadMapCanvas;
 
+    [Header("Full Screen")]
+    public Button fullScreenBnt;
+
     private ARRaycastManager raycastManager;
     private Pose placementPose;
     private bool placementPoseIsValid = false;
@@ -88,6 +91,9 @@ public class TapToPlaceObject : MonoBehaviour
 
 
         isPlaced = true;
+        //enable all feature
+        fullScreenBnt.onClick.Invoke();
+        //turn off tap to place animation
         TapToPlaceMap.SetActive(false);
     }
 
