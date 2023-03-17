@@ -21,7 +21,10 @@ public class JSCom : MonoBehaviour
         //wait for webview to be initialized
         await webViewPrefab.WaitUntilInitialized();
         RecieveMessageFromWeb();
-        constructMessage();
+        if (database.curTuple[0] != -1 || database.curTuple[1] != -1)
+        {
+            constructMessage();
+        }
     }
 
     /// <summary>
@@ -69,14 +72,14 @@ public class JSCom : MonoBehaviour
 
 
                 //Start Loading Content Scene
-                if (WebInfoStats.Stats.type == "ar")
+                if (database.type == "ar")
                 {
                     Debug.Log("start to load AR scene.....");
                     AppManager.instance.LoadScene(SceneIndexes.AR);
                     Debug.Log("Finish!! loading ar");
                 }
 
-                if (WebInfoStats.Stats.type == "live")
+                if (database.type == "live")
                 {
                     Debug.Log("start to load live scene.....");
                     AppManager.instance.LoadScene(SceneIndexes.LIVE);
@@ -93,20 +96,31 @@ public class JSCom : MonoBehaviour
     /// <param name="gotData"></param>
     private void storeData(MessageClass.RecieveJSON gotData)
     {
-        WebInfoStats.Stats.currentLayerName = gotData.data.layer.name;
-        WebInfoStats.Stats.currentLayerID = gotData.data.layer.id;
-        WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
-        WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
-        WebInfoStats.Stats.type = gotData.type;
-        WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
-        WebInfoStats.Stats.legendMapKey = gotData.data.layer.mapId;
+        //WebInfoStats.Stats.currentLayerName = gotData.data.layer.name;
+        //WebInfoStats.Stats.currentLayerID = gotData.data.layer.id;
+        //WebInfoStats.Stats.selectedLat = gotData.data.location.lat;
+        //WebInfoStats.Stats.selectedLon = gotData.data.location.lon;
+        //WebInfoStats.Stats.type = gotData.type;
+        //WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
+        //WebInfoStats.Stats.legendMapKey = gotData.data.layer.mapId;
 
-        WebInfoStats.Stats.curTuple[0] = gotData.data.layer.slideIndex[0];
-        WebInfoStats.Stats.curTuple[1] = gotData.data.layer.slideIndex[1];
-        //WebInfoStats.Stats.slide = gotData.data.layer.slideTuple[1].index;
+        //WebInfoStats.Stats.curTuple[0] = gotData.data.layer.slideIndex[0];
+        //WebInfoStats.Stats.curTuple[1] = gotData.data.layer.slideIndex[1];
+
+        database.currentLayerName = gotData.data.layer.name;
+        database.currentLayerID = gotData.data.layer.id;
+        database.selectedLat = gotData.data.location.lat;
+        database.selectedLon = gotData.data.location.lon;
+        database.type = gotData.type;
+        database.webviewIsOpen = gotData.data.webviewIsOpen;
+        database.legendMapKey = gotData.data.layer.mapId;
+
+        //if(gotData.data.layer.)
+        database.curTuple = (int[])(gotData.data.layer.slideIndex).Clone();
+        database.printAllStats();
         Debug.Log("storing slides id in Unity: " + gotData.data.layer.slideIndex[0]);
-        Debug.Log("storing curtuple in Unity: " + WebInfoStats.Stats.curTuple[0]);
-        Debug.Log("storing map id in Unity: " + WebInfoStats.Stats.legendMapKey);
+        Debug.Log("storing curtuple in Unity: " + database.curTuple[0]);
+        Debug.Log("storing map id in Unity: " + database.legendMapKey);
     }
 
     /// <summary>
@@ -116,12 +130,13 @@ public class JSCom : MonoBehaviour
     {
         Debug.Log("The webview is getting the data!");
 
-        if (WebInfoStats.Stats.type == "ar")
+        if (database.type == "ar")
         {
 
             //preloadMap.SetActive(true);
             //Debug.Log("MAP HASSSSS ITTTT");
-            bool preloadIsFinished = Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
+            //bool preloadIsFinished = Switcher.instance.ActivateLayer(WebInfoStats.Stats.currentLayerID);
+            bool preloadIsFinished = Switcher.instance.ActivateLayer(database.currentLayerID);
             //preloadMap.SetActive(false);
 
             //if (TapToPlaceObject.mapIsLoaded)//WebStatus.isReady?
@@ -163,20 +178,24 @@ public class JSCom : MonoBehaviour
                 else
                 {
                     //User enable location service,get user's location and post message
-                    messageClass.message.messageContent.location.lat = AskLocation.Instance.lat;
-                    messageClass.message.messageContent.location.lon = AskLocation.Instance.lon;
-                    Debug.Log("User current location is: " + AskLocation.Instance.lat + ", " + AskLocation.Instance.lon);
+                    messageClass.message.messageContent.location.lat = database.selectedLat;
+                    messageClass.message.messageContent.location.lon = database.selectedLon;
+                    Debug.Log("User current location is: " + database.selectedLat + ", " + database.selectedLon);
                     Debug.Log("post JSON string from Unity to Javascript");
                 }
-                messageClass.message.sentType = WebInfoStats.Stats.type;
-                messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerID;
-                messageClass.message.messageContent.layer.name = WebInfoStats.Stats.currentLayerName;
+                //messageClass.message.sentType = WebInfoStats.Stats.type;
+                //messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerID;
+                //messageClass.message.messageContent.layer.name = WebInfoStats.Stats.currentLayerName;
+                //messageClass.message.messageContent.layer.slideIndex = (int[])(WebInfoStats.Stats.curTuple).Clone();
 
-                //int[] cur = WebInfoStats.Stats.curTuple;
-                messageClass.message.messageContent.layer.slideIndex = (int[])(WebInfoStats.Stats.curTuple).Clone();
+                //Debug.Log("sending slides id cur tuple in Unity: " + WebInfoStats.Stats.curTuple[0]);
 
-                //messageClass.message.messageContent.layer.slideIndex[1] = WebInfoStats.Stats.curTuple[1];
-                Debug.Log("sending slides id cur tuple in Unity: " + WebInfoStats.Stats.curTuple[0]);
+                messageClass.message.sentType = database.type;
+                messageClass.message.messageContent.layer.id = database.currentLayerID;
+                messageClass.message.messageContent.layer.name = database.currentLayerName;
+                messageClass.message.messageContent.layer.slideIndex = (int[])(database.curTuple).Clone();
+
+                Debug.Log("sending slides id cur tuple in Unity: " + database.curTuple);
                 string JSON = JsonUtility.ToJson(messageClass.message);
                 webViewPrefab.WebView.PostMessage(JSON);
                 Debug.Log("Sending JSON: " + JSON);

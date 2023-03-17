@@ -50,7 +50,7 @@ public class VerticalLayoutUI : MonoBehaviour
             //reset back to original place
             s.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 200);
             z.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 250);
-            p.offsetMax = new Vector2(-20, -35);
+            //p.offsetMax = new Vector2(-20, -35);
             p.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 50);
             //m.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 45, 30);
         }

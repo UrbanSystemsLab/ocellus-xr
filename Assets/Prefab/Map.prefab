@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _abstractMap: {fileID: 8481666064474462950}
   map: {fileID: 4818977998235323254}
+  database: {fileID: 11400000, guid: 86f37ec48740a4e1ab7c79895fae0196, type: 2}
 --- !u!1 &4818977998235323254
 GameObject:
   m_ObjectHideFlags: 0

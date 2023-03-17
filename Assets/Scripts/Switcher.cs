@@ -14,6 +14,7 @@ public class Switcher : MonoBehaviour
     private VectorSubLayerProperties layer;
     private VectorSubLayerProperties NY_buildings;
     public GameObject map;
+    public Database database;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class Switcher : MonoBehaviour
         NY_buildings = _abstractMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
         //NY_buildings.SetActive(true);
         //Debug.Log(WebInfoStats.Stats.currentLayerID);
-        if(WebInfoStats.Stats.currentLayerID != null) ActivateLayer(WebInfoStats.Stats.currentLayerID);
+        if(database.currentLayerID != null) ActivateLayer(database.currentLayerID);
         //deactive map after loading the expected layer
         //this.gameObject.transform.parent.gameObject.SetActive(false);
         //map.SetActive(false);
@@ -44,7 +45,7 @@ public class Switcher : MonoBehaviour
         if(LayerID == null)
         {
             deactivateAllLayer();
-            Debug.Log("Layer ID in WebInfoStatus is NULL");
+            Debug.Log("Layer ID in database is NULL");
         }
         else
         {

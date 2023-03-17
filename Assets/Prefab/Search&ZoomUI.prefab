@@ -310,7 +310,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3457229784991780706}
-  - component: {fileID: 3276240366661366888}
   - component: {fileID: 3455608059516487806}
   - component: {fileID: 3275428096188276838}
   m_Layer: 5
@@ -340,32 +339,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60, y: -35}
   m_SizeDelta: {x: -79.99998, y: 50}
   m_Pivot: {x: 1, y: 1}
---- !u!114 &3276240366661366888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3234801565036744714}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 50
-    m_Right: 30
-    m_Top: 7
-    m_Bottom: 4
-  m_ChildAlignment: 4
-  m_Spacing: 4
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!222 &3455608059516487806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -586,7 +559,6 @@ MonoBehaviour:
   panel: {fileID: 3275428096188276838}
   slider: {fileID: 3275366031690290294}
   zoom: {fileID: 3235165467572675776}
-  menu: {fileID: 0}
 --- !u!1 &3235101901320150782
 GameObject:
   m_ObjectHideFlags: 0
