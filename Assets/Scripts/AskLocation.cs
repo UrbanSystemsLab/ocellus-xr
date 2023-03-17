@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class AskLocation : MonoBehaviour
 {
-    public static AskLocation Instance
-    {
-        set;
-        get;
-    }
+    //public static AskLocation Instance
+    //{
+    //    set;
+    //    get;
+    //}
 
-    public float lat;
-    public float lon;
+    //public float lat;
+    //public float lon;
+    public Database database;
  
     void Start()
     {
-        Instance = this;
+        //Instance = this;
         DontDestroyOnLoad(gameObject);
         StartCoroutine(StartLocationService());
     }
@@ -49,8 +50,8 @@ public class AskLocation : MonoBehaviour
             yield break;
         }
 
-        lat = Input.location.lastData.latitude;
-        lon = Input.location.lastData.longitude;
+        database.selectedLat = Input.location.lastData.latitude;
+        database.selectedLon = Input.location.lastData.longitude;
 
         yield break;
     }

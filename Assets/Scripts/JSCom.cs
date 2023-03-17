@@ -14,16 +14,14 @@ public class JSCom : MonoBehaviour
     public GameObject webViewObject;
     //public GameObject map;
     private GameObject preloadMap;
+    public Database database;
 
     async void Start()
     {
         //wait for webview to be initialized
         await webViewPrefab.WaitUntilInitialized();
-        //if(WebInfoStats.Stats.module != -1 && WebInfoStats.Stats.slide != -1)
-        //{
-        //    sendModuleSlides(WebInfoStats.Stats.module, WebInfoStats.Stats.slide);
-        //}
         RecieveMessageFromWeb();
+        constructMessage();
     }
 
     /// <summary>
@@ -67,7 +65,7 @@ public class JSCom : MonoBehaviour
             {
                 //storing the json data in WebInfoStats
                 storeData(gotData);
-                constructMessage();
+                //constructMessage();
 
 
                 //Start Loading Content Scene
@@ -102,7 +100,12 @@ public class JSCom : MonoBehaviour
         WebInfoStats.Stats.type = gotData.type;
         WebInfoStats.Stats.webviewIsOpen = gotData.data.webviewIsOpen;
         WebInfoStats.Stats.legendMapKey = gotData.data.layer.mapId;
-        WebInfoStats.Stats.curSlides = gotData.data.layer.slideTuple;
+
+        WebInfoStats.Stats.curTuple[0] = gotData.data.layer.slideIndex[0];
+        WebInfoStats.Stats.curTuple[1] = gotData.data.layer.slideIndex[1];
+        //WebInfoStats.Stats.slide = gotData.data.layer.slideTuple[1].index;
+        Debug.Log("storing slides id in Unity: " + gotData.data.layer.slideIndex[0]);
+        Debug.Log("storing curtuple in Unity: " + WebInfoStats.Stats.curTuple[0]);
         Debug.Log("storing map id in Unity: " + WebInfoStats.Stats.legendMapKey);
     }
 
@@ -145,10 +148,11 @@ public class JSCom : MonoBehaviour
         // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
         // is null until the prefab has initialized.
         // Use the LoadProgressChanged event to determine when the page has loaded.
-        //webViewPrefab.WebView.LoadProgressChanged += (sender, eventArgs) => {
-        //    // Send a message after the page has loaded.
-        //    if (eventArgs.Type == ProgressChangeType.Finished)
-        //    {
+        webViewPrefab.WebView.LoadProgressChanged += (sender, eventArgs) =>
+        {
+            // Send a message after the page has loaded.
+            if (eventArgs.Type == ProgressChangeType.Finished)
+            {
                 if (!Input.location.isEnabledByUser)
                 {
                     //User has not enable location service, give it a default lat&lon : Claremont Park
@@ -167,11 +171,18 @@ public class JSCom : MonoBehaviour
                 messageClass.message.sentType = WebInfoStats.Stats.type;
                 messageClass.message.messageContent.layer.id = WebInfoStats.Stats.currentLayerID;
                 messageClass.message.messageContent.layer.name = WebInfoStats.Stats.currentLayerName;
-                messageClass.message.messageContent.layer.slideTuple = WebInfoStats.Stats.curSlides;
 
+                //int[] cur = WebInfoStats.Stats.curTuple;
+                messageClass.message.messageContent.layer.slideIndex = (int[])(WebInfoStats.Stats.curTuple).Clone();
+
+                //messageClass.message.messageContent.layer.slideIndex[1] = WebInfoStats.Stats.curTuple[1];
+                Debug.Log("sending slides id cur tuple in Unity: " + WebInfoStats.Stats.curTuple[0]);
                 string JSON = JsonUtility.ToJson(messageClass.message);
                 webViewPrefab.WebView.PostMessage(JSON);
+                Debug.Log("Sending JSON: " + JSON);
                 Debug.Log("finish sending message from Unity!");
+            }
+        };
 
     }
 

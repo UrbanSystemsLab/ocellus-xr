@@ -37,7 +37,13 @@ public class MessageClass : MonoBehaviour
         public string mapId;
         public string description;
         public bool isReady;
-        public int[] slideTuple;
+        public int[] slideIndex;
+    }
+
+    [Serializable]
+    public struct IndexNumber
+    {
+        public int index;
     }
 
     [Serializable]
