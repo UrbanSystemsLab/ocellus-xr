@@ -113,7 +113,7 @@ public class JSCom : MonoBehaviour
         database.selectedLon = gotData.data.location.lon;
         database.type = gotData.type;
         database.webviewIsOpen = gotData.data.webviewIsOpen;
-        database.legendMapKey = gotData.data.layer.mapId;
+        database.legendMapKey = gotData.data.layer.mapKey;
 
         //if(gotData.data.layer.)
         database.curTuple = (int[])(gotData.data.layer.slideIndex).Clone();
@@ -158,7 +158,6 @@ public class JSCom : MonoBehaviour
         MessageClass messageClass = new MessageClass();
         //string JSON = JsonUtility.ToJson(messageClass);
         Debug.Log("constructing JSON string now");
-        messageClass.message.messageContent.layer.isReady = true;
 
         // Wait for the WebViewPrefab to initialize, because the WebViewPrefab.WebView property
         // is null until the prefab has initialized.

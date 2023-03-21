@@ -35,7 +35,7 @@ public class VerticalLayoutUI : MonoBehaviour
             
             //seting panel's "right" to -400 (left side of the screen) top to -20 (upper than previous) and adjust the height
             p.offsetMax = new Vector2(-400, -20);
-            p.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 50);
+            p.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 30);
 
 
             //setting menu botton to align with panel

@@ -19,18 +19,18 @@ public class MinimizeScreenFeature : MonoBehaviour
     void Update()
     {
         //if(Screen.orientation == ScreenOrientation.Landscape)
-        if(Screen.width > 1200)
-        {
-            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100);
-            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100);
-            rectTransform.position = new Vector3(100,100,0);
-        }
-        else if(Screen.width <= 1200)
-        {
-            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 150);
-            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 150);
-            rectTransform.position = new Vector3(80, 80, 0);
-        }
+        //if(Screen.width > 1200)
+        //{
+        //    rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100);
+        //    rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100);
+        //    rectTransform.position = new Vector3(100,100,0);
+        //}
+        //else if(Screen.width <= 1200)
+        //{
+        //    rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 150);
+        //    rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 150);
+        //    rectTransform.position = new Vector3(80, 80, 0);
+        //}
     }
     public void changeIcon()
     {

@@ -34,9 +34,7 @@ public class MessageClass : MonoBehaviour
     {
         public string id;
         public string name;
-        public string mapId;
-        public string description;
-        public bool isReady;
+        public string mapKey;
         public int[] slideIndex;
     }
 
