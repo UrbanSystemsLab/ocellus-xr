@@ -34,8 +34,14 @@ public class MessageClass : MonoBehaviour
     {
         public string id;
         public string name;
-        public string description;
-        public bool isReady;
+        public string mapKey;
+        public int[] slideIndex;
+    }
+
+    [Serializable]
+    public struct IndexNumber
+    {
+        public int index;
     }
 
     [Serializable]
@@ -48,4 +54,19 @@ public class MessageClass : MonoBehaviour
 
     [SerializeField]
     public Message message;
+
+
+    //data structure for module and slides
+
+
+    //[SerializeField]
+    //public ModuleSlide callback;
+
+    //[Serializable]
+    //public struct ModuleSlide
+    //{
+    //    public string type;
+    //    public int module;
+    //    public int slide;
+    //}
 }

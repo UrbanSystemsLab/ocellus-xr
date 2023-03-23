@@ -14,7 +14,7 @@ public class TapToPlaceObject : MonoBehaviour
     public static bool mapIsLoaded = false;
 
     //public static TapToPlaceObject instance;
-    
+
     public GameObject objectToPlace;
     public GameObject placementIndicator;
     public bool isPlaced;
@@ -22,10 +22,12 @@ public class TapToPlaceObject : MonoBehaviour
     public Camera newCamera;
     public GameObject reloadMapCanvas;
 
+    [Header("Full Screen")]
+    public Button fullScreenBnt;
+
     private ARRaycastManager raycastManager;
     private Pose placementPose;
     private bool placementPoseIsValid = false;
-    private bool isCalibrating;
     private GameObject map = null;
 
     private void Awake()
@@ -34,10 +36,10 @@ public class TapToPlaceObject : MonoBehaviour
         //reloadMapCanvas.SetActive(false);
         //create a map to load first and set it invisible, so we can later activate it and change its position for faster loading time.
         //map = GameObject.FindGameObjectWithTag("Map");
-        Debug.Log("in the awake:L "+ SceneManager.GetActiveScene().name);
+        Debug.Log("in the awake:L " + SceneManager.GetActiveScene().name);
         //if(SceneManager.GetActiveScene().name == "AR")
         //{
-            //map = Instantiate(objectToPlace, new Vector3(0, -2, 0), Quaternion.identity);
+        //map = Instantiate(objectToPlace, new Vector3(0, -2, 0), Quaternion.identity);
         //}
         //map.SetActive(false);
     }
@@ -55,7 +57,7 @@ public class TapToPlaceObject : MonoBehaviour
         raycastManager = GetComponent<ARRaycastManager>();
 
         TapToPlaceMap.SetActive(true);
-        isCalibrating = false;
+        //isCalibrating = false;
         mapIsLoaded = true;
     }
 
@@ -86,11 +88,13 @@ public class TapToPlaceObject : MonoBehaviour
             map.transform.position = placementPose.position;
             map.transform.rotation = placementPose.rotation;
         }
-        
+
 
         isPlaced = true;
+        //enable all feature
+        fullScreenBnt.onClick.Invoke();
+        //turn off tap to place animation
         TapToPlaceMap.SetActive(false);
-        isCalibrating = true;
     }
 
     private void UpdatePlacementPose()
@@ -114,15 +118,14 @@ public class TapToPlaceObject : MonoBehaviour
 
     public void Calibration()
     {
-            if(map != null)
-            {
-                map.SetActive(false);
-                //Destroy(map);
-            }
-            reloadMapCanvas.SetActive(false);
-            TapToPlaceMap.SetActive(true);
-            isPlaced = false;
-            isCalibrating = false;
+        if (map != null)
+        {
+            map.SetActive(false);
+            //Destroy(map);
+        }
+        reloadMapCanvas.SetActive(false);
+        TapToPlaceMap.SetActive(true);
+        isPlaced = false;
     }
-        
+
 }

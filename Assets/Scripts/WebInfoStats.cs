@@ -18,16 +18,12 @@ public class WebInfoStats : MonoBehaviour
     public float selectedLon;
     public bool layerIsReady;
     public bool webviewIsOpen;
+    public string legendMapKey;
+    public int[] curTuple = { -1, -1};
 
     // Start is called before the first frame update
     void Awake()
     {
         Stats = this;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

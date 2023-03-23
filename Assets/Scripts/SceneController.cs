@@ -18,9 +18,9 @@ public class SceneController : MonoBehaviour
 
     private void Update()
     {
-        if(WebInfoStats.Stats.type == "live")
-        {
-            LoadWorldScaleAR();
-        }
+        //if(WebInfoStats.Stats.type == "live")
+        //{
+        //    LoadWorldScaleAR();
+        //}
     }
 }

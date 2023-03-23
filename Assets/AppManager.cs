@@ -7,10 +7,10 @@ using UnityEngine.UI;
 
 public enum SceneIndexes
 {
-    MANAGER = 0,
-    MENU = 1,
-    AR = 2,
-    LIVE = 3
+    MANAGER = 1,
+    MENU = 2,
+    AR = 3,
+    LIVE = 4
 }
 
 public class AppManager : MonoBehaviour
@@ -80,7 +80,8 @@ public class AppManager : MonoBehaviour
             else
             {
                 //if there is no active live map, turn on the ar section
-                Switcher.instance.ToggleMap(true);
+
+                //Switcher.instance.ToggleMap(true);
             }
 
         }

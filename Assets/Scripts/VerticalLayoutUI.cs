@@ -8,19 +8,19 @@ public class VerticalLayoutUI : MonoBehaviour
     public Image panel;
     public Slider slider;
     public GameObject zoom;
-    public Button menu;
+    //public Button menu;
 
     private RectTransform p;
     private RectTransform s;
     private RectTransform z;
-    private RectTransform m;
+    //private RectTransform m;
     // Start is called before the first frame update
     void Start()
     {
         p = panel.GetComponent<RectTransform>();
         s = slider.GetComponent<RectTransform>();
         z = zoom.GetComponent<RectTransform>();
-        m = menu.GetComponent<RectTransform>();
+        //m = menu.GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
@@ -35,12 +35,12 @@ public class VerticalLayoutUI : MonoBehaviour
             
             //seting panel's "right" to -400 (left side of the screen) top to -20 (upper than previous) and adjust the height
             p.offsetMax = new Vector2(-400, -20);
-            p.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 50);
+            p.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 30);
 
 
             //setting menu botton to align with panel
             //m.offsetMax = new Vector2(m.offsetMax.x, -45);
-            m.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 30, 30);
+            //m.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 30, 30);
 
             
         //Debug.Log(Screen.height);
@@ -50,9 +50,9 @@ public class VerticalLayoutUI : MonoBehaviour
             //reset back to original place
             s.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 200);
             z.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 250);
-            p.offsetMax = new Vector2(-20, -35);
+            //p.offsetMax = new Vector2(-20, -35);
             p.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 50);
-            m.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 45, 30);
+            //m.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 45, 30);
         }
     }
 }

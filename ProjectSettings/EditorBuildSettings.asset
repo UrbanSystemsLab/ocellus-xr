@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/ocellus-3Scene/Intro.unity
+    guid: 5c9a40f4e74444ebfbd496d1669e3d7e
+  - enabled: 1
     path: Assets/Scenes/ocellus-3Scene/AppManager.unity
     guid: 63547c23398314a4f8fd5689976b6445
   - enabled: 1

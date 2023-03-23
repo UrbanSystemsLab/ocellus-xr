@@ -127,7 +127,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: 0}
+  m_SizeDelta: {x: -40, y: -0.0025635}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1987664037
 MonoBehaviour:
@@ -146,7 +146,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 20
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -172,7 +172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5317199564438887476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -187,10 +187,10 @@ RectTransform:
   m_Father: {fileID: 1323399833345613701}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 314, y: -1048}
+  m_SizeDelta: {x: 628, y: 520}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8436546577713093016
 CanvasRenderer:
@@ -308,13 +308,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 60
     m_MaxSize: 80
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nName\n\n\t\t\t\t\t\t\t"
+  m_Text: "\nName\n\n\t\t\t\t\t\t\t                 "
 --- !u!1 &8402794885731614072
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,13 +576,13 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 898255bf021e547d88cc4a0a5dec56a9, type: 3}
     m_FontSize: 40
     m_FontStyle: 2
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 20
     m_MaxSize: 48
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Sample Text 123\nSample Text 123\nSample Text 123\n\n\t\t\t\t\t\t\t"
+  m_Text: "Sample Text 123\nSample Text 123\nSample Text 123\n\n\t\t\t\t\t\t\t                                          "

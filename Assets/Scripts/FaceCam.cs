@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FaceCam : MonoBehaviour
 {
-    public Transform mainCam;
+    private Transform mainCam;
 
     //public Transform infoTrans;
 
@@ -13,7 +13,7 @@ public class FaceCam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCam = GameObject.Find("Main Camera").GetComponent<Transform>();
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
     }
 
     // Update is called once per frame

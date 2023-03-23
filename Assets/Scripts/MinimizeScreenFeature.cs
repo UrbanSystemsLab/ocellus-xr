@@ -7,7 +7,7 @@ public class MinimizeScreenFeature : MonoBehaviour
 {
     public Sprite[] icon;
     public Image bntImg;
-    public GameObject UIFeature;
+    public GameObject[] UIFeature;
     //public GameObject caliPage;
     public RectTransform rectTransform;
     // Start is called before the first frame update
@@ -19,18 +19,18 @@ public class MinimizeScreenFeature : MonoBehaviour
     void Update()
     {
         //if(Screen.orientation == ScreenOrientation.Landscape)
-        if(Screen.width > 1200)
-        {
-            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100);
-            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100);
-            rectTransform.position = new Vector3(100,100,0);
-        }
-        else if(Screen.width <= 1200)
-        {
-            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 150);
-            rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 150);
-            rectTransform.position = new Vector3(80, 80, 0);
-        }
+        //if(Screen.width > 1200)
+        //{
+        //    rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100);
+        //    rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100);
+        //    rectTransform.position = new Vector3(100,100,0);
+        //}
+        //else if(Screen.width <= 1200)
+        //{
+        //    rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 150);
+        //    rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 150);
+        //    rectTransform.position = new Vector3(80, 80, 0);
+        //}
     }
     public void changeIcon()
     {
@@ -38,13 +38,18 @@ public class MinimizeScreenFeature : MonoBehaviour
         if(bntImg.sprite == icon[1])
         {
             bntImg.sprite = icon[0];
-            UIFeature.SetActive(true);
+            foreach(GameObject o in UIFeature){
+                o.SetActive(true);
+            }
             //caliPage.SetActive(true);
         }
         else
         {
             bntImg.sprite = icon[1];
-            UIFeature.SetActive(false);
+            foreach (GameObject o in UIFeature)
+            {
+                o.SetActive(false);
+            }
             //caliPage.SetActive(false);
         }
     }

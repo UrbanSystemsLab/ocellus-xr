@@ -13,6 +13,6 @@ public class UpdateLocation : MonoBehaviour
     }
     void Update()
     {
-        locationText.text = "Lat:"+ AskLocation.Instance.lat.ToString() + "   Long:" + AskLocation.Instance.lon.ToString();
+        //locationText.text = "Lat:"+ AskLocation.Instance.lat.ToString() + "   Long:" + AskLocation.Instance.lon.ToString();
     }
 }
