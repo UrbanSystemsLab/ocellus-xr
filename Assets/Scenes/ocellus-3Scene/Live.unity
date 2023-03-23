@@ -1340,7 +1340,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b810cd441df9b4caa9ab8fd0082bdc08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  web: {fileID: 722392716}
+  data: {fileID: 0}
+  UIComponent: {fileID: 0}
+  from: 0
+  to: 0
+  og: {fileID: 0}
 --- !u!1 &243564934
 GameObject:
   m_ObjectHideFlags: 0
@@ -6539,9 +6543,7 @@ MonoBehaviour:
       layer:
         id: 
         name: 
-        mapId: 
-        description: 
-        isReady: 0
+        mapKey: 
         slideIndex: 
       location:
         lat: 0
@@ -7265,7 +7267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1395780545
 MonoBehaviour:
   m_ObjectHideFlags: 0

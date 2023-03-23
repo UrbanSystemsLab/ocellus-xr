@@ -52,13 +52,17 @@ public class Switcher : MonoBehaviour
             deactivateAllLayer();
             if (LayerID == "equity.dmmqh0kw")//the floodplains data is split into 4 different layers
             {
-                NY_buildings.SetActive(true);
+                
+                //NY_buildings.SetActive(true);
                 for (int i = 0; i < 4; i++)
                 {
                     LayerID += i;
+                    Debug.Log("4 DIFFERENT FLOOD" + LayerID);
                     layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
                     layer.SetActive(true);
+                    
                 }
+
             }
             else
             {

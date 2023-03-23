@@ -81,7 +81,7 @@ public class AppManager : MonoBehaviour
             {
                 //if there is no active live map, turn on the ar section
 
-                Switcher.instance.ToggleMap(true);
+                //Switcher.instance.ToggleMap(true);
             }
 
         }
