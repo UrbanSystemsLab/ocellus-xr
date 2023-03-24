@@ -182,15 +182,15 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
                 if (feature.Properties.ContainsKey("Urban_Rura"))
                 {
 					PEJA_Urban_Rura = feature.Properties["Urban_Rura"].ToString();
-					Debug.Log(PEJA_Urban_Rura);
-				}
+					//Debug.Log(PEJA_Urban_Rura);
+                }
 
 			}
-			else if (feature.Properties.ContainsKey("Urban_Rura"))
-            {
-				//PEJA_Urban_Rura = feature.Properties["Urban_Rura"].ToString();
-				//Debug.Log(PEJA_Urban_Rura);
-			}
+			//else if (feature.Properties.ContainsKey("Urban_Rura"))
+   //         {
+			//	//PEJA_Urban_Rura = feature.Properties["Urban_Rura"].ToString();
+			//	//Debug.Log(PEJA_Urban_Rura);
+			//}
 
 
 				if (!_cacheVertexCount.ContainsKey(tile))
@@ -229,17 +229,18 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				baseColor = new Color(0f, 0f, 1f);
 			}
 
-				//         if (PEJA_Urban_Rura.Equals("U")){
+            if (PEJA_Urban_Rura.Equals("U"))
+            {
 
-				//	baseColor = new Color(1f, 1f, 1f);
-				//}
-				//else if (PEJA_Urban_Rura.Equals("R"))
-				//         {
-				//	baseColor = new Color(0f, 0f, 1f);
-				//}
+                baseColor = new Color(1f, 0.72f, 0.09f);
+            }
+            else if (PEJA_Urban_Rura.Equals("R"))
+            {
+                baseColor = new Color(0.33f, 0.69f, 0.13f);
+            }
 
 
-				if (redlining.Equals("A"))
+            if (redlining.Equals("A"))
             {
                 baseColor = new Color(0.50f, 0.70f, 0.50f);
                 Debug.Log("Colorget");
