@@ -163,7 +163,7 @@ PrefabInstance:
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
       propertyPath: _options.locationOptions.latitudeLongitude
-      value: 40.735909, -73.990163
+      value: 40.840244, -73.907231
       objectReference: {fileID: 0}
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}

@@ -21,6 +21,31 @@ public class MessageClass : MonoBehaviour
 
     }
 
+    //Data structure for recieving url link
+    [Serializable]
+    public struct RecieveLink
+    {
+        public string type;
+        public Content data;
+
+    }
+
+    [Serializable]
+    public struct Content
+    {
+        public Link link;
+        public bool webview;
+
+    }
+
+    [Serializable]
+    public struct Link
+    {
+        public string url;
+
+    }
+
+
     [Serializable]
     public struct DataContent
     {

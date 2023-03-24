@@ -36,14 +36,13 @@ public class JSCom : MonoBehaviour
         //Whenever there is a message get sent to Unity, this is the function to receive and handle it.
         webViewPrefab.WebView.MessageEmitted += (sender, eventArgs) => {
             Debug.Log("The webview is getting the data!");
-            Debug.Log(eventArgs.Value);
+            Debug.Log("recieved: "+ eventArgs.Value);
 
 
             if (eventArgs.Value.StartsWith("http"))
             {
                 Application.OpenURL(eventArgs.Value);
-                return;
-             }
+            }
 
             //Parsing json
             //testing for parsing json
