@@ -54,12 +54,12 @@ public class MapManager : MonoBehaviour
 
     public void Calibration()
     {
-        var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
-        arAlignedMap.Terrain.SetLayerSource(ElevationSourceType.MapboxTerrain);
+        //var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
+        //arAlignedMap.Terrain.SetLayerSource(ElevationSourceType.MapboxTerrain);
         mapCamera.SetActive(true);
         debugCanvas.SetActive(true);
         mainCanvas.SetActive(false);
-        buildings.SetActive(true);
+        //buildings.SetActive(true);
 
         Debug.Log(tileMaterials.Length);
         foreach (MeshRenderer m in tileMaterials)
