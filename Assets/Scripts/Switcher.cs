@@ -87,7 +87,10 @@ public class Switcher : MonoBehaviour
     {
         foreach (VectorSubLayerProperties layer in allLayer)
         {
-            layer.SetActive(false);
+            if (!layer.SubLayerNameContains("Tree"))
+            {
+                layer.SetActive(false);
+            }
         }
     }
 

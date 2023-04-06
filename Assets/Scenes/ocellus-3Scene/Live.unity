@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 5ea24b25565154d93915252b83e7db77, type: 2}
   UIComponent: {fileID: 192949383}
-  from: 1500
+  from: 1000
   to: 3000
   og: {fileID: 11400000, guid: cd9d18f3794654ef186951c0b97484fe, type: 2}
 --- !u!1001 &194286475
@@ -1805,7 +1805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: d1a91de48768c45d7ac172c292baf2be, type: 2}
   UIComponent: {fileID: 298893112}
-  from: 1500
+  from: 1000
   to: 3000
   og: {fileID: 11400000, guid: dee81dd486ecc49acad5574009ef1f93, type: 2}
 --- !u!1 &337336489
@@ -4506,7 +4506,7 @@ MonoBehaviour:
           propertyDescription: Number
           minimumHeight: 0
           maximumHeight: 8
-          extrusionScaleFactor: 2
+          extrusionScaleFactor: 0.2
         colliderOptions:
           colliderType: 0
         materialOptions:
@@ -5019,8 +5019,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _abstractMap: {fileID: 808201928}
-  map: {fileID: 0}
-  database: {fileID: 0}
+  map: {fileID: 808201924}
+  database: {fileID: 11400000, guid: 86f37ec48740a4e1ab7c79895fae0196, type: 2}
 --- !u!1 &816370543
 GameObject:
   m_ObjectHideFlags: 0
@@ -8077,7 +8077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1395780545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10876,6 +10876,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: eace74954d0124100a7129607540d1ae, type: 2}
   UIComponent: {fileID: 2144276335}
-  from: 1500
+  from: 1000
   to: 3000
   og: {fileID: 11400000, guid: ced8d88a439ed4216922771311ba458b, type: 2}

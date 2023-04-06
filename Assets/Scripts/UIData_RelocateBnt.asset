@@ -16,5 +16,5 @@ MonoBehaviour:
   posY: -840
   width: 150
   height: 150
-  scaleX: 1.5
-  scaleY: 1.5
+  scaleX: 1.3
+  scaleY: 1.3
