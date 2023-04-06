@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2492944953287974055}
   - component: {fileID: 6956416037038166439}
   - component: {fileID: 739625368885541009}
+  - component: {fileID: 931925574}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -26,7 +27,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7828848403131846144}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.5044208, y: 4.5044208, z: 4.5044208}
   m_Children: []
@@ -132,3 +133,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &931925574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7828848403131846144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b810cd441df9b4caa9ab8fd0082bdc08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 667067a10a3ae48f8996285b8c0ead20, type: 2}
+  UIComponent: {fileID: 5104547729363556577}
+  from: 1500
+  to: 3000
+  og: {fileID: 11400000, guid: 799fc1f06ae1548f3a67f3dacc498f4e, type: 2}
