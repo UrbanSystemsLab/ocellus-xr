@@ -50,6 +50,8 @@ public class MapManager : MonoBehaviour
         mapCamera.SetActive(false);
         debugCanvas.SetActive(false);
         mainCanvas.SetActive(true);
+        ElevationSourceType terrainSource = ElevationSourceType.None;
+        arAlignedMap.Terrain.SetLayerSource(terrainSource);
     }
 
     public void Calibration()
