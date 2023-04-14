@@ -75,5 +75,31 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    public void CalibrationII()
+    {
+        //var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
+        //arAlignedMap.Terrain.SetLayerSource(ElevationSourceType.MapboxTerrain);
+        mapCamera.SetActive(true);
+        debugCanvas.SetActive(true);
+        mainCanvas.SetActive(false);
+
+
+        ElevationSourceType terrainSource = ElevationSourceType.MapboxTerrain;
+        arAlignedMap.Terrain.SetLayerSource(terrainSource);
+
+        //buildings.SetActive(true);
+
+        Debug.Log(tileMaterials.Length);
+        foreach (MeshRenderer m in tileMaterials)
+        {
+            if (m.gameObject.name != "0")
+            {
+                color.a = 1;
+                m.material.color = color;
+            }
+
+        }
+    }
+
 
 }

@@ -897,23 +897,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879d31ebe92b040cbb3ef97e98278140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &94848546
+--- !u!114 &94848545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94848542}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e81f284c4f5a64bdbac17174d3acb54f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cbf5ff0b83004b1db36b674cd69daab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: ffd266c2e02c64d37849ccff87f33eb4, type: 2}
   UIComponent: {fileID: 94848541}
-  from: 0
-  to: 0
-  og: {fileID: 0}
+  from: 1500
+  to: 3000
+  og: {fileID: 11400000, guid: 27320d458aa13473c849d62c8d51f768, type: 2}
   direction: 3
 --- !u!1 &154469229
 GameObject:

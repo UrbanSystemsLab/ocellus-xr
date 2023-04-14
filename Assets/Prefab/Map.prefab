@@ -167,6 +167,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
+      propertyPath: _terrain._layerProperty.colliderOptions.addCollider
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _terrain._layerProperty.requiredOptions.exaggerationFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
       propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].coreOptions.isActive
       value: 0
       objectReference: {fileID: 0}
@@ -193,6 +203,11 @@ PrefabInstance:
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
       propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[8].coreOptions.isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[10].coreOptions.isActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
@@ -242,6 +257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[15].buildingsWithUniqueIds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
       propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[16].buildingsWithUniqueIds
       value: 0
       objectReference: {fileID: 0}
@@ -254,6 +274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[16].coreOptions.geometryType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
+        type: 3}
+      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[10].coreOptions.snapToTerrain
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2526737395639293907, guid: 7259d664b0914439ab4b2e113f6782a8,
         type: 3}
