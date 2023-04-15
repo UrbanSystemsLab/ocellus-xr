@@ -127,6 +127,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			float PEJA_Non_WhiteValue = 0;
 			float PEJA_Bel_PovValue = 0;
 			string PEJA_Urban_Rura = "";
+			int Flooding = 0;
 
 			//Debug.Log(feature.Properties["area_description_data"].ToString());
 
@@ -149,7 +150,7 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 				string temp = feature.Properties["risk"].ToString();
 				tempValue = float.Parse(temp);
 				//Debug.Log(tempValue);
-			}
+            }
 			else if (feature.Properties.ContainsKey("income"))
 			{
 				string income = feature.Properties["income"].ToString();
@@ -185,15 +186,20 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 					//Debug.Log(PEJA_Urban_Rura);
                 }
 
-			}
+			}else if (feature.Properties.ContainsKey("Flooding_Category"))
+            {
+				String FloodingValue = feature.Properties["Flooding_Category"].ToString();
+				Flooding = Int32.Parse(FloodingValue);
+				Debug.Log("Flooding" + Flooding);
+            }
 			//else if (feature.Properties.ContainsKey("Urban_Rura"))
-   //         {
+			//         {
 			//	//PEJA_Urban_Rura = feature.Properties["Urban_Rura"].ToString();
 			//	//Debug.Log(PEJA_Urban_Rura);
 			//}
 
 
-				if (!_cacheVertexCount.ContainsKey(tile))
+			if (!_cacheVertexCount.ContainsKey(tile))
 			{
 				_cacheVertexCount.Add(tile, 0);
 				_cached.Add(tile, _meshDataPool.GetObject());
@@ -351,6 +357,19 @@ namespace Mapbox.Unity.MeshGeneration.Modifiers
 			else if (sixtyFiveValue > 0)
 			{
 				baseColor = new Color(1f, 0.1f, 1f);
+			}
+
+			if(Flooding == 1)
+            {
+				baseColor = new Color(0.14f, 0.63f, 1f);
+			}
+			else if(Flooding == 2)
+            {
+				baseColor = new Color(0.14f, 0.29f, 1f);
+			}
+			else if(Flooding == 3)
+            {
+				baseColor = new Color(0.96f, 0.51f, 0.15f);
 			}
 
 			

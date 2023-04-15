@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIStretchPositionHandler : MonoBehaviour
+public class LegendUIStretchPositionHandler : MonoBehaviour
 {
     public UIData data;
     public RectTransform UIComponent;
@@ -47,7 +47,7 @@ public class UIStretchPositionHandler : MonoBehaviour
             UIComponent.offsetMax = new Vector2(data.posY, UIComponent.offsetMax.y);
             //UIComponent.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, data.width);
 
-            //UIComponent.offsetMax = new Vector2(data.posX + data.width / 2, data.posY + data.height / 2);
+            UIComponent.offsetMax = new Vector2(data.posX + data.width / 2, data.posY + data.height / 2);
 
             UIComponent.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, data.height);
             //UIComponent.localScale = new Vector3(data.scaleX, data.scaleY, 1);
@@ -61,7 +61,7 @@ public class UIStretchPositionHandler : MonoBehaviour
             /*Right*/
             UIComponent.offsetMax = new Vector2(og.posY, UIComponent.offsetMax.y);
 
-            //UIComponent.offsetMax = new Vector2(og.posX + og.width / 2, og.posY + og.height / 2);
+            UIComponent.offsetMax = new Vector2(og.posX + og.width / 2, og.posY + og.height / 2);
 
             //UIComponent.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, og.width);
             UIComponent.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, og.height);

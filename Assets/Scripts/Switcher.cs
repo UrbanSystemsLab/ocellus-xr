@@ -52,21 +52,28 @@ public class Switcher : MonoBehaviour
             deactivateAllLayer();
             if (LayerID == "equity.dmmqh0kw")//the floodplains data is split into 4 different layers
             {
-                
+                _abstractMap.Terrain.SetElevationType(ElevationLayerType.TerrainWithElevation);
                 //NY_buildings.SetActive(true);
                 for (int i = 0; i < 4; i++)
                 {
-                    LayerID += i;
-                    Debug.Log("4 DIFFERENT FLOOD" + LayerID);
-                    layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
-                    layer.SetActive(true);
-                    
-                }
+                    string tempid = LayerID + i;
+                    Debug.Log("4 DIFFERENT FLOOD" + tempid);
+                    layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(tempid);
 
+                    layer.SetActive(true);
+
+                }
             }
+            //}else if(LayerID == "equity.3t4w37ok" || LayerID == "equity.c7f9efui")
+            //{
+            //    layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
+            //    _abstractMap.Terrain.SetElevationType(ElevationLayerType.FlatTerrain);
+            //    layer.SetActive(true);
+            //}
             else
             {
                 layer = _abstractMap.VectorData.FindFeatureSubLayerWithName(LayerID);
+                _abstractMap.Terrain.SetElevationType(ElevationLayerType.TerrainWithElevation);
                 layer.SetActive(true);
             }
         }
@@ -87,7 +94,10 @@ public class Switcher : MonoBehaviour
     {
         foreach (VectorSubLayerProperties layer in allLayer)
         {
-            layer.SetActive(false);
+            if (!layer.SubLayerNameContains("Tree"))
+            {
+                layer.SetActive(false);
+            }
         }
     }
 

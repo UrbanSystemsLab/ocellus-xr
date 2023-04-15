@@ -22,8 +22,9 @@
 			_button.onClick.AddListener(UpdateMapLocation);
 		}
 
-		private void UpdateMapLocation()
+		public void UpdateMapLocation()
 		{
+			Debug.Log("relocate GPS");
 			var location = LocationProviderFactory.Instance.DefaultLocationProvider.CurrentLocation;
 			_map.UpdateMap(location.LatitudeLongitude,_map.AbsoluteZoom);
 			var playerPos = Camera.main.transform.position;

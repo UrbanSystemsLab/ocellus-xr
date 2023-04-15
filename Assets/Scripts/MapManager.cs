@@ -50,16 +50,18 @@ public class MapManager : MonoBehaviour
         mapCamera.SetActive(false);
         debugCanvas.SetActive(false);
         mainCanvas.SetActive(true);
+        ElevationSourceType terrainSource = ElevationSourceType.None;
+        arAlignedMap.Terrain.SetLayerSource(terrainSource);
     }
 
     public void Calibration()
     {
-        var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
-        arAlignedMap.Terrain.SetLayerSource(ElevationSourceType.MapboxTerrain);
+        //var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
+        //arAlignedMap.Terrain.SetLayerSource(ElevationSourceType.MapboxTerrain);
         mapCamera.SetActive(true);
         debugCanvas.SetActive(true);
         mainCanvas.SetActive(false);
-        buildings.SetActive(true);
+        //buildings.SetActive(true);
 
         Debug.Log(tileMaterials.Length);
         foreach (MeshRenderer m in tileMaterials)
@@ -70,6 +72,32 @@ public class MapManager : MonoBehaviour
                 m.material.color = color;
             }
             
+        }
+    }
+
+    public void CalibrationII()
+    {
+        //var buildings = arAlignedMap.VectorData.FindFeatureSubLayerWithName("NYC_Buildings");
+        //arAlignedMap.Terrain.SetLayerSource(ElevationSourceType.MapboxTerrain);
+        mapCamera.SetActive(true);
+        debugCanvas.SetActive(true);
+        mainCanvas.SetActive(false);
+
+
+        ElevationSourceType terrainSource = ElevationSourceType.MapboxTerrain;
+        arAlignedMap.Terrain.SetLayerSource(terrainSource);
+
+        //buildings.SetActive(true);
+
+        Debug.Log(tileMaterials.Length);
+        foreach (MeshRenderer m in tileMaterials)
+        {
+            if (m.gameObject.name != "0")
+            {
+                color.a = 1;
+                m.material.color = color;
+            }
+
         }
     }
 
